@@ -1,0 +1,31 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:47:23Z",
+  "trace_id": "trace-kalshi-public-data-paper-signal-local-proof-20260618",
+  "task_id": "task-lane-scout-kalshi_public_market_data-20260618",
+  "lane_id": "prediction_market_research",
+  "event_type": "kalshi_public_data_paper_signal_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\kalshi-public-data-paper-signal-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\kalshi-public-data-paper-signal-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\kalshi-public-data-paper-signal-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "browser_sessions_started": 0,
+    "kalshi_account_or_login": false,
+    "api_key_created_or_used": false,
+    "signed_api_requests": 0,
+    "market_data_api_calls": 0,
+    "orderbook_api_calls": 0,
+    "orders_or_trades": 0,
+    "deposits_or_withdrawals": 0,
+    "payments_or_wallets": 0,
+    "real_money_actions": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create a local Kalshi fixture parser/checker that consumes saved market/trade/candle-like rows, emits paper-only signal rows with kill reasons, and proves zero promotable candidates on the existing settlement-lag replay; keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked."
+}

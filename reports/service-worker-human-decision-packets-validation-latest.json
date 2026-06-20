@@ -1,0 +1,31 @@
+{
+  "all_packets_no_approval": true,
+  "all_packets_no_assignment": true,
+  "all_packets_no_registration": true,
+  "all_packets_require_manual_review": true,
+  "all_preconditions_for_human_decision_packets": true,
+  "api_calls": false,
+  "approval_granted_by_decision_packets": false,
+  "approve_command_preview_count": 11,
+  "decision_packet_count": 11,
+  "decision_packets_path": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets-latest.json",
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-17T20:41:28Z",
+  "packet_dir": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets",
+  "pools_registered_by_decision_packets": 0,
+  "reject_command_preview_count": 11,
+  "schema_version": "service_worker_human_decision_packets_validation.v1",
+  "service_requests_assigned_by_decision_packets": 0,
+  "service_requests_updated_by_decision_packets": 0,
+  "source_state": {
+    "approval_review_generated_utc": "2026-06-15T10:21:32Z",
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_generated_utc": "2026-06-17T20:40:22Z",
+    "chain_integrity_validation_loaded": true,
+    "gate_map_generated_utc": "2026-06-15T10:21:41Z"
+  },
+  "terminal_do_not_approve_count": 3,
+  "worker_starts": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "trace-agent-company-atlas-agent-constellation-bay-v1-20260619",
+  "taskId": "task-agent-company-atlas-agent-constellation-bay-v1-20260619",
+  "traceId": "trace-atlas_agent_constellation_bay_added-20260619",
+  "title": "Agent Constellation Bay",
+  "createdAt": "2026-06-19T19:50:20Z",
+  "summary": "Added a generated bot-identity constellation texture and live agent beacons to the Agent Sprite Foundry.",
+  "changes": [
+    "Generated a project-local Agent Constellation Bay bitmap for premium bot identity surfaces.",
+    "Added data-driven live agent beacons with readiness meters and lane quick-select wiring.",
+    "Registered the new system texture in the Asset Vault so standalone users can discover and replace it."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "web/assets/system/agent-constellation-bay-20260619.png",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ]
+}

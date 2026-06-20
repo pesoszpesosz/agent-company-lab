@@ -1,0 +1,933 @@
+{
+  "accepted_count": 3,
+  "all_checks_passed": true,
+  "api_calls": false,
+  "apply_allowed": false,
+  "approval_granted_by_guard": false,
+  "approval_rows_written": 0,
+  "browser_sessions_started": false,
+  "current_request_count": 16,
+  "decision_authority_granted_by_guard": false,
+  "decisions_applied": 0,
+  "expected_accepted_count": 3,
+  "expected_rejected_count": 24,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 27,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:38Z",
+  "guard_status": "report_only_signed_decision_guard_ready",
+  "next_action": "Build a service-worker signed decision apply preflight blocker before any accepted guard decision can mutate queue state.",
+  "positive_authority": {
+    "accepted_scopes": [
+      "none",
+      "legal_kyc_tax_payment_gate:approve_review_packet_only:exact_scope",
+      "browser_read_only_session:approve_assignment_preflight_only:exact_scope"
+    ],
+    "apply_allowed": false
+  },
+  "rejected_count": 24,
+  "rejection_granted_by_guard": false,
+  "report_only": true,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_deny_browser",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\positive_deny_browser.json",
+      "result": {
+        "accepted_for_later_apply_preflight": true,
+        "apply_allowed": false,
+        "decision": "deny",
+        "decision_id": "service-worker-signed-decision-positive-deny-browser",
+        "errors": [],
+        "rejected": false,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "0a6ba3ff2bb3fe3b0e85980309e06defa422957b3c960ff04c304faaaa2af171"
+    },
+    {
+      "expected": "accepted",
+      "name": "positive_review_legal",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\positive_review_legal.json",
+      "result": {
+        "accepted_for_later_apply_preflight": true,
+        "apply_allowed": false,
+        "decision": "approve_review_packet_only",
+        "decision_id": "service-worker-signed-decision-positive-review-legal",
+        "errors": [],
+        "rejected": false,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "legal_kyc_tax_payment_gate"
+      },
+      "sha256": "9b36ecb13f6601ce52950dae9402490d95835c64e045c1a99de31d5b1224709b"
+    },
+    {
+      "expected": "accepted",
+      "name": "positive_assignment_browser",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\positive_assignment_browser.json",
+      "result": {
+        "accepted_for_later_apply_preflight": true,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-positive-assignment-browser",
+        "errors": [],
+        "rejected": false,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "816151483d02eaaa94a9f034a17d0b8a1f3b37fbbecf319084f1877688e57e53"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_operator",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_missing_operator.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-missing_operator",
+        "errors": [
+          "operator_id_missing"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "9d6994435fe1c6beb6081c4f6504a31fdef7441d94bbb1be2cb4434f72342a1e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_attestation",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_missing_attestation.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-missing_attestation",
+        "errors": [
+          "operator_attestation_missing"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "741c35b53ca8fc234bf77b25324c43787661dc1350daf45e6289843f01a10033"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_weak_attestation",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_weak_attestation.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-weak_attestation",
+        "errors": [
+          "operator_attestation_must_include_report_only_boundary"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "105148bff511b5021bc3e99c5f5c1881796b3c5a0e09cf3083fe47a63a56154b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_expired_decision",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_expired_decision.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-expired_decision",
+        "errors": [
+          "expires_not_after_signed",
+          "decision_expired"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "181202b33b94bb7b7950a0852832b1f18318ed6afbf766ff7f4b60577e642e28"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_expires_before_signed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_expires_before_signed.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-expires_before_signed",
+        "errors": [
+          "expires_not_after_signed",
+          "decision_expired"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "a11db8dc40a294bba9bbbd6e5a3ebf4fe3fc46c1406bcfb9b5d199b6aadced5d"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_contract",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_missing_contract.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-missing_contract",
+        "errors": [
+          "source_intake_contract_path_missing"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "54bb3e0c304509b336c7aafde3c30d83c8c56f2419c25130eed7e072f4421931"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_outside_contract",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_outside_contract.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-outside_contract",
+        "errors": [
+          "source_intake_contract_path_must_stay_inside_lab"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "f7c2e0eaf66e2549a3c976f65b9c29b4636335b306d7c0c9c828930bf862bc23"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_unknown_service",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_unknown_service.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-unknown_service",
+        "errors": [
+          "service_id_not_found_in_intake_contract",
+          "allowed_scope_must_start_with_service_id"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "unknown_service"
+      },
+      "sha256": "906f41b6c723e8848be80551c5a9b1bdf365e3983c7b0fec45f964fe20f86985"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wrong_request_type",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_wrong_request_type.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-wrong_request_type",
+        "errors": [
+          "request_type_must_match_template"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "ee20510c44210ddd9e6a3b6ba4d6b8d405953ebbcb22b4e922d411edec601182"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_decision_not_allowed_for_service",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_decision_not_allowed_for_service.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_exact_action_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-decision_not_allowed_for_service",
+        "errors": [
+          "decision_not_allowed_for_service_template"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "89d1ed1f6021a4a69cdd24af75c25b1768c63b5991b42d097459b7f3d115160c"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_broad_scope",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_broad_scope.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-broad_scope",
+        "errors": [
+          "allowed_scope_must_be_exact_not_broad",
+          "allowed_scope_must_start_with_service_id"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "698ef1bcbd77318d1a76c10529c6ddbc3e4029ff128c8376e3b6c1ab15742d56"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_request_ids_for_non_deny",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_missing_request_ids_for_non_deny.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-missing_request_ids_for_non_deny",
+        "errors": [
+          "non_deny_decision_requires_bound_request_ids"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "7e874a242fd880b991a252272dfba0abaeddb033d20b496933948be644d257fb"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_unknown_request_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_unknown_request_id.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-unknown_request_id",
+        "errors": [
+          "allowed_request_ids_unknown_for_template:req-does-not-exist"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "f0dc8790c353c4b876d65610fd74638c5aeab1286e509b232897087b5cd5bd79"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_exact_scope_false",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_exact_scope_false.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-exact_scope_false",
+        "errors": [
+          "exact_scope_required_must_be_true"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "685520bbd1b6e7e54fa1d329fa057fe1e4de5a34e2c75c86bccc9316f9dd65b2"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_approval_is_apply",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_approval_is_apply.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-approval_is_apply",
+        "errors": [
+          "approval_is_not_apply_must_be_true"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "1be4d73201e2e6553f530fd0dbdc98796d45730c33e9019857d681bdfa6e4fe9"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_apply_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_apply_allowed.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-apply_allowed",
+        "errors": [
+          "apply_allowed_must_be_false"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "e7b20c086c19f604d1c6ac77be788954b44b4894fb20ac881b7e96a90ea5c3dc"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_approval_row_written",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_approval_row_written.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-approval_row_written",
+        "errors": [
+          "runtime_boundary_approval_rows_written_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "33c5fbc67fc588f2ce2bc23a37a56a230d71cbb47d716ea674d6ffdbec47240f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_decision_applied",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_decision_applied.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-decision_applied",
+        "errors": [
+          "runtime_boundary_decisions_applied_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "8e4406d5e6c3531f1d0c8b3e6af54210ab900eb42cc0aa3779514771dec40c9d"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_assigned",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_service_request_assigned.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-service_request_assigned",
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "e1aa390eff1312a290430a4c1b828b4513f7596fcad28c51f3b849f8dfca288b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_updated",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_service_request_updated.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-service_request_updated",
+        "errors": [
+          "runtime_boundary_service_requests_updated_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "bbe2cbf68bd84a755d10d20ab6b92eaf9c2992f67fcb93b3b688ae339cc80ece"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_worker_started.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-worker_started",
+        "errors": [
+          "runtime_boundary_worker_starts_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "07f9ef243d2a5707e607e38e6275dce8b77c5e5c7a93abe2ba936139a2d6206a"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_browser_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_browser_started.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-browser_started",
+        "errors": [
+          "runtime_boundary_browser_sessions_started_must_equal_False"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "898079529701cfa08bd3b0b03ac789c363c33690584fda91c19abd81310c25ad"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_api_called",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_api_called.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-api_called",
+        "errors": [
+          "runtime_boundary_api_calls_must_equal_False"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "5ec0ab815a568d4e097be51861ca869100b35850c91399abc750ca0e4fa68bf0"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures\\negative_external_side_effect.json",
+      "result": {
+        "accepted_for_later_apply_preflight": false,
+        "apply_allowed": false,
+        "decision": "approve_assignment_preflight_only",
+        "decision_id": "service-worker-signed-decision-negative-external_side_effect",
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "api_calls": false,
+          "apply_allowed": false,
+          "approval_granted_by_guard": false,
+          "approval_rows_written": 0,
+          "browser_sessions_started": false,
+          "decision_authority_granted_by_guard": false,
+          "decisions_applied": 0,
+          "external_side_effects": false,
+          "rejection_granted_by_guard": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "service_id": "browser_read_only_session"
+      },
+      "sha256": "84aa8af8a2fdbc9a755812e54e93e8d5f910f68544f9232fff2bdd298bb602fe"
+    }
+  ],
+  "schema_path": "E:\\agent-company-lab\\architecture\\service-worker-signed-decision-guard-v1.schema.json",
+  "schema_version": "agent_company.service_worker_signed_decision_guard_report.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "service_template_count": 13,
+  "source_intake_contract_path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-intake-contract-v1-20260617.json",
+  "source_intake_contract_sha256": "abdaef542ed734b833310a183a1b8f1bc0c4ba5c0d9119cc8e939379c5507353",
+  "source_intake_validation_path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-intake-contract-v1-validation-20260617.json",
+  "worker_starts": 0
+}

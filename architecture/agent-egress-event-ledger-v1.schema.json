@@ -1,0 +1,205 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/agent-egress-event-ledger-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Egress Event Ledger v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "egress_event_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "egress_schema_version": {
+      "const": "agent_company.agent_egress_event_ledger.v1"
+    },
+    "created_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "expires_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "worker_pool_id": {
+      "const": "service-worker-local-runtime-adapter-pool"
+    },
+    "identity_envelope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity_envelope_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_decision_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "service_request_artifact_path": {
+      "type": "string"
+    },
+    "egress_type": {
+      "enum": [
+        "model_api",
+        "mcp_tool",
+        "direct_api",
+        "browser_read_only",
+        "browser_signed_in",
+        "computer_use",
+        "public_submission",
+        "wallet_payment",
+        "account_registration",
+        "credential_access",
+        "github_public_action",
+        "marketplace_action",
+        "outreach_delivery",
+        "agent_to_agent"
+      ]
+    },
+    "target": {
+      "type": "string"
+    },
+    "tool_or_model": {
+      "type": "string"
+    },
+    "input_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "credential_scope": {
+      "const": "none"
+    },
+    "browser_scope": {
+      "const": "none"
+    },
+    "mcp_scope": {
+      "const": "none"
+    },
+    "model_api_scope": {
+      "const": "none"
+    },
+    "wallet_scope": {
+      "const": "none"
+    },
+    "payment_scope": {
+      "const": "none"
+    },
+    "public_action_scope": {
+      "const": "none"
+    },
+    "budget_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rate_limit_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_verdict": {
+      "enum": [
+        "deny",
+        "allow_report_only_preflight",
+        "pause_for_review",
+        "allow_after_operator_approval"
+      ]
+    },
+    "policy_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "policy_evaluator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "redaction_required": {
+      "const": true
+    },
+    "recording_required": {
+      "const": true
+    },
+    "rollback_or_teardown_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "external_side_effects_expected": {
+      "const": false
+    },
+    "post_execution_evidence_required": {
+      "const": true
+    },
+    "revocation_status": {
+      "enum": [
+        "active",
+        "revoked"
+      ]
+    }
+  },
+  "required": [
+    "egress_event_id",
+    "egress_schema_version",
+    "created_utc",
+    "expires_utc",
+    "request_id",
+    "task_id",
+    "lane_id",
+    "agent_id",
+    "worker_pool_id",
+    "identity_envelope_id",
+    "identity_envelope_artifact_path",
+    "operator_decision_id",
+    "operator_decision_artifact_path",
+    "service_request_artifact_path",
+    "egress_type",
+    "target",
+    "tool_or_model",
+    "input_artifact_path",
+    "output_artifact_path",
+    "credential_scope",
+    "browser_scope",
+    "mcp_scope",
+    "model_api_scope",
+    "wallet_scope",
+    "payment_scope",
+    "public_action_scope",
+    "budget_scope",
+    "rate_limit_scope",
+    "policy_verdict",
+    "policy_reasons",
+    "policy_evaluator",
+    "redaction_required",
+    "recording_required",
+    "rollback_or_teardown_artifact_path",
+    "runtime_boundary",
+    "external_side_effects_expected",
+    "post_execution_evidence_required",
+    "revocation_status"
+  ]
+}

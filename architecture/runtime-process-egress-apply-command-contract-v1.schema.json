@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.runtime_process_egress_apply_command_contract.v1",
+  "title": "Runtime Process Egress Apply Command Contract v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "command_id",
+    "command_type",
+    "target_route_id",
+    "target_egress_type",
+    "source_apply_preflight_blocker_path",
+    "source_guard_validation_path",
+    "source_intake_validation_path",
+    "source_gateway_docket_validation_path",
+    "source_egress_ledger_validation_path",
+    "expected_source_apply_preflight_status",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "allowed_scope",
+    "target_request_ids",
+    "apply_command_allowed",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "runtime_start_allowed",
+    "runtime_starts",
+    "dependency_installs",
+    "queue_mutations",
+    "worker_start_allowed",
+    "worker_starts",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_process_egress_apply_command_contract.v1"
+    },
+    "command_type": {
+      "type": "string",
+      "enum": ["deny_noop", "report_only_apply_command_contract"]
+    },
+    "target_route_id": {
+      "const": "runtime_process_gateway"
+    },
+    "target_egress_type": {
+      "const": "runtime_start"
+    },
+    "apply_command_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "runtime_starts": {
+      "const": 0
+    },
+    "dependency_installs": {
+      "const": 0
+    },
+    "queue_mutations": {
+      "const": 0
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "worker_starts": {
+      "const": 0
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

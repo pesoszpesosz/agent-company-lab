@@ -1,0 +1,77 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-route-replay-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a browser-local Route Replay controller to the Path Map so lane history can play forward as game-like stages while reusing the Event Proof lens.",
+  "design_research": {
+    "queries": [
+      "game UI quest log timeline milestones dashboard design patterns",
+      "product roadmap timeline gamification unlock levels UX dashboard",
+      "activity timeline replay dashboard UX pattern"
+    ],
+    "source_urls": [
+      "https://www.productplan.com/learn/what-is-a-product-roadmap",
+      "https://dribbble.com/search/roadmap-gamification",
+      "https://nicelydone.club/tags/recent-activity",
+      "https://yukaichou.com/gamification-study/the-strategy-dashboard-for-gamification-design/",
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards"
+    ],
+    "pattern_notes": [
+      "Roadmap and activity surfaces need a compact overview plus explicit access to deeper records.",
+      "Gamified dashboards should keep game objectives, win states, feedback, and rewards visible.",
+      "Replay-style controls make long histories explorable without forcing a giant first-scan feed."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-route-replay-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathReplayIndexByLane",
+      "browser-only state.pathReplayPlayingLaneId",
+      "existing state.pathEventFocusByLane and Event Proof lens"
+    ],
+    "ui_contract": [
+      "Render Route Replay inside Path Map without adding schema or mutating snapshot data.",
+      "Order lane history from oldest to newest so playback feels like a route run.",
+      "Provide start, back, play/pause, next, and latest controls.",
+      "Keep replay stage changes synchronized with the existing Event Proof lens.",
+      "Pause off-screen replay when the operator switches to a different lane."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-route-replay-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, Path Map had 0 .path-route-replay panels, 0 data-path-replay-action controls, and no Route Replay text."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-route-replay-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Route Replay rendered 1 panel with 5 controls, started at Stage 1 of 64, NEXT advanced to Stage 2 and updated Event Proof to Browser Research with 4 preview lines, latest jumped to Stage 64, and play/pause toggled the playing state."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports rendered 1 Route Replay panel, 5 controls, Stage 2 after NEXT, an updated Event Proof lens, no bad rectangles, and no console errors."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "metadata_json": "passed",
+      "http_status": 200
+    }
+  }
+}

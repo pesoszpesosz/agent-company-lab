@@ -1,0 +1,20 @@
+{
+  "artifact_kind": "report_json",
+  "chain_validation_path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+  "component_id": "packet_negative_fixture_matrix_json",
+  "content": {
+    "decision": "local report-only scaffolding",
+    "next_action": "Use this component as planning evidence only until an explicit runtime implementation approval exists.",
+    "runtime_boundary": "No Temporal/Inngest imports, dependency installs, runtime starts, workflow starts, event emissions, service-request mutations, worker starts, API calls, or external side effects."
+  },
+  "executable_code": false,
+  "generated_utc": "2026-06-15T16:23:07Z",
+  "packet_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-packet-latest.json",
+  "report_only": true,
+  "runtime_component": false,
+  "runtime_side_effect_component": false,
+  "schema_version": "temporal_inngest_adapter_runtime_report_only_scaffolding_component.v1",
+  "side_effects_performed": false,
+  "source_fixture_id": "allow_negative_fixture_matrix_json",
+  "title": "render a JSON matrix of rejected runtime-side-effect candidates"
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-egress-route-apply-preflight-blocker-v1-20260618",
+  "task_id": "task-egress-route-apply-preflight-blocker-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:30:40Z",
+  "summary": "Created a report-only apply-preflight blocker for the browser_read_only_gateway egress route. The blocker verifies the gateway docket, signed-decision intake, and signed-decision guard all pass, observes the report-only apply-command contract without depending on it, and still blocks apply because no real signed operator egress decision artifact exists.",
+  "source_guard_validation": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-guard-v1-validation-20260618.json",
+  "source_intake_validation": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+  "source_gateway_docket_validation": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\egress-route-apply-preflight-blocker-v1.schema.json",
+      "sha256": "a0ce2465b5668db0ac4c79dff3fc343cf67cf0092370304c347dfae1017139ce"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_egress_route_apply_preflight_blocker.py",
+      "sha256": "07e093b51e262a286a504124c57387f559d24f63fda9bf182522642961a09a6c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_egress_route_apply_preflight_blocker.py",
+      "sha256": "b44fd99c477bef75a9dccebf749f51d18af0aa6965da44c007d01d404a69354a"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-apply-preflight-blocker-v1-20260618.json",
+      "sha256": "c500ba4e8ed552e88005ddf128ad22314cecde15f71133e81e12df7689d71740"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-apply-preflight-blocker-v1-validation-20260618.json",
+      "sha256": "fd588952fab7ca95f87bfe11270288842cdb6d0c0ea6575bf04d9cf509ecf1b7"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-apply-preflight-blocker-v1-20260618.md",
+      "sha256": "04ddb787a742ef1fe9b5ffc14827c2bb239e4f542930208d76c6c76e5300e736"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_egress_route_apply_preflight_blocker.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+    "full_test_result": "30 tests passed",
+    "target_route_id": "browser_read_only_gateway",
+    "apply_preflight_status": "blocked_no_real_signed_decision",
+    "blocker_reason": "no_real_signed_operator_egress_route_decision_artifact",
+    "real_signed_decision_present": false,
+    "apply_command_contract_present": true,
+    "accepted_guard_decision_count": 2,
+    "rejected_guard_decision_count": 34,
+    "apply_allowed": false,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "dependency_installs": 0,
+    "worker_registrations": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Provide a real signed operator egress-route decision artifact, then build an apply-command guard before any browser gateway registration, service request mutation, browser session, worker start, or live egress can be considered."
+}

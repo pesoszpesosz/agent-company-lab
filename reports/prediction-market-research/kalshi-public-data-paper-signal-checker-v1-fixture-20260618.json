@@ -1,0 +1,159 @@
+{
+  "candles": [
+    {
+      "close": 50,
+      "high": 55,
+      "low": 45,
+      "open": 49,
+      "ticker": "KXBTC-20260618-105000",
+      "volume": 30
+    },
+    {
+      "close": 100,
+      "high": 100,
+      "low": 99,
+      "open": 99,
+      "ticker": "KXOLD-20260617-FINAL",
+      "volume": 0
+    },
+    {
+      "close": 50,
+      "high": 80,
+      "low": 20,
+      "open": 50,
+      "ticker": "KXTHIN-20260618",
+      "volume": 0
+    },
+    {
+      "close": 94,
+      "high": 96,
+      "low": 88,
+      "open": 88,
+      "ticker": "KXPOSTCLOSE-20260618",
+      "volume": 3
+    }
+  ],
+  "markets": [
+    {
+      "account_eligibility_verified": false,
+      "close_time": "2026-06-18T15:00:00Z",
+      "event_ticker": "KXBTC-20260618",
+      "fees_verified": false,
+      "last_price": 50,
+      "liquidity": 1200,
+      "market_title": "Bitcoin above 105000 at settlement",
+      "max_loss_defined": false,
+      "no_ask": 54,
+      "no_bid": 46,
+      "official_settlement_source_verified": false,
+      "open_interest": 500,
+      "orderbook_depth_verified": false,
+      "rules_primary": "Settles against official benchmark source.",
+      "settlement_ts": null,
+      "settlement_value": null,
+      "status": "active",
+      "ticker": "KXBTC-20260618-105000",
+      "volume": 2000,
+      "volume_24h": 200,
+      "yes_ask": 54,
+      "yes_bid": 46
+    },
+    {
+      "account_eligibility_verified": false,
+      "close_time": "2026-06-17T15:00:00Z",
+      "event_ticker": "KXOLD-20260617",
+      "fees_verified": false,
+      "last_price": 100,
+      "liquidity": 0,
+      "market_title": "Finalized old market with terminal quotes",
+      "max_loss_defined": false,
+      "no_ask": 1,
+      "no_bid": 0,
+      "official_settlement_source_verified": true,
+      "open_interest": 0,
+      "orderbook_depth_verified": false,
+      "rules_primary": "Settled historical market.",
+      "settlement_ts": "2026-06-17T15:10:00Z",
+      "settlement_value": "yes",
+      "status": "finalized",
+      "ticker": "KXOLD-20260617-FINAL",
+      "volume": 7000,
+      "volume_24h": 0,
+      "yes_ask": 100,
+      "yes_bid": 99
+    },
+    {
+      "account_eligibility_verified": false,
+      "close_time": "2026-06-18T22:00:00Z",
+      "event_ticker": "KXTHIN",
+      "fees_verified": false,
+      "last_price": 50,
+      "liquidity": 35,
+      "market_title": "Thin liquidity wide spread market",
+      "max_loss_defined": false,
+      "no_ask": 80,
+      "no_bid": 20,
+      "official_settlement_source_verified": false,
+      "open_interest": 2,
+      "orderbook_depth_verified": false,
+      "rules_primary": "Low-liquidity public metadata row.",
+      "settlement_ts": null,
+      "settlement_value": null,
+      "status": "active",
+      "ticker": "KXTHIN-20260618",
+      "volume": 20,
+      "volume_24h": 0,
+      "yes_ask": 80,
+      "yes_bid": 20
+    },
+    {
+      "account_eligibility_verified": false,
+      "close_time": "2026-06-18T00:00:00Z",
+      "event_ticker": "KXPOSTCLOSE",
+      "fees_verified": false,
+      "last_price": 94,
+      "liquidity": 900,
+      "market_title": "Post-close row with unverified settlement source",
+      "max_loss_defined": false,
+      "no_ask": 8,
+      "no_bid": 4,
+      "official_settlement_source_verified": false,
+      "open_interest": 300,
+      "orderbook_depth_verified": false,
+      "rules_primary": "Potential settlement lag but official source unverified.",
+      "settlement_ts": null,
+      "settlement_value": null,
+      "status": "active",
+      "ticker": "KXPOSTCLOSE-20260618",
+      "volume": 1000,
+      "volume_24h": 20,
+      "yes_ask": 96,
+      "yes_bid": 92
+    }
+  ],
+  "schema_version": "prediction_market_research.kalshi_saved_rows_fixture.v1",
+  "source": "synthetic_saved_rows_no_live_kalshi_api",
+  "trades": [
+    {
+      "count": 5,
+      "is_block_trade": false,
+      "ticker": "KXBTC-20260618-105000",
+      "ts": "2026-06-18T12:00:00Z",
+      "yes_price": 50
+    },
+    {
+      "count": 1,
+      "is_block_trade": false,
+      "ticker": "KXOLD-20260617-FINAL",
+      "ts": "2026-06-17T15:08:00Z",
+      "yes_price": 100
+    },
+    {
+      "count": 1,
+      "is_block_trade": true,
+      "ticker": "KXTHIN-20260618",
+      "ts": "2026-06-18T05:00:00Z",
+      "yes_price": 50
+    }
+  ]
+}

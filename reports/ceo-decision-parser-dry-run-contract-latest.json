@@ -1,0 +1,82 @@
+{
+  "accepted_decision_count": 0,
+  "approval_request_count": 0,
+  "contract_evidence_id": "ceo-decision-parser-dry-run-contract-20260616",
+  "contract_lane_id": "platform_engineering",
+  "contract_section_count": 6,
+  "contract_sections": [
+    {
+      "description": "Echo the submitted decision intake and loaded guard version without modifying it.",
+      "required": true,
+      "section_id": "input_snapshot"
+    },
+    {
+      "description": "Report missing, unknown, malformed, or ambiguous required fields.",
+      "required": true,
+      "section_id": "field_validation"
+    },
+    {
+      "description": "Map every rejection or acceptance condition to an explicit guard/preflight rule id.",
+      "required": true,
+      "section_id": "rule_evaluation"
+    },
+    {
+      "description": "List allowed blocker ids, allowed actions, forbidden actions, and expiration/review time.",
+      "required": true,
+      "section_id": "scope_boundary"
+    },
+    {
+      "description": "Preview proposed service_request status changes and worker starts without applying them.",
+      "required": true,
+      "section_id": "mutation_preview"
+    },
+    {
+      "description": "Emit parser version, source artifact paths, hash inputs, and zero-side-effect counters.",
+      "required": true,
+      "section_id": "audit_footer"
+    }
+  ],
+  "contract_task_id": "task-ceo-decision-parser-dry-run-contract-20260616",
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T23:25:19Z",
+  "lane_evidence_rows_after": 104,
+  "lane_evidence_rows_before": 103,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_dry_run_contract_ready_parser_not_executed",
+  "mutation_preview_state_count": 4,
+  "mutation_preview_states": [
+    "no_change",
+    "would_keep_held",
+    "would_reject_or_park",
+    "would_create_bounded_service_request_update"
+  ],
+  "next_action": "Implement a report-only parser against this contract before any real service_request mutation path is allowed.",
+  "parser_execution_count": 0,
+  "recommended_default": "report_only_dry_run_before_any_mutation",
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_dry_run_contract.v1",
+  "source_blocking_check_count": 7,
+  "source_preflight_check_count": 7,
+  "source_preflight_evidence_id": "ceo-decision-parser-preflight-20260616",
+  "source_preflight_task_id": "task-ceo-decision-parser-preflight-20260616",
+  "source_preflight_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-preflight-validation-latest.json",
+  "summary": "Created a local dry-run output contract for any future CEO decision parser. The contract defines report-only sections and mutation-preview states without executing a parser.",
+  "task_rows_inserted_by_contract": 1,
+  "tasks_table_rows_after": 196,
+  "tasks_table_rows_before": 195
+}

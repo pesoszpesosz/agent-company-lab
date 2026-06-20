@@ -1,0 +1,110 @@
+{
+  "traceId": "trace-agent-company-atlas-path-core-snapshot-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-core-snapshot-v1-20260618",
+  "eventId": "trace-atlas_path_core_snapshot_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-core-snapshot-trace-metadata-20260618",
+  "title": "Path Core Snapshot",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "ownerAgentId": "recovered-profitable-edge-infra",
+  "inspiration": [
+    {
+      "source": "Gamification with Purpose: What Learners Prefer to Motivate Their Learning",
+      "note": "Progress bars, concept maps, immediate feedback, and achievements were identified as preferred meaningful game design elements."
+    },
+    {
+      "source": "Planning Gamification Strategies based on User Characteristics and DM",
+      "note": "Objectives, levels, progress, and choice appeared as important game element recommendations."
+    }
+  ],
+  "problem": "The direct Path cockpit was visually denser after recent compaction, but the Core deck still mounted full Scan, Command, or Route panels inside a small bounded area. This created a cramped internal scroll feeling and weakened the first-screen game-board impression.",
+  "implementation": [
+    "Added pathCoreSnapshotItems to derive three compact route, proof, and work/gate signal cards from lane data.",
+    "Added renderPathCoreSnapshot as a compact active-module lens with a route arc, signal cards, and fast actions.",
+    "Replaced the default Core panel body with the snapshot instead of mounting the full active module content.",
+    "Removed internal Core-panel scrolling in the Stage board.",
+    "Added mobile-specific compaction so the Core tabs and live rail fit inside the bounded board while the floating depth pill remains visible.",
+    "Fixed Mission Glance title clamping so long next actions stop stretching the mobile stage."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_core_snapshot.py",
+    "tests/test_agent_company_atlas_path_core_live_tokens.py"
+  ],
+  "browserEvidence": {
+    "desktop": {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "boardVisible": true,
+      "oldPanelsMounted": false,
+      "overflowX": 0,
+      "corePanelOverflowY": "hidden",
+      "snapshotCardCount": 3,
+      "boardRect": {
+        "x": 35,
+        "y": 173,
+        "width": 1195,
+        "height": 434,
+        "bottom": 607
+      },
+      "snapshotRect": {
+        "x": 599,
+        "y": 295,
+        "width": 612,
+        "height": 240,
+        "bottom": 535
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "coreDeckInsideBoard": true,
+      "corePanelDisplay": "none",
+      "overflowX": 0,
+      "boardRect": {
+        "x": 27,
+        "y": 207,
+        "width": 306,
+        "height": 562,
+        "bottom": 769
+      },
+      "coreDeckRect": {
+        "x": 38,
+        "y": 613,
+        "width": 284,
+        "height": 155,
+        "bottom": 768
+      }
+    }
+  },
+  "verification": [
+    {
+      "type": "red-test",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_snapshot.py -q",
+      "result": "failed before implementation because renderPathCoreSnapshot did not exist"
+    },
+    {
+      "type": "focused-tests",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_snapshot.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_live_tokens.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_depth_pill.py -q",
+      "result": "4 passed"
+    },
+    {
+      "type": "syntax",
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "passed"
+    },
+    {
+      "type": "full-atlas-suite",
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "53 passed, 55 deselected"
+    }
+  ],
+  "nextAction": "Continue upgrading the Path cockpit with higher-quality lane-specific motion and richer agent/level visuals while keeping the first screen compact."
+}

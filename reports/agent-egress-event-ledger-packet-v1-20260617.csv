@@ -1,0 +1,5 @@
+candidate_event,egress_type,policy_verdict,rationale,next_blocker
+Local runtime adapter dry-run evidence,direct_api_or_agent_to_agent,allow_report_only_preflight,Local-only evidence path for future runtime verification,identity envelope and operator decision contract required
+Browser read-only domain probe packet,browser_read_only,pause_for_review,High service-request demand but browser scope must be explicit,domain session recording and teardown policy required
+Model API costed dry-run packet,model_api,pause_for_review,Needs provider model cost input output and artifact scopes before any model call,provider/model/cost approval required
+MCP registry review packet,mcp_tool,deny,Unknown MCP tools must stay disabled until registry gate exists,mcp_tool_registry_gate_v1 required

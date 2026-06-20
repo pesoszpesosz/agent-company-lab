@@ -1,0 +1,36 @@
+{
+  "all_packets_have_boundaries": true,
+  "all_packets_have_capabilities": true,
+  "all_plans_no_registration": true,
+  "all_register_previews_require_manual_review": true,
+  "api_calls": false,
+  "approval_granted_by_plan": false,
+  "current_assignment_request_count": 14,
+  "department_counts": {
+    "service_worker_browser_operations": 2,
+    "service_worker_evidence_building": 1,
+    "service_worker_observability": 2,
+    "service_worker_reputation_review": 1,
+    "service_worker_risk_review": 1
+  },
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T10:21:36Z",
+  "pool_registration_plan_path": "E:\\agent-company-lab\\reports\\service-worker-pool-registration-plan-latest.json",
+  "pools_registered_by_plan": 0,
+  "register_command_preview_count": 7,
+  "registration_packet_count": 7,
+  "role_counts": {
+    "browser_action_worker": 2,
+    "chief_risk_officer": 1,
+    "evidence_builder": 1,
+    "observability_worker": 2,
+    "reputation_review_worker": 1
+  },
+  "route_counts": {
+    "registration_packet_ready_manual_review": 7
+  },
+  "schema_version": "service_worker_pool_registration_plan_validation.v1",
+  "service_requests_assigned_by_plan": 0,
+  "service_requests_updated_by_plan": 0,
+  "worker_starts": 0
+}

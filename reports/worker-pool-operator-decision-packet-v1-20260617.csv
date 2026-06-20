@@ -1,0 +1,8 @@
+worker_pool_id,priority,source_route,current_request_count,recommended_decision_shape,required_blockers
+service-worker-browser-read-only-pool,high,manual_review_register_later,7,approve_identity_envelope_draft,identity envelope plus read-only browser domain/session/recording policy
+service-worker-signed-in-browser-read-only-pool,low,manual_review_hold,1,hold,signed-in browser safety and session policy missing
+service-worker-legal-kyc-payment-review-pool,medium,manual_review_register_later,1,approve_identity_envelope_draft,CRO legal KYC tax payment scope required
+service-worker-local-runtime-adapter-pool,high,manual_review_register_later,2,approve_identity_envelope_draft,identity envelope plus local-only runtime boundary required
+service-worker-model-api-execution-pool,medium,manual_review_register_later,1,approve_identity_envelope_draft,provider model cost input output and egress ledger scope required
+service-worker-other-gated-work-pool,low,manual_review_hold,1,hold,request type too broad
+service-worker-public-submission-review-pool,medium,manual_review_register_later,1,approve_identity_envelope_draft,CRO reputation and public-action review scope required

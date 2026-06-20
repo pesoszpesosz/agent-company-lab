@@ -1,0 +1,18 @@
+{
+  "span_kind": "AGENT",
+  "runtime": "codex_ceo_goal_bootstrap",
+  "api_calls": false,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "accounts_created": 0,
+  "public_actions": 0,
+  "service_requests_approved_or_assigned": 0,
+  "worker_starts": 0,
+  "registered_agents": [
+    "lane-manager-ai_resources_lab-20260620",
+    "goal-evolver-agent-20260620",
+    "human-action-desk-worker-20260620"
+  ],
+  "lane_added": "ai_resources_lab",
+  "department_added": "ai_resources"
+}

@@ -1,0 +1,27 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-level-hud-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-level-hud-v1-20260619",
+  "eventId": "trace-atlas_active_lane_level_hud_added-20260619",
+  "title": "Active Lane Level HUD",
+  "createdUtc": "2026-06-19T01:08:30Z",
+  "summary": "Added a persistent compact game-status HUD above every selected lane detail view so level, progress, blockers, proof, bot owner, latest unlock, and next action are visible before deeper scrolling.",
+  "layoutEvidence": {
+    "intent": "Make clicked paths read immediately like playable levels instead of long report pages.",
+    "surface": "active-lane-level-hud",
+    "zones": [
+      "lane identity and XP",
+      "proof, gates, completion, and progress signals",
+      "bot owner, latest unlock, and next action"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

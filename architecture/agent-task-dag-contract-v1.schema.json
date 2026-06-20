@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.agent_task_dag_contract.v1",
+  "title": "Agent Task DAG Contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dag_id",
+    "generated_utc",
+    "objective",
+    "source_goal",
+    "owner_agent_id",
+    "nodes",
+    "edges",
+    "gates",
+    "evidence_requirements",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.agent_task_dag_contract.v1"
+    },
+    "dag_id": {
+      "type": "string",
+      "pattern": "^dag-[a-z0-9-]+$"
+    },
+    "generated_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source_goal": {
+      "type": "string",
+      "minLength": 20
+    },
+    "owner_agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "node_id",
+          "lane_id",
+          "agent_role",
+          "task_type",
+          "title",
+          "status",
+          "allowed_actions",
+          "prohibited_actions",
+          "inputs",
+          "outputs",
+          "success_criteria",
+          "risk_gate"
+        ],
+        "properties": {
+          "node_id": {
+            "type": "string",
+            "pattern": "^node-[a-z0-9-]+$"
+          },
+          "lane_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "agent_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "task_type": {
+            "enum": [
+              "research",
+              "local_proof",
+              "service_request",
+              "review",
+              "synthesis",
+              "decision_packet",
+              "implementation_contract"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 5
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "ready_local_only",
+              "blocked_by_gate",
+              "terminal_no_action"
+            ]
+          },
+          "allowed_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prohibited_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "success_criteria": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "risk_gate": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "from",
+          "to",
+          "reason"
+        ],
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 5
+          }
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gate_id",
+          "gate_type",
+          "blocks_nodes",
+          "approval_required_by",
+          "reason"
+        ],
+        "properties": {
+          "gate_id": {
+            "type": "string",
+            "pattern": "^gate-[a-z0-9-]+$"
+          },
+          "gate_type": {
+            "type": "string"
+          },
+          "blocks_nodes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "approval_required_by": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    },
+    "evidence_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evidence_id",
+          "required_for",
+          "artifact_kind",
+          "minimum_fields"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^evidence-[a-z0-9-]+$"
+          },
+          "required_for": {
+            "type": "string"
+          },
+          "artifact_kind": {
+            "type": "string"
+          },
+          "minimum_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "runtime_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_only",
+        "approves_actions",
+        "starts_workers",
+        "updates_service_requests",
+        "calls_apis",
+        "external_side_effects"
+      ],
+      "properties": {
+        "report_only": {
+          "const": true
+        },
+        "approves_actions": {
+          "const": false
+        },
+        "starts_workers": {
+          "const": false
+        },
+        "updates_service_requests": {
+          "const": false
+        },
+        "calls_apis": {
+          "const": false
+        },
+        "external_side_effects": {
+          "const": false
+        }
+      }
+    }
+  }
+}

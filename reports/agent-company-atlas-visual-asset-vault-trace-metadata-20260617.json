@@ -1,0 +1,95 @@
+{
+  "trace_id": "trace-agent-company-atlas-visual-asset-vault-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "company_level_visual_asset_vault",
+  "summary": "Added a Visual Asset Vault that centralizes generated lane avatars, minigame textures, bot portraits, source sheets, trophy art, and spare expansion portraits in a filterable game-like inventory.",
+  "design_research": {
+    "queries": [
+      "digital asset management gallery dashboard UI filters best practices",
+      "design system asset library gallery components filter grid UX",
+      "game inventory collection gallery UI asset vault dashboard pattern"
+    ],
+    "source_urls": [
+      "https://www.gallerysystems.com/best-practices-for-dam-from-digital-imaging-to-file-types/",
+      "https://component.gallery/design-systems/",
+      "https://imagekit.io/blog/top-9-digital-asset-management-best-practices/"
+    ],
+    "pattern_notes": [
+      "Asset libraries need predictable categories and visible metadata so growing collections stay searchable.",
+      "Component galleries favor consistent card anatomy, filtering, and visual previews over long text descriptions.",
+      "Game collection screens make progress visible by grouping items, surfacing rarity or type badges, and preserving quick drill-through."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-visual-asset-vault-trace-metadata-20260617.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].visual.avatar",
+      "snapshot.lanes[].visual.minigame.texture",
+      "snapshot.lanes[].visual.minigame.id",
+      "snapshot.agents[].visual.avatar",
+      "snapshot.agents[].lane",
+      "web/assets/mission-map-bg.png",
+      "web/assets/lanes/operator-avatar-sheet-20260616.png",
+      "web/assets/agents/agent-avatar-sheet-20260616.png",
+      "web/assets/trophies/trophy-medal-sheet-20260617.png",
+      "web/assets/agents/spare-agent-operator-20260616.png"
+    ],
+    "asset_families": [
+      "Lane avatars",
+      "Lane minigame textures",
+      "Agent portraits",
+      "System source sheets"
+    ],
+    "expected_counts": {
+      "lane": 12,
+      "game": 12,
+      "agent": 11,
+      "system": 5,
+      "total": 40
+    },
+    "ui_contract": [
+      "The vault renders all current generated visual assets from reusable records rather than hardcoded card markup.",
+      "Filter chips show all, lane, game, agent, and system counts with browser-local persistence under agent-company-atlas.asset-filter.v1.",
+      "Lane avatar cards open Overview, game texture cards open Game, and agent portrait cards open Comms.",
+      "System cards expose shared atlas surfaces and source sheets without pretending they belong to one lane.",
+      "Responsive layout preserves readable cards on phone, laptop, and wide desktop viewports."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "lane_visuals_json": "passed",
+      "agent_visuals_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=asset-vault&cache=20260617-asset-vault-eager",
+      "checks": [
+        {
+          "viewport": "390x920",
+          "result": "Visual Asset Vault panel visible, 40 asset cards rendered, 5 filter chips rendered, 12 lane assets, 12 game assets, 11 agent assets, 5 system assets, all 40 images loaded, one-column grid, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Visual Asset Vault panel visible, 40 asset cards rendered, 5 filter chips rendered, all 40 images loaded, five-column grid, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1600x900",
+          "result": "Visual Asset Vault panel visible, 40 asset cards rendered, 5 filter chips rendered, all 40 images loaded, six-column grid, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Clicking the Game filter rendered 12 game assets with count text '12 / 40 game'. Clicking the paid_code_bounties game asset updated the URL hash to #lane=paid_code_bounties&view=game, rendered Claim Scout lane minigame text, and activated one matching asset card."
+        }
+      ]
+    }
+  }
+}

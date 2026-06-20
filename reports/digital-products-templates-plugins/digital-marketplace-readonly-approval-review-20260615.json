@@ -1,0 +1,37 @@
+{
+  "schema": "service_request_approval_review.v1",
+  "created_local_date": "2026-06-15",
+  "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+  "lane_id": "digital_products_templates_plugins",
+  "service_id": "browser_read_only_session",
+  "request_type": "browser_research",
+  "current_status": "needs_review",
+  "approval_granted_by_this_packet": false,
+  "external_actions_performed": false,
+  "why_this_request_first": [
+    "The Agent Skill Starter Kit v0 product folder, package manifest, and direct-download listing readiness packet already exist locally.",
+    "Marketplace terms/fees/listing requirements are the first external facts needed before any seller, payment, or public listing decision.",
+    "The requested action can be constrained to public, non-signed-in pages with evidence-only output."
+  ],
+  "exact_approval_scope_if_user_chooses": "Approve only public, non-signed-in browser reading of Gumroad, Lemon Squeezy, and PromptBase public terms, fees, payout, listing, prohibited-content, refund, file-delivery, and seller-requirement pages for Agent Skill Starter Kit v0. No login, signup, seller onboarding, terms acceptance, listing/upload, payment setup, tax/KYC, purchase, public promotion, comments/messages, settings changes, private data, credentials, OTPs, wallet action, or real-money action.",
+  "required_worker_packet": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\execution-plan-v1.md",
+  "expected_outputs_after_approval_only": [
+    "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260615.md",
+    "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-route-comparison-20260615.json",
+    "Optional blocker note if any page requires login, signup, consent, payment, KYC, private data, upload, or public action."
+  ],
+  "draft_approve_command_do_not_run_without_user_decision": "python E:\\agent-company-lab\\tools\\agent_company.py approve-service-request --request-id req-next-wave-digital-marketplace-browser-readonly-20260614 --approved-by USER --exact-scope \"Approve only public, non-signed-in browser reading of Gumroad, Lemon Squeezy, and PromptBase public terms, fees, payout, listing, prohibited-content, refund, file-delivery, and seller-requirement pages for Agent Skill Starter Kit v0. No login, signup, seller onboarding, terms acceptance, listing/upload, payment setup, tax/KYC, purchase, public promotion, comments/messages, settings changes, private data, credentials, OTPs, wallet action, or real-money action.\"",
+  "draft_reject_command_do_not_run_without_user_decision": "python E:\\agent-company-lab\\tools\\agent_company.py reject-service-request --request-id req-next-wave-digital-marketplace-browser-readonly-20260614 --rejected-by USER --reason \"Hold marketplace browser review; continue local-only packaging/listing prep.\"",
+  "remaining_gates_even_if_approved": [
+    "Legal/KYC/tax/payment review remains separate.",
+    "Seller account creation remains prohibited.",
+    "Public listing/upload remains prohibited.",
+    "Real-money sale/payment actions remain prohibited."
+  ],
+  "metadata": {
+    "api_calls": false,
+    "browser_actions": false,
+    "service_requests_changed": false,
+    "realized_usd": 0
+  }
+}

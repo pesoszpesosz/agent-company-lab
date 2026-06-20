@@ -1,0 +1,63 @@
+{
+  "task_id": "task-agent-company-atlas-control-runway-texture-v1-20260618",
+  "trace_id": "trace-agent-company-atlas-control-runway-texture-v1-20260618",
+  "event_id": "trace-atlas_control_runway_texture_added-20260618",
+  "event_type": "atlas_control_runway_texture_added",
+  "event_time": "2026-06-18T00:00:00Z",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Added a project-local Control Runway bitmap texture and wired it into the first-screen runway, Visual Asset Vault, README, and regression tests.",
+  "implementation": {
+    "feature": "Control Runway texture",
+    "asset": "web/assets/system/control-runway-20260618.png",
+    "asset_kind": "system",
+    "generation_mode": "procedural_bitmap_after_builtin_image_tool_file_export_unavailable",
+    "dimensions": "1536x864",
+    "style": "dark premium game UI runway with cyan route rail, amber unlock sockets, coral blocker pips, glass panels, and subtle grid layers",
+    "consumers": [
+      "Control Runway CSS background",
+      "Visual Asset Vault system asset registry",
+      "Control Runway regression test",
+      "web README data-contract documentation"
+    ]
+  },
+  "files_changed": [
+    "web/assets/system/control-runway-20260618.png",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_control_runway.py",
+    "reports/agent-company-atlas-control-runway-texture-trace-metadata-20260618.json",
+    "web/data/snapshot.json"
+  ],
+  "verification": {
+    "static": [
+      {
+        "command": "node --check E:\\agent-company-lab\\web\\app.js",
+        "result": "passed"
+      },
+      {
+        "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_control_runway.py -q",
+        "result": "1 passed"
+      },
+      {
+        "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+        "result": "24 passed, 55 deselected"
+      }
+    ],
+    "browser": [
+      {
+        "url": "http://127.0.0.1:5177/?verify=control-runway-texture#lane=platform_engineering&view=overview&deck=control",
+        "finding": "Computed Control Runway background includes control-runway-20260618.png, runway rendered 6 nodes with 1 active node, 3 visible Control sections, 0 document/body overflow, and no console warnings/errors."
+      },
+      {
+        "finding": "Library deck Asset Vault includes the Control Runway registry entry and runway badge with 0 horizontal overflow and no console warnings/errors."
+      }
+    ]
+  },
+  "follow_up": [
+    "Use the same texture quality standard for Worlds, History, and Library deck-specific compact surfaces.",
+    "Add canvas or sprite motion over the Control Runway texture if the next iteration focuses on richer movement.",
+    "Continue keeping generated assets local to the standalone repo so other agent-company forks can use them."
+  ]
+}

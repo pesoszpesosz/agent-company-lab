@@ -1,0 +1,34 @@
+{
+  "baseline_summary": {
+    "continue_rule_passed": true,
+    "environment_count": 3,
+    "episode_count": 6,
+    "memory_beats_random_count": 3,
+    "policy_count": 2
+  },
+  "boundary": {
+    "api_keys_created_or_used": false,
+    "browser_sessions_started": 0,
+    "episodes_run": 6,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "official_arc_toolkit_installed_or_run": false,
+    "official_or_gated_data_downloaded": false,
+    "paid_compute_or_model_api": false,
+    "papers_or_notebooks_published": 0,
+    "public_actions": 0,
+    "rules_or_terms_accepted": false,
+    "scorecards_opened": 0,
+    "service_requests_mutated": 0,
+    "submissions_made": 0,
+    "synthetic_environments_created": 3,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "arc_agi_3_micro_env_replay_baseline_created",
+  "generated_at": "2026-06-18T08:26:41Z",
+  "lane_id": "ai_ml_competitions",
+  "schema_version": "ai_ml_competitions.arc_agi_3_micro_env_replay_baseline.trace.v1",
+  "source": "tools/create_arc_agi_3_micro_env_replay_baseline.py",
+  "summary": "Standard-library synthetic ARC-AGI-3 micro-environment replay baseline created locally.",
+  "task_id": "task-arc-agi-3-micro-env-replay-baseline-v1-20260618"
+}

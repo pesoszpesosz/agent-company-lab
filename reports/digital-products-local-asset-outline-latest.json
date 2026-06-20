@@ -1,0 +1,170 @@
+{
+  "asset_component_count": 6,
+  "asset_components": [
+    {
+      "component_id": "positioning-template",
+      "purpose": "Clarify buyer, problem, promise, proof, scope, and launch risk before any public page exists.",
+      "title": "AI Builder Launch Positioning Template"
+    },
+    {
+      "component_id": "launch-checklist",
+      "purpose": "Track pre-launch, launch-day, and post-launch tasks with owner, status, and evidence columns.",
+      "title": "Launch Checklist Table"
+    },
+    {
+      "component_id": "screenshot-shotlist",
+      "purpose": "Map the product states that need screenshots to caption, reuse, and missing-asset notes.",
+      "title": "Screenshot Shot List"
+    },
+    {
+      "component_id": "qa-pass-template",
+      "purpose": "Check links, copy, onboarding, pricing consistency, screenshots, and release notes locally.",
+      "title": "Launch QA Pass"
+    },
+    {
+      "component_id": "post-launch-review",
+      "purpose": "Summarize traffic, replies, conversions, support load, and next iteration after a future approved launch.",
+      "title": "Post-Launch Review"
+    },
+    {
+      "component_id": "boundary-readme",
+      "purpose": "State that the pack is locally drafted and has no live marketplace validation or payout setup yet.",
+      "title": "Boundary README"
+    }
+  ],
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not browse marketplaces, create seller accounts, accept terms, publish listings, configure payouts, set prices, or claim live demand from this outline.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this outline."
+  ],
+  "generated_utc": "2026-06-19T21:42:24Z",
+  "lane_evidence_rows_after": 80,
+  "lane_evidence_rows_before": 79,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "draft_first_template_locally_no_marketplace_or_payment_action",
+  "next_action": "Create the local markdown asset draft for the positioning template and launch checklist; do not publish, list, price, browse marketplaces, or configure payouts.",
+  "outline_evidence_id": "digital-products-local-asset-outline-20260616",
+  "outline_lane_id": "digital_products_templates_plugins",
+  "outline_task_id": "task-digital-products-local-asset-outline-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "sample_template_section_count": 5,
+  "sample_template_sections": [
+    {
+      "sample_text": "Solo AI builder preparing a small product launch without a launch manager or agency.",
+      "section_id": "buyer"
+    },
+    {
+      "sample_text": "Launch prep lives in scattered notes, and the builder risks missing screenshots, QA checks, or follow-up review.",
+      "section_id": "problem"
+    },
+    {
+      "sample_text": "One compact checklist pack to organize positioning, screenshots, QA, and post-launch learning before launch day.",
+      "section_id": "promise"
+    },
+    {
+      "sample_text": "Positioning template, launch checklist, screenshot shot list, QA pass, post-launch review, and boundary README.",
+      "section_id": "included-assets"
+    },
+    {
+      "sample_text": "Locally drafted only. No marketplace validation, listing, account setup, payout configuration, or revenue claim has been performed.",
+      "section_id": "boundary"
+    }
+  ],
+  "schema_version": "agent_company.digital_products_local_asset_outline.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_brief_evidence_id": "digital-products-local-build-brief-20260616",
+  "source_brief_task_id": "task-digital-products-local-build-brief-20260616",
+  "source_brief_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-build-brief-validation-latest.json",
+  "summary": "Drafted a local asset outline and first fillable positioning template for the AI builder launch checklist pack. The outline defines six local components, ten positioning fields, and five sample filled sections while preserving all live-marketplace and payment gates.",
+  "task_rows_inserted_by_outline": 1,
+  "tasks_table_rows_after": 157,
+  "tasks_table_rows_before": 156,
+  "template_field_count": 10,
+  "template_fields": [
+    {
+      "field_id": "buyer",
+      "prompt": "Who is the exact AI builder/operator this launch helps?"
+    },
+    {
+      "field_id": "current-mess",
+      "prompt": "What launch-prep mess or risk are they trying to avoid?"
+    },
+    {
+      "field_id": "trigger",
+      "prompt": "What moment makes them need this template pack now?"
+    },
+    {
+      "field_id": "promise",
+      "prompt": "What practical time-saving or mistake-reducing promise can we make without income claims?"
+    },
+    {
+      "field_id": "proof-needed",
+      "prompt": "What local proof, example, screenshot, or checklist evidence would make the promise believable?"
+    },
+    {
+      "field_id": "included-assets",
+      "prompt": "Which concrete files/templates are included in this first version?"
+    },
+    {
+      "field_id": "excluded-scope",
+      "prompt": "What does the pack deliberately not do?"
+    },
+    {
+      "field_id": "setup-time",
+      "prompt": "How long should a buyer need to fill out the first template?"
+    },
+    {
+      "field_id": "support-risk",
+      "prompt": "What support questions or misuse risks should the README pre-answer?"
+    },
+    {
+      "field_id": "validation-gate",
+      "prompt": "Which live marketplace/legal/payment gate is required before publishing or selling?"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "span_kind": "internal",
+  "runtime": "local_cli",
+  "api_calls": false,
+  "browser_actions": false,
+  "external_side_effects": false,
+  "marketplace_actions": false,
+  "payment_actions": false,
+  "public_actions": false,
+  "realized_usd": 0,
+  "lane_id": "digital_products_templates_plugins",
+  "task_id": "task-digital-products-agent-skill-starter-kit-v0-20260614",
+  "product_folder": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+  "build_report": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-v0-build-report-20260614.md",
+  "acceptance_passed": true,
+  "required_file_count": 12,
+  "missing_required_file_count": 0,
+  "markdown_file_count": 12,
+  "missing_gate_term_count": 0,
+  "non_ascii_file_count": 0,
+  "service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+  "service_request_status": "needs_review"
+}

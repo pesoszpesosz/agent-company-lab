@@ -1,0 +1,30 @@
+{
+  "all_checks_passed": true,
+  "api_calls": false,
+  "approval_granted_by_integrity_report": false,
+  "checked_report_count": 138,
+  "db_counts": {
+    "agents_total": 11,
+    "artifacts_total": 2394,
+    "service_requests_total": 16,
+    "tasks_complete": 576,
+    "tasks_open": 2,
+    "tasks_total": 578,
+    "trace_events_total": 508
+  },
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-20T12:52:13Z",
+  "integrity_report_path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json",
+  "pools_registered_by_integrity_report": 0,
+  "schema_version": "service_worker_chain_integrity_validation.v1",
+  "service_requests_assigned_by_integrity_report": 0,
+  "service_requests_updated_by_integrity_report": 0,
+  "service_status_counts": {
+    "complete": 1,
+    "needs_review": 13,
+    "rejected": 2
+  },
+  "worker_starts": 0
+}

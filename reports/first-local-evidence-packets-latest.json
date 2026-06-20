@@ -1,0 +1,79 @@
+{
+  "all_evidence_packets_local_only": true,
+  "all_evidence_rows_present": true,
+  "all_target_lanes_have_evidence_after": true,
+  "evidence_packet_count": 6,
+  "evidence_rows_inserted_or_updated": 6,
+  "generated_utc": "2026-06-15T17:13:06Z",
+  "next_action": "Create narrow manager tasks for first approved local proof work, starting with lanes that still have parked service requests.",
+  "packet_dir": "E:\\agent-company-lab\\reports\\first-local-evidence-packets",
+  "packet_rows": [
+    {
+      "evidence_id": "first-local-evidence-ai_ml_competitions-20260615",
+      "lane_id": "ai_ml_competitions",
+      "local_only": true,
+      "markdown_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\ai_ml_competitions-first-local-evidence-20260615.md",
+      "packet_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\ai_ml_competitions-first-local-evidence-20260615.json",
+      "source_spec_id": "ai_ml_competitions_public_prize_source_seed"
+    },
+    {
+      "evidence_id": "first-local-evidence-content_and_social_growth-20260615",
+      "lane_id": "content_and_social_growth",
+      "local_only": true,
+      "markdown_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\content_and_social_growth-first-local-evidence-20260615.md",
+      "packet_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\content_and_social_growth-first-local-evidence-20260615.json",
+      "source_spec_id": "content_grok_x_read_only_research"
+    },
+    {
+      "evidence_id": "first-local-evidence-digital_products_templates_plugins-20260615",
+      "lane_id": "digital_products_templates_plugins",
+      "local_only": true,
+      "markdown_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\digital_products_templates_plugins-first-local-evidence-20260615.md",
+      "packet_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\digital_products_templates_plugins-first-local-evidence-20260615.json",
+      "source_spec_id": "digital_products_marketplace_demand_source_seed"
+    },
+    {
+      "evidence_id": "first-local-evidence-lead_generation_and_sales-20260615",
+      "lane_id": "lead_generation_and_sales",
+      "local_only": true,
+      "markdown_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\lead_generation_and_sales-first-local-evidence-20260615.md",
+      "packet_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\lead_generation_and_sales-first-local-evidence-20260615.json",
+      "source_spec_id": "lead_generation_policy_sources"
+    },
+    {
+      "evidence_id": "first-local-evidence-local_trading_strategy_research-20260615",
+      "lane_id": "local_trading_strategy_research",
+      "local_only": true,
+      "markdown_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\local_trading_strategy_research-first-local-evidence-20260615.md",
+      "packet_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\local_trading_strategy_research-first-local-evidence-20260615.json",
+      "source_spec_id": "local_trading_research_import"
+    },
+    {
+      "evidence_id": "first-local-evidence-money_source_discovery-20260615",
+      "lane_id": "money_source_discovery",
+      "local_only": true,
+      "markdown_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\money_source_discovery-first-local-evidence-20260615.md",
+      "packet_path": "E:\\agent-company-lab\\reports\\first-local-evidence-packets\\money_source_discovery-first-local-evidence-20260615.json",
+      "source_spec_id": "money_source_discovery_public_venue_source_seed"
+    }
+  ],
+  "purpose": "Create local first-evidence packets and lane_evidence rows for owned non-platform lanes with no evidence rows.",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.first_local_evidence_packets.v1",
+  "source_spec_gap_count_after": 0,
+  "zero_evidence_lane_count_after": 0,
+  "zero_evidence_lane_count_before": 6
+}

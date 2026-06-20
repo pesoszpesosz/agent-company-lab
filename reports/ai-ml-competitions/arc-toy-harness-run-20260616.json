@@ -1,0 +1,499 @@
+{
+  "external_side_effects": false,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-toy-harness-fixture-20260616.json",
+  "generated_utc": "2026-06-16T20:58:48Z",
+  "json_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-toy-harness-run-20260616.json",
+  "kaggle_or_gated_data_used": false,
+  "markdown_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-toy-harness-run-20260616.md",
+  "official_arc_data_used": false,
+  "paid_compute_or_api": false,
+  "passed_count": 5,
+  "rows": [
+    {
+      "expected_program": "translate(1, 0)",
+      "expected_test_output": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "family": "translation",
+      "inspected_candidates": [
+        {
+          "program": "identity",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(1, 0)",
+          "train_matches": 1,
+          "train_total": 1
+        },
+        {
+          "program": "translate(-1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, 1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, -1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(x)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(y)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "crop_nonzero",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(2, 1))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(1, 2))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "fill_bbox(2)",
+          "train_matches": 0,
+          "train_total": 1
+        }
+      ],
+      "passed": true,
+      "selected_program": "translate(1, 0)",
+      "task_id": "synthetic_translate_right_1",
+      "test_output": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "expected_program": "recolor(2, 5)",
+      "expected_test_output": [
+        [
+          5,
+          0,
+          5
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "family": "recolor",
+      "inspected_candidates": [
+        {
+          "program": "identity",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(-1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, 1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, -1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(x)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(y)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "crop_nonzero",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(2, 1))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(1, 2))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "recolor(2, 5)",
+          "train_matches": 1,
+          "train_total": 1
+        },
+        {
+          "program": "recolor(5, 2)",
+          "train_matches": 0,
+          "train_total": 1
+        }
+      ],
+      "passed": true,
+      "selected_program": "recolor(2, 5)",
+      "task_id": "synthetic_recolor_2_to_5",
+      "test_output": [
+        [
+          5,
+          0,
+          5
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "expected_program": "mirror(x)",
+      "expected_test_output": [
+        [
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          7,
+          7
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "family": "mirror",
+      "inspected_candidates": [
+        {
+          "program": "identity",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(-1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, 1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, -1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(x)",
+          "train_matches": 1,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(y)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "crop_nonzero",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(2, 1))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(1, 2))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "fill_bbox(4)",
+          "train_matches": 0,
+          "train_total": 1
+        }
+      ],
+      "passed": true,
+      "selected_program": "mirror(x)",
+      "task_id": "synthetic_mirror_horizontal",
+      "test_output": [
+        [
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          7,
+          7
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "expected_program": "compose(crop_nonzero, tile(2, 1))",
+      "expected_test_output": [
+        [
+          8,
+          0,
+          8,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8
+        ]
+      ],
+      "family": "crop_and_tile",
+      "inspected_candidates": [
+        {
+          "program": "identity",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(-1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, 1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, -1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(x)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(y)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "crop_nonzero",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(2, 1))",
+          "train_matches": 1,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(1, 2))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "fill_bbox(6)",
+          "train_matches": 0,
+          "train_total": 1
+        }
+      ],
+      "passed": true,
+      "selected_program": "compose(crop_nonzero, tile(2, 1))",
+      "task_id": "synthetic_crop_then_tile_2x1",
+      "test_output": [
+        [
+          8,
+          0,
+          8,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "expected_program": "no_solution",
+      "expected_test_output": null,
+      "family": "failure_case",
+      "inspected_candidates": [
+        {
+          "program": "identity",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(-1, 0)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, 1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "translate(0, -1)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(x)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "mirror(y)",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "crop_nonzero",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(2, 1))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "compose(crop_nonzero, tile(1, 2))",
+          "train_matches": 0,
+          "train_total": 1
+        },
+        {
+          "program": "fill_bbox(1)",
+          "train_matches": 0,
+          "train_total": 1
+        }
+      ],
+      "passed": true,
+      "selected_program": "no_solution",
+      "task_id": "synthetic_unknown_diagonal_growth",
+      "test_output": null
+    }
+  ],
+  "schema_version": "agent_company.arc_toy_harness_run.v1",
+  "tasks_checked": 5
+}

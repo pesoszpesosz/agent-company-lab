@@ -1,0 +1,80 @@
+{
+  "trace_id": "trace-agent-company-atlas-expansion-forge-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "company_level_expansion_forge",
+  "summary": "Added an Expansion Forge panel that converts realm packs into reusable future-lane blueprints with open slot counts, minigame coverage, gate pressure, asset requirements, and nearest existing-lane references.",
+  "design_research": {
+    "queries": [
+      "dashboard scalability add new project template UX pattern",
+      "game level editor slot expansion UI pattern dashboard",
+      "design systems extensible component gallery template pattern"
+    ],
+    "source_urls": [
+      "https://www.nngroup.com/articles/design-systems-101/",
+      "https://component.gallery/",
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards",
+      "https://uwplse.org/2025/11/18/level-editors.html"
+    ],
+    "pattern_notes": [
+      "Scalable systems benefit from reusable templates and patterns, not only isolated components.",
+      "Component galleries make future construction easier by showing consistent examples, metadata, and variants.",
+      "Expansion and editor-style surfaces should expose structured data before asking users to edit raw JSON."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-expansion-forge-trace-metadata-20260617.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[]",
+      "snapshot.lanes[].department",
+      "snapshot.lanes[].visual.realm",
+      "snapshot.lanes[].visual.minigame.id",
+      "snapshot.lanes[].counts.blockers",
+      "snapshot.lanes[].counts.outcomes",
+      "snapshot.lanes[].counts.artifacts",
+      "MINIGAME_REGISTRY",
+      "buildRealmPacks()"
+    ],
+    "blueprint_templates": [
+      "Opportunity Scout",
+      "Local Proof Lab",
+      "Audience Loop",
+      "Market Simulator",
+      "Payout Ladder",
+      "Custom Realm"
+    ],
+    "ui_contract": [
+      "Render a company-level Expansion Forge below Expansion Realms.",
+      "Summarize live lanes, wired games, realm packs, and open expansion slots.",
+      "Render six reusable lane-family blueprint cards with module id, mechanic, lane count, minigame coverage, gate count, unlock count, and asset checklist.",
+      "Blueprint cards link to the nearest existing lane in the matching family for reference.",
+      "Blueprints without an existing reference lane render a disabled locked placeholder, not a dead action.",
+      "The forge is static and data-derived; it does not create lanes or mutate JSON."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "trace_metadata_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=expansion-forge&cache=20260617-expansion-forge",
+      "engine": "Playwright against local Chrome because the resumed Browser plugin control surface was not exposed",
+      "checks": [
+        "390x920 viewport: Expansion Forge rendered 6 cards in 1 column with no horizontal overflow, 5 OPEN reference actions, 1 LOCK placeholder, no console errors, and no failed responses.",
+        "1280x800 viewport: Expansion Forge rendered 6 cards in 6 columns with no horizontal overflow, summary values 12 lanes live, 12 games wired, 5 realm packs, and 13 open slots.",
+        "1280x800 interaction: OPEN on money_source_discovery changed the hash to #lane=money_source_discovery&view=game, activated the game tab, and rendered the lane-specific minigame detail.",
+        "1600x900 viewport: Expansion Forge rendered 6 cards in 6 columns with no horizontal overflow, no console errors, and no failed responses.",
+        "Inline favicon prevents browser favicon.ico 404 noise while keeping the web app standalone."
+      ]
+    }
+  }
+}

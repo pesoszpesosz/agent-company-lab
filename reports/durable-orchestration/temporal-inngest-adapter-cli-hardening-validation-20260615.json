@@ -1,0 +1,57 @@
+{
+  "schema_version": "temporal_inngest_adapter_cli_hardening_validation.v1",
+  "generated_local": "2026-06-15T17:59:10.4626749+03:00",
+  "generated_utc_approx": "2026-06-15T14:59:10Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-cli-hardening-checklist-20260615",
+  "checklist_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-hardening-checklist-20260615.json",
+  "source_code_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_code_sha256_before": "799400CC78D467426F30163906129988AF78A268C37F20E157FC46C3D4D09983",
+  "source_code_sha256_after": "799400CC78D467426F30163906129988AF78A268C37F20E157FC46C3D4D09983",
+  "source_code_hash_unchanged": true,
+  "source_implementation_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-implementation-validation-20260615.json",
+  "source_implementation_validation_passed": true,
+  "checklist_count": 14,
+  "p0_count": 3,
+  "p1_count": 8,
+  "p2_count": 3,
+  "required_focus_present": {
+    "malformed_fixture_schema": true,
+    "result_path_policy": true,
+    "negative_tests": true,
+    "unused_default_constant": true,
+    "no_result_write_on_validation_failure": true
+  },
+  "pre_registration_counts": {
+    "tasks": 121,
+    "artifacts": 374,
+    "trace_events": 137,
+    "agents": 11,
+    "service_requests": 14
+  },
+  "pre_registration_service_requests_by_status": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "service_request_mutation_count": 0,
+  "runtime_boundary": {
+    "code_changes_in_this_slice": 0,
+    "cli_commands_added_in_this_slice": 0,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Implement P0 hardening for safe result paths and fixture schema validation with apply_patch, then run positive and negative dry-run tests."
+}

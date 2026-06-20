@@ -1,0 +1,162 @@
+{
+  "approval_request_count": 0,
+  "approval_statement_count": 5,
+  "decision_field_count": 12,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_count": 6,
+  "fixture_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-negative-fixtures-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-negative-fixtures-20260616",
+  "generated_utc": "2026-06-16T09:42:36Z",
+  "lane_evidence_rows_after": 122,
+  "lane_evidence_rows_before": 121,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_signed_decision_negative_fixtures_ready",
+  "mutation_applied_count": 0,
+  "negative_signed_decision_fixture_count": 6,
+  "negative_signed_decision_fixtures": [
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_operator_signature",
+      "fixture_id": "missing-operator-signature",
+      "submitted_signed_decision": {
+        "approval_expires_utc": "2026-06-17T00:00:00Z",
+        "approval_scope_text": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "artifact_output_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-latest.json",
+        "confirms_no_account_payment_public_security_real_money_action": true,
+        "confirms_no_external_side_effects": true,
+        "confirms_no_worker_start": true,
+        "decision_note_text": "parser_apply_dry_run_preview_only_no_mutation",
+        "operator_signature": null,
+        "rollback_plan_acknowledged": true,
+        "rollback_snapshot_updated_at": "2026-06-14T14:37:52Z",
+        "signed_decision_utc": "2026-06-16T09:42:36Z",
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_target_request_id_mismatch",
+      "fixture_id": "wrong-target-request-id",
+      "submitted_signed_decision": {
+        "approval_expires_utc": "2026-06-17T00:00:00Z",
+        "approval_scope_text": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "artifact_output_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-latest.json",
+        "confirms_no_account_payment_public_security_real_money_action": true,
+        "confirms_no_external_side_effects": true,
+        "confirms_no_worker_start": true,
+        "decision_note_text": "parser_apply_dry_run_preview_only_no_mutation",
+        "operator_signature": "operator-approved-local-fixture",
+        "rollback_plan_acknowledged": true,
+        "rollback_snapshot_updated_at": "2026-06-14T14:37:52Z",
+        "signed_decision_utc": "2026-06-16T09:42:36Z",
+        "target_request_id": "req-wrong-target"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_approval_scope_text_mismatch",
+      "fixture_id": "edited-approval-scope-text",
+      "submitted_signed_decision": {
+        "approval_expires_utc": "2026-06-17T00:00:00Z",
+        "approval_scope_text": "mutated scope text",
+        "artifact_output_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-latest.json",
+        "confirms_no_account_payment_public_security_real_money_action": true,
+        "confirms_no_external_side_effects": true,
+        "confirms_no_worker_start": true,
+        "decision_note_text": "parser_apply_dry_run_preview_only_no_mutation",
+        "operator_signature": "operator-approved-local-fixture",
+        "rollback_plan_acknowledged": true,
+        "rollback_snapshot_updated_at": "2026-06-14T14:37:52Z",
+        "signed_decision_utc": "2026-06-16T09:42:36Z",
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_rollback_snapshot_mismatch",
+      "fixture_id": "stale-rollback-snapshot",
+      "submitted_signed_decision": {
+        "approval_expires_utc": "2026-06-17T00:00:00Z",
+        "approval_scope_text": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "artifact_output_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-latest.json",
+        "confirms_no_account_payment_public_security_real_money_action": true,
+        "confirms_no_external_side_effects": true,
+        "confirms_no_worker_start": true,
+        "decision_note_text": "parser_apply_dry_run_preview_only_no_mutation",
+        "operator_signature": "operator-approved-local-fixture",
+        "rollback_plan_acknowledged": true,
+        "rollback_snapshot_updated_at": "2026-01-01T00:00:00Z",
+        "signed_decision_utc": "2026-06-16T09:42:36Z",
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_scope_expiration",
+      "fixture_id": "missing-scope-expiration",
+      "submitted_signed_decision": {
+        "approval_expires_utc": null,
+        "approval_scope_text": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "artifact_output_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-latest.json",
+        "confirms_no_account_payment_public_security_real_money_action": true,
+        "confirms_no_external_side_effects": true,
+        "confirms_no_worker_start": true,
+        "decision_note_text": "parser_apply_dry_run_preview_only_no_mutation",
+        "operator_signature": "operator-approved-local-fixture",
+        "rollback_plan_acknowledged": true,
+        "rollback_snapshot_updated_at": "2026-06-14T14:37:52Z",
+        "signed_decision_utc": "2026-06-16T09:42:36Z",
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_side_effect_confirmation_drift",
+      "fixture_id": "side-effect-confirmation-drift",
+      "submitted_signed_decision": {
+        "approval_expires_utc": "2026-06-17T00:00:00Z",
+        "approval_scope_text": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "artifact_output_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-latest.json",
+        "confirms_no_account_payment_public_security_real_money_action": true,
+        "confirms_no_external_side_effects": false,
+        "confirms_no_worker_start": true,
+        "decision_note_text": "parser_apply_dry_run_preview_only_no_mutation",
+        "operator_signature": "operator-approved-local-fixture",
+        "rollback_plan_acknowledged": true,
+        "rollback_snapshot_updated_at": "2026-06-14T14:37:52Z",
+        "signed_decision_utc": "2026-06-16T09:42:36Z",
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614"
+      }
+    }
+  ],
+  "next_action": "Run a report-only signed-decision guard against these fixtures before adding any mutating apply command.",
+  "queue_mutation_count": 0,
+  "recommended_default": "run_signed_decision_guard_before_any_apply_command",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_signed_decision_negative_fixtures.v1",
+  "source_intake_evidence_id": "ceo-decision-parser-apply-readiness-decision-intake-packet-20260616",
+  "source_intake_task_id": "task-ceo-decision-parser-apply-readiness-decision-intake-packet-20260616",
+  "source_intake_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-decision-intake-packet-validation-latest.json",
+  "summary": "Created six local negative signed-decision fixtures for the apply-readiness approval gate. Each fixture changes one required decision field and should be rejected by the future signed-decision guard.",
+  "target_service_request_count": 1,
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_fixtures": 1,
+  "tasks_table_rows_after": 214,
+  "tasks_table_rows_before": 213
+}

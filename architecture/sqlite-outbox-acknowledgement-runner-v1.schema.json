@@ -1,0 +1,82 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/sqlite-outbox-acknowledgement-runner-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company SQLite Outbox Acknowledgement Runner Preview v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.sqlite_outbox_acknowledgement_runner_preview.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-sqlite-outbox-acknowledgement-runner-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_decision_validation_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_outbox_history_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_service_worker_queue_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "runner_policy": {
+      "type": "object"
+    },
+    "db_counts_before": {
+      "type": "object"
+    },
+    "db_counts_after": {
+      "type": "object"
+    },
+    "acknowledgements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "negative_probes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_decision_validation_path",
+    "source_outbox_history_path",
+    "source_service_worker_queue_path",
+    "runner_policy",
+    "db_counts_before",
+    "db_counts_after",
+    "acknowledgements",
+    "negative_probes",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

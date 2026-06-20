@@ -1,0 +1,45 @@
+{
+  "artifact": "lane-manager-checkpoint-handoff-v1",
+  "created_utc": "2026-06-18T00:00:00Z",
+  "task_id": "task-lane-manager-checkpoint-handoff-v1-20260618",
+  "trace_id": "trace-lane-manager-checkpoint-handoff-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "validation_path": "E:\\agent-company-lab\\reports\\lane-manager-checkpoint-handoff-v1-validation-20260618.json",
+  "report_path": "E:\\agent-company-lab\\reports\\lane-manager-checkpoint-handoff-v1-20260618.md",
+  "schema_path": "E:\\agent-company-lab\\architecture\\lane-manager-checkpoint-handoff-v1.schema.json",
+  "fixture_directory": "E:\\agent-company-lab\\reports\\lane-manager-checkpoint-handoff-v1-fixtures",
+  "summary": {
+    "owned_active_lane_handoffs": 12,
+    "excluded_lanes": [
+      "submitted_bounty_payouts"
+    ],
+    "exclusion_reason": "Read-only payout lane is owned by a separate worker and must not receive checkpoint handoff commands from this infrastructure thread.",
+    "fixture_count": 13,
+    "accepted_count": 1,
+    "rejected_count": 12,
+    "all_checks_passed": true,
+    "failure_count": 0
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "handoff_allowed": false,
+    "worker_start_allowed": false,
+    "service_request_mutation_allowed": false,
+    "tasks_created": 0,
+    "tasks_acquired": 0,
+    "tasks_updated": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "payment_actions": false,
+    "wallet_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Use handoff rows to generate checkpoint/resume UI packets; do not create tasks, assign service requests, or start workers."
+}

@@ -1,0 +1,53 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_six_sources",
+      "passed": true
+    },
+    {
+      "name": "records_unauthenticated_api_gate",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_fifteen_fields",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_four_candidate_classes",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_eight_hard_kill_reasons",
+      "passed": true
+    },
+    {
+      "name": "has_local_only_allowed_stage",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_data_download",
+      "passed": true
+    },
+    {
+      "name": "no_submissions",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_or_worker",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T07:02:31Z",
+  "schema_version": "kaggle_money_competition_scout_worksheet_local_proof.validation.v1",
+  "task_id": "task-lane-scout-kaggle_money_competitions-20260618"
+}

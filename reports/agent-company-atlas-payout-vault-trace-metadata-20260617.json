@@ -1,0 +1,85 @@
+{
+  "trace_id": "trace-agent-company-atlas-payout-vault-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "submitted_bounty_payouts",
+  "minigame_id": "payout-vault",
+  "summary": "Added a custom Payout Vault minigame for submitted bounty payout monitoring with a generated revenue-vault texture, five data-derived payout stations, responsive board styling, and local-only safety language.",
+  "design_research": {
+    "queries": [
+      "bounty payout status dashboard payment evidence owner selection workflow UI",
+      "GitHub bounty payout monitor owner selected solver payment request dashboard",
+      "accounts payable payment approval dashboard status timeline UI",
+      "payment approval workflow status dashboard approval evidence source"
+    ],
+    "source_urls": [
+      "https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues",
+      "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests",
+      "https://www.intacct.com/ia/docs/en_US/help_action/Accounts_Payable/Payments/Payment_Requests/about-payment-status.htm",
+      "https://www.stampli.com/resources/payment-approval-workflow-in-accounts-payable/"
+    ],
+    "pattern_notes": [
+      "The game separates submitted work, owner or maintainer signal, payment evidence, collision or attribution risk, and payment-detail approval gates.",
+      "The interface stays in monitor-only language when owner selection or explicit payout evidence is not present.",
+      "Payment detail, wallet, account, bank, invoice, tax, and public-response actions remain visually locked until explicit owner approval."
+    ]
+  },
+  "generated_asset": {
+    "kind": "revenue_vault_texture",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_03e9bb14426b80a9016a32de6ea95081919540d3d6b50e607e.png",
+    "repo_path": "web/assets/games/payout-vault-bg-20260617.png",
+    "constraints": [
+      "no text",
+      "no logos",
+      "no people",
+      "no currency symbols",
+      "no readable bank, wallet, or card details",
+      "quiet center for dashboard overlays"
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/index.html",
+      "web/README.md"
+    ],
+    "renderer_functions": [
+      "buildPayoutVaultStages",
+      "renderPayoutVaultGame",
+      "renderPayoutStage"
+    ],
+    "stations": [
+      "Submitted Work",
+      "Owner Signal",
+      "Payment Evidence",
+      "Collision Check",
+      "Payout Detail Gate"
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "lane_visuals_json": "passed",
+      "texture_exists": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=payout-vault&cache=20260617-payout-vault#lane=submitted_bounty_payouts&view=game",
+      "checks": [
+        {
+          "viewport": "390x920",
+          "result": "Passed with Monitor Only verdict, texture loaded, 5 stages, 5 locks, no board overflow, no console errors, and next control moving focus from Submitted Work to Owner Signal."
+        },
+        {
+          "viewport": "1600x900",
+          "result": "Passed with texture loaded, 5 stages, 5 locks, no board overflow, and no console errors in the narrow docked detail panel."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Passed with texture loaded, 5 stages in a full-width row, 5 locks, no board overflow, and no console errors."
+        }
+      ]
+    }
+  }
+}

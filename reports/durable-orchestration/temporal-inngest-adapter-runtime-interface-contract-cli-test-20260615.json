@@ -1,0 +1,69 @@
+{
+  "schema_version": "temporal_inngest_adapter_runtime_interface_contract_cli_test.v1",
+  "created_at": "2026-06-15T15:47:26Z",
+  "task_id": "task-temporal-inngest-adapter-runtime-interface-contract-cli-20260615",
+  "command_added": "write-durable-adapter-runtime-interface-contract",
+  "source_sha256_before": "EC1A8B95CEDE2FE63E89A4CDEF4D81DF27FC287213C5AA6211BC524ED00A14F9",
+  "source_sha256_after": "B752E9641A5A9F496EDB6BCCD2CCADEEC7034D974A816D6ECE7F716AB948F00D",
+  "commands_run": [
+    "python -m py_compile E:\\agent-company-lab\\tools\\agent_company.py",
+    "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-interface-contract --help",
+    "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-interface-contract",
+    "python -m json.tool temporal-inngest-adapter-runtime-interface-contract-latest.json",
+    "python -m json.tool temporal-inngest-adapter-runtime-interface-contract-validation-latest.json",
+    "python E:\\agent-company-lab\\tools\\agent_company.py write-service-worker-chain-integrity --path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md --json-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json --validation-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  ],
+  "generated_artifacts": {
+    "contract_json": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-contract-latest.json",
+    "contract_validation_json": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-contract-validation-latest.json",
+    "contract_markdown": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-contract-latest.md",
+    "chain_validation_json": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  },
+  "hashes": {
+    "source": "B752E9641A5A9F496EDB6BCCD2CCADEEC7034D974A816D6ECE7F716AB948F00D",
+    "contract_json": "BF77FEFECB3D05D7D607B2237A0933261FCE1C64C3D441850BDC85B27ED80449",
+    "contract_validation_json": "3B90F2E6A8728849BE36B3CD5F31CC8215446B1691FEABC75B13C554B4C3F405",
+    "contract_markdown": "C2D8D24A683A4B7FA2E2E934E0724B94C3ED0013603BBEB18BA1CA30EC1EF2D8",
+    "chain_validation_json": "E4F2DE0B08D0F64DB0E826959D99A58B405F3527994718AB35CDB879B1DBE3D8"
+  },
+  "validation_summary": {
+    "interface_contract_count": 4,
+    "reducer_result_count": 14,
+    "parked_rows": 11,
+    "terminal_rows": 3,
+    "forbidden_runtime_import_count": 0,
+    "no_forbidden_runtime_imports_detected": true,
+    "model_api_gate_remains_parked": true,
+    "model_api_pool_registered": false,
+    "all_checks_passed": true,
+    "failure_count": 0
+  },
+  "chain_integrity": {
+    "checked_report_count": 19,
+    "failure_count": 0,
+    "all_checks_passed": true
+  },
+  "runtime_boundary": {
+    "workflow_start_allowed": false,
+    "activity_schedule_allowed": false,
+    "event_emit_allowed": false,
+    "runtime_import_allowed": false,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "temporal_workflows_started": 0,
+    "inngest_events_emitted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "service_request_effects": {
+    "status_unchanged": true,
+    "model_api_request_status": "needs_review",
+    "model_api_request_assigned": false,
+    "model_api_pool_registered": false,
+    "service_request_mutation_count": 0
+  },
+  "next_action": "Implement static interface-contract negative fixtures and add generated contract validation to the orchestration readiness chain before any runtime adapter code."
+}

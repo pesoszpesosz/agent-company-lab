@@ -1,0 +1,332 @@
+{
+  "aggregate_gate_flags": [
+    "duplicate_pr_scan_required",
+    "local_build_test_feasibility_required",
+    "maintainer_activity_check_required",
+    "no_try_claim_without_public_action_approval",
+    "public_issue_url_required"
+  ],
+  "aggregate_risk_flags": [
+    "amount_below_first_pass_threshold",
+    "captcha_abuse_bypass_spam_or_policy_evasion",
+    "command_unavailable_or_unknown",
+    "crowded_solver_count",
+    "funding_or_donation_shape_unclear",
+    "language_or_stack_mismatch",
+    "missing_public_issue_url",
+    "security_or_crash_scope_requires_extra_review"
+  ],
+  "candidate_count": 0,
+  "hard_reject_count": 1,
+  "parked_count": 9,
+  "rejected_or_deprioritized_count": 0,
+  "row_count": 10,
+  "rows": [
+    {
+      "amount_usd": 5522,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "c1work",
+      "language_tags": [],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "rodrigompy",
+      "posted_or_issue_date": "31/05/2026",
+      "public_issue_url_if_available": "unknown",
+      "repo": "bugb",
+      "risk_flags": [
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_01",
+      "score": 45,
+      "solver_count": 0
+    },
+    {
+      "amount_usd": 2780,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Readd support for web platform exports when using the C# (.NET) version of the engine",
+      "language_tags": [
+        "C++"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "godotengine",
+      "posted_or_issue_date": "29/09/2024",
+      "public_issue_url_if_available": "unknown",
+      "repo": "godot",
+      "risk_flags": [
+        "crowded_solver_count",
+        "language_or_stack_mismatch",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_02",
+      "score": 14,
+      "solver_count": 8
+    },
+    {
+      "amount_usd": 1640,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Donation/funding for german language",
+      "language_tags": [
+        "JavaScript"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "hexgrad",
+      "posted_or_issue_date": "16/12/2025",
+      "public_issue_url_if_available": "unknown",
+      "repo": "kokoro",
+      "risk_flags": [
+        "crowded_solver_count",
+        "funding_or_donation_shape_unclear",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_03",
+      "score": 15,
+      "solver_count": 6
+    },
+    {
+      "amount_usd": 900,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Crash found in fuzzer",
+      "language_tags": [
+        "C"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "FalkorDB",
+      "posted_or_issue_date": "26/09/2025",
+      "public_issue_url_if_available": "unknown",
+      "repo": "FalkorDB",
+      "risk_flags": [
+        "crowded_solver_count",
+        "language_or_stack_mismatch",
+        "missing_public_issue_url",
+        "security_or_crash_scope_requires_extra_review"
+      ],
+      "row_id": "opire_fixture_row_04",
+      "score": 0,
+      "solver_count": 14
+    },
+    {
+      "amount_usd": 590,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Migration generation drops and creates columns instead of altering resulting in data loss",
+      "language_tags": [
+        "TypeScript"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "typeorm",
+      "posted_or_issue_date": "28/04/2024",
+      "public_issue_url_if_available": "unknown",
+      "repo": "typeorm",
+      "risk_flags": [
+        "crowded_solver_count",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_05",
+      "score": 0,
+      "solver_count": 23
+    },
+    {
+      "amount_usd": 390,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": false,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Add Wayland support",
+      "language_tags": [
+        "Python"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "autokey",
+      "posted_or_issue_date": "06/09/2024",
+      "public_issue_url_if_available": "unknown",
+      "repo": "autokey",
+      "risk_flags": [
+        "command_unavailable_or_unknown",
+        "crowded_solver_count",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_06",
+      "score": 0,
+      "solver_count": 12
+    },
+    {
+      "amount_usd": 345,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Helix keymap",
+      "language_tags": [
+        "Rust"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "zed-industries",
+      "posted_or_issue_date": "30/08/2024",
+      "public_issue_url_if_available": "unknown",
+      "repo": "zed",
+      "risk_flags": [
+        "crowded_solver_count",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_07",
+      "score": 3,
+      "solver_count": 5
+    },
+    {
+      "amount_usd": 220,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Challenge #6: Improve testing and ci/cd cycles",
+      "language_tags": [
+        "Python"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "qtop",
+      "posted_or_issue_date": "28/05/2026",
+      "public_issue_url_if_available": "unknown",
+      "repo": "qtop",
+      "risk_flags": [
+        "crowded_solver_count",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_08",
+      "score": 3,
+      "solver_count": 4
+    },
+    {
+      "amount_usd": 200,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": true,
+      "decision": "park_until_issue_url",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "External IDP tokens are not refreshed automatically for OAuth2 and OIDC IDPs when retrieving the external token",
+      "language_tags": [
+        "Java"
+      ],
+      "next_local_action": "Park until a public issue URL is available from an approved read-only refresh.",
+      "owner": "keycloak",
+      "posted_or_issue_date": "21/06/2024",
+      "public_issue_url_if_available": "unknown",
+      "repo": "keycloak",
+      "risk_flags": [
+        "language_or_stack_mismatch",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_09",
+      "score": 17,
+      "solver_count": 1
+    },
+    {
+      "amount_usd": 80,
+      "bounty_url": "unknown",
+      "claimed_or_trying_status": "unknown",
+      "command_available": null,
+      "decision": "hard_reject",
+      "gate_flags": [
+        "public_issue_url_required",
+        "duplicate_pr_scan_required",
+        "maintainer_activity_check_required",
+        "local_build_test_feasibility_required",
+        "no_try_claim_without_public_action_approval"
+      ],
+      "issue_title": "Auto Solve hcapcha",
+      "language_tags": [
+        "Python"
+      ],
+      "next_local_action": "Do not revisit; captcha/abuse/spam/policy-evasion shape is outside allowed work.",
+      "owner": "flowese",
+      "posted_or_issue_date": "historical_public_card",
+      "public_issue_url_if_available": "unknown",
+      "repo": "UdioWrapper",
+      "risk_flags": [
+        "amount_below_first_pass_threshold",
+        "captcha_abuse_bypass_spam_or_policy_evasion",
+        "command_unavailable_or_unknown",
+        "crowded_solver_count",
+        "missing_public_issue_url"
+      ],
+      "row_id": "opire_fixture_row_10",
+      "score": 0,
+      "solver_count": 11
+    }
+  ],
+  "schema_version": "paid_code.opire_saved_card_parser_results.v1"
+}

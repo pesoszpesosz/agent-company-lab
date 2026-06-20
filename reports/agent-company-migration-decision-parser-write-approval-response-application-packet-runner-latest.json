@@ -1,0 +1,183 @@
+{
+  "accepted_result_count": 1,
+  "application_allowed": false,
+  "application_packet_guard_count": 10,
+  "evidence_rows_inserted_or_updated": 1,
+  "failed_fixture_count": 0,
+  "fixture_results": [
+    {
+      "actual_state": "packet_valid_for_separate_application_review",
+      "actual_valid": true,
+      "expected_guard": null,
+      "expected_state": "packet_valid_for_separate_application_review",
+      "expected_valid": true,
+      "fixture_id": "positive_valid_review_only_application_packet",
+      "kind": "positive",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_required_fields_present",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "missing_application_packet_id",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_required_fields_present"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_signed_response_artifact_local",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "nonlocal_signed_response_artifact",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_signed_response_artifact_local"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_source_preflight_matches_contract",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "source_preflight_changed",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_source_preflight_matches_contract"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_source_runner_review_matches_contract",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "source_runner_review_changed",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_source_runner_review_matches_contract"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_target_path_matches_request",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "target_path_changed",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_target_path_matches_request"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_source_artifact_matches_request",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "source_artifact_changed",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_source_artifact_matches_request"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_application_scope_review_only",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "application_scope_too_broad",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_application_scope_review_only"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_not_expired",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "expired_packet",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_not_expired"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_no_import_live_parse_sql_service_or_external_action",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "bundled_import_sql_or_service_action",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_no_import_live_parse_sql_service_or_external_action"
+      ]
+    }
+  ],
+  "fixture_suite_count": 10,
+  "fixtures_evaluated": 10,
+  "generated_utc": "2026-06-16T19:40:09Z",
+  "lane_evidence_rows_after": 166,
+  "lane_evidence_rows_before": 165,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_write_approval_response_application_packet_runner_ready_for_report_only_review",
+  "next_action": "Review the report-only application packet runner results before any approval application or parser write request.",
+  "parser_write_approval_response_application_packet_runner_count": 1,
+  "passed_fixture_count": 10,
+  "recommended_default": "review_report_only_approval_response_application_packet_runner_results_next_without_applying",
+  "rejected_result_count": 9,
+  "runner_evidence_id": "agent-company-migration-decision-parser-write-approval-response-application-packet-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-agent-company-migration-decision-parser-write-approval-response-application-packet-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "report_only_fixtures_evaluated": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_write_approval_response_application_packet_runner.v1",
+  "source_fixture_evidence_id": "agent-company-migration-decision-parser-write-approval-response-application-packet-fixture-suite-20260616",
+  "source_fixture_task_id": "task-agent-company-migration-decision-parser-write-approval-response-application-packet-fixture-suite-20260616",
+  "summary": "Evaluated the saved report-only approval response application packet fixtures without applying approval, writing parser files, importing a parser, parsing live decisions, or mutating service requests.",
+  "task_rows_inserted_by_parser_write_approval_response_application_packet_runner": 1,
+  "tasks_table_rows_after": 258,
+  "tasks_table_rows_before": 257
+}

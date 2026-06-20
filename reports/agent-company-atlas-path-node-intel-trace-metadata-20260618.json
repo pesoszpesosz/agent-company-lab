@@ -1,0 +1,74 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-node-intel-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Made Path Map route nodes clickable and added a Node Intel focus panel so checkpoints, gates, and unlocks can be inspected without leaving the route board.",
+  "design_research": {
+    "queries": [
+      "timeline drilldown details panel UX patterns dashboard",
+      "interactive timeline focus panel milestones blockers dashboard UX",
+      "roadmap dashboard click milestone detail panel design pattern"
+    ],
+    "source_urls": [
+      "https://dribbble.com/search/data-drill-down",
+      "https://dribbble.com/search/dashboard-timeline",
+      "https://ui-patterns.com/patterns/dashboard",
+      "https://horizon.servicenow.com/workspace/components/sn-roadmap",
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards"
+    ],
+    "pattern_notes": [
+      "Dashboard drilldowns should reveal detail near the overview instead of replacing the user's context.",
+      "Timeline and roadmap components commonly use hover/click milestone states plus adjacent details.",
+      "Operational dashboards need quick scan hierarchy first, then selected-node detail for decisions and next actions."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-path-node-intel-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].quest.checkpoints",
+      "snapshot.lanes[].gateMap",
+      "snapshot.lanes[].serviceRequests",
+      "snapshot.lanes[].recentOutcomes",
+      "browser-only state.pathNodeFocusByLane"
+    ],
+    "ui_contract": [
+      "Give every Path Map node a stable local id derived from source data or fallback index.",
+      "Render route nodes as focusable buttons with aria-pressed for the currently inspected node.",
+      "Default the Node Intel panel to the first active gate, then incomplete node, then spawn.",
+      "Show selected node title, kind/status/level tags, route progress, detail body, local note preview when available, and contextual action buttons.",
+      "Keep focus state browser-memory only and avoid mutating the snapshot."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-node-intel-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation there was no .path-node-intel panel and no data-path-node-focus controls."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-node-intel-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "The Path Map rendered a Node Intel panel, 13 focus controls, exactly one focused/pressed route node, click selection changed the panel to Startup Memo, NEXT advanced it to Local Proof, and there were no console errors, failed requests, or overflow."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x844",
+        "820x1180",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered the Node Intel panel, changed focus after a route-node click, kept exactly one pressed node, and reported no bad rectangles or horizontal overflow."
+    },
+    "static": {
+      "node_check_app_js": "passed"
+    }
+  }
+}

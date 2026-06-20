@@ -1,0 +1,33 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-event-lens-v1-20260619",
+  "title": "Command Cockpit Event Lens",
+  "created_at": "2026-06-19T21:35:20Z",
+  "kind": "ui_unlock",
+  "summary": "Recent Quest map event packets now select an in-board lens that explains what happened.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "chronicleTrail(lane)",
+      "questEventPulsePackets",
+      "state.questEventFocusByLane",
+      "selectedLaneId"
+    ],
+    "outputs": [
+      "quest-event-lens",
+      "data-quest-event-focus",
+      "data-event-pulse-active",
+      "questEventFocusByLane"
+    ]
+  },
+  "verification": {
+    "intent": "Make recent trail events explainable from the Quest map without opening another tall report section.",
+    "layout": "The Event Lens is absolutely positioned inside the existing pulse layer and compressed on mobile.",
+    "interaction": "Packet clicks update browser-local selected event state and re-render only the selected lane cockpit."
+  }
+}

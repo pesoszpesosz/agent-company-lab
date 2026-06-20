@@ -1,0 +1,11 @@
+{
+  "api_calls": false,
+  "blocked_by_gate_count": 4,
+  "entry_count": 10,
+  "external_side_effects": false,
+  "ready_local_dispatch_count": 2,
+  "runtime": "local_python_report_writer",
+  "span_kind": "dispatch_batch",
+  "starts_workers": false,
+  "updates_service_requests": false
+}

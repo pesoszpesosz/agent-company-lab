@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-stage-lens-compression-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-stage-lens-compression-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-stage-lens-compression-v1-20260619",
+  "title": "Command Cockpit Stage Lens Compression",
+  "createdAt": "2026-06-19T08:42:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Slimmed the mounted stage lens into a thinner Command Cockpit status strip so the playable lane surface begins sooner.",
+  "proof": [
+    "Added tested Command Cockpit CSS that tightens the active-lane stage lens grid, height, margin, padding, and signal cells.",
+    "Hid the extra stage-lens meta line only in the Cockpit stage while preserving view and signal orientation.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the stage-lens compression unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

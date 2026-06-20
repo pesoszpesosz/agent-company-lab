@@ -1,0 +1,40 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_report_only_scaffolding_artifacts_cli_validation.v1",
+    "created_at":  "2026-06-15T16:24:43Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-cli-20260615",
+    "command_added_count":  1,
+    "materialized_artifact_count":  5,
+    "packet_component_count":  5,
+    "markdown_artifact_count":  3,
+    "json_artifact_count":  2,
+    "json_artifacts_parse":  true,
+    "executable_artifact_count":  0,
+    "runtime_artifact_count":  0,
+    "runtime_side_effect_artifact_count":  0,
+    "chain_integrity_checked_report_count":  24,
+    "chain_integrity_failure_count":  0,
+    "forbidden_runtime_import_count":  0,
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_mutation_count":  0,
+    "model_api_gate_remains_parked":  true,
+    "model_api_pool_registered":  false,
+    "all_checks_passed":  true,
+    "failure_count":  0,
+    "failures":  [
+
+                 ],
+    "next_action":  "Add these materialized report-only scaffolding artifacts to artifact traceability and prepare a human-readable runtime adapter approval packet, still with runtime code blocked."
+}

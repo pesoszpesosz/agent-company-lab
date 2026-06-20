@@ -1,0 +1,10 @@
+{
+  "span_kind": "internal",
+  "runtime": "codex_local_cli",
+  "api_calls": false,
+  "browser_actions": false,
+  "public_actions": false,
+  "lane_boundary": "paid_code_bounties_only",
+  "submitted_bounty_payouts_touched": false,
+  "service_request_status": "none_for_public_action"
+}

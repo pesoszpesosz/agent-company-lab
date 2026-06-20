@@ -1,0 +1,186 @@
+{
+  "schema_version": "agent_company.digital_products_promptbase_use_case_repro_checklist_wave26.v1",
+  "generated_utc": "2026-06-18T03:39:00Z",
+  "lane_id": "digital_products_templates_plugins",
+  "task_id": "task-digital-products-promptbase-use-case-repro-checklist-wave26-20260618",
+  "source_promptbase_readiness": "E:\\agent-company-lab\\data\\digital-products-promptbase-route-readiness-wave25-20260618.json",
+  "source_package_manifest": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "route": "promptbase_agent_skill_route",
+    "package_status": "internal_review_manifest_only",
+    "file_count": 12,
+    "public_listing_ready": false,
+    "realized_usd": 0
+  },
+  "local_use_case_statement": "Agent Skill Starter Kit v0 helps indie AI builders and small technical teams turn a repeatable local AI-agent workflow into a safer reusable skill packet with a SKILL.md template, stop-gate checklist, service-request checklist, artifact contract, acceptance-review template, and fictional local example. It is useful when the buyer needs structure for local agent work and wants explicit boundaries around accounts, payments, browser actions, credentials, public posts, APIs, legal/tax/KYC, and external side effects.",
+  "buyer_segments": [
+    {
+      "segment_id": "indie_ai_builders",
+      "problem": "They can write one-off prompts but struggle to package workflows into reusable agent skills with gates and review checks.",
+      "package_support": [
+        "README.md buyer problem section",
+        "templates/SKILL.template.md",
+        "templates/gate-checklist.template.md",
+        "templates/acceptance-review.template.md"
+      ],
+      "claim_safety": "Local-use claim only; no revenue, marketplace acceptance, or compliance guarantee."
+    },
+    {
+      "segment_id": "technical_operators",
+      "problem": "They need repeatable operating packets that say what an agent may do, what it must save, and when it must stop.",
+      "package_support": [
+        "templates/artifact-contract.template.md",
+        "templates/service-request-checklist.template.md",
+        "examples/local-research-skill/SKILL.md"
+      ],
+      "claim_safety": "Local operations support only; no public-action or account-action promise."
+    },
+    {
+      "segment_id": "small_internal_teams",
+      "problem": "They need a lightweight review format before reusing a workflow across teammates or agents.",
+      "package_support": [
+        "docs/buyer-guide.md",
+        "templates/acceptance-review.template.md",
+        "examples/local-research-skill/sample-output.md"
+      ],
+      "claim_safety": "Internal review support only; no legal, tax, security, or marketplace advice."
+    }
+  ],
+  "reproducibility_matrix": [
+    {
+      "artifact": "templates/SKILL.template.md",
+      "expected_buyer_action": "Copy into a new skill folder as SKILL.md and fill trigger rules, inputs, allowed actions, forbidden actions, workflow, and output contract.",
+      "observable_output": "A complete local SKILL.md draft with explicit use conditions and stop gates.",
+      "acceptance_check": "Every placeholder is replaced; forbidden actions include account/payment/public/API/credential gates.",
+      "status": "local_reproducible"
+    },
+    {
+      "artifact": "templates/gate-checklist.template.md",
+      "expected_buyer_action": "Attach to a skill and mark each gate allowed, blocked, or approval required.",
+      "observable_output": "A gate checklist that names account, payment, legal/KYC/tax, public action, browser, model/API, data/API, outreach, secrets, IP/license, and lane-boundary gates.",
+      "acceptance_check": "No external or regulated step is left unnamed.",
+      "status": "local_reproducible"
+    },
+    {
+      "artifact": "templates/artifact-contract.template.md",
+      "expected_buyer_action": "Define what the skill must save, where it is saved, and what fields are required.",
+      "observable_output": "A local artifact contract with path, schema, required fields, and validation expectations.",
+      "acceptance_check": "A reviewer can inspect output without browser, account, or marketplace access.",
+      "status": "local_reproducible"
+    },
+    {
+      "artifact": "templates/service-request-checklist.template.md",
+      "expected_buyer_action": "List approval needs for any step that would cross a service boundary.",
+      "observable_output": "A local approval checklist that separates draft work from gated execution.",
+      "acceptance_check": "Account, payment, public action, browser, model/API, secrets, and legal gates are named when relevant.",
+      "status": "local_reproducible"
+    },
+    {
+      "artifact": "templates/acceptance-review.template.md",
+      "expected_buyer_action": "Review skill output before reuse or publication.",
+      "observable_output": "A local acceptance review with pass/fail checks and next action.",
+      "acceptance_check": "The next action is local-only or explicitly approval-gated.",
+      "status": "local_reproducible"
+    },
+    {
+      "artifact": "examples/local-research-skill/SKILL.md",
+      "expected_buyer_action": "Use as a fictional/local-only reference for a narrow research memo skill.",
+      "observable_output": "A concrete example showing purpose, triggers, allowed actions, forbidden actions, workflow, output contract, and acceptance checks.",
+      "acceptance_check": "Example forbids browsing, accounts, submissions, uploads, payments, credentials, and unsupported revenue claims.",
+      "status": "local_reproducible"
+    },
+    {
+      "artifact": "examples/local-research-skill/sample-output.md",
+      "expected_buyer_action": "Compare generated outputs against a fictional sample memo format.",
+      "observable_output": "A source-backed memo with summary, sources, findings, blockers, stop gates, and next action.",
+      "acceptance_check": "Every blocker has a named gate and no external side effects are implied.",
+      "status": "local_reproducible"
+    }
+  ],
+  "promptbase_guideline_alignment_preview": [
+    {
+      "guideline_theme": "clear_use_case",
+      "local_status": "supported",
+      "evidence": "README and buyer guide describe a specific buyer problem: packaging repeatable AI-agent workflows into reusable skills."
+    },
+    {
+      "guideline_theme": "buyer_value",
+      "local_status": "partially_supported",
+      "evidence": "Templates and examples offer structure, but no live buyer demand has been validated."
+    },
+    {
+      "guideline_theme": "consistent_reproducible_output",
+      "local_status": "partially_supported",
+      "evidence": "Sample local research skill and output demonstrate a reproducible shape, but route-specific PromptBase examples need later review."
+    },
+    {
+      "guideline_theme": "no_unsupported_claims",
+      "local_status": "supported",
+      "evidence": "Existing listing draft avoids guaranteed sales, revenue, compliance, and platform approval claims."
+    },
+    {
+      "guideline_theme": "submission_rules_current",
+      "local_status": "blocked",
+      "evidence": "Exact current PromptBase submission-rule mapping remains behind read-only browser approval."
+    }
+  ],
+  "local_acceptance_checks": [
+    {
+      "check_id": "use_case_specific",
+      "passed": true,
+      "evidence": "Use case names AI builders and technical teams packaging local repeatable AI-agent workflows."
+    },
+    {
+      "check_id": "reproducibility_matrix_complete",
+      "passed": true,
+      "evidence": "Seven package artifacts are mapped to buyer action, observable output, and acceptance check."
+    },
+    {
+      "check_id": "unsafe_claims_avoided",
+      "passed": true,
+      "evidence": "No revenue, sales, marketplace acceptance, compliance, legal, tax, payout, or public-listing readiness claim is made."
+    },
+    {
+      "check_id": "gates_preserved",
+      "passed": true,
+      "evidence": "Browser validation, seller terms, account setup, payout setup, zip/public upload, listing, and submission remain blocked."
+    },
+    {
+      "check_id": "local_only",
+      "passed": true,
+      "evidence": "This packet reads existing local files and writes local report artifacts only."
+    }
+  ],
+  "remaining_blockers": [
+    "PromptBase submission guideline mapping remains blocked until approved read-only browser validation.",
+    "Seller terms, fee, payout, tax/KYC, refund, and seller-obligation review remains blocked until legal/payment approval.",
+    "Seller account, login, payout route, and agreement acceptance remain blocked until account/payment approval.",
+    "Final listing copy, upload, price, promotion, and publication remain blocked until public-action approval."
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "local_files_read": 6,
+    "browser_sessions_started": 0,
+    "marketplace_pages_opened_by_lab_browser": 0,
+    "accounts_created": 0,
+    "logins_attempted": 0,
+    "seller_terms_accepted": 0,
+    "kyc_tax_payment_data_entered": 0,
+    "payouts_configured": 0,
+    "listings_created": 0,
+    "listings_published": 0,
+    "files_uploaded": 0,
+    "zip_created": false,
+    "public_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "dependency_installs": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Create a do-not-run PromptBase submission packet that lists exact later approvals and command-free review steps; keep final listing copy, browser validation, seller terms, account setup, payout setup, zip/public upload, publication, service-request mutation, workers, model/MCP calls, and external actions blocked."
+}

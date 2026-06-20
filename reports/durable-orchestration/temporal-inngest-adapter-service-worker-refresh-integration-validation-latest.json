@@ -1,0 +1,40 @@
+{
+  "all_checks_passed": true,
+  "api_calls": false,
+  "approval_granted": false,
+  "chain_integrity_all_checks_passed": true,
+  "decision_preflight_count_matches_parked_rows": true,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T15:30:09Z",
+  "human_decision_packet_count_matches_parked_rows": true,
+  "integration_map_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-latest.json",
+  "model_api_gate_remains_parked": true,
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "no_actions_granted": true,
+  "no_external_runtime_started": true,
+  "parked_rows_mapped_to_review_refresh": 11,
+  "post_decision_refresh_plan_count_matches_parked_rows": true,
+  "reducer_result_count": 14,
+  "rejection_granted": false,
+  "schema_version": "temporal_inngest_adapter_service_worker_refresh_integration_validation.v1",
+  "service_requests_assigned": 0,
+  "service_requests_by_status": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "service_requests_updated": 0,
+  "terminal_completed_rows_mapped_to_no_replay": 1,
+  "terminal_rejected_rows_mapped_to_no_revive": 2,
+  "worker_starts": 0
+}

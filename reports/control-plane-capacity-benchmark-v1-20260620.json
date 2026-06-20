@@ -1,0 +1,113 @@
+{
+  "schema_version": "control_plane_capacity_benchmark.v1",
+  "generated_utc": "2026-06-20T17:50:00Z",
+  "lane_id": "platform_engineering",
+  "status": "benchmark_complete_non_destructive_index_upgrade_applied",
+  "raw_benchmark_json": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_v1_20260620.raw.json",
+  "synthetic_benchmark_db": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_v1_20260620.sqlite",
+  "decision": "SQLite remains usable at 100000-row scale for local single-writer operation if lane/task/status report paths are indexed.",
+  "production_baseline_before_benchmark": {
+    "tasks": 582,
+    "artifacts": 2444,
+    "outcomes": 421,
+    "trace_events": 512,
+    "service_requests": 16,
+    "lanes": 15,
+    "agents": 16,
+    "db_pages": 996,
+    "page_size": 4096,
+    "approx_db_mb": 3.89
+  },
+  "synthetic_targets": [
+    {
+      "target_rows_per_primary_table": 1000,
+      "insert_seconds": 0.01922,
+      "temp_db_mb": 1.36,
+      "slowest_query": "join_task_artifact_trace",
+      "slowest_seconds": 0.000751
+    },
+    {
+      "target_rows_per_primary_table": 10000,
+      "insert_seconds": 0.179718,
+      "temp_db_mb": 11.98,
+      "slowest_query": "join_task_artifact_trace",
+      "slowest_seconds": 0.004654
+    },
+    {
+      "target_rows_per_primary_table": 100000,
+      "insert_seconds": 2.398367,
+      "temp_db_mb": 120.13,
+      "slowest_query": "join_task_artifact_trace",
+      "slowest_seconds": 0.056622
+    }
+  ],
+  "query_timings_100k_before_extra_indexes_seconds": {
+    "count_open_tasks": 0.014343,
+    "recent_tasks_by_lane": 0.013241,
+    "artifacts_by_lane": 0.01503,
+    "outcomes_by_lane": 0.011844,
+    "trace_by_lane_indexed": 0.000124,
+    "trace_by_task_indexed": 0.000028,
+    "service_requests_needs_review": 0.002519,
+    "join_task_artifact_trace": 0.056622
+  },
+  "query_timings_100k_after_temp_indexes_seconds": {
+    "count_open_tasks": 0.004251,
+    "recent_tasks_by_lane": 0.00017,
+    "artifacts_by_lane": 0.000086,
+    "outcomes_by_lane": 0.000069,
+    "trace_by_lane_indexed": 0.000101,
+    "trace_by_task_indexed": 0.000033,
+    "service_requests_needs_review": 0.000053,
+    "join_task_artifact_trace": 0.000246
+  },
+  "applied_production_indexes": [
+    "idx_tasks_lane_created",
+    "idx_tasks_status_priority_created",
+    "idx_artifacts_lane_created",
+    "idx_artifacts_task_created",
+    "idx_outcomes_lane_created",
+    "idx_outcomes_task_created",
+    "idx_service_requests_status_created",
+    "idx_service_requests_lane_status"
+  ],
+  "dashboard_feed_verification_fix": {
+    "file": "E:\\agent-company-lab\\tools\\visual_dashboard_snapshot_trail.py",
+    "change": "Increased COMPANY_FEED_EVENT_LIMIT from 92 to 120 so expanded company traces are not clipped after recent UI unlock overlay.",
+    "post_fix_mission_feed_items": 288,
+    "post_fix_mission_feed_trace_count": 127,
+    "focused_snapshot_test": "passed"
+  },
+  "runner_followup": {
+    "status": "complete",
+    "command": "python tools\\agent_company.py run-control-plane-capacity-benchmark",
+    "runner_module": "E:\\agent-company-lab\\tools\\agent_company_core\\control_plane_capacity_benchmark_runner.py",
+    "runner_report": "E:\\agent-company-lab\\reports\\control-plane-capacity-benchmark-runner-v1-20260620.md",
+    "runner_json": "E:\\agent-company-lab\\reports\\control-plane-capacity-benchmark-runner-v1-20260620.json",
+    "synthetic_runner_db": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_runner_v1_20260620.sqlite",
+    "verified_row_counts": [
+      1000,
+      10000,
+      100000
+    ]
+  },
+  "capacity_policy": [
+    "sqlite_remains_source_of_truth_for_now",
+    "use_sqlite_through_100000_rows_for_local_single_writer_indexed_reports",
+    "rerun_benchmark_at_500000_and_1000000_rows_before_external_workflow_engines",
+    "add_report_pagination_and_snapshot_archiving_before_dashboard_payloads_get_too_large",
+    "treat_external_workflow_engines_as_future_adapters_not_current_dependencies"
+  ],
+  "next_action": "Run the reusable benchmark at 500000 and 1000000 rows before adding durable workflow engines or high-volume worker queues.",
+  "zero_side_effect_boundary": {
+    "production_rows_inserted_by_benchmark": 0,
+    "production_data_deleted_or_rewritten": 0,
+    "production_schema_change": "non_destructive_indexes_only",
+    "dashboard_feed_cap_change": "local_snapshot_builder_only",
+    "runtime_workers_started": 0,
+    "browser_sessions_started": 0,
+    "model_api_mcp_calls": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

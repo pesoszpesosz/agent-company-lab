@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.browser_read_only_worker_policy.v1",
+  "title": "Agent Company Browser Read-Only Worker Policy v1",
+  "type": "object",
+  "required": [
+    "policy_plan_id",
+    "request_id",
+    "service_id",
+    "request_type",
+    "lane_id",
+    "session_mode",
+    "navigation_scope",
+    "target_urls",
+    "allowed_domains",
+    "allowed_actions",
+    "forbidden_actions",
+    "evidence_output_artifact_path",
+    "declared_capture_log_path",
+    "teardown_required",
+    "browser_session_start_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "policy_plan_id": {
+      "type": "string",
+      "pattern": "^browser-read-only-policy-[a-z0-9][a-z0-9-]{4,120}$"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 5
+    },
+    "service_id": {
+      "const": "browser_read_only_session"
+    },
+    "request_type": {
+      "const": "browser_research"
+    },
+    "lane_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "session_mode": {
+      "enum": [
+        "public_read_only_no_login",
+        "signed_in_named_scope",
+        "private_or_sensitive",
+        "unknown"
+      ]
+    },
+    "navigation_scope": {
+      "enum": [
+        "explicit_allowlist_only",
+        "bounded_same_domain",
+        "unbounded"
+      ]
+    },
+    "target_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^https://"
+      }
+    },
+    "allowed_domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "allowed_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_output_artifact_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "declared_capture_log_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "teardown_required": {
+      "const": true
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-mobile-quest-boss-bar-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-mobile-quest-boss-bar-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-mobile-quest-boss-bar-v1-20260619",
+  "title": "Command Cockpit Mobile Quest Boss Bar",
+  "createdAt": "2026-06-19T12:28:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the mobile Command Cockpit Overview current-run tile into a live quest boss bar with a smaller portrait, compact progress meter, hidden long summary copy, tighter signal cells, and an animated runner scan.",
+  "proof": [
+    "Added a scoped mobile boss-bar marker and regression test for the Command Cockpit Overview quest module.",
+    "Kept the same quest data and actions while reducing the live module height from a tall report block to a compact objective panel.",
+    "Verified the live 390x760 cockpit: quest panel height 152px, hero height 56px, long copy hidden, signal cells compressed, and the stage remains within the first phone viewport."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-mobile-quest-boss-bar-trace-metadata-20260619.json"
+  ]
+}

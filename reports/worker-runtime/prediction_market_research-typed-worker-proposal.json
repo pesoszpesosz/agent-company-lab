@@ -1,0 +1,204 @@
+{
+  "context": {
+    "agent_types": [
+      "market_scout",
+      "rules_parser",
+      "source_of_truth_monitor",
+      "paper_trader"
+    ],
+    "department": "Markets Research",
+    "evidence": [
+      {
+        "evidence_id": "pe-report-cross-venue-next-team-scan-35be3fc7745a",
+        "next_action": "next: Watch only; no clean cross-venue trade from current public data.",
+        "ownership_note": "Read-only market research; no real-money trading from this infrastructure thread.",
+        "source_path": "E:\\profit-edge-lab\\reports\\cross-venue-next-team-latest.md",
+        "source_url": null,
+        "status": "watch_only",
+        "summary": "Rows parsed: Polymarket next-team=46, Kalshi next-team=415, matched=46 | - No clean cross-venue candidate. Current matches are watch-only because of rule-window mismatch, no exit bid, or venue-eligibility constraints. | - score=9 gate=watch_only_rule_mismatch gap=0.0200 close_delta_days=91.21 flags=rule_window_mismatch,kalshi_has_yes_bid,polymarket_low_liquidity,polymarket_high_volume,polymarket_data_only_us | polymarket: yes=0.01 volume24h=396943.8816660001 liquidity=1064.62405 close=2026-09-01T00:00:00.0000000Z | https://polymarket.com/event/where-will-maxx-crosby-play-in-2026",
+        "title": "Cross-Venue Next-Team Scan"
+      },
+      {
+        "evidence_id": "pe-report-polymarket-tennis-edge-packet-68be67f48831",
+        "next_action": null,
+        "ownership_note": "Read-only market research; Polymarket remains data-only unless eligibility is explicitly verified.",
+        "source_path": "E:\\profit-edge-lab\\reports\\polymarket-tennis-edge-packet-latest.md",
+        "source_url": null,
+        "status": "watch_only",
+        "summary": "Status: watch_only | Scanner JSON: E:\\profit-edge-lab\\reports\\polymarket-tennis-live-edges-latest.json | - Open Polymarket market rules and confirm non-completion, retirement, void, and 50-50 clauses. | - edgeScore=0.001 tradable=False paper=False gate=watch_only_no_executable_edge | source: https://polymarket.com/event/atp-shelton-shimabu-2026-06-12",
+        "title": "Polymarket Tennis Edge Packet"
+      },
+      {
+        "evidence_id": "pe-report-kalshi-btc-range-edge-e654ec4ccb73",
+        "next_action": null,
+        "ownership_note": "Read-only market research; no real-money trading from this infrastructure thread.",
+        "source_path": "E:\\profit-edge-lab\\reports\\kalshi-btc-range-edge-latest.md",
+        "source_url": null,
+        "status": "watch_only",
+        "summary": "Status: watch_only | - Kalshi resolves these markets on CF Benchmarks' Bitcoin Real-Time Index, not Coinbase or CoinGecko spot. | https://kalshi.com/markets/KXBTC-26JUN1317-B64125 | https://kalshi.com/markets/KXBTC-26JUN1317-B63625 | https://kalshi.com/markets/KXBTC-26JUN1307-B63750",
+        "title": "Kalshi BTC Range Edge"
+      },
+      {
+        "evidence_id": "pe-report-prediction-market-scan-feb389566f62",
+        "next_action": null,
+        "ownership_note": "Read-only market research; no real-money trading from this infrastructure thread.",
+        "source_path": "E:\\profit-edge-lab\\reports\\prediction-market-scan-latest.md",
+        "source_url": null,
+        "status": "imported",
+        "summary": "Polymarket events scanned: 1 | Polymarket markets scanned: 1114 | Polymarket flagged rows retained: 163 | - [kalshi] score=38 Bitcoin price range on Jun 13, 2026? | flags=near_resolution,wide_spread,no_reported_liquidity,one_sided_book | close=2026-06-13T11:00:00Z bid=0.0000 ask=0.5000 spread=0.5 | https://kalshi.com/markets/KXBTC-26JUN1307-B62 | - [kalshi] score=38 Bitcoin price range on Jun 13, 2026? | flags=near_resolution,wide_spread,no_reported_liquidity,one_sided_book | close=2026-06-13T11:00:00Z bid=0.0000 ask=0.2000 spread=0.2 | https://kalshi.com/markets/KXBTC-26JUN1307-B62",
+        "title": "Prediction Market Scan"
+      },
+      {
+        "evidence_id": "pe-report-kalshi-btc-settlement-lag-daa29bc18301",
+        "next_action": null,
+        "ownership_note": "Read-only market research; no real-money trading from this infrastructure thread.",
+        "source_path": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+        "source_url": null,
+        "status": "imported",
+        "summary": "source: https://kalshi.com/markets/KXBTC-26JUN1306-B59950 | source: https://kalshi.com/markets/KXBTC-26JUN1306-B60050 | source: https://kalshi.com/markets/KXBTC-26JUN1306-B59850 | source: https://kalshi.com/markets/KXBTC-26JUN1306-B59650 | source: https://kalshi.com/markets/KXBTC-26JUN1306-B59750",
+        "title": "Kalshi BTC Settlement Lag"
+      },
+      {
+        "evidence_id": "pe-report-kalshi-crypto-settlement-lag-7d155d530ac1",
+        "next_action": null,
+        "ownership_note": "Read-only market research; no real-money trading from this infrastructure thread.",
+        "source_path": "E:\\profit-edge-lab\\reports\\kalshi-crypto-settlement-lag-latest.md",
+        "source_url": null,
+        "status": "imported",
+        "summary": "https://kalshi.com/markets/KXBTC-26JUN1306-B59950 | https://kalshi.com/markets/KXBTC-26JUN1306-B60050 | https://kalshi.com/markets/KXBTC-26JUN1306-B59850 | https://kalshi.com/markets/KXETH-26JUN1306-B1500 | https://kalshi.com/markets/KXETH-26JUN1306-B1480",
+        "title": "Kalshi Crypto Settlement Lag"
+      },
+      {
+        "evidence_id": "pe-report-kalshi-generic-settlement-lag-898b589d490d",
+        "next_action": null,
+        "ownership_note": "Read-only market research; no real-money trading from this infrastructure thread.",
+        "source_path": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+        "source_url": null,
+        "status": "imported",
+        "summary": "- Promote only non-sensitive markets where Kalshi exposes result/expiration_value and active quotes remain stale. | - Refresh market details immediately before any external action. | - Confirm venue/account eligibility, balance, fees, settlement mechanics, and market rules. | source: https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202689330DBCCE6-10842E21057 | source: https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5D92312EBC-540E9E083F6",
+        "title": "Kalshi Generic Settlement Lag"
+      },
+      {
+        "evidence_id": "pe-ledger-kalshi_crypto_close_window_evidence-9ed635b33ebd",
+        "next_action": "Rerun with a wider lookahead or explicit -Ticker/-EventTicker.",
+        "ownership_note": "Read-only ledger import for future lane managers.",
+        "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+        "source_url": null,
+        "status": "kalshi_crypto_close_window_evidence",
+        "summary": "Collected Kalshi close-window evidence status=no_targets targets=0 observations=0 ok=0 cfObserved=True bookDepthObserved=False.",
+        "title": "kalshi_crypto_close_window_evidence"
+      }
+    ],
+    "examples": [
+      "Kalshi source latency",
+      "Polymarket data-only",
+      "cross-venue semantic matching",
+      "sports/crypto/weather close-window scans"
+    ],
+    "global_gates": [
+      "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+      "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+      "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+      "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+    ],
+    "lane_id": "prediction_market_research",
+    "owner_agent_id": null,
+    "owner_thread_id": null,
+    "promotion_gates": [
+      "venue eligibility verified",
+      "rules verified",
+      "spread/depth/fees captured",
+      "paper evidence threshold met"
+    ],
+    "service_workers_required": [
+      "market_eligibility_worker",
+      "treasury_risk_worker"
+    ],
+    "side_effects": [
+      "paper trade",
+      "real-money trade"
+    ],
+    "source_specs": [
+      {
+        "cadence": "lane_owner_on_demand_or_scheduled_capture",
+        "name": "Prediction Market Research Import",
+        "notes": "Treat Polymarket as data-only for a US user unless eligibility changes are explicitly verified.",
+        "outputs": [
+          "lane_evidence",
+          "prediction manager packet",
+          "paper/replay artifact"
+        ],
+        "refresh_command": "Run only from prediction_market_research lane owner after claim; use paper/data-only mode.",
+        "risk_gate": "data_only_until_venue_eligibility_fees_treasury_and_real_money_gate_clear",
+        "source_paths": [
+          "E:\\profit-edge-lab\\reports\\prediction-market-scan-latest.md",
+          "E:\\profit-edge-lab\\reports\\cross-venue-next-team-latest.md",
+          "E:\\profit-edge-lab\\reports\\polymarket-tennis-edge-packet-latest.md",
+          "E:\\profit-edge-lab\\reports\\kalshi-btc-range-edge-latest.md",
+          "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+          "E:\\profit-edge-lab\\reports\\kalshi-crypto-settlement-lag-latest.md",
+          "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md"
+        ],
+        "source_type": "local_reports",
+        "spec_id": "prediction_profit_edge_scan_import"
+      }
+    ],
+    "status": "active"
+  },
+  "proposal": {
+    "allowed_now": [
+      "read manager packet",
+      "read source specs",
+      "read local evidence/artifact reports",
+      "write local proposal artifacts",
+      "record artifacts/outcomes/traces through the control plane"
+    ],
+    "blocked_actions": [
+      "paper trade",
+      "real-money trade",
+      "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+      "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+      "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+      "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action.",
+      "venue account action",
+      "eligibility assertion without verification"
+    ],
+    "duplicate_key": "prediction_market_research:typed-worker-prototype:2026-06-14",
+    "evidence_refs": [
+      "pe-report-cross-venue-next-team-scan-35be3fc7745a",
+      "pe-report-polymarket-tennis-edge-packet-68be67f48831",
+      "pe-report-kalshi-btc-range-edge-e654ec4ccb73",
+      "pe-report-prediction-market-scan-feb389566f62",
+      "pe-report-kalshi-btc-settlement-lag-daa29bc18301"
+    ],
+    "generated_at": "2026-06-14T11:30:58Z",
+    "lane_id": "prediction_market_research",
+    "mode": "read_only_local_artifact",
+    "output_artifacts": [
+      "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.json",
+      "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.md"
+    ],
+    "proposal_id": "proposal-prediction_market_research-20260614",
+    "rationale": "The lane has side-effect gates, so the safe prototype output is a local artifact proposal only.",
+    "recommended_cli_commands": [
+      "python E:\\agent-company-lab\\tools\\agent_company.py list-source-specs --lane-id prediction_market_research",
+      "python E:\\agent-company-lab\\tools\\agent_company.py list-evidence --lane-id prediction_market_research --limit 25",
+      "python E:\\agent-company-lab\\tools\\agent_company.py write-artifacts-report --lane-id prediction_market_research --path E:\\agent-company-lab\\reports\\artifacts-prediction_market_research-latest.md"
+    ],
+    "required_service_requests": [
+      "market_eligibility_worker",
+      "treasury_risk_worker"
+    ],
+    "stop_conditions": [
+      "lane is already owned by another active worker",
+      "next action requires account, wallet, browser, public, legal/KYC/billing, or real-money action",
+      "evidence is missing or source scope is unclear"
+    ],
+    "task_title": "Prepare paper-only replay spec for one imported market edge",
+    "trace_events_to_record": [
+      "typed_worker_context_loaded",
+      "typed_worker_proposal_written"
+    ],
+    "worker_agent_id": "typed-worker-prototype"
+  }
+}

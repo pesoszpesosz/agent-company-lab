@@ -1,0 +1,95 @@
+{
+  "approval_request": {
+    "allowed_to_accept_contract_or_payment": false,
+    "allowed_to_create_or_edit_portfolio": false,
+    "allowed_to_create_or_edit_profile": false,
+    "allowed_to_login_or_create_account": false,
+    "allowed_to_message_client": false,
+    "allowed_to_select_live_job": false,
+    "allowed_to_send_proposal": false,
+    "minimum_next_approval_scope": "A human must approve the exact account/profile route, portfolio representation, target job or no-job decision, proposal text, deliverable/revision boundary, terms/fees/payment/tax assumptions, privacy/data handling, credential policy, anti-spam relevance, and public action before any external Upwork step.",
+    "request_type": "human_review_before_any_upwork_ai_skills_demand_action"
+  },
+  "boundary": {
+    "browser_sessions_started": 0,
+    "client_messages_sent": 0,
+    "contracts_or_payments": 0,
+    "credentials_requested_or_used": false,
+    "external_side_effects": 0,
+    "jobs_selected_for_submission": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "portfolio_created_or_edited": false,
+    "profile_created_or_edited": false,
+    "proposals_sent": 0,
+    "public_actions": 0,
+    "real_client_data_used": false,
+    "service_requests_mutated": 0,
+    "terms_or_payment_setup": false,
+    "upwork_account_or_login": false,
+    "workers_or_runtimes_started": 0
+  },
+  "decision": "draft_only_needs_human_review_no_upwork_action",
+  "evidence_assets": [
+    "E:/agent-company-lab/reports/money-path-lane-scout-packets/upwork-ai-skills-fit-score-local-proof.json",
+    "E:/agent-company-lab/reports/money-path-lane-scout-packets/upwork-ai-skills-fit-score-local-proof-validation.json",
+    "E:/agent-company-lab/reports/money-path-lane-scout-packets/upwork-ai-offer-matrix-local-proof.json",
+    "E:/agent-company-lab/reports/lead-generation-and-sales/upwork-ai-workflow-audit-offer-20260616.md",
+    "E:/agent-company-lab/reports/lead-generation-and-sales/ai-workflow-audit-proof-asset-agency-reporting-20260616.md",
+    "E:/agent-company-lab/reports/lead-generation-and-sales/upwork-profile-and-proposal-draft-20260616.md"
+  ],
+  "generated_at": "2026-06-18T08:21:39Z",
+  "lane_id": "lead_generation_and_sales",
+  "next_local_action": "If the operator approves this packet, create an exact-scope service request for one Upwork AI Integration Workflow Audit account/profile/proposal review. Do not log in, create/edit a profile or portfolio, choose a live job, send a proposal, message a client, accept terms, or touch payment/tax setup from this packet alone.",
+  "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+  "pre_send_checklist": [
+    "Verify the offer claim is limited to a supervised AI integration workflow audit and does not promise production implementation.",
+    "Verify profile and portfolio wording contains no fake Upwork history, ratings, earnings, client names, or real-world outcomes.",
+    "Verify the synthetic proof asset is labeled synthetic and is not presented as a client case study.",
+    "Verify any target job is exact, relevant, low-risk, and manually chosen by the human operator.",
+    "Verify the proposal asks for non-sensitive workflow notes only and excludes credentials, account access, production systems, and private regulated data.",
+    "Verify Upwork terms, fees, tax/payment, identity, worker-classification, and anti-spam obligations are acceptable to the human operator."
+  ],
+  "required_human_decisions": [
+    "upwork_account_route_and_identity_review",
+    "profile_copy_and_portfolio_review",
+    "exact_job_selection_or_no_job_decision",
+    "proposal_text_review",
+    "scope_deliverables_and_revision_boundary_review",
+    "terms_fees_payment_tax_review",
+    "client_data_privacy_scope",
+    "credential_handling_policy",
+    "anti_spam_relevance_review",
+    "public_action_approval"
+  ],
+  "schema_version": "lead_generation.upwork_ai_skills_no_send_approval_request_packet.v1",
+  "selected_offer": {
+    "candidate_id": "ai_integration_workflow_audit",
+    "decision_note": "Best first move: high official demand signal, strongest local proof, and no need for production access.",
+    "deliverables": [
+      "Map one described workflow from non-sensitive notes.",
+      "Identify AI integration points, approval gates, rollback paths, and credential boundaries.",
+      "Deliver a local blueprint plus synthetic proof asset."
+    ],
+    "fit_score": 100,
+    "local_evidence_assets": [
+      "reports/lead-generation-and-sales/upwork-ai-workflow-audit-offer-20260616.md",
+      "reports/lead-generation-and-sales/ai-workflow-audit-proof-asset-agency-reporting-20260616.md",
+      "reports/money-path-lane-scout-packets/upwork-ai-offer-matrix-local-proof.md"
+    ],
+    "offer_name_local": "Supervised AI Integration Workflow Audit",
+    "skill_fit": "AI Integration / Scripting & Automation / Marketing Automation",
+    "source_gates": [
+      "account",
+      "client_data_privacy",
+      "credential_handling",
+      "payment",
+      "proposal",
+      "public_action"
+    ],
+    "why_first": "It best matches Upwork's official 2026 AI Integration growth signal while reusing existing local workflow-audit proof assets and avoiding account, proposal, payment, credential, model/API, and public-action gates."
+  },
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-upwork_2026_ai_skills_demand-20260618",
+  "status": "upwork_ai_skills_no_send_approval_packet_ready_local_only",
+  "task_id": "task-upwork-ai-skills-no-send-approval-request-packet-20260618"
+}

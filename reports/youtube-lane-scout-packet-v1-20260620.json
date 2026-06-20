@@ -1,0 +1,85 @@
+{
+  "schema_version": "youtube_lane_scout_packet.v1",
+  "generated_utc": "2026-06-20T16:52:00Z",
+  "lane_id": "youtube_content_channels",
+  "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+  "status": "report_only_scout_packet",
+  "decision": "Start YouTube with local no-post content production, not channel creation or upload.",
+  "channel_experiments": [
+    {
+      "experiment_id": "agent_company_build_log",
+      "audience": "AI builders and automation operators",
+      "first_local_proof": "3 scripts showing concrete company-system progress.",
+      "monetization_route": "product demos, consulting leads, productized templates"
+    },
+    {
+      "experiment_id": "ai_tool_teardown_shorts",
+      "audience": "busy builders choosing tools",
+      "first_local_proof": "5 short-form scripts comparing tools without live claims.",
+      "monetization_route": "affiliate_or_review_route_later_gated"
+    },
+    {
+      "experiment_id": "small_business_ai_automation",
+      "audience": "operators and freelancers",
+      "first_local_proof": "3 tutorial outlines and offer tie-in.",
+      "monetization_route": "lead_gen_services_and_templates"
+    },
+    {
+      "experiment_id": "kaggle_arc_baseline_diary",
+      "audience": "competition learners",
+      "first_local_proof": "2 explainers from local harness artifacts.",
+      "monetization_route": "audience_plus_future_course_or_template_route"
+    },
+    {
+      "experiment_id": "bounty_code_quality_recaps",
+      "audience": "developers seeking paid open-source work",
+      "first_local_proof": "2 local-only case-study scripts with no live claims.",
+      "monetization_route": "paid_code_credibility_and_productized_checklists"
+    },
+    {
+      "experiment_id": "digital_product_demo_channel",
+      "audience": "buyers of templates prompts and skills",
+      "first_local_proof": "3 demos from local product assets.",
+      "monetization_route": "marketplace_listing_route_after_approval"
+    }
+  ],
+  "first_no_post_batch_titles": [
+    "I built a CEO for an AI agent company, and the first job was saying no",
+    "The fastest way to test an AI tool is not to install it",
+    "A local proof beats a public launch when agents are moving fast",
+    "How I split AI workers from service workers so nothing posts by accident",
+    "The AI Resources department: HR for agents, tools, and workflows",
+    "A YouTube channel can start before you create the channel",
+    "Why every money idea needs a kill rule before it gets a manager",
+    "Turning a prompt pack into a product without listing it yet",
+    "Kaggle and ARC prizes look huge, but the first proof is tiny",
+    "Prediction markets are research until the treasury gate says otherwise"
+  ],
+  "gate_map": {
+    "channel_creation": "account_registration_and_terms_gate",
+    "uploads": "public_action_approval_copyright_review_exact_asset_packet",
+    "thumbnails": "copyright_brand_review_and_public_action_approval",
+    "voice_music_footage": "licensing_and_attribution_review",
+    "comments_community": "public_action_and_reputation_review",
+    "monetization_sponsors_affiliate_links": "legal_tax_payout_account_and_public_action_gates"
+  },
+  "first_local_proof_definition": [
+    "10_scripts_or_structured_script_briefs",
+    "30_title_variants",
+    "10_thumbnail_briefs",
+    "b_roll_source_plan_with_licensing_notes",
+    "voiceover_editor_options_with_cost_and_gate_notes",
+    "one_production_manifest",
+    "one_reputation_copyright_review_checklist"
+  ],
+  "next_action": "Create youtube_no_post_content_batch_v1 as local files only.",
+  "zero_side_effect_boundary": {
+    "youtube_accounts_or_channels_created": 0,
+    "videos_uploaded": 0,
+    "comments_posts_likes_follows_or_public_actions": 0,
+    "paid_tools_or_stock_assets_purchased": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": 0,
+    "external_side_effects": false
+  }
+}

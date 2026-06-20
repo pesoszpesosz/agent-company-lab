@@ -1,0 +1,45 @@
+{
+  "schema_version": "youtube_material_route_template.v1",
+  "generated_utc": "2026-06-20T17:18:00Z",
+  "owner_lane_id": "premium_customer_intake",
+  "target_lane_id": "youtube_content_channels",
+  "status": "local_intake_template",
+  "purpose": "Route customer-provided YouTube videos, references, notes, screenshots, transcripts, or other materials into the YouTube lane without poisoning CEO context or copying source material too closely.",
+  "required_fields": [
+    "input_id",
+    "received_utc",
+    "raw_material_path_or_url",
+    "provided_by",
+    "why_it_might_help",
+    "target_channel_experiment",
+    "allowed_use",
+    "summary_not_transcript",
+    "extractable_patterns",
+    "do_not_copy_notes",
+    "target_artifact",
+    "human_action_needed",
+    "revisit_condition"
+  ],
+  "transformation_rules": [
+    "summarize_useful_pattern_do_not_paste_full_transcripts_into_ceo_context",
+    "extract_structure_audience_hook_type_pacing_production_pattern_or_monetization_clue",
+    "do_not_copy_wording_title_structure_thumbnail_design_music_visual_identity_or_creator_persona",
+    "route_to_smallest_target_artifact",
+    "if_source_use_unclear_mark_needs_source_review_rather_than_rejecting"
+  ],
+  "default_route": [
+    "premium_customer_intake_captures_raw_material_reference",
+    "youtube_content_channels_receives_context_capsule",
+    "knowledge_application_loop_requires_applied_artifact_or_revisit_condition",
+    "ceo_receives_capsule_and_applied_knowledge_delta"
+  ],
+  "zero_side_effect_boundary": {
+    "video_opened": false,
+    "content_downloaded": false,
+    "transcript_scraped": false,
+    "material_copied": false,
+    "uploaded_or_commented": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

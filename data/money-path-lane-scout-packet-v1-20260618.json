@@ -1,0 +1,1188 @@
+{
+  "schema_version": "agent_company.money_path_lane_scout_packet.v1",
+  "generated_utc": "2026-06-18T06:18:57Z",
+  "task_id": "task-money-path-lane-scout-packet-v1-20260618",
+  "lane_id": "money_source_discovery",
+  "source_observations": {
+    "upwork_ai_jobs": {
+      "url": "https://www.upwork.com/freelance-jobs/artificial-intelligence/",
+      "observed_utc": "2026-06-18T06:18:57Z",
+      "local_summary": "Public page showed a live AI jobs count, recent AI-agent/automation job examples, and a visible median AI engineer hourly range of USD 35-60.",
+      "confidence": "medium_high",
+      "gate_note": "Live job application, profile, proposal, messaging, payment, and account activity are gated."
+    },
+    "arc_prize_2026": {
+      "url": "https://arcprize.org/competitions/2026",
+      "observed_utc": "2026-06-18T06:18:57Z",
+      "local_summary": "ARC Prize 2026 page states USD 2M in prizes across 3 tracks, dates through December 2026, open-source/reproducibility expectations, and no internet access during Kaggle evaluation.",
+      "confidence": "high",
+      "gate_note": "Official submission, Kaggle account work, team/IP/license commitments, and compute spend are gated."
+    },
+    "kaggle_money_directory": {
+      "url": "https://www.kaggle.com/competitions?prestigeFilter=money",
+      "observed_utc": "2026-06-18T06:18:57Z",
+      "local_summary": "Kaggle money competition directory is the route source, but the rendered page was dynamic in this readback; local scout must require a later rules/account check before competition selection.",
+      "confidence": "medium",
+      "gate_note": "Competition join, submission, account profile, team joining, and prize eligibility actions are gated."
+    },
+    "kalshi_public_market_data": {
+      "url": "https://docs.kalshi.com/getting_started/quick_start_market_data",
+      "observed_utc": "2026-06-18T06:18:57Z",
+      "local_summary": "Kalshi docs describe unauthenticated public market-data endpoints for series, events, markets, and orderbooks; authenticated endpoints cover trading and portfolio work.",
+      "confidence": "high",
+      "gate_note": "Authentication, trading, portfolio, deposits, withdrawals, and real-money actions are gated."
+    },
+    "wave23_refresh": {
+      "url": "E:/agent-company-lab/reports/agent-company-money-path-refresh-wave23-20260618.md",
+      "observed_utc": "2026-06-18T06:18:57Z",
+      "local_summary": "Wave 23 refreshed 18 online money paths and recommended converting them into lane manager scout packets.",
+      "confidence": "high",
+      "gate_note": "Wave 23 recorded zero side effects and set local-only constraints."
+    }
+  },
+  "route_count": 18,
+  "lane_summary": {
+    "lead_generation_and_sales": {
+      "route_count": 2,
+      "max_priority": 91,
+      "cash_proximity_avg": 78.0,
+      "proofability_avg": 84.0
+    },
+    "digital_products_templates_plugins": {
+      "route_count": 4,
+      "max_priority": 89,
+      "cash_proximity_avg": 72.8,
+      "proofability_avg": 81.0
+    },
+    "content_and_social_growth": {
+      "route_count": 1,
+      "max_priority": 73,
+      "cash_proximity_avg": 62.0,
+      "proofability_avg": 80.0
+    },
+    "ai_ml_competitions": {
+      "route_count": 3,
+      "max_priority": 82,
+      "cash_proximity_avg": 45.3,
+      "proofability_avg": 68.7
+    },
+    "paid_code_bounties": {
+      "route_count": 2,
+      "max_priority": 88,
+      "cash_proximity_avg": 72.0,
+      "proofability_avg": 73.5
+    },
+    "security_bounty_private_reports": {
+      "route_count": 2,
+      "max_priority": 68,
+      "cash_proximity_avg": 54.0,
+      "proofability_avg": 63.0
+    },
+    "web3_airdrops_grants_hackathons": {
+      "route_count": 2,
+      "max_priority": 61,
+      "cash_proximity_avg": 48.5,
+      "proofability_avg": 61.5
+    },
+    "prediction_market_research": {
+      "route_count": 2,
+      "max_priority": 76,
+      "cash_proximity_avg": 36.0,
+      "proofability_avg": 74.0
+    }
+  },
+  "routes": [
+    {
+      "route_id": "upwork_ai_freelance_work",
+      "lane_id": "lead_generation_and_sales",
+      "source_url": "https://www.upwork.com/freelance-jobs/artificial-intelligence/",
+      "source_signal": "AI freelance demand, recent AI-agent/automation postings, visible AI engineer hourly range.",
+      "first_local_proof": "Build an offer matrix mapping lab capabilities to 5 no-contact Upwork AI job archetypes.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/upwork-ai-offer-matrix-local-proof.md",
+      "manager_agent_type": "offer_builder",
+      "priority": 91,
+      "cash_proximity": 82,
+      "proofability": 86,
+      "blocked_by": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Five archetypes are sourced from public job text or category summaries.",
+        "Every offer avoids claims of guaranteed client results.",
+        "No Upwork account, proposal, message, or profile action is performed."
+      ],
+      "local_task_id": "task-lane-scout-upwork_ai_freelance_work-20260618",
+      "stop_gates": [
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "proposal",
+          "rule": "proposal, job application, bid, claim, message, or outreach requires public-action/reputation approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "fiverr_ai_services",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://www.fiverr.com/categories/ai-services",
+      "source_signal": "AI apps, AI agents, automation, model/data training, and consulting service categories.",
+      "first_local_proof": "Draft 3 productized AI-service bundles from existing local capabilities with no listing copy publication.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/fiverr-ai-service-bundles-local-proof.md",
+      "manager_agent_type": "market_gap_scout",
+      "priority": 86,
+      "cash_proximity": 76,
+      "proofability": 78,
+      "blocked_by": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Three service bundles have scope, deliverable, turnaround hypothesis, and stop gates.",
+        "No Fiverr account or gig is created.",
+        "No guaranteed revenue, ranking, or buyer outcome is claimed."
+      ],
+      "local_task_id": "task-lane-scout-fiverr_ai_services-20260618",
+      "stop_gates": [
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "proposal",
+          "rule": "proposal, job application, bid, claim, message, or outreach requires public-action/reputation approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "upwork_2026_ai_skills_demand",
+      "lane_id": "lead_generation_and_sales",
+      "source_url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "source_signal": "Reported year-over-year AI-enabled skill demand increase.",
+      "first_local_proof": "Score existing lab artifacts against top AI-enabled service categories and choose one no-contact portfolio sample.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/upwork-ai-skills-fit-score-local-proof.md",
+      "manager_agent_type": "offer_builder",
+      "priority": 84,
+      "cash_proximity": 74,
+      "proofability": 82,
+      "blocked_by": [
+        "browser",
+        "account",
+        "proposal",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Every scored category has one local artifact evidence path.",
+        "One portfolio sample is recommended without posting it.",
+        "Live demand claims remain source-attributed."
+      ],
+      "local_task_id": "task-lane-scout-upwork_2026_ai_skills_demand-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "proposal",
+          "rule": "proposal, job application, bid, claim, message, or outreach requires public-action/reputation approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "fiverr_2026_trends",
+      "lane_id": "content_and_social_growth",
+      "source_url": "https://www.fiverr.com/resources/guides/reports/business-trends-index-june-2026",
+      "source_signal": "AI automation, video content, Shopify execution, and social marketing demand themes.",
+      "first_local_proof": "Create a no-post content and offer calendar for 14 days of AI-automation proof snippets.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/fiverr-trends-no-post-content-calendar-local-proof.md",
+      "manager_agent_type": "trend_scout",
+      "priority": 73,
+      "cash_proximity": 62,
+      "proofability": 80,
+      "blocked_by": [
+        "browser",
+        "account",
+        "proposal",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Calendar has 14 local draft ideas with artifact source links.",
+        "No social post, listing, message, or profile edit is made.",
+        "Claims are phrased as local proof ideas, not client promises."
+      ],
+      "local_task_id": "task-lane-scout-fiverr_2026_trends-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "proposal",
+          "rule": "proposal, job application, bid, claim, message, or outreach requires public-action/reputation approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "arc_prize_2026",
+      "lane_id": "ai_ml_competitions",
+      "source_url": "https://arcprize.org/competitions/2026",
+      "source_signal": "USD 2M, three tracks, key dates, reproducible open-source solution expectations, no internet during Kaggle evaluation.",
+      "first_local_proof": "Extend the local ARC toy harness into a baseline reproducibility packet with no Kaggle submission.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/arc-prize-2026-baseline-local-proof.md",
+      "manager_agent_type": "competition_scout",
+      "priority": 82,
+      "cash_proximity": 45,
+      "proofability": 71,
+      "blocked_by": [
+        "account",
+        "submission",
+        "payment",
+        "public_action",
+        "worker_runtime"
+      ],
+      "acceptance_checks": [
+        "Baseline uses local fixtures only.",
+        "Open-source/license implications are listed.",
+        "No Kaggle account, submission, external API, or compute purchase is used."
+      ],
+      "local_task_id": "task-lane-scout-arc_prize_2026-20260618",
+      "stop_gates": [
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        },
+        {
+          "gate": "worker_runtime",
+          "rule": "worker start, runtime start, MCP/model call, dependency install, external API call, or service-request mutation requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "arc_agi_3",
+      "lane_id": "ai_ml_competitions",
+      "source_url": "https://arcprize.org/competitions/2026/arc-agi-3",
+      "source_signal": "Interactive reasoning benchmark and top-performing AI-agent prizes.",
+      "first_local_proof": "Prepare an ARC-AGI-3 eligibility/rules gate worksheet from public docs only.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/arc-agi-3-rules-gate-local-proof.md",
+      "manager_agent_type": "competition_scout",
+      "priority": 77,
+      "cash_proximity": 43,
+      "proofability": 66,
+      "blocked_by": [
+        "browser",
+        "account",
+        "submission",
+        "payment",
+        "public_action",
+        "worker_runtime"
+      ],
+      "acceptance_checks": [
+        "Rules worksheet separates public reading from official participation.",
+        "No competition join or submission occurs.",
+        "Any model/API/runtime need is explicitly gated."
+      ],
+      "local_task_id": "task-lane-scout-arc_agi_3-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        },
+        {
+          "gate": "worker_runtime",
+          "rule": "worker start, runtime start, MCP/model call, dependency install, external API call, or service-request mutation requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "kaggle_money_competitions",
+      "lane_id": "ai_ml_competitions",
+      "source_url": "https://www.kaggle.com/competitions?prestigeFilter=money",
+      "source_signal": "Kaggle money competition directory route; dynamic page requires later rules/account verification.",
+      "first_local_proof": "Create a local competition scout worksheet with fields for prize, deadline, metric, data size, compute, account/team/IP gates.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/kaggle-money-competition-scout-worksheet-local-proof.md",
+      "manager_agent_type": "competition_scout",
+      "priority": 72,
+      "cash_proximity": 48,
+      "proofability": 69,
+      "blocked_by": [
+        "browser",
+        "account",
+        "submission",
+        "payment",
+        "public_action",
+        "worker_runtime"
+      ],
+      "acceptance_checks": [
+        "Worksheet is reusable before live competition selection.",
+        "Dynamic-source uncertainty is recorded.",
+        "No Kaggle login, join, data download, or submission happens."
+      ],
+      "local_task_id": "task-lane-scout-kaggle_money_competitions-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        },
+        {
+          "gate": "worker_runtime",
+          "rule": "worker start, runtime start, MCP/model call, dependency install, external API call, or service-request mutation requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "algora_comet_opik",
+      "lane_id": "paid_code_bounties",
+      "source_url": "https://www.comet.com/docs/opik/contributing/developer-programs/bounties",
+      "source_signal": "Comet Opik docs route contributors to Algora bounties and contribution/CLA guidance.",
+      "first_local_proof": "Turn existing Algora fixture parser into a claim-readiness checklist and duplicate-risk worksheet.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/algora-comet-opik-claim-readiness-local-proof.md",
+      "manager_agent_type": "repo_triager",
+      "priority": 88,
+      "cash_proximity": 78,
+      "proofability": 77,
+      "blocked_by": [
+        "account",
+        "proposal",
+        "submission",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Checklist names CLA/account/public PR gates.",
+        "Duplicate-risk and issue-claim ambiguity are evaluated locally.",
+        "No claim, comment, PR, or account action occurs."
+      ],
+      "local_task_id": "task-lane-scout-algora_comet_opik-20260618",
+      "stop_gates": [
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "proposal",
+          "rule": "proposal, job application, bid, claim, message, or outreach requires public-action/reputation approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "opire_paid_oss",
+      "lane_id": "paid_code_bounties",
+      "source_url": "https://opire.dev/",
+      "source_signal": "Paid open-source issue bounty platform route.",
+      "first_local_proof": "Prepare an Opire source-spec and parser fixture plan with no account or claim.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/opire-source-spec-parser-plan-local-proof.md",
+      "manager_agent_type": "repo_triager",
+      "priority": 74,
+      "cash_proximity": 66,
+      "proofability": 70,
+      "blocked_by": [
+        "browser",
+        "account",
+        "proposal",
+        "submission",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Source-spec fields cover issue URL, bounty amount, claim state, repo license, and payout route.",
+        "Parser plan uses local fixtures first.",
+        "No Opire account, claim, or comment occurs."
+      ],
+      "local_task_id": "task-lane-scout-opire_paid_oss-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "proposal",
+          "rule": "proposal, job application, bid, claim, message, or outreach requires public-action/reputation approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "hackerone_program_rules",
+      "lane_id": "security_bounty_private_reports",
+      "source_url": "https://hackerone.com/directory/programs",
+      "source_signal": "Public program directory route for authorized security reporting.",
+      "first_local_proof": "Map one existing security memo to a rules-route readiness template without testing.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/hackerone-rules-route-readiness-local-proof.md",
+      "manager_agent_type": "program_rules_reader",
+      "priority": 68,
+      "cash_proximity": 55,
+      "proofability": 63,
+      "blocked_by": [
+        "browser",
+        "account",
+        "security_testing",
+        "submission",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Template prioritizes scope, safe harbor, disclosure path, testing boundaries, and bounty eligibility.",
+        "No testing or submission occurs.",
+        "Unknown program rules are marked blocked."
+      ],
+      "local_task_id": "task-lane-scout-hackerone_program_rules-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "security_testing",
+          "rule": "testing beyond public/read-only source review requires explicit scope and authorization"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "bugcrowd_program_rules",
+      "lane_id": "security_bounty_private_reports",
+      "source_url": "https://www.bugcrowd.com/bug-bounty-list/",
+      "source_signal": "Public bug bounty and vulnerability disclosure program list route.",
+      "first_local_proof": "Create a rules-first triage packet template for Bugcrowd-style programs.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/bugcrowd-rules-first-triage-local-proof.md",
+      "manager_agent_type": "program_rules_reader",
+      "priority": 66,
+      "cash_proximity": 53,
+      "proofability": 63,
+      "blocked_by": [
+        "browser",
+        "account",
+        "security_testing",
+        "submission",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Template refuses any test without explicit in-scope authorization.",
+        "Reward eligibility and duplicate policy fields are present.",
+        "No account, scan, exploit, or report submission occurs."
+      ],
+      "local_task_id": "task-lane-scout-bugcrowd_program_rules-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "security_testing",
+          "rule": "testing beyond public/read-only source review requires explicit scope and authorization"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "gumroad_direct_download",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://gumroad.com/",
+      "source_signal": "Creator direct-download selling route for template/digital products.",
+      "first_local_proof": "Draft Gumroad-style local page copy and asset gap checklist for Agent Skill Starter Kit v0.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/gumroad-direct-download-local-proof.md",
+      "manager_agent_type": "market_gap_scout",
+      "priority": 80,
+      "cash_proximity": 72,
+      "proofability": 83,
+      "blocked_by": [
+        "browser",
+        "account",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Page copy is local-only and avoids guaranteed revenue/platform claims.",
+        "Asset gap checklist names screenshots, license, refund/support language.",
+        "No Gumroad account, upload, payment, or public page is created."
+      ],
+      "local_task_id": "task-lane-scout-gumroad_direct_download-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "lemon_squeezy_digital_products",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://www.lemonsqueezy.com/ecommerce/digital-products",
+      "source_signal": "Digital products, payments, subscriptions, and tax-handling route.",
+      "first_local_proof": "Prepare a route decision packet comparing download, lead magnet, license, and subscription shapes.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/lemon-squeezy-route-decision-local-proof.md",
+      "manager_agent_type": "market_gap_scout",
+      "priority": 70,
+      "cash_proximity": 63,
+      "proofability": 75,
+      "blocked_by": [
+        "browser",
+        "account",
+        "payment",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Decision packet separates product shape from tax/payment/account obligations.",
+        "No account, checkout, tax, or payout action occurs.",
+        "Legal/payment questions are listed before any seller route."
+      ],
+      "local_task_id": "task-lane-scout-lemon_squeezy_digital_products-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "promptbase_agent_skill_route",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://promptbase.com/sell",
+      "source_signal": "Prompt/agent-skill marketplace route, already advanced through Wave 24-27 local packets.",
+      "first_local_proof": "After Wave 27, prepare a no-browser internal review rubric for the six approval packets.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/promptbase-approval-rubric-local-proof.md",
+      "manager_agent_type": "market_gap_scout",
+      "priority": 89,
+      "cash_proximity": 80,
+      "proofability": 88,
+      "blocked_by": [
+        "browser",
+        "account",
+        "payment",
+        "public_action",
+        "submission"
+      ],
+      "acceptance_checks": [
+        "Rubric reviews six approvals from Wave 27.",
+        "No PromptBase browser, account, listing, upload, or submission occurs.",
+        "Next action is one exact approval at a time."
+      ],
+      "local_task_id": "task-lane-scout-promptbase_agent_skill_route-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "gitcoin_grants",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "source_url": "https://gitcoin.co/program",
+      "source_signal": "Seasonal grant/crowdfunding route for early-stage builders.",
+      "first_local_proof": "Write a no-submit grant-fit memo for the agent-company lab and identify missing public project evidence.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/gitcoin-grant-fit-local-proof.md",
+      "manager_agent_type": "program_scout",
+      "priority": 61,
+      "cash_proximity": 48,
+      "proofability": 61,
+      "blocked_by": [
+        "browser",
+        "account",
+        "wallet",
+        "payment",
+        "submission",
+        "public_action"
+      ],
+      "acceptance_checks": [
+        "Grant-fit memo names eligibility, public-good angle, wallet/account/project-page gates.",
+        "No wallet, account, application, or public project action occurs.",
+        "Weak fit is allowed and recorded honestly."
+      ],
+      "local_task_id": "task-lane-scout-gitcoin_grants-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "wallet",
+          "rule": "wallet creation/address/signature/token movement requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "dorahacks_hackathons_grants",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "source_url": "https://dorahacks.io/",
+      "source_signal": "Hackathon, bounty, and grant platform route.",
+      "first_local_proof": "Build a scout template for prize, deadline, team, wallet, chain, demo, deployment, and public-submission gates.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/dorahacks-scout-template-local-proof.md",
+      "manager_agent_type": "program_scout",
+      "priority": 60,
+      "cash_proximity": 49,
+      "proofability": 62,
+      "blocked_by": [
+        "browser",
+        "account",
+        "wallet",
+        "payment",
+        "submission",
+        "public_action",
+        "worker_runtime"
+      ],
+      "acceptance_checks": [
+        "Template can evaluate one program without applying.",
+        "Wallet/team/deployment gates are explicit.",
+        "No account, wallet, submission, or public demo occurs."
+      ],
+      "local_task_id": "task-lane-scout-dorahacks_hackathons_grants-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "wallet",
+          "rule": "wallet creation/address/signature/token movement requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "submission",
+          "rule": "competition, marketplace, bounty, security report, grant, or hackathon submission requires exact approval"
+        },
+        {
+          "gate": "public_action",
+          "rule": "public post, listing, PR, comment, issue, message, review, profile mutation, or publication requires exact approval"
+        },
+        {
+          "gate": "worker_runtime",
+          "rule": "worker start, runtime start, MCP/model call, dependency install, external API call, or service-request mutation requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "kalshi_public_market_data",
+      "lane_id": "prediction_market_research",
+      "source_url": "https://docs.kalshi.com/getting_started/quick_start_market_data",
+      "source_signal": "Unauthenticated public market data endpoints for research; authenticated endpoints for trading are separate.",
+      "first_local_proof": "Create a no-auth data schema and paper-only signal worksheet from documented public endpoints.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/kalshi-public-data-paper-signal-local-proof.md",
+      "manager_agent_type": "market_scout",
+      "priority": 76,
+      "cash_proximity": 38,
+      "proofability": 82,
+      "blocked_by": [
+        "payment",
+        "trade",
+        "account",
+        "worker_runtime"
+      ],
+      "acceptance_checks": [
+        "Worksheet separates public market-data reads from authenticated trading.",
+        "Any live API call remains gated unless separately approved.",
+        "No order, account, deposit, withdrawal, or portfolio action occurs."
+      ],
+      "local_task_id": "task-lane-scout-kalshi_public_market_data-20260618",
+      "stop_gates": [
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "trade",
+          "rule": "order placement, market making, portfolio action, or paper-to-live conversion requires treasury approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "worker_runtime",
+          "rule": "worker start, runtime start, MCP/model call, dependency install, external API call, or service-request mutation requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    },
+    {
+      "route_id": "polymarket_docs_research",
+      "lane_id": "prediction_market_research",
+      "source_url": "https://docs.polymarket.us/getting-started/welcome",
+      "source_signal": "Docs route with market data, order placement, and redemption concepts.",
+      "first_local_proof": "Write a route gate memo separating public docs research from credentialed trading and wallet use.",
+      "proof_artifact": "reports/money-path-lane-scout-packets/polymarket-route-gate-local-proof.md",
+      "manager_agent_type": "market_scout",
+      "priority": 62,
+      "cash_proximity": 34,
+      "proofability": 66,
+      "blocked_by": [
+        "browser",
+        "account",
+        "wallet",
+        "payment",
+        "trade",
+        "worker_runtime"
+      ],
+      "acceptance_checks": [
+        "Memo names credential, wallet, region/eligibility, order, redemption, and treasury gates.",
+        "No API key, wallet, order, or account action occurs.",
+        "Research remains paper-only."
+      ],
+      "local_task_id": "task-lane-scout-polymarket_docs_research-20260618",
+      "stop_gates": [
+        {
+          "gate": "browser",
+          "rule": "browser validation or page interaction requires exact approval"
+        },
+        {
+          "gate": "account",
+          "rule": "account/login/profile setup requires exact approval"
+        },
+        {
+          "gate": "wallet",
+          "rule": "wallet creation/address/signature/token movement requires exact approval"
+        },
+        {
+          "gate": "payment",
+          "rule": "payment, payout, tax, KYC, billing, deposit, withdrawal, or real-money commitment requires exact approval"
+        },
+        {
+          "gate": "trade",
+          "rule": "order placement, market making, portfolio action, or paper-to-live conversion requires treasury approval"
+        },
+        {
+          "gate": "worker_runtime",
+          "rule": "worker start, runtime start, MCP/model call, dependency install, external API call, or service-request mutation requires exact approval"
+        }
+      ],
+      "side_effect_boundary": {
+        "browser_sessions": 0,
+        "accounts_or_logins": 0,
+        "wallets_or_payments": 0,
+        "trades_or_orders": 0,
+        "submissions_or_proposals": 0,
+        "public_actions": 0,
+        "service_request_mutations": 0,
+        "workers_or_runtimes_started": 0,
+        "model_mcp_or_external_api_calls": 0,
+        "external_side_effects": 0
+      }
+    }
+  ],
+  "global_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_created_or_logged_in": 0,
+    "wallets_created_or_used": 0,
+    "payments_or_payouts_touched": 0,
+    "trades_or_orders_placed": 0,
+    "submissions_proposals_messages_or_public_posts": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Have lane managers execute the highest-priority local proof tasks one at a time, starting with Upwork AI offer matrix, PromptBase approval rubric, Algora claim-readiness checklist, and ARC baseline packet. Keep every account, browser, wallet, payment, proposal, submission, trade, public action, worker/runtime, model/MCP, and external action behind exact approval."
+}

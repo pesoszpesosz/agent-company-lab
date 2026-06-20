@@ -1,0 +1,79 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-questline-pulse-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-questline-pulse-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_questline_pulse_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a reduced-motion-aware pulse trail and stage spark layer to the Path Map Chapter Questline so the chapter run-map feels alive while preserving local-only Event Proof focus behavior.",
+  "design_research": {
+    "queries": [
+      "dashboard microinteractions subtle animation progress indicator UX performance",
+      "game UI quest progress animation subtle pulse line dashboard UX",
+      "web animation prefers-reduced-motion dashboard microinteractions best practices"
+    ],
+    "source_urls": [
+      "https://web.dev/articles/prefers-reduced-motion",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion",
+      "https://ixdf.org/literature/article/micro-interactions-ux",
+      "https://www.clearpeaks.com/how-microinteractions-make-your-app-more-usable-and-engaging/",
+      "https://dribbble.com/search/game-ui-progress"
+    ],
+    "pattern_notes": [
+      "Use motion as a small contextual status signal instead of decorative noise.",
+      "Progress indicators and subtle pulses help users see that a system or run is active.",
+      "Respect prefers-reduced-motion so non-essential motion can be minimized safely."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_questline.py",
+      "reports/agent-company-atlas-path-chapter-questline-pulse-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a path-chapter-quest-pulse inside the Questline meter.",
+      "Render one path-chapter-quest-spark inside each stage without affecting accessible text.",
+      "Animate the pulse across the existing progress meter using --questline-progress.",
+      "Animate subtle stage sparks for unlocked, advancing, and gated stages.",
+      "Disable visible pulse/spark effects under prefers-reduced-motion.",
+      "Keep Event Proof stage focus and generated texture rendering unchanged."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_questline.py -q failed before pulse wiring on missing path-chapter-quest-pulse markup.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_questline.py -q passed after pulse/spark markup, styles, reduced-motion handling, docs, and cache token wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-questline-pulse-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Chapter Questline with one pulse, six sparks, six stages, three clickable source stages, generated texture path-chapter-questline-20260618.png, pulse animation questlinePulseTrail, spark animation questlineSparkRise, no horizontal overflow, zero console errors, and spawn-stage click focused the matching trace in the local Event Proof grid."
+    },
+    "reduced_motion": {
+      "status": "passed",
+      "evidence": "Static CSS and browser-loaded stylesheet include prefers-reduced-motion handling for path-chapter-quest-pulse and path-chapter-quest-spark while preserving loaded keyframes."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "Browser sweep at 390x820, 820x900, 1280x900, and 1600x1000 kept one pulse, six sparks, six stages, questlinePulseTrail/questlineSparkRise animations, generated texture, zero horizontal overflow, and zero console errors."
+    }
+  }
+}

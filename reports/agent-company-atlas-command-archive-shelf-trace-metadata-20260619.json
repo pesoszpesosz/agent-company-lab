@@ -1,0 +1,57 @@
+{
+  "traceId": "trace-agent-company-atlas-command-archive-shelf-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-archive-shelf-v1-20260619",
+  "eventId": "trace-atlas_command_archive_shelf_added-20260619",
+  "createdUtc": "2026-06-18T22:44:18Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "title": "Command Archive Shelf",
+  "summary": "Bounded the Command deck's lower relay, dispatch, quest, crew, thread, bot-command, and roster boards into compact internal archive viewports so deep material stays reachable without forcing one long page scroll.",
+  "changeType": "scroll_compression",
+  "stageModel": {
+    "desktopBehavior": "All lower Command support boards after the main workspace are capped at 282px with internal scrolling and a bottom fade, reducing the rendered Command page height from about 9881px to about 3098px.",
+    "mobileBehavior": "The same shelf cap applies on mobile while the deck dock stays horizontally scrollable and the active lane detail still has no internal overflow.",
+    "motionBehavior": "A subtle archive glow on each shelf edge indicates deeper material without adding another animated panel."
+  },
+  "browserEvidence": {
+    "desktopCommandChronicle": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "previousDocumentHeight": 9881,
+      "documentHeight": 3098,
+      "archivePanelHeight": 282,
+      "archivePanelMaxHeight": "282px",
+      "archiveOverflowY": "auto",
+      "archiveGlowAnimation": "commandArchiveGlow",
+      "activeLaneFirst": "platform_engineering"
+    },
+    "mobileCommandChronicle": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentHeight": 4187,
+      "archivePanelHeight": 282,
+      "archivePanelMaxHeight": "282px",
+      "archiveOverflowY": "auto",
+      "dockOverflowX": "auto",
+      "detailOverflow": 0,
+      "activeLaneFirst": "platform_engineering"
+    }
+  },
+  "verification": [
+    "python -m pytest tests/test_agent_company_atlas_command_workspace_first.py -q",
+    "node --check web/app.js",
+    "In-app browser QA on command deck Chronicle route at 1440x900 and 390x844"
+  ],
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "reports/agent-company-atlas-command-archive-shelf-trace-metadata-20260619.json",
+    "web/data/snapshot.json"
+  ]
+}

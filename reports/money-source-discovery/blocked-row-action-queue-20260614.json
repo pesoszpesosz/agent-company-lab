@@ -1,0 +1,197 @@
+{
+  "schema_version": "blocked_row_action_queue.v1",
+  "generated_date": "2026-06-14",
+  "lane_id": "money_source_discovery",
+  "derived_from": [
+    "E:/agent-company-lab/reports/money-source-discovery/money-source-proof-queue-20260614.json",
+    "E:/agent-company-lab/reports/money-source-discovery/msd-001-local-routing-decision-20260614.md"
+  ],
+  "boundary": {
+    "browser_actions": false,
+    "current_source_verification": false,
+    "api_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_or_tax_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "human_paid_work": false,
+    "submitted_bounty_payouts_work": false
+  },
+  "summary": {
+    "source_queue_candidates": 16,
+    "unblocked_local_candidates": 1,
+    "blocked_rows_in_this_queue": 15,
+    "ready_for_external_execution": 0,
+    "primary_service_request": "req-wave4-money-source-discovery-browser-readonly-20260614",
+    "primary_service_request_status": "needs_review"
+  },
+  "blocked_rows": [
+    {
+      "candidate_id": "MSD-002",
+      "owner_lane": "paid_code_bounties",
+      "supporting_lanes": ["security_bounty_private_reports"],
+      "source_category": "GitHub paid-code/security bounty discovery",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for exact public-read scope.",
+      "later_gates": ["GitHub public-action approval", "security scope review", "duplicate/collision check"],
+      "safe_local_next_action": "Prepare a read-only capture template for GitHub bounty-source evidence fields without opening GitHub.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/github-bounty-source-capture-20260614.md",
+      "prohibited_until_gate_clear": ["open source URLs", "claim bounties", "comment on issues or PRs", "submit security reports", "touch submitted_bounty_payouts"]
+    },
+    {
+      "candidate_id": "MSD-003",
+      "owner_lane": "ai_ml_competitions",
+      "supporting_lanes": [],
+      "source_category": "Kaggle prize competitions",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["Kaggle account decision", "competition rules review", "dataset/license review", "compute/API budget", "submission approval"],
+      "safe_local_next_action": "Draft a prize-competition evaluation rubric using only existing local Wave-4 fields.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/kaggle-prize-scout-20260614.md",
+      "prohibited_until_gate_clear": ["open listings", "download datasets", "create accounts", "run paid compute", "submit entries"]
+    },
+    {
+      "candidate_id": "MSD-004",
+      "owner_lane": "ai_ml_competitions",
+      "supporting_lanes": [],
+      "source_category": "DrivenData competitions",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["account decision", "rules review", "data license review", "submission approval"],
+      "safe_local_next_action": "Reuse the AI/ML competition rubric and add fields for social-impact/prize probability.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/drivendata-prize-scout-20260614.md",
+      "prohibited_until_gate_clear": ["open listings", "create accounts", "download data", "submit entries"]
+    },
+    {
+      "candidate_id": "MSD-005",
+      "owner_lane": "ai_ml_competitions",
+      "supporting_lanes": [],
+      "source_category": "MLContests aggregator",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for exact public-read scope.",
+      "later_gates": ["source reliability review", "account/rules gates for each discovered competition", "submission approval"],
+      "safe_local_next_action": "Create aggregator capture fields: prize, deadline, host, rules URL, account need, and duplicate source.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/mlcontests-aggregator-scout-20260614.md",
+      "prohibited_until_gate_clear": ["open aggregator", "follow external links", "create accounts", "submit entries"]
+    },
+    {
+      "candidate_id": "MSD-006",
+      "owner_lane": "ai_ml_competitions",
+      "supporting_lanes": [],
+      "source_category": "AI hackathons",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["registration decision", "team eligibility", "rules review", "API/compute budget", "public submission approval"],
+      "safe_local_next_action": "Draft hackathon triage fields for deadline, team size, allowed AI APIs, judging criteria, and expected build hours.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/lablab-ai-hackathon-scout-20260614.md",
+      "prohibited_until_gate_clear": ["register", "join teams", "use paid APIs", "publish submissions"]
+    },
+    {
+      "candidate_id": "MSD-007",
+      "owner_lane": "web3_airdrops_grants_hackathons",
+      "supporting_lanes": ["ai_ml_competitions"],
+      "source_category": "Web3 hackathons",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["registration approval", "wallet decision", "deployment approval", "team/legal terms review", "public submission approval"],
+      "safe_local_next_action": "Prepare a web3 hackathon gate checklist that separates read-only research from wallet/deploy/public-submission actions.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/ethglobal-hackathon-gate-scout-20260614.md",
+      "prohibited_until_gate_clear": ["connect wallets", "deploy contracts", "register", "submit projects", "make transactions"]
+    },
+    {
+      "candidate_id": "MSD-008",
+      "owner_lane": "digital_products_templates_plugins",
+      "supporting_lanes": [],
+      "source_category": "Gumroad digital products",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["seller account decision", "payment/tax review", "IP review", "listing approval", "public promotion approval"],
+      "safe_local_next_action": "Map the existing Agent Skill Starter Kit proof packet to a Gumroad-style listing-readiness checklist without opening Gumroad.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/gumroad-product-route-packet-20260614.md",
+      "prohibited_until_gate_clear": ["create seller account", "set payout details", "publish listings", "make revenue claims"]
+    },
+    {
+      "candidate_id": "MSD-009",
+      "owner_lane": "digital_products_templates_plugins",
+      "supporting_lanes": [],
+      "source_category": "Lemon Squeezy digital products",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["seller account decision", "payment/tax review", "terms/support review", "listing approval"],
+      "safe_local_next_action": "Create a platform-neutral seller-readiness checklist from local product proof artifacts.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/lemon-squeezy-route-packet-20260614.md",
+      "prohibited_until_gate_clear": ["open platform", "create seller account", "configure payments", "publish product"]
+    },
+    {
+      "candidate_id": "MSD-010",
+      "owner_lane": "digital_products_templates_plugins",
+      "supporting_lanes": [],
+      "source_category": "Prompt marketplace",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["marketplace account decision", "payout setup review", "IP/copyright review", "listing approval"],
+      "safe_local_next_action": "Convert the product proof packet into reusable marketplace evidence fields: outcome, screenshots needed, claims, refund/support risk.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/promptbase-skill-marketplace-packet-20260614.md",
+      "prohibited_until_gate_clear": ["open marketplace", "create account", "upload prompts/products", "publish claims"]
+    },
+    {
+      "candidate_id": "MSD-011",
+      "owner_lane": "digital_products_templates_plugins",
+      "supporting_lanes": [],
+      "source_category": "Notion templates",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["creator account decision", "marketplace terms review", "payment/tax review where applicable", "listing approval"],
+      "safe_local_next_action": "Draft a template-product readiness checklist using only local proof package structure.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/notion-template-route-packet-20260614.md",
+      "prohibited_until_gate_clear": ["open marketplace", "create creator account", "publish templates", "configure payments"]
+    },
+    {
+      "candidate_id": "MSD-012",
+      "owner_lane": "digital_products_templates_plugins",
+      "supporting_lanes": ["productized_services_marketplaces"],
+      "source_category": "Shopify app/theme revenue route",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["partner account decision", "payment/tax review", "app-review requirements", "support obligation review", "public listing approval"],
+      "safe_local_next_action": "Prepare an app/theme route decision template: build complexity, review burden, support burden, expected time to first sale.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/shopify-app-theme-route-packet-20260614.md",
+      "prohibited_until_gate_clear": ["join partner program", "submit apps", "configure revenue share", "publish listings"]
+    },
+    {
+      "candidate_id": "MSD-013",
+      "owner_lane": "productized_services_marketplaces",
+      "supporting_lanes": ["lead_generation_and_sales"],
+      "source_category": "Productized service marketplaces",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["marketplace account decision", "KYC/tax/payment review", "proposal/outreach policy", "public profile/listing approval"],
+      "safe_local_next_action": "Create fictional offer packets and pricing hypotheses without using real leads or marketplace accounts.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/service-marketplace-offer-packets-20260614.md",
+      "prohibited_until_gate_clear": ["create accounts", "send proposals", "contact leads", "publish gigs", "claim credentials"]
+    },
+    {
+      "candidate_id": "MSD-014",
+      "owner_lane": "qa_usability_testing_gigs",
+      "supporting_lanes": [],
+      "source_category": "QA/usability paid gigs",
+      "first_required_gate": "Human-only decision before any account, test, or application action.",
+      "later_gates": ["browser read-only approval", "account decision", "KYC/tax/payment review", "privacy/device review"],
+      "safe_local_next_action": "Write a human-only eligibility and risk packet; agents may not perform tests or submit user feedback.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/qa-usability-human-gig-eligibility-20260614.md",
+      "prohibited_until_gate_clear": ["apply", "take tests", "represent human experience", "submit feedback", "configure payments"]
+    },
+    {
+      "candidate_id": "MSD-015",
+      "owner_lane": "ai_training_eval_gigs",
+      "supporting_lanes": [],
+      "source_category": "AI training/evaluation gigs",
+      "first_required_gate": "Human-only decision before any account, test, or application action.",
+      "later_gates": ["browser read-only approval", "account decision", "KYC/tax/payment review", "privacy and no-automation review"],
+      "safe_local_next_action": "Write a human-only risk packet emphasizing no automation, no answer submission, and no identity/account action by agents.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/ai-training-human-only-risk-packet-20260614.md",
+      "prohibited_until_gate_clear": ["apply", "take assessments", "submit answers", "automate work", "configure payouts"]
+    },
+    {
+      "candidate_id": "MSD-016",
+      "owner_lane": "affiliate_partner_programs",
+      "supporting_lanes": ["content_and_social_growth"],
+      "source_category": "Affiliate partner programs",
+      "first_required_gate": "Approve req-wave4-money-source-discovery-browser-readonly-20260614 for public-read scope.",
+      "later_gates": ["program application decision", "disclosure/compliance review", "public content/link placement approval", "outreach policy", "payout setup review"],
+      "safe_local_next_action": "Create a local affiliate-program scout table schema with disclosure and payout-risk fields; do not apply or publish links.",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/affiliate-program-scout-table-20260614.md",
+      "prohibited_until_gate_clear": ["apply to programs", "publish affiliate links", "contact partners", "configure payouts", "make public claims"]
+    }
+  ],
+  "next_safe_local_task": "Package the highest-leverage local proof template among MSD-003 through MSD-016; browser/current-source verification remains blocked until service approval."
+}

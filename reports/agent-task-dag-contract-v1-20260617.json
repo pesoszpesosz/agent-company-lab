@@ -1,0 +1,512 @@
+{
+  "dag_id": "dag-agent-company-scaleout-v1-20260617",
+  "edges": [
+    {
+      "from": "node-ceo-intake",
+      "reason": "Requirements define what sources matter",
+      "to": "node-source-radar"
+    },
+    {
+      "from": "node-source-radar",
+      "reason": "Fresh orchestration signals inform DAG structure",
+      "to": "node-dag-contract"
+    },
+    {
+      "from": "node-dag-contract",
+      "reason": "Lane refresh becomes a typed DAG node",
+      "to": "node-money-lane-refresh"
+    },
+    {
+      "from": "node-dag-contract",
+      "reason": "Paid-code proof follows dispatch contract",
+      "to": "node-paid-code-proof"
+    },
+    {
+      "from": "node-dag-contract",
+      "reason": "Security proof follows dispatch contract",
+      "to": "node-security-proof"
+    },
+    {
+      "from": "node-dag-contract",
+      "reason": "Product proof follows dispatch contract",
+      "to": "node-digital-product-proof"
+    },
+    {
+      "from": "node-money-lane-refresh",
+      "reason": "Blocked source refresh needs exact browser scope",
+      "to": "node-browser-service-request"
+    },
+    {
+      "from": "node-paid-code-proof",
+      "reason": "Live issue verification needs browser/GitHub read-only gate",
+      "to": "node-browser-service-request"
+    },
+    {
+      "from": "node-security-proof",
+      "reason": "Rendered program rules may need browser read-only gate",
+      "to": "node-browser-service-request"
+    },
+    {
+      "from": "node-browser-service-request",
+      "reason": "Worker pools are checked only after exact request scope exists",
+      "to": "node-worker-pool-preflight"
+    },
+    {
+      "from": "node-digital-product-proof",
+      "reason": "Local proof can be synthesized immediately",
+      "to": "node-ceo-synthesis"
+    },
+    {
+      "from": "node-worker-pool-preflight",
+      "reason": "Gated work reports readiness or hold reason",
+      "to": "node-ceo-synthesis"
+    }
+  ],
+  "evidence_requirements": [
+    {
+      "artifact_kind": "json_or_markdown",
+      "evidence_id": "evidence-node-status",
+      "minimum_fields": [
+        "node_id",
+        "lane_id",
+        "owner_role",
+        "status",
+        "gate",
+        "next_action"
+      ],
+      "required_for": "every_node"
+    },
+    {
+      "artifact_kind": "decision_packet",
+      "evidence_id": "evidence-gate-decision",
+      "minimum_fields": [
+        "requested_action",
+        "allowed_actions",
+        "prohibited_actions",
+        "approval_required_by",
+        "do_not_execute_clause"
+      ],
+      "required_for": "blocked_by_gate_node"
+    },
+    {
+      "artifact_kind": "proof_packet",
+      "evidence_id": "evidence-proof-output",
+      "minimum_fields": [
+        "source",
+        "method",
+        "result",
+        "confidence",
+        "next_action"
+      ],
+      "required_for": "local_proof_node"
+    }
+  ],
+  "gates": [
+    {
+      "approval_required_by": [
+        "human_user",
+        "chief_risk_officer"
+      ],
+      "blocks_nodes": [
+        "node-money-lane-refresh",
+        "node-paid-code-proof",
+        "node-security-proof",
+        "node-browser-service-request"
+      ],
+      "gate_id": "gate-browser-readonly",
+      "gate_type": "browser_read_only_session",
+      "reason": "Live browser/GitHub/marketplace verification may touch session state or platform terms."
+    },
+    {
+      "approval_required_by": [
+        "human_user",
+        "chief_risk_officer"
+      ],
+      "blocks_nodes": [
+        "node-security-proof"
+      ],
+      "gate_id": "gate-security-submission",
+      "gate_type": "security_report_submission",
+      "reason": "Private vulnerability reports and security testing require scope and submission approval."
+    },
+    {
+      "approval_required_by": [
+        "human_user",
+        "reputation_review_worker"
+      ],
+      "blocks_nodes": [
+        "node-paid-code-proof",
+        "node-digital-product-proof"
+      ],
+      "gate_id": "gate-public-action",
+      "gate_type": "public_action_execution",
+      "reason": "Claims, PR comments, marketplace listings, posts, or submissions create public commitments."
+    }
+  ],
+  "generated_utc": "2026-06-17T18:37:28Z",
+  "nodes": [
+    {
+      "agent_role": "ceo",
+      "allowed_actions": [
+        "read local reports",
+        "extract requirements",
+        "write local artifact"
+      ],
+      "inputs": [
+        "active goal text",
+        "E:\\agent-company-lab\\README.md",
+        "latest CEO review"
+      ],
+      "lane_id": "platform_engineering",
+      "node_id": "node-ceo-intake",
+      "outputs": [
+        "requirements map",
+        "lane dispatch criteria"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "local_only",
+      "status": "ready_local_only",
+      "success_criteria": [
+        "Explicit lanes, worker types, gates, and evidence requirements are listed"
+      ],
+      "task_type": "synthesis",
+      "title": "Normalize the user objective into company requirements"
+    },
+    {
+      "agent_role": "infrastructure_scout",
+      "allowed_actions": [
+        "read public docs",
+        "read public GitHub pages",
+        "write local report"
+      ],
+      "inputs": [
+        "Wave 11 radar",
+        "Wave 12 execution-governance radar"
+      ],
+      "lane_id": "platform_engineering",
+      "node_id": "node-source-radar",
+      "outputs": [
+        "ranked infrastructure source set",
+        "recommended local builds"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "public_read_only",
+      "status": "ready_local_only",
+      "success_criteria": [
+        "Sources are linked and risk gates are recorded"
+      ],
+      "task_type": "research",
+      "title": "Refresh open-source agent infrastructure radar"
+    },
+    {
+      "agent_role": "control_plane_builder",
+      "allowed_actions": [
+        "write schema",
+        "write sample DAG",
+        "validate acyclicity"
+      ],
+      "inputs": [
+        "execution governance radar",
+        "service-worker chain reports"
+      ],
+      "lane_id": "platform_engineering",
+      "node_id": "node-dag-contract",
+      "outputs": [
+        "agent_task_dag_contract_v1 schema",
+        "validated sample DAG"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "local_only",
+      "status": "ready_local_only",
+      "success_criteria": [
+        "Graph is acyclic and every node has lane, role, outputs, criteria, and gate"
+      ],
+      "task_type": "implementation_contract",
+      "title": "Create report-only task-DAG dispatch contract"
+    },
+    {
+      "agent_role": "source_mapper",
+      "allowed_actions": [
+        "prepare read-only source list",
+        "write local source matrix"
+      ],
+      "inputs": [
+        "money-path coverage audit",
+        "profit-edge import"
+      ],
+      "lane_id": "money_source_discovery",
+      "node_id": "node-money-lane-refresh",
+      "outputs": [
+        "source family matrix",
+        "refresh request packet"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "browser_read_only_or_current_source_gate",
+      "status": "blocked_by_gate",
+      "success_criteria": [
+        "Every source family has venue, expected payout path, account gate, and first proof action"
+      ],
+      "task_type": "research",
+      "title": "Map currently monetizable source families"
+    },
+    {
+      "agent_role": "repo_triager",
+      "allowed_actions": [
+        "read local queue",
+        "check duplicate status",
+        "write local decision packet"
+      ],
+      "inputs": [
+        "paid-code worksheet",
+        "fresh bounty queue"
+      ],
+      "lane_id": "paid_code_bounties",
+      "node_id": "node-paid-code-proof",
+      "outputs": [
+        "candidate proof packet",
+        "claim/PR gate decision"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "public_read_only_or_github_public_action_gate",
+      "status": "blocked_by_gate",
+      "success_criteria": [
+        "Candidate is open, payout route is explicit, duplicate risk is classified"
+      ],
+      "task_type": "local_proof",
+      "title": "Triage one clean paid-code candidate into a proof packet"
+    },
+    {
+      "agent_role": "program_rules_reader",
+      "allowed_actions": [
+        "read public code",
+        "write local patch/repro draft",
+        "write rules review packet"
+      ],
+      "inputs": [
+        "security evidence queue",
+        "program scope notes"
+      ],
+      "lane_id": "security_bounty_private_reports",
+      "node_id": "node-security-proof",
+      "outputs": [
+        "rules-safe proof packet",
+        "submission decision packet"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "security_testing_and_report_submission_gate",
+      "status": "blocked_by_gate",
+      "success_criteria": [
+        "Scope, impact, reproduction, and submission gate are explicit"
+      ],
+      "task_type": "local_proof",
+      "title": "Promote one security hypothesis to rules-safe proof status"
+    },
+    {
+      "agent_role": "market_gap_scout",
+      "allowed_actions": [
+        "read local package files",
+        "write checklist",
+        "write private review packet"
+      ],
+      "inputs": [
+        "Agent Skill Starter Kit package",
+        "marketplace readiness matrix"
+      ],
+      "lane_id": "digital_products_templates_plugins",
+      "node_id": "node-digital-product-proof",
+      "outputs": [
+        "private review packet",
+        "post-approval simulation plan"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "local_only_until_marketplace_gate",
+      "status": "ready_local_only",
+      "success_criteria": [
+        "Package assets, copy, risks, and marketplace gates are complete"
+      ],
+      "task_type": "local_proof",
+      "title": "Prepare digital product package for private review"
+    },
+    {
+      "agent_role": "browser_action_worker",
+      "allowed_actions": [
+        "write request packet",
+        "write allowed/prohibited actions",
+        "write expected evidence fields"
+      ],
+      "inputs": [
+        "source radar needs",
+        "lane proof blockers"
+      ],
+      "lane_id": "platform_engineering",
+      "node_id": "node-browser-service-request",
+      "outputs": [
+        "service-worker request packet",
+        "exact-scope template"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "human_cro_approval_gate_required",
+      "status": "blocked_by_gate",
+      "success_criteria": [
+        "Request is ready for human/CRO decision but grants no approval"
+      ],
+      "task_type": "service_request",
+      "title": "Prepare exact-scope browser read-only worker request"
+    },
+    {
+      "agent_role": "control_plane_builder",
+      "allowed_actions": [
+        "read pool registry",
+        "read assignment plan",
+        "write preflight result"
+      ],
+      "inputs": [
+        "service-worker pool registry",
+        "assignment plan",
+        "gate map"
+      ],
+      "lane_id": "platform_engineering",
+      "node_id": "node-worker-pool-preflight",
+      "outputs": [
+        "assignment preflight result"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "local_only",
+      "status": "ready_local_only",
+      "success_criteria": [
+        "No worker is startable unless approval, scope, pool registration, assignment, and readiness all pass"
+      ],
+      "task_type": "review",
+      "title": "Verify worker pool and assignment preconditions"
+    },
+    {
+      "agent_role": "ceo",
+      "allowed_actions": [
+        "read evidence packets",
+        "rank next work",
+        "write CEO dispatch board"
+      ],
+      "inputs": [
+        "lane proof packets",
+        "service gate map",
+        "trace report"
+      ],
+      "lane_id": "platform_engineering",
+      "node_id": "node-ceo-synthesis",
+      "outputs": [
+        "CEO dispatch board",
+        "next DAG revision"
+      ],
+      "prohibited_actions": [
+        "register_accounts",
+        "accept_terms_or_cla",
+        "create_or_control_wallet",
+        "submit_public_post_or_comment",
+        "submit_bounty_claim_or_security_report",
+        "place_real_money_trade",
+        "share_payment_details",
+        "start_external_runtime_or_browser_worker"
+      ],
+      "risk_gate": "local_only",
+      "status": "ready_local_only",
+      "success_criteria": [
+        "Each promoted action has evidence, owner, gate, and expected output"
+      ],
+      "task_type": "synthesis",
+      "title": "Synthesize lane outputs into next dispatch batch"
+    }
+  ],
+  "objective": "Create a report-only dispatch DAG for scaling the agent company across money lanes and gated workers.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "runtime_boundary": {
+    "approves_actions": false,
+    "calls_apis": false,
+    "external_side_effects": false,
+    "report_only": true,
+    "starts_workers": false,
+    "updates_service_requests": false
+  },
+  "schema_version": "agent_company.agent_task_dag_contract.v1",
+  "source_goal": "Build an expandable company-style AI-agent infrastructure that studies all online money paths, dispatches agents by lane, manages workers for gated needs such as browser/account/wallet/legal/payment tasks, keeps CEO-level oversight, and records findings for later use."
+}

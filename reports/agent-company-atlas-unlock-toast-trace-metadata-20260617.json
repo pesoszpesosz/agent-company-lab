@@ -1,0 +1,89 @@
+{
+  "traceId": "trace-agent-company-atlas-unlock-toast-v1-20260617",
+  "taskId": "task-agent-company-atlas-unlock-toast-v1-20260617",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "generatedAt": "2026-06-17T15:20:36.2488697Z",
+  "upgrade": {
+    "name": "Atlas snapshot unlock toast",
+    "summary": "Added a bottom-corner achievement notification that announces the newest completed outcome when a refreshed snapshot contains an unseen unlock.",
+    "storageKey": "agent-company-atlas.last-unlock.v1",
+    "verificationQuery": "?unlockToast=force"
+  },
+  "research": [
+    {
+      "source": "LogRocket toast notification UX guidance",
+      "url": "https://blog.logrocket.com/ux-design/toast-notifications/",
+      "takeaway": "Toasts work best as brief, immediate, non-blocking feedback for completed events."
+    },
+    {
+      "source": "Dribbble achievement unlocked UI references",
+      "url": "https://dribbble.com/search/achievement-unlocked",
+      "takeaway": "Game-style unlocks commonly use compact dark cards, glow, rarity color, and motion."
+    },
+    {
+      "source": "Grid Sage Games achievements UI design",
+      "url": "https://www.gridsagegames.com/blog/2018/05/achievements-ui-design-implementation/",
+      "takeaway": "A game should provide its own visible achievement interface, not only external platform notifications."
+    },
+    {
+      "source": "HPE Design System toast notifications",
+      "url": "https://design-system.hpe.design/templates/toast-notifications",
+      "takeaway": "Notifications should remain non-intrusive and readable during a short display window."
+    },
+    {
+      "source": "Nielsen Norman Group notification indicators",
+      "url": "https://www.nngroup.com/articles/indicators-validations-notifications/",
+      "takeaway": "Passive, non-urgent notifications fit a small nonmodal popover pattern."
+    }
+  ],
+  "implementation": [
+    "Inserted a fixed aria-live unlock toast container in web/index.html.",
+    "Added latest outcome comparison against browser-local last-unlock memory in web/app.js.",
+    "Reused Trophy Room medal sprites, lane art, XP, and tier logic for the toast.",
+    "Added dismiss and Open Trail actions without introducing external services or build tooling.",
+    "Added responsive toast styling, animation, and cache busting in web/styles.css and web/index.html.",
+    "Documented the storage key and standalone behavior in web/README.md."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md"
+  ],
+  "staticValidation": {
+    "nodeCheck": "node --check web\\app.js",
+    "snapshotGeneratorCompile": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+    "snapshotJson": "python -m json.tool web\\data\\snapshot.json",
+    "asciiScan": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md"
+  },
+  "browserValidation": {
+    "status": "passed",
+    "target": "http://localhost:5177/?unlockToast=force&verify=unlock-toast#lane=platform_engineering&view=overview",
+    "latestOutcomeTitle": "Atlas Unlock Toast Visual Upgrade",
+    "mobileViewport": {
+      "width": 364,
+      "height": 912,
+      "toastVisible": true,
+      "withinViewport": true,
+      "horizontalOverflow": false,
+      "spriteBackground": "web/assets/trophies/trophy-medal-sheet-20260617.png",
+      "openTrailResult": "#lane=platform_engineering&view=trail",
+      "dismissResult": "hidden"
+    },
+    "desktopViewport": {
+      "width": 1280,
+      "height": 800,
+      "toastVisible": true,
+      "withinViewport": true,
+      "horizontalOverflow": false,
+      "rect": {
+        "x": 817,
+        "y": 605,
+        "width": 421,
+        "height": 185
+      }
+    },
+    "consoleErrors": []
+  }
+}

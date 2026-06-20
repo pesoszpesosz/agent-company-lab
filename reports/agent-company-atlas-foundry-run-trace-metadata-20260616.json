@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "foundry-run-minigame-v1",
+  "lane": "digital_products_templates_plugins",
+  "minigame": {
+    "id": "foundry-run",
+    "title": "Foundry Run",
+    "renderer": "renderFoundryRunGame",
+    "texture": "web/assets/games/foundry-run-bg-20260616.png",
+    "stages": [
+      "Demand Proof",
+      "Build Brief",
+      "Asset Pack",
+      "Quality Pass",
+      "Listing Gate"
+    ]
+  },
+  "validation": {
+    "nodeCheck": "passed",
+    "jsonValidation": "passed",
+    "snapshotRegenerated": true,
+    "desktopFoundry": {
+      "boards": 1,
+      "stages": 5,
+      "textureLoaded": true,
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "mobileFoundry": {
+      "viewport": "390x840",
+      "boards": 1,
+      "stages": 5,
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "dispatchRegression": {
+      "paid_code_bounties": "claim-scout",
+      "platform_engineering": "generic checkpoint fallback",
+      "consoleErrors": 0
+    }
+  },
+  "prompt": {
+    "mode": "built-in image_gen",
+    "summary": "Generated a premium digital product foundry texture with glass template cards, plugin blocks, circuit etching, and a clean central workbench area."
+  }
+}

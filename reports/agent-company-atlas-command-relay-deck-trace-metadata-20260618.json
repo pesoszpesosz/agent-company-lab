@@ -1,0 +1,87 @@
+{
+  "trace_id": "trace-agent-company-atlas-command-relay-deck-v1-20260618",
+  "task_id": "task-agent-company-atlas-command-relay-deck-v1-20260618",
+  "event_id": "trace-atlas_command_relay_deck_added-20260618",
+  "created_at": "2026-06-18T09:08:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "command_relay_deck",
+  "summary": "Added a generated-art Command Relay Deck between the Dispatch Console and Company Quest Board so bot communication, staged local drafts, blocker gates, thread owners, operator history, and future command sockets are centralized in one expandable relay board.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0cba0d94e717a6ae016a33b3dc62488191a43b0c4d7037ec31.png",
+    "workspace_path": "web/assets/system/command-relay-deck-20260618.png",
+    "bytes": 2571014,
+    "sha256": "5D5B7DF80B58B39AC3D7EF960EA8DEE8213BCB92ADD8E3ED09DC564C4E7FDD99",
+    "prompt_summary": "Premium dark sci-fi command relay deck with transmission lanes, local queue sockets, staged message capsules, bot avatar stations, blocker-warning gates, and teal/amber/green/violet glow accents; no text, logos, watermark, or faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/command-relay-deck-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_command_relay_deck.py",
+      "reports/agent-company-atlas-command-relay-deck-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a global Command Relay Deck between the Dispatch Console and Company Quest Board.",
+      "Use generated command-relay-deck-20260618.png as the reusable relay backdrop.",
+      "Derive relay records from existing agents, lane bindings, dispatch suggestions, staged browser-local drafts, blocker counts, thread ids, and local operator history without adding snapshot schema.",
+      "Summarize ready asks, local drafts, gated relays, bound threads, and lane coverage from existing data.",
+      "Expose Q, COM, and MATRIX actions that stage local drafts, open lane Comms, or jump to the Bot Command Matrix.",
+      "Allow every lane-bound relay card to drill into the source lane Comms view.",
+      "Render future command sockets for worker channels, approval locks, batch lanes, and operator notes so expanded companies have visible capacity.",
+      "Register the relay texture in the Visual Asset Vault system assets.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_command_relay_deck.py -q failed before implementation on missing commandRelayDeck element wiring.",
+      "green": "pytest tests\\test_agent_company_atlas_command_relay_deck.py -q passed after generated asset, renderer, styles, docs, cache token, handlers, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "command_relay_deck_contract_test": "passed",
+      "focused_frontend_contract_tests": "6 passed",
+      "asset_present_bytes": 2571014
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=command-relay-deck-green-fresh",
+      "evidence": {
+        "command_relay_deck_present": true,
+        "generated_art_loaded": true,
+        "stat_count": 5,
+        "card_count": 11,
+        "future_slot_count": 3,
+        "lane_linked_cards": 11,
+        "action_count": 3,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "Q -> local staged draft count increased to 2 and staged relay cards increased to 2",
+          "COM -> selected lane Comms tab with Comms Command Room visible",
+          "MATRIX -> Bot Command Matrix visible with 11 bot cards",
+          "Relay card -> selected lane Comms tab for digital_products_templates_plugins"
+        ],
+        "horizontal_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Command Relay Deck with five stats, eleven relay cards, three future sockets, three local actions, zero bad rects, zero button text overflow, zero panel overflow, zero page horizontal overflow, and zero console errors. The 390px mobile art load was rechecked after explicit scroll and completed at 1693x929 natural size."
+    }
+  }
+}

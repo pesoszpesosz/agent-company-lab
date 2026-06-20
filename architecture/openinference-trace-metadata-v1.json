@@ -1,0 +1,76 @@
+{
+  "version": "2026-06-14-v1",
+  "purpose": "OpenInference-shaped metadata conventions for trace_events.metadata_json in the agent-company control plane.",
+  "boundary": [
+    "This is a convention for local audit metadata, not a full OpenTelemetry exporter.",
+    "trace_events.trace_id, lane_id, task_id, agent_id, event_type, event_time, summary, and artifact_path remain the canonical DB columns.",
+    "metadata_json carries optional span/runtime/eval/review details until a dedicated observability backend is adopted."
+  ],
+  "span_kinds": [
+    "AGENT",
+    "WORKFLOW",
+    "LLM",
+    "TOOL",
+    "RETRIEVER",
+    "EVALUATOR",
+    "PROMPT",
+    "GUARDRAIL",
+    "SERVICE_REQUEST",
+    "HUMAN_REVIEW",
+    "ARTIFACT",
+    "SOURCE_REFRESH"
+  ],
+  "base_fields": {
+    "span_kind": "One of span_kinds. Required for new structured trace events.",
+    "span_id": "Optional local span id. Defaults conceptually to event_id when omitted.",
+    "parent_span_id": "Optional parent event/span id for nested operations.",
+    "runtime": "Local runtime or framework, such as local_static_text_coverage, pydantic_ai_testmodel, openai_agents_sdk, temporal_activity.",
+    "api_calls": "Boolean. false for local/static/dry-run events.",
+    "service_request_id": "Required when an event touches gated service-request work.",
+    "approval_id": "Required when an event depends on an approval row.",
+    "risk_gate": "Gate label such as wallet_action, browser_public_action, real_money_trade.",
+    "artifact_id": "Optional control-plane artifact id.",
+    "source_url": "Optional source URL for source refresh or web research events.",
+    "source_path": "Optional local source path."
+  },
+  "llm_fields": {
+    "provider": "Model provider, such as openai, anthropic, local, testmodel.",
+    "model": "Model id or local test model name.",
+    "prompt_version_id": "Prompt version id from prompt_versions.",
+    "input_tokens": "Input token count when available.",
+    "output_tokens": "Output token count when available.",
+    "cost_usd": "Observed or estimated model cost. Must be 0 for no-model evals.",
+    "temperature": "Optional generation temperature.",
+    "tool_choice": "Optional tool choice policy.",
+    "structured_output_schema": "Optional output schema id/name."
+  },
+  "tool_fields": {
+    "tool_name": "Tool or CLI command name.",
+    "tool_args_redacted": "Redacted/summary args only. Do not store secrets.",
+    "exit_code": "Process or tool exit code where applicable.",
+    "duration_ms": "Duration in milliseconds where applicable."
+  },
+  "eval_fields": {
+    "dataset_id": "Eval dataset id from eval_datasets.",
+    "eval_run_id": "Eval run id from eval_runs.",
+    "prompt_version_id": "Prompt version under eval.",
+    "score": "Numeric score when available.",
+    "cases_total": "Number of eval cases.",
+    "cases_passed": "Number of eval cases passed.",
+    "eval_status": "pass, fail, manual_static_pass, needs_model_eval, or blocked."
+  },
+  "review_fields": {
+    "review_id": "Human review id from human_reviews.",
+    "review_status": "pending, approved, rejected, needs_changes, informational.",
+    "reviewer_agent_id": "Reviewer id if local/system review; user id/name only if user explicitly provided it.",
+    "decision": "Decision summary."
+  },
+  "rules": [
+    "Never store secrets, private keys, passwords, cookies, OTPs, or payment details in metadata_json.",
+    "Use api_calls=false for dry-run, local static eval, or TestModel events.",
+    "Use realized_usd only in outcomes, not trace metadata.",
+    "For model events, include prompt_version_id and model/provider before claiming a behavioral eval.",
+    "For service actions, include service_request_id, risk_gate, and approval_id when approved.",
+    "For public/browser/wallet/legal/security/real-money actions, missing service_request_id means the event is audit evidence of a blocked action, not approval."
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "approval_granted_by_packet": false,
+  "approval_questions": [
+    {
+      "current_default": "deny_all",
+      "question": "Which one runtime candidate, if any, is approved for implementation?",
+      "question_id": "approve_runtime_candidate",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May dependencies be installed for the selected runtime?",
+      "question_id": "approve_dependency_install_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May selected runtime libraries be imported from executable code?",
+      "question_id": "approve_runtime_import_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May local servers, workers, workflows, functions, schedules, or event emitters be started?",
+      "question_id": "approve_runtime_start_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May databases, cloud services, accounts, endpoints, or service credentials be provisioned or contacted?",
+      "question_id": "approve_database_or_cloud_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May runtime code assign, start, complete, reject, or otherwise mutate service_requests rows?",
+      "question_id": "approve_service_request_mutation_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May service-worker pools be registered as executable workers rather than report-only plans?",
+      "question_id": "approve_worker_pool_registration_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May model/API execution be used, including provider, model, data scope, and cost cap?",
+      "question_id": "approve_model_api_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May traces be sent to an observability backend rather than local JSONL/SQLite artifacts?",
+      "question_id": "approve_trace_export_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May browser sessions, public actions, submissions, comments, forms, or account actions occur?",
+      "question_id": "approve_browser_or_public_action_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May wallet, payment, deposit, withdrawal, trade, payout, or real-money actions occur?",
+      "question_id": "approve_wallet_payment_real_money_scope",
+      "required_for_any_approval": true
+    },
+    {
+      "current_default": "no",
+      "question": "May security testing or private-report submission occur beyond local/public-code review?",
+      "question_id": "approve_security_testing_scope",
+      "required_for_any_approval": true
+    }
+  ],
+  "generated_utc": "2026-06-17T17:52:03Z",
+  "lane_id": "platform_engineering",
+  "next_action": "A human may fill a separate signed decision artifact. Until then, keep all runtime implementation, dependency, server/cloud, worker-pool, model/API, browser/public/account/wallet/payment/security/real-money, and service-request mutation actions parked.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "purpose": "Human/CRO approval packet v2 for any external or executable runtime implementation after local SQLite/outbox and service-worker state-machine proofs. This packet grants no approval.",
+  "required_decision_fields": [
+    {
+      "default": "",
+      "field_id": "decision_id",
+      "purpose": "Stable human decision identifier.",
+      "required": true
+    },
+    {
+      "allowed_values": [
+        "deny",
+        "approve_one_runtime_candidate"
+      ],
+      "default": "deny",
+      "field_id": "decision",
+      "purpose": "Explicit deny or limited approval.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "approver",
+      "purpose": "Human approver identity.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "signed_utc",
+      "purpose": "Human signature timestamp.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "expires_utc",
+      "purpose": "Approval expiry timestamp.",
+      "required": true
+    },
+    {
+      "default": "none",
+      "field_id": "selected_runtime_id",
+      "purpose": "Exactly one runtime candidate or none.",
+      "required": true
+    },
+    {
+      "default": [],
+      "field_id": "approved_question_ids",
+      "purpose": "Question IDs explicitly granted.",
+      "required": true
+    },
+    {
+      "default": [
+        "approve_runtime_candidate",
+        "approve_dependency_install_scope",
+        "approve_runtime_import_scope",
+        "approve_runtime_start_scope",
+        "approve_database_or_cloud_scope",
+        "approve_service_request_mutation_scope",
+        "approve_worker_pool_registration_scope",
+        "approve_model_api_scope",
+        "approve_trace_export_scope",
+        "approve_browser_or_public_action_scope",
+        "approve_wallet_payment_real_money_scope",
+        "approve_security_testing_scope"
+      ],
+      "field_id": "denied_question_ids",
+      "purpose": "Question IDs denied or still parked.",
+      "required": true
+    },
+    {
+      "default": [],
+      "field_id": "allowed_dependency_names",
+      "purpose": "Exact dependency names and versions if installs are approved.",
+      "required": true
+    },
+    {
+      "default": [],
+      "field_id": "allowed_runtime_processes",
+      "purpose": "Exact local server/worker/process commands if starts are approved.",
+      "required": true
+    },
+    {
+      "default": [],
+      "field_id": "allowed_database_or_cloud_resources",
+      "purpose": "Exact DB/cloud/account resources if any are approved.",
+      "required": true
+    },
+    {
+      "default": "none",
+      "field_id": "service_request_mutation_scope",
+      "purpose": "Exact rows and mutations allowed, otherwise none.",
+      "required": true
+    },
+    {
+      "default": "none",
+      "field_id": "provider_model_and_cost_cap",
+      "purpose": "Model/API provider, model, data scope, and cost cap.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "artifact_output_path",
+      "purpose": "Allowed local output artifact path.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "rollback_plan",
+      "purpose": "How to stop/revert approved runtime work.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "human_notes",
+      "purpose": "Optional constraints and rationale.",
+      "required": false
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "database_provisioning": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "event_sends": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "queue_enqueues": 0,
+    "real_money_actions": false,
+    "runtime_starts": 0,
+    "security_testing_actions": false,
+    "server_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_started": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0,
+    "workflow_starts": 0
+  },
+  "runtime_candidates": [
+    {
+      "decision": "promote_now_local_only",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Build local executable queue runner and idempotent outbox acknowledgement previews inside the existing CEO ledger.",
+      "rank": 1,
+      "required_gates_before_execution": [],
+      "runtime_id": "sqlite_control_plane",
+      "score": 94
+    },
+    {
+      "decision": "hold_for_human_runtime_approval_after_local_runner",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Best future fit for long-running approval workflows and human review signals once local runner semantics are proven.",
+      "rank": 2,
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "runtime_server_worker_approval",
+        "service_worker_pool_registration_approval",
+        "determinism_review",
+        "human_signal_authority_packet"
+      ],
+      "runtime_id": "temporal_python",
+      "score": 83
+    },
+    {
+      "decision": "hold_for_event_adapter_approval_after_local_outbox_ack",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Future event-driven adapter for outbox dispatch, idempotency, concurrency, throttling, and rate-limit semantics.",
+      "rank": 3,
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "network_or_cloud_boundary_review",
+        "event_endpoint_approval",
+        "trace_export_contract_approval"
+      ],
+      "runtime_id": "inngest",
+      "score": 78
+    },
+    {
+      "decision": "hold_for_database_provisioning_review",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Future database-backed workflow adapter if the company outgrows the SQLite runner and needs Postgres-backed durable steps.",
+      "rank": 4,
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "database_provisioning_review",
+        "secrets_credentials_handling_gate",
+        "state_migration_review"
+      ],
+      "runtime_id": "dbos_python",
+      "score": 76
+    },
+    {
+      "decision": "reference_only_until_model_api_gate",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Use as a typed agent contract reference with TestModel/FunctionModel only; real provider execution remains separate.",
+      "rank": 5,
+      "required_gates_before_execution": [
+        "model_api_execution_gate",
+        "provider_model_cost_scope_approval",
+        "credential_route_approval",
+        "output_artifact_scope_approval"
+      ],
+      "runtime_id": "pydantic_ai_durable_execution",
+      "score": 75
+    },
+    {
+      "decision": "watchlist_after_local_outbox_service_boundaries",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Future durable agent/service runtime once the central outbox service boundary is proven and server/runtime approval exists.",
+      "rank": 6,
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "server_runtime_review",
+        "service_invocation_approval",
+        "llm_tool_execution_gate",
+        "state_retention_review"
+      ],
+      "runtime_id": "restate",
+      "score": 70
+    },
+    {
+      "decision": "watchlist_for_source_refresh_after_local_runner",
+      "default_packet_posture": "deny_until_signed_human_decision",
+      "implementation_role": "Future source-refresh workflow adapter for local/idempotent scans only after local runner and source gates are stable.",
+      "rank": 7,
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "server_or_cloud_boundary_review_if_used",
+        "source_refresh_service_request_approval",
+        "retry_idempotency_review"
+      ],
+      "runtime_id": "prefect",
+      "score": 66
+    }
+  ],
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_version": "agent_company.runtime_implementation_human_approval_packet.v2",
+  "source_evidence": {
+    "chain_integrity": {
+      "all_checks_passed": true,
+      "checked_report_count": 130,
+      "failure_count": 0,
+      "path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+    },
+    "decision_packet": {
+      "approved_now": [
+        "local_report_only_decision_packet",
+        "local_sqlite_queue_runner_design",
+        "local_outbox_acknowledgement_preview",
+        "local_service_worker_request_state_machine_preview"
+      ],
+      "not_approved_now": [
+        "dependency_install",
+        "runtime_start",
+        "temporal_worker_or_server",
+        "inngest_client_or_server",
+        "dbos_launch_or_database_provisioning",
+        "pydantic_real_model_provider",
+        "prefect_deployment_schedule_worker_or_cloud",
+        "restate_server_or_service_invocation",
+        "browser_session",
+        "service_request_assignment_or_start",
+        "public_action",
+        "payment_wallet_or_real_money_action"
+      ],
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-comparison-decision-packet-v1-20260617.json",
+      "status": "local_decision_packet_ready_no_runtime_approval"
+    },
+    "outbox_acknowledgement_runner": {
+      "acknowledgements_checked": 3,
+      "failed_count": 0,
+      "negative_probes_checked": 3,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\sqlite-outbox-acknowledgement-runner-v1-validation-20260617.json"
+    },
+    "service_worker_state_machine_runner": {
+      "disposition_counts": {
+        "parked_awaiting_human_review": 11,
+        "terminal_noop": 3
+      },
+      "failed_count": 0,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\local-service-worker-request-state-machine-runner-v1-validation-20260617.json",
+      "policy_probe_count": 5,
+      "transition_count": 14
+    }
+  },
+  "task_id": "task-runtime-implementation-human-approval-packet-v2-20260617"
+}

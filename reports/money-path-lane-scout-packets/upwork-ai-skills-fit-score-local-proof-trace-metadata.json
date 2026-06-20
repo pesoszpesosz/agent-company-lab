@@ -1,0 +1,28 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:35:30Z",
+  "trace_id": "trace-upwork-ai-skills-fit-score-local-proof-20260618",
+  "task_id": "task-lane-scout-upwork_2026_ai_skills_demand-20260618",
+  "lane_id": "lead_generation_and_sales",
+  "event_type": "upwork_ai_skills_fit_score_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-skills-fit-score-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-skills-fit-score-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-skills-fit-score-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "browser_sessions_started": 0,
+    "upwork_account_or_login": false,
+    "profile_created_or_edited": false,
+    "proposals_sent": 0,
+    "messages_sent": 0,
+    "contracts_or_payments": 0,
+    "client_private_data_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create a no-send Upwork approval request packet for the recommended AI Integration Workflow Audit only after human review; keep account, profile, proposal, client data, credentials, payment, public action, worker/runtime, model/MCP, and external side effects blocked."
+}

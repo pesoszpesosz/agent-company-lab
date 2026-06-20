@@ -1,0 +1,111 @@
+{
+  "traceId": "trace-agent-company-atlas-path-stage-focus-lens-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-stage-focus-lens-v1-20260618",
+  "eventId": "trace-atlas_path_stage_focus_lens_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-stage-focus-lens-trace-metadata-20260618",
+  "title": "Path Stage Focus Lens",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "ownerAgentId": "recovered-profitable-edge-infra",
+  "problem": "The compact Stage Ribbon showed route levels, gates, unlocks, and future slots, but the selected level's consequence was still too easy to miss. The cockpit needed a richer game-like focus readout without adding another scroll panel.",
+  "implementation": [
+    "Added renderPathStageFocusLens to surface the focused level's type, cleaned title, and next meaning directly inside the Stage Ribbon.",
+    "Rendered the focus lens as a compact overlay with a progress beam, status tones, and no pointer-event interference with route nodes.",
+    "Added small-screen compaction so the lens stays inside the ribbon and hides long detail text on narrow viewports.",
+    "Added reduced-motion coverage for the focus beam animation.",
+    "Updated docs, cache tags, and regression coverage."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_stage_focus_lens.py"
+  ],
+  "browserEvidence": {
+    "desktop": {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "boardVisible": true,
+      "lensInsideRibbon": true,
+      "overflowX": 0,
+      "boardRect": {
+        "x": 35,
+        "y": 173,
+        "width": 1195,
+        "height": 434,
+        "bottom": 607
+      },
+      "ribbonRect": {
+        "x": 46,
+        "y": 481,
+        "width": 535,
+        "height": 66,
+        "bottom": 547
+      },
+      "lensRect": {
+        "x": 337,
+        "y": 494,
+        "width": 235,
+        "height": 45,
+        "bottom": 539
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boardStartsInViewport": true,
+      "lensInsideRibbon": true,
+      "lensDetailDisplay": "none",
+      "overflowX": 0,
+      "boardRect": {
+        "x": 27,
+        "y": 207,
+        "width": 306,
+        "height": 562,
+        "bottom": 769
+      },
+      "ribbonRect": {
+        "x": 38,
+        "y": 537,
+        "width": 284,
+        "height": 66,
+        "bottom": 603
+      },
+      "lensRect": {
+        "x": 139,
+        "y": 556,
+        "width": 175,
+        "height": 39,
+        "bottom": 595
+      }
+    }
+  },
+  "verification": [
+    {
+      "type": "red-test",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_focus_lens.py -q",
+      "result": "failed before implementation because renderPathStageFocusLens did not exist"
+    },
+    {
+      "type": "focused-tests",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_focus_lens.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_motion_director.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_snapshot.py -q",
+      "result": "4 passed"
+    },
+    {
+      "type": "syntax",
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "passed"
+    },
+    {
+      "type": "full-atlas-suite",
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "54 passed, 55 deselected"
+    }
+  ],
+  "nextAction": "Continue improving the stage with richer lane-specific art and animations that explain progress, blockers, and unlocks without adding scroll."
+}

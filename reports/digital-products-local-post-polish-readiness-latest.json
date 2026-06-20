@@ -1,0 +1,109 @@
+{
+  "approval_request_count": 0,
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T22:30:19Z",
+  "lane_evidence_rows_after": 93,
+  "lane_evidence_rows_before": 92,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "post_polish_ready_for_local_approval_packet_drafts",
+  "next_action": "Draft separate local approval-request packets for read-only browser validation and legal/payment review; do not submit, browse, accept terms, create accounts, or configure payouts.",
+  "passed_check_count": 7,
+  "readiness_check_count": 7,
+  "readiness_checks": [
+    {
+      "check_id": "six-polished-files",
+      "evidence": "Copy polish includes six local file drafts.",
+      "passed": true
+    },
+    {
+      "check_id": "copy-changes-recorded",
+      "evidence": "Nine copy changes are recorded across the package.",
+      "passed": true
+    },
+    {
+      "check_id": "buyer-and-job-clear",
+      "evidence": "README and filled example name a solo AI-builder buyer and local review job.",
+      "passed": true
+    },
+    {
+      "check_id": "promise-safe",
+      "evidence": "Copy avoids revenue, payout, buyer-count, sales, and live-demand claims.",
+      "passed": true
+    },
+    {
+      "check_id": "gate-language-intact",
+      "evidence": "Marketplace, account, legal, tax, KYC, payout, publishing, wallet, payment, API, public-action, and external-validation gates remain visible.",
+      "passed": true
+    },
+    {
+      "check_id": "approval-requests-zero",
+      "evidence": "Copy-polish proof created zero approval requests.",
+      "passed": true
+    },
+    {
+      "check_id": "next-action-local",
+      "evidence": "Next step is to draft future approval-request packets locally before any gate is exercised.",
+      "passed": true
+    }
+  ],
+  "readiness_evidence_id": "digital-products-local-post-polish-readiness-20260616",
+  "readiness_lane_id": "digital_products_templates_plugins",
+  "readiness_task_id": "task-digital-products-local-post-polish-readiness-20260616",
+  "recommended_next_option_id": "draft-future-approval-packets",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_post_polish_readiness.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "selected_option_id": "continue-local",
+  "source_polish_evidence_id": "digital-products-local-copy-polish-20260616",
+  "source_polish_task_id": "task-digital-products-local-copy-polish-20260616",
+  "source_polish_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-copy-polish-validation-latest.json",
+  "summary": "Completed a local post-polish readiness check for the AI builder launch checklist pack. The package is locally ready for separate future approval-request packet drafts, while all browser, marketplace, legal, payment, account, wallet, API, and public actions remain gated.",
+  "task_rows_inserted_by_readiness": 1,
+  "tasks_table_rows_after": 183,
+  "tasks_table_rows_before": 182
+}

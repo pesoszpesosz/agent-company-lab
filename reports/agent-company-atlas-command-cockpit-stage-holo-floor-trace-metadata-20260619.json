@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-stage-holo-floor-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-stage-holo-floor-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-stage-holo-floor-v1-20260619",
+  "title": "Command Cockpit Stage Holo Floor",
+  "createdAt": "2026-06-19T13:54:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Turned the remaining dark Command Cockpit Overview stage floor into an animated holo-floor fed by lane progress, quest, proof, gate, and trail state.",
+  "proof": [
+    "Added activeLaneStageHoloFloor so the mounted stage projects lane-state pads without hardcoding one lane.",
+    "Scoped the floor to Command Cockpit Overview and kept the base floor hidden in other mounted-stage views.",
+    "Added perspective grid, sweep, runner, and pad wake animations with a shallower mobile treatment to avoid extra scroll."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-stage-holo-floor-trace-metadata-20260619.json"
+  ]
+}

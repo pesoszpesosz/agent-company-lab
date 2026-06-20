@@ -1,0 +1,15 @@
+{
+  "span_kind": "control_plane.registry_update",
+  "runtime": "codex_local_cli",
+  "api_calls": false,
+  "browser_actions": "read_only_web_research",
+  "services_seeded": 13,
+  "gated_services": 3,
+  "sources": [
+    "https://docs.temporal.io/ai-cookbook/human-in-the-loop-python",
+    "https://docs.langchain.com/oss/python/langgraph/interrupts",
+    "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
+    "https://openai.github.io/openai-agents-python/guardrails/"
+  ],
+  "safety_summary": "Catalog entries define service-worker preparation and hard stops; they do not approve external side effects."
+}

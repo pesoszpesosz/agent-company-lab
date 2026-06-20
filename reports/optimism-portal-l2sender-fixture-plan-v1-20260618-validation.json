@@ -1,0 +1,21 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "all_rows_have_assertions": true,
+    "all_rows_have_upstream_anchors": true,
+    "expected_fixture_row_count": 6,
+    "fixture_row_count": 6,
+    "no_external_side_effect": true,
+    "no_patch_applied": true,
+    "no_tests_run_against_optimism_repo": true,
+    "report_only": true,
+    "source_hashes_verified_current": true,
+    "source_snapshot_count": 2,
+    "submission_ready_count": 0
+  },
+  "failure_count": 0,
+  "generated_utc": "2026-06-17T22:12:32Z",
+  "lane_id": "security_bounty_private_reports",
+  "schema_version": "agent_company.optimism_portal_l2sender_fixture_plan_validation.v1",
+  "task_id": "task-optimism-portal-l2sender-fixture-plan-v1-20260618"
+}

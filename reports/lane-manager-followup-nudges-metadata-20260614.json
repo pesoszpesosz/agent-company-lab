@@ -1,0 +1,9 @@
+{
+  "api_calls": false,
+  "nudged_lanes": [
+    "prediction_market_research",
+    "web3_airdrops_grants_hackathons"
+  ],
+  "runtime": "codex_app.send_message_to_thread",
+  "span_kind": "WORKFLOW"
+}

@@ -1,0 +1,26 @@
+{
+  "generated_utc": "2026-06-14T13:08:14Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-wave3-research-20260614",
+  "agent_id": "recovered-profitable-edge-infra",
+  "artifact_ids": [
+    "artifact-agent-company-wave3-research-report-20260614",
+    "artifact-curated-infra-repos-wave3-json-20260614",
+    "artifact-curated-infra-repos-wave3-csv-20260614"
+  ],
+  "source_categories": [
+    "OpenAI Agents SDK",
+    "durable workflow engines",
+    "human approval patterns",
+    "browser-agent frameworks",
+    "parallel coding-agent workspaces",
+    "prompt/eval tooling",
+    "agent protocols"
+  ],
+  "repository_count": 24,
+  "recommended_next_build": "service_request_packet_factory_after_design_approval",
+  "public_actions": false,
+  "browser_actions": false,
+  "real_money_actions": false,
+  "api_calls": false
+}

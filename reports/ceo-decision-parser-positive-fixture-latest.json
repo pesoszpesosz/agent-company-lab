@@ -1,0 +1,70 @@
+{
+  "accepted_decision_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_dry_run_preview_count": 1,
+  "expected_preview_state": "would_create_bounded_service_request_update",
+  "fixture_evidence_id": "ceo-decision-parser-positive-fixture-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-ceo-decision-parser-positive-fixture-20260616",
+  "generated_utc": "2026-06-15T23:29:18Z",
+  "lane_evidence_rows_after": 105,
+  "lane_evidence_rows_before": 104,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_positive_fixture_ready_parser_not_executed",
+  "next_action": "Use this fixture with the negative fixtures when implementing the report-only parser; do not apply any preview until explicit mutation approval exists.",
+  "parser_execution_count": 0,
+  "positive_fixture": {
+    "decision_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+    "expected_parser_result": {
+      "accepted_for_dry_run": true,
+      "expected_preview_state": "would_create_bounded_service_request_update",
+      "expected_real_mutation": false,
+      "expected_service_requests_updated": 0,
+      "expected_worker_starts": 0
+    },
+    "fixture_id": "valid-digital-products-readonly-browser-preview",
+    "selected_option_id": "approve_bounded_readonly_scope",
+    "submitted_intake": {
+      "allowed_action_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+      "approved_blocker_ids": [
+        "req-wave4-digital-products-browser-readonly-20260614",
+        "hold-live-marketplace-demand"
+      ],
+      "approver_identity": "user",
+      "decision_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+      "expiration_or_review_time": "2026-06-16T23:59:59Z",
+      "forbidden_actions_acknowledged": true,
+      "operator_confirmation_text": "I approve only this bounded read-only browser validation scope for the listed blocker ids until 2026-06-16T23:59:59Z.",
+      "selected_option_id": "approve_bounded_readonly_scope"
+    }
+  },
+  "positive_fixture_count": 1,
+  "recommended_default": "report_only_dry_run_before_any_mutation",
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_positive_fixture.v1",
+  "source_contract_evidence_id": "ceo-decision-parser-dry-run-contract-20260616",
+  "source_contract_section_count": 6,
+  "source_contract_task_id": "task-ceo-decision-parser-dry-run-contract-20260616",
+  "source_contract_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-dry-run-contract-validation-latest.json",
+  "source_mutation_preview_state_count": 4,
+  "summary": "Created one local positive dry-run fixture for a future CEO decision parser. The fixture should produce a report-only bounded service-request update preview and no mutation.",
+  "task_rows_inserted_by_fixture": 1,
+  "tasks_table_rows_after": 197,
+  "tasks_table_rows_before": 196
+}

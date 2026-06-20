@@ -1,0 +1,968 @@
+{
+  "accepted_count": 1,
+  "all_checks_passed": true,
+  "expected_accepted_count": 1,
+  "expected_rejected_count": 23,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 24,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:28Z",
+  "identity_report_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-20260617.json",
+  "identity_validation_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
+  "live_egress_allowed": false,
+  "next_action": "Promote identity and egress validators into activation preflight; build MCP registry validator next before any tool access.",
+  "packet_path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-packet-v1-20260617.json",
+  "packet_sha256": "8d8d0f70de535deaaa7e1af702400c36752f043e9d117233064d99c314edcd30",
+  "positive_fixture": {
+    "expected_result": "pass_report_only_preflight_event",
+    "fixture_id": "local_runtime_adapter_dry_run_evidence"
+  },
+  "rejected_count": 23,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_report_only_preflight_event",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\positive_report_only_preflight_event.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": true,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-positive-local-report-only-preflight",
+        "errors": [],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": false,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "e1be274ac61d03a1eb2f79ea50c18e2e7f21d39ba5f9a805cf45e5e6bd367f4d"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_identity_envelope",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_missing_identity_envelope.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-missing_identity_envelope",
+        "errors": [
+          "identity_envelope_artifact_path_missing"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "9274bc5d35d70c9cb0a11c301a4599cb68697dda04c158d958b3080244acd469"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_operator_decision",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_missing_operator_decision.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-missing_operator_decision",
+        "errors": [
+          "operator_decision_artifact_path_missing"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "8e001dd2d2f9dbc8b1d4fcc67ad8c3c0a34d9e63769b621bd570760808e8a39e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_expired_egress_event",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_expired_egress_event.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-expired_egress_event",
+        "errors": [
+          "expires_not_after_created",
+          "egress_event_expired"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ddb9c0b18a69eed67b8581e9dd6f743e32a5ad7d9f6a3379d4a6b44484128b07"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_unknown_egress_type",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_unknown_egress_type.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-unknown_egress_type",
+        "errors": [
+          "unknown_egress_type",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "dcce3495187e8aea070cf9c927348de7a67313153040a6301c70e9cda55c50c5"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_implicit_credentials",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_implicit_credentials.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-implicit_credentials",
+        "errors": [
+          "credential_scope_must_be_none"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "dae34d795c64af395d42492f4479e611b6d40426f3fa37fc6abb10f9c7b96a20"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_implicit_budget",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_implicit_budget.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-implicit_budget",
+        "errors": [
+          "budget_scope_must_be_zero_or_not_applicable"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ef7e6205973c86d5b9a2e744fd0bae15ac64bd08191c1f8fb725425d453829dd"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_output_artifact",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_missing_output_artifact.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-missing_output_artifact",
+        "errors": [
+          "output_artifact_path_missing"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "626505c86ea331b406b67c97c67193cff67db5b93a284386bd5a4fdf31111a2c"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_scope_broadened_from_identity",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_scope_broadened_from_identity.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-scope_broadened_from_identity",
+        "errors": [
+          "egress_type_requires_future_gate:direct_api",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "70278ad8f933df5fe05cc9e97187d1be7b5ee8d4767a1c0b5eb3a8d53862a0ca"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_scope_broadened_from_decision",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_scope_broadened_from_decision.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-scope_broadened_from_decision",
+        "errors": [
+          "policy_verdict_not_allowed_in_local_validator:allow_after_operator_approval"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "dd3ea5308b39558b73b5d32373ea790b2ecceafeca919d5ee22d07505be67240"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_signed_in_browser_as_read_only",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_signed_in_browser_as_read_only.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-signed_in_browser_as_read_only",
+        "errors": [
+          "egress_type_requires_future_gate:browser_signed_in",
+          "browser_scope_must_be_none",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "a45172a481bba982290e9cc567b320f6e5711d4074ffee7f479c993e2bdcc4ce"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_public_action_allowed_without_cro",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_public_action_allowed_without_cro.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-public_action_allowed_without_cro",
+        "errors": [
+          "egress_type_requires_future_gate:public_submission",
+          "public_action_scope_must_be_none",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "48c2b558e07fe78aef8ba51d7fae51b095e5b97805403e5fb04cd29be46de8f7"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wallet_payment_non_deny",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_wallet_payment_non_deny.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-wallet_payment_non_deny",
+        "errors": [
+          "egress_type_requires_future_gate:wallet_payment",
+          "wallet_scope_must_be_none",
+          "payment_scope_must_be_none",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "0576f7450517d5b31f979c178a6b3643eca7dc5f666c7b95a85fe418ec9668f1"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_model_api_no_provider_cost",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_model_api_no_provider_cost.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-model_api_no_provider_cost",
+        "errors": [
+          "egress_type_requires_future_gate:model_api",
+          "model_api_scope_must_be_none",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "e3fb96b390e899c64f490c87cd7c2e1fb3331fbd01fe92f58401b4d2bddd705a"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_mcp_server_not_registered",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_mcp_server_not_registered.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-mcp_server_not_registered",
+        "errors": [
+          "egress_type_requires_future_gate:mcp_tool",
+          "mcp_scope_must_be_none",
+          "allow_report_only_preflight_requires_report_only_egress_type"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "0c89330c2f679d03b082c2364d36424227b13613fca0f02600d3c88dabc090b5"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effects_report_only",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_external_side_effects_report_only.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-external_side_effects_report_only",
+        "errors": [
+          "external_side_effects_expected_must_be_false"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "0733771dafaf1ebc41690dddc000e5e97c37c924184cbae11b770011ca229773"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_gateway_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_gateway_started.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-gateway_started",
+        "errors": [
+          "runtime_boundary_gateway_started_must_equal_False"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "691c13bb0f1f23803c4031af1e11fc3c7900214dd414b1fc242ef89cc2671acd"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_api_key_created",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_api_key_created.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-api_key_created",
+        "errors": [
+          "runtime_boundary_api_keys_created_must_equal_False"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "2569aedb49e91e58eee133d99137ef962218c240ba48746df2f882a336472dda"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_model_call_recorded",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_model_call_recorded.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-model_call_recorded",
+        "errors": [
+          "runtime_boundary_model_api_calls_must_equal_False"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "0ab7b05bdda3a3bb4b45e27161690f21319968e353ac8bbcafcee685283827ab"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_mcp_call_recorded",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_mcp_call_recorded.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-mcp_call_recorded",
+        "errors": [
+          "runtime_boundary_mcp_tool_calls_must_equal_False"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "1a2d0bcf3eebea2adffb0a9ac8078b548397b34718555d77d573b5dab53c8f1b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_browser_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_browser_started.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-browser_started",
+        "errors": [
+          "runtime_boundary_browser_sessions_started_must_equal_0"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ed3b093ae92f9465fc9fe4cba41f3056fde0ce3031c21f883023329d153ba03a"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_worker_started.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-worker_started",
+        "errors": [
+          "runtime_boundary_worker_starts_must_equal_0"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "f74d72b2d92f01b6797b13d400443166e2aa637b6c66deac49482504f4908942"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_assigned",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_service_request_assigned.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-service_request_assigned",
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "44dbf36e657a3d3bf73d157bb9bf5c3f0b07bec307520560c22406e980e404ae"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_revoked_event",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures\\negative_revoked_event.json",
+      "result": {
+        "accepted_for_local_report_only_preflight": false,
+        "assignment_allowed": false,
+        "egress_event_id": "egress-negative-revoked_event",
+        "errors": [
+          "egress_event_not_active"
+        ],
+        "live_egress_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "api_keys_created": false,
+          "browser_sessions_started": 0,
+          "credential_actions": false,
+          "external_side_effects": false,
+          "gateway_installed": false,
+          "gateway_started": false,
+          "live_egress_events_recorded": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "3c3de5df05914e0ee90cb24cbc9c46f1fd4c1cfd50f728c0a6a147232ffd34b1"
+    }
+  ],
+  "runtime_boundary": {
+    "api_keys_created": false,
+    "browser_sessions_started": 0,
+    "credential_actions": false,
+    "external_side_effects": false,
+    "gateway_installed": false,
+    "gateway_started": false,
+    "live_egress_events_recorded": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "service_requests_assigned": 0,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\agent-egress-event-ledger-v1.schema.json",
+  "schema_version": "agent_company.agent_egress_event_ledger_validator_report.v1"
+}

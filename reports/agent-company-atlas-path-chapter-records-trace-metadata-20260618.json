@@ -1,0 +1,87 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-records-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added an expandable selected-chapter record deck to the Path Map Chapter Archive so each date-derived chapter opens typed trail records with direct Event Proof and Route Replay synchronization.",
+  "design_research": {
+    "queries": [
+      "master detail timeline UX pattern activity feed grouped events",
+      "progressive disclosure detail panel timeline event list UX",
+      "event log drilldown design pattern activity timeline"
+    ],
+    "source_urls": [
+      "https://uxpatterns.dev/patterns/data-display/timeline",
+      "https://www.nngroup.com/articles/progressive-disclosure/",
+      "https://thedecisionlab.com/reference-guide/design/progressive-disclosure",
+      "https://grafana.com/docs/grafana/latest/explore/simplified-exploration/logs/",
+      "https://getstream.io/blog/activity-feed-design/"
+    ],
+    "pattern_notes": [
+      "Grouped histories need a master-detail layer so operators can scan the chapter first, then inspect individual records.",
+      "Progressive disclosure supports compact first views while keeping deeper history one action away.",
+      "Log drilldown patterns are valuable when a timeline grows: users should move from aggregate groups to related raw records without writing queries."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-chapter-records-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathChapterFocusByLane",
+      "browser-only state.pathChapterRecordLimitByLane",
+      "browser-only state.pathEventFocusByLane",
+      "existing pathEventGlyphType classification",
+      "existing Route Replay focus state"
+    ],
+    "ui_contract": [
+      "Render a selected-chapter record deck inside the generated-art Chapter Archive.",
+      "Show four chapter records by default, using replay glyphs, type labels, dates, titles, and summaries.",
+      "Clicking a record focuses Event Proof and synchronizes Route Replay through the existing event-focus contract.",
+      "Reveal-more controls expand the selected chapter in browser-local state without mutating snapshot data.",
+      "Switching chapters resets to that chapter's own record deck while preserving the Event Stream reveal behavior."
+    ]
+  },
+  "verification": {
+    "baseline": {
+      "status": "partial",
+      "evidence": "Pre-edit code search showed no path-chapter-record UI, state, or data-path-chapter-reveal controls. A browser red route could not be preserved after cache tokens changed because the static shell loaded the latest app files."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-records-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Chapter Archive record deck with header 'Chapter Records 06/15 dossier 4 / 43', four record buttons with glyphs, and a Reveal 4 more chapter records control."
+    },
+    "record_focus": {
+      "status": "passed",
+      "evidence": "Clicking the second record selected 'Digital products local gated hold register', focused Event Proof on that evidence, moved Event Proof to 2 / 64, and synced Route Replay to Stage 63 of 64."
+    },
+    "reveal_and_switch": {
+      "status": "passed",
+      "evidence": "Reveal expanded the 06/15 dossier from 4 / 43 to 8 / 43 while keeping the selected record active. Switching to 06/14 reset the deck to 4 / 21, focused Event Proof at 44 / 64, synced Route Replay to Stage 21 of 64, and showed Event Stream at 64 of 64 visible."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one record deck with four records, no bad rectangles, and document width equal to client width."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "edited_files_ascii": "passed",
+      "http_status": 200,
+      "console_errors": 0
+    }
+  }
+}

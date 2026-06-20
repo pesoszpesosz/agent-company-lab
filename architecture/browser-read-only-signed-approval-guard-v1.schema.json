@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.browser_read_only_signed_approval_guard.v1",
+  "title": "Agent Company Browser Read-Only Signed Approval Guard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "source_assignment_preflight_path",
+    "source_adapter_contract_validation_path",
+    "decision",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_candidate_request_ids",
+    "assignment_allowed",
+    "browser_session_start_allowed",
+    "worker_start_allowed",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.browser_read_only_signed_approval_guard.v1"
+    },
+    "decision_id": {
+      "type": "string",
+      "pattern": "^browser-read-only-approval-[a-z0-9][a-z0-9-]{4,120}$"
+    },
+    "source_assignment_preflight_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "source_adapter_contract_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "decision": {
+      "enum": [
+        "deny",
+        "approve_browser_read_only_assignment_preflight_only"
+      ]
+    },
+    "operator_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "operator_attestation": {
+      "type": "string",
+      "minLength": 10
+    },
+    "signed_utc": {
+      "type": "string"
+    },
+    "expires_utc": {
+      "type": "string"
+    },
+    "allowed_scope": {
+      "enum": [
+        "none",
+        "browser_read_only_assignment_preflight_only"
+      ]
+    },
+    "allowed_candidate_request_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assignment_allowed": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "rollback_plan": {
+      "type": "string",
+      "minLength": 20
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

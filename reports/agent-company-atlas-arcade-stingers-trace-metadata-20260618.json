@@ -1,0 +1,134 @@
+{
+  "trace_id": "trace-agent-company-atlas-arcade-stingers-v1-20260618",
+  "task_id": "task-agent-company-atlas-arcade-stingers-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-arcade-stingers-v1-20260618",
+  "event_id": "trace-atlas_arcade_stingers_added-20260618",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T21:46:25Z",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "duplicate_key": "atlas-arcade-stingers-v1",
+  "event_type": "atlas_arcade_stingers_added",
+  "summary": "Added lightweight data-driven Arcade Deck stingers that give every minigame card a motion personality while preserving static standalone operation and reduced-motion support.",
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "reports/agent-company-atlas-arcade-stingers-trace-metadata-20260618.json"
+  ],
+  "design_research": {
+    "sources": [
+      "https://freefrontend.com/ui-micro-interaction/",
+      "https://timgraf.com/ui/microinteractions-mastery-crafting-delightful-ui-moments-that-drive-engagement/",
+      "https://github.com/hexiao0225/motion-recipes",
+      "https://codefronts.com/motion/css-card-hover-effects/",
+      "https://freefrontend.com/css-card-hover-effects/"
+    ],
+    "pattern_notes": [
+      "Premium microinteractions should communicate state or affordance, not only decorate.",
+      "For smooth dashboards, motion should lean on transform and opacity rather than layout-affecting properties.",
+      "Game-card motion works best when it respects the card content and does not obscure labels or actions.",
+      "Reduced-motion support keeps the animation layer optional for users who prefer calmer interfaces."
+    ]
+  },
+  "implementation": {
+    "surface": "Arcade Deck minigame cards.",
+    "data_contract": [
+      "arcadeStingerType(lane) derives a motion personality from lane.visual.minigame.id.",
+      "Each arcade card receives data-arcade-stinger for CSS-based motion targeting.",
+      "Each preview renders three aria-hidden arcade-stinger spans inside an isolated arcade-stingers wrapper.",
+      "Future minigame ids fall back to the spark personality if no rule matches."
+    ],
+    "motion_types": [
+      "grid",
+      "route",
+      "map",
+      "scan",
+      "pulse",
+      "drift",
+      "spark"
+    ],
+    "performance_contract": [
+      "Animations use transform and opacity.",
+      "The stinger wrapper is pointer-events none and does not affect card layout.",
+      "The reduced-motion media query disables arcade-stinger animation while preserving a subtle static accent."
+    ]
+  },
+  "verification": {
+    "tdd_red": {
+      "status": "passed",
+      "expected_failure": "Arcade stingers are not implemented yet",
+      "route": "http://localhost:5177/?verify=arcade-stingers-red&cache=20260618-arcade-deck#lane=platform_engineering&view=overview",
+      "observed": {
+        "cards": 12,
+        "stingers": 0,
+        "stingerFields": [],
+        "hasReducedMotionRule": false,
+        "animatedNames": []
+      }
+    },
+    "browser_green": {
+      "route": "http://localhost:5177/?verify=arcade-stingers-green&cache=20260618-arcade-stingers#lane=platform_engineering&view=overview",
+      "result": {
+        "cards": 12,
+        "wrappers": 12,
+        "stingers": 36,
+        "stingerFields": [
+          "drift",
+          "grid",
+          "map",
+          "pulse",
+          "route",
+          "scan"
+        ],
+        "animatedNames": 9,
+        "hasReducedMotionRule": true,
+        "badgeCount": 12,
+        "overflow": false,
+        "clippedText": []
+      }
+    },
+    "responsive": [
+      {
+        "label": "mobile",
+        "width": 390,
+        "cards": 12,
+        "wrappers": 12,
+        "stingers": 36,
+        "loadedTextures": 12,
+        "gridColumns": 1,
+        "overflow": false,
+        "clippedText": []
+      },
+      {
+        "label": "desktop",
+        "width": 1280,
+        "cards": 12,
+        "wrappers": 12,
+        "stingers": 36,
+        "loadedTextures": 12,
+        "gridColumns": 4,
+        "overflow": false,
+        "clippedText": []
+      },
+      {
+        "label": "wide",
+        "width": 1600,
+        "cards": 12,
+        "wrappers": 12,
+        "stingers": 36,
+        "loadedTextures": 12,
+        "gridColumns": 5,
+        "overflow": false,
+        "clippedText": []
+      }
+    ],
+    "static": [
+      "node --check web/app.js",
+      "ASCII check for edited text files",
+      "Invoke-WebRequest localhost returned STATUS 200"
+    ]
+  },
+  "next_action": "Add a richer motion audit surface or optional generated sprite-loop asset family for selected high-value lanes."
+}

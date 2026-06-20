@@ -1,0 +1,626 @@
+{
+  "accepted_count": 1,
+  "activation_chain": {
+    "all_checks_passed": true,
+    "chain_verdict": "preflight_passed_registration_blocked",
+    "exists": true,
+    "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-validation-20260617.json",
+    "registration_allowed": false,
+    "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+    "worker_start_allowed": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 16,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:38Z",
+  "next_action": "Require a signed operator decision route before converting this dry-run preview into any executable runtime start.",
+  "positive_fixture": {
+    "expected_result": "pass_dry_run_preview_only_start_blocked",
+    "runtime_start_allowed": false
+  },
+  "rejected_count": 15,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_dry_run_preview_valid_start_blocked",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\positive_dry_run_preview_valid_start_blocked.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": true,
+        "errors": [],
+        "rejected": false,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-preflight-positive-local-preview",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "2bf7ea175fd209ebd2ed2380be400a16ddfe12b89dbd304d7d32e7273369b77d"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_activation_chain",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_missing_activation_chain.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "activation_chain_validation_path_missing"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-missing_activation_chain",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "2a7d6554a4bf4e6b4948d76cb2d1bb1c2eefc726bf84091c1d38dd16a5c28e66"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_signed_start_approval_claimed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_signed_start_approval_claimed.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "operator_decision_must_not_claim_signed_start_authority"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-signed_start_approval_claimed",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "0efaaad3ac3922684ed1b10a5b0b9db11351e0ac11c0f053f49ab0afecc1a514"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_runtime_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_runtime_start_allowed.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_start_verdict_must_block_start",
+          "runtime_start_allowed_must_be_false"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-runtime_start_allowed",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "b29af44b0ddb23ddc0adea1c63eca8f7f890762cd3655cdf907b44fd2f78812e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_worker_start_allowed.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "worker_start_allowed_must_be_false"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-worker_start_allowed",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "6e07417bee482b96e70f013c22d26df30bb6eb5253b8cda1182c8a4f1572871c"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_command_mode_execute",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_command_mode_execute.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "command_preview_mode_must_be_preview_only"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-command_mode_execute",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "e01295952286236c82f9b4a038317b48b05bd78f4292c2be079802ec06c7fe16"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_command_execution_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_command_execution_allowed.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "command_execution_allowed_must_be_false"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-command_execution_allowed",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "bf6da23524a4e0a5ff6a127e38b76147251df1bc959350feef4a3193f37d3df3"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_command_preview_executed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_command_preview_executed.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_command_previews_executed_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-command_preview_executed",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "c45ddc44ad51fc25fdbb0e41e5eda15193dcac86c3f2663867975b84aa4e2ae4"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_runtime_process_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_runtime_process_started.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_runtime_processes_started_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-runtime_process_started",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "da9fff84169fa0cea75e6d535b98fe1017e0e6de3a11f6ec4cb7f127ce26d926"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_assigned",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_service_request_assigned.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-service_request_assigned",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "7ab2e157ee266efe008c94d8f66d9c3bd1af85bd010d349bc5ed43afdb6f75ad"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_mcp_tool_called",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_mcp_tool_called.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_mcp_tool_calls_must_equal_False"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-mcp_tool_called",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "162da6fc9a13458c0854926460a757214440cca5409acb39d08f4a79e8a1a8d3"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_browser_opened",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_browser_opened.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_browser_sessions_started_must_equal_0"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-browser_opened",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "7b9c23b2c9681f7ffd62e83c9c40352c664b92ddc344e5b740306cc6268352cc"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_credential_created",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_credential_created.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_credentials_created_must_equal_False"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-credential_created",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "fcd0785d2bae29650acf0796ae2b437251aa77fa73bdcde939e0ec3c63c98240"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_trace_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_missing_trace_id.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "trace_id_missing"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-missing_trace_id",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "49cc284fac758e2bed8ab6994ad61baee1844ed6cbee8649e52a955bff0f14fb"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_output_artifact",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_missing_output_artifact.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "output_artifact_path_missing"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-missing_output_artifact",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "a4e3021a89cdf63e4527838db1d930912742ba9ed4ff698e749db52e2b1d8dea"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures\\negative_external_side_effect.json",
+      "result": {
+        "accepted_for_runtime_start_preflight": false,
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "command_previews_executed": 0,
+          "credentials_created": false,
+          "dependencies_installed": 0,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "runtime_processes_started": 0,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "runtime_preflight_id": "runtime-start-negative-external_side_effect",
+        "runtime_start_allowed": false,
+        "worker_start_allowed": false
+      },
+      "sha256": "536a216261e03c9c56903ffdc19fa46b956aa5de90bbd1007f3400f61ea9b76a"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "command_previews_executed": 0,
+    "credentials_created": false,
+    "dependencies_installed": 0,
+    "external_side_effects": false,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "runtime_processes_started": 0,
+    "service_requests_assigned": 0,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "runtime_start_allowed": false,
+  "runtime_start_verdict": "dry_run_preview_valid_start_blocked",
+  "schema_path": "E:\\agent-company-lab\\architecture\\runtime-start-preflight-v1.schema.json",
+  "schema_version": "agent_company.runtime_start_preflight_report.v1",
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "worker_start_allowed": false
+}

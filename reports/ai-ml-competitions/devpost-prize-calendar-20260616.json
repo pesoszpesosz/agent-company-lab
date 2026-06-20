@@ -1,0 +1,102 @@
+{
+  "schema_version": "agent_company.ai_ml_competitions.devpost_prize_calendar.v1",
+  "generated_utc": "2026-06-16T20:42:00Z",
+  "task_id": "task-devpost-prize-calendar-20260616",
+  "lane_id": "ai_ml_competitions",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "source_urls": [
+    "https://devpost.com/hackathons",
+    "https://devpost.com/c/artificial-intelligence",
+    "https://devpost.com/",
+    "https://usaii-global-ai-hackathon-2026.devpost.com/"
+  ],
+  "calendar_fields": [
+    "event_name",
+    "devpost_url",
+    "prize_pool",
+    "deadline",
+    "registration_status",
+    "online_or_in_person",
+    "eligibility",
+    "required_artifact",
+    "local_build_fit",
+    "gate_burden",
+    "expected_value",
+    "first_local_artifact"
+  ],
+  "watchlist_rows": [
+    {
+      "rank": 1,
+      "event": "Build with Gemini XPRIZE",
+      "public_prize_signal": "$2,000,000",
+      "deadline_signal": "2026-08-17",
+      "fit": "existing agent-company dashboard could become useful product/demo",
+      "gate": "rules_account_public_submission_api_terms",
+      "decision": "watchlist_needs_rules_packet"
+    },
+    {
+      "rank": 2,
+      "event": "Global AI Hackathon Series with Qwen Cloud",
+      "public_prize_signal": "large prize signal across tracks",
+      "deadline_signal": "2026-07-09",
+      "fit": "agent-building theme",
+      "gate": "account_platform_api_public_submission",
+      "decision": "watchlist_no_api_use_without_approval"
+    },
+    {
+      "rank": 3,
+      "event": "Arm Create AI Optimization Challenge",
+      "public_prize_signal": "$8,000",
+      "deadline_signal": "2026-08-14",
+      "fit": "edge-agent or optimization prototype",
+      "gate": "rules_platform_constraints",
+      "decision": "candidate_for_local_rules_summary"
+    },
+    {
+      "rank": 4,
+      "event": "India High School Exoplanet Data Challenge",
+      "public_prize_signal": "$10,300",
+      "deadline_signal": "2026-07-31",
+      "fit": "data challenge",
+      "gate": "eligibility",
+      "decision": "park_until_eligibility_clear"
+    },
+    {
+      "rank": 5,
+      "event": "USAII Global AI Hackathon 2026",
+      "public_prize_signal": "$15,000 cash",
+      "deadline_signal": "2026-06-21",
+      "fit": "too_late_for_new_registration",
+      "gate": "registration_closed_student_team",
+      "decision": "reject_current_sprint_negative_sample"
+    }
+  ],
+  "promotion_rule": [
+    "registration_open_or_not_required",
+    "eligibility_compatible",
+    "meaningful_prize_or_strategy",
+    "local_artifact_feasible_before_deadline",
+    "no_paid_api_account_public_submission_or_terms_before_approval",
+    "clear_first_local_artifact"
+  ],
+  "score": {
+    "source_value": 5,
+    "cash_probability": 2,
+    "time_to_first_local_proof": 5,
+    "gate_burden": 4,
+    "repeatability": 5
+  },
+  "next_action": "Create devpost-rules-packet-build-with-gemini-xprize-20260616.md after read-only rules refresh confirms eligibility and terms.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

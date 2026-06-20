@@ -1,0 +1,73 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-service-worker-signed-decision-guard-v1-20260617",
+  "task_id": "task-service-worker-signed-decision-guard-v1-20260617",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "work_type": "local_tdd_validator",
+  "generated_utc": "2026-06-17T20:33:37Z",
+  "summary": "Implemented generic service-worker signed decision guard that validates candidate decisions against intake templates while applying nothing.",
+  "artifacts": [
+    {
+      "kind": "architecture_schema",
+      "path": "E:\\agent-company-lab\\architecture\\service-worker-signed-decision-guard-v1.schema.json"
+    },
+    {
+      "kind": "validator_runner",
+      "path": "E:\\agent-company-lab\\tools\\validate_service_worker_signed_decision_guard.py"
+    },
+    {
+      "kind": "unittest",
+      "path": "E:\\agent-company-lab\\tests\\test_service_worker_signed_decision_guard.py"
+    },
+    {
+      "kind": "validator_report_json",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-20260617.json"
+    },
+    {
+      "kind": "validation_report",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-validation-20260617.json"
+    },
+    {
+      "kind": "validation_markdown",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-20260617.md"
+    },
+    {
+      "kind": "fixture_directory",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python E:\\agent-company-lab\\tests\\test_service_worker_signed_decision_guard.py",
+      "status": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+      "status": "passed",
+      "tests_run": 14
+    }
+  ],
+  "validation_summary": {
+    "all_checks_passed": true,
+    "failure_count": 0,
+    "guard_status": "report_only_signed_decision_guard_ready",
+    "fixture_count": 27,
+    "accepted_count": 3,
+    "rejected_count": 24,
+    "service_template_count": 13,
+    "current_request_count": 14,
+    "approval_granted_by_guard": false,
+    "decision_authority_granted_by_guard": false,
+    "apply_allowed": false,
+    "approval_rows_written": 0,
+    "decisions_applied": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": false,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build a service-worker signed decision apply preflight blocker before any accepted guard decision can mutate queue state."
+}

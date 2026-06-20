@@ -1,0 +1,6 @@
+{
+  "schema_version": "agent_company.bad_fixture_schema.v1",
+  "fixtures": [],
+  "api_calls": false,
+  "external_side_effects": false
+}

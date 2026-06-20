@@ -1,0 +1,71 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-telemetry-export-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-telemetry-export-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T02:18:15Z",
+  "summary": "Implemented report-only telemetry_export_gateway signed-decision guard and advanced route-chain recommendation to telemetry_export_gateway apply_preflight_blocker while preserving zero telemetry exports, trace exports, private prompt uploads, credential exports, unredacted log syncs, service-request mutations, worker starts, model/MCP calls, live egress, and external side effects.",
+  "red_green_evidence": {
+    "red_command": "python -m unittest tests.test_telemetry_export_egress_signed_decision_guard tests.test_egress_route_chain_integrity_audit",
+    "red_result": "failed before implementation because validate_telemetry_export_egress_signed_decision_guard.py was missing and route-chain still recommended signed_decision_guard",
+    "green_command": "python -m unittest tests.test_telemetry_export_egress_signed_decision_guard tests.test_egress_route_chain_integrity_audit",
+    "green_result": "Ran 2 tests in 0.634s OK"
+  },
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\telemetry-export-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "4d8c0e51ce96e8a70ebfea06a413d6de33cc991ea3bcc5e91f5d7cbd0ba03c68"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_telemetry_export_egress_signed_decision_guard.py",
+      "sha256": "d0d0bd7c30fe2695b1136ae6251203c3e6cae9878e5ca93ccd665f68cff3a3be"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_telemetry_export_egress_signed_decision_guard.py",
+      "sha256": "01de65b604bdb1a2eff9f2faf3690871631a5256398c15bc50fdf9082c5bf112"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\telemetry-export-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "9d1e23d3e1a6d93a1977adbe7d3cce7e25e109a2ca0e1e8c44799daaf3818150"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\telemetry-export-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "5cdb1b372ed3dd816541b79eb4b84c799110f552ca59a8bdb1c34f673b22c19f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\telemetry-export-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "3679e4d82df4bff9fbe0248292997a115850d05bfe9af30b8f1da2894cc7c565"
+    }
+  ],
+  "validation_summary": {
+    "fixture_count": 70,
+    "accepted_count": 2,
+    "rejected_count": 68,
+    "failure_count": 0,
+    "all_checks_passed": true
+  },
+  "route_chain_effect": {
+    "route_id": "telemetry_export_gateway",
+    "present_layers_after": [
+      "unified_gateway_docket",
+      "signed_decision_intake_contract",
+      "signed_decision_guard"
+    ],
+    "recommended_next_layer_after": "apply_preflight_blocker",
+    "full_chain_route_count": 7,
+    "partial_chain_route_count": 1
+  },
+  "blocked_actions": [
+    "external_trace_export",
+    "private_prompt_upload",
+    "credential_export",
+    "unredacted_log_sync",
+    "service_request_mutation",
+    "worker_start",
+    "model_api_call",
+    "mcp_tool_call",
+    "live_egress",
+    "external_side_effect"
+  ]
+}

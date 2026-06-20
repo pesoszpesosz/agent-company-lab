@@ -1,0 +1,26 @@
+{
+  "schema_version": "customer_update_feed.v1",
+  "generated_utc": "2026-06-20T17:04:00Z",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "status": "active_local_update_feed",
+  "updates": [
+    {
+      "update_id": "customer-update-premium-intake-installed-20260620-001",
+      "generated_utc": "2026-06-20T17:04:00Z",
+      "summary": "Premium customer intake agent installed and current request applied.",
+      "applied": [
+        "premium_customer_intake_agent_added",
+        "premium_customer_intake_lane_added_and_claimed",
+        "premium_customer_intake_router_v1_added",
+        "customer_intake_workspace_added",
+        "customer_request_routing_ledger_added",
+        "knowledge_application_loop_added"
+      ],
+      "human_action_needed": false,
+      "next": "Future YouTube videos/materials can be routed as lane material packets to youtube_content_channels with compact CEO capsules."
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "active_hold_count": 4,
+  "approval_request_count": 0,
+  "covered_blocker_count": 15,
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-19T21:19:38Z",
+  "high_leverage_batch_count": 3,
+  "lane_evidence_rows_after": 99,
+  "lane_evidence_rows_before": 98,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_blocker_triage_ready_for_human_review",
+  "missing_blocker_ids": [],
+  "next_action": "CEO/operator should review the ranked batches and explicitly approve, reject, or continue holding individual scopes; this triage does not authorize any work.",
+  "recommended_default": "hold_all_gated_work_until_explicit_approval",
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_blocker_triage.v1",
+  "service_request_needs_review_count": 11,
+  "source_active_blocker_count": 15,
+  "source_board_evidence_id": "ceo-gate-blocker-board-20260616",
+  "source_board_task_id": "task-ceo-gate-blocker-board-20260616",
+  "source_board_validation_path": "E:\\agent-company-lab\\reports\\ceo-gate-blocker-board-validation-latest.json",
+  "summary": "Ranked the CEO blocker board into five local decision batches, highlighting three high-leverage batches while leaving every gate held.",
+  "task_rows_inserted_by_triage": 1,
+  "tasks_table_rows_after": 191,
+  "tasks_table_rows_before": 190,
+  "triage_batch_count": 5,
+  "triage_batches": [
+    {
+      "batch_id": "batch-digital-products-marketplace-validation",
+      "blocker_ids": [
+        "req-next-wave-digital-legal-payment-review-20260614",
+        "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "req-wave4-digital-products-browser-readonly-20260614",
+        "hold-live-marketplace-demand",
+        "hold-live-terms-and-fees",
+        "hold-public-listing-action",
+        "hold-account-or-payment-setup"
+      ],
+      "decision_needed": "Choose whether to approve only read-only validation/legal review, keep all holds, or reject the marketplace route.",
+      "lane_focus": "digital_products_templates_plugins",
+      "leverage": "high",
+      "priority": 1,
+      "why_it_matters": "This lane has the most complete local product packet and the largest cluster of related gates."
+    },
+    {
+      "batch_id": "batch-security-bounty-route-readiness",
+      "blocker_ids": [
+        "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "req-next-wave-security-report-route-review-20260614"
+      ],
+      "decision_needed": "Decide whether read-only rules/scope review is worth approving before any report-route work.",
+      "lane_focus": "security_bounty_private_reports",
+      "leverage": "high",
+      "priority": 2,
+      "why_it_matters": "Security routes can become payout-relevant, but submission and testing gates must stay strict."
+    },
+    {
+      "batch_id": "batch-paid-code-and-ai-ml-readonly",
+      "blocker_ids": [
+        "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "req-wave4-ai-ml-competitions-browser-readonly-20260614"
+      ],
+      "decision_needed": "Approve or hold read-only public page refreshes for paid-code and competition opportunities.",
+      "lane_focus": "paid_code_bounties_ai_ml_competitions",
+      "leverage": "high",
+      "priority": 3,
+      "why_it_matters": "These are low-commitment discovery gates that can refresh payout/rules evidence without public action."
+    },
+    {
+      "batch_id": "batch-platform-research-and-model-api",
+      "blocker_ids": [
+        "req-pydantic-ai-model-backed-adapter-20260614",
+        "req-grok-research-worker-20260614"
+      ],
+      "decision_needed": "Separate model-cost/API approval from browser/Grok research approval; keep both held unless exact scope is approved.",
+      "lane_focus": "platform_engineering",
+      "leverage": "medium",
+      "priority": 4,
+      "why_it_matters": "Platform research can improve infrastructure, but model/API and signed-in browser gates need exact cost and action boundaries."
+    },
+    {
+      "batch_id": "batch-source-discovery-and-social-browser",
+      "blocker_ids": [
+        "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "req-test-browser-readonly-complete-20260614"
+      ],
+      "decision_needed": "Decide whether read-only browser discovery is useful now or should stay parked behind higher-value batches.",
+      "lane_focus": "money_source_discovery_content_and_social_growth",
+      "leverage": "medium",
+      "priority": 5,
+      "why_it_matters": "These can add leads, but current product/security/paid-code gates look closer to actionable proof."
+    }
+  ],
+  "triage_evidence_id": "ceo-blocker-triage-20260616",
+  "triage_lane_id": "platform_engineering",
+  "triage_task_id": "task-ceo-blocker-triage-20260616"
+}

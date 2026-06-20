@@ -1,0 +1,144 @@
+{
+  "cases_checked": 6,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\prefect-flow-manifest-source-refresh-fixture-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:08:44Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\prefect-flow-manifest-source-refresh-fixture-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\prefect-flow-manifest-source-refresh-fixture-v1-20260617.md",
+  "next_local_test": "restate_agent_service_boundary_fixture_against_central_outbox_history_v1",
+  "passed_count": 6,
+  "rows": [
+    {
+      "actual_failures": [],
+      "allowed_mode": "local_planning_only",
+      "case_id": "case-valid-profit-edge-local-queue-planning",
+      "expected_decision": "valid_manifest_only_local_planning",
+      "expected_failures": [],
+      "lane_id": "platform_engineering",
+      "matches_expected": true,
+      "source_id": "profit_edge_daily_queue_snapshot"
+    },
+    {
+      "actual_failures": [],
+      "allowed_mode": "local_file_read",
+      "case_id": "case-valid-prediction-local-file-read",
+      "expected_decision": "valid_manifest_only_local_file_read",
+      "expected_failures": [],
+      "lane_id": "prediction_market_research",
+      "matches_expected": true,
+      "source_id": "prediction_market_data_sources"
+    },
+    {
+      "actual_failures": [],
+      "allowed_mode": "read_only_github_metadata",
+      "case_id": "case-valid-platform-github-metadata-preview",
+      "expected_decision": "valid_manifest_only_github_metadata_preview",
+      "expected_failures": [],
+      "lane_id": "platform_engineering",
+      "matches_expected": true,
+      "source_id": "platform_infra_repo_metadata"
+    },
+    {
+      "actual_failures": [
+        "allowed_mode_requires_service_request",
+        "browser_session_requested",
+        "external_side_effect_requested"
+      ],
+      "allowed_mode": "service_request_only",
+      "case_id": "case-invalid-browser-service-request-source",
+      "expected_decision": "reject_service_request_only_browser_refresh",
+      "expected_failures": [
+        "allowed_mode_requires_service_request",
+        "browser_session_requested",
+        "external_side_effect_requested"
+      ],
+      "lane_id": "digital_products_templates_plugins",
+      "matches_expected": true,
+      "source_id": "digital_marketplace_terms"
+    },
+    {
+      "actual_failures": [
+        "allowed_mode_requires_service_request",
+        "api_call_requested",
+        "external_side_effect_requested",
+        "prefect_runtime_edge:deployment_created",
+        "prefect_runtime_edge:flow_decorated",
+        "prefect_runtime_edge:flow_run_requested",
+        "prefect_runtime_edge:package_imported",
+        "prefect_runtime_edge:schedule_created",
+        "prefect_runtime_edge:server_or_cloud_used",
+        "prefect_runtime_edge:task_decorated",
+        "prefect_runtime_edge:task_run_requested",
+        "prefect_runtime_edge:work_pool_created",
+        "prefect_runtime_edge:worker_started"
+      ],
+      "allowed_mode": "service_request_only",
+      "case_id": "case-invalid-prefect-deployment-and-worker",
+      "expected_decision": "reject_prefect_runtime_and_live_source_refresh",
+      "expected_failures": [
+        "allowed_mode_requires_service_request",
+        "api_call_requested",
+        "external_side_effect_requested",
+        "prefect_runtime_edge:deployment_created",
+        "prefect_runtime_edge:flow_decorated",
+        "prefect_runtime_edge:flow_run_requested",
+        "prefect_runtime_edge:package_imported",
+        "prefect_runtime_edge:schedule_created",
+        "prefect_runtime_edge:server_or_cloud_used",
+        "prefect_runtime_edge:task_decorated",
+        "prefect_runtime_edge:task_run_requested",
+        "prefect_runtime_edge:work_pool_created",
+        "prefect_runtime_edge:worker_started"
+      ],
+      "lane_id": "paid_code_bounties",
+      "matches_expected": true,
+      "source_id": "paid_code_readonly_bounty_sources"
+    },
+    {
+      "actual_failures": [
+        "allowed_mode_requires_service_request",
+        "prefect_runtime_edge:package_imported",
+        "prefect_runtime_edge:test_harness_started",
+        "service_request_mutation_requested"
+      ],
+      "allowed_mode": "service_request_only",
+      "case_id": "case-invalid-test-harness-and-service-mutation",
+      "expected_decision": "reject_test_harness_and_service_mutation",
+      "expected_failures": [
+        "allowed_mode_requires_service_request",
+        "prefect_runtime_edge:package_imported",
+        "prefect_runtime_edge:test_harness_started",
+        "service_request_mutation_requested"
+      ],
+      "lane_id": "security_bounty_private_reports",
+      "matches_expected": true,
+      "source_id": "security_scope_rules"
+    }
+  ],
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "deployments_created": 0,
+    "external_side_effects": false,
+    "flow_runs": 0,
+    "flows_decorated": 0,
+    "model_api_calls": false,
+    "prefect_cloud_calls": 0,
+    "prefect_imports": 0,
+    "prefect_server_starts": 0,
+    "prefect_test_harness_starts": 0,
+    "schedules_created": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "task_runs": 0,
+    "tasks_decorated": 0,
+    "work_pools_created": 0,
+    "worker_starts": 0,
+    "workers_started": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\prefect-flow-manifest-source-refresh-fixture-v1.schema.json",
+  "schema_version": "agent_company.prefect_flow_manifest_source_refresh_fixture_validation.v1",
+  "top_level_failures": []
+}

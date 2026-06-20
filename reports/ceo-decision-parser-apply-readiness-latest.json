@@ -1,0 +1,90 @@
+{
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T00:06:28Z",
+  "lane_evidence_rows_after": 114,
+  "lane_evidence_rows_before": 113,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_ready_no_apply",
+  "mutation_applied_count": 0,
+  "next_action": "Hold real apply disabled; next create apply-readiness negative fixtures so missing approval, stale snapshots, and target drift are rejected before any update command exists.",
+  "planned_field_update_count": 2,
+  "queue_mutation_count": 0,
+  "readiness_evidence_id": "ceo-decision-parser-apply-readiness-20260616",
+  "readiness_lane_id": "platform_engineering",
+  "readiness_packet": {
+    "apply_boundary": {
+      "apply_allowed_now": false,
+      "external_side_effects": false,
+      "requires_explicit_operator_apply_approval": true,
+      "service_requests_updated": 0,
+      "worker_starts": 0
+    },
+    "planned_field_updates": {
+      "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+      "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+    },
+    "planned_update_sql_shape": {
+      "max_rows": 1,
+      "set_fields": [
+        "approval_scope",
+        "decision_note"
+      ],
+      "table": "service_requests",
+      "where": "request_id = :target_request_id AND status = 'needs_review'"
+    },
+    "required_operator_approvals": [
+      "explicitly approve this exact target request id",
+      "explicitly approve approval_scope field update text",
+      "explicitly approve decision_note field update text",
+      "confirm no browser/api/worker/account/payment/public/security/real-money action",
+      "confirm rollback snapshot is captured before apply"
+    ],
+    "rollback_checks": [
+      "snapshot target service request before apply",
+      "verify status count delta is zero except intended field update",
+      "restore approval_scope and decision_note to previous values on failure",
+      "write post-apply validation artifact before any worker start"
+    ],
+    "rollback_snapshot": {
+      "approval_scope": null,
+      "decision_note": null,
+      "status": "needs_review",
+      "updated_at": "2026-06-14T14:37:52Z"
+    },
+    "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+    "target_status_before": "needs_review",
+    "target_updated_at_before": "2026-06-14T14:37:52Z"
+  },
+  "readiness_packet_count": 1,
+  "readiness_task_id": "task-ceo-decision-parser-apply-readiness-20260616",
+  "recommended_default": "hold_for_explicit_operator_apply_approval",
+  "required_operator_approval_count": 5,
+  "rollback_check_count": 4,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness.v1",
+  "source_dry_runner_evidence_id": "ceo-decision-parser-apply-dry-runner-20260616",
+  "source_dry_runner_task_id": "task-ceo-decision-parser-apply-dry-runner-20260616",
+  "source_dry_runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-dry-runner-validation-latest.json",
+  "summary": "Created a local apply-readiness packet for the single service-request preview, naming the exact DB update shape, rollback snapshot checks, and explicit operator approval requirements before any real mutation is allowed.",
+  "target_service_request_count": 1,
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_readiness": 1,
+  "tasks_table_rows_after": 206,
+  "tasks_table_rows_before": 205
+}

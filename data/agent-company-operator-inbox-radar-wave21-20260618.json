@@ -1,0 +1,158 @@
+{
+  "schema_version": "agent_company.operator_inbox_radar_wave21.v1",
+  "generated_utc": "2026-06-18T03:04:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-operator-inbox-radar-wave21-20260618",
+  "purpose": "Collect current primary-source patterns for a report-only CEO/manager inbox packet layer after ceo_operator_event_surface_contract_v1.",
+  "recommended_next_build": "ceo_manager_inbox_packet_v1",
+  "source_count": 7,
+  "sources": [
+    {
+      "id": "langgraph_interrupts",
+      "name": "LangGraph interrupts",
+      "url": "https://docs.langchain.com/oss/python/langgraph/interrupts",
+      "source_type": "official_docs",
+      "observed_pattern": "Dynamic interrupts surface JSON-serializable payloads, persist graph state, and resume by passing an explicit command against a thread/checkpoint pointer.",
+      "local_design_implication": "Inbox packets should include a local correlation id, source event type, source artifact path, and resume/decision state as data only. Do not start an interrupt transport."
+    },
+    {
+      "id": "langchain_hitl_middleware",
+      "name": "LangChain human-in-the-loop middleware",
+      "url": "https://docs.langchain.com/oss/python/langchain/human-in-the-loop",
+      "source_type": "official_docs",
+      "observed_pattern": "Tool calls can be interrupted by policy and answered through approve, edit, reject, or respond decision modes.",
+      "local_design_implication": "The local packet should separate proposed action details from permitted decision types, and every decision mode should remain a non-executing preview until a later signed decision route exists."
+    },
+    {
+      "id": "langchain_agent_inbox",
+      "name": "LangChain Agent Inbox",
+      "url": "https://github.com/langchain-ai/agent-inbox",
+      "source_type": "github_repo",
+      "github_repo": "langchain-ai/agent-inbox",
+      "github_stars": 1009,
+      "github_forks": 138,
+      "github_open_issues": 22,
+      "github_pushed_at": "2026-06-17T20:56:22Z",
+      "license": "MIT",
+      "observed_pattern": "Agent Inbox uses an action request, per-interrupt allow flags, and human response types for human-in-the-loop agents.",
+      "local_design_implication": "Adopt action_request plus allowed_decision_types, but store only local report packets instead of connecting to a LangGraph deployment."
+    },
+    {
+      "id": "temporal_message_passing",
+      "name": "Temporal workflow message passing",
+      "url": "https://docs.temporal.io/encyclopedia/workflow-message-passing",
+      "source_type": "official_docs",
+      "observed_pattern": "Temporal distinguishes read-only Queries, asynchronous write Signals, and tracked synchronous Updates.",
+      "local_design_implication": "Inbox packets should classify the requested operator attention as read_only_notice, async_decision_request, or tracked_decision_request without performing any write."
+    },
+    {
+      "id": "inngest_hitl",
+      "name": "Inngest human-in-the-loop workflows",
+      "url": "https://www.inngest.com/docs/ai-patterns/human-in-the-loop",
+      "source_type": "official_docs",
+      "observed_pattern": "Human approval flows use durable waits for a correlated approval response, timeout handling, and explicit approved/rejected/timed-out branches.",
+      "local_design_implication": "Inbox packets should require correlation_id, timeout_policy, stale_after_utc, and branch previews for accept, reject, timeout, and no-op."
+    },
+    {
+      "id": "humanlayer_codelayer",
+      "name": "HumanLayer CodeLayer",
+      "url": "https://github.com/humanlayer/humanlayer",
+      "source_type": "github_repo",
+      "github_repo": "humanlayer/humanlayer",
+      "github_stars": 11015,
+      "github_forks": 925,
+      "github_open_issues": 80,
+      "github_pushed_at": "2026-03-07T22:34:40Z",
+      "license": "NOASSERTION",
+      "observed_pattern": "The repository positions CodeLayer as an open-source IDE for orchestrating parallel coding agents and human-guided workflows.",
+      "local_design_implication": "The CEO inbox should keep owner thread, lane, agent, evidence, and handoff fields visible so humans can supervise parallel agents without direct agent messaging."
+    },
+    {
+      "id": "axme_async_human_approval",
+      "name": "Async Human Approval for AI Agents",
+      "url": "https://github.com/AxmeAI/async-human-approval-for-ai-agents",
+      "source_type": "github_repo",
+      "github_repo": "AxmeAI/async-human-approval-for-ai-agents",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_pushed_at": "2026-04-11T07:30:06Z",
+      "license": "MIT",
+      "observed_pattern": "The project emphasizes async approval waits, reminders, escalation, and timeout behavior for blocked agents.",
+      "local_design_implication": "Use reminder/escalation fields only as local previews; do not schedule reminders or send notifications from the first packet contract."
+    }
+  ],
+  "packet_contract_recommendation": {
+    "schema_name": "ceo_manager_inbox_packet_v1",
+    "status": "recommended_report_only_next_build",
+    "required_fields": [
+      "schema_version",
+      "packet_status",
+      "packet_id",
+      "source_event_type",
+      "source_event_surface_contract_path",
+      "lane_id",
+      "manager_agent_id",
+      "operator_role",
+      "attention_type",
+      "priority",
+      "summary",
+      "action_request",
+      "allowed_decision_types",
+      "correlation_id",
+      "source_artifact_paths",
+      "timeout_policy",
+      "branch_previews",
+      "zero_side_effect_boundary"
+    ],
+    "allowed_attention_types": [
+      "read_only_notice",
+      "approval_needed",
+      "edit_or_reject_needed",
+      "blocked_route_update",
+      "dispatch_next_action"
+    ],
+    "allowed_decision_types": [
+      "acknowledge",
+      "approve_preview",
+      "reject_preview",
+      "edit_preview",
+      "respond_preview",
+      "defer",
+      "timeout_noop"
+    ],
+    "hard_denials": [
+      "No SSE or WebSocket transport.",
+      "No operator event emission or persistence.",
+      "No task creation or update.",
+      "No service-request assignment, approval, rejection, start, update, or completion.",
+      "No worker, browser, runtime, MCP, or model/API start/call.",
+      "No public, account, wallet, payment, security-testing, legal, or external side effect."
+    ]
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "github_metadata_reads": 3,
+    "web_docs_reads": 4,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "operator_events_emitted": 0,
+    "operator_events_persisted": 0,
+    "tasks_created_by_report": 0,
+    "tasks_updated_by_report": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "approval_rows_written": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "public_actions": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "security_testing_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build ceo_manager_inbox_packet_v1 as a local report-only schema and validator only after explicit design approval; keep all transport, mutation, approval, worker, browser, model/MCP, public, account, wallet, payment, and external actions disabled."
+}

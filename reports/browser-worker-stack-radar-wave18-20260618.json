@@ -1,0 +1,88 @@
+{
+  "candidate_count": 13,
+  "failure_count": 0,
+  "generated_utc": "2026-06-17T22:16:25Z",
+  "lane_id": "platform_engineering",
+  "next_action": "Create browser_worker_adapter_contract_v1 that maps any approved browser runtime to domain allowlists, action-class denylist, screenshot/DOM capture artifacts, session lifecycle records, and egress trace events before a browser starts.",
+  "recommendation": {
+    "adapter_candidates": [
+      "browserbase/stagehand",
+      "browser-use/browser-use",
+      "microsoft/playwright-mcp",
+      "vercel-labs/agent-browser"
+    ],
+    "foundation": "Use Playwright as the deterministic browser automation base after explicit browser install/start approval.",
+    "gated_or_watch": [
+      "Skyvern-AI/skyvern",
+      "steel-dev/steel-browser",
+      "hyperbrowserai/HyperAgent",
+      "hyperbrowserai/mcp",
+      "nanobrowser/nanobrowser",
+      "browseros-ai/BrowserOS",
+      "browser-use/browser-harness",
+      "browserbase/stagehand-python"
+    ],
+    "next_local_build": "Create browser_worker_adapter_contract_v1 that maps any approved browser runtime to domain allowlists, action-class denylist, screenshot/DOM capture artifacts, session lifecycle records, and egress trace events before a browser starts."
+  },
+  "schema_version": "agent_company.browser_worker_stack_radar_wave18_report.v1",
+  "submission_ready_count": 0,
+  "task_id": "task-browser-worker-stack-radar-wave18-20260618",
+  "top_ranked": [
+    {
+      "license": "Apache-2.0",
+      "local_decision": "preferred_foundation_library",
+      "repo": "microsoft/playwright",
+      "score": 95,
+      "stars": 91145
+    },
+    {
+      "license": "MIT",
+      "local_decision": "candidate_adapter_after_approval",
+      "repo": "browser-use/browser-use",
+      "score": 91,
+      "stars": 99312
+    },
+    {
+      "license": "MIT",
+      "local_decision": "candidate_adapter_after_approval",
+      "repo": "browserbase/stagehand",
+      "score": 89,
+      "stars": 23148
+    },
+    {
+      "license": "Apache-2.0",
+      "local_decision": "candidate_read_only_mcp_after_registry_gate",
+      "repo": "microsoft/playwright-mcp",
+      "score": 83,
+      "stars": 34050
+    },
+    {
+      "license": "Apache-2.0",
+      "local_decision": "candidate_cli_after_install_gate",
+      "repo": "vercel-labs/agent-browser",
+      "score": 80,
+      "stars": 36309
+    },
+    {
+      "license": "Apache-2.0",
+      "local_decision": "gated_infra_candidate",
+      "repo": "steel-dev/steel-browser",
+      "score": 76,
+      "stars": 7173
+    },
+    {
+      "license": "MIT",
+      "local_decision": "study_pattern_not_default_runtime",
+      "repo": "browser-use/browser-harness",
+      "score": 74,
+      "stars": 15016
+    },
+    {
+      "license": "AGPL-3.0",
+      "local_decision": "gated_workflow_platform_only",
+      "repo": "Skyvern-AI/skyvern",
+      "score": 68,
+      "stars": 21927
+    }
+  ]
+}

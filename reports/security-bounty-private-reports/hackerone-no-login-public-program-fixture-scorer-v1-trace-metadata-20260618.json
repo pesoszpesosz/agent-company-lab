@@ -1,0 +1,39 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "credentials_or_private_assets_used": 0,
+    "directory_edits_or_feedback": 0,
+    "external_side_effects": 0,
+    "hackerone_account_or_login": false,
+    "hactivity_votes_or_follows": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "programs_bookmarked_or_followed": 0,
+    "programs_contacted": 0,
+    "public_comments_or_disclosures": 0,
+    "report_submission_ready_count": 0,
+    "reports_submitted": 0,
+    "saved_program_rows_created": 4,
+    "scored_rows": 4,
+    "security_testing_allowed_count": 0,
+    "security_testing_performed": 0,
+    "service_requests_mutated": 0,
+    "static_candidate_drafts": 1,
+    "targets_tested": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "hackerone_no_login_public_program_fixture_scorer_created",
+  "generated_at": "2026-06-18T09:10:56Z",
+  "lane_id": "security_bounty_private_reports",
+  "packet_summary": {
+    "kill_or_wait_count": 3,
+    "report_submission_ready_count": 0,
+    "row_count": 4,
+    "source_acceptance_checks": 7,
+    "static_candidate_draft_count": 1
+  },
+  "schema_version": "security_bounty.hackerone_no_login_public_program_fixture_scorer.trace.v1",
+  "source": "tools/create_hackerone_no_login_public_program_fixture_scorer.py",
+  "summary": "Local HackerOne public-program fixture scorer created; static drafts only, zero testing/submission.",
+  "task_id": "task-hackerone-no-login-public-program-fixture-scorer-v1-20260618"
+}

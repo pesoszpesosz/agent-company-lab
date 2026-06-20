@@ -1,0 +1,14 @@
+{
+  "api_calls": false,
+  "catalog_service_id": "security_report_submission_gate",
+  "db_request_created": true,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-14T15:26:51Z",
+  "lane_id": "security_bounty_private_reports",
+  "missing_fields": [],
+  "request_id": "req-next-wave-security-report-route-review-20260614",
+  "request_type": "security_report_submission",
+  "source": "agent_company.py scaffold-service-request",
+  "validation_ok": true,
+  "warnings": []
+}

@@ -1,0 +1,76 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/prefect-flow-manifest-source-refresh-fixture-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Prefect Source-Refresh Flow Manifest Fixture v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.prefect_flow_manifest_source_refresh_fixture.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-prefect-flow-manifest-source-refresh-fixture-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "source_pydantic_manifest_validation_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_freshness_scheduler_plan_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_specs_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "flow_policy": {
+      "type": "object"
+    },
+    "flow_cases": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_urls",
+    "source_pydantic_manifest_validation_path",
+    "source_freshness_scheduler_plan_path",
+    "source_specs_path",
+    "flow_policy",
+    "flow_cases",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:38:12Z",
+  "trace_id": "trace-arc-prize-2026-baseline-local-proof-20260618",
+  "task_id": "task-lane-scout-arc_prize_2026-20260618",
+  "lane_id": "ai_ml_competitions",
+  "event_type": "arc_prize_2026_baseline_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-prize-2026-baseline-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-prize-2026-baseline-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-prize-2026-baseline-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "browser_sessions_started": 0,
+    "kaggle_account_or_login": false,
+    "rules_or_terms_accepted": false,
+    "official_or_gated_data_downloaded": false,
+    "submissions_made": 0,
+    "papers_or_notebooks_published": 0,
+    "paid_compute_or_api": false,
+    "api_keys_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create the ARC-AGI-3 micro-environment replay baseline locally; keep Kaggle account/rules, official data, submission, paper/public action, paid compute/API, worker/runtime, and external side effects blocked until human approval."
+}

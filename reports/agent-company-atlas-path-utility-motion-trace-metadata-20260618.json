@@ -1,0 +1,23 @@
+{
+  "id": "trace-agent-company-atlas-path-utility-motion-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-utility-motion-v1-20260618",
+  "event_id": "trace-atlas_path_utility_motion_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-utility-motion-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Utility Motion Director",
+  "summary": "Added a data-driven motion rail to the compact Path Utility Dock so module changes show active progress, runner movement, and beacon state without adding another scrolling section.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_path_utility_motion.py"
+  ],
+  "verification": [
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_utility_motion.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_utility_dock.py -q",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser mobile 390x820: motion rail exists, 7 beacons, active beacon switches from radar to proof, runner progress changes from 0% to 33%, one utility panel remains mounted, horizontal overflow is 0."
+  ]
+}

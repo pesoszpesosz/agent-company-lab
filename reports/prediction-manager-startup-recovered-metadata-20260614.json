@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-06-14T13:03:39Z",
+  "coordinator_lane": "platform_engineering",
+  "recovery_task_id": "task-prediction-manager-startup-recovery-20260614",
+  "replacement_thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+  "replacement_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+  "prediction_startup_task_id": "task-prediction_market_research-startup-20260614",
+  "prediction_startup_artifact_id": "artifact-prediction_market_research-startup-20260614",
+  "prediction_startup_outcome_id": "outcome-prediction_market_research-startup-20260614",
+  "prediction_startup_trace_id": "trace-prediction_market_research-manager-startup-20260614",
+  "monitor_readiness": "all_7_lanes_startup_complete",
+  "real_money_actions": false,
+  "public_actions": false
+}

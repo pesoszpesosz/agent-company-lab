@@ -1,0 +1,73 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_implementation_preflight_cli_test.v1",
+    "created_at":  "2026-06-15T16:03:46Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-implementation-preflight-cli-20260615",
+    "command_added":  "write-durable-adapter-runtime-implementation-preflight",
+    "source_sha256_before":  "D91F25C0B73817588D8A62C905E627E37F88CD4A8DFA66C12E82A021CCD948B4",
+    "source_sha256_after":  "BF34FA93036C5EE32783ADCB18CA35C56F952B12D6CCB08002A1BF172C878EF9",
+    "commands_run":  [
+                         "python -m py_compile E:\\agent-company-lab\\tools\\agent_company.py",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-implementation-preflight --help",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-implementation-preflight",
+                         "python -m json.tool temporal-inngest-adapter-runtime-implementation-preflight-latest.json",
+                         "python -m json.tool temporal-inngest-adapter-runtime-implementation-preflight-validation-latest.json",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-service-worker-chain-integrity --path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md --json-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json --validation-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                     ],
+    "generated_artifacts":  {
+                                "preflight_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-implementation-preflight-latest.json",
+                                "preflight_validation_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-implementation-preflight-validation-latest.json",
+                                "preflight_markdown":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-implementation-preflight-latest.md",
+                                "chain_validation_json":  "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                            },
+    "hashes":  {
+                   "source":  "BF34FA93036C5EE32783ADCB18CA35C56F952B12D6CCB08002A1BF172C878EF9",
+                   "preflight_json":  "71337C9D94DE985B2A6715F779122A788D740C9C4D6C5155349346B4F4E562FD",
+                   "preflight_validation_json":  "F9B4486488A11A2B286C6305B7150E308F40FE0F4D309B157C5799CD464150D1",
+                   "preflight_markdown":  "959473487EF1E4C75EE80C3F26BCEC3E84DAC89538EB5D77285276CD653EBA65",
+                   "chain_validation_json":  "0606133B6DB80FE31BD4AE8CC133EA8E73D6A38F78CD74AA822D5B37020273A1"
+               },
+    "validation_summary":  {
+                               "preflight_check_count":  9,
+                               "passed_preflight_check_count":  9,
+                               "upstream_validation_count":  4,
+                               "upstream_validation_passed_count":  4,
+                               "runtime_implementation_allowed":  false,
+                               "runtime_code_write_allowed":  false,
+                               "report_only_scaffolding_allowed":  true,
+                               "negative_fixture_count":  8,
+                               "rejected_fixture_count":  8,
+                               "accepted_fixture_count":  0,
+                               "forbidden_runtime_import_count":  0,
+                               "model_api_gate_remains_parked":  true,
+                               "model_api_pool_registered":  false,
+                               "all_checks_passed":  true,
+                               "failure_count":  0
+                           },
+    "chain_integrity":  {
+                            "checked_report_count":  21,
+                            "failure_count":  0,
+                            "all_checks_passed":  true
+                        },
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_effects":  {
+                                    "status_unchanged":  true,
+                                    "model_api_request_status":  "needs_review",
+                                    "model_api_request_assigned":  false,
+                                    "model_api_pool_registered":  false,
+                                    "service_request_mutation_count":  0
+                                },
+    "next_action":  "Create local-only adapter implementation preflight fixtures for permitted report-only scaffolding, still without Temporal/Inngest imports or runtime starts."
+}

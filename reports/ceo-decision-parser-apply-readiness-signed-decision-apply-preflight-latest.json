@@ -1,0 +1,72 @@
+{
+  "accepted_signed_decision_count": 1,
+  "apply_blocked_count": 1,
+  "apply_command_enabled": false,
+  "apply_preflight_check_count": 1,
+  "approval_granted_by_runner": false,
+  "approval_request_count": 0,
+  "blocked_reason_count": 5,
+  "blocked_reasons": [
+    {
+      "detail": "The valid signed decision was accepted only into preview state.",
+      "reason_id": "positive_runner_preview_only"
+    },
+    {
+      "detail": "The runner validation keeps apply_command_enabled false.",
+      "reason_id": "apply_command_disabled"
+    },
+    {
+      "detail": "The runner validation keeps approval_granted_by_runner false.",
+      "reason_id": "runner_did_not_grant_approval"
+    },
+    {
+      "detail": "No separate operator apply approval artifact is present for mutation.",
+      "reason_id": "missing_explicit_operator_apply_approval"
+    },
+    {
+      "detail": "The runner validation reports zero real mutation allowances.",
+      "reason_id": "real_mutation_allowance_zero"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "explicit_operator_apply_approval_present": false,
+  "generated_utc": "2026-06-16T10:08:46Z",
+  "lane_evidence_rows_after": 126,
+  "lane_evidence_rows_before": 125,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_signed_decision_apply_preflight_blocked_no_mutation",
+  "mutation_applied_count": 0,
+  "next_action": "Wait for explicit operator apply approval before enabling any command that mutates the target service request.",
+  "preflight_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-apply-preflight-20260616",
+  "preflight_lane_id": "platform_engineering",
+  "preflight_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-apply-preflight-20260616",
+  "queue_mutation_count": 0,
+  "real_mutation_allowed_count": 0,
+  "recommended_default": "wait_for_explicit_operator_apply_approval_before_mutating_service_request",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_signed_decision_apply_preflight.v1",
+  "source_runner_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-positive-runner-20260616",
+  "source_runner_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-positive-runner-20260616",
+  "source_runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-signed-decision-positive-runner-validation-latest.json",
+  "summary": "Checked the accepted signed-decision positive runner as an apply preflight. Apply remains blocked because the runner is preview-only and no separate explicit operator apply approval exists.",
+  "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_preflight": 1,
+  "tasks_table_rows_after": 218,
+  "tasks_table_rows_before": 217
+}

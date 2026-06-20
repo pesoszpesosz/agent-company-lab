@@ -1,0 +1,317 @@
+{
+  "schema_version": "agent_company.optimism_known_issue_duplicate_matrix.v1",
+  "generated_utc": "2026-06-17T22:04:00Z",
+  "task_id": "task-optimism-known-issue-duplicate-matrix-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "source_program": {
+    "program_id": "optimism",
+    "information_url": "https://immunefi.com/bug-bounty/optimism/information/",
+    "scope_url": "https://immunefi.com/bug-bounty/optimism/scope/",
+    "asset_table_artifact": "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json"
+  },
+  "matrix": [
+    {
+      "control_id": "optimism-dup-001",
+      "control_type": "known_issue_table",
+      "scope_area": "Smart Contract",
+      "source_signal": "Known issues Smart Contracts (Optimism), last updated 12 June 2025.",
+      "applies_to_assets": [
+        "all Smart Contract rows"
+      ],
+      "required_check": "A candidate must be compared against Optimism's smart-contract known issues before any code review or draft report.",
+      "decision": "duplicate_check_required",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-002",
+      "control_type": "known_issue_table",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "Known issues Blockchain / DLT (Optimism), last updated 12 June 2025.",
+      "applies_to_assets": [
+        "op-reth",
+        "op-node",
+        "op-dispute-mon",
+        "Blockchain/DLT Primacy of Impact placeholder"
+      ],
+      "required_check": "A candidate must be compared against Optimism's Blockchain/DLT known issues before promotion.",
+      "decision": "duplicate_check_required",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-003",
+      "control_type": "upstream_route_check",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "op-reth depends on crates from paradigmxyz/reth; public upstream reth or Ethereum Foundation disclosures cannot be replayed against Optimism.",
+      "applies_to_assets": [
+        "op-reth"
+      ],
+      "required_check": "Search upstream reth and Ethereum Foundation disclosure/bug-bounty status before treating an op-reth issue as Optimism-eligible.",
+      "decision": "upstream_route_check_required",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-004",
+      "control_type": "known_issue_hard_stop",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "All currently known issues with devp2p are linked as out-of-scope reference.",
+      "applies_to_assets": [
+        "op-node",
+        "op-reth"
+      ],
+      "required_check": "Any networking/devp2p claim must be compared against Ethereum devp2p known issues first.",
+      "decision": "hard_stop_until_cleared",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-005",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "Vulnerabilities requiring public JSON-RPC or Beacon API exposure are out of scope.",
+      "applies_to_assets": [
+        "op-node",
+        "op-reth"
+      ],
+      "required_check": "Reject any candidate whose exploit condition depends on a user/operator exposing public RPC/API endpoints.",
+      "decision": "hard_stop",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-006",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "Chain-operator violation of recommended best practices is out of scope.",
+      "applies_to_assets": [
+        "op-node",
+        "op-reth",
+        "SystemConfig"
+      ],
+      "required_check": "Reject configuration-only or network-topology-only claims unless there is an independent code vulnerability.",
+      "decision": "hard_stop",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-007",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "Alt-DA feature of op-node and op-batcher is out of scope.",
+      "applies_to_assets": [
+        "op-node"
+      ],
+      "required_check": "Reject candidates whose impact depends on the Alt-DA feature.",
+      "decision": "hard_stop",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-008",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Blockchain/DLT",
+      "source_signal": "Execution layer clients that reached end-of-service, e.g. op-geth, are out of scope.",
+      "applies_to_assets": [
+        "execution client review"
+      ],
+      "required_check": "Reject op-geth/end-of-service-client candidates unless the program rules change.",
+      "decision": "hard_stop",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-009",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Smart Contract",
+      "source_signal": "Third-party custom token bridge implementation vulnerabilities are out of scope.",
+      "applies_to_assets": [
+        "L1StandardBridge",
+        "L1ERC721Bridge",
+        "OptimismMintableERC20Factory"
+      ],
+      "required_check": "Separate canonical bridge protocol behavior from third-party custom token bridge bugs and token misconfiguration.",
+      "decision": "hard_stop_for_third_party_bridge_only",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-010",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Smart Contract",
+      "source_signal": "Bugs in op-challenger that result in 'Incorrectly resolved dispute game, detected by op-dispute-mon' are out of scope due to existing detection/remediation ability.",
+      "applies_to_assets": [
+        "op-dispute-mon",
+        "DisputeGameFactory",
+        "PermissionedDisputeGame",
+        "FaultDisputeGame"
+      ],
+      "required_check": "Any dispute-game candidate must prove it is not already detected/resolved by op-dispute-mon.",
+      "decision": "hard_stop_if_detected_by_op_dispute_mon",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-011",
+      "control_type": "program_out_of_scope",
+      "scope_area": "Smart Contract",
+      "source_signal": "Proof-of-whale based attacks on Fault Proofs are out of scope.",
+      "applies_to_assets": [
+        "FaultDisputeGame",
+        "MIPS",
+        "PreimageOracle",
+        "AnchorStateRegistry"
+      ],
+      "required_check": "Reject proof-of-whale style claims before any deeper review.",
+      "decision": "hard_stop",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-012",
+      "control_type": "documented_bridge_issue",
+      "scope_area": "Smart Contract",
+      "source_signal": "Fake ERC20 withdrawal against L1StandardBridge is documented as prevented; only a bypass of protections would be rewardable.",
+      "applies_to_assets": [
+        "L1StandardBridge",
+        "L2StandardBridge",
+        "OptimismMintableERC20Factory"
+      ],
+      "required_check": "Reject reports that restate the documented fake-token bridge issue without a new bypass.",
+      "decision": "hard_stop_unless_new_bypass",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-013",
+      "control_type": "documented_known_nonimpact",
+      "scope_area": "Smart Contract",
+      "source_signal": "ResolvedDelegateProxy.sol storage slot collision bug is documented as not affecting Optimism.",
+      "applies_to_assets": [
+        "ProxyAdmin",
+        "AddressManager",
+        "proxy implementations"
+      ],
+      "required_check": "Reject storage-slot-collision claims that depend on the documented non-impactful layout condition.",
+      "decision": "hard_stop_unless_new_affected_layout",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-014",
+      "control_type": "documented_bridge_edge_case",
+      "scope_area": "Smart Contract",
+      "source_signal": "ETH deposited to OptimismPortal by an L1 contract can be irrecoverably stranded in a documented edge case.",
+      "applies_to_assets": [
+        "OptimismPortal",
+        "L1CrossDomainMessenger"
+      ],
+      "required_check": "Reject direct restatements of the documented L1 contract deposit edge case; only a distinct bypass/impact may proceed.",
+      "decision": "hard_stop_unless_distinct_new_impact",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-015",
+      "control_type": "documented_griefing_case",
+      "scope_area": "Smart Contract",
+      "source_signal": "Large data or gas-specific cross-chain messages can create documented griefing requiring an upgrade.",
+      "applies_to_assets": [
+        "L1CrossDomainMessenger",
+        "OptimismPortal"
+      ],
+      "required_check": "Reject gas/data griefing restatements unless a new eligible critical/high impact is shown.",
+      "decision": "hard_stop_unless_new_impact",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-016",
+      "control_type": "documented_griefing_case",
+      "scope_area": "Smart Contract",
+      "source_signal": "Deposit transactions can be griefed by filling MAX_RESOURCE_LIMIT; PR 5064 partially mitigates and fuller fix requires architecture changes.",
+      "applies_to_assets": [
+        "OptimismPortal",
+        "SystemConfig"
+      ],
+      "required_check": "Reject MAX_RESOURCE_LIMIT griefing restatements unless the candidate demonstrates a new bypass or greater impact.",
+      "decision": "hard_stop_unless_new_bypass",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-017",
+      "control_type": "documented_foot_gun",
+      "scope_area": "Smart Contract",
+      "source_signal": "Bridge foot guns from token misconfiguration, fee-on-transfer, rebasing tokens, or local/remote OptimismMintable mismatch are documented.",
+      "applies_to_assets": [
+        "L1StandardBridge",
+        "L1ERC721Bridge",
+        "OptimismMintableERC20Factory"
+      ],
+      "required_check": "Reject user/developer/token configuration foot guns unless protocol code creates a new in-scope impact.",
+      "decision": "hard_stop_for_configuration_foot_gun",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-018",
+      "control_type": "web_app_route_check",
+      "scope_area": "Web & App",
+      "source_signal": "Listed Optimism domains are out of scope; Agora-operated vote.optimism.io and atlas.optimism.io route to Agora unless direct protocol financial impact exists.",
+      "applies_to_assets": [
+        "all Web & App rows"
+      ],
+      "required_check": "Confirm the web asset is in the in-scope table and not in the out-of-scope list before even considering a report-quality review.",
+      "decision": "browser_and_scope_gate_required",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-019",
+      "control_type": "default_out_of_scope",
+      "scope_area": "All categories",
+      "source_signal": "Self-exploited damage, leaked keys, privileged-address-only attacks, external stablecoin depegging, best-practice recommendations, feature requests, test/config files, phishing, and social engineering are out of scope.",
+      "applies_to_assets": [
+        "all assets"
+      ],
+      "required_check": "A candidate must pass all default out-of-scope filters before any draft report.",
+      "decision": "quality_gate_required",
+      "submission_effect": "not_submission_ready"
+    },
+    {
+      "control_id": "optimism-dup-020",
+      "control_type": "prohibited_activity_gate",
+      "scope_area": "All categories",
+      "source_signal": "Mainnet/public testnet testing, pricing-oracle or third-party testing, phishing/social engineering, third-party browser-extension/system testing, denial of service, automated traffic, and public disclosure are prohibited.",
+      "applies_to_assets": [
+        "all assets"
+      ],
+      "required_check": "No live testing path may start without a separate allowed-scope, local-fork, runtime, browser, and submission gate.",
+      "decision": "hard_stop_for_autonomous_agent",
+      "submission_effect": "blocked"
+    },
+    {
+      "control_id": "optimism-dup-021",
+      "control_type": "feasibility_review",
+      "scope_area": "All categories",
+      "source_signal": "Immunefi feasibility limitation standards include chain rollbacks, pre-impact monitoring, attack investment amount, attacks with financial risk to attacker, and griefing downgrade standards.",
+      "applies_to_assets": [
+        "all assets"
+      ],
+      "required_check": "Impact claims must include feasibility notes and downgrade risks before any report draft.",
+      "decision": "quality_gate_required",
+      "submission_effect": "not_submission_ready"
+    }
+  ],
+  "summary": {
+    "control_count": 21,
+    "hard_stop_count": 9,
+    "duplicate_check_required_count": 2,
+    "upstream_route_check_required_count": 1,
+    "quality_gate_required_count": 3,
+    "submission_ready_count": 0
+  },
+  "next_recommended_local_proofs": [
+    "security_report_quality_gate_v1",
+    "optimism_local_review_candidate_filter_v1"
+  ],
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

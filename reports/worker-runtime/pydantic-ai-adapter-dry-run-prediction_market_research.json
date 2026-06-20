@@ -1,0 +1,63 @@
+{
+  "api_calls": false,
+  "generated_at": "2026-06-14T11:41:58Z",
+  "mode": "dry-run",
+  "proposal": {
+    "allowed_now": [
+      "read manager packet",
+      "read source specs",
+      "read local evidence/artifact reports",
+      "write local proposal artifacts",
+      "record artifacts/outcomes/traces through the control plane"
+    ],
+    "blocked_actions": [
+      "paper trade",
+      "real-money trade",
+      "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+      "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+      "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+      "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action.",
+      "venue account action",
+      "eligibility assertion without verification"
+    ],
+    "duplicate_key": "prediction_market_research:typed-worker-prototype:2026-06-14",
+    "evidence_refs": [
+      "pe-report-cross-venue-next-team-scan-35be3fc7745a",
+      "pe-report-polymarket-tennis-edge-packet-68be67f48831",
+      "pe-report-kalshi-btc-range-edge-e654ec4ccb73",
+      "pe-report-prediction-market-scan-feb389566f62",
+      "pe-report-kalshi-btc-settlement-lag-daa29bc18301"
+    ],
+    "generated_at": "2026-06-14T11:41:58Z",
+    "lane_id": "prediction_market_research",
+    "mode": "read_only_local_artifact",
+    "output_artifacts": [
+      "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.json",
+      "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.md"
+    ],
+    "proposal_id": "proposal-prediction_market_research-20260614",
+    "rationale": "The lane has side-effect gates, so the safe prototype output is a local artifact proposal only.",
+    "recommended_cli_commands": [
+      "python E:\\agent-company-lab\\tools\\agent_company.py list-source-specs --lane-id prediction_market_research",
+      "python E:\\agent-company-lab\\tools\\agent_company.py list-evidence --lane-id prediction_market_research --limit 25",
+      "python E:\\agent-company-lab\\tools\\agent_company.py write-artifacts-report --lane-id prediction_market_research --path E:\\agent-company-lab\\reports\\artifacts-prediction_market_research-latest.md"
+    ],
+    "required_service_requests": [
+      "market_eligibility_worker",
+      "treasury_risk_worker"
+    ],
+    "stop_conditions": [
+      "lane is already owned by another active worker",
+      "next action requires account, wallet, browser, public, legal/KYC/billing, or real-money action",
+      "evidence is missing or source scope is unclear"
+    ],
+    "task_title": "Prepare paper-only replay spec for one imported market edge",
+    "trace_events_to_record": [
+      "typed_worker_context_loaded",
+      "typed_worker_proposal_written"
+    ],
+    "worker_agent_id": "pydantic-ai-gated-adapter"
+  },
+  "pydantic_ai_version": "1.107.0",
+  "runtime": "pydantic-ai"
+}

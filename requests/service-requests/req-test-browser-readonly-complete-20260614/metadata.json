@@ -1,0 +1,14 @@
+{
+  "api_calls": false,
+  "catalog_service_id": "browser_read_only_session",
+  "db_request_created": true,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-14T14:32:16Z",
+  "lane_id": "content_and_social_growth",
+  "missing_fields": [],
+  "request_id": "req-test-browser-readonly-complete-20260614",
+  "request_type": "browser_research",
+  "source": "agent_company.py scaffold-service-request",
+  "validation_ok": true,
+  "warnings": []
+}

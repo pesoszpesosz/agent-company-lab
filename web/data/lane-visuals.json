@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "agent-company-visuals.v1",
+  "lanes": {
+    "ai_ml_competitions": {
+      "avatar": "./assets/lanes/ai_ml_competitions.png",
+      "realm": "Prize Lab",
+      "mood": "Benchmark arena with dataset gates and leaderboard climbs.",
+      "accent": "#44d7c9",
+      "accentAlt": "#f4ba55",
+      "minigame": {
+        "id": "baseline-climb",
+        "title": "Baseline Climb",
+        "mechanic": "Advance by clearing eligibility, dataset, baseline, and submission gates.",
+        "status": "slot_ready",
+        "texture": "./assets/games/baseline-climb-bg-20260617.png"
+      }
+    },
+    "content_and_social_growth": {
+      "avatar": "./assets/lanes/content_and_social_growth.png",
+      "realm": "Signal Garden",
+      "mood": "Audience currents, reply windows, trend blooms, and reputation gates.",
+      "accent": "#f4ba55",
+      "accentAlt": "#ff6f61",
+      "minigame": {
+        "id": "signal-harvest",
+        "title": "Signal Harvest",
+        "mechanic": "Collect high-fit topics while avoiding spam, voice, and account-action gates.",
+        "status": "slot_ready",
+        "texture": "./assets/games/signal-harvest-bg-20260617.png"
+      }
+    },
+    "digital_products_templates_plugins": {
+      "avatar": "./assets/lanes/digital_products_templates_plugins.png",
+      "realm": "Product Foundry",
+      "mood": "Forge templates, polish packs, validate demand, and unlock listing routes.",
+      "accent": "#8be06e",
+      "accentAlt": "#44d7c9",
+      "minigame": {
+        "id": "foundry-run",
+        "title": "Foundry Run",
+        "mechanic": "Turn local proof artifacts into shippable bundles while marketplace gates stay visible.",
+        "status": "slot_ready",
+        "texture": "./assets/games/foundry-run-bg-20260616.png"
+      }
+    },
+    "lead_generation_and_sales": {
+      "avatar": "./assets/lanes/lead_generation_and_sales.png",
+      "realm": "Deal Room",
+      "mood": "Offer cards, qualification locks, outreach routes, and opt-out safety rails.",
+      "accent": "#ff6f61",
+      "accentAlt": "#f4ba55",
+      "minigame": {
+        "id": "offer-route",
+        "title": "Offer Route",
+        "mechanic": "Match leads to offers only after policy, targeting, and channel gates are satisfied.",
+        "status": "slot_ready",
+        "texture": "./assets/games/offer-route-bg-20260617.png"
+      }
+    },
+    "local_trading_strategy_research": {
+      "avatar": "./assets/lanes/local_trading_strategy_research.png",
+      "realm": "Quant Range",
+      "mood": "Paper-only simulations, risk bands, drawdown locks, and backtest checkpoints.",
+      "accent": "#6aa8ff",
+      "accentAlt": "#44d7c9",
+      "minigame": {
+        "id": "paper-trial",
+        "title": "Paper Trial",
+        "mechanic": "Move through data quality, out-of-sample, slippage, and no-real-money gates.",
+        "status": "slot_ready",
+        "texture": "./assets/games/paper-trial-bg-20260617.png"
+      }
+    },
+    "money_source_discovery": {
+      "avatar": "./assets/lanes/money_source_discovery.png",
+      "realm": "Source Cartography",
+      "mood": "Venue maps, opportunity fog, scan routes, and launch-candidate beacons.",
+      "accent": "#8be06e",
+      "accentAlt": "#f4ba55",
+      "minigame": {
+        "id": "venue-mapper",
+        "title": "Venue Mapper",
+        "mechanic": "Reveal new paths by proving source freshness, payout clarity, and first-proof feasibility.",
+        "status": "slot_ready",
+        "texture": "./assets/games/venue-mapper-bg-20260617.png"
+      }
+    },
+    "paid_code_bounties": {
+      "avatar": "./assets/lanes/paid_code_bounties.png",
+      "realm": "Bounty Forge",
+      "mood": "Issue boards, duplicate-check locks, payout signals, and patch-route gates.",
+      "accent": "#f4ba55",
+      "accentAlt": "#ff6f61",
+      "minigame": {
+        "id": "claim-scout",
+        "title": "Claim Scout",
+        "mechanic": "Score candidates by payout clarity, duplicate risk, testability, and approval readiness.",
+        "status": "slot_ready",
+        "texture": "./assets/games/claim-scout-bg-20260617.png"
+      }
+    },
+    "platform_engineering": {
+      "avatar": "./assets/lanes/platform_engineering.png",
+      "realm": "Control Tower",
+      "mood": "Schemas, queues, traces, adapters, and safety gates holding the company together.",
+      "accent": "#44d7c9",
+      "accentAlt": "#6aa8ff",
+      "minigame": {
+        "id": "systems-grid",
+        "title": "Systems Grid",
+        "mechanic": "Stabilize the control plane by connecting evidence, task, request, and trace systems.",
+        "status": "slot_ready",
+        "texture": "./assets/games/systems-grid-bg-20260617.png"
+      }
+    },
+    "prediction_market_research": {
+      "avatar": "./assets/lanes/prediction_market_research.png",
+      "realm": "Market Observatory",
+      "mood": "Paper replays, source-of-truth clocks, rules locks, and no-trade safeguards.",
+      "accent": "#9a89ff",
+      "accentAlt": "#44d7c9",
+      "minigame": {
+        "id": "settlement-replay",
+        "title": "Settlement Replay",
+        "mechanic": "Replay data-only market hypotheses while eligibility, fee, and treasury locks remain closed.",
+        "status": "slot_ready",
+        "texture": "./assets/games/settlement-replay-bg-20260617.png"
+      }
+    },
+    "security_bounty_private_reports": {
+      "avatar": "./assets/lanes/security_bounty_private_reports.png",
+      "realm": "Scope Citadel",
+      "mood": "Private-report routes, scope walls, duplicate sentries, and testing approval gates.",
+      "accent": "#44d7c9",
+      "accentAlt": "#9a89ff",
+      "minigame": {
+        "id": "scope-run",
+        "title": "Scope Run",
+        "mechanic": "Advance only through verified program scope, safe static proof, and private-route readiness.",
+        "status": "slot_ready",
+        "texture": "./assets/games/scope-run-bg-20260617.png"
+      }
+    },
+    "submitted_bounty_payouts": {
+      "avatar": "./assets/lanes/submitted_bounty_payouts.png",
+      "realm": "Revenue Vault",
+      "mood": "Payment evidence, owner-selection locks, response drafts, and user approval gates.",
+      "accent": "#f4ba55",
+      "accentAlt": "#8be06e",
+      "minigame": {
+        "id": "payout-vault",
+        "title": "Payout Vault",
+        "mechanic": "Track payout state without taking ownership of wallet, payment, or public-response actions.",
+        "status": "slot_ready",
+        "texture": "./assets/games/payout-vault-bg-20260617.png"
+      }
+    },
+    "web3_airdrops_grants_hackathons": {
+      "avatar": "./assets/lanes/web3_airdrops_grants_hackathons.png",
+      "realm": "Venture Gate",
+      "mood": "Grant portals, deadline paths, prototype locks, wallet boundaries, and submission gates.",
+      "accent": "#9a89ff",
+      "accentAlt": "#f4ba55",
+      "minigame": {
+        "id": "grant-expedition",
+        "title": "Grant Expedition",
+        "mechanic": "Move from terms to prototype packet while wallet, deployment, and submission gates stay explicit.",
+        "status": "slot_ready",
+        "texture": "./assets/games/grant-expedition-bg-20260617.png"
+      }
+    }
+  }
+}

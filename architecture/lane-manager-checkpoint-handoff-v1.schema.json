@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.lane_manager_checkpoint_handoff.v1",
+  "title": "Agent Company Lane Manager Checkpoint Handoff v1",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "schema_version",
+    "lane_id",
+    "manager_agent_id",
+    "handoff_mode",
+    "checkpoint_interrupt_required",
+    "checkpoint_bridge_validation_path",
+    "handoff_allowed",
+    "worker_start_allowed",
+    "service_request_mutation_allowed",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "handoff_id": {
+      "type": "string",
+      "pattern": "^handoff-[a-z0-9][a-z0-9-]{8,180}$"
+    },
+    "schema_version": {
+      "const": "agent_company.lane_manager_checkpoint_handoff.v1"
+    },
+    "lane_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "manager_agent_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "handoff_mode": {
+      "enum": [
+        "checkpoint_pause_only",
+        "blocked_read_only_visibility"
+      ]
+    },
+    "checkpoint_interrupt_required": {
+      "const": true
+    },
+    "checkpoint_bridge_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "handoff_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "service_request_mutation_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

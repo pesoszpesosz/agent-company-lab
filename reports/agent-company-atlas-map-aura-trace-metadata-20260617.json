@@ -1,0 +1,87 @@
+{
+  "traceId": "trace-agent-company-atlas-map-aura-v1-20260617",
+  "taskId": "task-agent-company-atlas-map-aura-v1-20260617",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "generatedAt": "2026-06-17T16:03:10.1179989Z",
+  "upgrade": {
+    "name": "Atlas lane map aura focus layer",
+    "summary": "Added hover and keyboard-focus lane map feedback with route glow, animated node aura sparks, and a reusable Lane Focus readout derived from lane data."
+  },
+  "research": [
+    {
+      "query": "game skill tree node hover animation particle trail UI design inspiration",
+      "takeaway": "Skill-tree interfaces benefit from immediate local emphasis around the selected node and its connecting path."
+    },
+    {
+      "query": "gamified dashboard map node hover aura animation UX",
+      "takeaway": "Operational dashboards can use subtle non-blocking hover motion to expose context while preserving scan speed."
+    },
+    {
+      "query": "achievement map progression UI node connections particle effects",
+      "takeaway": "Progression maps feel more game-like when routes, nodes, and reward/status readouts animate together."
+    }
+  ],
+  "implementation": [
+    "Added a map focus panel mount inside the map stage in web/index.html.",
+    "Added hovered-lane state and map focus rendering in web/app.js.",
+    "Assigned route lane IDs so the selected, hovered, or keyboard-focused lane can highlight its route.",
+    "Added node aura spark markup to each lane node without changing the snapshot data contract.",
+    "Added pointer and keyboard focus event handlers for reusable map focus behavior.",
+    "Added CSS for route glow, animated node rings, spark drift, and the Lane Focus readout.",
+    "Documented inherited lane-map focus behavior in web/README.md."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md"
+  ],
+  "staticValidation": {
+    "nodeCheck": "node --check web\\app.js",
+    "snapshotGeneratorCompile": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+    "snapshotJson": "python -m json.tool web\\data\\snapshot.json",
+    "traceJson": "python -m json.tool reports\\agent-company-atlas-map-aura-trace-metadata-20260617.json",
+    "asciiScan": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md reports\\agent-company-atlas-map-aura-trace-metadata-20260617.json"
+  },
+  "browserValidation": {
+    "status": "passed",
+    "target": "http://localhost:5177/?verify=map-aura#lane=platform_engineering&view=overview",
+    "validatedAt": "2026-06-17T16:10:00Z",
+    "mobileNarrow": {
+      "viewport": {
+        "width": 364,
+        "height": 912
+      },
+      "nodeCount": 12,
+      "routeCount": 12,
+      "initialFocusRouteLane": "platform_engineering",
+      "clickedLanes": [
+        "paid_code_bounties",
+        "digital_products_templates_plugins"
+      ],
+      "finalActiveLane": "digital_products_templates_plugins",
+      "finalFocusRouteLane": "digital_products_templates_plugins",
+      "finalMapFocusNodeCount": 1,
+      "finalMapFocusRouteCount": 1,
+      "auraSparkCount": 4,
+      "horizontalOverflow": false,
+      "browserErrors": []
+    },
+    "desktop": {
+      "target": "http://localhost:5177/?verify=map-aura-desktop#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "panelHidden": false,
+      "panelInsideStage": true,
+      "focusNodeLane": "platform_engineering",
+      "focusRouteLane": "platform_engineering",
+      "auraSparkCount": 4,
+      "horizontalOverflow": false,
+      "browserErrors": []
+    },
+    "hoverAutomationNote": "The pointer hit target for a different lane was confirmed, but the in-app browser coordinate move did not dispatch pointerover consistently. Click and keyboard-focus rendering paths were validated."
+  }
+}

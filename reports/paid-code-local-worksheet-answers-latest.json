@@ -1,0 +1,114 @@
+{
+  "answer_evidence_id": "paid-code-local-worksheet-answers-20260615",
+  "answer_lane_id": "paid_code_bounties",
+  "answer_task_id": "task-paid-code-local-worksheet-answers-20260615",
+  "answers": [
+    {
+      "answer": "Imported paid-code evidence is mostly negative or parked: owner-hold items, active competing PRs, crowded bounty threads, low-trust security-bounty forks, and aggregator noise. The clean local output is a triage note, not a claim.",
+      "confidence": "high",
+      "item_id": "local-evidence-normalization"
+    },
+    {
+      "answer": "Classify current imported candidates as no live claim from local evidence. Several are explicitly rejected; the remaining parked rows need live browser refresh and terms/payout checks before any work starts.",
+      "confidence": "high",
+      "item_id": "candidate-status-from-import"
+    },
+    {
+      "answer": "Duplicate risk is high across the imported set: active PRs, same-scope submissions, many comments, owner holds, rewarded duplicates, and claim-like activity are repeatedly present in the local evidence.",
+      "confidence": "high",
+      "item_id": "duplicate-risk-from-import"
+    },
+    {
+      "answer": "Payout trust is unproven from local evidence alone. Some rows have scanner amount false positives, attribution/payment-account ambiguity, broad bounty wording, or unclear direct payout routes.",
+      "confidence": "medium",
+      "item_id": "payout-trust-from-import"
+    },
+    {
+      "answer": "Likely effort ranges from repo triage to specialist-heavy implementation, but build/test surface is unknown without a gated browser/repo refresh. Treat local effort estimates as provisional.",
+      "confidence": "medium",
+      "item_id": "effort-shape-from-import"
+    },
+    {
+      "answer": "No-go for public claim or implementation from local evidence alone. Go only for a read-only live refresh through the existing browser gate, then legal/payment/public-action gates if a clean open candidate survives.",
+      "confidence": "high",
+      "item_id": "local-go-no-go-note"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not browse, use accounts, register, accept terms, claim bounties, submit PRs, comment publicly, or contact maintainers from these local answers.",
+    "Do not perform security testing, touch wallets/payments, call APIs, assign service workers, or mutate service requests from these local answers."
+  ],
+  "gated_item_count": 6,
+  "gated_items": [
+    {
+      "gate_required": "browser_read_only_session",
+      "item_id": "live-open-state-check",
+      "mode": "blocked_by_gate",
+      "question": "Verify whether the issue is still open and the bounty still accepts new work."
+    },
+    {
+      "gate_required": "browser_read_only_session",
+      "item_id": "live-pr-claim-check",
+      "mode": "blocked_by_gate",
+      "question": "Check live PRs, comments, claims, and maintainer signals for duplicate or stale work."
+    },
+    {
+      "gate_required": "legal_kyc_tax_payment",
+      "item_id": "terms-and-payout-check",
+      "mode": "blocked_by_gate",
+      "question": "Confirm current bounty terms, payout route, attribution, and any account or payment requirements."
+    },
+    {
+      "gate_required": "browser_read_only_session",
+      "item_id": "repo-build-feasibility-check",
+      "mode": "blocked_by_gate",
+      "question": "Inspect repo setup, tests, language/tooling, and likely implementation surface."
+    },
+    {
+      "gate_required": "public_action_approval",
+      "item_id": "public-claim-or-pr-action",
+      "mode": "blocked_by_gate",
+      "question": "Comment, claim, submit PR, or otherwise make a public action."
+    },
+    {
+      "gate_required": "security_testing_approval",
+      "item_id": "security-sensitive-review",
+      "mode": "blocked_by_gate",
+      "question": "Run exploit/security testing or security-sensitive validation beyond public code review."
+    }
+  ],
+  "gated_items_preserved": true,
+  "generated_utc": "2026-06-15T20:50:11Z",
+  "lane_evidence_rows_after": 76,
+  "lane_evidence_rows_before": 75,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_answer_count": 6,
+  "local_items_answered": true,
+  "next_action": "Paid-code lane manager should request a browser_read_only_session only if they want to refresh one candidate live; public claim, PR, payout, or security-sensitive steps remain separately gated.",
+  "recommended_local_decision": "no_live_claim_without_refresh_gate",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.paid_code_local_worksheet_answers.v1",
+  "source_worksheet_evidence_id": "paid-code-duplicate-check-worksheet-20260615",
+  "source_worksheet_path": "E:\\agent-company-lab\\reports\\paid-code-duplicate-check-worksheet-latest.json",
+  "source_worksheet_task_id": "task-paid-code-duplicate-check-worksheet-20260615",
+  "summary": "Answered the six local-only paid-code duplicate-check worksheet items. The local decision is no live claim or implementation from current evidence; a gated read-only refresh is the next possible step.",
+  "task_rows_inserted_by_answers": 1,
+  "tasks_table_rows_after": 148,
+  "tasks_table_rows_before": 147,
+  "worksheet_item_count": 12
+}

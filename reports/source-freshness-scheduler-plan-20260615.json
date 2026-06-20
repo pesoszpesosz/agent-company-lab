@@ -1,0 +1,155 @@
+{
+  "schema_version": "source_freshness_scheduler.v1",
+  "plan_id": "source-freshness-scheduler-plan-20260615",
+  "created_local_date": "2026-06-15",
+  "purpose": "Plan recurring current-source checks for the agent-company lab without executing browser, account, API/model, payment, public-action, wallet, security-testing, or real-money work.",
+  "execution_policy": {
+    "scheduler_is_execution": false,
+    "allowed_now": [
+      "Read local files already present in E:\\agent-company-lab and E:\\profit-edge-lab.",
+      "Read GitHub repository metadata with read-only gh commands when current architecture choices require it.",
+      "Write local scheduler reports, task packets, and service-request plans."
+    ],
+    "requires_service_approval": [
+      "Browser read-only current-source checks.",
+      "Signed-in research tools.",
+      "Model/API-backed research.",
+      "External scans that query paid-code, bounty, marketplace, or trading venues.",
+      "Any security scope verification that goes beyond public documentation or public code review."
+    ],
+    "prohibited": [
+      "Account creation or login.",
+      "Seller onboarding, marketplace listing, product upload, public post, PR comment, bounty claim, or report submission.",
+      "Legal/KYC/tax/payment setup.",
+      "Wallet setup, wallet connection, private-key handling, transactions, deposits, withdrawals, trades, or real-money actions.",
+      "Acting on submitted_bounty_payouts, which remains owned by the parallel payout worker."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "platform_infra_repo_metadata",
+      "lane_id": "platform_engineering",
+      "source_type": "github_metadata",
+      "cadence": "weekly_or_before_architecture_choice",
+      "freshness_state": "fresh",
+      "risk_gate": "read_only_github_metadata",
+      "next_check_local_date": "2026-06-21",
+      "allowed_mode": "read_only_github_metadata",
+      "planned_output": "E:\\agent-company-lab\\data\\curated-infra-repos-refresh-YYYYMMDD.json",
+      "notes": "Fresh Wave-6 metadata was collected on 2026-06-14. Next check should only run if a stack decision depends on current release metadata."
+    },
+    {
+      "source_id": "platform_official_docs_refresh",
+      "lane_id": "platform_engineering",
+      "source_type": "web_docs",
+      "cadence": "weekly_or_before_framework_commitment",
+      "freshness_state": "blocked_until_approval",
+      "risk_gate": "read_only_web_research",
+      "next_check_local_date": "2026-06-21",
+      "allowed_mode": "service_request_only",
+      "planned_output": "E:\\agent-company-lab\\reports\\source-research-refresh-YYYYMMDD.md",
+      "notes": "Do not browse in this scheduler. Use a browser/read-only or web-research service request if fresh official docs are needed."
+    },
+    {
+      "source_id": "digital_marketplace_terms",
+      "lane_id": "digital_products_templates_plugins",
+      "source_type": "browser_research",
+      "cadence": "approval_only",
+      "freshness_state": "blocked_until_approval",
+      "risk_gate": "browser_read_only_session_and_legal_payment_review",
+      "next_check_local_date": "2026-06-15",
+      "allowed_mode": "service_request_only",
+      "planned_output": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-YYYYMMDD.md",
+      "notes": "Use req-next-wave-digital-marketplace-browser-readonly-20260614 and its execution-plan-v1 only after explicit approval."
+    },
+    {
+      "source_id": "money_source_discovery_current_sources",
+      "lane_id": "money_source_discovery",
+      "source_type": "browser_or_current_source_research",
+      "cadence": "approval_only",
+      "freshness_state": "blocked_until_approval",
+      "risk_gate": "browser_current_source_approval",
+      "next_check_local_date": "2026-06-15",
+      "allowed_mode": "service_request_only",
+      "planned_output": "E:\\agent-company-lab\\reports\\money-source-discovery\\source-freshness-capture-YYYYMMDD.md",
+      "notes": "MSD-002 through MSD-016 remain blocked; scheduler may only produce packets, not verify live sources."
+    },
+    {
+      "source_id": "paid_code_readonly_bounty_sources",
+      "lane_id": "paid_code_bounties",
+      "source_type": "external_bounty_sources",
+      "cadence": "approval_or_lane_owner_only",
+      "freshness_state": "blocked_until_approval",
+      "risk_gate": "claim_rules_duplicate_checks_public_action_approval",
+      "next_check_local_date": "2026-06-15",
+      "allowed_mode": "service_request_only",
+      "planned_output": "E:\\agent-company-lab\\reports\\paid-code-bounties\\readonly-bounty-source-capture-YYYYMMDD.md",
+      "notes": "Do not claim issues, comment, open PRs, or run bounty scans from platform_engineering."
+    },
+    {
+      "source_id": "security_scope_rules",
+      "lane_id": "security_bounty_private_reports",
+      "source_type": "browser_or_public_docs_research",
+      "cadence": "approval_only",
+      "freshness_state": "blocked_until_approval",
+      "risk_gate": "program_scope_user_approval_private_route_clear",
+      "next_check_local_date": "2026-06-15",
+      "allowed_mode": "service_request_only",
+      "planned_output": "E:\\agent-company-lab\\reports\\security-bounty-private-reports\\scope-rules-readonly-capture-YYYYMMDD.md",
+      "notes": "No security testing, report submission, or private route contact from scheduler."
+    },
+    {
+      "source_id": "prediction_market_data_sources",
+      "lane_id": "prediction_market_research",
+      "source_type": "local_reports_or_approved_market_data",
+      "cadence": "lane_owner_on_demand",
+      "freshness_state": "manual_only",
+      "risk_gate": "data_only_until_venue_eligibility_fees_treasury_and_real_money_gate_clear",
+      "next_check_local_date": "2026-06-16",
+      "allowed_mode": "local_file_read",
+      "planned_output": "E:\\agent-company-lab\\reports\\prediction-market-research\\data-freshness-note-YYYYMMDD.md",
+      "notes": "Scheduler can read existing local reports only. No venue login, order book polling, trade, deposit, or eligibility claim."
+    },
+    {
+      "source_id": "profit_edge_daily_queue_snapshot",
+      "lane_id": "platform_engineering",
+      "source_type": "local_markdown",
+      "cadence": "on_demand_before_ceo_review",
+      "freshness_state": "due",
+      "risk_gate": "read_only_local_import_no_execution_lane_ownership",
+      "next_check_local_date": "2026-06-15",
+      "allowed_mode": "local_planning_only",
+      "planned_output": "E:\\agent-company-lab\\reports\\profit-edge-import-latest.md",
+      "notes": "Read-only context only. Do not monitor or act on submitted_bounty_payouts."
+    }
+  ],
+  "blocked_execution_classes": [
+    "browser execution without approved service request",
+    "signed-in account use without approved service request",
+    "API/model calls without approved service request",
+    "paid data/API access",
+    "marketplace seller actions",
+    "public comments/posts/PRs/submissions",
+    "legal/KYC/tax/payment setup",
+    "wallet/private-key/transaction work",
+    "real-money trading"
+  ],
+  "expected_outputs": [
+    {
+      "kind": "scheduler_plan_json",
+      "path": "E:\\agent-company-lab\\reports\\source-freshness-scheduler-plan-20260615.json"
+    },
+    {
+      "kind": "scheduler_plan_md",
+      "path": "E:\\agent-company-lab\\reports\\source-freshness-scheduler-plan-20260615.md"
+    }
+  ],
+  "metadata": {
+    "api_calls": false,
+    "browser_actions": false,
+    "external_side_effects": false,
+    "created_by": "recovered-profitable-edge-infra",
+    "source_specs_reviewed": 10,
+    "service_requests_changed": false
+  }
+}

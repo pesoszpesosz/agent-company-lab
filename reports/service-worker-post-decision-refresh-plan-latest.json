@@ -1,0 +1,1894 @@
+{
+  "all_input_preconditions_passed": true,
+  "all_no_execution": true,
+  "all_worker_starts_remain_blocked": true,
+  "api_calls": false,
+  "approval_command_preview_count": 77,
+  "approval_granted_by_refresh_plan": false,
+  "approval_sequence_count": 11,
+  "command_preview_count": 99,
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "execution_notice": "Post-decision refresh plan only. It does not run refresh commands, grant approvals or rejections, register pools, assign requests, update requests, start workers, call APIs, or perform external actions.",
+  "external_side_effects": false,
+  "failures": [],
+  "generated_utc": "2026-06-15T11:22:43Z",
+  "pools_registered_by_refresh_plan": 0,
+  "refresh_commands_run_by_plan": 0,
+  "refresh_plan_count": 11,
+  "refresh_plans": [
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "digital_products_templates_plugins",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "paid_code_bounties",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "security_bounty_private_reports",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "content_and_social_growth",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "ai_ml_competitions",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "digital_products_templates_plugins",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "money_source_discovery",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "platform_engineering",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-signed-in-browser-read-only-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-grok-research-worker-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_signed_in_read_only",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "digital_products_templates_plugins",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-legal-kyc-payment-review-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "worker_starts": 0,
+      "worker_type": "legal_kyc_tax_payment_review",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "security_bounty_private_reports",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-public-submission-review-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+      "worker_starts": 0,
+      "worker_type": "public_submission",
+      "would_execute_refresh_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_expected_status_if_human_runs_later": "approved",
+      "approval_granted_by_refresh_plan": false,
+      "approval_refresh_command_preview_count": 7,
+      "approval_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "approval_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_approval_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-scope-diff"
+          ],
+          "expected_gate_after_step": "exact_scope_compatibility_refresh_required",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-scope-diff",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "service_worker_pool_registration_required",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registry"
+          ],
+          "expected_gate_after_step": "manual_assignment_required",
+          "order": 4,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registry",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-pool-registration-plan"
+          ],
+          "expected_gate_after_step": "execution_readiness_required",
+          "order": 5,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-pool-registration-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-assignment-plan"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 6,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-assignment-plan",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-execution-readiness"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 7,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-execution-readiness",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 8,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "separate_worker_start_required",
+          "order": 9,
+          "requires_human_completed_decision": true,
+          "step_id": "stop_before_worker_start",
+          "would_execute_by_report": false
+        }
+      ],
+      "approval_remaining_gates_after_refresh_plan": [
+        "exact_scope_compatibility_refresh_required",
+        "service_worker_pool_registration_required",
+        "manual_assignment_required",
+        "execution_readiness_required",
+        "separate_worker_start_required"
+      ],
+      "chain_integrity_all_checks_passed": true,
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:22:43Z",
+      "lane_id": "platform_engineering",
+      "pools_registered_by_refresh_plan": 0,
+      "post_decision_simulation_preconditions_passed": true,
+      "recommended_worker_pool_id": "service-worker-model-api-execution-pool",
+      "refresh_commands_run_by_plan": 0,
+      "rejection_expected_status_if_human_runs_later": "rejected",
+      "rejection_granted_by_refresh_plan": false,
+      "rejection_refresh_command_preview_count": 2,
+      "rejection_refresh_steps": [
+        {
+          "command_preview_argv": null,
+          "expected_gate_after_step": "rejection_record_exists_or_stop",
+          "order": 1,
+          "requires_human_completed_decision": true,
+          "step_id": "confirm_manual_rejection_record",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-gate-map"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 2,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-gate-map",
+          "would_execute_by_report": false
+        },
+        {
+          "command_preview_argv": [
+            "python",
+            "E:\\agent-company-lab\\tools\\agent_company.py",
+            "write-service-worker-chain-integrity"
+          ],
+          "expected_gate_after_step": "terminal_no_execution",
+          "order": 3,
+          "requires_human_completed_decision": true,
+          "step_id": "write-service-worker-chain-integrity",
+          "would_execute_by_report": false
+        }
+      ],
+      "rejection_remaining_gates_after_refresh_plan": [],
+      "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+      "schema_version": "service_worker_post_decision_refresh_plan_row.v1",
+      "service_requests_assigned_by_refresh_plan": 0,
+      "service_requests_updated_by_refresh_plan": 0,
+      "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "worker_starts": 0,
+      "worker_type": "model_api_execution",
+      "would_execute_refresh_commands_by_report": false
+    }
+  ],
+  "rejection_command_preview_count": 22,
+  "rejection_granted_by_refresh_plan": false,
+  "rejection_sequence_count": 11,
+  "schema_version": "service_worker_post_decision_refresh_plan.v1",
+  "service_requests_assigned_by_refresh_plan": 0,
+  "service_requests_updated_by_refresh_plan": 0,
+  "source_state": {
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_generated_utc": "2026-06-15T11:16:01Z",
+    "chain_integrity_validation_loaded": true,
+    "post_decision_simulation_failure_count": 0,
+    "post_decision_simulation_generated_utc": "2026-06-15T11:06:36Z",
+    "post_decision_simulation_loaded": true
+  },
+  "worker_starts": 0
+}

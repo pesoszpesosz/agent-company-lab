@@ -1,0 +1,23 @@
+{
+  "id": "trace-agent-company-atlas-path-mission-glance-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-mission-glance-v1-20260618",
+  "event_id": "trace-atlas_path_mission_glance_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-mission-glance-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Mission Glance",
+  "summary": "Replaced the old Path Map hero with a compact Mission Glance control surface that shows current objective, route progress, gate pressure, proof count, task count, note count, unlock state, and direct route/proof/archive/comms actions before deeper scrolling starts.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_path_mission_glance.py"
+  ],
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_mission_glance.py -q failed before implementation on missing pathMissionGlanceCards.",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser mobile 390x820: Mission Glance exists, old hero removed, 5 glance cards render, panel height is 143px, Mission Scan starts at 172px, no horizontal overflow, Proof action opens Proof dock module."
+  ]
+}

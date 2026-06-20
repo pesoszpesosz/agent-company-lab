@@ -1,0 +1,87 @@
+{
+  "trace_id": "trace-agent-company-atlas-motion-signal-core-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "company_level_motion_signal_core",
+  "summary": "Added a data-reactive Signal Core that ties the hero readout and ambient canvas field to selected lane, feed playback, lane colors, map position, blockers, outcomes, and traces.",
+  "design_research": {
+    "queries": [
+      "dashboard ambient motion data visualization UI design best practices",
+      "game UI particle effects progress dashboard interaction design",
+      "prefers-reduced-motion animation dashboard UX best practices"
+    ],
+    "source_urls": [
+      "https://m2.material.io/design/communication/data-visualization.html",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion",
+      "https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/",
+      "https://www.justinmind.com/ui-design/game"
+    ],
+    "pattern_notes": [
+      "Dashboard visuals should help communicate dense system state instead of acting as isolated decoration.",
+      "Game UI motion feels meaningful when it gives concrete feedback about focus, progress, pressure, or reward.",
+      "Motion should be treated as an enhancement and reduced when a user requests reduced motion."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-motion-signal-core-trace-metadata-20260617.json"
+    ],
+    "data_inputs": [
+      "state.selectedLaneId",
+      "snapshot.lanes[].visual.accent",
+      "snapshot.lanes[].visual.accentAlt",
+      "snapshot.lanes[].map",
+      "snapshot.lanes[].level",
+      "snapshot.lanes[].counts.blockers",
+      "snapshot.lanes[].counts.outcomes",
+      "snapshot.lanes[].counts.traces",
+      "snapshot.missionFeed.items",
+      "state.feedPlaying",
+      "state.feedPlaybackIndex"
+    ],
+    "ui_contract": [
+      "The hero Signal Core displays the selected or playback lane, current mode, level, pressure meter, and unlock meter.",
+      "The fixed canvas field derives particle colors, focus point, and intensity from the same motion signal.",
+      "Feed playback changes the signal mode to playback and shifts focus to the event lane.",
+      "Selecting another lane updates the hero readout and body motion theme without changing snapshot data.",
+      "The JavaScript canvas loop and CSS animations respect prefers-reduced-motion."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "trace_metadata_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=motion-signal&cache=20260617-motion-signal",
+      "checks": [
+        {
+          "viewport": "1280x800 first viewport",
+          "result": "Signal Core rendered in the hero with a 1163x91 bounding box, body motion mode set to gated, canvas sized to 1280x800, and no horizontal overflow."
+        },
+        {
+          "viewport": "390x920",
+          "result": "Deep-linked prediction_market_research route rendered Signal Core text for Prediction Market Research, motion mode unlock, lane colors #9a89ff and #44d7c9, 390x920 canvas, one-column Signal Core layout, no horizontal overflow, and screenshot sample contained 256 unique byte values."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Deep-linked prediction_market_research route rendered Signal Core with three-column layout, unlock motion mode, 1280x800 canvas, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1600x900",
+          "result": "Deep-linked prediction_market_research route rendered Signal Core with three-column layout, unlock motion mode, 1600x900 canvas, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800 playback",
+          "result": "Clicking mission feed playback changed body motion mode to playback, changed the playback button text to II, and updated Signal Core text to the active playback lane."
+        }
+      ]
+    }
+  }
+}

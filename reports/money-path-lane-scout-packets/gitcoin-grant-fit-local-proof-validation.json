@@ -1,0 +1,77 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_eight_sources",
+      "passed": true
+    },
+    {
+      "name": "has_kyc_source",
+      "passed": true
+    },
+    {
+      "name": "has_anti_sybil_source",
+      "passed": true
+    },
+    {
+      "name": "has_allo_source",
+      "passed": true
+    },
+    {
+      "name": "disambiguates_kyc",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_twenty_grant_fields",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_six_route_stages",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_eight_fit_factors",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_ten_hard_kill_reasons",
+      "passed": true
+    },
+    {
+      "name": "has_local_allowed_stage",
+      "passed": true
+    },
+    {
+      "name": "no_submission_stage_allowed",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_github",
+      "passed": true
+    },
+    {
+      "name": "no_kyc_or_passport",
+      "passed": true
+    },
+    {
+      "name": "no_wallet_or_allo_transaction",
+      "passed": true
+    },
+    {
+      "name": "no_payment_submission_or_public_action",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T07:37:06Z",
+  "schema_version": "gitcoin_grant_fit_local_proof.validation.v1",
+  "task_id": "task-lane-scout-gitcoin_grants-20260618"
+}

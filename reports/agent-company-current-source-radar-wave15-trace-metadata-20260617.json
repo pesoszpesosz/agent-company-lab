@@ -1,0 +1,22 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "task_id": "task-agent-company-current-source-radar-wave15-20260617",
+  "trace_id": "trace-agent-company-current-source-radar-wave15-20260617",
+  "artifact_family": "agent-company-current-source-radar-wave15",
+  "summary": "Captured current primary-source radar for multi-agent orchestration, durable execution, human-in-the-loop approvals, and coding-agent harnesses using seven live GitHub metadata rows and ten official/source documents.",
+  "capture_utc": "2026-06-17T20:46:01Z",
+  "validation_report": "E:\\agent-company-lab\\reports\\agent-company-current-source-radar-wave15-validation-20260617.json",
+  "repo_count": 7,
+  "doc_source_count": 10,
+  "public_github_metadata_reads": 7,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "model_api_calls": false,
+  "dependency_installs": 0,
+  "runtime_starts": 0,
+  "worker_starts": 0,
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "external_side_effects": false,
+  "next_action": "Build checkpoint_interrupt_contract_v1 or adapter_candidate_scorecard_v1 before adopting external agent/runtime frameworks."
+}

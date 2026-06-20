@@ -1,0 +1,11 @@
+gate_id,status,evidence,blocker
+source_review_exists,pass,worker-pool-registration-review-v1-20260617.json contains service-worker-local-runtime-adapter-pool,
+runway_selected_pilot,pass,worker-activation-runway-v1 marks pool as closest_to_local_pilot,
+operator_decision_contract,missing,worker-pool-operator-decision packet exists but validator contract does not,contract validator required
+identity_envelope_contract,missing,identity matrix exists but pool-specific envelope validator does not,identity envelope contract required
+egress_ledger_contract,packet_only,egress ledger packet exists but validator contract does not,egress validator required
+assignment_preflight,blocked,assignable_now_count=0,no requests assignable
+runtime_start_preflight,missing,no runtime-start preflight validator exists,runtime preflight required
+chain_integrity_layer,missing,current integrity checked 138 layers but not this activation contract,integrity layer required
+registration_allowed,blocked,preflight verdict not_ready_register_candidate,operator and identity validators missing
+worker_start_allowed,blocked,ready_to_start_count=0,runtime start remains denied

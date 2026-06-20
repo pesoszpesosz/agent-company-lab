@@ -1,0 +1,10 @@
+{
+  "intake": {
+    "lane_id": "digital_products_templates_plugins",
+    "venue_url": "Gumroad, Lemon Squeezy, PromptBase, and any direct-download route identified by the local Agent Skill Starter Kit bundle.",
+    "action_requested": "Review legal/KYC/tax/payment/payout/account-contract gates before any marketplace listing, seller signup, payment setup, or public sales claim for the Agent Skill Starter Kit.",
+    "jurisdiction_if_relevant": "User location presumed United States unless user specifies otherwise; payment/tax review must ask the user before any commitment.",
+    "funds_or_payout_involved": "Potential digital product revenue; no funds received and no payout setup approved.",
+    "deadline": "No external deadline; review before any marketplace or seller-account action."
+  }
+}

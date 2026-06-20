@@ -1,0 +1,33 @@
+{
+  "all_input_preconditions_passed": true,
+  "all_no_execution": true,
+  "all_worker_starts_remain_blocked": true,
+  "api_calls": false,
+  "approval_command_preview_count": 77,
+  "approval_granted_by_refresh_plan": false,
+  "approval_sequence_count": 11,
+  "command_preview_count": 99,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T11:22:43Z",
+  "pools_registered_by_refresh_plan": 0,
+  "refresh_commands_run_by_plan": 0,
+  "refresh_plan_count": 11,
+  "refresh_plan_path": "E:\\agent-company-lab\\reports\\service-worker-post-decision-refresh-plan-latest.json",
+  "rejection_command_preview_count": 22,
+  "rejection_granted_by_refresh_plan": false,
+  "rejection_sequence_count": 11,
+  "schema_version": "service_worker_post_decision_refresh_plan_validation.v1",
+  "service_requests_assigned_by_refresh_plan": 0,
+  "service_requests_updated_by_refresh_plan": 0,
+  "source_state": {
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_generated_utc": "2026-06-15T11:16:01Z",
+    "chain_integrity_validation_loaded": true,
+    "post_decision_simulation_failure_count": 0,
+    "post_decision_simulation_generated_utc": "2026-06-15T11:06:36Z",
+    "post_decision_simulation_loaded": true
+  },
+  "worker_starts": 0
+}

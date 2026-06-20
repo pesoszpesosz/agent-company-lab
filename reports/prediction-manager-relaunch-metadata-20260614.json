@@ -1,0 +1,8 @@
+{
+  "span_kind": "coordination.manager_relaunch",
+  "runtime": "codex_thread_coordination",
+  "api_calls": false,
+  "old_thread_id": "019ec612-9996-7603-a593-38281608d3dc",
+  "replacement_thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+  "side_effects": "thread_creation_and_messages_only_no_market_action"
+}

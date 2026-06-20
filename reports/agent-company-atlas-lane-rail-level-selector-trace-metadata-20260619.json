@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-lane-rail-level-selector-v1-20260619",
+  "taskId": "task-agent-company-atlas-lane-rail-level-selector-v1-20260619",
+  "eventId": "event-agent-company-atlas-lane-rail-level-selector-v1-20260619",
+  "title": "Lane Rail Level Selector",
+  "createdAt": "2026-06-19T07:54:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Turned each lane rail card into a compact level-select tray so the Command deck reads more like choosing playable money-path levels than scanning task cards.",
+  "proof": [
+    "Added a tested laneRailLevelSelectorMarkup helper that renders level, XP, gates, wins, and live work from generic lane counts.",
+    "Styled the selector as a four-cell tray with active-lane glow, gated-state treatment, sweep motion, and reduced-motion suppression.",
+    "Updated README, index unlock marker, snapshot generation, regression floors, and trace metadata so standalone forks inherit the progression event."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_lane_rail_signal_pips.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-model-api-egress-apply-command-contract-v1-20260618",
+  "task_id": "task-model-api-egress-apply-command-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:04:09Z",
+  "summary": "Created a report-only model/API egress apply-command contract for model_api_gateway. The contract accepts only deny_noop and report-only command-contract shapes, rejects 47 provider-key, model-call, data-upload, cost, worker, service-request, and live-egress mutation fixtures, and preserves zero command writes/execution, zero provider key use, zero model/API calls, zero training/private data upload, zero cost, zero worker starts, zero service-request mutation, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\model-api-egress-apply-preflight-blocker-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\model-api-egress-signed-decision-guard-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\model-api-egress-apply-command-contract-v1.schema.json",
+      "sha256": "70f1fa70738214ba5c4c293613addbb8729970882e564d7daf00d9382d5f4fed"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_model_api_egress_apply_command_contract.py",
+      "sha256": "83280b9559c49d9fe4aacf223619a5c669c1392dd3e0f5ff2cc4449aac7bbc36"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_model_api_egress_apply_command_contract.py",
+      "sha256": "a6f624772e8c199c1f4594c79593d2470e49d5d60fce4ac7ee885534638f036f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\model-api-egress-apply-command-contract-v1-20260618.json",
+      "sha256": "e9d364fcf4da8c2af49fc35f7d86f6c4baac67a45235076ffe2b43ccea6a6020"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\model-api-egress-apply-command-contract-v1-validation-20260618.json",
+      "sha256": "561ddd86c2022070001348ce9ba7256d145051c3e1301abb0ddf2ed6af3e6731"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\model-api-egress-apply-command-contract-v1-20260618.md",
+      "sha256": "1e135e7641954671591e392d2a4d47dd1078f002670c6da13cdb8210d2d572b0"
+    }
+  ],
+  "verification": {
+    "red_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_model_api_egress_apply_command_contract.py",
+    "red_test_result": "failed before implementation because validate_model_api_egress_apply_command_contract.py did not exist",
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_model_api_egress_apply_command_contract.py E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "42 tests passed",
+    "target_route_id": "model_api_gateway",
+    "target_egress_type": "model_api",
+    "fixture_count": 49,
+    "accepted_count": 2,
+    "rejected_count": 47,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "provider_key_use_allowed": false,
+    "provider_keys_used": false,
+    "model_api_call_allowed": false,
+    "model_api_calls": false,
+    "training_data_upload_allowed": false,
+    "training_data_uploaded": false,
+    "max_cost_usd": 0,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "provider_key_use_allowed": false,
+    "provider_keys_used": false,
+    "model_api_call_allowed": false,
+    "model_api_calls": false,
+    "training_data_upload_allowed": false,
+    "training_data_uploaded": false,
+    "max_cost_usd": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "browser_sessions_started": false,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build model API egress apply-command guard v1 only after a real signed operator decision and executable command preview exist; until then, keep model/API egress blocked."
+}

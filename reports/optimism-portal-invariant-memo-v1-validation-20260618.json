@@ -1,0 +1,38 @@
+{
+  "schema_version": "agent_company.optimism_portal_invariant_memo_validation.v1",
+  "generated_utc": "2026-06-17T22:04:11Z",
+  "task_id": "task-optimism-portal-invariant-memo-v1-20260618",
+  "checked_files": [
+    "E:\\agent-company-lab\\data\\optimism-portal-invariant-memo-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-portal-invariant-memo-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-portal-invariant-memo-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-portal-invariant-memo-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\optimism-portal-invariant-memo-v1-trace-metadata-20260618.json"
+  ],
+  "selected_asset_id": "optimism-sc-005",
+  "selected_invariant_id": "opi-007",
+  "state_matrix_rows": 6,
+  "expected_min_state_matrix_rows": 5,
+  "source_observation_count": 6,
+  "source_sha256": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F",
+  "test_sha256": "FF9721FAD3CED4B7FBE7CE1B008EBD41897C2B3457F1D4E45EC0C209A28E3935",
+  "submission_ready_count": 0,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

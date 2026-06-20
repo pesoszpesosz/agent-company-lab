@@ -1,0 +1,100 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_report_only_scaffolding_artifacts_cli_test.v1",
+    "created_at":  "2026-06-15T16:24:43Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-cli-20260615",
+    "command_added":  "write-durable-adapter-runtime-report-only-scaffolding-artifacts",
+    "source_sha256_before":  "1E4BA8E24D03DE411DEB2354B3B017172D62E398DD375EB63360DB783E1DD5A9",
+    "source_sha256_after":  "6627D198DCC0779C36672673FCF4AA41AABA3824946EC56ABA9F7B5E8FC52138",
+    "commands_run":  [
+                         "python -m py_compile E:\\agent-company-lab\\tools\\agent_company.py",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-report-only-scaffolding-artifacts --help",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-report-only-scaffolding-artifacts",
+                         "python -m json.tool temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-latest.json",
+                         "python -m json.tool temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-validation-latest.json",
+                         "python -m json.tool packet_negative_fixture_matrix_json.json",
+                         "python -m json.tool packet_preflight_gate_snapshot.json",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-service-worker-chain-integrity --path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md --json-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json --validation-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                     ],
+    "generated_artifacts":  {
+                                "manifest_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-latest.json",
+                                "manifest_validation_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-validation-latest.json",
+                                "manifest_markdown":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-latest.md",
+                                "artifact_dir":  "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts",
+                                "chain_validation_json":  "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                            },
+    "hashes":  {
+                   "source":  "6627D198DCC0779C36672673FCF4AA41AABA3824946EC56ABA9F7B5E8FC52138",
+                   "manifest_json":  "63133E3EC286E77782B71173CD98439622E2AD6ED87A0CC3937C2897EF62AD01",
+                   "manifest_validation_json":  "D18483738BFF07207A99ACC32C5D5AA92405BC34046EF1A2CF8F355D4313FA77",
+                   "manifest_markdown":  "C4CFD433AC1CBFF23C170BC262A29B6D5AFCACBBE3D60B649ADE93E979394197",
+                   "chain_validation_json":  "33EF52C211DF6F0B35DF70CBAE16648126BD33823AE2FE8319B4E9EE772BE066",
+                   "component_files":  [
+                                           {
+                                               "Path":  "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_adapter_todo_packet.md",
+                                               "Hash":  "A54C9B7A6097A00E34DD60E9645913C36C302D7EE61B7FA24A178D9F01021564"
+                                           },
+                                           {
+                                               "Path":  "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_chain_readiness_pointer.md",
+                                               "Hash":  "A7D68E58480A2077B667155E2392D47292E249AC48909BD87F4C70C72EE91DD6"
+                                           },
+                                           {
+                                               "Path":  "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_contract_summary_markdown.md",
+                                               "Hash":  "ECF2161A5F93234951C096744790510FEF49EC327AB233237BE3766BFDAD6579"
+                                           },
+                                           {
+                                               "Path":  "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_negative_fixture_matrix_json.json",
+                                               "Hash":  "2B8E41B77467917D6F12D07A2C7B3B5A15C1DC5AA55925783F3C9688E4AA8CF8"
+                                           },
+                                           {
+                                               "Path":  "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_preflight_gate_snapshot.json",
+                                               "Hash":  "D3F4FAD0E6041C1D50A93208EEBB88D6583BA1630471293A9F1A36F25ABCA14F"
+                                           }
+                                       ]
+               },
+    "validation_summary":  {
+                               "materialized_artifact_count":  5,
+                               "packet_component_count":  5,
+                               "all_materialized_artifacts_report_only":  true,
+                               "markdown_artifact_count":  3,
+                               "json_artifact_count":  2,
+                               "json_artifacts_parse":  true,
+                               "executable_artifact_count":  0,
+                               "runtime_artifact_count":  0,
+                               "runtime_side_effect_artifact_count":  0,
+                               "runtime_implementation_allowed":  false,
+                               "runtime_code_write_allowed":  false,
+                               "report_only_scaffolding_allowed":  true,
+                               "forbidden_runtime_import_count":  0,
+                               "model_api_gate_remains_parked":  true,
+                               "model_api_pool_registered":  false,
+                               "all_checks_passed":  true,
+                               "failure_count":  0
+                           },
+    "chain_integrity":  {
+                            "checked_report_count":  24,
+                            "failure_count":  0,
+                            "all_checks_passed":  true
+                        },
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_effects":  {
+                                    "status_unchanged":  true,
+                                    "model_api_request_status":  "needs_review",
+                                    "model_api_request_assigned":  false,
+                                    "model_api_pool_registered":  false,
+                                    "service_request_mutation_count":  0
+                                },
+    "next_action":  "Add these materialized report-only scaffolding artifacts to artifact traceability and prepare a human-readable runtime adapter approval packet, still with runtime code blocked."
+}

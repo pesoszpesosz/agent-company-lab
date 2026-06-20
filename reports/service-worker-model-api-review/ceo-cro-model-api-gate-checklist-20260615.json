@@ -1,0 +1,190 @@
+{
+  "api_calls": false,
+  "approval_granted_by_checklist": false,
+  "ceo_questions": [
+    "Is a model/API call necessary, or can a local deterministic adapter produce the needed artifact?",
+    "Which money-path lane benefits from this model call, and what artifact proves that benefit?",
+    "What is the maximum acceptable spend and who owns that budget?",
+    "Will this create reusable company infrastructure, or only a one-off convenience?"
+  ],
+  "checklist_id": "checklist-ceo-cro-model-api-gate-req-pydantic-ai-model-backed-adapter-20260614",
+  "cro_questions": [
+    "Does the input scope include secrets, credentials, personal data, tax/KYC/payment/wallet data, or private files?",
+    "Are browser/account/public/payment/trading/security-testing actions explicitly excluded?",
+    "Are stop conditions observable before cost or data exposure exceeds the approval?",
+    "Can the request be safely rejected or parked without losing an active money opportunity?"
+  ],
+  "current_status_expected": "needs_review",
+  "decision_authority_granted_by_checklist": false,
+  "decision_branches": [
+    {
+      "allowed_local_action": "Keep request in needs_review and attach this checklist to CEO/CRO review notes.",
+      "branch": "park",
+      "forbidden_actions": [
+        "approve",
+        "assign",
+        "start",
+        "call API",
+        "install/import runtime",
+        "external action"
+      ],
+      "recommended_now": true,
+      "why": "Provider/model/cost/data/output scope is still missing and worker pool is not registered."
+    },
+    {
+      "branch": "reject",
+      "forbidden_actions": [
+        "automated rejection by checklist",
+        "public/action/payment/API side effects"
+      ],
+      "manual_only_preview": "A human/CRO may run reject-service-request only after reviewing the decision packet; this checklist does not reject anything.",
+      "recommended_now": false,
+      "why": "Use if CEO/CRO decides model/API execution is unnecessary or too risky for this lane."
+    },
+    {
+      "branch": "approve_later",
+      "forbidden_actions": [
+        "blanket model/API approval",
+        "approval without max cost",
+        "approval without exact local input/output artifacts",
+        "approval bundled with browser/account/payment/public/real-money actions"
+      ],
+      "manual_only_preview": "A human/CRO/CEO may approve an exact scope later; this checklist does not approve anything.",
+      "recommended_now": false,
+      "why": "Only after all minimum scope fields are filled, cost is explicit, worker pool exists, and user/CRO/CEO approvals are recorded."
+    }
+  ],
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T12:58:00Z",
+  "lane_id": "platform_engineering",
+  "minimum_scope_fields": [
+    {
+      "current_value": null,
+      "example_value": "openai_or_other_provider_named_by_user",
+      "field": "provider",
+      "notes": "Do not infer provider from this checklist.",
+      "required_before_approval": true
+    },
+    {
+      "current_value": null,
+      "example_value": "specific_model_id",
+      "field": "model",
+      "notes": "Must match provider and cost ceiling.",
+      "required_before_approval": true
+    },
+    {
+      "current_value": 0,
+      "example_value": "0.25",
+      "field": "max_cost_usd",
+      "notes": "Any nonzero cost requires explicit user/CRO/CEO approval.",
+      "required_before_approval": true
+    },
+    {
+      "current_value": [],
+      "example_value": [
+        "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-summaries\\req-pydantic-ai-model-backed-adapter-20260614.json"
+      ],
+      "field": "input_artifact_paths",
+      "notes": "No private files, secrets, credentials, tax/KYC/payment/wallet data.",
+      "required_before_approval": true
+    },
+    {
+      "current_value": [],
+      "example_value": [
+        "E:\\agent-company-lab\\reports\\service-worker-model-api-review\\model-api-execution-result-placeholder.md"
+      ],
+      "field": "output_artifact_paths",
+      "notes": "Output paths must be local artifacts only.",
+      "required_before_approval": true
+    },
+    {
+      "current_value": null,
+      "example_value": "explicit_worker_agent_id_after_pool_registration",
+      "field": "allowed_runner_agent_id",
+      "notes": "Do not assign/start until pool registration and approval are separate facts.",
+      "required_before_approval": true
+    },
+    {
+      "current_value": [
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "example_value": [
+        "cost ceiling reached",
+        "unexpected sensitive data",
+        "provider error",
+        "output path mismatch"
+      ],
+      "field": "stop_conditions",
+      "notes": "Stop conditions must be enforced before any API execution.",
+      "required_before_approval": true
+    }
+  ],
+  "pre_review_assertions": [
+    {
+      "assertion": "source packet remains needs_review",
+      "evidence": "control-plane DB readback required before any manual decision",
+      "required": true
+    },
+    {
+      "assertion": "chain integrity has zero failures",
+      "evidence": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+      "required": true
+    },
+    {
+      "assertion": "summary validation all_no_execution is true",
+      "evidence": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-summaries\\req-pydantic-ai-model-backed-adapter-20260614-validation.json",
+      "required": true
+    },
+    {
+      "assertion": "no worker pool is registered/assigned for this request",
+      "evidence": "current packet pool_status=missing_service_worker_pool and assigned_agent_id=null",
+      "required": true
+    },
+    {
+      "assertion": "provider/model/cost/data/output scope is concrete",
+      "evidence": "must be filled manually before approval; currently missing",
+      "required": true
+    }
+  ],
+  "proof_of_non_execution": {
+    "api_calls": false,
+    "approval_granted_by_checklist": false,
+    "chain_integrity_all_checks_passed": true,
+    "decision_authority_granted_by_checklist": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "summary_validation_all_no_execution": true,
+    "worker_starts": 0
+  },
+  "recommended_next_local_artifact": "E:\\agent-company-lab\\reports\\service-worker-model-api-review\\model-api-gate-human-review-form-20260615.md",
+  "rejection_granted_by_checklist": false,
+  "required_authorities": [
+    "human_user",
+    "chief_risk_officer",
+    "ceo_orchestrator"
+  ],
+  "review_priority": 20,
+  "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+  "schema_version": "ceo_cro_model_api_gate_checklist.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_artifacts": {
+    "chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "decision_packet_json": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets\\req-pydantic-ai-model-backed-adapter-20260614.json",
+    "decision_packet_markdown": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets\\req-pydantic-ai-model-backed-adapter-20260614.md",
+    "packet_summary": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-summaries\\req-pydantic-ai-model-backed-adapter-20260614.json",
+    "packet_summary_validation": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-summaries\\req-pydantic-ai-model-backed-adapter-20260614-validation.json"
+  },
+  "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+  "worker_starts": 0,
+  "worker_type": "model_api_execution"
+}

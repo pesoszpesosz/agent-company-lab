@@ -1,0 +1,61 @@
+{
+  "schema_version": "digital_products.gumroad_direct_download_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:41:33Z",
+  "task_id": "task-lane-scout-gumroad_direct_download-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\gumroad-direct-download-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\gumroad-direct-download-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "official_sources_present",
+      "passed": true
+    },
+    {
+      "check": "candidate_count_at_least_two",
+      "passed": true
+    },
+    {
+      "check": "recommended_candidate_present",
+      "passed": true
+    },
+    {
+      "check": "recommended_candidate_highest_score",
+      "passed": true
+    },
+    {
+      "check": "all_candidates_have_gates_assets_and_fixes",
+      "passed": true
+    },
+    {
+      "check": "unit_economics_present",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "acceptance_checks_present",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "gumroad_account_or_login": false,
+    "seller_profile_created_or_edited": false,
+    "terms_or_seller_agreement_accepted": false,
+    "products_uploaded_or_edited": 0,
+    "listings_published": 0,
+    "prices_published": 0,
+    "payout_or_payment_setup": false,
+    "orders_or_payments": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  }
+}

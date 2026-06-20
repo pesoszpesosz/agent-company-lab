@@ -1,0 +1,60 @@
+{
+  "schema_version": "digital_products.promptbase_approval_rubric_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:24:22Z",
+  "task_id": "task-lane-scout-promptbase_agent_skill_route-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\promptbase-approval-rubric-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\promptbase-approval-rubric-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "six_approval_rows_present",
+      "passed": true
+    },
+    {
+      "check": "every_row_has_default_park",
+      "passed": true
+    },
+    {
+      "check": "read_only_review_is_first",
+      "passed": true
+    },
+    {
+      "check": "public_listing_submission_is_last",
+      "passed": true
+    },
+    {
+      "check": "operator_decision_form_has_required_fields",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "source_packet_matches_promptbase_route",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_performed": 0,
+    "terms_accepted": 0,
+    "payment_or_payout_actions": 0,
+    "kyc_tax_actions": 0,
+    "zip_created": false,
+    "public_uploads": 0,
+    "marketplace_drafts_created": 0,
+    "marketplace_submissions": 0,
+    "public_promotions": 0,
+    "service_requests_mutated": 0,
+    "workers_started": 0,
+    "runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_or_mcp_calls": 0,
+    "external_side_effects": 0
+  }
+}

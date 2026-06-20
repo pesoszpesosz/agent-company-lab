@@ -1,0 +1,82 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-milestone-ladder-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-milestone-ladder-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_milestone_ladder_added-20260618",
+  "created_at": "2026-06-18T06:57:25Z",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added generated-art Chapter Milestone Ladder to the selected Path Map chapter dossier so chapter proof, gate, task, unlock, and next-step signals read as game-like unlock rungs.",
+  "design_research": {
+    "queries": [
+      "game progression milestone ladder UI design dashboard inspiration",
+      "UX milestone progress visualization dashboard best practices",
+      "gamification progress map levels unlock UI design article"
+    ],
+    "source_urls": [
+      "https://www.atlassian.com/work-management/project-management/project-planning/milestone-chart",
+      "https://material.io/design/components/steppers.html",
+      "https://dribbble.com/search/game-progression-ui"
+    ],
+    "pattern_notes": [
+      "Milestone views should simplify major transition points while preserving the path back to detailed evidence.",
+      "Stepper/progression patterns work well when each step has explicit state and a clear current or next action.",
+      "Game progression references are useful only when unlock nodes are driven by real chapter data instead of decorative achievements."
+    ]
+  },
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0fcd85c20f9a3c27016a33957d3a388191b47039739eb1a496.png",
+    "workspace_path": "web/assets/system/path-chapter-milestone-ladder-20260618.png",
+    "bytes": 1917320,
+    "sha256": "F8759D7DDF4B21E6595E95200625893D8F38ECBBB1387523D87CC80B8F258D20",
+    "prompt_summary": "Premium dark sci-fi chapter milestone ladder texture with unlock checkpoints, teal/amber/green glows, no text, no logos, and no characters."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/path-chapter-milestone-ladder-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_milestone_ladder.py",
+      "reports/agent-company-atlas-path-chapter-milestone-ladder-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a path-chapter-milestone-ladder panel inside the selected chapter record deck.",
+      "Use generated path-chapter-milestone-ladder-20260618.png as the unlock ladder backdrop.",
+      "Compute milestone rungs from chapter proof, gate, task, outcome, trace, and latest-event records.",
+      "Make milestone rungs clickable when backed by a chapter event using the existing Event Proof focus flow.",
+      "Add reduced-motion-aware milestone sparks without mutating snapshot data.",
+      "Register the generated texture in the Visual Asset Vault system assets."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_milestone_ladder.py -q failed before implementation on missing path-chapter-milestone-ladder-20260618.png.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_milestone_ladder.py -q passed after generated asset, component, styles, docs, cache token, and Asset Vault wiring."
+    },
+    "static": {
+      "milestone_ladder_contract_test": "passed",
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "asset_present_bytes": 1917320
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-milestone-ladder-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Milestone Ladder with generated backdrop path-chapter-milestone-ladder-20260618.png, 6 rungs, 5 event-backed clickable rungs, 83% rail progress, 6 spark elements, Asset Vault registration, zero bad rectangles, zero horizontal overflow, and zero console errors. Clicking the first milestone rung focused the same event in both the Chapter Records list and Chapter Runway while keeping the ladder rendered."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "Browser sweep at 390x820, 820x900, 1280x900, and 1600x1000 kept the ladder visible with 6 rungs, 5 clickable rungs, 6 spark elements, zero text overflow, zero clipped rectangles, zero horizontal overflow, and zero console errors."
+    }
+  }
+}

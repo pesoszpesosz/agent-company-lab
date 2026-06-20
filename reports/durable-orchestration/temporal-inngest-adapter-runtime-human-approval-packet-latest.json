@@ -1,0 +1,153 @@
+{
+  "approval_granted_by_packet": false,
+  "approval_packet_ready_for_human_review": true,
+  "approval_question_count": 6,
+  "approval_questions": [
+    {
+      "current_default": "no",
+      "question": "Should dependency installation for Temporal/Inngest adapter implementation be allowed?",
+      "question_id": "approve_dependency_install_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should importing Temporal/Inngest runtime libraries be allowed?",
+      "question_id": "approve_runtime_import_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should starting Temporal/Inngest runtimes, workflows, activities, or event emitters be allowed?",
+      "question_id": "approve_runtime_start_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should service request assignment or mutation be allowed from adapter code?",
+      "question_id": "approve_service_request_mutation_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should the parked model/API adapter request be assigned or used?",
+      "question_id": "approve_model_api_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should any browser, account, payment, wallet, security-test, or public submission action be allowed?",
+      "question_id": "approve_external_side_effect_scope"
+    }
+  ],
+  "approval_required_for_runtime_implementation": true,
+  "generated_utc": "2026-06-15T16:31:52Z",
+  "lane_id": "platform_engineering",
+  "materialized_artifacts_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-latest.json",
+  "materialized_artifacts_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-artifacts-validation-latest.json",
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "next_action": "Wait for an explicit human runtime-implementation approval decision packet before writing executable adapter code.",
+  "purpose": "Human-readable approval packet for future Temporal/Inngest runtime adapter work; this packet does not grant approval.",
+  "report_only_scaffolding_allowed": true,
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_version": "temporal_inngest_adapter_runtime_human_approval_packet.v1",
+  "traceability_rows": [
+    {
+      "artifact_rows": [
+        {
+          "artifact_id": "artifact-temporal-inngest-adapter-runtime-component-contract-summary-20260615",
+          "kind": "component_report_markdown",
+          "path_or_url": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_contract_summary_markdown.md",
+          "sha256": "25B6762964995C9BB899C164AAF4B766570C969452FE1B0EF60354E6B3A6A9BB",
+          "task_id": "task-temporal-inngest-adapter-runtime-human-approval-packet-cli-20260615"
+        }
+      ],
+      "component_id": "packet_contract_summary_markdown",
+      "expected_sha256": "25B6762964995C9BB899C164AAF4B766570C969452FE1B0EF60354E6B3A6A9BB",
+      "matching_sha256": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_contract_summary_markdown.md",
+      "registered": true
+    },
+    {
+      "artifact_rows": [
+        {
+          "artifact_id": "artifact-temporal-inngest-adapter-runtime-component-negative-fixture-matrix-20260615",
+          "kind": "component_report_json",
+          "path_or_url": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_negative_fixture_matrix_json.json",
+          "sha256": "3E948AFB2B03C96F8CB8CC6FB4824B1526261F8AD0334EB83B6A3874C2A0CF83",
+          "task_id": "task-temporal-inngest-adapter-runtime-human-approval-packet-cli-20260615"
+        }
+      ],
+      "component_id": "packet_negative_fixture_matrix_json",
+      "expected_sha256": "3E948AFB2B03C96F8CB8CC6FB4824B1526261F8AD0334EB83B6A3874C2A0CF83",
+      "matching_sha256": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_negative_fixture_matrix_json.json",
+      "registered": true
+    },
+    {
+      "artifact_rows": [
+        {
+          "artifact_id": "artifact-temporal-inngest-adapter-runtime-component-preflight-gate-snapshot-20260615",
+          "kind": "component_validation_json",
+          "path_or_url": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_preflight_gate_snapshot.json",
+          "sha256": "6F51E1E697077D0336030CE3092C17F0B2C24D8C5A028CD1ECE05A35D69A0645",
+          "task_id": "task-temporal-inngest-adapter-runtime-human-approval-packet-cli-20260615"
+        }
+      ],
+      "component_id": "packet_preflight_gate_snapshot",
+      "expected_sha256": "6F51E1E697077D0336030CE3092C17F0B2C24D8C5A028CD1ECE05A35D69A0645",
+      "matching_sha256": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_preflight_gate_snapshot.json",
+      "registered": true
+    },
+    {
+      "artifact_rows": [
+        {
+          "artifact_id": "artifact-temporal-inngest-adapter-runtime-component-chain-readiness-pointer-20260615",
+          "kind": "component_report_markdown",
+          "path_or_url": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_chain_readiness_pointer.md",
+          "sha256": "94F414A557DE7634A04234F398183C20CE66DAC26685C9A972BDB0676509C74E",
+          "task_id": "task-temporal-inngest-adapter-runtime-human-approval-packet-cli-20260615"
+        }
+      ],
+      "component_id": "packet_chain_readiness_pointer",
+      "expected_sha256": "94F414A557DE7634A04234F398183C20CE66DAC26685C9A972BDB0676509C74E",
+      "matching_sha256": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_chain_readiness_pointer.md",
+      "registered": true
+    },
+    {
+      "artifact_rows": [
+        {
+          "artifact_id": "artifact-temporal-inngest-adapter-runtime-component-adapter-todo-packet-20260615",
+          "kind": "component_planning_markdown",
+          "path_or_url": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_adapter_todo_packet.md",
+          "sha256": "45DCAA2CCDE47E1759B0182543D484C3931870A588FDDA0F9248F785E7AB6BB1",
+          "task_id": "task-temporal-inngest-adapter-runtime-human-approval-packet-cli-20260615"
+        }
+      ],
+      "component_id": "packet_adapter_todo_packet",
+      "expected_sha256": "45DCAA2CCDE47E1759B0182543D484C3931870A588FDDA0F9248F785E7AB6BB1",
+      "matching_sha256": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_adapter_todo_packet.md",
+      "registered": true
+    }
+  ]
+}

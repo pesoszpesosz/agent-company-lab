@@ -1,0 +1,27 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-quest-node-focus-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-quest-node-focus-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_quest_node_focus_added-20260619",
+  "title": "Command Cockpit Quest Node Focus",
+  "timestamp": "2026-06-19T17:18:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Added role and current-state treatment to the Command Cockpit Quest level map so the active checkpoint, gate state, and next target are visible as route-node states.",
+  "changes": [
+    "Added role, glyph, and current-state metadata to Quest level-map cells.",
+    "Rendered map/XP/active/lock/go glyphs inside each route node without changing the snapshot data contract.",
+    "Added pulsing current-node socket styling for active checkpoint and active gate states.",
+    "Kept mobile flattened by hiding extra glyph and socket chrome in the narrow cockpit.",
+    "Recorded the node-focus pass as the latest platform UI unlock in generated snapshot history."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "adapter_contract_id": "browser-worker-adapter-contract-negative-mcp_started",
+  "adapter_kind": "playwright_deterministic",
+  "allowed_action_classes": [
+    "navigate_public_https_url",
+    "read_visible_public_text",
+    "capture_accessibility_snapshot",
+    "capture_screenshot",
+    "write_local_evidence"
+  ],
+  "allowed_domains": [
+    "github.com"
+  ],
+  "browser_session_start_allowed": false,
+  "denied_action_classes": [
+    "login",
+    "signup",
+    "submit_form",
+    "accept_terms",
+    "post_comment",
+    "reply_like_follow_repost",
+    "create_or_edit_account",
+    "upload_file",
+    "download_private_file",
+    "purchase_or_payment",
+    "connect_or_sign_wallet",
+    "security_testing",
+    "unbounded_scrape_or_crawl",
+    "execute_arbitrary_browser_code",
+    "credential_or_secret_access"
+  ],
+  "egress_trace": {
+    "artifact_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+    "event_type": "browser_worker_adapter_contract_validated",
+    "source": "browser_worker_adapter_contract_v1",
+    "trace_id": "trace-browser-worker-adapter-contract-v1-20260618"
+  },
+  "execution_mode": "report_only_contract",
+  "lane_id": "money_source_discovery",
+  "lifecycle": {
+    "kill_switch_required": true,
+    "manual_approval_required_before_start": true,
+    "max_session_minutes": 0,
+    "preflight_required": true,
+    "teardown_required": true
+  },
+  "navigation_scope": "explicit_allowlist_only",
+  "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+  "request_type": "browser_research",
+  "required_artifacts": {
+    "capture_log_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-capture-log-placeholder.json",
+    "evidence_markdown_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-evidence-placeholder.md",
+    "screenshot_dir": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-screenshots",
+    "trace_metadata_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-trace-metadata-placeholder.json"
+  },
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_accessed": false,
+    "external_side_effects": false,
+    "file_transfer_actions": false,
+    "form_submit_actions": false,
+    "login_actions": false,
+    "mcp_servers_started": 1,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "wallet_actions": false,
+    "workers_started": 0
+  },
+  "runtime_candidate": "microsoft/playwright",
+  "service_id": "browser_read_only_session",
+  "session_mode": "public_read_only_no_login",
+  "target_urls": [
+    "https://github.com/topics/bounty"
+  ],
+  "worker_start_allowed": false
+}

@@ -1,0 +1,15 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-stage-lens-bar-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-stage-lens-bar-v1-20260619",
+  "eventId": "trace-atlas_active_lane_stage_lens_bar_added-20260619",
+  "title": "Active Lane Stage Lens Bar",
+  "createdUtc": "2026-06-19T03:34:20Z",
+  "summary": "Added a sticky stage lens inside the mounted lane stage so the active view, level XP, gate pressure, active work, and trail depth stay visible while scrolling inside the cockpit.",
+  "goalFit": "Improves the Atlas as a centralized game-like control room by keeping orientation and pressure signals visible inside the bounded selected-lane stage.",
+  "uiSurface": "Mounted selected-lane stage",
+  "proof": [
+    "web/app.js derives activeLaneStageLens data from lane state and renders it inside active-lane-mounted-stage",
+    "web/styles.css makes active-lane-stage-lens sticky with compact signal chips and subtle pulse motion",
+    "web/data/snapshot.json records the unlock in the platform engineering lane after regeneration"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "generated_utc": "2026-06-17T21:53:00Z",
+  "trace_id": "trace-optimism-asset-scope-table-v1-20260618",
+  "task_id": "task-optimism-asset-scope-table-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "agent_id": "recovered-profitable-edge-infra",
+  "operation": "optimism_asset_scope_table",
+  "input_artifacts": [
+    "E:\\agent-company-lab\\reports\\optimism-scope-rules-extraction-packet-v1-20260618.json",
+    "https://immunefi.com/bug-bounty/optimism/scope/",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/optimism/resources/"
+  ],
+  "output_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-asset-scope-table-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-asset-scope-table-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-asset-scope-table-v1-20260618.md"
+  ],
+  "boundary": {
+    "report_only": true,
+    "public_read_only_headless_page_extraction_sessions": 1,
+    "service_worker_browser_sessions_started": 0,
+    "security_tests": false,
+    "browser_actions_with_side_effects": false,
+    "accounts_registered": 0,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

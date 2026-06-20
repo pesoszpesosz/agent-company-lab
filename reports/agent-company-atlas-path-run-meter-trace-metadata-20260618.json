@@ -1,0 +1,83 @@
+{
+  "traceId": "trace-agent-company-atlas-path-run-meter-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-run-meter-v1-20260618",
+  "eventId": "trace-atlas_path_run_meter_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-run-meter-trace-metadata-20260618",
+  "title": "Path Run Meter",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "problem": "Mission Glance compressed lane status, but the first cockpit viewport still needed a clearer game-HUD readout for route, gates, proof, tasks, and notes.",
+  "implementation": [
+    "Added renderPathMissionRunMeter to turn Mission Glance cards into a five-socket level strip.",
+    "Inserted the meter into the Mission Glance copy column so it improves the first viewport without adding another panel.",
+    "Styled route, gate, proof, task, and note sockets with tone-aware states, progress track, reduced-motion handling, and compact labels.",
+    "Updated cache keys, README documentation, and a focused contract test."
+  ],
+  "references": [
+    {
+      "label": "Habitica",
+      "url": "https://en.wikipedia.org/wiki/Habitica",
+      "note": "Used as a lightweight reference for translating real tasks into RPG-like levels, rewards, and status."
+    },
+    {
+      "label": "Visual workflow dashboards research",
+      "url": "https://arxiv.org/abs/2602.17668",
+      "note": "Used as a reminder that visual dashboards should expose task state, urgency, and traceability rather than only decoration."
+    }
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_run_meter.py"
+  ],
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-run-meter-20260618#lane=platform_engineering&view=path&deck=command",
+    "scrollY": 0,
+    "meterVisible": true,
+    "stepCount": 5,
+    "steps": [
+      "1 level",
+      "2 gate",
+      "3 proof",
+      "4 tasks",
+      "5 notes"
+    ],
+    "stepsOverflowMeter": false,
+    "boardVisible": true,
+    "panelBottomWithinViewport": true,
+    "overflowX": 0,
+    "meterRect": {
+      "y": 241,
+      "height": 31,
+      "bottom": 272,
+      "width": 340
+    },
+    "glanceRect": {
+      "y": 184,
+      "height": 203,
+      "bottom": 387
+    }
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_run_meter.py -q",
+      "result": "RED failed before implementation because renderPathMissionRunMeter did not exist"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_run_meter.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_mission_glance.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_route_focus.py -q",
+      "result": "3 passed in 0.13s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "exit code 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "49 passed, 55 deselected in 0.21s"
+    }
+  ],
+  "nextAction": "Continue replacing text-heavy first-viewport status with compact game HUD controls while keeping deeper history behind deliberate depth switches."
+}

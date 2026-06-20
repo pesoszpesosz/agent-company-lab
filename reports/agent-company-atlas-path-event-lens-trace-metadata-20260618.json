@@ -1,0 +1,74 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-event-lens-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Turned Path Map Node Intel related events into a clickable master-detail proof lens so each selected route event exposes status, time, artifact, and summary without leaving the board.",
+  "design_research": {
+    "queries": [
+      "nested drill down activity feed detail panel UX pattern",
+      "master detail activity timeline dashboard event detail UX",
+      "progressive disclosure timeline event details dashboard UI"
+    ],
+    "source_urls": [
+      "https://dribbble.com/search/data-drill-down",
+      "https://dribbble.com/search/master-detail-view",
+      "https://ixdf.org/literature/topics/progressive-disclosure",
+      "https://uxpatterns.dev/patterns/data-display/timeline",
+      "https://design-system.hpe.design/templates/drill-down-navigation"
+    ],
+    "pattern_notes": [
+      "Master-detail keeps the event list and selected record visible together, avoiding route-context loss.",
+      "Progressive disclosure reveals proof details only after the operator selects an event, keeping the first scan compact.",
+      "Drilldown navigation patterns favor stable selected states and clear return context for nested records."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-event-lens-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "focused Path Map node related events",
+      "browser-only state.pathEventFocusByLane"
+    ],
+    "ui_contract": [
+      "Create deterministic event keys from existing trail fields without adding snapshot schema.",
+      "Render related event rows as focusable buttons with aria-pressed selected state.",
+      "Default the Event Proof lens to the first related event for the focused node.",
+      "Let a clicked related event update the proof lens in browser memory only.",
+      "Show event title, status, summary, type, time, and artifact path while preserving the full Path Map context."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-event-lens-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, there was no .path-event-lens, no data-path-event-focus buttons, no selected event, and no Event Proof text."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-event-lens-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "The route rendered 3 clickable related events, exactly 1 selected event, a proof grid, and an Event Proof lens. Clicking the second event changed the lens title to Service Request Packet Scaffolded with no console errors, failed requests, or bad rectangles."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports kept 3 event buttons, 1 selected event, the updated proof lens, document width equal to viewport width, and no bad rectangles or request failures."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "http_status": 200
+    }
+  }
+}

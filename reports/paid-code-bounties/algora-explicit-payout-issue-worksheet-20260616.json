@@ -1,0 +1,91 @@
+{
+  "schema_version": "agent_company.paid_code_bounties.algora_explicit_payout_worksheet.v1",
+  "generated_utc": "2026-06-16T20:39:00Z",
+  "task_id": "task-algora-explicit-payout-worksheet-20260616",
+  "lane_id": "paid_code_bounties",
+  "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+  "source_urls": [
+    "https://algora.io/algora/bounties?status=completed",
+    "https://algora.io/capgo/bounties?status=open%2F",
+    "https://algora.io/golemcloud/home",
+    "https://algora.io/CapSoftware/bounties"
+  ],
+  "explicit_payout_filters": [
+    {
+      "filter": "amount_clarity",
+      "pass_rule": "public issue or Algora page shows an explicit bounty amount before work starts",
+      "reject_rule": "payout is implied, stale, private, or hidden behind login"
+    },
+    {
+      "filter": "open_state",
+      "pass_rule": "bounty is open and issue is not solved, claimed, or merged",
+      "reject_rule": "closed, completed, or superseded"
+    },
+    {
+      "filter": "crowding",
+      "pass_rule": "claim count is low or claim rules protect effort",
+      "reject_rule": "many visible claims and no reservation"
+    },
+    {
+      "filter": "owner_route",
+      "pass_rule": "maintainer or bounty owner has a clear review path and recent activity",
+      "reject_rule": "repo abandoned or payout owner unclear"
+    },
+    {
+      "filter": "testability",
+      "pass_rule": "local reproduction and tests can prove completion before public action",
+      "reject_rule": "requires credentials, paid services, private data, or undefined acceptance"
+    }
+  ],
+  "candidate_rows": [
+    {
+      "candidate": "algora_org_examples",
+      "public_signal": "completed page shows 25 completed bounties and bounty creation mechanism",
+      "risk": "no current open bounty on this page",
+      "decision": "reference_only"
+    },
+    {
+      "candidate": "golemcloud",
+      "public_signal": "zero open bounties but large completed bounty history",
+      "risk": "not a live cash slot today",
+      "decision": "watchlist"
+    },
+    {
+      "candidate": "capsoftware_cap",
+      "public_signal": "open low-value bounty with many visible claims",
+      "risk": "low amount and heavy crowding",
+      "decision": "reject_for_current_sprint"
+    },
+    {
+      "candidate": "turso_golem_tsperf_prettier_menu_links",
+      "public_signal": "listed as Algora bounty categories",
+      "risk": "requires current read-only refresh",
+      "decision": "candidate_source_list"
+    }
+  ],
+  "score": {
+    "expected_dollars_per_hour": 3,
+    "time_to_first_local_proof": 4,
+    "gate_burden": 3,
+    "competition_crowding_risk": 4,
+    "agent_fit": 5
+  },
+  "required_gates_before_external_action": [
+    "github_public_action_gate",
+    "legal_kyc_tax_payment_gate",
+    "repo_license_contribution_review"
+  ],
+  "next_action": "Create a local algora-live-candidate-refresh read-only packet or scanner.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

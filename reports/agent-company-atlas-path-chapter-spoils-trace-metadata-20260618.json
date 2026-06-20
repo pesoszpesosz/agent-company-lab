@@ -1,0 +1,93 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-spoils-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-spoils-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_spoils_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a generated Chapter Spoils medallion shelf to the Path Map Chapter Archive so each selected chapter visibly earns proof, unlock, gate, service, task, and trace rewards from its actual event mix.",
+  "design_research": {
+    "queries": [
+      "achievement badges dashboard UX progression rewards best practices",
+      "game achievement badge UI design progression systems player motivation",
+      "gamification badges progress dashboard enterprise UX"
+    ],
+    "source_urls": [
+      "https://www.nngroup.com/articles/filters/",
+      "https://www.nngroup.com/articles/faceted-search/",
+      "https://gamedesignskills.com/game-design/game-progression/",
+      "https://www.interaction-design.org/literature/topics/gamification",
+      "https://uxpatterns.dev/patterns/data-display/timeline"
+    ],
+    "pattern_notes": [
+      "Achievement surfaces should reward meaningful progress states, not decorative noise.",
+      "Game progression is easier to understand when the current path, earned rewards, and locked rewards are visible together.",
+      "Faceted histories and timeline drilldowns benefit from a compact summary layer that tells operators what kind of work happened before they read individual records."
+    ]
+  },
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_output_dir": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f",
+    "selected_source_file": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0e2f9c38d8167142016a3350286f04819188cf1399a7a85bca.png",
+    "workspace_file": "web/assets/system/path-chapter-spoils-20260618.png",
+    "prompt": "A 3x2 sprite sheet of six collectible achievement medallions for an agent-company path archive: proof seal, unlock coin, gate lock, service contract, task token, trace crystal. Polished 3D game UI medals, premium dark sci-fi operations dashboard, no text, no watermark."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "web/assets/system/path-chapter-spoils-20260618.png",
+      "tests/test_agent_company_atlas_path_chapter_spoils.py",
+      "reports/agent-company-atlas-path-chapter-spoils-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "pathChapterArchiveItems(trail).counts",
+      "existing pathEventGlyphType classification",
+      "generated path-chapter-spoils-20260618.png sprite sheet",
+      "Visual Asset Vault system records"
+    ],
+    "ui_contract": [
+      "Render Chapter Spoils inside the selected Chapter Archive record deck.",
+      "Derive six reward classes from the selected chapter: Proof Seal, Unlock Coin, Gate Lock, Service Writ, Task Token, and Trace Crystal.",
+      "Show earned state for nonzero chapter counts and locked state for zero-count rewards.",
+      "Use the generated 3x2 medallion sheet as real sprite art, not placeholder shapes.",
+      "Register the medallion sheet in Visual Asset Vault as a system asset.",
+      "Keep the shelf responsive with no clipped labels or horizontal overflow."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_spoils.py -q failed before frontend wiring on missing function pathChapterSpoils.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_spoils.py -q passed after implementation."
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-spoils-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Spoils header '2 of 6 earned 06/15', six badges, Proof Seal 22, Unlock Coin 21, four locked rewards, correct sprite positions, generated asset background, no bad rectangles, and no horizontal overflow."
+    },
+    "alternate_chapter": {
+      "status": "passed",
+      "evidence": "Selecting 06/14 showed '3 of 6 earned' with Unlock Coin 10, Service Writ 6, and Trace Crystal 5 earned while Proof, Gate, and Task stayed locked."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one spoils shelf, six badges, generated medal backgrounds, no bad rectangles, no clipped spoils text, and no horizontal overflow."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "spoils_contract_test": "passed",
+      "console_errors": 0
+    }
+  }
+}

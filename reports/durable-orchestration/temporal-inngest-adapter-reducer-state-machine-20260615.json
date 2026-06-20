@@ -1,0 +1,132 @@
+{
+  "api_calls": false,
+  "blocked_transition_policy": [
+    "needs_review -> assigned without explicit approval",
+    "needs_review -> started without approval, assignment, and readiness",
+    "rejected -> assigned by replay",
+    "rejected -> started by replay",
+    "complete -> started by replay",
+    "any -> model_api_execution without provider/model/max_cost/credential/output-scope approval",
+    "any -> browser/account/payment/wallet/public/security-test/legal commitment without separate approval"
+  ],
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T14:36:50Z",
+  "next_local_proof": "write_reducer_fixture_and_cli_dry_run_contract_no_runtime_execution",
+  "reducer_contract": {
+    "determinism_requirements": [
+      "Reducer output depends only on event payload, state_machine rules, risk_gate_resume_overrides, and live status snapshot used for validation.",
+      "Duplicate idempotency key returns already-observed/no-op semantics.",
+      "Reducer never grants approval, assigns workers, starts workers, emits events, schedules activities, or mutates service_requests."
+    ],
+    "input": "agent_company.service_request_event.v1 preview event",
+    "output": "local reducer decision object only",
+    "park_all_unapproved_transitions": true,
+    "terminal_rows_are_not_replayed": true
+  },
+  "risk_gate_resume_overrides": {
+    "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions": [
+      "signed-in browser approval",
+      "read-only prompt scope",
+      "no post/reply/like/follow/message/settings changes"
+    ],
+    "catalog_required_approval_no_external_action": [
+      "catalog approval",
+      "public read-only scope",
+      "no login/signup/form/public/payment action"
+    ],
+    "legal_kyc_tax_payment_requires_user_decision_no_commitment": [
+      "user legal/payment decision",
+      "no KYC/tax/payment entry by automation",
+      "no contract acceptance by replay"
+    ],
+    "model_api_call_requires_provider_model_cost_lane_and_artifact_scope": [
+      "provider selected",
+      "model selected",
+      "max cost set",
+      "credential route approved",
+      "lane/output artifact scope approved"
+    ],
+    "security_report_submission_requires_user_and_cro_approval_no_submission": [
+      "user approval",
+      "CRO approval",
+      "program scope verified",
+      "submission route verified",
+      "no automatic submission"
+    ]
+  },
+  "runtime_boundary": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_functions_registered": 0,
+    "inngest_service_started": false,
+    "reducer_invocations_against_live_runtime": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_reducer_state_machine.v1",
+  "source_event_schema_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-event-schema-20260615.json",
+  "source_replay_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-replay-validation-20260615.json",
+  "state_machine": {
+    "complete": {
+      "allowed_event_previews": [
+        "agent_company/service_request.completed"
+      ],
+      "approval_granted": false,
+      "assign_worker": false,
+      "emit_followup_event": false,
+      "ledger_mutation_allowed": false,
+      "output_state": "terminal.completed_from_ledger_snapshot",
+      "required_gates_before_resume": [
+        "new explicit task or service request; do not replay-start terminal rows"
+      ],
+      "schedule_activity": false,
+      "start_worker": false,
+      "terminal": true
+    },
+    "needs_review": {
+      "allowed_event_previews": [
+        "agent_company/service_request.needs_review"
+      ],
+      "approval_granted": false,
+      "assign_worker": false,
+      "emit_followup_event": false,
+      "ledger_mutation_allowed": false,
+      "output_state": "parked.awaiting_human_review",
+      "required_gates_before_resume": [
+        "human approval packet",
+        "CRO/CEO approval if risk gate requires it",
+        "exact request scope match",
+        "eligible worker pool registered",
+        "artifact output path approved"
+      ],
+      "schedule_activity": false,
+      "start_worker": false,
+      "terminal": false
+    },
+    "rejected": {
+      "allowed_event_previews": [
+        "agent_company/service_request.rejected"
+      ],
+      "approval_granted": false,
+      "assign_worker": false,
+      "emit_followup_event": false,
+      "ledger_mutation_allowed": false,
+      "output_state": "terminal.rejected_from_ledger_snapshot",
+      "required_gates_before_resume": [
+        "new explicit request; do not revive rejected rows by replay"
+      ],
+      "schedule_activity": false,
+      "start_worker": false,
+      "terminal": true
+    }
+  },
+  "title": "Durable adapter reducer/state machine for service-request event previews, no execution"
+}

@@ -1,0 +1,297 @@
+{
+  "schema_version": "agent_company.dbos_workflow_step_boundary_fixture.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-dbos-workflow-step-boundary-fixture-v1-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_urls": [
+    "https://docs.dbos.dev/python/programming-guide",
+    "https://docs.dbos.dev/python/tutorials/workflow-tutorial",
+    "https://docs.dbos.dev/python/tutorials/step-tutorial",
+    "https://docs.dbos.dev/python/tutorials/queue-tutorial",
+    "https://docs.dbos.dev/python/reference/queues",
+    "https://docs.dbos.dev/python/reference/dbos-class",
+    "https://docs.dbos.dev/python/reference/contexts",
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/dbos/"
+  ],
+  "source_service_worker_schema_path": "E:\\agent-company-lab\\architecture\\service-worker-request-v1.schema.json",
+  "source_service_worker_queue_path": "E:\\agent-company-lab\\reports\\service-worker-request-queue-latest.json",
+  "source_inngest_fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\inngest-event-flow-control-fixture-v1-20260617.json",
+  "workflow_contract": {
+    "workflow_type": "ServiceRequestWorkflow",
+    "workflow_id_template": "agent-company/dbos/service-request/{service_request_id}",
+    "defined_not_decorated": true,
+    "steps_defined_not_decorated": true,
+    "dbos_package_imported": false,
+    "dbos_launch_called": false,
+    "database_provisioned": false,
+    "queue_registered": false,
+    "workflow_started": false,
+    "workflow_enqueued": false,
+    "step_executed": false,
+    "ceo_ledger_remains_source_of_truth": true
+  },
+  "step_boundary_policy": {
+    "allowed_step_kinds": [
+      "local_validate_request_packet",
+      "local_render_human_review_summary",
+      "local_render_terminal_snapshot",
+      "local_write_report_placeholder"
+    ],
+    "forbidden_step_kinds": [
+      "external_browser",
+      "account_registration",
+      "wallet_setup",
+      "payment_or_payout",
+      "public_action",
+      "security_testing",
+      "model_api_call",
+      "live_network_api",
+      "call_external_api",
+      "mutate_service_request",
+      "dbos_start_workflow",
+      "dbos_enqueue_workflow"
+    ],
+    "needs_review_state": "parked.awaiting_human_review",
+    "terminal_complete_state": "terminal.completed_from_ledger_snapshot",
+    "terminal_rejected_state": "terminal.rejected_from_ledger_snapshot",
+    "every_step_is_preview_only": true,
+    "step_outputs_must_be_serializable": true,
+    "service_request_mutation_requires_existing_human_decision_packet": true
+  },
+  "cases": [
+    {
+      "case_id": "case-valid-browser-readonly-needs-review-parked",
+      "service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "status_snapshot": "needs_review",
+      "workflow_id": "agent-company/dbos/service-request/req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "workflow_options": {
+        "deduplication_id": "service-request:req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "queue_name": "service_request_gate_review",
+        "queue_partition_key": "digital_products_templates_plugins",
+        "priority": 72
+      },
+      "dbos_runtime_edges": {
+        "launch_requested": false,
+        "database_provision_requested": false,
+        "queue_registration_requested": false,
+        "workflow_start_requested": false,
+        "workflow_enqueue_requested": false
+      },
+      "planned_steps": [
+        {
+          "step_id": "validate_packet",
+          "step_kind": "local_validate_request_packet",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": false
+        },
+        {
+          "step_id": "render_review_summary",
+          "step_kind": "local_render_human_review_summary",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": false
+        }
+      ],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-valid-model-api-request-needs-review-parked",
+      "service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "status_snapshot": "needs_review",
+      "workflow_id": "agent-company/dbos/service-request/req-pydantic-ai-model-backed-adapter-20260614",
+      "workflow_options": {
+        "deduplication_id": "service-request:req-pydantic-ai-model-backed-adapter-20260614",
+        "queue_name": "service_request_gate_review",
+        "queue_partition_key": "platform_engineering",
+        "priority": 80
+      },
+      "dbos_runtime_edges": {
+        "launch_requested": false,
+        "database_provision_requested": false,
+        "queue_registration_requested": false,
+        "workflow_start_requested": false,
+        "workflow_enqueue_requested": false
+      },
+      "planned_steps": [
+        {
+          "step_id": "validate_model_api_scope",
+          "step_kind": "local_validate_request_packet",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": false
+        },
+        {
+          "step_id": "render_model_api_review",
+          "step_kind": "local_render_human_review_summary",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": false
+        }
+      ],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-terminal-complete-no-workflow-replay",
+      "service_request_id": "req-test-lifecycle-approve-20260614",
+      "status_snapshot": "complete",
+      "workflow_id": "agent-company/dbos/service-request/req-test-lifecycle-approve-20260614",
+      "workflow_options": {
+        "deduplication_id": "service-request:req-test-lifecycle-approve-20260614",
+        "queue_name": "service_request_gate_review",
+        "queue_partition_key": "platform_engineering",
+        "priority": 10
+      },
+      "dbos_runtime_edges": {
+        "launch_requested": false,
+        "database_provision_requested": false,
+        "queue_registration_requested": false,
+        "workflow_start_requested": false,
+        "workflow_enqueue_requested": false
+      },
+      "planned_steps": [
+        {
+          "step_id": "render_terminal_complete",
+          "step_kind": "local_render_terminal_snapshot",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": false
+        }
+      ],
+      "expected_state": "terminal.completed_from_ledger_snapshot",
+      "expected_terminal": true,
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-terminal-rejected-no-revive",
+      "service_request_id": "req-test-lifecycle-reject-20260614",
+      "status_snapshot": "rejected",
+      "workflow_id": "agent-company/dbos/service-request/req-test-lifecycle-reject-20260614",
+      "workflow_options": {
+        "deduplication_id": "service-request:req-test-lifecycle-reject-20260614",
+        "queue_name": "service_request_gate_review",
+        "queue_partition_key": "platform_engineering",
+        "priority": 10
+      },
+      "dbos_runtime_edges": {
+        "launch_requested": false,
+        "database_provision_requested": false,
+        "queue_registration_requested": false,
+        "workflow_start_requested": false,
+        "workflow_enqueue_requested": false
+      },
+      "planned_steps": [
+        {
+          "step_id": "render_terminal_rejected",
+          "step_kind": "local_render_terminal_snapshot",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": false
+        }
+      ],
+      "expected_state": "terminal.rejected_from_ledger_snapshot",
+      "expected_terminal": true,
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-invalid-step-kind-external-api",
+      "service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "status_snapshot": "needs_review",
+      "workflow_id": "agent-company/dbos/service-request/req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "workflow_options": {
+        "deduplication_id": "service-request:req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "queue_name": "service_request_gate_review",
+        "queue_partition_key": "paid_code_bounties",
+        "priority": 72
+      },
+      "dbos_runtime_edges": {
+        "launch_requested": false,
+        "database_provision_requested": false,
+        "queue_registration_requested": false,
+        "workflow_start_requested": false,
+        "workflow_enqueue_requested": false
+      },
+      "planned_steps": [
+        {
+          "step_id": "call_algora_live_api",
+          "step_kind": "call_external_api",
+          "executes_now": false,
+          "mutates_service_request": false,
+          "external_side_effect": true
+        }
+      ],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "expected_failures": [
+        "forbidden_step_kind:call_external_api",
+        "step_external_side_effect:call_algora_live_api"
+      ]
+    },
+    {
+      "case_id": "case-invalid-db-runtime-start-and-enqueue",
+      "service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "status_snapshot": "needs_review",
+      "workflow_id": "agent-company/dbos/service-request/req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "workflow_options": {
+        "deduplication_id": "missing-request-prefix",
+        "queue_name": "service_request_gate_review",
+        "queue_partition_key": "security_bounty_private_reports",
+        "priority": 72
+      },
+      "dbos_runtime_edges": {
+        "launch_requested": true,
+        "database_provision_requested": true,
+        "queue_registration_requested": true,
+        "workflow_start_requested": true,
+        "workflow_enqueue_requested": true
+      },
+      "planned_steps": [
+        {
+          "step_id": "mutate_request_status",
+          "step_kind": "mutate_service_request",
+          "executes_now": true,
+          "mutates_service_request": true,
+          "external_side_effect": false
+        }
+      ],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "expected_failures": [
+        "deduplication_id_missing_service_request",
+        "forbidden_runtime_edge:database_provision_requested",
+        "forbidden_runtime_edge:launch_requested",
+        "forbidden_runtime_edge:queue_registration_requested",
+        "forbidden_runtime_edge:workflow_enqueue_requested",
+        "forbidden_runtime_edge:workflow_start_requested",
+        "forbidden_step_kind:mutate_service_request",
+        "planned_step_executes_now:mutate_request_status",
+        "step_mutates_service_request:mutate_request_status"
+      ]
+    }
+  ],
+  "runtime_boundary": {
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "dbos_package_imported": false,
+    "dbos_launch_called": false,
+    "database_connections": 0,
+    "database_provisioning": false,
+    "queues_registered": 0,
+    "workflows_started": 0,
+    "workflows_enqueued": 0,
+    "steps_executed": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_local_test": "pydantic_durable_adapter_manifest_fixture_without_model_api_calls"
+}

@@ -1,0 +1,106 @@
+from __future__ import annotations
+
+from typing import Any
+
+"""Revision-pass digital-product integrity specs."""
+
+from .constants import (
+    DIGITAL_PRODUCTS_LOCAL_REVISED_COMPLETENESS_VALIDATION_JSON,
+    DIGITAL_PRODUCTS_LOCAL_REVISION_PASS_VALIDATION_JSON,
+)
+
+
+def digital_product_review_revision_integrity_specs() -> list[dict[str, Any]]:
+    return [
+        {
+            "id": "digital_products_local_revision_pass",
+            "label": "Digital Products Local Revision Pass",
+            "path": DIGITAL_PRODUCTS_LOCAL_REVISION_PASS_VALIDATION_JSON,
+            "count_key": "revised_file_count",
+            "expected": {
+                "schema_version": "agent_company.digital_products_local_revision_pass_validation.v1",
+                "revision_lane_id": "digital_products_templates_plugins",
+                "revision_task_id": "task-digital-products-local-revision-pass-20260616",
+                "source_decision_task_id": "task-digital-products-local-private-review-decision-20260616",
+                "source_decision_evidence_id": "digital-products-local-private-review-decision-20260616",
+                "selected_candidate_id": "ai-builder-launch-checklist-pack",
+                "selected_decision_id": "continue-local",
+                "revision_item_count": 6,
+                "revised_file_count": 6,
+                "filled_example_count": 1,
+                "boundary_phrase_count": 7,
+                "placeholder_stub_count": 0,
+                "blocked_by_gate_count": 4,
+                "local_decision": "revision_pass_ready_for_local_completeness_check",
+                "live_tasks_created": 1,
+                "live_tasks_completed": 1,
+                "tasks_table_rows_before": 172,
+                "tasks_table_rows_after": 173,
+                "task_rows_inserted_by_revision": 1,
+                "lane_evidence_rows_before": 87,
+                "lane_evidence_rows_after": 88,
+                "evidence_rows_inserted_or_updated": 1,
+                "all_checks_passed": True,
+                "failure_count": 0,
+                "browser_sessions_started": 0,
+                "account_actions": False,
+                "wallet_actions": False,
+                "payment_actions": False,
+                "public_actions": False,
+                "security_testing_actions": False,
+                "real_money_actions": False,
+                "service_requests_updated": 0,
+                "service_requests_assigned": 0,
+                "worker_starts": 0,
+                "api_calls": False,
+                "external_side_effects": False,
+            },
+        },
+        {
+            "id": "digital_products_local_revised_completeness",
+            "label": "Digital Products Local Revised Completeness",
+            "path": DIGITAL_PRODUCTS_LOCAL_REVISED_COMPLETENESS_VALIDATION_JSON,
+            "count_key": "completeness_check_count",
+            "expected": {
+                "schema_version": "agent_company.digital_products_local_revised_completeness_validation.v1",
+                "check_lane_id": "digital_products_templates_plugins",
+                "check_task_id": "task-digital-products-local-revised-completeness-20260616",
+                "source_revision_task_id": "task-digital-products-local-revision-pass-20260616",
+                "source_revision_evidence_id": "digital-products-local-revision-pass-20260616",
+                "selected_candidate_id": "ai-builder-launch-checklist-pack",
+                "revised_file_count": 6,
+                "completeness_check_count": 8,
+                "passed_check_count": 8,
+                "filled_example_count": 1,
+                "boundary_phrase_count": 7,
+                "placeholder_stub_count": 0,
+                "blocked_by_gate_count": 4,
+                "local_decision": "revised_package_complete_for_gate_decision_no_external_action",
+                "live_tasks_created": 1,
+                "live_tasks_completed": 1,
+                "tasks_table_rows_before": 174,
+                "tasks_table_rows_after": 175,
+                "task_rows_inserted_by_check": 1,
+                "lane_evidence_rows_before": 88,
+                "lane_evidence_rows_after": 89,
+                "evidence_rows_inserted_or_updated": 1,
+                "all_checks_passed": True,
+                "failure_count": 0,
+                "browser_sessions_started": 0,
+                "account_actions": False,
+                "wallet_actions": False,
+                "payment_actions": False,
+                "public_actions": False,
+                "security_testing_actions": False,
+                "real_money_actions": False,
+                "service_requests_updated": 0,
+                "service_requests_assigned": 0,
+                "worker_starts": 0,
+                "api_calls": False,
+                "external_side_effects": False,
+            },
+        },
+    ]
+
+
+__all__ = ["digital_product_review_revision_integrity_specs"]

@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-stage-gate-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-stage-gate-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-stage-gate-v1-20260619",
+  "title": "Command Cockpit Stage Gate",
+  "createdAt": "2026-06-19T07:38:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Separated the Command Cockpit from the tactical Map so the selected lane opens as one focused game stage instead of a crowded command stack.",
+  "proof": [
+    "Added tested Cockpit-stage CSS that switches the workspace to a two-column lane rail plus detail layout.",
+    "Hid the atlas map only in the Cockpit stage while preserving the dedicated Map teleport as the tactical lane-map level.",
+    "Updated README, snapshot generation, regression floors, and trace metadata so the standalone atlas records the stage-gate unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

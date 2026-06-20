@@ -1,0 +1,73 @@
+{
+  "schema_version": "agent_company.operational_infra_radar_wave16_report.v1",
+  "generated_utc": "2026-06-17T21:11:59Z",
+  "task_id": "task-agent-company-operational-infra-radar-wave16-20260618",
+  "dataset_json": "E:\\agent-company-lab\\data\\agent-company-operational-infra-radar-wave16-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\agent-company-operational-infra-radar-wave16-20260618.csv",
+  "repo_count": 14,
+  "primary_source_count": 10,
+  "top_findings": [
+    {
+      "finding_id": "agent_gateway_is_now_a_first_class_layer",
+      "evidence": [
+        "agentgateway/agentgateway",
+        "IBM/mcp-context-forge",
+        "katanemo/plano"
+      ],
+      "decision": "Promote local egress ledger plus service catalog into a future gateway-facing registry model before live MCP/model/tool traffic.",
+      "next_build": "agent_company_gateway_readiness_matrix_v1"
+    },
+    {
+      "finding_id": "browser_and_computer_use_need_separate_worker_classes",
+      "evidence": [
+        "browser-use/browser-use",
+        "vercel-labs/agent-browser",
+        "trycua/cua",
+        "agent-infra/sandbox"
+      ],
+      "decision": "Keep browser-only workers, computer-use sandboxes, and all-in-one sandboxes as separate activation paths.",
+      "next_build": "browser_computer_use_worker_class_matrix_v1"
+    },
+    {
+      "finding_id": "observability_must_be_productized_for_the_ceo_layer",
+      "evidence": [
+        "VoltAgent/voltagent",
+        "agentgateway/agentgateway",
+        "IBM/mcp-context-forge"
+      ],
+      "decision": "Convert trace_events, artifacts, outcomes, and service requests into replayable health packets for CEO/Atlas views.",
+      "next_build": "checkpoint_resume_ui_packet_design_v1"
+    },
+    {
+      "finding_id": "cloud_deployment_is_powerful_but_not_the_next_step",
+      "evidence": [
+        "cloudflare/agents",
+        "Azure-Samples/durable-task-extension-for-agent-framework"
+      ],
+      "decision": "Study cloud durable-agent platforms as deployment references only; local checkpoint/resume and signed approval must come first.",
+      "next_build": "local_to_cloud_deployment_gate_matrix_v1"
+    }
+  ],
+  "recommended_next_sequence": [
+    "checkpoint_resume_ui_packet_design_v1",
+    "agent_company_gateway_readiness_matrix_v1",
+    "browser_computer_use_worker_class_matrix_v1",
+    "local_to_cloud_deployment_gate_matrix_v1"
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "payment_actions": false,
+    "wallet_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Design checkpoint/resume UI packets that expose lane handoff state without creating tasks, assigning service requests, or starting workers."
+}

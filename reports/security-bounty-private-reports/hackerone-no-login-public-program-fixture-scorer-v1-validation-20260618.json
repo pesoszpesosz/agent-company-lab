@@ -1,0 +1,100 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "credentials_or_private_assets_used": 0,
+    "directory_edits_or_feedback": 0,
+    "external_side_effects": 0,
+    "hackerone_account_or_login": false,
+    "hactivity_votes_or_follows": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "programs_bookmarked_or_followed": 0,
+    "programs_contacted": 0,
+    "public_comments_or_disclosures": 0,
+    "report_submission_ready_count": 0,
+    "reports_submitted": 0,
+    "saved_program_rows_created": 4,
+    "scored_rows": 4,
+    "security_testing_allowed_count": 0,
+    "security_testing_performed": 0,
+    "service_requests_mutated": 0,
+    "static_candidate_drafts": 1,
+    "targets_tested": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "at_least_four_saved_program_rows",
+      "passed": true
+    },
+    {
+      "name": "saved_rows_match_scores",
+      "passed": true
+    },
+    {
+      "name": "has_static_candidate_draft",
+      "passed": true
+    },
+    {
+      "name": "all_rows_have_static_draft_or_kill_reason",
+      "passed": true
+    },
+    {
+      "name": "vdp_rows_not_promoted_as_cash",
+      "passed": true
+    },
+    {
+      "name": "zero_submission_ready",
+      "passed": true
+    },
+    {
+      "name": "zero_security_testing_allowed",
+      "passed": true
+    },
+    {
+      "name": "source_fields_present",
+      "passed": true
+    },
+    {
+      "name": "source_kill_reasons_present",
+      "passed": true
+    },
+    {
+      "name": "fixture_exists",
+      "passed": true
+    },
+    {
+      "name": "results_exists",
+      "passed": true
+    },
+    {
+      "name": "no_account_browser_or_program_contact",
+      "passed": true
+    },
+    {
+      "name": "no_directory_or_hacktivity_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_targets_or_testing",
+      "passed": true
+    },
+    {
+      "name": "no_reports_payments_or_public_actions",
+      "passed": true
+    },
+    {
+      "name": "no_service_runtime_model_mutation",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T09:10:56Z",
+  "schema_version": "security_bounty.hackerone_no_login_public_program_fixture_scorer.validation.v1",
+  "task_id": "task-hackerone-no-login-public-program-fixture-scorer-v1-20260618"
+}

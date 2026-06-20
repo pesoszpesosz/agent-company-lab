@@ -1,0 +1,43 @@
+{
+  "artifact": "agent-company-operational-infra-radar-wave16",
+  "created_utc": "2026-06-17T21:11:59Z",
+  "task_id": "task-agent-company-operational-infra-radar-wave16-20260618",
+  "trace_id": "trace-agent-company-operational-infra-radar-wave16-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "dataset_json": "E:\\agent-company-lab\\data\\agent-company-operational-infra-radar-wave16-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\agent-company-operational-infra-radar-wave16-20260618.csv",
+  "report_json": "E:\\agent-company-lab\\reports\\agent-company-operational-infra-radar-wave16-20260618.json",
+  "report_md": "E:\\agent-company-lab\\reports\\agent-company-operational-infra-radar-wave16-20260618.md",
+  "validation_path": "E:\\agent-company-lab\\reports\\agent-company-operational-infra-radar-wave16-validation-20260618.json",
+  "summary": {
+    "repo_count": 14,
+    "primary_source_count": 10,
+    "top_categories": [
+      "browser_worker_runtime",
+      "computer_use_sandbox",
+      "mcp_a2a_registry_gateway",
+      "agentic_proxy_mcp_a2a_llm_gateway",
+      "agent_observability_platform",
+      "durable_edge_agent_platform"
+    ],
+    "all_checks_passed": true,
+    "failure_count": 0
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "payment_actions": false,
+    "wallet_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Design checkpoint/resume UI packets that expose lane handoff state without creating tasks, assigning service requests, or starting workers."
+}

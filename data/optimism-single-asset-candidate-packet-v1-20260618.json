@@ -1,0 +1,182 @@
+{
+  "schema_version": "agent_company.optimism_single_asset_candidate_packet.v1",
+  "generated_utc": "2026-06-17T22:00:11Z",
+  "task_id": "task-optimism-single-asset-candidate-packet-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "selected_asset": {
+    "asset_id": "optimism-sc-005",
+    "scope_name": "OptimismPortal",
+    "implementation_focus": "OptimismPortal2",
+    "category": "Smart Contract",
+    "scope_target": "https://etherscan.io/address/0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+    "implementation_source_url": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol",
+    "implementation_source_sha256": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F",
+    "implementation_source_lines": 790,
+    "candidate_filter_id": "olf-001",
+    "candidate_filter_route": "local_review_allowed_quality_gate_required"
+  },
+  "source_urls": [
+    "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol",
+    "https://specs.optimism.io/fault-proof/stage-one/optimism-portal.html",
+    "https://specs.optimism.io/protocol/withdrawals.html",
+    "https://github.com/ethereum-optimism/optimism/issues/9710",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/optimism/scope/",
+    "https://immunefi.com/rules/",
+    "https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/"
+  ],
+  "scope_mapping": {
+    "asset_in_scope": true,
+    "impact_claim_status": "not_claimed",
+    "candidate_type": "single_asset_local_invariant_packet",
+    "allowed_now": [
+      "read-only public source review",
+      "local invariant memo",
+      "local PoC plan design",
+      "duplicate and report-quality gate annotation"
+    ],
+    "not_allowed_now": [
+      "mainnet testing",
+      "public testnet testing",
+      "fork execution",
+      "browser target testing",
+      "private report submission",
+      "public disclosure",
+      "wallet action",
+      "payment action"
+    ]
+  },
+  "source_observations": [
+    {
+      "observation_id": "osp-001",
+      "area": "portal_role",
+      "evidence": "OP Stack specs describe OptimismPortal as the primary L1/L2 deposit and withdrawal interface and state that withdrawals are checked against output roots declared valid by the fault proof system.",
+      "source": "https://specs.optimism.io/fault-proof/stage-one/optimism-portal.html"
+    },
+    {
+      "observation_id": "osp-002",
+      "area": "withdrawal_flow",
+      "evidence": "Withdrawal flow specs describe prove and finalize steps through OptimismPortal, including proof verification, challenge period, and replay-prevention finalization.",
+      "source": "https://specs.optimism.io/protocol/withdrawals.html"
+    },
+    {
+      "observation_id": "osp-003",
+      "area": "implementation_stranded_funds_duplicate",
+      "evidence": "A closed public issue documents funds sent directly to a portal implementation as a known edge case; future candidates must not repackage this without a distinct new bypass or impact.",
+      "source": "https://github.com/ethereum-optimism/optimism/issues/9710"
+    },
+    {
+      "observation_id": "osp-004",
+      "area": "source_snapshot",
+      "evidence": "OptimismPortal2.sol develop snapshot has 790 lines and local SHA-256 B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F.",
+      "source": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol"
+    }
+  ],
+  "local_invariant_review_plan": [
+    {
+      "invariant_id": "opi-001",
+      "name": "Pause gate covers prove and finalize",
+      "source_lines": "OptimismPortal2.sol lines 368-377 and 542-549",
+      "local_question": "Can any withdrawal proof or finalization path bypass `_assertNotPaused()`?",
+      "duplicate_gate_notes": "Not a claim unless bypass is concrete and not a privileged-only/admin scenario.",
+      "quality_gate_notes": "Requires exact call path, affected state, and local reproduction plan."
+    },
+    {
+      "invariant_id": "opi-002",
+      "name": "Unsafe targets remain blocked",
+      "source_lines": "OptimismPortal2.sol lines 379-382, 563-566, and 774-778",
+      "local_question": "Can a withdrawal reach the portal itself, ETHLockbox, or an equivalent unsafe target through an alternate path?",
+      "duplicate_gate_notes": "Must avoid the documented direct-implementation stranded-funds issue unless a new bypass exists.",
+      "quality_gate_notes": "Needs target classification and proof of direct protocol impact."
+    },
+    {
+      "invariant_id": "opi-003",
+      "name": "Dispute game eligibility is complete",
+      "source_lines": "OptimismPortal2.sol lines 389-407 and 650-653",
+      "local_question": "Are all invalid dispute-game states rejected both during proof and finalization readiness checks?",
+      "duplicate_gate_notes": "Must clear op-dispute-mon and proof-of-whale exclusions before promotion.",
+      "quality_gate_notes": "Needs exact game state matrix and local fixture plan."
+    },
+    {
+      "invariant_id": "opi-004",
+      "name": "Output-root and withdrawal inclusion binding",
+      "source_lines": "OptimismPortal2.sol lines 437-471",
+      "local_question": "Can output-root proof data and withdrawal storage proof data become inconsistent without reverting?",
+      "duplicate_gate_notes": "Must avoid upstream/known fault-proof issue overlap.",
+      "quality_gate_notes": "Needs local proof data fixture and expected revert/success assertions."
+    },
+    {
+      "invariant_id": "opi-005",
+      "name": "Proof submitter isolation",
+      "source_lines": "OptimismPortal2.sol lines 421-485 and 620-623",
+      "local_question": "Can one proof submitter reset, block, or finalize another submitter's valid withdrawal proof unexpectedly?",
+      "duplicate_gate_notes": "Check existing multiple-proof design rationale before any claim.",
+      "quality_gate_notes": "Needs per-submitter state transition table."
+    },
+    {
+      "invariant_id": "opi-006",
+      "name": "Replay protection before external call",
+      "source_lines": "OptimismPortal2.sol lines 568-575 and 625-628",
+      "local_question": "Is `finalizedWithdrawals` always set before external target execution, and can any revert/estimation path unwind assumptions?",
+      "duplicate_gate_notes": "Do not claim generic reentrancy without a concrete bypass of replay and l2Sender guards.",
+      "quality_gate_notes": "Needs local target-call fixture plan."
+    },
+    {
+      "invariant_id": "opi-007",
+      "name": "l2Sender guard and reset",
+      "source_lines": "OptimismPortal2.sol lines 556-595",
+      "local_question": "Can `l2Sender` remain non-default or be observed incorrectly across nested/failing finalization paths?",
+      "duplicate_gate_notes": "Privileged or target-contract-only behavior is not enough without direct in-scope impact.",
+      "quality_gate_notes": "Needs success/failure target matrix and state assertions."
+    },
+    {
+      "invariant_id": "opi-008",
+      "name": "ETHLockbox accounting on failed withdrawal target call",
+      "source_lines": "OptimismPortal2.sol lines 578-606 and 730-734",
+      "local_question": "When ETHLockbox mode is enabled, is ETH unlocked, used, and re-locked correctly across failed calls?",
+      "duplicate_gate_notes": "Must distinguish direct accounting bug from chain/operator configuration issue.",
+      "quality_gate_notes": "Needs local accounting invariant and failure-path fixture plan."
+    },
+    {
+      "invariant_id": "opi-009",
+      "name": "Deposit gas and calldata bounds",
+      "source_lines": "OptimismPortal2.sol lines 667-720",
+      "local_question": "Do minimum gas, calldata length, creation target, and address aliasing checks prevent unpaid or misattributed L2 resource usage?",
+      "duplicate_gate_notes": "Large data/gas griefing is a documented exclusion unless a distinct new impact exists.",
+      "quality_gate_notes": "Needs paid-resource and bounds-analysis memo."
+    },
+    {
+      "invariant_id": "opi-010",
+      "name": "Custom gas token value restriction",
+      "source_lines": "OptimismPortal2.sol lines 384-387, 551-554, 678-680, and 742-748",
+      "local_question": "Are ETH value paths fully blocked when custom gas token mode is active?",
+      "duplicate_gate_notes": "Configuration-only claims are weak unless they show direct protocol code impact.",
+      "quality_gate_notes": "Needs mode matrix and value-flow proof plan."
+    }
+  ],
+  "duplicate_and_quality_status": {
+    "duplicate_matrix_status": "referenced_not_passed_for_specific_finding",
+    "quality_gate_status": "referenced_not_passed_for_specific_finding",
+    "submission_ready_count": 0,
+    "reason": "This packet selects an asset and review plan only; it does not allege a vulnerability or provide a runnable PoC."
+  },
+  "next_action": {
+    "next_packet": "optimism_portal_invariant_memo_v1",
+    "instruction": "Review exactly one invariant group locally, beginning with opi-007 or opi-008, and produce a memo plus runnable local fixture plan. Do not execute fork tests, live target tests, or submissions."
+  },
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

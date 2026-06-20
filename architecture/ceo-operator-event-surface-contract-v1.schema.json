@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.ceo_operator_event_surface_contract.v1",
+  "title": "CEO Operator Event Surface Contract v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "event_surface_status",
+    "event_type",
+    "event_label",
+    "producer_role",
+    "consumer_role",
+    "source_artifact_paths",
+    "payload_contract",
+    "required_gate_ids",
+    "approval_granted_by_event",
+    "event_transport_enabled",
+    "sse_enabled",
+    "websocket_enabled",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.ceo_operator_event_surface_contract.v1"
+    },
+    "event_surface_status": {
+      "const": "report_only_contract"
+    },
+    "event_transport_enabled": {
+      "const": false
+    },
+    "sse_enabled": {
+      "const": false
+    },
+    "websocket_enabled": {
+      "const": false
+    },
+    "approval_granted_by_event": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "service_request_mutation_allowed": {
+      "const": false
+    },
+    "model_api_call_allowed": {
+      "const": false
+    },
+    "mcp_tool_call_allowed": {
+      "const": false
+    },
+    "public_action_allowed": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

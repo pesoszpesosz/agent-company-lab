@@ -1,0 +1,29 @@
+{
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "preflight_verdict": "not_ready_register_candidate",
+  "activation_score": 4,
+  "max_score": 10,
+  "gate_count": 10,
+  "pass_gate_count": 2,
+  "blocked_or_missing_gate_count": 8,
+  "negative_fixture_count": 13,
+  "recommended_next_build": "local_runtime_adapter_pool_activation_contract_v1_schema_negative_fixture_suite",
+  "runtime_boundary": {
+    "report_only": true,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "command_previews_executed": 0,
+    "local_runtime_processes_started": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "dependencies_installed": 0,
+    "credentials_created": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

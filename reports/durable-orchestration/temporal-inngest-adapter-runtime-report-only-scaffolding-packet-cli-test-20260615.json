@@ -1,0 +1,73 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_report_only_scaffolding_packet_cli_test.v1",
+    "created_at":  "2026-06-15T16:17:30Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-report-only-scaffolding-packet-cli-20260615",
+    "command_added":  "write-durable-adapter-runtime-report-only-scaffolding-packet",
+    "source_sha256_before":  "AF74F16E2F432A9214667A9DF976EB1C452752706901486D3DBBB0BB63E344D4",
+    "source_sha256_after":  "1E4BA8E24D03DE411DEB2354B3B017172D62E398DD375EB63360DB783E1DD5A9",
+    "commands_run":  [
+                         "python -m py_compile E:\\agent-company-lab\\tools\\agent_company.py",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-report-only-scaffolding-packet --help",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-report-only-scaffolding-packet",
+                         "python -m json.tool temporal-inngest-adapter-runtime-report-only-scaffolding-packet-latest.json",
+                         "python -m json.tool temporal-inngest-adapter-runtime-report-only-scaffolding-packet-validation-latest.json",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-service-worker-chain-integrity --path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md --json-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json --validation-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                     ],
+    "generated_artifacts":  {
+                                "packet_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-packet-latest.json",
+                                "packet_validation_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-packet-validation-latest.json",
+                                "packet_markdown":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-packet-latest.md",
+                                "chain_validation_json":  "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                            },
+    "hashes":  {
+                   "source":  "1E4BA8E24D03DE411DEB2354B3B017172D62E398DD375EB63360DB783E1DD5A9",
+                   "packet_json":  "C3582D700DC0CFFD4FDE8B7E36C33077C2D1AA81B42CB8E5A56AE6C043FE23E0",
+                   "packet_validation_json":  "3EEFE07C820CFF5987E9A4AF720063B40F087D189ECD11085BA548AC20281F83",
+                   "packet_markdown":  "C4A6F4F93D9EECAB36539A719EA46BE1089C9872F308D0A2DDDB3EBBEB2A7F24",
+                   "chain_validation_json":  "D125050174EF4E9A5DC28DF5774C6733EA685CCE319E8D3ACAB4B3ED2867CB8F"
+               },
+    "validation_summary":  {
+                               "packet_component_count":  5,
+                               "source_report_only_fixture_count":  5,
+                               "source_accepted_report_only_fixture_count":  5,
+                               "all_packet_components_report_only":  true,
+                               "runtime_component_count":  0,
+                               "runtime_side_effect_component_count":  0,
+                               "executable_code_component_count":  0,
+                               "runtime_implementation_allowed":  false,
+                               "runtime_code_write_allowed":  false,
+                               "report_only_scaffolding_allowed":  true,
+                               "forbidden_runtime_import_count":  0,
+                               "model_api_gate_remains_parked":  true,
+                               "model_api_pool_registered":  false,
+                               "all_checks_passed":  true,
+                               "failure_count":  0
+                           },
+    "chain_integrity":  {
+                            "checked_report_count":  23,
+                            "failure_count":  0,
+                            "all_checks_passed":  true
+                        },
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_effects":  {
+                                    "status_unchanged":  true,
+                                    "model_api_request_status":  "needs_review",
+                                    "model_api_request_assigned":  false,
+                                    "model_api_pool_registered":  false,
+                                    "service_request_mutation_count":  0
+                                },
+    "next_action":  "Materialize the packet components as local markdown/JSON scaffolding artifacts, still without executable runtime adapter code."
+}

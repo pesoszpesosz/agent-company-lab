@@ -1,0 +1,34 @@
+{
+  "schema_version": "agent_company.security_report_quality_gate_validation.v1",
+  "generated_utc": "2026-06-17T21:54:02Z",
+  "task_id": "task-security-report-quality-gate-v1-20260618",
+  "checked_files": [
+    "E:\\agent-company-lab\\data\\security-report-quality-gate-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\security-report-quality-gate-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\security-report-quality-gate-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\security-report-quality-gate-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\security-report-quality-gate-v1-trace-metadata-20260618.json"
+  ],
+  "gate_count": 17,
+  "expected_min_gate_count": 15,
+  "hard_stop_count": 7,
+  "submission_ready_count": 0,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

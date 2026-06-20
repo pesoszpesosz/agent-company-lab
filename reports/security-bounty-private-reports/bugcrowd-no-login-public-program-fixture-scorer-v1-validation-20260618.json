@@ -1,0 +1,101 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "bugcrowd_account_or_login": false,
+    "credentials_or_private_assets_used": 0,
+    "crowdstream_actions": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "programs_followed_or_feedback_sent": 0,
+    "programs_joined_or_invites_accepted": 0,
+    "public_comments_or_disclosures": 0,
+    "report_draft_save_ready_count": 0,
+    "report_submission_ready_count": 0,
+    "reports_submitted_or_drafts_saved": 0,
+    "saved_program_rows_created": 4,
+    "scored_rows": 4,
+    "security_testing_allowed_count": 0,
+    "security_testing_performed": 0,
+    "service_requests_mutated": 0,
+    "static_candidate_drafts": 1,
+    "support_tickets_or_contacts": 0,
+    "targets_tested": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "at_least_four_saved_program_rows",
+      "passed": true
+    },
+    {
+      "name": "saved_rows_match_scores",
+      "passed": true
+    },
+    {
+      "name": "has_static_candidate_draft",
+      "passed": true
+    },
+    {
+      "name": "all_rows_have_static_draft_or_kill_reason",
+      "passed": true
+    },
+    {
+      "name": "vdp_rows_not_promoted_as_cash",
+      "passed": true
+    },
+    {
+      "name": "zero_platform_drafts_or_submissions",
+      "passed": true
+    },
+    {
+      "name": "zero_security_testing_allowed",
+      "passed": true
+    },
+    {
+      "name": "source_fields_present",
+      "passed": true
+    },
+    {
+      "name": "source_kill_reasons_present",
+      "passed": true
+    },
+    {
+      "name": "fixture_exists",
+      "passed": true
+    },
+    {
+      "name": "results_exists",
+      "passed": true
+    },
+    {
+      "name": "no_account_browser_or_program_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_support_or_crowdstream",
+      "passed": true
+    },
+    {
+      "name": "no_targets_or_testing",
+      "passed": true
+    },
+    {
+      "name": "no_reports_payments_or_public_actions",
+      "passed": true
+    },
+    {
+      "name": "no_service_runtime_model_mutation",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T09:15:16Z",
+  "schema_version": "security_bounty.bugcrowd_no_login_public_program_fixture_scorer.validation.v1",
+  "task_id": "task-bugcrowd-no-login-public-program-fixture-scorer-v1-20260618"
+}

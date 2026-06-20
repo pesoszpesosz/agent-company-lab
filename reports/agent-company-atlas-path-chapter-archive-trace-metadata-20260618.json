@@ -1,0 +1,98 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-archive-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a generated-art Chapter Archive to Path Map so long lane histories become date-derived mission-journal chapters with clickable focus, Event Proof sync, and Event Stream reveal behavior.",
+  "design_research": {
+    "queries": [
+      "timeline grouped by date design pattern activity feed chapters",
+      "quest log UI design pattern milestones blockers history",
+      "game codex journal UI chapter archive design",
+      "Carbon Design System structured list progressive disclosure timeline",
+      "Clarity Design system timeline wizard multi step workflow"
+    ],
+    "source_urls": [
+      "https://m3.material.io/components",
+      "https://carbondesignsystem.com/patterns/disclosures-pattern/",
+      "https://carbondesignsystem.com/components/structured-list/usage/",
+      "https://clarity.design/documentation/timeline",
+      "https://clarity.design/documentation/multi-step-workflow",
+      "https://www.nngroup.com/articles/progressive-disclosure/"
+    ],
+    "pattern_notes": [
+      "Large histories need navigable structure, not only chronological scroll.",
+      "Progressive disclosure keeps the first view compact while letting deeper evidence open on demand.",
+      "Structured selectable rows and step/timeline patterns support direct movement between grouped stages."
+    ]
+  },
+  "generated_asset": {
+    "mode": "built-in image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0a92563f2565a700016a3348478df0819196aa7abff7df201b.png",
+    "workspace_path": "web/assets/system/path-chapter-archive-20260618.png",
+    "prompt": "Premium sci-fi archive console for a path-history chapter index, wide game UI background, layered glass archive plates, route markers, central circular scanner, dark edges for UI overlay, teal/amber/green accents, no text, no logos, no watermark."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/path-chapter-archive-20260618.png",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-chapter-archive-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathChapterFocusByLane",
+      "browser-only state.pathEventFocusByLane",
+      "browser-only state.trailLimitByLane",
+      "existing pathEventGlyphType classification",
+      "existing Visual Asset Vault system records"
+    ],
+    "ui_contract": [
+      "Group the selected lane trail into date-derived Chapter Archive cards without changing snapshot schema.",
+      "Show generated mission-journal artwork behind the archive panel and register it in the Visual Asset Vault.",
+      "Display chapter counts for proofs, gates, unlocks, and total chapter count.",
+      "Clicking a chapter focuses that chapter's newest event in Event Proof, synchronizes Route Replay when possible, and reveals enough Event Stream rows to include the chapter.",
+      "Keep layout responsive with no horizontal overflow across mobile, tablet, and desktop widths."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-archive-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, Path Map had 0 .path-chapter-archive panels and 0 data-path-chapter-focus controls while Path Map and Event Stream were present."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-archive-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Chapter Archive using path-chapter-archive-20260618.png, two chapter cards, 06/15 active with 43 route records, and stats for 2 chapters, 22 proofs, 0 gates, and 21 unlocks."
+    },
+    "chapter_click": {
+      "status": "passed",
+      "evidence": "Clicking the 06/14 chapter made it active, focused Event Proof on 'Create internal package manifest for Agent Skill Starter Kit v0', moved Event Proof position to 44/64, synced Route Replay to Stage 21 of 64, and expanded Event Stream to 64 of 64 visible."
+    },
+    "asset_vault": {
+      "status": "passed",
+      "evidence": "Visual Asset Vault rendered a system card titled Path Chapter Archive with archive badge and generated archive-console metadata."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one archive, two chapter controls, document width equal to client width, and no bad rectangles."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "edited_files_ascii": "passed",
+      "http_status": 200,
+      "console_errors": 0
+    }
+  }
+}

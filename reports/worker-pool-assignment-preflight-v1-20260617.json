@@ -1,0 +1,88 @@
+{
+  "blocking_findings": [
+    {
+      "evidence": "assignment_plan.assignable_now_count=0",
+      "finding": "No service-worker request is assignable now.",
+      "finding_id": "finding-no-assignable-requests",
+      "required_before_worker_start": true,
+      "severity": "blocker"
+    },
+    {
+      "evidence": "pool_registry.missing_pool_count=7 of pool_count=7",
+      "finding": "All required dedicated service-worker pools are still missing.",
+      "finding_id": "finding-missing-worker-pools",
+      "required_before_worker_start": true,
+      "severity": "blocker"
+    },
+    {
+      "evidence": "readiness.ready_to_start_count=0",
+      "finding": "Execution readiness has zero requests ready to start.",
+      "finding_id": "finding-no-ready-starts",
+      "required_before_worker_start": true,
+      "severity": "blocker"
+    },
+    {
+      "evidence": "gate_map.human_cro_approval_required=11",
+      "finding": "Human/CRO approval remains the dominant gate for non-terminal service-worker requests.",
+      "finding_id": "finding-human-cro-gate",
+      "required_before_worker_start": true,
+      "severity": "blocker"
+    }
+  ],
+  "generated_utc": "2026-06-17T18:45:35Z",
+  "preflight_id": "worker-pool-preflight-agent-company-scaleout-v1-20260617",
+  "recommended_next_actions": [
+    {
+      "action_id": "action-refresh-gate-chain",
+      "action_type": "local_report_refresh",
+      "allowed_now": true,
+      "description": "Refresh service-worker gate map, pool registry, assignment plan, readiness, and chain integrity before any human decision."
+    },
+    {
+      "action_id": "action-draft-pool-registration-review",
+      "action_type": "manual_review_packet",
+      "allowed_now": true,
+      "description": "Use existing pool registration packets to decide whether to register local service-worker pool agents."
+    },
+    {
+      "action_id": "action-assign-worker",
+      "action_type": "service_request_assignment",
+      "allowed_now": false,
+      "description": "Assign any service request to a worker pool."
+    },
+    {
+      "action_id": "action-start-worker",
+      "action_type": "worker_start",
+      "allowed_now": false,
+      "description": "Start any browser, model/API, public-submission, wallet/payment, legal/KYC, or runtime worker."
+    }
+  ],
+  "runtime_boundary": {
+    "assigns_service_requests": false,
+    "calls_apis": false,
+    "external_side_effects": false,
+    "registers_pools": false,
+    "report_only": true,
+    "starts_workers": false,
+    "updates_service_requests": false
+  },
+  "schema_version": "agent_company.worker_pool_assignment_preflight.v1",
+  "source_dispatch_id": "dispatch-node-worker-pool-preflight",
+  "source_reports": {
+    "assignment_plan": "E:\\agent-company-lab\\reports\\service-worker-assignment-plan-latest.json",
+    "dispatch_batch": "E:\\agent-company-lab\\reports\\ceo-dispatch-batch-v1-20260617.json",
+    "execution_readiness": "E:\\agent-company-lab\\reports\\service-worker-execution-readiness-latest.json",
+    "gate_map": "E:\\agent-company-lab\\reports\\service-worker-gate-map-latest.json",
+    "pool_registry": "E:\\agent-company-lab\\reports\\service-worker-pool-registry-latest.json"
+  },
+  "summary": {
+    "assignable_now_count": 0,
+    "assignment_plan_count": 14,
+    "human_cro_gate_count": 11,
+    "missing_pool_count": 7,
+    "pool_count": 7,
+    "readiness_request_count": 14,
+    "ready_to_start_count": 0,
+    "terminal_no_execution_count": 3
+  }
+}

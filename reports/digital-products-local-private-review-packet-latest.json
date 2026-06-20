@@ -1,0 +1,182 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "decision_option_count": 4,
+  "decision_options": [
+    {
+      "allowed_next_action": "Draft standalone local files and rerun local completeness checks.",
+      "decision_id": "continue-local",
+      "meaning": "Continue local packaging and refinement without live marketplace validation."
+    },
+    {
+      "allowed_next_action": "Create or update a service-request decision packet; do not browse until approved.",
+      "decision_id": "request-browser-gate",
+      "meaning": "Ask for explicit read-only browser approval to compare live marketplace demand."
+    },
+    {
+      "allowed_next_action": "Create or update a service-request decision packet; do not accept terms or configure payouts.",
+      "decision_id": "request-legal-payment-gate",
+      "meaning": "Ask for explicit legal/KYC/tax/payment review before any seller-term or payout work."
+    },
+    {
+      "allowed_next_action": "Record a kill/pause reason and choose another local-only digital product candidate.",
+      "decision_id": "pause-candidate",
+      "meaning": "Park this product candidate and return to broader lane discovery."
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not distribute, publish, browse marketplaces, create seller accounts, accept terms, configure payouts, set prices, or claim live demand from this private-review packet.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this private-review packet."
+  ],
+  "generated_utc": "2026-06-19T21:46:34Z",
+  "lane_evidence_rows_after": 86,
+  "lane_evidence_rows_before": 85,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "private_review_packet_ready_no_public_or_payment_action",
+  "next_action": "Have the digital-products lane manager review the packet locally and choose continue-local, request browser gate, request legal/payment gate, or pause-candidate.",
+  "packet_evidence_id": "digital-products-local-private-review-packet-20260616",
+  "packet_lane_id": "digital_products_templates_plugins",
+  "packet_task_id": "task-digital-products-local-private-review-packet-20260616",
+  "review_artifact_count": 10,
+  "review_artifacts": [
+    {
+      "artifact_id": "demand-proof",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-latest.md",
+      "purpose": "Initial local demand proof and gates."
+    },
+    {
+      "artifact_id": "demand-memo",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-latest.md",
+      "purpose": "Candidate selection and local memo."
+    },
+    {
+      "artifact_id": "build-brief",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-build-brief-latest.md",
+      "purpose": "Selected candidate build brief."
+    },
+    {
+      "artifact_id": "asset-outline",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-latest.md",
+      "purpose": "Asset components and first template outline."
+    },
+    {
+      "artifact_id": "asset-draft",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-asset-draft-latest.md",
+      "purpose": "Positioning template and launch checklist draft."
+    },
+    {
+      "artifact_id": "quality-pass",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-quality-pass-latest.md",
+      "purpose": "Local quality checks and revision items."
+    },
+    {
+      "artifact_id": "packaging-manifest",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-latest.md",
+      "purpose": "Six-file package manifest and README structure."
+    },
+    {
+      "artifact_id": "package-files",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-package-files-latest.md",
+      "purpose": "README, screenshot, QA, and review file drafts."
+    },
+    {
+      "artifact_id": "completeness-check",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-latest.md",
+      "purpose": "Completeness result for private review."
+    },
+    {
+      "artifact_id": "chain-integrity",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md",
+      "purpose": "Current chain integrity proof for all local layers."
+    }
+  ],
+  "review_question_count": 8,
+  "review_questions": [
+    {
+      "question": "Is the buyer specific enough for a first private review?",
+      "question_id": "buyer-fit"
+    },
+    {
+      "question": "Does the promise avoid revenue, buyer-count, payout, or live-demand claims?",
+      "question_id": "promise-safety"
+    },
+    {
+      "question": "Could a solo AI builder use the draft without extra explanation?",
+      "question_id": "asset-usability"
+    },
+    {
+      "question": "Do the six manifest files cover the promised workflow?",
+      "question_id": "file-coverage"
+    },
+    {
+      "question": "Does the README boundary language clearly stop legal/payment/marketplace misuse?",
+      "question_id": "readme-boundary"
+    },
+    {
+      "question": "Are marketplace, public listing, seller account, and payout gates unambiguous?",
+      "question_id": "gate-clarity"
+    },
+    {
+      "question": "What should be revised locally before any external validation request?",
+      "question_id": "private-review-next"
+    },
+    {
+      "question": "Should the lane continue locally, request browser/legal gates, or pause this product candidate?",
+      "question_id": "kill-or-continue"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_private_review_packet.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_check_evidence_id": "digital-products-local-completeness-check-20260616",
+  "source_check_task_id": "task-digital-products-local-completeness-check-20260616",
+  "source_check_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-validation-latest.json",
+  "summary": "Prepared a local private-review packet for the AI builder launch checklist pack. It indexes the local artifact trail, asks eight review questions, and offers four local decision options while keeping all public, marketplace, account, legal, and payment actions gated.",
+  "task_rows_inserted_by_packet": 1,
+  "tasks_table_rows_after": 169,
+  "tasks_table_rows_before": 168
+}

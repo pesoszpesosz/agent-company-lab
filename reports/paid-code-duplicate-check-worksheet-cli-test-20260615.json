@@ -1,0 +1,28 @@
+{
+  "chain_integrity": {
+    "all_checks_passed": true,
+    "checked_report_count": 35,
+    "failure_count": 0
+  },
+  "checks": {
+    "chain_integrity_refreshed": true,
+    "help_command": true,
+    "json_tool_validation": true,
+    "json_tool_worksheet": true,
+    "py_compile": true,
+    "write_paid_code_duplicate_check_worksheet": true
+  },
+  "generated_utc": "2026-06-15T20:45:46Z",
+  "schema_version": "agent_company.paid_code_duplicate_check_worksheet_cli_test.v1",
+  "source_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_sha256": "5A35BCC3EFAAFA73E64FBA159D0348DB50A0790A9F2FDC645C4F796E8A2B0B18",
+  "worksheet_result": {
+    "blocked_by_gate_count": 6,
+    "evidence_rows_inserted_or_updated": 1,
+    "local_only_item_count": 6,
+    "task_rows_inserted_by_worksheet": 1,
+    "worksheet_item_count": 12,
+    "worksheet_lane_id": "paid_code_bounties",
+    "worksheet_task_id": "task-paid-code-duplicate-check-worksheet-20260615"
+  }
+}

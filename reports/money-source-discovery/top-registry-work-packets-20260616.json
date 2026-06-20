@@ -1,0 +1,192 @@
+{
+  "schema_version": "agent_company.money_source_discovery.top_registry_work_packets.v1",
+  "generated_utc": "2026-06-16T20:27:00Z",
+  "source_registry": "E:\\agent-company-lab\\reports\\money-source-discovery\\public-venue-registry-20260616.json",
+  "scope": "local_task_promotion_only_no_external_side_effects",
+  "packet_count": 6,
+  "packets": [
+    {
+      "packet_id": "packet-opentrain-role-feed-worksheet-20260616",
+      "task_id": "task-opentrain-role-feed-worksheet-20260616",
+      "source_id": "ai-training-opentrain-feed",
+      "lane_id": "money_source_discovery",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "title": "Create OpenTrain AI role-feed worksheet",
+      "priority": 70,
+      "proof_output": "E:\\agent-company-lab\\reports\\money-source-discovery\\opentrain-role-feed-worksheet-20260616.md",
+      "objective": "Create a local worksheet for OpenTrain AI-style role feeds with role type, pay signal, skills, residency, assessment, contract/KYC, volatility, and accept/park decision columns.",
+      "allowed_actions": [
+        "Use public source text already captured in the registry and future read-only public checks if separately approved.",
+        "Draft local markdown/json worksheet only.",
+        "Park any application or assessment route behind account and legal/payment gates."
+      ],
+      "prohibited_actions": [
+        "No account creation.",
+        "No applications.",
+        "No assessments.",
+        "No identity, tax, payment, or contractor-term submission."
+      ],
+      "required_gates_before_external_action": [
+        "account_registration_intake",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "done_when": "Worksheet exists with at least five role/category rows, gate notes, and a next-action decision."
+    },
+    {
+      "packet_id": "packet-algora-explicit-payout-worksheet-20260616",
+      "task_id": "task-algora-explicit-payout-worksheet-20260616",
+      "source_id": "oss-bounty-algora",
+      "lane_id": "paid_code_bounties",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "title": "Create Algora explicit-payout issue worksheet",
+      "priority": 70,
+      "proof_output": "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-explicit-payout-issue-worksheet-20260616.md",
+      "objective": "Create a duplicate-aware local worksheet for Algora paid GitHub issues with payout terms, owner route, claim state, testability, repo health, and public-action gates.",
+      "allowed_actions": [
+        "Use public source snapshots and local-only issue triage.",
+        "Draft worksheet and candidate scoring criteria.",
+        "Park any claim, comment, PR, or payout detail behind service gates."
+      ],
+      "prohibited_actions": [
+        "No GitHub comments.",
+        "No PRs.",
+        "No bounty claims.",
+        "No payout details.",
+        "No account or payment setup."
+      ],
+      "required_gates_before_external_action": [
+        "github_public_action_gate",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "done_when": "Worksheet defines explicit-payout filters, duplicate checks, and at least one safe next local triage command or candidate source."
+    },
+    {
+      "packet_id": "packet-ef-esp-fit-memo-20260616",
+      "task_id": "task-ef-esp-fit-memo-20260616",
+      "source_id": "web3-grants-ef-esp",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "title": "Create EF ESP Wishlist/RFP fit memo",
+      "priority": 70,
+      "proof_output": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\ef-esp-fit-memo-20260616.md",
+      "objective": "Map EF ESP Wishlist/RFP style opportunities to local prototype candidates, deliverables, timeline, evidence needs, and application gates.",
+      "allowed_actions": [
+        "Draft a local fit memo from public grant/RFP source notes.",
+        "Identify prototype ideas that can be built locally before any application.",
+        "Keep all proposal commitments behind human approval."
+      ],
+      "prohibited_actions": [
+        "No grant application.",
+        "No proposal submission.",
+        "No public commitment.",
+        "No account, KYC, payment, or legal term acceptance."
+      ],
+      "required_gates_before_external_action": [
+        "account_registration_intake",
+        "legal_kyc_tax_payment_gate",
+        "public_action_execution"
+      ],
+      "done_when": "Memo ranks at least three grant-fit project ideas and names the smallest local prototype proof for the top one."
+    },
+    {
+      "packet_id": "packet-devpost-prize-calendar-20260616",
+      "task_id": "task-devpost-prize-calendar-20260616",
+      "source_id": "general-hackathon-devpost",
+      "lane_id": "ai_ml_competitions",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "title": "Create Devpost weekly prize calendar",
+      "priority": 70,
+      "proof_output": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\devpost-prize-calendar-20260616.md",
+      "objective": "Create a local weekly prize calendar template for Devpost-style hackathons with deadline, prize, online status, account gate, rules, and first local build artifact.",
+      "allowed_actions": [
+        "Draft local calendar and scoring fields.",
+        "Use already captured public source refresh notes.",
+        "Queue live refresh behind read-only browser approval if needed."
+      ],
+      "prohibited_actions": [
+        "No registration.",
+        "No joining teams.",
+        "No project submission.",
+        "No terms acceptance."
+      ],
+      "required_gates_before_external_action": [
+        "account_registration_intake",
+        "public_action_execution",
+        "legal_terms_review"
+      ],
+      "done_when": "Calendar template exists with scoring fields and a rule for when to promote a hackathon into a build sprint."
+    },
+    {
+      "packet_id": "packet-arc-prize-feasibility-memo-20260616",
+      "task_id": "task-arc-prize-feasibility-memo-20260616",
+      "source_id": "ai-competition-arc-prize",
+      "lane_id": "ai_ml_competitions",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "title": "Create ARC Prize 2026 feasibility memo",
+      "priority": 70,
+      "proof_output": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-prize-feasibility-memo-20260616.md",
+      "objective": "Create a local feasibility memo for ARC Prize 2026 with rules, public resources, baseline approaches, compute needs, collaboration options, and submission gates.",
+      "allowed_actions": [
+        "Draft local feasibility memo.",
+        "Use public rule summaries and local-only reasoning about approach.",
+        "Define no-login baseline experiments for future local work."
+      ],
+      "prohibited_actions": [
+        "No Kaggle or ARC track join.",
+        "No gated dataset download.",
+        "No notebook or package submission.",
+        "No rule acceptance."
+      ],
+      "required_gates_before_external_action": [
+        "account_registration_intake",
+        "competition_rules_legal_review",
+        "public_action_execution"
+      ],
+      "done_when": "Memo selects one local baseline path and one kill criterion before any account/submission step."
+    },
+    {
+      "packet_id": "packet-upwork-ai-workflow-audit-offer-20260616",
+      "task_id": "task-upwork-ai-workflow-audit-offer-20260616",
+      "source_id": "freelance-marketplace-upwork-ai",
+      "lane_id": "lead_generation_and_sales",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "title": "Create Upwork AI workflow audit offer packet",
+      "priority": 70,
+      "proof_output": "E:\\agent-company-lab\\reports\\lead-generation-and-sales\\upwork-ai-workflow-audit-offer-20260616.md",
+      "objective": "Create a local offer packet for AI workflow audits with buyer segment, pain points, deliverables, proof asset, proposal boundaries, and marketplace gates.",
+      "allowed_actions": [
+        "Draft local offer, ICP, deliverables, and proof asset plan.",
+        "Use public marketplace demand notes already captured.",
+        "Keep profile/proposal/contact work behind approval gates."
+      ],
+      "prohibited_actions": [
+        "No profile creation.",
+        "No proposals.",
+        "No client contact.",
+        "No contract acceptance.",
+        "No payment setup."
+      ],
+      "required_gates_before_external_action": [
+        "account_registration_intake",
+        "legal_kyc_tax_payment_gate",
+        "public_action_execution"
+      ],
+      "done_when": "Offer packet includes ICP, three package tiers, one local proof asset, and a non-spam outreach gate."
+    }
+  ],
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Execute the six local proof packets in lane order, starting with OpenTrain role-feed worksheet and Algora explicit-payout worksheet."
+}

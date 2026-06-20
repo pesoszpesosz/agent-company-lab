@@ -1,0 +1,12 @@
+{
+  "api_calls": false,
+  "assignable_now_count": 0,
+  "external_side_effects": false,
+  "missing_pool_count": 7,
+  "ready_to_start_count": 0,
+  "registers_pools": false,
+  "runtime": "local_python_report_writer",
+  "span_kind": "assignment_preflight",
+  "starts_workers": false,
+  "updates_service_requests": false
+}

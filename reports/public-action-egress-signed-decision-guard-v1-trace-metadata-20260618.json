@@ -1,0 +1,98 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-public-action-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-public-action-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:31:52Z",
+  "summary": "Created a report-only public_action_gateway signed-decision guard. The guard accepts only deny and preflight-only public action route decisions, rejects 49 posting, form-submission, PR, bounty-claim, message-send, browser-start, account-action, service-request-mutation, MCP/model-call, payment, and live-egress fixtures, and preserves zero posts, zero form submissions, zero PRs, zero bounty claims, zero messages, zero browser sessions, zero account actions, zero service-request mutations, zero MCP/model calls, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\public-action-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "d177e608594a9398f775aea6a0eef077737e77be301e72b4fb83eed213cb20f9"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_public_action_egress_signed_decision_guard.py",
+      "sha256": "fa161653795da306c654455001c2b87b0f454f14ecb1432e667120d88ef5190b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_public_action_egress_signed_decision_guard.py",
+      "sha256": "37ff13e5f4d5afd4d065667175cdc6c6103cfa15ec14f0ce904b4fe4130d9c5c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "7ec3c82b6ca6a82c623a04f3c4cede623500fc8b7eb2ff597bbc73de7a20ee33"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "d1098b1bb8e559b8d5534aba069f6379c8f5ffb548bef55d863dee3d44b882f7"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "1d6e7ae6582d0e634f43c9341c3447f396e0ffd131c1e3f49c45cc722df7ced0"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_public_action_egress_signed_decision_guard.py E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "46 tests passed",
+    "target_route_id": "public_action_gateway",
+    "target_egress_type": "public_submission",
+    "fixture_count": 51,
+    "accepted_count": 2,
+    "rejected_count": 49,
+    "apply_allowed": false,
+    "public_action_allowed": false,
+    "public_actions": false,
+    "posts_created": 0,
+    "forms_submitted": 0,
+    "prs_opened": 0,
+    "bounty_claims": 0,
+    "messages_sent": 0,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_allowed": false,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "public_action_allowed": false,
+    "public_actions": false,
+    "posts_created": 0,
+    "forms_submitted": 0,
+    "prs_opened": 0,
+    "bounty_claims": 0,
+    "messages_sent": 0,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build public_action_gateway apply preflight blocker before any post, form submission, PR, bounty claim, message send, browser mutation, account action, service-request mutation, or live egress."
+}

@@ -1,0 +1,779 @@
+{
+  "accepted_count": 3,
+  "all_checks_passed": true,
+  "apply_allowed": false,
+  "expected_accepted_count": 3,
+  "expected_rejected_count": 16,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 19,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:30Z",
+  "next_action": "Use checkpoint interrupts as the pause/resume contract for lane-manager handoffs and service-worker decisions before any runtime/framework adoption.",
+  "rejected_count": 16,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_service_request_gate",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\positive_service_request_gate.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": true,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-service-worker-review-gate",
+        "errors": [],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": false,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "572a0877123a65fc5f2d596ad46027bc64850aff1fc2c1ff478e13eca7c9e3fb"
+    },
+    {
+      "expected": "accepted",
+      "name": "positive_runtime_adoption_gate",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\positive_runtime_adoption_gate.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": true,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-runtime-framework-adoption",
+        "errors": [],
+        "interrupt_reason": "runtime_adoption_gate",
+        "rejected": false,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "runtime_candidate",
+        "worker_start_allowed": false
+      },
+      "sha256": "2e5d9171a953c635c8951bc25a60bb15ea6f9edbff24cc92224f10de7d586246"
+    },
+    {
+      "expected": "accepted",
+      "name": "positive_lane_task_handoff",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\positive_lane_task_handoff.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": true,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-lane-manager-handoff",
+        "errors": [],
+        "interrupt_reason": "checkpoint_resume_guard",
+        "rejected": false,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "lane_task",
+        "worker_start_allowed": false
+      },
+      "sha256": "10b2ae3a9a0d7f219dbc3d44d15764c16c993a4228dfa52b90bbdce154e8578b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wrong_schema_version",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_wrong_schema_version.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-wrong_schema_version",
+        "errors": [
+          "schema_version_mismatch"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "c4eff8e68925d8d78c16648447d9bcfb294fe6af5b69763be84a998cf8f2cfb8"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_unknown_source_kind",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_unknown_source_kind.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-unknown_source_kind",
+        "errors": [
+          "source_kind_unknown"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "browser_session",
+        "worker_start_allowed": false
+      },
+      "sha256": "b290221159f3235370392b6221b095a1fccff566ec6c243f5ee00b39605c05f7"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_lane",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_missing_lane.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-missing_lane",
+        "errors": [
+          "lane_id_missing"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "66ef6fd69c65196efa8adcc798ab8ece21f1c91682aa02d23dd4ee682ac5e536"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_without_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_service_request_without_id.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-service_request_without_id",
+        "errors": [
+          "service_request_id_required_for_service_request_source"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "98057c4d52f45b0152fd228701137314648cabe4c67d7daa2513ddb297990dd8"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_lane_task_without_task",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_lane_task_without_task.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-lane_task_without_task",
+        "errors": [
+          "task_id_required_for_lane_or_runtime_source"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "lane_task",
+        "worker_start_allowed": false
+      },
+      "sha256": "02a34d1fa00769d4e75ad19f94af46dc773cdc11365c362c9cc61dfe36aea687"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_manual_review_false",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_manual_review_false.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-manual_review_false",
+        "errors": [
+          "manual_review_required_must_be_true"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "caa36a7b6efe14a8c12d44206afb89f3d82919f4ac913b3c13f3f03e2bc20afa"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_resume_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_resume_allowed.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-resume_allowed",
+        "errors": [
+          "resume_allowed_must_be_false"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "ebafb86f123f3d1aae99df44172cd547f8f34a6e1b7dd0b96f83dcc87420c4d6"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_apply_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_apply_allowed.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-apply_allowed",
+        "errors": [
+          "apply_allowed_must_be_false"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "f922a59c566ee6502b68851ac56852a05a104bb834603736c38aeee98424082b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_worker_start_allowed.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-worker_start_allowed",
+        "errors": [
+          "worker_start_allowed_must_be_false"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "158fdec1d74ab6c3bd8790541eeabd18ee28b98cdd7b78ad52fcc17e5f66ae12"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_required_artifacts",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_missing_required_artifacts.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-missing_required_artifacts",
+        "errors": [
+          "required_artifacts_must_be_non_empty_list"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "6f186a53065f632a671f1648619ff0740fcbd22c8a66489890693ff8a8b384fa"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_outside_required_artifact",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_outside_required_artifact.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-outside_required_artifact",
+        "errors": [
+          "required_artifact_must_stay_inside_lab"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "06d9c28fd7730702610ba91b00bdb012d3211c6dafe0b5a70f958a3734f07340"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_source_research",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_missing_source_research.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-missing_source_research",
+        "errors": [
+          "source_research_validation_path_missing"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "3042200fa930bc8321943a78ce852ad414c2242f67f9e626a39c8daf505eef66"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_resume_command_written",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_resume_command_written.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-resume_command_written",
+        "errors": [
+          "runtime_boundary_resume_commands_written_must_equal_0"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "7e26396a4688bf82099f349bd8a3144038b3f53045f4caccc2f75fe3c103419f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_updated",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_service_request_updated.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-service_request_updated",
+        "errors": [
+          "runtime_boundary_service_requests_updated_must_equal_0"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "d6a6ffb1484b87b2f11ee99b7fd4cb440af9dbf4500a88c642e4a9ac271082f3"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_runtime_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_runtime_started.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-runtime_started",
+        "errors": [
+          "runtime_boundary_runtime_starts_must_equal_0"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "2babb4c4d3811bd6e36861b66c21db5ba544bc310bdd44ac4577003e7dbdf010"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-fixtures\\negative_external_side_effect.json",
+      "result": {
+        "accepted_for_checkpoint_interrupt": false,
+        "apply_allowed": false,
+        "checkpoint_id": "checkpoint-negative-external_side_effect",
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "interrupt_reason": "service_worker_gate",
+        "rejected": true,
+        "resume_allowed": false,
+        "runtime_boundary": {
+          "apply_commands_executed": 0,
+          "apply_commands_written": 0,
+          "approval_rows_written": 0,
+          "browser_sessions_started": 0,
+          "external_side_effects": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "resume_commands_executed": 0,
+          "resume_commands_written": 0,
+          "runtime_starts": 0,
+          "service_requests_assigned": 0,
+          "service_requests_updated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "source_kind": "service_request",
+        "worker_start_allowed": false
+      },
+      "sha256": "4658dc1d1b7648de645c9de96474bc6e970596d5d0c30accc17ba8518939b81a"
+    }
+  ],
+  "resume_allowed": false,
+  "runtime_boundary": {
+    "apply_commands_executed": 0,
+    "apply_commands_written": 0,
+    "approval_rows_written": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "resume_commands_executed": 0,
+    "resume_commands_written": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\checkpoint-interrupt-contract-v1.schema.json",
+  "schema_version": "agent_company.checkpoint_interrupt_contract_report.v1",
+  "source_state": {
+    "apply_preflight_validation_ready": true,
+    "operator_docket_validation_ready": true,
+    "wave15_validation_ready": true
+  },
+  "worker_start_allowed": false
+}

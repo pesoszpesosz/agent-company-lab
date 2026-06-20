@@ -1,0 +1,28 @@
+{
+  "chain_integrity": {
+    "all_checks_passed": true,
+    "checked_report_count": 37,
+    "failure_count": 0
+  },
+  "checks": {
+    "chain_integrity_refreshed": true,
+    "help_command": true,
+    "json_tool_packet": true,
+    "json_tool_validation": true,
+    "py_compile": true,
+    "write_paid_code_browser_refresh_decision_packet": true
+  },
+  "generated_utc": "2026-06-15T20:57:05Z",
+  "packet_result": {
+    "approval_required": true,
+    "decision_granted": false,
+    "forbidden_action_count": 6,
+    "request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+    "request_status": "needs_review",
+    "scope_item_count": 5,
+    "task_rows_inserted_by_packet": 0
+  },
+  "schema_version": "agent_company.paid_code_browser_refresh_decision_packet_cli_test.v1",
+  "source_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_sha256": "FCC8799F269FC419DDB15496970B4AEB389210FFA5D85DA9BCDE8BC5C9D08BC2"
+}

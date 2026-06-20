@@ -1,0 +1,169 @@
+{
+  "schema_version": "agent_company.digital_products_marketplace_route_eligibility_wave24.v1",
+  "generated_utc": "2026-06-18T03:24:00Z",
+  "lane_id": "digital_products_templates_plugins",
+  "task_id": "task-digital-products-marketplace-route-eligibility-wave24-20260618",
+  "source_money_path_refresh": "E:\\agent-company-lab\\data\\agent-company-money-path-refresh-wave23-20260618.json",
+  "source_package_manifest": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json",
+  "source_hold_register": "E:\\agent-company-lab\\reports\\digital-products-local-gated-hold-register-latest.json",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "package_status": "internal_review_manifest_only",
+    "file_count": 12,
+    "total_bytes": 21670,
+    "zip_created": false,
+    "public_listing_ready": false,
+    "realized_usd": 0
+  },
+  "route_count": 3,
+  "routes": [
+    {
+      "route_id": "promptbase_agent_skill_route",
+      "platform": "PromptBase",
+      "source_url": "https://promptbase.com/sell",
+      "wave23_path_id": "promptbase_prompts_skills",
+      "observed_source_signal": "PromptBase sells prompts or agent skills/SKILL.md files, advertises 0% fees via direct link and 20% via marketplace, and mentions Stripe or Zoneless payouts.",
+      "fit_score": 88,
+      "fit_reason": "Strongest route because the product is already a Codex-style skill/template kit and PromptBase explicitly mentions agent skills/SKILL.md files.",
+      "local_assets_ready": [
+        "README.md",
+        "templates/SKILL.template.md",
+        "examples/local-research-skill/SKILL.md",
+        "docs/listing-draft.md",
+        "docs/buyer-guide.md",
+        "docs/license-and-ip-note.md",
+        "docs/screenshot-plan.md"
+      ],
+      "local_gaps_before_external_review": [
+        "Create route-specific listing copy that avoids revenue and marketplace-approval claims.",
+        "Prepare local screenshot placeholders from static files only.",
+        "Map PromptBase prompt/skill submission rules after browser approval.",
+        "Confirm payout route requirements through legal/payment review."
+      ],
+      "blocked_gates": [
+        "browser_read_only_session",
+        "legal_kyc_tax_payment",
+        "public_action_approval",
+        "account_payment_approval"
+      ],
+      "next_local_proof": "Draft a PromptBase-specific eligibility checklist and listing variant from existing local files only."
+    },
+    {
+      "route_id": "gumroad_direct_download_route",
+      "platform": "Gumroad",
+      "source_url": "https://gumroad.com/",
+      "wave23_path_id": "digital_products_gumroad",
+      "observed_source_signal": "Gumroad positions itself as a path to earn a first dollar online and sell digital products.",
+      "fit_score": 79,
+      "fit_reason": "Good low-complexity direct-download route for a Markdown/template bundle, but live demand and seller terms remain unverified.",
+      "local_assets_ready": [
+        "docs/listing-draft.md",
+        "docs/buyer-guide.md",
+        "docs/screenshot-plan.md",
+        "templates/service-request-checklist.template.md",
+        "templates/gate-checklist.template.md"
+      ],
+      "local_gaps_before_external_review": [
+        "Create Gumroad-style direct-download product page copy.",
+        "Prepare local package preview images or static screenshot placeholders.",
+        "Decide whether to create a zip only after internal package review.",
+        "Review seller terms, refunds, payout, tax, and account obligations after legal/payment approval."
+      ],
+      "blocked_gates": [
+        "browser_read_only_session",
+        "legal_kyc_tax_payment",
+        "public_action_approval",
+        "account_payment_approval"
+      ],
+      "next_local_proof": "Draft Gumroad-style direct-download route copy and a local asset checklist; do not zip, upload, price, or list."
+    },
+    {
+      "route_id": "lemon_squeezy_software_product_route",
+      "platform": "Lemon Squeezy",
+      "source_url": "https://www.lemonsqueezy.com/ecommerce/digital-products",
+      "wave23_path_id": "digital_products_lemon_squeezy",
+      "observed_source_signal": "Lemon Squeezy supports digital products, lead magnets, pay-what-you-want, subscriptions, payments, and tax handling.",
+      "fit_score": 72,
+      "fit_reason": "Potentially strong for software/template products, but legal, tax, KYC, account, and payment obligations are heavier than a pure local direct-download review.",
+      "local_assets_ready": [
+        "docs/license-and-ip-note.md",
+        "docs/listing-draft.md",
+        "README.md",
+        "templates/artifact-contract.template.md",
+        "templates/acceptance-review.template.md"
+      ],
+      "local_gaps_before_external_review": [
+        "Choose whether this is a one-time digital download, lead magnet, license, or subscription route.",
+        "Create a tax/payment/legal question list for human review.",
+        "Prepare refund/support language without making live obligations.",
+        "Keep all payment and seller account work frozen."
+      ],
+      "blocked_gates": [
+        "browser_read_only_session",
+        "legal_kyc_tax_payment",
+        "public_action_approval",
+        "account_payment_approval"
+      ],
+      "next_local_proof": "Create a Lemon Squeezy route decision note comparing digital download, lead magnet, license, and subscription shapes."
+    }
+  ],
+  "recommendation": {
+    "selected_route_id": "promptbase_agent_skill_route",
+    "selected_route_reason": "PromptBase is the closest semantic fit for a Codex skill/template kit and has the clearest source signal for agent skill artifacts.",
+    "next_safe_local_task": "Prepare PromptBase-specific local listing and eligibility checklist from existing package files, still without browser validation, account setup, payout setup, public listing, or submission.",
+    "do_not_request_or_execute": [
+      "Do not open or browse marketplace pages from this packet.",
+      "Do not create seller accounts.",
+      "Do not accept terms, configure payouts, or provide KYC/tax/payment information.",
+      "Do not create, upload, price, publish, promote, or submit any listing.",
+      "Do not create a zip for public distribution.",
+      "Do not mutate service requests, assign workers, start browser sessions, call APIs, or perform external actions."
+    ]
+  },
+  "checks": [
+    {
+      "check_id": "package-manifest-present",
+      "passed": true,
+      "evidence": "Agent Skill Starter Kit v0 manifest exists with 12 local files."
+    },
+    {
+      "check_id": "current-holds-preserved",
+      "passed": true,
+      "evidence": "Four active holds remain: marketplace demand, terms/fees, public listing, account/payment setup."
+    },
+    {
+      "check_id": "all-routes-have-gates",
+      "passed": true,
+      "evidence": "Each route lists browser, legal/payment, public-action, and account/payment holds."
+    },
+    {
+      "check_id": "no-external-action",
+      "passed": true,
+      "evidence": "This packet writes local report artifacts only."
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "marketplace_pages_opened": 0,
+    "accounts_created": 0,
+    "logins_attempted": 0,
+    "seller_terms_accepted": 0,
+    "kyc_tax_payment_data_entered": 0,
+    "payouts_configured": 0,
+    "listings_created": 0,
+    "listings_published": 0,
+    "files_uploaded": 0,
+    "zip_created": false,
+    "public_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "dependency_installs": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Prepare PromptBase-specific local listing and eligibility checklist from existing package files only; keep browser validation, seller terms, account setup, payout setup, zip/public upload, listing, and submission behind explicit approvals."
+}

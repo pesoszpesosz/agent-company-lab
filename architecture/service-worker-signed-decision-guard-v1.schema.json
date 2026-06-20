@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.service_worker_signed_decision_guard.v1",
+  "title": "Agent Company Service Worker Signed Decision Guard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "decision",
+    "service_id",
+    "request_type",
+    "source_intake_contract_path",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_request_ids",
+    "exact_scope_required",
+    "approval_is_not_apply",
+    "apply_allowed",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.service_worker_signed_decision_guard.v1"
+    },
+    "decision_id": {
+      "type": "string",
+      "pattern": "^service-worker-signed-decision-[a-z0-9][a-z0-9-]{4,160}$"
+    },
+    "decision": {
+      "enum": [
+        "deny",
+        "approve_review_packet_only",
+        "approve_assignment_preflight_only",
+        "approve_exact_action_preflight_only"
+      ]
+    },
+    "service_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "request_type": {
+      "type": "string",
+      "minLength": 3
+    },
+    "source_intake_contract_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "operator_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "operator_attestation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "signed_utc": {
+      "type": "string"
+    },
+    "expires_utc": {
+      "type": "string"
+    },
+    "allowed_scope": {
+      "type": "string",
+      "minLength": 3
+    },
+    "allowed_request_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exact_scope_required": {
+      "const": true
+    },
+    "approval_is_not_apply": {
+      "const": true
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

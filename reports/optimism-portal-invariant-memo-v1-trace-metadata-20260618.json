@@ -1,0 +1,34 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "generated_utc": "2026-06-17T22:04:11Z",
+  "trace_id": "trace-optimism-portal-invariant-memo-v1-20260618",
+  "task_id": "task-optimism-portal-invariant-memo-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "agent_id": "recovered-profitable-edge-infra",
+  "operation": "optimism_portal_invariant_memo",
+  "input_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-single-asset-candidate-packet-v1-20260618.json",
+    "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol",
+    "https://raw.githubusercontent.com/ethereum-optimism/optimism/develop/packages/contracts-bedrock/test/L1/OptimismPortal2.t.sol",
+    "https://specs.optimism.io/fault-proof/stage-one/optimism-portal.html",
+    "https://specs.optimism.io/protocol/withdrawals.html"
+  ],
+  "output_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-portal-invariant-memo-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-portal-invariant-memo-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-portal-invariant-memo-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-portal-invariant-memo-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-portal-invariant-memo-v1-20260618.md"
+  ],
+  "boundary": {
+    "report_only": true,
+    "security_tests": false,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

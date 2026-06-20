@@ -1,0 +1,165 @@
+{
+  "schema_version": "agent_company.optimism_portal_invariant_memo.v1",
+  "generated_utc": "2026-06-17T22:04:11Z",
+  "task_id": "task-optimism-portal-invariant-memo-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "selected_asset_id": "optimism-sc-005",
+  "selected_asset": "OptimismPortal / OptimismPortal2",
+  "selected_invariant_id": "opi-007",
+  "selected_invariant": "l2Sender guard and reset",
+  "source_snapshots": [
+    {
+      "name": "OptimismPortal2.sol",
+      "url": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol",
+      "sha256": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F",
+      "lines": 790
+    },
+    {
+      "name": "OptimismPortal2.t.sol",
+      "url": "https://raw.githubusercontent.com/ethereum-optimism/optimism/develop/packages/contracts-bedrock/test/L1/OptimismPortal2.t.sol",
+      "sha256": "FF9721FAD3CED4B7FBE7CE1B008EBD41897C2B3457F1D4E45EC0C209A28E3935",
+      "lines": 2725
+    }
+  ],
+  "invariant_statement": "During withdrawal finalization, l2Sender should be the default sender before entry, should become the L2 withdrawal sender only while the target call is executing, should block nested finalization while non-default, and should not persist as non-default after success, target failure, gas-estimation revert, or insufficient-gas revert.",
+  "source_observations": [
+    {
+      "observation_id": "opi007-src-001",
+      "source": "OptimismPortal2.sol lines 556-560",
+      "finding": "The finalization path checks l2Sender before the external target call and reverts with OptimismPortal_NoReentrancy when it is not the default sender.",
+      "interpretation": "This is the primary reentrancy guard for nested finalization."
+    },
+    {
+      "observation_id": "opi007-src-002",
+      "source": "OptimismPortal2.sol lines 582-595",
+      "finding": "The finalization path sets l2Sender to the L2 withdrawal sender before SafeCall.callWithMinGas and resets l2Sender to the default value immediately after the call returns.",
+      "interpretation": "The intended externally observable window for l2Sender is the target call only."
+    },
+    {
+      "observation_id": "opi007-src-003",
+      "source": "OptimismPortal2.sol lines 597-614",
+      "finding": "The function emits WithdrawalFinalized after resetting l2Sender, then may revert only for the special gas-estimation origin when the target call failed.",
+      "interpretation": "A gas-estimation revert should roll state back to the pre-call default l2Sender state."
+    },
+    {
+      "observation_id": "opi007-test-001",
+      "source": "OptimismPortal2.t.sol lines 1677-1731",
+      "finding": "The upstream test suite includes a target-call reentrancy test where the target attempts to finalize another withdrawal and expects OptimismPortal_NoReentrancy.",
+      "interpretation": "Nested finalization protection has direct test coverage."
+    },
+    {
+      "observation_id": "opi007-test-002",
+      "source": "OptimismPortal2.t.sol lines 1255-1273",
+      "finding": "The upstream test suite covers target failure when tx.origin is the gas-estimation address and expects OptimismPortal_GasEstimation.",
+      "interpretation": "The post-reset estimation-revert branch has behavior coverage, but not an explicit l2Sender post-state assertion."
+    },
+    {
+      "observation_id": "opi007-test-003",
+      "source": "OptimismPortal2.t.sol lines 1538-1600",
+      "finding": "The upstream test suite covers failed target calls and ETHLockbox failed-target behavior.",
+      "interpretation": "The failed-call paths have balance/event coverage, but the extracted snippets do not show explicit l2Sender-default postcondition assertions."
+    }
+  ],
+  "state_matrix": [
+    {
+      "case_id": "opi007-case-001",
+      "path": "successful finalizeWithdrawalTransaction",
+      "entry_requirement": "l2Sender == DEFAULT_L2_SENDER",
+      "during_target_call": "l2Sender == withdrawal sender",
+      "expected_exit": "l2Sender == DEFAULT_L2_SENDER",
+      "current_evidence": "Source reset at lines 594-595; success tests emit WithdrawalFinalized true.",
+      "gap": "Add explicit post-state assertion after success."
+    },
+    {
+      "case_id": "opi007-case-002",
+      "path": "target call returns false without estimation revert",
+      "entry_requirement": "l2Sender == DEFAULT_L2_SENDER",
+      "during_target_call": "l2Sender == withdrawal sender",
+      "expected_exit": "l2Sender == DEFAULT_L2_SENDER",
+      "current_evidence": "Source reset before false event; failed-target tests assert balances and no stuck ETH.",
+      "gap": "Add explicit post-state assertion after false finalization."
+    },
+    {
+      "case_id": "opi007-case-003",
+      "path": "target call returns false with gas-estimation origin",
+      "entry_requirement": "l2Sender == DEFAULT_L2_SENDER",
+      "during_target_call": "l2Sender == withdrawal sender",
+      "expected_exit": "whole transaction reverts; persisted l2Sender remains default",
+      "current_evidence": "Source resets before estimation revert; upstream test expects OptimismPortal_GasEstimation.",
+      "gap": "Add explicit assertion in a wrapper or after expectRevert that l2Sender remains default."
+    },
+    {
+      "case_id": "opi007-case-004",
+      "path": "SafeCall insufficient-gas revert",
+      "entry_requirement": "l2Sender == DEFAULT_L2_SENDER",
+      "during_target_call": "may not reach target fully",
+      "expected_exit": "whole transaction reverts; persisted l2Sender remains default",
+      "current_evidence": "Upstream insufficient-gas test expects SafeCall revert.",
+      "gap": "Add explicit l2Sender default assertion after revert."
+    },
+    {
+      "case_id": "opi007-case-005",
+      "path": "nested finalize during target call",
+      "entry_requirement": "outer call has set l2Sender to withdrawal sender",
+      "during_target_call": "nested call observes non-default l2Sender and reverts",
+      "expected_exit": "outer call may finalize; nested withdrawal not finalized",
+      "current_evidence": "Upstream reentrancy test expects OptimismPortal_NoReentrancy and checks bob balance unchanged.",
+      "gap": "Add explicit l2Sender default assertion after outer call."
+    },
+    {
+      "case_id": "opi007-case-006",
+      "path": "finalizeWithdrawalTransactionExternalProof",
+      "entry_requirement": "l2Sender == DEFAULT_L2_SENDER",
+      "during_target_call": "l2Sender == withdrawal sender",
+      "expected_exit": "l2Sender == DEFAULT_L2_SENDER",
+      "current_evidence": "External proof path calls same finalization body and upstream tests cover replay behavior.",
+      "gap": "Add explicit post-state assertion for external-proof variant."
+    }
+  ],
+  "memo_conclusion": {
+    "status": "no_finding_local_memo",
+    "confidence": "medium",
+    "reason": "The source and upstream tests show a deliberate l2Sender reentrancy guard and reset pattern. The useful local next step is a hardening/regression fixture that adds explicit l2Sender post-state assertions across success, false-return, estimation-revert, insufficient-gas, nested-call, and external-proof paths.",
+    "not_submission_ready": true,
+    "submission_ready_count": 0
+  },
+  "runnable_local_fixture_plan": {
+    "fixture_name": "OptimismPortal2_l2Sender_postcondition_fixture",
+    "execution_status": "not_executed",
+    "why_not_executed": "This agent is staying within report-only source review; fork/local test execution remains a later explicit proof step.",
+    "candidate_test_additions": [
+      "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER) after successful finalizeWithdrawalTransaction",
+      "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER) after failed target finalization that emits WithdrawalFinalized false",
+      "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER) after gas-estimation revert",
+      "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER) after insufficient-gas revert",
+      "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER) after reentrancy test outer finalization",
+      "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER) after finalizeWithdrawalTransactionExternalProof"
+    ],
+    "promotion_gate": "Only promote beyond hardening memo if a local fixture demonstrates non-default l2Sender persistence or incorrect observation with direct in-scope impact."
+  },
+  "duplicate_and_quality_status": {
+    "duplicate_matrix_status": "no_finding_no_duplicate_claim",
+    "quality_gate_status": "not_applicable_until_finding",
+    "known_issue_overlap": [
+      "Does not repackage the known portal implementation stranded-funds issue.",
+      "Does not claim generic reentrancy; upstream test coverage already exercises nested finalize reversion."
+    ],
+    "impact_claim_status": "none"
+  },
+  "next_action": "Create a local fixture design packet or patch plan for the l2Sender postcondition assertions; do not submit, test live targets, run fork tests, or claim a vulnerability unless a concrete failing local proof exists.",
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

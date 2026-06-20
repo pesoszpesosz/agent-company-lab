@@ -1,0 +1,32 @@
+{
+  "cases_checked": 6,
+  "external_side_effects": false,
+  "failed_count": 0,
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "database_connections": 0,
+    "database_provisioning": false,
+    "dbos_launch_called": false,
+    "dbos_package_imported": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "queues_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "steps_executed": 0,
+    "worker_starts": 0,
+    "workflows_enqueued": 0,
+    "workflows_started": 0
+  },
+  "schema_version": "agent_company.trace_metadata.dbos_workflow_step_boundary_fixture.v1",
+  "source_urls": [
+    "https://docs.dbos.dev/python/programming-guide",
+    "https://docs.dbos.dev/python/tutorials/workflow-tutorial",
+    "https://docs.dbos.dev/python/tutorials/step-tutorial",
+    "https://docs.dbos.dev/python/reference/dbos-class",
+    "https://docs.dbos.dev/python/reference/queues"
+  ]
+}

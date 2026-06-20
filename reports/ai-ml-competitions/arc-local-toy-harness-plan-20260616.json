@@ -1,0 +1,26 @@
+{
+  "schema_version": "agent_company.ai_ml_competitions.arc_local_toy_harness_plan.v1",
+  "generated_utc": "2026-06-16T20:55:00Z",
+  "task_id": "task-arc-local-toy-harness-plan-20260616",
+  "lane_id": "ai_ml_competitions",
+  "dsl_operations": ["crop_nonzero", "translate", "recolor", "mirror", "tile", "fill_bbox", "compose"],
+  "synthetic_task_families": ["translation", "recolor", "mirror", "crop_and_tile"],
+  "acceptance_tests": [
+    "deterministic_generation",
+    "three_families_pass",
+    "failure_is_explicit",
+    "standard_library_only",
+    "synthetic_examples_only"
+  ],
+  "kill_criterion": "Do not move toward Kaggle approval until the toy harness solves at least three synthetic families and explains one unsolved family.",
+  "next_action": "Create arc-toy-harness-fixture-20260616.json and local-only harness draft.",
+  "runtime_boundary": {
+    "kaggle_login": false,
+    "gated_data_downloaded": false,
+    "paid_compute_or_api": false,
+    "submission": false,
+    "account_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

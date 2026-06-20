@@ -1,0 +1,113 @@
+{
+  "schema_version": "agent_company.worker_activation_runway.v1",
+  "generated_utc": "2026-06-17T19:13:40Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-worker-activation-runway-v1-20260617",
+  "purpose": "Consolidate worker-pool review, operator decision, identity envelope, egress ledger, and MCP registry gates into one activation sequence.",
+  "source_artifacts": {
+    "worker_pool_registration_review": "E:\\agent-company-lab\\reports\\worker-pool-registration-review-v1-20260617.json",
+    "worker_pool_operator_decision_packet": "E:\\agent-company-lab\\reports\\worker-pool-operator-decision-packet-v1-20260617.json",
+    "agent_identity_envelope_matrix": "E:\\agent-company-lab\\reports\\agent-identity-envelope-matrix-v1-20260617.json",
+    "agent_egress_event_ledger_packet": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-packet-v1-20260617.json",
+    "mcp_tool_registry_gate_packet": "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-packet-v1-20260617.json",
+    "service_worker_chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  },
+  "activation_sequence": [
+    "review_packet_exists",
+    "operator_decision_artifact",
+    "identity_envelope_artifact",
+    "egress_ledger_contract",
+    "tool_registry_gate",
+    "assignment_preflight",
+    "runtime_start_preflight",
+    "execution",
+    "evidence_seal"
+  ],
+  "pool_readiness": [
+    {
+      "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+      "current_request_count": 2,
+      "current_review_route": "manual_review_register_later",
+      "best_next_evidence": "identity_envelope_draft_plus_operator_decision_contract",
+      "activation_status": "closest_to_local_pilot",
+      "reason": "Local-only boundary reduces external risk and supports infrastructure verification."
+    },
+    {
+      "worker_pool_id": "service-worker-browser-read-only-pool",
+      "current_request_count": 7,
+      "current_review_route": "manual_review_register_later",
+      "best_next_evidence": "identity_envelope_draft_plus_browser_scope_recording_teardown_policy",
+      "activation_status": "high_value_blocked",
+      "reason": "Highest request count but browser domain/session policy is missing."
+    },
+    {
+      "worker_pool_id": "service-worker-model-api-execution-pool",
+      "current_request_count": 1,
+      "current_review_route": "manual_review_register_later",
+      "best_next_evidence": "identity_envelope_draft_plus_egress_ledger_provider_model_cost_scope",
+      "activation_status": "blocked_cost_and_api",
+      "reason": "Model/API calls need explicit cost, provider, input, and output artifact scope."
+    },
+    {
+      "worker_pool_id": "service-worker-public-submission-review-pool",
+      "current_request_count": 1,
+      "current_review_route": "manual_review_register_later",
+      "best_next_evidence": "cro_reputation_gate_plus_public_action_scope",
+      "activation_status": "blocked_public_action",
+      "reason": "Public action authority cannot be inferred from registration review."
+    },
+    {
+      "worker_pool_id": "service-worker-legal-kyc-payment-review-pool",
+      "current_request_count": 1,
+      "current_review_route": "manual_review_register_later",
+      "best_next_evidence": "cro_legal_payment_scope",
+      "activation_status": "blocked_legal_payment",
+      "reason": "Legal, KYC, tax, and payment commitments require explicit user/CRO approval."
+    },
+    {
+      "worker_pool_id": "service-worker-signed-in-browser-read-only-pool",
+      "current_request_count": 1,
+      "current_review_route": "manual_review_hold",
+      "best_next_evidence": "signed_in_browser_safety_packet",
+      "activation_status": "hold",
+      "reason": "Signed-in browser state is higher risk than read-only browser research."
+    },
+    {
+      "worker_pool_id": "service-worker-other-gated-work-pool",
+      "current_request_count": 1,
+      "current_review_route": "manual_review_hold",
+      "best_next_evidence": "narrower_request_type_definition",
+      "activation_status": "hold",
+      "reason": "Request type is too broad to activate safely."
+    }
+  ],
+  "first_safe_pilot_candidate": {
+    "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+    "required_next_artifacts": [
+      "worker_pool_operator_decision_contract_v1",
+      "agent_identity_envelope_contract_v1",
+      "agent_egress_event_ledger_contract_v1",
+      "local_runtime_adapter_pool_activation_preflight_v1"
+    ],
+    "approval_status": "not_approved",
+    "rationale": "Local-only, high-priority, supports infrastructure validation before any external worker action."
+  },
+  "runtime_boundary": {
+    "report_only": true,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "command_previews_executed": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "gateway_or_mcp_installs": 0,
+    "credentials_created": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "account_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "recommended_next_build": "local_runtime_adapter_pool_activation_preflight_v1"
+}

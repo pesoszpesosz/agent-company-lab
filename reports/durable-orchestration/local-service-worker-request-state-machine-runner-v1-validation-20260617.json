@@ -1,0 +1,66 @@
+{
+  "db_counts_after": {
+    "agents": 11,
+    "artifacts": 993,
+    "lane_evidence": 212,
+    "lanes": 12,
+    "outcomes": 235,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 331,
+    "trace_events": 247
+  },
+  "db_counts_before": {
+    "agents": 11,
+    "artifacts": 993,
+    "lane_evidence": 212,
+    "lanes": 12,
+    "outcomes": 235,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 331,
+    "trace_events": 247
+  },
+  "disposition_counts": {
+    "parked_awaiting_human_review": 11,
+    "terminal_noop": 3
+  },
+  "failed_count": 0,
+  "generated_utc": "2026-06-17T17:47:35Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\local-service-worker-request-state-machine-runner-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\local-service-worker-request-state-machine-runner-v1-20260617.md",
+  "next_local_test": "runtime_implementation_human_approval_packet_v2_before_any_external_runtime",
+  "policy_probe_count": 5,
+  "preview_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\local-service-worker-request-state-machine-runner-v1-20260617.json",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "outbox_rows_updated": 0,
+    "payment_actions": false,
+    "public_actions": false,
+    "queue_enqueues": 0,
+    "real_money_actions": false,
+    "runtime_starts": 0,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_completed": 0,
+    "service_requests_started": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\local-service-worker-request-state-machine-runner-v1.schema.json",
+  "schema_version": "agent_company.local_service_worker_request_state_machine_runner_validation.v1",
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "top_level_failures": [],
+  "transition_count": 14
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.service_worker_signed_decision_apply_preflight_blocker.v1",
+  "title": "Agent Company Service Worker Signed Decision Apply Preflight Blocker v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "guard_report_path",
+    "guard_validation_path",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "apply_preflight_status",
+    "blocker_reason",
+    "apply_allowed",
+    "decision_apply_allowed",
+    "assignment_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.service_worker_signed_decision_apply_preflight_blocker.v1"
+    },
+    "guard_report_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "guard_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "real_signed_decision_path": {
+      "type": "string"
+    },
+    "real_signed_decision_present": {
+      "type": "boolean"
+    },
+    "apply_preflight_status": {
+      "enum": [
+        "blocked_no_real_signed_decision",
+        "blocked_fixture_decision_not_real",
+        "blocked_guard_not_passing",
+        "ready_for_apply_command_preflight"
+      ]
+    },
+    "blocker_reason": {
+      "type": "string",
+      "minLength": 5
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "decision_apply_allowed": {
+      "const": false
+    },
+    "assignment_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

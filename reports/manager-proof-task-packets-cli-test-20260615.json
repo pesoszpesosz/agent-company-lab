@@ -1,0 +1,25 @@
+{
+  "chain_integrity": {
+    "all_checks_passed": true,
+    "checked_report_count": 31,
+    "failure_count": 0
+  },
+  "checks": {
+    "chain_integrity_refreshed": true,
+    "help_command": true,
+    "json_tool_manifest": true,
+    "json_tool_validation": true,
+    "py_compile": true,
+    "write_manager_proof_task_packets": true
+  },
+  "generated_utc": "2026-06-15T17:24:09Z",
+  "packet_command_result": {
+    "live_tasks_created": 0,
+    "parked_service_request_count": 9,
+    "proof_task_packet_count": 6,
+    "task_rows_inserted_by_packet": 0
+  },
+  "schema_version": "agent_company.manager_proof_task_packets_cli_test.v1",
+  "source_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_sha256": "8155B6D5177D8287F350F41441CAD7C08B19320F76D44847E907C8A558F2EEE4"
+}

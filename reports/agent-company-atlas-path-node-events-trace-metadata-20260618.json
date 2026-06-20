@@ -1,0 +1,78 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-node-events-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Extended Path Map Node Intel with related trail-event stacks so a focused route node reveals nearby service requests, traces, outcomes, and evidence without leaving the route board.",
+  "design_research": {
+    "queries": [
+      "timeline detail panel related events UX dashboard drilldown",
+      "activity timeline detail pane design pattern dashboard",
+      "roadmap milestone details activity feed panel UX"
+    ],
+    "source_urls": [
+      "https://community.grafana.com/t/state-timeline-data-link-for-drill-down-to-details-for-the-event/54959",
+      "https://community.splunk.com/t5/Dashboards-Visualizations/How-to-drill-down-and-see-the-events-in-the-dashboard-panel/td-p/466270",
+      "https://dribbble.com/search/activity-feed-ui",
+      "https://uxpatterns.dev/patterns/social/activity-feed",
+      "https://www.aubergine.co/insights/a-guide-to-designing-chronological-activity-feeds"
+    ],
+    "pattern_notes": [
+      "Timeline drilldowns work best when selected detail stays near the overview and keeps the user's spatial context.",
+      "Activity feeds should make event type, time, title, and short summary scannable before asking the operator to open a deeper record.",
+      "Roadmap and dashboard detail panels commonly pair a selected milestone with related events so blockers and proof are visible in one place."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-node-events-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "snapshot.lanes[].quest.checkpoints",
+      "snapshot.lanes[].gateMap",
+      "snapshot.lanes[].serviceRequests",
+      "snapshot.lanes[].recentOutcomes",
+      "browser-only state.pathNodeFocusByLane"
+    ],
+    "ui_contract": [
+      "Score related trail records from the focused node's stable id, kind, status, title, meta, body, and local note text.",
+      "Show up to three related records with event type, timestamp, title, and summary inside Node Intel.",
+      "Fall back to the newest trail records when an exact match is unavailable so new lanes still have useful context.",
+      "Add a direct TRL action from Node Intel to the full lane trail.",
+      "Keep all state and matching browser-local or snapshot-derived; do not mutate lane data or contact agents."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-node-events-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, .path-intel-events was absent, .path-intel-event count was 0, and Node Intel had no data-detail-view=\"trail\" action."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-node-events-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "The focused gate rendered a related event stack with 3 records and a TRL button; clicking Startup Memo changed the Node Intel title and first related event to a trace-focused record. No console errors, failed requests, or bad rectangles were reported."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports rendered 3 related event records in Node Intel with document width equal to viewport width and no overflow or bad rectangles."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "http_status": 200
+    }
+  }
+}

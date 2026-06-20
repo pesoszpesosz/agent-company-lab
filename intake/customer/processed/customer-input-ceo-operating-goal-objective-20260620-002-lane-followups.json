@@ -1,0 +1,96 @@
+{
+  "context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+  "followup_tasks": [
+    {
+      "customer_context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:youtube_content_channels",
+      "evidence_required": "Route packet for customer-input-ceo-operating-goal-objective-20260620-002",
+      "lane_id": "youtube_content_channels",
+      "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "title": "Follow up customer input for youtube_content_channels"
+    },
+    {
+      "customer_context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:paid_code_bounties",
+      "evidence_required": "Route packet for customer-input-ceo-operating-goal-objective-20260620-002",
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "title": "Follow up customer input for paid_code_bounties"
+    },
+    {
+      "customer_context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:prediction_market_research",
+      "evidence_required": "Route packet for customer-input-ceo-operating-goal-objective-20260620-002",
+      "lane_id": "prediction_market_research",
+      "next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+      "title": "Follow up customer input for prediction_market_research"
+    },
+    {
+      "customer_context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:ai_ml_competitions",
+      "evidence_required": "Route packet for customer-input-ceo-operating-goal-objective-20260620-002",
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+      "title": "Follow up customer input for ai_ml_competitions"
+    },
+    {
+      "customer_context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:ai_resources_lab",
+      "evidence_required": "Route packet for customer-input-ceo-operating-goal-objective-20260620-002",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 91,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
+      "title": "Follow up customer input for ai_resources_lab"
+    },
+    {
+      "customer_context_capsule": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:money_source_discovery",
+      "evidence_required": "Route packet for customer-input-ceo-operating-goal-objective-20260620-002",
+      "lane_id": "money_source_discovery",
+      "next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery",
+      "title": "Follow up customer input for money_source_discovery"
+    }
+  ],
+  "generated_utc": "2026-06-20T18:13:05Z",
+  "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+  "json_path": "E:\\agent-company-lab\\intake\\customer\\processed\\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.json",
+  "md_path": "E:\\agent-company-lab\\intake\\customer\\processed\\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md",
+  "primary_route": "ai_resources_lab",
+  "route_packet_path": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+  "schema_version": "premium_customer_lane_followup_synthesis.v1",
+  "status": "synthesized",
+  "unknown_lanes": [],
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

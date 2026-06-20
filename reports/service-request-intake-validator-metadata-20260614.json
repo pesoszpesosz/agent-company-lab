@@ -1,0 +1,15 @@
+{
+  "span_kind": "control_plane.validation",
+  "runtime": "codex_local_cli",
+  "api_calls": false,
+  "browser_actions": "none",
+  "schema_changes": [
+    "service_requests.service_id",
+    "service_requests.intake_json"
+  ],
+  "commands_added": [
+    "validate-service-request"
+  ],
+  "negative_check": "missing real_money_trade intake blocked at create-service-request",
+  "positive_check": "complete fake real_money_trade intake validated ok and was rejected as a no-action test row"
+}

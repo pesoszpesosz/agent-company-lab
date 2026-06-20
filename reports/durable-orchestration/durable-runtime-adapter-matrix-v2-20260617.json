@@ -1,0 +1,454 @@
+{
+  "schema_version": "agent_company.durable_runtime_adapter_matrix.v2",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-durable-runtime-adapter-matrix-v2-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_basis": [
+    {
+      "url": "https://docs.temporal.io/ai-cookbook/human-in-the-loop-python",
+      "claim": "Temporal documents durable human-in-the-loop workflows with signal-based approvals, durable timers, resource-efficient waiting, and audit trails."
+    },
+    {
+      "url": "https://www.inngest.com/docs/learn/how-functions-are-executed",
+      "claim": "Inngest documents durable function execution with built-in flow control including concurrency, throttling, rate limiting, prioritization, and idempotency."
+    },
+    {
+      "url": "https://docs.dbos.dev/python/tutorials/workflow-tutorial",
+      "claim": "DBOS documents Python workflows and steps that recover from the last completed step after interruption."
+    },
+    {
+      "url": "https://pydantic.dev/docs/ai/integrations/durable_execution/overview/",
+      "claim": "Pydantic AI documents official durable execution integrations for Temporal, DBOS, Prefect, and Restate."
+    },
+    {
+      "url": "https://docs.prefect.io/v3/how-to-guides/workflows/write-and-run",
+      "claim": "Prefect documents Python workflow creation with flow-decorated functions and production workflow orchestration."
+    },
+    {
+      "url": "https://docs.restate.dev/ai/patterns/durable-agents",
+      "claim": "Restate documents durable agents that persist LLM calls, tool execution, and routing decisions and recover automatically."
+    },
+    {
+      "url": "E:\\agent-company-lab\\reports\\agent-company-deep-research-wave10-20260617.md",
+      "claim": "Wave 10 concluded that the lab should compare durable runtimes locally before importing or starting any runtime."
+    }
+  ],
+  "artifact_actions": {
+    "dependency_installs": false,
+    "dependency_imports": false,
+    "runtime_starts": 0,
+    "queue_enqueues": 0,
+    "service_request_mutations": 0,
+    "api_calls": false,
+    "model_api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false
+  },
+  "matrix": [
+    {
+      "runtime_id": "sqlite_control_plane",
+      "display_name": "Local SQLite Control Plane",
+      "category": "local_control_plane",
+      "source_urls": [
+        "E:\\agent-company-lab\\state\\agent_company.sqlite",
+        "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md",
+        "E:\\agent-company-lab\\architecture\\service-worker-request-v1.schema.json"
+      ],
+      "candidate_role": "Remain the CEO source of truth for tasks, evidence, artifacts, service-request gates, trace events, and local dry-run queues.",
+      "safe_now": true,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Continue standard-library validators and local reports.",
+        "Keep service-worker mutations behind explicit CLI commands and human approval."
+      ],
+      "approval_dependencies": [],
+      "capabilities": [
+        "single-file durable ledger",
+        "queryable audit trail",
+        "local report generation",
+        "zero network dependency",
+        "compatible with existing service-worker gates"
+      ],
+      "risks": [
+        "Not a distributed scheduler by itself.",
+        "Needs an adapter before high-concurrency worker dispatch."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "durable_runtime_adapter_matrix_v2_to_service_worker_reducer_fixture",
+      "promotion_decision": "keep_as_source_of_truth_now",
+      "stop_conditions": [
+        "Any command would approve, assign, start, enqueue, or update a service request without an explicit human/CRO decision.",
+        "Any command requires external runtime state to answer a local control-plane question."
+      ],
+      "score": 91
+    },
+    {
+      "runtime_id": "temporal_python",
+      "display_name": "Temporal Python SDK",
+      "category": "durable_workflow_engine",
+      "source_urls": [
+        "https://docs.temporal.io/ai-cookbook/human-in-the-loop-python",
+        "https://docs.temporal.io/encyclopedia/event-history/event-history-python",
+        "https://github.com/temporalio/sdk-python",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/temporal/"
+      ],
+      "candidate_role": "Future adapter for long-running approval waits, durable timers, replayed workflow history, and human-in-the-loop service-worker lifecycles.",
+      "safe_now": false,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Install Temporal SDK in an isolated environment.",
+        "Run or connect to an approved Temporal server.",
+        "Define deterministic workflow boundaries and activity boundaries.",
+        "Map human/CRO decisions to signals without bypassing service-worker gates."
+      ],
+      "approval_dependencies": [
+        "runtime_implementation_approval",
+        "dependency_install_approval",
+        "service_worker_pool_registration_approval",
+        "model_api_execution_gate_for_model_backed_activities"
+      ],
+      "capabilities": [
+        "durable timers",
+        "signal-based human approval",
+        "event history replay",
+        "long-running workflows",
+        "activity retries"
+      ],
+      "risks": [
+        "Determinism rules can conflict with ad hoc agent behavior.",
+        "Runtime server and worker processes add operational surface.",
+        "Signals must not become hidden approval channels."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "temporal_signal_shape_fixture_against_service_worker_request_v1",
+      "promotion_decision": "hold_for_local_reducer_fixture_then_human_runtime_approval",
+      "stop_conditions": [
+        "Temporal worker import or runtime start is required.",
+        "A workflow would mutate service_requests directly.",
+        "A signal can approve account, wallet, payment, public, security, or model/API action without the approved decision packet."
+      ],
+      "score": 83
+    },
+    {
+      "runtime_id": "inngest",
+      "display_name": "Inngest",
+      "category": "event_driven_durable_functions",
+      "source_urls": [
+        "https://www.inngest.com/docs",
+        "https://www.inngest.com/docs/learn/how-functions-are-executed",
+        "https://www.inngest.com/docs/guides/flow-control",
+        "https://github.com/inngest/inngest"
+      ],
+      "candidate_role": "Future adapter for event-driven durable steps, flow-control policy, concurrency limits, throttling, rate limits, and observable lane-worker dispatch.",
+      "safe_now": false,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Choose self-hosted or cloud boundary.",
+        "Install SDK only after approval.",
+        "Define event names from local outbox/history instead of emitting directly from lane code.",
+        "Map rate limits to lane and service-worker risk classes."
+      ],
+      "approval_dependencies": [
+        "runtime_implementation_approval",
+        "dependency_install_approval",
+        "network_or_cloud_boundary_review",
+        "trace_export_contract_approval_if_external_observability_is_used"
+      ],
+      "capabilities": [
+        "durable steps",
+        "concurrency controls",
+        "throttling",
+        "rate limiting",
+        "event logs",
+        "idempotency"
+      ],
+      "risks": [
+        "Event emission can become an accidental external side effect.",
+        "Cloud use may introduce account, billing, privacy, or data-retention gates.",
+        "Skipping or rate-limiting semantics need explicit mapping to money-lane work."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "inngest_event_name_and_flow_control_fixture_against_central_outbox_history_v1",
+      "promotion_decision": "candidate_after_local_outbox_event_contract",
+      "stop_conditions": [
+        "Any function sends events to a live Inngest endpoint.",
+        "Any flow-control policy drops a human/CRO decision packet.",
+        "Any event starts browser, account, wallet, payment, public, security, or model/API work without gate evidence."
+      ],
+      "score": 78
+    },
+    {
+      "runtime_id": "dbos_python",
+      "display_name": "DBOS Python",
+      "category": "database_backed_durable_workflows",
+      "source_urls": [
+        "https://docs.dbos.dev/python/tutorials/workflow-tutorial",
+        "https://docs.dbos.dev/python/programming-guide",
+        "https://github.com/dbos-inc/dbos-transact-py",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/dbos/"
+      ],
+      "candidate_role": "Future adapter for Postgres-backed durable workflows and queues when the SQLite CEO ledger needs worker-scale orchestration.",
+      "safe_now": false,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Provision or approve Postgres-backed workflow state.",
+        "Install DBOS SDK only after approval.",
+        "Separate deterministic workflow logic from I/O steps.",
+        "Define migration boundaries from SQLite control plane to DBOS runtime state."
+      ],
+      "approval_dependencies": [
+        "runtime_implementation_approval",
+        "dependency_install_approval",
+        "database_provisioning_review",
+        "secrets_credentials_handling_gate"
+      ],
+      "capabilities": [
+        "database checkpointing",
+        "workflow and step model",
+        "automatic recovery",
+        "queues",
+        "programmatic workflow management"
+      ],
+      "risks": [
+        "Postgres provisioning introduces credentials and operations burden.",
+        "Workflow I/O boundaries must be kept explicit.",
+        "DBOS state must not replace the CEO ledger without migration proof."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "dbos_workflow_step_boundary_fixture_for_service_worker_request_v1",
+      "promotion_decision": "candidate_after_sqlite_to_postgres_state_boundary_review",
+      "stop_conditions": [
+        "A DBOS workflow requires live database provisioning.",
+        "A step performs browser, account, wallet, payment, public, security, or model/API work without service approval.",
+        "Workflow state diverges from SQLite task/evidence/artifact records."
+      ],
+      "score": 76
+    },
+    {
+      "runtime_id": "pydantic_ai_durable_execution",
+      "display_name": "Pydantic AI Durable Execution Integrations",
+      "category": "agent_integration_layer",
+      "source_urls": [
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/overview/",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/temporal/",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/dbos/",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/prefect/",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/restate/"
+      ],
+      "candidate_role": "Reference layer for typed agent integration with durable systems; useful for local adapter patterns and future model/API-backed workers after gate approval.",
+      "safe_now": false,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Keep local TestModel-style evaluations separate from real model execution.",
+        "Choose one durable backend before model-backed execution.",
+        "Approve provider, model, cost ceiling, credential route, and output artifact scope."
+      ],
+      "approval_dependencies": [
+        "model_api_execution_gate",
+        "runtime_implementation_approval",
+        "dependency_install_approval",
+        "secrets_credentials_handling_gate"
+      ],
+      "capabilities": [
+        "typed agent interface",
+        "streaming support",
+        "MCP support",
+        "official durable integration references",
+        "structured outputs"
+      ],
+      "risks": [
+        "Model-backed agents can spend money or leak context if not gated.",
+        "Durability integration does not itself solve service approval semantics.",
+        "Multiple durable backends can fragment the runtime surface."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "pydantic_durable_adapter_manifest_fixture_without_model_api_calls",
+      "promotion_decision": "use_as_reference_only_until_model_api_gate_is_approved",
+      "stop_conditions": [
+        "Any model provider call is required.",
+        "Any durable backend import or runtime start is required.",
+        "Any tool call can mutate external systems without service-worker approval."
+      ],
+      "score": 75
+    },
+    {
+      "runtime_id": "prefect",
+      "display_name": "Prefect",
+      "category": "python_workflow_orchestrator",
+      "source_urls": [
+        "https://docs.prefect.io/v3/how-to-guides/workflows/write-and-run",
+        "https://docs.prefect.io/v3/how-to-guides/workflows/retries",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/prefect/",
+        "https://github.com/PrefectHQ/prefect"
+      ],
+      "candidate_role": "Watchlist adapter for Python-first data, research, scan, and evaluation flows where retry, scheduling, and task observability matter more than deep service-worker HITL semantics.",
+      "safe_now": false,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Install Prefect only after dependency approval.",
+        "Decide whether local-only execution is enough or a server/cloud account is required.",
+        "Map flows/tasks to non-side-effecting source refreshes before any gated worker."
+      ],
+      "approval_dependencies": [
+        "dependency_install_approval",
+        "runtime_implementation_approval",
+        "network_or_cloud_boundary_review_if_prefect_server_or_cloud_is_used"
+      ],
+      "capabilities": [
+        "Python flow/task model",
+        "retries",
+        "scheduling",
+        "caching",
+        "task-level observability"
+      ],
+      "risks": [
+        "Workflow convenience can obscure gates if flows call browser or public-action code directly.",
+        "Cloud/server mode may add account and billing gates.",
+        "Less naturally aligned to durable human approvals than Temporal-style signals."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "prefect_flow_manifest_for_local_source_refresh_without_runtime_start",
+      "promotion_decision": "watchlist_for_source_refresh_and_eval_flows",
+      "stop_conditions": [
+        "A flow run requires Prefect server, cloud, account, or API setup.",
+        "A task reaches browser, account, wallet, payment, public, security, model/API, or real-money work.",
+        "Retries could repeat a side-effecting operation."
+      ],
+      "score": 66
+    },
+    {
+      "runtime_id": "restate",
+      "display_name": "Restate",
+      "category": "durable_agent_runtime",
+      "source_urls": [
+        "https://docs.restate.dev/",
+        "https://docs.restate.dev/ai/patterns/durable-agents",
+        "https://docs.restate.dev/use-cases/ai-agents",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/restate/"
+      ],
+      "candidate_role": "Watchlist adapter for durable agents, sessions, service calls, human-in-the-loop, and multi-agent orchestration after the lab stabilizes local communication and approval semantics.",
+      "safe_now": false,
+      "fits_existing_gates": true,
+      "adoption_requirements": [
+        "Install Restate SDK and run or approve Restate server only after runtime approval.",
+        "Define agent-service boundaries against central outbox/history.",
+        "Map every durable service call to service-worker request classes and stop gates."
+      ],
+      "approval_dependencies": [
+        "runtime_implementation_approval",
+        "dependency_install_approval",
+        "service_worker_pool_registration_approval",
+        "network_or_server_runtime_review"
+      ],
+      "capabilities": [
+        "durable agents",
+        "persisted LLM calls and tool execution",
+        "stateful sessions",
+        "human-in-the-loop patterns",
+        "multi-agent orchestration"
+      ],
+      "risks": [
+        "Agent-service abstraction could duplicate the local company bus before it is stable.",
+        "Server runtime creates an additional operational boundary.",
+        "Persisted tool execution must not persist secrets or private browser data."
+      ],
+      "artifact_actions": {
+        "dependency_installs": false,
+        "dependency_imports": false,
+        "runtime_starts": 0,
+        "queue_enqueues": 0,
+        "service_request_mutations": 0,
+        "api_calls": false,
+        "model_api_calls": false,
+        "browser_sessions_started": 0,
+        "external_side_effects": false
+      },
+      "first_local_test": "restate_agent_service_boundary_fixture_against_central_outbox_history_v1",
+      "promotion_decision": "watchlist_after_outbox_and_browser_safety_contracts",
+      "stop_conditions": [
+        "A Restate server or SDK import is required.",
+        "An agent service can execute side-effecting tools without service-worker approval.",
+        "Persisted agent state includes credentials, private session data, or payment/wallet material."
+      ],
+      "score": 70
+    }
+  ],
+  "recommended_next_local_tests": [
+    "durable_runtime_adapter_matrix_v2_to_service_worker_reducer_fixture",
+    "temporal_signal_shape_fixture_against_service_worker_request_v1",
+    "inngest_event_name_and_flow_control_fixture_against_central_outbox_history_v1",
+    "dbos_workflow_step_boundary_fixture_for_service_worker_request_v1"
+  ],
+  "decision": "Keep SQLite as the active source of truth. Promote Temporal and Inngest as the next comparison candidates only through local fixtures. Hold DBOS, Prefect, Restate, and Pydantic durable execution integrations until dependency, runtime, model/API, credential, and service-worker approvals exist.",
+  "boundary": [
+    "No dependency install was performed.",
+    "No Temporal, Inngest, DBOS, Pydantic, Prefect, or Restate package was imported.",
+    "No runtime was started.",
+    "No queue event was enqueued.",
+    "No service request was approved, assigned, started, completed, rejected, or otherwise mutated.",
+    "No browser session was opened.",
+    "No model/API call was made.",
+    "No external side effect was performed."
+  ]
+}

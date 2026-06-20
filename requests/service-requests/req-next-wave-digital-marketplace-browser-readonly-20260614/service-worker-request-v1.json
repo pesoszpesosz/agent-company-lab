@@ -1,0 +1,166 @@
+{
+  "schema_version": "service_worker_request.v1",
+  "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615",
+  "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+  "requesting_lane_id": "digital_products_templates_plugins",
+  "requesting_agent_id": "recovered-profitable-edge-infra",
+  "worker_type": "browser_read_only",
+  "service_id": "browser_read_only_session",
+  "risk_gate": "catalog_required_approval_no_external_action",
+  "approval_status_snapshot": "needs_review",
+  "approval_scope": "No approval granted. This worker request is a local conversion artifact only; execution requires separate approval and assignment.",
+  "created_utc": "2026-06-14T21:55:07Z",
+  "objective": "After explicit approval only, read public Gumroad, Lemon Squeezy, and PromptBase marketplace pages for terms, fees, payouts, listing requirements, refund constraints, prohibited content, and seller requirements relevant to Agent Skill Starter Kit.",
+  "allowed_actions": [
+    "Open public pages on allowed hosts after approval",
+    "Follow public help, documentation, pricing, fees, terms, refund, payout, seller, and prohibited-content links on allowed hosts",
+    "Record source URLs and page titles",
+    "Summarize factual marketplace requirements with short compliant excerpts only",
+    "Capture local Markdown notes and optional screenshots"
+  ],
+  "prohibited_actions": [
+    "login",
+    "signup",
+    "seller onboarding",
+    "terms acceptance",
+    "listing creation",
+    "product upload",
+    "payment setup",
+    "tax form entry",
+    "KYC form entry",
+    "purchase",
+    "public promotion",
+    "comments or messages",
+    "saving settings",
+    "submitting forms",
+    "entering credentials, OTPs, payment details, personal data, private files, or wallet information",
+    "using signed-in pages",
+    "bypassing paywalls, rate limits, access controls, or platform rules"
+  ],
+  "stop_conditions": [
+    "The source service request is not approved and assigned",
+    "Any page asks for login, signup, account creation, seller onboarding, consent acceptance, payment, tax, KYC, private data, credentials, OTP, wallet action, or file upload",
+    "A required page is not public or requires a signed-in state",
+    "A link leaves the allowed hosts",
+    "The browser worker cannot distinguish public guidance from contractual acceptance",
+    "The task would require a public action, marketplace listing, or real-money/payment action"
+  ],
+  "credential_boundary": {
+    "credentials_allowed": false,
+    "otp_allowed": false,
+    "private_data_allowed": false,
+    "notes": "No credentials, OTPs, personal/private data, private files, secrets, or payment details may be entered or stored."
+  },
+  "account_boundary": {
+    "login_allowed": false,
+    "signup_allowed": false,
+    "settings_change_allowed": false,
+    "terms_acceptance_allowed": false,
+    "notes": "No signed-in pages, registration, settings, seller onboarding, or terms acceptance."
+  },
+  "money_boundary": {
+    "payment_method_allowed": false,
+    "purchase_allowed": false,
+    "deposit_allowed": false,
+    "withdrawal_allowed": false,
+    "trade_allowed": false,
+    "wallet_signature_allowed": false,
+    "notes": "No real-money, payment-method, wallet, purchase, or transaction action."
+  },
+  "public_action_boundary": {
+    "post_allowed": false,
+    "comment_allowed": false,
+    "message_allowed": false,
+    "issue_or_pr_allowed": false,
+    "marketplace_listing_allowed": false,
+    "submission_allowed": false,
+    "notes": "No public posts, comments, messages, listings, uploads, PR/issue actions, or submissions."
+  },
+  "data_boundary": {
+    "allowed_hosts": [
+      "gumroad.com",
+      "www.lemonsqueezy.com",
+      "lemonsqueezy.com",
+      "promptbase.com"
+    ],
+    "starting_urls": [
+      "https://gumroad.com/",
+      "https://www.lemonsqueezy.com/ecommerce/digital-products",
+      "https://promptbase.com/sell"
+    ],
+    "allowed_data_types": [
+      "public marketing page text",
+      "public help/documentation page text",
+      "public page title",
+      "public URL",
+      "local screenshot if approval permits browser capture"
+    ],
+    "disallowed_data_types": [
+      "credentials",
+      "OTP",
+      "payment details",
+      "tax/KYC data",
+      "private files",
+      "wallet data",
+      "signed-in account data",
+      "non-public page content"
+    ]
+  },
+  "external_side_effects_allowed": false,
+  "real_money_allowed": false,
+  "public_action_allowed": false,
+  "account_or_identity_action_allowed": false,
+  "model_or_api_cost_allowed": false,
+  "max_cost_usd": 0,
+  "input_artifacts": [
+    {
+      "kind": "service_request_packet",
+      "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\packet.md",
+      "required": true
+    },
+    {
+      "kind": "execution_plan",
+      "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\execution-plan-v1.json",
+      "required": true
+    }
+  ],
+  "expected_output_artifacts": [
+    {
+      "kind": "browser_readonly_capture",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md",
+      "required": true
+    },
+    {
+      "kind": "route_comparison_json",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-route-comparison-20260614.json",
+      "required": true
+    },
+    {
+      "kind": "blocker_note",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-blocker-note-20260614.md",
+      "required": false
+    }
+  ],
+  "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\execution-plan-v1.json",
+  "result_artifact_path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md",
+  "replay_policy": {
+    "idempotency_key": "req-next-wave-digital-marketplace-browser-readonly-20260614:browser_read_only:public_pages_only_no_signed_in_session",
+    "safe_to_replay_without_reapproval": false,
+    "replay_requires_new_approval_when": [
+      "service request status is not approved or assigned",
+      "allowed hosts, starting URLs, prohibited actions, or risk gate change",
+      "worker would use signed-in state, submit a form, accept terms, create an account, upload/list a product, or touch payment/tax/KYC/wallet data",
+      "more than one weekly source freshness window has elapsed since approval"
+    ]
+  },
+  "status": "needs_review",
+  "metadata": {
+    "converted_from": "service_request_execution_plan.v1",
+    "current_request_status": "needs_review",
+    "created_by": "recovered-profitable-edge-infra",
+    "api_calls": false,
+    "browser_opened": false,
+    "external_side_effects": false,
+    "approval_granted_by_this_artifact": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "all_required_fields_present": true,
+  "all_worker_types_known": true,
+  "generated_utc": "2026-06-19T14:16:55Z",
+  "queue_path": "E:\\agent-company-lab\\reports\\service-worker-request-queue-latest.json",
+  "schema_version": "service_worker_request_queue_validation.v1",
+  "service_requests_approved_by_report": 0,
+  "service_requests_started_by_report": 0,
+  "side_effect_flags_all_false": true,
+  "validated_count": 16,
+  "worker_type_counts": {
+    "browser_read_only": 9,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

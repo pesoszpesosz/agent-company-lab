@@ -1,0 +1,44 @@
+{
+  "schema_version": "agent_company.optimism_local_review_candidate_filter_report.v1",
+  "generated_utc": "2026-06-17T21:56:43Z",
+  "task_id": "task-optimism-local-review-candidate-filter-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "title": "Optimism Local Review Candidate Filter v1",
+  "filter_count": 9,
+  "highest_priority_allowed_routes": [
+    {
+      "filter_id": "olf-001",
+      "route": "Optimism smart-contract invariant review",
+      "why": "Best local-only fit: source mapping, invariant analysis, duplicate comparison, and PoC planning can happen without target interaction."
+    },
+    {
+      "filter_id": "olf-009",
+      "route": "Local proof-ready candidate",
+      "why": "Only after an individual asset clears scope, duplicate, quality, and no-side-effect gates."
+    }
+  ],
+  "default_hard_stops": [
+    "public RPC/Beacon API exposure",
+    "operator topology/best-practice issues",
+    "Alt-DA feature claims unless exclusion is cleared",
+    "bridge/token foot-gun claims without a new protocol bypass",
+    "basic economic/governance/Sybil/centralization/lack-of-liquidity claims",
+    "web/app browser work without route gate"
+  ],
+  "next_packet_template": {
+    "name": "optimism_single_asset_candidate_packet_v1",
+    "required_fields": [
+      "selected_asset_id",
+      "selected_filter_id",
+      "asset_scope_evidence",
+      "impact_scope_evidence",
+      "duplicate_matrix_notes",
+      "quality_gate_notes",
+      "local_poc_plan",
+      "side_effect_audit",
+      "operator_submission_gate_status"
+    ]
+  },
+  "submission_ready_count": 0,
+  "next_action": "Select exactly one Optimism smart-contract asset and create a local candidate packet; do not run code, fork chains, test targets, or submit reports."
+}

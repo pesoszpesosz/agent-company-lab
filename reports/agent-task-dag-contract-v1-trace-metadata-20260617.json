@@ -1,0 +1,11 @@
+{
+  "api_calls": false,
+  "edge_count": 12,
+  "external_side_effects": false,
+  "gate_count": 3,
+  "node_count": 10,
+  "runtime": "local_python_report_writer",
+  "span_kind": "implementation_contract",
+  "starts_workers": false,
+  "updates_service_requests": false
+}

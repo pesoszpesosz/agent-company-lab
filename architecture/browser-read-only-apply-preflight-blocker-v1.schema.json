@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.browser_read_only_apply_preflight_blocker.v1",
+  "title": "Agent Company Browser Read-Only Apply Preflight Blocker v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "guard_report_path",
+    "guard_validation_path",
+    "guard_summary",
+    "guard_adapter_contract_gate",
+    "guard_adapter_contract_validation_path",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "apply_preflight_status",
+    "blocker_reason",
+    "apply_allowed",
+    "assignment_allowed",
+    "browser_session_start_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.browser_read_only_apply_preflight_blocker.v1"
+    },
+    "guard_report_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "guard_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "guard_summary": {
+      "type": "object"
+    },
+    "guard_adapter_contract_gate": {
+      "enum": [
+        "present_valid_start_blocked",
+        "missing",
+        "present_invalid_or_side_effectful"
+      ]
+    },
+    "guard_adapter_contract_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "real_signed_decision_path": {
+      "type": "string"
+    },
+    "real_signed_decision_present": {
+      "type": "boolean"
+    },
+    "apply_preflight_status": {
+      "enum": [
+        "blocked_no_real_signed_decision",
+        "blocked_fixture_decision_not_real",
+        "blocked_guard_not_passing",
+        "blocked_guard_adapter_contract_not_passing",
+        "ready_for_apply_command_preflight"
+      ]
+    },
+    "blocker_reason": {
+      "type": "string",
+      "minLength": 5
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "assignment_allowed": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

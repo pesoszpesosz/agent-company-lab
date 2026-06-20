@@ -1,0 +1,8 @@
+{
+  "allowed_read_scope": "Public PromptBase pages only. Read seller, support, prompt-guideline, terms, homepage, marketplace category, and product-format guidance relevant to Agent Skill Starter Kit v0. Capture URLs, page titles, timestamps, short paraphrased rule notes, and file-by-file package implications into a local artifact only.",
+  "evidence_needed": "PromptBase guideline mapping report with every package file marked pass, edit-needed, blocked, or not-applicable; include source URLs, date/time observed, unsupported claims, file-format/category requirements, and next gate recommendation.",
+  "forbidden_actions": "No login, signup, account creation, seller onboarding, terms acceptance, listing save, listing creation, upload, submission, checkout, purchase, comments, messages, profile edits, payout setup, tax/KYC forms, public promotion, model/MCP calls, worker/runtime starts, or browser actions beyond approved public reading.",
+  "lane_id": "digital_products_templates_plugins",
+  "session_sensitivity": "public_pages_only_no_signed_in_session",
+  "target_url": "https://promptbase.com/sell ; https://promptbase.com/prompt-engineering-guide ; https://promptbase.com/marketplace"
+}

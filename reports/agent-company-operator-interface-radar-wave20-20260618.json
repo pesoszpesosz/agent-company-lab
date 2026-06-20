@@ -1,0 +1,59 @@
+{
+  "schema_version": "agent_company.operator_interface_radar_report.v1",
+  "generated_utc": "2026-06-18T02:49:21Z",
+  "task_id": "task-agent-company-operator-interface-radar-wave20-20260618",
+  "dataset_path": "E:\\agent-company-lab\\data\\agent-company-operator-interface-radar-wave20-20260618.json",
+  "csv_path": "E:\\agent-company-lab\\data\\agent-company-operator-interface-radar-wave20-20260618.csv",
+  "validation_path": "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618-validation.json",
+  "top_decisions": [
+    {
+      "decision_id": "ceo_event_surface_before_more_visual_dashboard_work",
+      "rationale": "AG-UI and CopilotKit show that agent-human interaction needs a portable event vocabulary: messages, tool states, approvals, shared state, and streamed updates. The local Atlas already visualizes state, but it lacks a stable operator-event contract.",
+      "next_build": "ceo_operator_event_surface_contract_v1"
+    },
+    {
+      "decision_id": "delegated_tool_auth_packets_before_composio_like_connectors",
+      "rationale": "Composio's value is not just many tools; it is auth, context, tool search, and sandboxed action routing. The lab should model delegated tool-auth request packets before any external connector, account, OAuth, or MCP tool execution.",
+      "next_build": "delegated_tool_auth_request_packet_v1"
+    },
+    {
+      "decision_id": "room_visibility_contract_before_worker_runtime_rooms",
+      "rationale": "HiClaw validates the user's company metaphor: manager-worker rooms, human visibility, shared files, gateway-held credentials, and auditable collaboration. The local equivalent should be a no-runtime room/handoff contract first.",
+      "next_build": "multi_agent_room_handoff_contract_v1"
+    },
+    {
+      "decision_id": "reversibility_policy_before_any_proxy_or_shell_governance",
+      "rationale": "The deterministic-agent-control-protocol repo is small but directly relevant to bounded, auditable, reversible action governance. The lab should convert that idea into a local matrix before any proxy, shell, MCP server, or HTTP gateway is started.",
+      "next_build": "agent_action_reversibility_policy_matrix_v1"
+    }
+  ],
+  "recommended_next_sequence": [
+    "ceo_operator_event_surface_contract_v1",
+    "delegated_tool_auth_request_packet_v1",
+    "multi_agent_room_handoff_contract_v1",
+    "agent_action_reversibility_policy_matrix_v1"
+  ],
+  "hold_until_gated": [
+    "Dependency installs for CopilotKit, AG-UI, Mastra, Composio, assistant-ui, HiClaw, Agent Chat UI, or governance gateways.",
+    "Runtime starts, browser sessions, Matrix/Kubernetes/container launches, MCP servers, MCP tool calls, model/API calls, OAuth/app authentication, public actions, account actions, wallet/payment actions, telemetry exports, or shell proxy starts.",
+    "Service-request assignments or approvals without explicit signed operator decision artifacts."
+  ],
+  "boundary": {
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "public_actions": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "security_testing_actions": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0
+}

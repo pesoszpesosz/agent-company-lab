@@ -1,0 +1,556 @@
+{
+  "api_calls": false,
+  "approval_granted_by_scorecard": false,
+  "blocked_from_execution_count": 11,
+  "chain_integrity_passed": true,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T12:14:51Z",
+  "recommended_first_build": "pydantic_ai_local_dry_run_for_local_artifact_summary_only",
+  "recommended_queue_adapter_test": "dbos_vs_hatchet_packet_placeholder_manifest",
+  "runtime_catalog": {
+    "autogen_legacy_patterns": {
+      "durability": 2,
+      "external_risk": 1,
+      "human_gate_fit": 2,
+      "local_fit": 2,
+      "maturity": 3,
+      "notes": "Maintenance-mode; use only for migration or historical pattern comparison, not new core.",
+      "role": "legacy_pattern_reference"
+    },
+    "current_sqlite_reports": {
+      "durability": 3,
+      "external_risk": 0,
+      "human_gate_fit": 5,
+      "local_fit": 5,
+      "maturity": 5,
+      "notes": "Already owns tasks, artifacts, traces, service requests, packets, review boards, and chain integrity.",
+      "role": "authoritative_control_plane"
+    },
+    "dbos_postgres_queue": {
+      "durability": 5,
+      "external_risk": 1,
+      "human_gate_fit": 4,
+      "local_fit": 2,
+      "maturity": 3,
+      "notes": "Good minimal Postgres-backed durable workflow/queue adapter candidate; needs Postgres proof before adoption.",
+      "role": "durable_python_queue_candidate"
+    },
+    "hatchet_durable_queue": {
+      "durability": 5,
+      "external_risk": 1,
+      "human_gate_fit": 4,
+      "local_fit": 2,
+      "maturity": 4,
+      "notes": "Good self-hosted durable queue/monitoring candidate for scaled workers; needs service-worker packet adapter proof.",
+      "role": "durable_multi_language_queue_candidate"
+    },
+    "langgraph_stateful_managers": {
+      "durability": 4,
+      "external_risk": 1,
+      "human_gate_fit": 5,
+      "local_fit": 3,
+      "maturity": 4,
+      "notes": "Fit for long-running manager/seeker state machines with human-in-the-loop checkpoints after local gates are stable.",
+      "role": "stateful_manager_seeker_loop"
+    },
+    "microsoft_agent_framework": {
+      "durability": 4,
+      "external_risk": 1,
+      "human_gate_fit": 4,
+      "local_fit": 3,
+      "maturity": 4,
+      "notes": "Active Microsoft successor path for production multi-agent orchestration, governance, human-in-loop, MCP/A2A, Python/.NET.",
+      "role": "production_multi_agent_target"
+    },
+    "pydantic_ai_local": {
+      "durability": 1,
+      "external_risk": 1,
+      "human_gate_fit": 4,
+      "local_fit": 5,
+      "maturity": 4,
+      "notes": "Best first bridge for typed local artifact workers and schema-checked summaries; API/model calls stay gated.",
+      "role": "typed_local_worker"
+    }
+  },
+  "schema_version": "runtime_bridge_scorecard.v1",
+  "scorecard_count": 11,
+  "scorecard_rows": [
+    {
+      "agenda_group": "ceo_user_cro_model_api_cost_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "recommendation_reason": "approval/cost/artifact authority first",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 96,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 20,
+      "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+      "runtime_candidates": [
+        {
+          "reason": "approval/cost/artifact authority first",
+          "runtime": "current_sqlite_reports",
+          "score": 96
+        },
+        {
+          "reason": "typed dry-run and approved model-call bridge",
+          "runtime": "pydantic_ai_local",
+          "score": 84
+        },
+        {
+          "reason": "production orchestration once cost gates exist",
+          "runtime": "microsoft_agent_framework",
+          "score": 72
+        },
+        {
+          "reason": "stateful model workflow with interrupts",
+          "runtime": "langgraph_stateful_managers",
+          "score": 70
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "model_api_execution"
+    },
+    {
+      "agenda_group": "user_cro_legal_payment_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "digital_products_templates_plugins",
+      "recommendation_reason": "human-only gate and review packet authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 98,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 20,
+      "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+      "runtime_candidates": [
+        {
+          "reason": "human-only gate and review packet authority",
+          "runtime": "current_sqlite_reports",
+          "score": 98
+        },
+        {
+          "reason": "local checklist formatting only, no private data",
+          "runtime": "pydantic_ai_local",
+          "score": 45
+        },
+        {
+          "reason": "future reminder/checkpoint flow only",
+          "runtime": "langgraph_stateful_managers",
+          "score": 42
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "legal_kyc_tax_payment_review"
+    },
+    {
+      "agenda_group": "user_cro_reputation_public_submission_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "security_bounty_private_reports",
+      "recommendation_reason": "reputation/user/CRO gate authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 98,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 20,
+      "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+      "runtime_candidates": [
+        {
+          "reason": "reputation/user/CRO gate authority",
+          "runtime": "current_sqlite_reports",
+          "score": 98
+        },
+        {
+          "reason": "local draft linting only",
+          "runtime": "pydantic_ai_local",
+          "score": 55
+        },
+        {
+          "reason": "future staged review state machine",
+          "runtime": "langgraph_stateful_managers",
+          "score": 50
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "public_submission"
+    },
+    {
+      "agenda_group": "user_cro_signed_in_browser_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 20,
+      "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-grok-research-worker-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_signed_in_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "digital_products_templates_plugins",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "paid_code_bounties",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "security_bounty_private_reports",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "content_and_social_growth",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "ai_ml_competitions",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "digital_products_templates_plugins",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "agenda_group": "cro_exact_scope_readonly_gate",
+      "api_calls": false,
+      "approval_granted_by_scorecard": false,
+      "dependency_installed_by_scorecard": false,
+      "external_side_effects": false,
+      "lane_id": "money_source_discovery",
+      "recommendation_reason": "keep as review/approval authority",
+      "recommended_runtime": "current_sqlite_reports",
+      "recommended_runtime_score": 95,
+      "requires_human_or_cro_before_execution": true,
+      "review_priority": 10,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "runtime_candidates": [
+        {
+          "reason": "keep as review/approval authority",
+          "runtime": "current_sqlite_reports",
+          "score": 95
+        },
+        {
+          "reason": "future browser session state/checkpoints after approval",
+          "runtime": "langgraph_stateful_managers",
+          "score": 72
+        },
+        {
+          "reason": "future cross-runtime orchestration after local proof",
+          "runtime": "microsoft_agent_framework",
+          "score": 66
+        },
+        {
+          "reason": "queue candidate after browser worker adapter proof",
+          "runtime": "hatchet_durable_queue",
+          "score": 58
+        }
+      ],
+      "safe_next_local_proof": "write_adapter_manifest_or_local_placeholder_only",
+      "schema_version": "runtime_bridge_scorecard_row.v1",
+      "service_request_assigned_by_scorecard": false,
+      "service_request_updated_by_scorecard": false,
+      "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "worker_started_by_scorecard": false,
+      "worker_type": "browser_read_only"
+    }
+  ],
+  "service_requests_assigned_by_scorecard": 0,
+  "service_requests_updated_by_scorecard": 0,
+  "source_reports": {
+    "chain_integrity": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "decision_review_agenda": "E:\\agent-company-lab\\reports\\service-worker-decision-review-agenda-20260615.json",
+    "wave8_stack_decision": "E:\\agent-company-lab\\reports\\agent-company-stack-decision-wave8-20260615.json"
+  },
+  "summary_by_recommended_runtime": {
+    "current_sqlite_reports": 11
+  },
+  "worker_starts": 0
+}

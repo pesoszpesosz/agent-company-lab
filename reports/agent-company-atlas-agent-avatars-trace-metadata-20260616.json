@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "agent-avatars-v1",
+  "feature": {
+    "id": "agent-identity-portraits",
+    "title": "Generated Agent Avatar Identity Pack",
+    "purpose": "Give every active bot in the Atlas Comms roster a distinct generated portrait, callsign, specialty, and accent while preserving a spare expansion avatar."
+  },
+  "assets": {
+    "sourceSheet": "web/assets/agents/agent-avatar-sheet-20260616.png",
+    "agentDirectory": "web/assets/agents",
+    "metadata": "web/data/agent-visuals.json",
+    "activeAgentPortraits": 11,
+    "sparePortraits": 1,
+    "cellSize": "362x362"
+  },
+  "prompt": {
+    "mode": "built-in image_gen",
+    "summary": "Generated a 4x3 premium sci-fi AI operator portrait sheet with twelve distinct command-center agent identities, no readable text, no logos, and regular crop-safe cells."
+  },
+  "implementation": {
+    "snapshotSource": "web/data/agent-visuals.json",
+    "snapshotField": "snapshot.agents[].visual",
+    "uiSurface": "Comms roster agent chips",
+    "fallback": "Unmapped future agents fall back to lane avatar art."
+  },
+  "validation": {
+    "nodeCheck": "passed",
+    "pythonCompile": "passed",
+    "jsonValidation": "passed",
+    "snapshotRegenerated": true,
+    "assetCoverage": {
+      "agents": 11,
+      "withVisual": 11,
+      "missing": 0
+    },
+    "desktopComms": {
+      "lane": "digital_products_templates_plugins",
+      "callsign": "Foundry Lead",
+      "avatarNaturalWidth": 362,
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "mobileComms": {
+      "lane": "paid_code_bounties",
+      "callsign": "Claim Scout",
+      "viewport": "390x840",
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    }
+  }
+}

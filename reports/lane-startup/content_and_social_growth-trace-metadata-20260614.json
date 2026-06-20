@@ -1,0 +1,10 @@
+{
+  "span_kind": "internal",
+  "runtime": "codex_local_cli",
+  "api_calls": false,
+  "public_actions": false,
+  "browser_actions": false,
+  "lane_boundary": "content_and_social_growth_only",
+  "x_grok_radar_used": false,
+  "service_request_status": "needs_review"
+}

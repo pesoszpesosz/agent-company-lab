@@ -1,0 +1,39 @@
+{
+  "schema_version": "knowledge_application_loop.v1",
+  "generated_utc": "2026-06-20T17:04:00Z",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "status": "active_local_rule",
+  "purpose": "Guarantee that useful knowledge discovered by the customer, workers, managers, AR evaluations, or lane research is not merely stored and forgotten.",
+  "loop": [
+    "capture_new_knowledge",
+    "classify_by_lane_gate_urgency_and_possible_application",
+    "pick_application_path",
+    "update_smallest_durable_company_object",
+    "emit_compact_ceo_customer_update",
+    "verify_applied_routed_parked_or_blocked_by_named_gate"
+  ],
+  "valid_application_paths": [
+    "money_lane_packet",
+    "service_lane_packet",
+    "ai_resources_evaluation",
+    "human_action_feed_item",
+    "goal_evolver_review",
+    "ceo_state_packet",
+    "prompt_or_task_update",
+    "source_registry_update",
+    "product_artifact_update",
+    "script_content_batch_update",
+    "evaluation_fixture_or_result",
+    "dashboard_or_snapshot_update",
+    "watch_list_with_revisit_condition"
+  ],
+  "anti_rejection_policy": "Do not use rejection as the default. If knowledge is not immediately actionable, park it with a reason and revisit trigger. If it is unsafe or out of scope, record why and provide a safer route when one exists.",
+  "zero_side_effect_boundary": {
+    "external_actions_authorized": false,
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "model_api_mcp_calls": 0,
+    "service_requests_approved_assigned_or_started": 0
+  }
+}

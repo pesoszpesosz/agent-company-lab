@@ -1,0 +1,137 @@
+{
+  "schema_version": "ai_ml_competitions.arc_prize_2026_baseline_local_proof.v1",
+  "generated_utc": "2026-06-18T06:38:12Z",
+  "task_id": "task-lane-scout-arc_prize_2026-20260618",
+  "lane_id": "ai_ml_competitions",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "status": "arc_prize_2026_baseline_ready_local_only",
+  "source_observations": [
+    {
+      "source_id": "arc_prize_2026_overview",
+      "url": "https://arcprize.org/competitions/2026",
+      "observed_utc": "2026-06-18T06:38:12Z",
+      "local_summary": "ARC Prize 2026 lists $2M in prizes across three tracks: ARC-AGI-3, ARC-AGI-2, and Paper Prize. Key dates include March 25 start, June 30 ARC-AGI-3 Milestone #1, September 30 Milestone #2, November 2 submissions due, November 8 papers due, and December 4 results.",
+      "route_effect": "High upside and strategic learning value, but the route is not quick cash and requires rules, Kaggle, open-source, and submission gates before external action."
+    },
+    {
+      "source_id": "arc_agi_3_track",
+      "url": "https://arcprize.org/competitions/2026/arc-agi-3",
+      "observed_utc": "2026-06-18T06:38:12Z",
+      "local_summary": "ARC-AGI-3 challenges participants to build AI agents for novel interactive environments without instructions. The track lists $850K total, including a $700K grand prize for 100%, guaranteed top-score awards, and milestone prizes. Submissions must go through Kaggle, no internet access is available during evaluation, and all code/methods must be open sourced to be prize eligible.",
+      "route_effect": "Any serious baseline must be offline-capable, reproducible, open-source-ready, and tested locally before account/rules/submission gates."
+    },
+    {
+      "source_id": "arc_agi_3_docs_quickstart",
+      "url": "https://docs.arcprize.org/",
+      "observed_utc": "2026-06-18T06:38:12Z",
+      "local_summary": "ARC-AGI-3 docs describe an interactive benchmark for exploration, percept-plan-action, memory, goal acquisition, and alignment. Quickstart references installing the arc-agi toolkit and optional API key, then playing public environments.",
+      "route_effect": "Toolkit/API use remains gated here; this packet keeps the baseline at synthetic/local proof until approval exists."
+    },
+    {
+      "source_id": "local_arc_toy_harness",
+      "url": "E:/agent-company-lab/reports/ai-ml-competitions/arc-toy-harness-run-20260616.md",
+      "observed_utc": "2026-06-18T06:38:12Z",
+      "local_summary": "Existing local toy harness checked five synthetic tasks and passed all five: translation, recolor, mirror, crop-and-tile, and explicit no-solution failure case. It used no official ARC data, no Kaggle login/download, no paid compute/API, no submission/public action, and no external side effects.",
+      "route_effect": "The local kill criterion has enough proof to justify a next local baseline design, but not enough to justify Kaggle/account/submission action."
+    }
+  ],
+  "baseline_tracks": [
+    {
+      "track_id": "arc_agi_3_offline_agent_baseline",
+      "target": "ARC-AGI-3 interactive reasoning",
+      "local_start": "Extend synthetic toy harness from static transforms into a tiny turn-based environment with replay traces.",
+      "why": "The official track is agentic and offline-evaluated, so the baseline must focus on exploration, memory, world-model inference, and action planning without API calls.",
+      "deliverables": [
+        "Offline local environment fixture with at least three tiny games.",
+        "Deterministic random/explore baseline.",
+        "Replay JSON with observations, actions, score, and terminal state.",
+        "Failure taxonomy for exploration, goal inference, and planning misses."
+      ],
+      "gates": [
+        "account",
+        "kaggle_rules",
+        "submission",
+        "public_action",
+        "worker_runtime",
+        "paid_compute",
+        "api_key"
+      ],
+      "local_priority": 1
+    },
+    {
+      "track_id": "arc_agi_2_symbolic_solver_baseline",
+      "target": "ARC-AGI-2 static reasoning",
+      "local_start": "Continue the existing DSL harness and add more transform families before using any official/gated competition data.",
+      "why": "Existing synthetic grid-transform proof already works locally, and static tasks are a cleaner proving ground for deterministic DSL search.",
+      "deliverables": [
+        "At least eight synthetic transform families.",
+        "Candidate program search metrics.",
+        "Generalization failure cases.",
+        "Open-source-ready solver scaffold notes."
+      ],
+      "gates": [
+        "account",
+        "kaggle_rules",
+        "dataset_download",
+        "submission",
+        "public_action"
+      ],
+      "local_priority": 2
+    },
+    {
+      "track_id": "paper_prize_experiment_log",
+      "target": "ARC Prize 2026 paper track",
+      "local_start": "Maintain a structured experiment log from every toy-harness and baseline run.",
+      "why": "Paper route may preserve value even if leaderboard performance is weak, but claims need reproducible experiments.",
+      "deliverables": [
+        "Experiment log schema.",
+        "Method comparison table.",
+        "Negative results registry.",
+        "Paper outline after at least two local baselines."
+      ],
+      "gates": [
+        "public_action",
+        "submission",
+        "open_source_license_review",
+        "claim_review"
+      ],
+      "local_priority": 3
+    }
+  ],
+  "recommended_first_track": "arc_agi_3_offline_agent_baseline",
+  "next_local_sprint": {
+    "sprint_id": "arc_agi_3_micro_env_replay_baseline_v1",
+    "duration_hypothesis_hours": "3-6",
+    "success_criteria": [
+      "Create three toy interactive environments with deterministic state transitions.",
+      "Run at least two baseline policies: random and simple exploration-memory.",
+      "Write replay JSON for every run.",
+      "Pass deterministic replay validation without network, API, Kaggle, official data, paid compute, or account access."
+    ],
+    "kill_or_continue_rule": "Continue toward ARC-AGI-3 only if the simple exploration-memory baseline beats random on at least two of three toy environments and the replay logs identify actionable failure modes."
+  },
+  "decision": "go_local_only_no_external_competition_action",
+  "why": "ARC Prize 2026 has large upside and strong strategic fit, and the local toy harness already proves a small deterministic baseline path. External action remains premature because Kaggle/rules/submission/open-source/license/compute gates are unresolved and no official baseline has been run.",
+  "acceptance_checks": [
+    "Official ARC Prize 2026 overview, ARC-AGI-3 track, and docs are summarized.",
+    "Local toy harness evidence is incorporated.",
+    "At least three baseline tracks are defined with deliverables and gates.",
+    "A next local sprint is specified with success criteria and a measurable continue/kill rule.",
+    "No Kaggle account/login, rules acceptance, data download, submission, paid compute, API key, worker/runtime start, public action, or external side effect occurs."
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "kaggle_account_or_login": false,
+    "rules_or_terms_accepted": false,
+    "official_or_gated_data_downloaded": false,
+    "submissions_made": 0,
+    "papers_or_notebooks_published": 0,
+    "paid_compute_or_api": false,
+    "api_keys_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create the ARC-AGI-3 micro-environment replay baseline locally; keep Kaggle account/rules, official data, submission, paper/public action, paid compute/API, worker/runtime, and external side effects blocked until human approval."
+}

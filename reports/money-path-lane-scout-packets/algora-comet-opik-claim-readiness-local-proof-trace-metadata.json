@@ -1,0 +1,28 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:27:07Z",
+  "trace_id": "trace-algora-comet-opik-claim-readiness-local-proof-20260618",
+  "task_id": "task-lane-scout-algora_comet_opik-20260618",
+  "lane_id": "paid_code_bounties",
+  "event_type": "algora_comet_opik_claim_readiness_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\algora-comet-opik-claim-readiness-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\algora-comet-opik-claim-readiness-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\algora-comet-opik-claim-readiness-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "live_algora_fetch": false,
+    "live_github_fetch": false,
+    "accounts_or_logins": 0,
+    "cla_or_terms_accepted": false,
+    "github_comments_claims_or_prs": 0,
+    "forks_created": 0,
+    "payout_or_payment_actions": 0,
+    "security_testing": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Park external Algora/Comet claim work until the Opik bounty program is verified active by an approved read-only refresh; then re-run duplicate/claim/payout checks before any public claim, comment, PR, account, CLA, or payout action."
+}

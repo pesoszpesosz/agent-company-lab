@@ -1,0 +1,91 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-lenses-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-lenses-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_lenses_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added per-chapter record lenses to the Chapter Archive so selected chapter dossiers can be narrowed by all, proof, unlock, service, task, trace, and gate records with counts, disabled empty lenses, per-lens reveal state, and Event Proof plus Route Replay synchronization.",
+  "design_research": {
+    "queries": [
+      "filter chips UX pattern selected state counts disabled empty filters",
+      "faceted filtering event log timeline drilldown UX",
+      "activity feed grouped events detail filters design pattern"
+    ],
+    "source_urls": [
+      "https://m3.material.io/components/chips",
+      "https://www.nngroup.com/articles/filters/",
+      "https://www.nngroup.com/articles/faceted-search/",
+      "https://grafana.com/docs/grafana/latest/explore/simplified-exploration/logs/",
+      "https://getstream.io/blog/activity-feed-design/",
+      "https://uxpatterns.dev/patterns/data-display/timeline"
+    ],
+    "pattern_notes": [
+      "Filter chips should expose selected state, concise labels, and immediate scannable choices near the content they refine.",
+      "Faceted filtering helps long histories stay navigable by letting operators narrow records through meaningful categories instead of searching manually.",
+      "Log and feed drilldowns benefit from a stable master-detail path: select a chapter, filter the record class, then jump to the exact proof or replay stage."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-chapter-lenses-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathChapterFocusByLane",
+      "browser-only state.pathChapterRecordLensByLane",
+      "browser-only state.pathChapterRecordLimitByLane",
+      "browser-only state.pathEventFocusByLane",
+      "existing pathEventGlyphType classification",
+      "existing Route Replay focus state"
+    ],
+    "ui_contract": [
+      "Render seven selected-chapter lenses inside the Chapter Archive record deck: All, Proof, Unlock, Service, Task, Trace, and Gate.",
+      "Show per-lens counts, keep zero-count lenses visible but disabled, and mark the active lens through button state and aria-pressed.",
+      "Keep reveal-more state scoped by lane, chapter, and active lens so changing filters starts from a compact four-record view.",
+      "When a lens selects a different first record, synchronize Event Proof and Route Replay through the existing focused-event contract.",
+      "Preserve responsive wrapping for narrow and wide layouts without horizontal overflow or clipped chip text."
+    ]
+  },
+  "verification": {
+    "baseline": {
+      "status": "partial",
+      "evidence": "Pre-implementation code search found no path-chapter-record-lenses markup, data-path-chapter-lens controls, or pathChapterRecordLens browser state."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-lenses-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered seven chapter lenses with All active, counts All 43, Proof 22, Unlock 21, and Service/Task/Trace/Gate disabled at 0; header read 'Chapter Records 06/15 dossier 4 / 43' with four visible records."
+    },
+    "lens_filtering": {
+      "status": "passed",
+      "evidence": "Selecting Proof changed the deck to 4 / 22 proof records, focused 'Digital products local gated hold register', moved Event Proof to 2 / 64, and synced Route Replay to Stage 63 of 64. Reveal expanded Proof to 8 / 22. Selecting Unlock changed the deck to 4 / 21 outcome records and synced Route Replay to Stage 64 of 64."
+    },
+    "older_chapter_lens": {
+      "status": "passed",
+      "evidence": "Selecting the 06/14 chapter showed counts All 21, Unlock 10, Service 6, Trace 5, with Proof/Task/Gate disabled. Selecting Service rendered 4 / 6 service records, focused 'Legal Kyc Tax Payment', moved Event Proof to 53 / 64, synced Route Replay to Stage 12 of 64, and kept Event Stream at 64 of 64 visible."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered seven lenses, All active with aria-pressed true, four visible chapter records, no bad rectangles, no clipped chapter lens or record text, and document width equal to client width."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "edited_files_ascii": "passed",
+      "http_status": 200,
+      "console_errors": 0
+    }
+  }
+}

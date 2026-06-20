@@ -1,0 +1,85 @@
+{
+  "trace_id": "trace-agent-company-atlas-bot-command-matrix-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "company_level_bot_command_matrix",
+  "summary": "Added a Bot Command Matrix that gives every active bot a command-center card with lane state, thread id, gate pressure, review counts, urgency, suggested send, Comms drill-through, and local staging.",
+  "design_research": {
+    "queries": [
+      "command center dashboard bot orchestration UI patterns",
+      "AI agent dashboard task orchestration user interface patterns",
+      "operations command center dashboard design best practices agents"
+    ],
+    "source_urls": [
+      "https://www.dataiku.com/stories/blog/agent-orchestration-explained",
+      "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns",
+      "https://www.mindstudio.ai/blog/ai-agent-command-center-manage-goals-not-terminals",
+      "https://www.lukew.com/ff/entry.asp?2106="
+    ],
+    "pattern_notes": [
+      "Multi-agent command centers need shared state, visible ownership, and governance context so agents do not contradict one another unnoticed.",
+      "Goal-centered command centers reduce terminal/tab switching by surfacing goals, queues, and current state together.",
+      "Agent-management interfaces commonly combine dashboards, task lists, inboxes, and drill-downs so humans can intervene where needed."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-bot-command-matrix-trace-metadata-20260617.json"
+    ],
+    "data_inputs": [
+      "snapshot.agents[]",
+      "snapshot.agents[].visual",
+      "snapshot.agents[].lane",
+      "snapshot.lanes[].counts.blockers",
+      "snapshot.lanes[].counts.pendingRequests",
+      "snapshot.lanes[].level",
+      "snapshot.lanes[].visual.realm",
+      "snapshot.dispatchConsole.suggestions[]",
+      "browser-local staged dispatches"
+    ],
+    "ui_contract": [
+      "Render one command-center card for every active bot in snapshot.agents.",
+      "Show online, ready-send, gated, and staged totals above the matrix.",
+      "Each card shows generated portrait, callsign, lane, state, thread id, gate pressure, blocker count, pending review count, urgency, and suggested command reason.",
+      "COM opens the lane Comms deck; Q stages the bot's top suggested command or falls back to the lane Comms draft.",
+      "The matrix is derived from the existing static snapshot and browser-local dispatch outbox; it sends no external messages."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "trace_metadata_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=bot-command-matrix&cache=20260617-bot-command-matrix",
+      "checks": [
+        {
+          "viewport": "390x920",
+          "result": "Bot Command Matrix panel rendered, 11 bot cards, 4 summary counters, 11/11 portraits loaded, one-column matrix, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Bot Command Matrix panel rendered, 11 bot cards, 4 summary counters, 11/11 portraits loaded, four-column matrix, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1600x900",
+          "result": "Bot Command Matrix panel rendered, 11 bot cards, 4 summary counters, 11/11 portraits loaded, five-column matrix, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800 staging",
+          "result": "Clicking the paid_code_bounties Q action staged/refreshed a local command; paid-code button showed OK, dispatch count showed 8 staged, and summary text included 11 online, 11 ready sends, 7 gated, and 8 staged."
+        },
+        {
+          "viewport": "1280x800 comms",
+          "result": "Clicking the paid_code_bounties COM action updated the hash to #lane=paid_code_bounties&view=comms and rendered Paid Code Bounties with Agent Comms and Command deck text."
+        }
+      ]
+    }
+  }
+}

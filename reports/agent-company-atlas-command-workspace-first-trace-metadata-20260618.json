@@ -1,0 +1,41 @@
+{
+  "id": "trace-agent-company-atlas-command-workspace-first-v1-20260618",
+  "task_id": "task-agent-company-atlas-command-workspace-first-v1-20260618",
+  "event_id": "trace-atlas_command_workspace_first_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-command-workspace-first-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Command Workspace First",
+  "summary": "Moved the active lane workspace ahead of global command boards and made the detail panel lead at medium widths so direct Path Map links reach the selected lane without a long command-page scroll.",
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_command_workspace_first.py"
+  ],
+  "browser_verification": {
+    "url": "http://127.0.0.1:5177/index.html?verify=command-workspace-first-20260618c#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "body_deck": "command",
+    "scroll_y": 0,
+    "overflow_x": 0,
+    "workspace_y": 229,
+    "detail_panel_y": 229,
+    "path_mission_glance_y": 620,
+    "path_core_deck_y": 777,
+    "system_relay_y": 3503,
+    "dispatch_console_y": 3911,
+    "command_relay_y": 5602
+  },
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_command_workspace_first.py -q failed before implementation because workspace appeared after system-relay-panel.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_command_workspace_first.py -q failed after the DOM move until responsive detail-panel order was added.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_command_workspace_first.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser runtime: command deck opened with workspace as first visible section, global command boards after it, detail panel leading the medium-width workspace, Path Mission Glance/Core Deck near the top, and overflow 0."
+  ]
+}

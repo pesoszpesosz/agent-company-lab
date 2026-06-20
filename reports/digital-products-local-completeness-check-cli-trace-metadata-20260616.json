@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-completeness-check-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "check_lane_id": "digital_products_templates_plugins",
+  "check_task_id": "task-digital-products-local-completeness-check-20260616",
+  "closeout_task_id": "task-digital-products-local-completeness-check-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:46:02Z",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "DA992621527E5A339E7B94B0DD3D2334BF416A5AB84429D039689F8D1CDE4248",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

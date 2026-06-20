@@ -1,0 +1,100 @@
+{
+  "fixtures_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-fixtures-latest.json",
+  "fixtures_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-fixtures-validation-latest.json",
+  "forbidden_runtime_imports": [],
+  "generated_utc": "2026-06-15T16:16:08Z",
+  "lane_id": "platform_engineering",
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "next_action": "Materialize the packet components as local markdown/JSON scaffolding artifacts, still without executable runtime adapter code.",
+  "packet_component_count": 5,
+  "packet_components": [
+    {
+      "artifact_kind": "report_markdown",
+      "component_id": "packet_contract_summary_markdown",
+      "executable_code": false,
+      "implementation_note": "Generate local markdown/JSON planning content only; do not import Temporal/Inngest or start runtimes.",
+      "report_only": true,
+      "runtime_component": false,
+      "runtime_side_effect_component": false,
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_contract_summary_markdown",
+      "title": "render a markdown summary of the runtime interface contract"
+    },
+    {
+      "artifact_kind": "report_json",
+      "component_id": "packet_negative_fixture_matrix_json",
+      "executable_code": false,
+      "implementation_note": "Generate local markdown/JSON planning content only; do not import Temporal/Inngest or start runtimes.",
+      "report_only": true,
+      "runtime_component": false,
+      "runtime_side_effect_component": false,
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_negative_fixture_matrix_json",
+      "title": "render a JSON matrix of rejected runtime-side-effect candidates"
+    },
+    {
+      "artifact_kind": "validation_json",
+      "component_id": "packet_preflight_gate_snapshot",
+      "executable_code": false,
+      "implementation_note": "Generate local markdown/JSON planning content only; do not import Temporal/Inngest or start runtimes.",
+      "report_only": true,
+      "runtime_component": false,
+      "runtime_side_effect_component": false,
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_preflight_gate_snapshot",
+      "title": "render a preflight gate snapshot for human review"
+    },
+    {
+      "artifact_kind": "report_markdown",
+      "component_id": "packet_chain_readiness_pointer",
+      "executable_code": false,
+      "implementation_note": "Generate local markdown/JSON planning content only; do not import Temporal/Inngest or start runtimes.",
+      "report_only": true,
+      "runtime_component": false,
+      "runtime_side_effect_component": false,
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_chain_readiness_pointer",
+      "title": "render a pointer to the latest chain-integrity validation"
+    },
+    {
+      "artifact_kind": "planning_markdown",
+      "component_id": "packet_adapter_todo_packet",
+      "executable_code": false,
+      "implementation_note": "Generate local markdown/JSON planning content only; do not import Temporal/Inngest or start runtimes.",
+      "report_only": true,
+      "runtime_component": false,
+      "runtime_side_effect_component": false,
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_adapter_todo_packet",
+      "title": "render a todo packet for future explicitly-approved runtime adapter work"
+    }
+  ],
+  "preflight_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-implementation-preflight-validation-latest.json",
+  "purpose": "Package the currently permitted local report-only adapter scaffolding artifacts without producing executable runtime adapter code.",
+  "report_only_scaffolding_allowed": true,
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_version": "temporal_inngest_adapter_runtime_report_only_scaffolding_packet.v1"
+}

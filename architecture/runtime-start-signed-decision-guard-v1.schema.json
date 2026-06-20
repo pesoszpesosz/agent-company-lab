@@ -1,0 +1,88 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/runtime-start-signed-decision-guard-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Runtime Start Signed Decision Guard v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_start_signed_decision_guard.v1"
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "worker_pool_id": {
+      "const": "service-worker-local-runtime-adapter-pool"
+    },
+    "source_runtime_start_preflight_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "deny",
+        "approve_runtime_start_preflight_only"
+      ]
+    },
+    "operator_id": {
+      "type": "string",
+      "minLength": 2
+    },
+    "operator_attestation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "signed_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "expires_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "allowed_scope": {
+      "type": "string"
+    },
+    "allowed_command_preview_sha256": {
+      "type": "string"
+    },
+    "allowed_output_artifact_path": {
+      "type": "string"
+    },
+    "allowed_trace_id": {
+      "type": "string"
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "rollback_plan": {
+      "type": "string"
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "decision_id",
+    "worker_pool_id",
+    "source_runtime_start_preflight_path",
+    "decision",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_command_preview_sha256",
+    "allowed_output_artifact_path",
+    "allowed_trace_id",
+    "runtime_start_allowed",
+    "worker_start_allowed",
+    "rollback_plan",
+    "runtime_boundary"
+  ]
+}

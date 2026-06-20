@@ -1,0 +1,35 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-crew-relay-v1-20260619",
+  "title": "Command Cockpit Crew Relay",
+  "created_at": "2026-06-19T20:50:20Z",
+  "kind": "ui_unlock",
+  "summary": "The Quest focus lens now surfaces the responsible bot with avatar, readiness, and a compact Comms jump.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/assets/system/command-cockpit-crew-relay-20260619.png",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "snapshot.agents",
+      "agentPartyRecords",
+      "crewReadiness",
+      "lane.ownerAgentId",
+      "state.detailView"
+    ],
+    "outputs": [
+      "questCrewRelayRecord",
+      "renderQuestCrewRelay",
+      "quest-crew-relay",
+      "system-command-cockpit-crew-relay"
+    ]
+  },
+  "verification": {
+    "intent": "Make selected path nodes show who owns the next move without adding another scrolling crew panel.",
+    "navigation": "The relay uses the existing data-detail-view='comms' handler for the compact COM jump.",
+    "layout": "The relay is inserted into the existing Quest focus lens and has desktop/mobile compression rules."
+  }
+}

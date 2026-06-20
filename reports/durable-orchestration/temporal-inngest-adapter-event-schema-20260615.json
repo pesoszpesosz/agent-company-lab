@@ -1,0 +1,200 @@
+{
+  "blocked_transitions": [
+    "needs_review -> assigned without explicit approval",
+    "needs_review -> started without approval, assignment, and readiness",
+    "rejected -> assigned by replay",
+    "rejected -> started by replay",
+    "complete -> started by replay",
+    "any -> model_api_execution without provider/model/max_cost/credential/output-scope approval",
+    "any -> browser/account/payment/wallet/public/security-test/legal commitment without separate approval"
+  ],
+  "event_contract": {
+    "event_names_defined_not_emitted": [
+      "agent_company/service_request.created",
+      "agent_company/service_request.needs_review",
+      "agent_company/service_request.approved",
+      "agent_company/service_request.rejected",
+      "agent_company/service_request.assigned",
+      "agent_company/service_request.started",
+      "agent_company/service_request.completed",
+      "agent_company/service_request.parked"
+    ],
+    "fields": {
+      "approval_granted_by_event": {
+        "const": false,
+        "type": "boolean"
+      },
+      "event_id": {
+        "format": "service-request-event/{request_id}/{event_type}/{sequence}",
+        "type": "string"
+      },
+      "event_name": {
+        "enum": [
+          "agent_company/service_request.created",
+          "agent_company/service_request.needs_review",
+          "agent_company/service_request.approved",
+          "agent_company/service_request.rejected",
+          "agent_company/service_request.assigned",
+          "agent_company/service_request.started",
+          "agent_company/service_request.completed",
+          "agent_company/service_request.parked"
+        ],
+        "type": "string"
+      },
+      "execution_allowed": {
+        "const": false,
+        "type": "boolean"
+      },
+      "generated_utc": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "idempotency_key": {
+        "type": "string"
+      },
+      "lane_id": {
+        "type": "string"
+      },
+      "mutation_allowed": {
+        "const": false,
+        "type": "boolean"
+      },
+      "pause_reason": {
+        "type": "string"
+      },
+      "request_id": {
+        "type": "string"
+      },
+      "request_type": {
+        "type": "string"
+      },
+      "risk_gate": {
+        "type": "string"
+      },
+      "schema_version": {
+        "const": "agent_company.service_request_event.v1",
+        "type": "string"
+      },
+      "sequence": {
+        "minimum": 1,
+        "type": "integer"
+      },
+      "side_effects_allowed": {
+        "const": false,
+        "type": "boolean"
+      },
+      "source_manifest_path": {
+        "type": "string"
+      },
+      "status_snapshot": {
+        "type": "string"
+      },
+      "temporal_state_after_event": {
+        "type": "string"
+      },
+      "temporal_workflow_id": {
+        "format": "service-request/{request_id}",
+        "type": "string"
+      },
+      "worker_type": {
+        "type": "string"
+      }
+    },
+    "payload_schema_style": "json-schema-compatible-local-contract",
+    "required_fields": [
+      "schema_version",
+      "event_id",
+      "event_name",
+      "sequence",
+      "generated_utc",
+      "request_id",
+      "lane_id",
+      "request_type",
+      "worker_type",
+      "risk_gate",
+      "status_snapshot",
+      "temporal_workflow_id",
+      "temporal_state_after_event",
+      "idempotency_key",
+      "execution_allowed",
+      "side_effects_allowed",
+      "mutation_allowed",
+      "approval_granted_by_event",
+      "pause_reason",
+      "source_manifest_path"
+    ],
+    "temporal_activity_names_defined_not_scheduled": [
+      "validate_current_state",
+      "write_decision_packet",
+      "await_human_review",
+      "assign_worker_after_approval",
+      "start_worker_after_readiness",
+      "record_result_artifacts"
+    ],
+    "temporal_workflow_type_defined_not_started": "ServiceRequestLifecycleWorkflow"
+  },
+  "generated_utc": "2026-06-15T14:33:09Z",
+  "idempotency_policy": {
+    "duplicate_event_handling": "same key must be treated as already observed and must not mutate service_requests",
+    "idempotency_key_format": "service-request-event:{request_id}:{event_name}:{status_snapshot}:{risk_gate}",
+    "replay_source_of_truth": "SQLite service_requests row plus immutable local event preview artifact"
+  },
+  "runtime_boundary": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_functions_registered": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_event_schema.v1",
+  "side_effect_boundary": "This schema is only a local contract. It grants no approval and does not authorize installing, importing, registering, emitting, assigning, starting, browsing, calling APIs, or external actions.",
+  "source_manifest_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-service-request-adapter-manifest-20260615.json",
+  "title": "Service-request durable adapter event schema, no emit and no execution",
+  "transition_rules": [
+    {
+      "allowed_to_assign_worker": false,
+      "allowed_to_mutate_ledger": false,
+      "allowed_to_start_worker": false,
+      "event_preview": "agent_company/service_request.needs_review",
+      "from_status": "needs_review",
+      "replay_state_after_event": "awaiting_human_review",
+      "resume_requires": [
+        "explicit approval packet",
+        "matching risk gate",
+        "registered eligible worker pool",
+        "exact artifact scope"
+      ]
+    },
+    {
+      "allowed_to_assign_worker": false,
+      "allowed_to_mutate_ledger": false,
+      "allowed_to_start_worker": false,
+      "event_preview": "agent_company/service_request.completed",
+      "from_status": "complete",
+      "replay_state_after_event": "completed_no_action_or_verified",
+      "resume_requires": [
+        "new explicit user task if any follow-up work is needed"
+      ]
+    },
+    {
+      "allowed_to_assign_worker": false,
+      "allowed_to_mutate_ledger": false,
+      "allowed_to_start_worker": false,
+      "event_preview": "agent_company/service_request.rejected",
+      "from_status": "rejected",
+      "replay_state_after_event": "terminal_rejected",
+      "resume_requires": [
+        "new explicit request; do not revive rejected row by replay"
+      ]
+    }
+  ]
+}

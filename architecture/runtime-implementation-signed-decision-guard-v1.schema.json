@@ -1,0 +1,116 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/runtime-implementation-signed-decision-guard-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Runtime Implementation Signed Decision Guard v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_implementation_signed_decision_guard.v1"
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "source_approval_packet_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "deny",
+        "approve_one_runtime_candidate"
+      ]
+    },
+    "approver": {
+      "type": "string",
+      "minLength": 2
+    },
+    "signed_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "expires_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "selected_runtime_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approved_question_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "denied_question_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "allowed_dependency_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "allowed_runtime_processes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "allowed_database_or_cloud_resources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "service_request_mutation_scope": {
+      "type": "string"
+    },
+    "provider_model_and_cost_cap": {
+      "type": "string"
+    },
+    "artifact_output_path": {
+      "type": "string"
+    },
+    "rollback_plan": {
+      "type": "string"
+    },
+    "human_notes": {
+      "type": "string"
+    },
+    "signature_attestation": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "decision_id",
+    "source_approval_packet_path",
+    "decision",
+    "approver",
+    "signed_utc",
+    "expires_utc",
+    "selected_runtime_id",
+    "approved_question_ids",
+    "denied_question_ids",
+    "allowed_dependency_names",
+    "allowed_runtime_processes",
+    "allowed_database_or_cloud_resources",
+    "service_request_mutation_scope",
+    "provider_model_and_cost_cap",
+    "artifact_output_path",
+    "rollback_plan",
+    "human_notes",
+    "signature_attestation"
+  ]
+}

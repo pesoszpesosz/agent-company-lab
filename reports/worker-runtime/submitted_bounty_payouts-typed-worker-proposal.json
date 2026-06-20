@@ -1,0 +1,123 @@
+{
+  "context": {
+    "agent_types": [
+      "payout_monitor",
+      "rules_reader",
+      "response_drafter"
+    ],
+    "department": "Revenue Collection",
+    "evidence": [
+      {
+        "evidence_id": "pe-report-submitted-bounty-monitor-34dd40c9671d",
+        "next_action": "next: Monitor only. Direct payout to us requires bounty owner selection of our solver/PR work or an explicit request for our payout details. Existing next action: Monitor upstream PR #7014 and microbounty #905 for review, requested changes, merge, or payout instructions; do not create duplicate submissions.",
+        "ownership_note": "Read-only import. The parallel Find profitable edge worker owns payout monitoring and GitHub follow-up for this lane.",
+        "source_path": "E:\\profit-edge-lab\\reports\\submitted-bounty-monitor-latest.md",
+        "source_url": null,
+        "status": "imported",
+        "summary": "- submitted: 24 | - bounty: https://github.com/charles-openclaw/charles-microbounties/issues/905 | - attribution: low; status: issue_authored_by_other_lead_bounty; actionability: monitor_only_until_owner_selects_solver | - next: Monitor only. Direct payout to us requires bounty owner selection of our solver/PR work or an explicit request for our payout details. Existing next action: Monitor upstream PR #7014 and microbounty #905 for review, requested change | - bounty: https://github.com/charles-openclaw/charles-microbounties/issues/924",
+        "title": "Submitted Bounty Monitor"
+      },
+      {
+        "evidence_id": "pe-report-charles-submission-monitor-6a23a0593fa4",
+        "next_action": "next: Monitor; our lead remains first-authored, but another user may try an upstream fix.",
+        "ownership_note": "Read-only import. The parallel Find profitable edge worker owns payout monitoring and GitHub follow-up for this lane.",
+        "source_path": "E:\\profit-edge-lab\\reports\\charles-submission-monitor-latest.md",
+        "source_url": null,
+        "status": "imported",
+        "summary": "- submitted issues: 1 | - status: submitted_competing_attempt_visible",
+        "title": "Charles Submission Monitor"
+      },
+      {
+        "evidence_id": "pe-ledger-rustchain_public_payout_routing_setup_20260613_214-3cfc21725b07",
+        "next_action": "Monitor RustChain #292, #293, #14015, #14037, Bottube PR #1413, and Charles merged PR candidates for owner selection, award comments, payment transactions, or explicit payout instructions.",
+        "ownership_note": "Read-only import. The parallel Find profitable edge worker owns payout monitoring and GitHub follow-up for this lane.",
+        "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+        "source_url": "https://github.com/Scottcjn/rustchain-bounties/issues/14058",
+        "status": "configure_public_payout_identifier",
+        "summary": "Created RustChain wallet-name registration #14058 for @pesoszpesosz using RTC wallet name pesoszpesosz, then posted payout-routing comments on RustChain #293, #14015, and #14037 for merged/pending @pesoszpesosz work. No seed phrase, private key, external address, KYC, tax, or payment onboarding was created or stored.",
+        "title": "rustchain_public_payout_routing_setup_20260613_214755"
+      }
+    ],
+    "examples": [
+      "RustChain",
+      "Charles microbounties",
+      "existing merged PRs"
+    ],
+    "global_gates": [
+      "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+      "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+      "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+      "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+    ],
+    "lane_id": "submitted_bounty_payouts",
+    "owner_agent_id": null,
+    "owner_thread_id": "other Find profitable edge worker, not this recovered infrastructure thread",
+    "promotion_gates": [
+      "owner selection",
+      "explicit payout instruction",
+      "payment transaction evidence"
+    ],
+    "service_workers_required": [
+      "wallet_public_address_worker",
+      "user_approval_worker"
+    ],
+    "side_effects": [
+      "wallet address comment",
+      "payment detail reply"
+    ],
+    "source_specs": [],
+    "status": "active"
+  },
+  "proposal": {
+    "allowed_now": [
+      "read manager packet",
+      "read source specs",
+      "read local evidence/artifact reports",
+      "write local proposal artifacts",
+      "record artifacts/outcomes/traces through the control plane"
+    ],
+    "blocked_actions": [
+      "wallet address comment",
+      "payment detail reply",
+      "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+      "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+      "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+      "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+    ],
+    "duplicate_key": "submitted_bounty_payouts:typed-worker-prototype:2026-06-14",
+    "evidence_refs": [
+      "pe-report-submitted-bounty-monitor-34dd40c9671d",
+      "pe-report-charles-submission-monitor-6a23a0593fa4",
+      "pe-ledger-rustchain_public_payout_routing_setup_20260613_214-3cfc21725b07"
+    ],
+    "generated_at": "2026-06-14T11:31:11Z",
+    "lane_id": "submitted_bounty_payouts",
+    "mode": "no_action_read_only",
+    "output_artifacts": [
+      "E:\\agent-company-lab\\reports\\worker-runtime\\submitted_bounty_payouts-typed-worker-proposal.json",
+      "E:\\agent-company-lab\\reports\\worker-runtime\\submitted_bounty_payouts-typed-worker-proposal.md"
+    ],
+    "proposal_id": "proposal-submitted_bounty_payouts-20260614",
+    "rationale": "This lane is explicitly owned by the parallel payout worker, so this runtime must not create payout work.",
+    "recommended_cli_commands": [
+      "python E:\\agent-company-lab\\tools\\agent_company.py list-source-specs --lane-id submitted_bounty_payouts",
+      "python E:\\agent-company-lab\\tools\\agent_company.py list-evidence --lane-id submitted_bounty_payouts --limit 25",
+      "python E:\\agent-company-lab\\tools\\agent_company.py write-artifacts-report --lane-id submitted_bounty_payouts --path E:\\agent-company-lab\\reports\\artifacts-submitted_bounty_payouts-latest.md"
+    ],
+    "required_service_requests": [
+      "wallet_public_address_worker",
+      "user_approval_worker"
+    ],
+    "stop_conditions": [
+      "lane is already owned by another active worker",
+      "next action requires account, wallet, browser, public, legal/KYC/billing, or real-money action",
+      "evidence is missing or source scope is unclear"
+    ],
+    "task_title": "Read-only payout visibility packet; no work assigned from this thread",
+    "trace_events_to_record": [
+      "typed_worker_context_loaded",
+      "typed_worker_proposal_written"
+    ],
+    "worker_agent_id": "typed-worker-prototype"
+  }
+}

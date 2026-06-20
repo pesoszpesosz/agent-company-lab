@@ -1,0 +1,85 @@
+{
+  "generated_utc": "2026-06-14T15:34:00Z",
+  "external_side_effects": false,
+  "public_actions": false,
+  "browser_actions": false,
+  "real_money_actions": false,
+  "excluded_lanes": [
+    {
+      "lane_id": "submitted_bounty_payouts",
+      "reason": "Parallel payout worker owns this lane."
+    }
+  ],
+  "dispatches": [
+    {
+      "lane_id": "money_source_discovery",
+      "thread_id": "019ec699-e02b-7ce1-a7a6-32afc857c254",
+      "task_id": "task-money-source-weekly-delta-local-dry-run-20260614",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "scope": "Local Wave-4 source delta table only; no browser/current-source verification."
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "thread_id": "019ec69a-3c39-7de3-849b-f2d19a2d03da",
+      "task_id": "task-ai-ml-competition-local-shortlist-template-20260614",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "scope": "Local rubric, blank shortlist, and baseline template only; no competition signup, data/API use, or submission."
+    },
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "thread_id": "019ec69a-9fe3-7530-b83e-ae404554bca7",
+      "task_id": "task-digital-products-agent-skill-starter-kit-v0-20260614",
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "scope": "Local product bundle only; no browsing, marketplace listing, seller signup, payment setup, promotion, or sales claim."
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+      "task_id": "task-prediction-kalshi-crypto-settlement-lag-replay-20260614",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "scope": "Paper-only replay from local/imported packets; no accounts, APIs, orders, deposits, withdrawals, or real-money trades."
+    },
+    {
+      "lane_id": "security_bounty_private_reports",
+      "thread_id": "019ec612-4cf1-7601-8818-ddd3028a06f4",
+      "task_id": "task-security-rules-android-scope-packet-20260614",
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "scope": "Source-only scope packet; no live testing, account action, exploit attempt, report submission, or payout chasing."
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "thread_id": "019ec612-d317-71f1-b02f-c85f2295e320",
+      "task_id": "task-paid-code-explicit-payout-local-scout-20260614",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "scope": "Local scout packet only; no GitHub comments, PRs, bounty claims, maintainer contact, or payout monitoring."
+    },
+    {
+      "lane_id": "content_and_social_growth",
+      "thread_id": "019ec613-1080-7520-80e3-24dc7cfc31ea",
+      "task_id": "task-content-social-readonly-capture-template-20260614",
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "scope": "Local capture template/fixture only; no X/Grok/Radar browser use or public/social actions."
+    },
+    {
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "thread_id": "019ec613-54d0-7d13-ada3-d448a4b4cc99",
+      "task_id": "task-web3-grant-proposal-local-packet-20260614",
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "scope": "Local grant proposal packet only; no wallet, registration, deployment, quest, form submission, public project, or transaction."
+    },
+    {
+      "lane_id": "lead_generation_and_sales",
+      "thread_id": "019ec613-9786-7a70-97fd-21143953b39f",
+      "task_id": "task-leadgen-fictional-audit-rubric-packet-20260614",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "scope": "Fictional local audit packet only; no real lead identification, scraping, outreach, proposals, DMs, emails, or account use."
+    },
+    {
+      "lane_id": "local_trading_strategy_research",
+      "thread_id": "019ec613-e69b-7ce1-8aed-36383f3136f6",
+      "task_id": "task-local-trading-xau-paper-evidence-intake-20260614",
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "scope": "Local paper-evidence intake only; no broker connection, trading API, live signal ingestion, orders, deposits, withdrawals, or real-money action."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-lane-selector-compression-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-lane-selector-compression-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-lane-selector-compression-v1-20260619",
+  "title": "Command Cockpit Lane Selector Compression",
+  "createdAt": "2026-06-19T08:10:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Let the new lane-level selector replace duplicate Cockpit rail chrome so more money-path levels fit before scrolling.",
+  "proof": [
+    "Added tested Command Cockpit CSS that tightens lane card height, padding, portraits, title spacing, and selector cells.",
+    "Hid the old progress bar and muted summary only in the Cockpit lane rail because the selector already exposes level, XP, gates, wins, and live work.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the compression unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_lane_rail_signal_pips.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

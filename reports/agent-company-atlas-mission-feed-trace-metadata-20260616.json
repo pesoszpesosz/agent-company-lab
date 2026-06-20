@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "mission-feed-v1",
+  "feature": {
+    "id": "global-mission-feed",
+    "title": "Global Mission Feed",
+    "purpose": "Aggregate the newest cross-lane tasks, evidence, outcomes, traces, and gates into a filterable company-wide stream that opens the source lane trail."
+  },
+  "researchInfluences": [
+    {
+      "name": "Activity Feed pattern",
+      "url": "https://uxpatterns.dev/patterns/social/activity-feed",
+      "takeaway": "Recent actions should appear in a chronological stream so users can monitor changes without visiting each item separately."
+    },
+    {
+      "name": "Activity feed components",
+      "url": "https://www.aubergine.co/insights/a-guide-to-designing-chronological-activity-feeds",
+      "takeaway": "Useful feeds include source, type/icon, short description, and time."
+    },
+    {
+      "name": "Dashboard hierarchy",
+      "url": "https://muz.li/blog/best-dashboard-design-examples-inspirations-for-2026/",
+      "takeaway": "Command-center dashboards should surface the right data at the right hierarchy with minimal visual noise."
+    }
+  ],
+  "implementation": {
+    "snapshotField": "snapshot.missionFeed",
+    "schema": "agent-company-mission-feed.v1",
+    "uiSurface": "Mission Feed panel",
+    "filters": [
+      "all",
+      "task",
+      "service_request",
+      "evidence",
+      "outcome",
+      "trace"
+    ],
+    "clickThrough": "Feed cards open the source lane's Trail view.",
+    "standalone": true
+  },
+  "validation": {
+    "nodeCheck": "passed",
+    "pythonCompile": "passed",
+    "jsonValidation": "passed",
+    "snapshotRegenerated": true,
+    "dataCoverage": {
+      "items": 90,
+      "visibleCards": 18,
+      "counts": {
+        "task": 27,
+        "evidence": 21,
+        "outcome": 21,
+        "trace": 21
+      }
+    },
+    "desktopFeed": {
+      "visibleCards": 18,
+      "countText": "90 events",
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "filterAndClick": {
+      "filter": "evidence",
+      "countText": "20 evidence",
+      "nonMatchingVisibleCards": 0,
+      "clickSelectedLane": "Platform Engineering",
+      "clickActiveTab": "trail",
+      "trailVisible": 18
+    },
+    "mobileFeed": {
+      "viewport": "390x840",
+      "visibleCards": 18,
+      "layout": "single column",
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    }
+  }
+}

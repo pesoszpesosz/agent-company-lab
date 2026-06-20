@@ -1,0 +1,107 @@
+"""General report path constants for Agent Company."""
+
+from __future__ import annotations
+
+from .paths import REPORTS_DIR
+
+PROFIT_EDGE_IMPORT_REPORT = REPORTS_DIR / "profit-edge-import-latest.md"
+SOURCE_SPECS_REPORT = REPORTS_DIR / "source-specs-latest.md"
+SOURCE_SPEC_SEED_PACKET_DIR = REPORTS_DIR / "source-spec-seed-packets"
+SOURCE_SPEC_SEED_PACKETS_REPORT = REPORTS_DIR / "source-spec-seed-packets-latest.md"
+SOURCE_SPEC_SEED_PACKETS_JSON = REPORTS_DIR / "source-spec-seed-packets-latest.json"
+SOURCE_SPEC_SEED_PACKETS_VALIDATION_JSON = REPORTS_DIR / "source-spec-seed-packets-validation-latest.json"
+SOURCE_SPEC_SEED_APPLY_REPORT = REPORTS_DIR / "source-spec-seed-apply-latest.md"
+SOURCE_SPEC_SEED_APPLY_JSON = REPORTS_DIR / "source-spec-seed-apply-latest.json"
+SOURCE_SPEC_SEED_APPLY_VALIDATION_JSON = REPORTS_DIR / "source-spec-seed-apply-validation-latest.json"
+SERVICE_CATALOG_REPORT = REPORTS_DIR / "service-catalog-latest.md"
+SERVICE_REQUEST_REVIEW_REPORT = REPORTS_DIR / "service-request-review-latest.md"
+SERVICE_REQUEST_REVIEW_JSON = REPORTS_DIR / "service-request-review-latest.json"
+COMPANY_EXPANSION_GAP_MAP_REPORT = REPORTS_DIR / "company-expansion-gap-map-latest.md"
+COMPANY_EXPANSION_GAP_MAP_JSON = REPORTS_DIR / "company-expansion-gap-map-latest.json"
+COMPANY_EXPANSION_GAP_MAP_VALIDATION_JSON = REPORTS_DIR / "company-expansion-gap-map-validation-latest.json"
+MONEY_PATH_COVERAGE_AUDIT_REPORT = REPORTS_DIR / "agent-company-money-path-coverage-audit-latest.md"
+MONEY_PATH_COVERAGE_AUDIT_JSON = REPORTS_DIR / "agent-company-money-path-coverage-audit-latest.json"
+MONEY_PATH_COVERAGE_AUDIT_VALIDATION_JSON = REPORTS_DIR / "agent-company-money-path-coverage-audit-validation-latest.json"
+FIRST_LOCAL_EVIDENCE_PACKET_DIR = REPORTS_DIR / "first-local-evidence-packets"
+FIRST_LOCAL_EVIDENCE_PACKETS_REPORT = REPORTS_DIR / "first-local-evidence-packets-latest.md"
+FIRST_LOCAL_EVIDENCE_PACKETS_JSON = REPORTS_DIR / "first-local-evidence-packets-latest.json"
+FIRST_LOCAL_EVIDENCE_PACKETS_VALIDATION_JSON = REPORTS_DIR / "first-local-evidence-packets-validation-latest.json"
+MANAGER_PROOF_TASK_PACKET_DIR = REPORTS_DIR / "manager-proof-task-packets"
+MANAGER_PROOF_TASK_PACKETS_REPORT = REPORTS_DIR / "manager-proof-task-packets-latest.md"
+MANAGER_PROOF_TASK_PACKETS_JSON = REPORTS_DIR / "manager-proof-task-packets-latest.json"
+MANAGER_PROOF_TASK_PACKETS_VALIDATION_JSON = REPORTS_DIR / "manager-proof-task-packets-validation-latest.json"
+MANAGER_PROOF_TASK_PROMOTION_PREFLIGHT_REPORT = REPORTS_DIR / "manager-proof-task-promotion-preflight-latest.md"
+MANAGER_PROOF_TASK_PROMOTION_PREFLIGHT_JSON = REPORTS_DIR / "manager-proof-task-promotion-preflight-latest.json"
+MANAGER_PROOF_TASK_PROMOTION_PREFLIGHT_VALIDATION_JSON = REPORTS_DIR / "manager-proof-task-promotion-preflight-validation-latest.json"
+MANAGER_PROOF_TASK_PROMOTION_QUEUE_REPORT = REPORTS_DIR / "manager-proof-task-promotion-queue-latest.md"
+MANAGER_PROOF_TASK_PROMOTION_QUEUE_JSON = REPORTS_DIR / "manager-proof-task-promotion-queue-latest.json"
+MANAGER_PROOF_TASK_PROMOTION_QUEUE_VALIDATION_JSON = REPORTS_DIR / "manager-proof-task-promotion-queue-validation-latest.json"
+FIRST_RANKED_MANAGER_PROOF_REPORT = REPORTS_DIR / "first-ranked-manager-proof-latest.md"
+FIRST_RANKED_MANAGER_PROOF_JSON = REPORTS_DIR / "first-ranked-manager-proof-latest.json"
+FIRST_RANKED_MANAGER_PROOF_VALIDATION_JSON = REPORTS_DIR / "first-ranked-manager-proof-validation-latest.json"
+PAID_CODE_DUPLICATE_CHECK_WORKSHEET_REPORT = REPORTS_DIR / "paid-code-duplicate-check-worksheet-latest.md"
+PAID_CODE_DUPLICATE_CHECK_WORKSHEET_JSON = REPORTS_DIR / "paid-code-duplicate-check-worksheet-latest.json"
+PAID_CODE_DUPLICATE_CHECK_WORKSHEET_VALIDATION_JSON = REPORTS_DIR / "paid-code-duplicate-check-worksheet-validation-latest.json"
+PAID_CODE_LOCAL_WORKSHEET_ANSWERS_REPORT = REPORTS_DIR / "paid-code-local-worksheet-answers-latest.md"
+PAID_CODE_LOCAL_WORKSHEET_ANSWERS_JSON = REPORTS_DIR / "paid-code-local-worksheet-answers-latest.json"
+PAID_CODE_LOCAL_WORKSHEET_ANSWERS_VALIDATION_JSON = REPORTS_DIR / "paid-code-local-worksheet-answers-validation-latest.json"
+PAID_CODE_BROWSER_REFRESH_DECISION_PACKET_REPORT = REPORTS_DIR / "paid-code-browser-refresh-decision-packet-latest.md"
+PAID_CODE_BROWSER_REFRESH_DECISION_PACKET_JSON = REPORTS_DIR / "paid-code-browser-refresh-decision-packet-latest.json"
+PAID_CODE_BROWSER_REFRESH_DECISION_PACKET_VALIDATION_JSON = REPORTS_DIR / "paid-code-browser-refresh-decision-packet-validation-latest.json"
+TRACE_EVENTS_REPORT = REPORTS_DIR / "trace-events-latest.md"
+ARTIFACTS_REPORT = REPORTS_DIR / "artifacts-latest.md"
+PROMPT_EVAL_REPORT = REPORTS_DIR / "prompt-eval-review-latest.md"
+LANE_THREAD_MANIFEST_MD = REPORTS_DIR / "lane-manager-thread-launch-manifest-latest.md"
+LANE_THREAD_MANIFEST_JSON = REPORTS_DIR / "lane-manager-thread-launch-manifest-latest.json"
+
+__all__ = [
+    "PROFIT_EDGE_IMPORT_REPORT",
+    "SOURCE_SPECS_REPORT",
+    "SOURCE_SPEC_SEED_PACKET_DIR",
+    "SOURCE_SPEC_SEED_PACKETS_REPORT",
+    "SOURCE_SPEC_SEED_PACKETS_JSON",
+    "SOURCE_SPEC_SEED_PACKETS_VALIDATION_JSON",
+    "SOURCE_SPEC_SEED_APPLY_REPORT",
+    "SOURCE_SPEC_SEED_APPLY_JSON",
+    "SOURCE_SPEC_SEED_APPLY_VALIDATION_JSON",
+    "SERVICE_CATALOG_REPORT",
+    "SERVICE_REQUEST_REVIEW_REPORT",
+    "SERVICE_REQUEST_REVIEW_JSON",
+    "COMPANY_EXPANSION_GAP_MAP_REPORT",
+    "COMPANY_EXPANSION_GAP_MAP_JSON",
+    "COMPANY_EXPANSION_GAP_MAP_VALIDATION_JSON",
+    "MONEY_PATH_COVERAGE_AUDIT_REPORT",
+    "MONEY_PATH_COVERAGE_AUDIT_JSON",
+    "MONEY_PATH_COVERAGE_AUDIT_VALIDATION_JSON",
+    "FIRST_LOCAL_EVIDENCE_PACKET_DIR",
+    "FIRST_LOCAL_EVIDENCE_PACKETS_REPORT",
+    "FIRST_LOCAL_EVIDENCE_PACKETS_JSON",
+    "FIRST_LOCAL_EVIDENCE_PACKETS_VALIDATION_JSON",
+    "MANAGER_PROOF_TASK_PACKET_DIR",
+    "MANAGER_PROOF_TASK_PACKETS_REPORT",
+    "MANAGER_PROOF_TASK_PACKETS_JSON",
+    "MANAGER_PROOF_TASK_PACKETS_VALIDATION_JSON",
+    "MANAGER_PROOF_TASK_PROMOTION_PREFLIGHT_REPORT",
+    "MANAGER_PROOF_TASK_PROMOTION_PREFLIGHT_JSON",
+    "MANAGER_PROOF_TASK_PROMOTION_PREFLIGHT_VALIDATION_JSON",
+    "MANAGER_PROOF_TASK_PROMOTION_QUEUE_REPORT",
+    "MANAGER_PROOF_TASK_PROMOTION_QUEUE_JSON",
+    "MANAGER_PROOF_TASK_PROMOTION_QUEUE_VALIDATION_JSON",
+    "FIRST_RANKED_MANAGER_PROOF_REPORT",
+    "FIRST_RANKED_MANAGER_PROOF_JSON",
+    "FIRST_RANKED_MANAGER_PROOF_VALIDATION_JSON",
+    "PAID_CODE_DUPLICATE_CHECK_WORKSHEET_REPORT",
+    "PAID_CODE_DUPLICATE_CHECK_WORKSHEET_JSON",
+    "PAID_CODE_DUPLICATE_CHECK_WORKSHEET_VALIDATION_JSON",
+    "PAID_CODE_LOCAL_WORKSHEET_ANSWERS_REPORT",
+    "PAID_CODE_LOCAL_WORKSHEET_ANSWERS_JSON",
+    "PAID_CODE_LOCAL_WORKSHEET_ANSWERS_VALIDATION_JSON",
+    "PAID_CODE_BROWSER_REFRESH_DECISION_PACKET_REPORT",
+    "PAID_CODE_BROWSER_REFRESH_DECISION_PACKET_JSON",
+    "PAID_CODE_BROWSER_REFRESH_DECISION_PACKET_VALIDATION_JSON",
+    "TRACE_EVENTS_REPORT",
+    "ARTIFACTS_REPORT",
+    "PROMPT_EVAL_REPORT",
+    "LANE_THREAD_MANIFEST_MD",
+    "LANE_THREAD_MANIFEST_JSON",
+]

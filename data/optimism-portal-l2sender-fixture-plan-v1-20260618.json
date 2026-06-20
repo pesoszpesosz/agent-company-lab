@@ -1,0 +1,156 @@
+{
+  "boundary": {
+    "no_account_registration": true,
+    "no_browser_action": true,
+    "no_clone": true,
+    "no_external_side_effect": true,
+    "no_patch_applied": true,
+    "no_payment_action": true,
+    "no_private_report_submission": true,
+    "no_public_disclosure": true,
+    "no_runtime_start": true,
+    "no_security_test": true,
+    "no_service_worker_start": true,
+    "no_tests_run_against_optimism_repo": true,
+    "no_wallet_action": true,
+    "report_only": true
+  },
+  "fixture_rows": [
+    {
+      "anchor_lines": "1276-1335",
+      "assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+      "case": "successful empty-data finalization",
+      "execution_gate": "local_fork_tests_require_explicit_user_approval",
+      "expected_result": "After a successful finalizeWithdrawalTransaction call, l2Sender is default.",
+      "fixture_id": "opl2sf-001",
+      "proposed_assertion_line_after": 1332,
+      "reason": "Covers the normal success path after l2Sender is set and reset around SafeCall.callWithMinGas.",
+      "submission_ready": false,
+      "upstream_test_anchor": "test_finalizeWithdrawalTransaction_noTxData_succeeds"
+    },
+    {
+      "anchor_lines": "1538-1561",
+      "assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+      "case": "target failure without gas-estimation origin",
+      "execution_gate": "local_fork_tests_require_explicit_user_approval",
+      "expected_result": "After a target-call failure that does not revert the outer transaction, l2Sender is default.",
+      "fixture_id": "opl2sf-002",
+      "proposed_assertion_line_after": 1552,
+      "reason": "Covers success=false finalization and WithdrawalFinalized(false) after l2Sender reset.",
+      "submission_ready": false,
+      "upstream_test_anchor": "test_finalizeWithdrawalTransaction_targetFails_fails"
+    },
+    {
+      "anchor_lines": "1255-1273",
+      "assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+      "case": "target failure with gas-estimation origin",
+      "execution_gate": "local_fork_tests_require_explicit_user_approval",
+      "expected_result": "After the expected OptimismPortal_GasEstimation revert, persisted l2Sender remains default.",
+      "fixture_id": "opl2sf-003",
+      "proposed_assertion_line_after": 1272,
+      "reason": "The function resets l2Sender before the gas-estimation revert branch, but the revert rolls back the call frame; this fixture documents the expected persisted post-state.",
+      "submission_ready": false,
+      "upstream_test_anchor": "test_finalizeWithdrawalTransaction_targetFailsAndCallerIsEstimationAddress_reverts"
+    },
+    {
+      "anchor_lines": "1629-1675",
+      "assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+      "case": "insufficient gas revert",
+      "execution_gate": "local_fork_tests_require_explicit_user_approval",
+      "expected_result": "After SafeCall insufficient-gas revert, persisted l2Sender remains default.",
+      "fixture_id": "opl2sf-004",
+      "proposed_assertion_line_after": 1674,
+      "reason": "The revert occurs during SafeCall.callWithMinGas before the explicit reset line executes, so the assertion verifies full call-frame rollback.",
+      "submission_ready": false,
+      "upstream_test_anchor": "test_finalizeWithdrawalTransaction_onInsufficientGas_reverts"
+    },
+    {
+      "anchor_lines": "1677-1732",
+      "assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+      "case": "nested finalize reentrancy attempt",
+      "execution_gate": "local_fork_tests_require_explicit_user_approval",
+      "expected_result": "After the nested call reverts and the outer finalization completes, l2Sender is default.",
+      "fixture_id": "opl2sf-005",
+      "proposed_assertion_line_after": 1728,
+      "reason": "Directly exercises the l2Sender reentrancy guard while still verifying the outer call returns to default state.",
+      "submission_ready": false,
+      "upstream_test_anchor": "test_finalizeWithdrawalTransaction_onReentrancy_reverts"
+    },
+    {
+      "anchor_lines": "2118-2164",
+      "assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+      "case": "external-proof finalization by secondary proof submitter",
+      "execution_gate": "local_fork_tests_require_explicit_user_approval",
+      "expected_result": "After finalizeWithdrawalTransactionExternalProof succeeds for a secondary proof submitter, l2Sender is default.",
+      "fixture_id": "opl2sf-006",
+      "proposed_assertion_line_after": 2158,
+      "reason": "Covers the public external-proof entrypoint that delegates into the same guard/reset code path.",
+      "submission_ready": false,
+      "upstream_test_anchor": "test_finalizeWithdrawalTransaction_secondProofReplay_reverts"
+    }
+  ],
+  "gates": {
+    "requires_no_live_target_testing": true,
+    "requires_security_report_gate_before_submission": true,
+    "requires_user_approval_before_local_upstream_tests": true,
+    "requires_user_approval_before_patch_materialization": true,
+    "submission_ready_count": 0
+  },
+  "generated_utc": "2026-06-17T22:12:32Z",
+  "lane_id": "security_bounty_private_reports",
+  "next_action": "Only after explicit approval, materialize a local patch file and run local upstream tests; do not submit or test live targets.",
+  "parent_task_id": "task-optimism-portal-invariant-memo-v1-20260618",
+  "patch_design": {
+    "apply_strategy": "Add one explicit post-state assertion to each existing upstream fixture at the listed insertion point. Do not change production code unless an approved local test run reveals a real failing invariant.",
+    "helper_needed": false,
+    "preferred_assertion": "assertEq(optimismPortal2.l2Sender(), Constants.DEFAULT_L2_SENDER);",
+    "suggested_future_command": "pnpm --filter contracts-bedrock test --match-contract OptimismPortal2",
+    "target_file": "packages/contracts-bedrock/test/L1/OptimismPortal2.t.sol",
+    "test_command_requires_approval": true
+  },
+  "schema_version": "agent_company.optimism_portal_l2sender_fixture_plan.v1",
+  "selected_asset": "OptimismPortal / OptimismPortal2",
+  "selected_invariant": "opi-007 l2Sender guard and reset",
+  "source_snapshots": [
+    {
+      "line_count": 789,
+      "name": "OptimismPortal2.sol",
+      "observation": "The source checks l2Sender against Constants.DEFAULT_L2_SENDER as a reentrancy guard, sets l2Sender to the withdrawal sender before SafeCall.callWithMinGas, resets l2Sender to the default immediately after the target call returns, and then may revert for gas-estimation failure.",
+      "relevant_lines": [
+        556,
+        560,
+        582,
+        595,
+        609,
+        613
+      ],
+      "sha256": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F",
+      "url": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol"
+    },
+    {
+      "line_count": 2724,
+      "name": "OptimismPortal2.t.sol",
+      "observation": "The upstream test file already covers the main finalization paths but does not explicitly assert the l2Sender postcondition after each relevant path.",
+      "relevant_lines": [
+        1272,
+        1332,
+        1552,
+        1593,
+        1674,
+        1728,
+        2158
+      ],
+      "sha256": "FF9721FAD3CED4B7FBE7CE1B008EBD41897C2B3457F1D4E45EC0C209A28E3935",
+      "url": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/test/L1/OptimismPortal2.t.sol"
+    }
+  ],
+  "source_urls": {
+    "OP Stack Optimism Portal spec": "https://specs.optimism.io/fault-proof/stage-one/optimism-portal.html",
+    "OP Stack withdrawals spec": "https://specs.optimism.io/protocol/withdrawals.html",
+    "OptimismPortal2.sol": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol",
+    "OptimismPortal2.t.sol": "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/test/L1/OptimismPortal2.t.sol"
+  },
+  "status": "report_only_fixture_plan_no_patch_no_testing_no_submission",
+  "task_id": "task-optimism-portal-l2sender-fixture-plan-v1-20260618",
+  "title": "OptimismPortal l2Sender Postcondition Fixture Plan v1"
+}

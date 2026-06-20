@@ -1,0 +1,416 @@
+{
+  "column_plan_count": 127,
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T11:18:52Z",
+  "guardrail_count": 8,
+  "guardrails": [
+    "report_only_until_operator_approval",
+    "no_table_creation_in_this_command",
+    "no_worker_start_or_assignment",
+    "no_browser_or_account_action",
+    "no_wallet_payment_or_real_money_action",
+    "no_security_testing_beyond_read_only",
+    "no_public_submission_or_marketplace_post",
+    "preserve_existing_service_request_states"
+  ],
+  "index_plan_count": 20,
+  "lane_evidence_rows_after": 136,
+  "lane_evidence_rows_before": 135,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_department_schema_plan_ready_for_report_only_migration_draft",
+  "migration_step_count": 8,
+  "migration_steps": [
+    "create_departments_and_money_paths_plan",
+    "create_agent_threads_and_worker_pool_interfaces_plan",
+    "create_approval_gates_plan",
+    "create_opportunity_leads_plan",
+    "create_evidence_packets_and_task_handoffs_plan",
+    "create_experiment_runs_and_roi_ledger_plan",
+    "backfill_department_mappings_plan",
+    "run_report_only_integrity_validation_plan"
+  ],
+  "next_action": "Draft the report-only migration packet next; do not create tables or start any workers until explicitly approved.",
+  "recommended_default": "draft_report_only_migration_next_without_creating_tables_or_workers",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_plan_count": 1,
+  "schema_plan_evidence_id": "agent-company-department-schema-plan-20260616",
+  "schema_plan_lane_id": "platform_engineering",
+  "schema_plan_task_id": "task-agent-company-department-schema-plan-20260616",
+  "schema_version": "agent_company.department_schema_plan.v1",
+  "service_request_contract_count": 12,
+  "service_request_contracts": [
+    {
+      "default_status": "needs_review",
+      "request_type": "research_money_path",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "normalize_opportunity_lead",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "draft_bounty_patch",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "draft_security_report",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "paper_trade_market",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "build_digital_asset",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "quality_review_artifact",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "request_registration_worker",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "request_wallet_worker",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "request_public_submission",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "request_real_money_action",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    },
+    {
+      "default_status": "needs_review",
+      "request_type": "request_security_scope_review",
+      "required_fields": [
+        "request_id",
+        "department_id",
+        "source_path",
+        "risk_summary",
+        "approval_scope"
+      ]
+    }
+  ],
+  "source_packet_evidence_id": "agent-company-department-architecture-packet-20260616",
+  "source_packet_task_id": "task-agent-company-department-architecture-packet-20260616",
+  "summary": "Converted the department architecture packet into a report-only schema plan for tables, columns, indexes, service request contracts, migration order, and guardrails.",
+  "table_plan_count": 10,
+  "table_plans": [
+    {
+      "columns": [
+        "thread_id",
+        "department_id",
+        "lane_id",
+        "role_id",
+        "owner_agent_id",
+        "state",
+        "current_task_id",
+        "service_request_id",
+        "handoff_status",
+        "last_report_path",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "department_state",
+        "owner_state"
+      ],
+      "table": "agent_threads"
+    },
+    {
+      "columns": [
+        "department_id",
+        "manager_role_id",
+        "purpose",
+        "status",
+        "default_lane_id",
+        "approval_policy_id",
+        "queue_limit",
+        "created_at",
+        "updated_at",
+        "last_reviewed_at"
+      ],
+      "indexes": [
+        "status_manager",
+        "default_lane"
+      ],
+      "table": "departments"
+    },
+    {
+      "columns": [
+        "money_path_id",
+        "department_id",
+        "name",
+        "category",
+        "payout_model",
+        "expected_value_score",
+        "legality_status",
+        "capital_required",
+        "proofability_score",
+        "gate_level",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "department_status",
+        "category_score"
+      ],
+      "table": "money_paths"
+    },
+    {
+      "columns": [
+        "lead_id",
+        "money_path_id",
+        "source_url",
+        "source_name",
+        "payout_min",
+        "payout_max",
+        "currency",
+        "account_required",
+        "risk_score",
+        "competition_score",
+        "proof_artifact_path",
+        "next_action",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "money_path_status",
+        "risk_payout"
+      ],
+      "table": "opportunity_leads"
+    },
+    {
+      "columns": [
+        "pool_id",
+        "department_id",
+        "worker_role_id",
+        "allowed_actions",
+        "forbidden_actions",
+        "input_schema",
+        "output_schema",
+        "approval_required",
+        "max_parallel_threads",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "department_status",
+        "approval_status"
+      ],
+      "table": "worker_pool_interfaces"
+    },
+    {
+      "columns": [
+        "gate_id",
+        "gate_type",
+        "department_id",
+        "requested_by_thread_id",
+        "service_request_id",
+        "scope",
+        "risk_summary",
+        "approval_state",
+        "approved_by",
+        "expires_at",
+        "rollback_plan",
+        "decision_note",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "state_type",
+        "service_request_state"
+      ],
+      "table": "approval_gates"
+    },
+    {
+      "columns": [
+        "packet_id",
+        "lane_id",
+        "department_id",
+        "source_task_id",
+        "source_path",
+        "source_url",
+        "confidence",
+        "status",
+        "summary",
+        "next_action",
+        "reviewer_note",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "department_status",
+        "source_task"
+      ],
+      "table": "evidence_packets"
+    },
+    {
+      "columns": [
+        "handoff_id",
+        "from_thread_id",
+        "to_thread_id",
+        "task_id",
+        "service_request_id",
+        "handoff_type",
+        "payload_path",
+        "status",
+        "response_path",
+        "created_at",
+        "updated_at",
+        "completed_at"
+      ],
+      "indexes": [
+        "to_thread_status",
+        "task_status"
+      ],
+      "table": "task_handoffs"
+    },
+    {
+      "columns": [
+        "run_id",
+        "money_path_id",
+        "department_id",
+        "experiment_type",
+        "hypothesis",
+        "input_path",
+        "output_path",
+        "metric_json",
+        "result_state",
+        "kill_reason",
+        "started_at",
+        "completed_at",
+        "created_at"
+      ],
+      "indexes": [
+        "money_path_result",
+        "department_started"
+      ],
+      "table": "experiment_runs"
+    },
+    {
+      "columns": [
+        "roi_entry_id",
+        "money_path_id",
+        "lead_id",
+        "task_id",
+        "expected_value_usd",
+        "realized_value_usd",
+        "cost_usd",
+        "minutes_spent",
+        "payout_probability",
+        "status",
+        "decision_reason",
+        "created_at",
+        "updated_at"
+      ],
+      "indexes": [
+        "money_path_status",
+        "value_probability"
+      ],
+      "table": "roi_ledger"
+    }
+  ],
+  "task_rows_inserted_by_schema_plan": 1,
+  "tasks_table_rows_after": 228,
+  "tasks_table_rows_before": 227
+}

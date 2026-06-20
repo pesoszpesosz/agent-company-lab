@@ -1,0 +1,69 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-signed-approval-guard-v1-20260617",
+  "task_id": "task-browser-read-only-signed-approval-guard-v1-20260617",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "work_type": "local_tdd_validator",
+  "generated_utc": "2026-06-17T20:18:45Z",
+  "summary": "Implemented browser read-only signed approval guard that accepts deny or assignment-preflight-only decisions while blocking approval application, service assignment, worker start, and browser start.",
+  "artifacts": [
+    {
+      "kind": "architecture_schema",
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-signed-approval-guard-v1.schema.json"
+    },
+    {
+      "kind": "validator_runner",
+      "path": "E:\\agent-company-lab\\tools\\validate_browser_read_only_signed_approval_guard.py"
+    },
+    {
+      "kind": "unittest",
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_signed_approval_guard.py"
+    },
+    {
+      "kind": "validator_report_json",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-20260617.json"
+    },
+    {
+      "kind": "validation_report",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json"
+    },
+    {
+      "kind": "validation_markdown",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-20260617.md"
+    },
+    {
+      "kind": "fixture_directory",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-fixtures"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python E:\\agent-company-lab\\tests\\test_browser_read_only_signed_approval_guard.py",
+      "status": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+      "status": "passed",
+      "tests_run": 10
+    }
+  ],
+  "validation_summary": {
+    "all_checks_passed": true,
+    "failure_count": 0,
+    "fixture_count": 25,
+    "accepted_count": 2,
+    "rejected_count": 23,
+    "assignment_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "approval_rows_written": 0,
+    "decisions_applied": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build a separate apply preflight before any accepted browser-read-only approval can assign a request or open a browser."
+}

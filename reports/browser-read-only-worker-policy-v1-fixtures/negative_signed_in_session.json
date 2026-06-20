@@ -1,0 +1,64 @@
+{
+  "allowed_actions": [
+    "navigate_public_https_url",
+    "read_visible_public_text",
+    "capture_source_url",
+    "write_local_markdown_evidence"
+  ],
+  "allowed_domains": [
+    "github.com"
+  ],
+  "browser_session_start_allowed": false,
+  "declared_capture_log_path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-capture-log-placeholder.json",
+  "evidence_output_artifact_path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-evidence-placeholder.md",
+  "forbidden_actions": [
+    "login",
+    "signup",
+    "submit_form",
+    "accept_terms",
+    "post_comment",
+    "like_follow_reply_repost",
+    "create_or_edit_account",
+    "upload_file",
+    "download_private_file",
+    "purchase",
+    "payment_method",
+    "connect_wallet",
+    "sign_wallet_message",
+    "security_testing",
+    "scrape_prohibited_source",
+    "api_key_or_secret_access"
+  ],
+  "lane_id": "money_source_discovery",
+  "navigation_scope": "explicit_allowlist_only",
+  "policy_plan_id": "browser-read-only-policy-negative-signed_in_session",
+  "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+  "request_type": "browser_research",
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_accessed": false,
+    "external_side_effects": false,
+    "file_transfer_actions": false,
+    "form_submit_actions": false,
+    "login_actions": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "service_id": "browser_read_only_session",
+  "session_mode": "signed_in_named_scope",
+  "target_urls": [
+    "https://github.com/topics/bounty"
+  ],
+  "teardown_required": true,
+  "trace_id": "trace-browser-read-only-worker-policy-v1-20260617",
+  "worker_start_allowed": false
+}

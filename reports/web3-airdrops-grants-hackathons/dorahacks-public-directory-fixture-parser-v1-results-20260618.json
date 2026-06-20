@@ -1,0 +1,229 @@
+{
+  "aggregate_kill_reasons": [
+    "closed_or_deadline_too_close",
+    "domain_theme_mismatch",
+    "duplicate_or_crowded_project_space",
+    "eligibility_or_judging_rules_unclear",
+    "local_repo_demo_or_writeup_cannot_be_prepared",
+    "no_clear_prize_grant_or_funding_route",
+    "requires_account_profile_buidl_creation_or_team_join_before_review",
+    "requires_public_post_message_demo_or_campaign_before_approval",
+    "requires_wallet_connection_vote_donation_or_transaction"
+  ],
+  "candidate_count": 1,
+  "kill_or_wait_count": 3,
+  "row_count": 4,
+  "rows": [
+    {
+      "account_or_profile_requirement": "dorahacks_account_and_buidl_profile_required_before_registration",
+      "candidate_class": "local_scout_candidate",
+      "currency_or_token": "USD_equivalent",
+      "duplicate_or_prior_project_signal": "no_duplicate_seen_in_saved_row_but_live_sweep_required",
+      "ecosystem_or_chain": "multi_chain_public_goods",
+      "eligibility_rules": "Public saved text says open builders; exact rules require review before registration.",
+      "funding_or_prize_pool": "25000 USD equivalent prize pool",
+      "judging_criteria": [
+        "utility",
+        "technical_quality",
+        "public_good_impact"
+      ],
+      "kill_reasons": [
+        "duplicate_or_crowded_project_space"
+      ],
+      "kyc_or_tax_or_payment_requirement": "prize_claim_payment_tax_unknown_requires_human_review",
+      "license_or_open_source_requirement": "open_source_expected_requires_final_review",
+      "local_artifact_to_prepare": "sanitized_project_fit_writeup_and_repo_demo_outline",
+      "local_scout_candidate": true,
+      "name": "Example AI Agent Public Goods Hackathon saved row",
+      "next_local_action": "Prepare sanitized project-fit writeup, repo/demo outline, rules checklist, and approval packet; do not register or submit.",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "hackathon",
+      "opportunity_url": "https://dorahacks.io/hackathon/example-ai-agent-public-goods",
+      "project_fit": "agent_company_public_good_infrastructure",
+      "public_promotion_requirement": "not_required_before_local_proof",
+      "region_or_location": "virtual",
+      "repo_or_demo_requirement": "local_repo_outline_and_demo_plan_can_be_prepared",
+      "required_deliverables": [
+        "repository",
+        "demo_video_or_screenshots",
+        "short_writeup"
+      ],
+      "score": 90,
+      "status": "ongoing",
+      "submission_end": "2026-07-21",
+      "submission_ready": false,
+      "submission_route": "register_or_submit_on_dorahacks_after_approval_only",
+      "submission_start": "2026-06-10",
+      "tags": [
+        "AI",
+        "Developer Tooling",
+        "Public Goods",
+        "Infrastructure"
+      ],
+      "team_requirements": "solo_or_team_allowed_saved_text",
+      "virtual_or_irl": "virtual",
+      "voting_end": "2026-07-29",
+      "voting_method": "judges_and_optional_community_vote_requires_review",
+      "voting_start": "2026-07-22",
+      "wallet_requirement": "not_required_before_local_proof"
+    },
+    {
+      "account_or_profile_requirement": "profile_or_buidl_required_before_application",
+      "candidate_class": "kill_or_wait",
+      "currency_or_token": "chain_token_unknown",
+      "duplicate_or_prior_project_signal": "funding_sweep_required",
+      "ecosystem_or_chain": "public_goods_chain",
+      "eligibility_rules": "requires project profile, round rules, and likely anti-sybil review",
+      "funding_or_prize_pool": "matching pool visible but token/currency requires review",
+      "judging_criteria": [
+        "community_support",
+        "public_good_impact"
+      ],
+      "kill_reasons": [
+        "requires_public_post_message_demo_or_campaign_before_approval",
+        "requires_wallet_connection_vote_donation_or_transaction"
+      ],
+      "kyc_or_tax_or_payment_requirement": "matching_claim_payment_tax_unknown",
+      "license_or_open_source_requirement": "unclear",
+      "local_artifact_to_prepare": "grant_fit_note_and_gates_list_only",
+      "local_scout_candidate": false,
+      "name": "Example quadratic funding grant round saved row",
+      "next_local_action": "Keep as kill_or_wait until rules, funding, wallet/profile, public-promotion, and duplicate gates are reviewed.",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "grant",
+      "opportunity_url": "https://dorahacks.io/grant/example-quadratic-funding-round",
+      "project_fit": "possible_public_good_fit_but_wallet_vote_gate",
+      "public_promotion_requirement": "community_donation_campaign_likely",
+      "region_or_location": "global",
+      "repo_or_demo_requirement": "writeup_can_be_prepared_locally",
+      "required_deliverables": [
+        "project_profile",
+        "impact_statement",
+        "milestones"
+      ],
+      "score": 85,
+      "status": "ongoing",
+      "submission_end": "2026-07-05",
+      "submission_ready": false,
+      "submission_route": "grant_round_application_after_approval_only",
+      "submission_start": "2026-06-01",
+      "tags": [
+        "Grant",
+        "Quadratic Funding",
+        "Public Goods"
+      ],
+      "team_requirements": "project_owner_required",
+      "virtual_or_irl": "virtual",
+      "voting_end": "2026-07-20",
+      "voting_method": "quadratic_funding_wallet_vote",
+      "voting_start": "2026-07-06",
+      "wallet_requirement": "wallet_required_for_voting_or_donation_flow"
+    },
+    {
+      "account_or_profile_requirement": "profile_and_buidl_creation_required",
+      "candidate_class": "kill_or_wait",
+      "currency_or_token": "",
+      "duplicate_or_prior_project_signal": "crowded_showcase_space",
+      "ecosystem_or_chain": "multi_chain",
+      "eligibility_rules": "requires profile/project creation",
+      "funding_or_prize_pool": "no direct prize route in saved row",
+      "judging_criteria": [],
+      "kill_reasons": [
+        "duplicate_or_crowded_project_space",
+        "eligibility_or_judging_rules_unclear",
+        "local_repo_demo_or_writeup_cannot_be_prepared",
+        "no_clear_prize_grant_or_funding_route",
+        "requires_account_profile_buidl_creation_or_team_join_before_review",
+        "requires_public_post_message_demo_or_campaign_before_approval"
+      ],
+      "kyc_or_tax_or_payment_requirement": "unknown",
+      "license_or_open_source_requirement": "unclear",
+      "local_artifact_to_prepare": "do_not_prepare_until_cash_route_exists",
+      "local_scout_candidate": false,
+      "name": "Example BUIDL showcase page saved row",
+      "next_local_action": "Keep as kill_or_wait until rules, funding, wallet/profile, public-promotion, and duplicate gates are reviewed.",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "buidl",
+      "opportunity_url": "https://dorahacks.io/buidl/example-agent-infra",
+      "project_fit": "developer_tooling_possible_but_no_cash_route",
+      "public_promotion_requirement": "public_project_page_required",
+      "region_or_location": "global",
+      "repo_or_demo_requirement": "project links required",
+      "required_deliverables": [
+        "buidl_profile",
+        "project_page",
+        "links"
+      ],
+      "score": 30,
+      "status": "open_ended",
+      "submission_end": "",
+      "submission_ready": false,
+      "submission_route": "create_buidl_after_approval_only",
+      "submission_start": "",
+      "tags": [
+        "BUIDL",
+        "Showcase",
+        "Developer Tooling"
+      ],
+      "team_requirements": "team_or_project_owner_profile",
+      "virtual_or_irl": "virtual",
+      "voting_end": "",
+      "voting_method": "likes_or_campaign_specific_unknown",
+      "voting_start": "",
+      "wallet_requirement": "unknown"
+    },
+    {
+      "account_or_profile_requirement": "bounty_submission_account_would_be_required_if_open",
+      "candidate_class": "kill_or_wait",
+      "currency_or_token": "USD",
+      "duplicate_or_prior_project_signal": "outdated_closed_surface",
+      "ecosystem_or_chain": "dorahacks",
+      "eligibility_rules": "closed",
+      "funding_or_prize_pool": "outdated bounty amount in saved row",
+      "judging_criteria": [
+        "severity"
+      ],
+      "kill_reasons": [
+        "closed_or_deadline_too_close",
+        "domain_theme_mismatch",
+        "local_repo_demo_or_writeup_cannot_be_prepared",
+        "no_clear_prize_grant_or_funding_route"
+      ],
+      "kyc_or_tax_or_payment_requirement": "payment_tax_unknown",
+      "license_or_open_source_requirement": "not_applicable",
+      "local_artifact_to_prepare": "none_closed",
+      "local_scout_candidate": false,
+      "name": "Example closed bounty saved row",
+      "next_local_action": "Keep as kill_or_wait until rules, funding, wallet/profile, public-promotion, and duplicate gates are reviewed.",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "bug_bounty",
+      "opportunity_url": "https://dorahacks.io/bugbounty/example-closed-bounty",
+      "project_fit": "security_bounty_not_grant_hackathon",
+      "public_promotion_requirement": "none",
+      "region_or_location": "global",
+      "repo_or_demo_requirement": "not_applicable",
+      "required_deliverables": [
+        "security_report"
+      ],
+      "score": 25,
+      "status": "closed",
+      "submission_end": "2025-03-01",
+      "submission_ready": false,
+      "submission_route": "closed_no_action",
+      "submission_start": "2025-01-01",
+      "tags": [
+        "Bug Bounty",
+        "Closed"
+      ],
+      "team_requirements": "n/a",
+      "virtual_or_irl": "virtual",
+      "voting_end": "",
+      "voting_method": "",
+      "voting_start": "",
+      "wallet_requirement": "not_applicable"
+    }
+  ],
+  "schema_version": "web3.dorahacks_public_directory_fixture_results.v1",
+  "source": "manually_saved_public_dorahacks_directory_rows_no_login_no_wallet_no_submission",
+  "submission_ready_count": 0
+}

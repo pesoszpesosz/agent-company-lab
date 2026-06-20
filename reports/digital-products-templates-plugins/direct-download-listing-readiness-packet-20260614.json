@@ -1,0 +1,145 @@
+{
+  "schema_version": "direct_download_listing_readiness_packet.v1",
+  "generated_date": "2026-06-14",
+  "lane_id": "digital_products_templates_plugins",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "folder": "E:/agent-company-lab/products/agent-skill-starter-kit-v0",
+    "status": "local proof bundle complete",
+    "realized_usd": 0
+  },
+  "derived_from": [
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/README.md",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/docs/buyer-guide.md",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/docs/license-and-ip-note.md",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/docs/listing-draft.md",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/docs/screenshot-plan.md",
+    "E:/agent-company-lab/reports/digital-products-templates-plugins/marketplace-readiness-matrix-20260614.json"
+  ],
+  "target_route_family": {
+    "primary_candidates": ["MSD-008", "MSD-009"],
+    "route_family": "direct digital-download marketplace",
+    "platforms": ["Gumroad-style direct download", "Lemon-Squeezy-style direct product route"],
+    "route_status": "local_packet_ready_for_future_review",
+    "public_listing_ready": false
+  },
+  "boundary": {
+    "browser_actions": false,
+    "live_terms_verified": false,
+    "seller_account_actions": false,
+    "legal_kyc_tax_payment_actions": false,
+    "listing_upload_or_publication": false,
+    "public_promotion": false,
+    "real_money_actions": false,
+    "claims_of_revenue_or_marketplace_approval": false
+  },
+  "draft_listing": {
+    "working_title": "Agent Skill Starter Kit: Templates For Safer Reusable AI-Agent Workflows",
+    "short_description": "A compact Markdown kit for turning repeatable AI-agent workflows into reusable skills with stop gates, artifact contracts, service-request checklists, examples, and acceptance reviews.",
+    "buyer_problem": "Builders can write one-off prompts, but repeatable agent workflows need clear triggers, allowed actions, forbidden actions, examples, artifact contracts, and review checks.",
+    "included_files": [
+      "README.md",
+      "templates/SKILL.template.md",
+      "templates/gate-checklist.template.md",
+      "templates/service-request-checklist.template.md",
+      "templates/artifact-contract.template.md",
+      "templates/acceptance-review.template.md",
+      "examples/local-research-skill/SKILL.md",
+      "examples/local-research-skill/sample-output.md",
+      "docs/buyer-guide.md",
+      "docs/license-and-ip-note.md",
+      "docs/screenshot-plan.md",
+      "docs/listing-draft.md"
+    ],
+    "target_buyer": [
+      "Indie AI builders",
+      "Technical operators",
+      "Small teams writing internal agent workflows",
+      "Builders who want local-first task packets with explicit stop gates"
+    ],
+    "not_included": [
+      "Marketplace listing help",
+      "Seller account setup",
+      "Payment, tax, KYC, or payout setup",
+      "Legal advice",
+      "Browser automation",
+      "Public promotion",
+      "Guaranteed sales, revenue, compliance, or platform approval"
+    ],
+    "local_price_hypothesis_usd": {
+      "low": 9,
+      "high": 29,
+      "basis": "local planning range only; not a public price, sale, or revenue forecast"
+    }
+  },
+  "asset_readiness": {
+    "bundle_files_present": true,
+    "listing_copy_draft_present": true,
+    "buyer_guide_present": true,
+    "license_ip_note_present": true,
+    "screenshot_plan_present": true,
+    "example_skill_present": true,
+    "acceptance_template_present": true,
+    "zip_package_created": false,
+    "screenshots_created": false,
+    "platform_specific_copy_created": false
+  },
+  "review_checklist_before_any_listing": [
+    {
+      "gate": "browser_read_only_marketplace_terms",
+      "status": "blocked_needs_review",
+      "service_requests": [
+        "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "req-wave4-digital-products-browser-readonly-20260614"
+      ],
+      "questions": [
+        "Are Markdown template bundles allowed?",
+        "What file formats and file-size limits apply?",
+        "What refund, dispute, and support obligations apply?",
+        "What fees, payout thresholds, country restrictions, and tax collection rules apply?",
+        "Are AI-agent, prompt, or workflow-template claims restricted?"
+      ]
+    },
+    {
+      "gate": "legal_kyc_tax_payment_review",
+      "status": "blocked_needs_review",
+      "service_requests": ["req-next-wave-digital-legal-payment-review-20260614"],
+      "questions": [
+        "Which seller identity should be used, if any?",
+        "What tax/KYC/payment setup would be required?",
+        "What refund/license wording should be approved?",
+        "What payout method is acceptable?",
+        "Are there local jurisdiction restrictions or reporting obligations?"
+      ]
+    },
+    {
+      "gate": "ip_license_claim_review",
+      "status": "local_review_needed",
+      "service_requests": [],
+      "questions": [
+        "Is all text original to the bundle?",
+        "Are any platform names used only descriptively?",
+        "Does the buyer license avoid overpromising compliance or results?",
+        "Are screenshots free of private, signed-in, or third-party marketplace content?"
+      ]
+    },
+    {
+      "gate": "public_action_listing_approval",
+      "status": "blocked_needs_explicit_approval",
+      "service_requests": [],
+      "questions": [
+        "Which exact platform route is approved?",
+        "What exact title, description, price, refund wording, and screenshots are approved?",
+        "Who performs the upload and seller-account action?",
+        "What post-listing support boundary is approved?"
+      ]
+    }
+  ],
+  "local_acceptance": {
+    "packet_can_be_used_without_external_action": true,
+    "all_public_listing_actions_blocked": true,
+    "all_payment_or_account_actions_blocked": true,
+    "direct_download_route_family_selected": true,
+    "next_safe_local_action": "Create a local packaging checklist and optional zip-manifest for internal review only; do not create seller accounts, verify live terms, upload files, or publish listings."
+  }
+}

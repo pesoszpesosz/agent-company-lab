@@ -1,0 +1,33 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "trace_id": "trace-agent-egress-event-ledger-validator-v1-20260617",
+  "span_kind": "local_validator_implementation",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-egress-event-ledger-validator-v1-20260617",
+  "agent_id": "recovered-profitable-edge-infra",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\architecture\\agent-egress-event-ledger-v1.schema.json",
+    "E:\\agent-company-lab\\tools\\validate_agent_egress_event_ledger.py",
+    "E:\\agent-company-lab\\tests\\test_agent_egress_event_ledger_validator.py",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-20260617.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-20260617.md",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-fixtures"
+  ],
+  "fixture_count": 24,
+  "accepted_count": 1,
+  "rejected_count": 23,
+  "all_checks_passed": true,
+  "live_egress_allowed": false,
+  "gateway_started": false,
+  "gateway_installed": false,
+  "api_keys_created": false,
+  "live_egress_events_recorded": 0,
+  "model_api_calls": false,
+  "mcp_tool_calls": false,
+  "browser_sessions_started": 0,
+  "worker_starts": 0,
+  "service_requests_assigned": 0,
+  "external_side_effects": false,
+  "summary": "Implemented deny-by-default local egress event ledger validator v1 from a failing unittest through green validation."
+}

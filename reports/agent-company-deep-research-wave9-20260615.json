@@ -1,0 +1,194 @@
+{
+  "api_calls": false,
+  "architecture_recommendations": [
+    "Keep SQLite/report chain as the source of truth until a durable adapter can replay all service-request lifecycle states without changing semantics.",
+    "Build the next local artifact as a Temporal/Inngest adapter manifest over existing service-request rows: events, workflow IDs, activities/steps, pause points, and side-effect gates; no installs, no workers, no external services.",
+    "Treat OpenAI Agents SDK as the specialist runtime only after the model/API gate has provider/model/cost/data/output scope and a registered pool; it should not replace the CEO ledger.",
+    "Use Prefect and Dagster as operational references for local scan concurrency, pool capacity, sensors, skip reasons, run keys, and cursors.",
+    "Adopt 12-factor agent principles into schema wording: execution state equals business state, humans are contacted through explicit packets/forms, agents stay small/focused, and every launch/pause/resume has a simple local API."
+  ],
+  "decision_summary": {
+    "authoritative_ledger": "current_sqlite_control_plane",
+    "evidence_sensor_reference": "dagster",
+    "first_durable_candidates": [
+      "temporal",
+      "inngest"
+    ],
+    "first_model_runtime_candidate": "openai_agents_sdk_after_model_api_gate",
+    "next_artifact": "temporal_inngest_service_request_adapter_manifest_no_install_no_execution",
+    "ops_runner_reference": "prefect",
+    "principles_reference": "humanlayer_12_factor_agents"
+  },
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T14:21:53Z",
+  "no_action_audit": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "pools_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company_deep_research_wave9.v1",
+  "scorecard": [
+    {
+      "candidate": "current_sqlite_control_plane",
+      "decision": "keep_as_authority",
+      "fit_score": 98,
+      "next_local_proof": "Add adapter manifests that emit Temporal/Inngest-compatible events from existing DB rows without running external engines.",
+      "role": "authoritative task/artifact/service-request ledger",
+      "why": "Already contains lanes, tasks, artifacts, outcomes, traces, service requests, decision packets, forms, and chain validation with no external dependencies."
+    },
+    {
+      "candidate": "temporal",
+      "decision": "design_adapter_not_install_yet",
+      "fit_score": 92,
+      "risk": "Requires service/database/server adoption and deterministic workflow discipline.",
+      "role": "durable long-running service-request lifecycle engine",
+      "why": "Best durability semantics for approval-bound work that may pause/resume for days or months; replay/event-history maps cleanly to our traces."
+    },
+    {
+      "candidate": "inngest",
+      "decision": "design_adapter_not_install_yet",
+      "fit_score": 86,
+      "risk": "Cloud/service posture must be reviewed before any deployment or account use.",
+      "role": "event-driven durable function and trigger layer",
+      "why": "Good fit for event-triggered seeker/manager scans, retryable steps, throttling, and cron/event workflows."
+    },
+    {
+      "candidate": "openai_agents_sdk",
+      "decision": "keep_behind_model_api_gate",
+      "fit_score": 84,
+      "risk": "Cost/provider/model/data-scope gates remain mandatory before model/API execution.",
+      "role": "model-backed specialist/handoff/guardrail runtime",
+      "why": "Native primitives match specialists, handoffs, guardrails, human review, tracing, sandboxing, and evals."
+    },
+    {
+      "candidate": "prefect",
+      "decision": "use_as_pattern_or_later_local_runner",
+      "fit_score": 76,
+      "role": "local ops runner, pool/concurrency pattern reference",
+      "why": "Nice Python flow/task ergonomics and pool controls for local scans/report fan-out, but less purpose-built for approval-bound agent lifecycles."
+    },
+    {
+      "candidate": "dagster",
+      "decision": "use_as_sensor_asset_reference",
+      "fit_score": 73,
+      "role": "source/evidence asset automation and sensors",
+      "why": "Sensors, run keys, cursors, asset checks are excellent for deduplicated evidence freshness."
+    },
+    {
+      "candidate": "humanlayer_12_factor_agents",
+      "decision": "adopt_principles_not_framework_dependency",
+      "fit_score": 82,
+      "role": "architecture principles and UX/control-flow reference",
+      "why": "Strong alignment with explicit business state, pause/resume, human contact as tool calls, small agents, and owned control flow."
+    }
+  ],
+  "sources": [
+    {
+      "architecture_use": "Use as the model-backed specialist/handoff/guardrail runtime after local approval and cost gates, not as the authoritative ledger.",
+      "id": "openai_agents_sdk_starting_points",
+      "observed_points": [
+        "OpenAI positions the Agents SDK around code-first agent apps, specialist definitions, runtime loop/state, sandbox agents, orchestration/handoffs, guardrails and human review, results/state, tools/MCP, tracing, and evals.",
+        "This maps strongly to our seeker/manager/service-worker runtime once model/API execution is explicitly approved."
+      ],
+      "title": "OpenAI Agents SDK - choose your starting point",
+      "url": "https://developers.openai.com/api/docs/guides/agents#choose-your-starting-point"
+    },
+    {
+      "architecture_use": "Strong candidate for future durable service-request lifecycle engine once the SQLite packet schemas stabilize.",
+      "id": "temporal_durable_execution",
+      "observed_points": [
+        "Temporal is described as a scalable runtime for durable function executions, with Workflow Executions that maintain state through failures using Event History.",
+        "Temporal applications can consist of very large numbers of lightweight Workflow Executions; suspended workflows consume little/no compute, and workflows are resumable, recoverable, and reactive."
+      ],
+      "title": "Temporal Platform docs - durable execution and workflows",
+      "url": "https://docs.temporal.io/temporal"
+    },
+    {
+      "architecture_use": "Important design pattern: keep CEO/manager state deterministic; isolate browser/API/model/payment work as gated Activities.",
+      "id": "temporal_workflows_replay",
+      "observed_points": [
+        "Temporal records workflow commands/events in Event History, replays history to restore state, and requires deterministic workflow decisions.",
+        "External interactions such as API calls, database queries, LLM invocations, and file I/O belong in Activities, whose results are recorded and reused on replay."
+      ],
+      "title": "Temporal Workflow docs - replay and Activities",
+      "url": "https://docs.temporal.io/workflows"
+    },
+    {
+      "architecture_use": "Useful as a local operations runner candidate; not the first authority for service-request approval state.",
+      "id": "prefect_flows_concurrency",
+      "observed_points": [
+        "Prefect workflows are Python functions decorated as flows; tasks can run concurrently with submit/map and futures.",
+        "This is a good fit for local scans, queue rebuilds, report generation, and artifact fan-out where Python ergonomics matter more than years-long durable state."
+      ],
+      "title": "Prefect docs - flows, tasks, concurrency",
+      "url": "https://docs.prefect.io/v3/how-to-guides/workflows/run-work-concurrently"
+    },
+    {
+      "architecture_use": "Useful pattern for our service-worker pool registry: pool pause/resume, preview, capacity, and restricted templates.",
+      "id": "prefect_work_pools",
+      "observed_points": [
+        "Prefect work pools can be created, inspected, previewed, paused/resumed, deleted, and assigned concurrency limits via CLI/UI/API.",
+        "Base job templates can restrict deployment infrastructure customization in secure environments."
+      ],
+      "title": "Prefect docs - work pools",
+      "url": "https://docs.prefect.io/v3/how-to-guides/deployment_infra/manage-work-pools"
+    },
+    {
+      "architecture_use": "Good fit for evidence/source freshness sensors and deduplicated scan triggers; less direct fit for approval-bound service-worker lifecycles.",
+      "id": "dagster_sensors",
+      "observed_points": [
+        "Dagster sensors respond to internal/external events, either launching runs or yielding skip reasons.",
+        "Run keys prevent duplicate runs; cursors support high-volume event tracking."
+      ],
+      "title": "Dagster docs - sensors",
+      "url": "https://docs.dagster.io/guides/automate/sensors"
+    },
+    {
+      "architecture_use": "Strong lightweight candidate for event-driven manager/seeker triggers and workflow steps after local schemas are stable.",
+      "id": "inngest_docs",
+      "observed_points": [
+        "Inngest describes itself as an event-driven durable execution platform for reliable code on any platform, handling backend infrastructure, queueing, scaling, concurrency, throttling, rate limiting, and observability.",
+        "It exposes agent resources, a dev-server MCP, and LLM-friendly docs."
+      ],
+      "title": "Inngest docs - durable event-driven functions",
+      "url": "https://www.inngest.com/docs"
+    },
+    {
+      "architecture_use": "Useful for future event-to-work-packet pipeline and retryable local proof steps.",
+      "id": "inngest_functions",
+      "observed_points": [
+        "Inngest functions are triggered by events, cron schedules, or webhooks; flow control includes concurrency/throttling; steps create retriable checkpoints.",
+        "Patterns include background jobs, delayed functions, cron functions, and workflows."
+      ],
+      "title": "Inngest docs - functions and steps",
+      "url": "https://www.inngest.com/docs/features/inngest-functions"
+    },
+    {
+      "architecture_use": "Matches our current SQLite-first approach: keep business state explicit, use small focused workers, and model human approvals as first-class tool/workflow events.",
+      "id": "humanlayer_12_factor_agents",
+      "observed_points": [
+        "The guide argues production agents are mostly software with LLM steps inserted carefully, and recommends principles such as owning prompts/context/control flow, unifying execution and business state, launch/pause/resume APIs, contacting humans with tool calls, small focused agents, and stateless reducers.",
+        "It cautions against overcommitting to frameworks before understanding the control flow and quality bar."
+      ],
+      "title": "HumanLayer 12-factor agents",
+      "url": "https://github.com/humanlayer/12-factor-agents"
+    },
+    {
+      "architecture_use": "Reference for IDE-side human experience and parallel worktree/session UX, not core backend authority.",
+      "id": "humanlayer_codelayer_repo",
+      "observed_points": [
+        "The current HumanLayer repo has shifted toward CodeLayer, an open-source IDE for orchestrating AI coding agents, with workflows for complex codebases and parallel Claude Code sessions.",
+        "It is useful as a UX/workflow reference for multi-agent coding, but not a direct service-worker control plane for money-path operations."
+      ],
+      "title": "HumanLayer / CodeLayer repository",
+      "url": "https://github.com/humanlayer/humanlayer"
+    }
+  ],
+  "title": "Wave 9 durable orchestration and human-in-the-loop control-plane research"
+}

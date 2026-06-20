@@ -1,0 +1,23 @@
+{
+  "span_kind": "AGENT",
+  "runtime": "codex_youtube_no_post_batch",
+  "api_calls": false,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "accounts_created": 0,
+  "public_actions": 0,
+  "uploads": 0,
+  "service_requests_approved_or_assigned": 0,
+  "worker_starts": 0,
+  "script_briefs": 10,
+  "title_variants": 30,
+  "thumbnail_briefs": 10,
+  "artifacts_created": [
+    "youtube_no_post_content_batch_v1",
+    "youtube_production_manifest_v1",
+    "youtube_reputation_copyright_checklist_v1",
+    "youtube_material_route_template_v1",
+    "customer_update_feed_v2"
+  ],
+  "next_action": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1."
+}

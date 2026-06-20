@@ -1,0 +1,119 @@
+{
+  "approval_request_count": 0,
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T22:47:46Z",
+  "lane_evidence_rows_after": 96,
+  "lane_evidence_rows_before": 95,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "post_approval_simulation_plan_ready_not_executed",
+  "next_action": "Keep the digital-products lane on hold until explicit user approval is given for a listed decision item; after approval, run only the matching bounded scenario.",
+  "plan_evidence_id": "digital-products-local-post-approval-simulation-plan-20260616",
+  "plan_lane_id": "digital_products_templates_plugins",
+  "plan_task_id": "task-digital-products-local-post-approval-simulation-plan-20260616",
+  "recommended_default": "hold_until_explicit_user_approval",
+  "requires_explicit_approval_count": 2,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_post_approval_simulation_plan.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "simulated_browser_sessions": 0,
+  "simulated_legal_payment_reviews": 0,
+  "simulation_scenario_count": 2,
+  "simulation_scenarios": [
+    {
+      "execution_status": "not_executed",
+      "gate_required": "browser_read_only_session",
+      "must_not_do": [
+        "Do not log in, create accounts, post, list, message, checkout, save changes, enter personal data, or configure settings.",
+        "Do not treat simulated approval as actual approval."
+      ],
+      "planned_inputs": [
+        "Polished candidate: ai-builder-launch-checklist-pack.",
+        "Public marketplace/category pages chosen by operator after approval.",
+        "Allowed signal fields: demand language, price bands, saturation notes, buyer objections, and comparable packaging."
+      ],
+      "planned_outputs": [
+        "Read-only demand-validation notes.",
+        "No-login source list with observed category/price/saturation signals.",
+        "Go/no-go recommendation for private listing preparation."
+      ],
+      "requires_explicit_approval": true,
+      "scenario_id": "if-read-only-browser-validation-approved",
+      "simulated_worker": "service-worker-browser-readonly",
+      "source_decision_id": "approve-read-only-browser-validation"
+    },
+    {
+      "execution_status": "not_executed",
+      "gate_required": "legal_kyc_tax_payment",
+      "must_not_do": [
+        "Do not accept agreements, create seller accounts, configure payouts, connect payment methods, provide KYC/tax data, or list products.",
+        "Do not treat simulated approval as actual approval."
+      ],
+      "planned_inputs": [
+        "Candidate sales motion: digital checklist/template pack for AI builders.",
+        "Platform terms, fees, refund, tax/KYC, and payout pages selected by operator after approval.",
+        "Existing local gate decision packet and operator approval brief."
+      ],
+      "planned_outputs": [
+        "Terms/fees/risk memo with unresolved user decisions.",
+        "Payment/KYC/tax blocker list.",
+        "Allowed next local packaging action if legal/payment risk remains acceptable."
+      ],
+      "requires_explicit_approval": true,
+      "scenario_id": "if-legal-payment-review-approved",
+      "simulated_worker": "service-worker-legal-payment-review",
+      "source_decision_id": "approve-legal-payment-review"
+    }
+  ],
+  "source_brief_evidence_id": "digital-products-local-operator-approval-brief-20260616",
+  "source_brief_task_id": "task-digital-products-local-operator-approval-brief-20260616",
+  "source_brief_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-operator-approval-brief-validation-latest.json",
+  "summary": "Prepared a local post-approval simulation plan for the two possible approved next steps. The plan describes worker inputs, outputs, and prohibited actions, but executes nothing.",
+  "task_rows_inserted_by_plan": 1,
+  "tasks_table_rows_after": 188,
+  "tasks_table_rows_before": 187
+}

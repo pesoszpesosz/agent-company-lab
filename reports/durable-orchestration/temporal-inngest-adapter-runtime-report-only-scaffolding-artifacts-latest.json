@@ -1,0 +1,101 @@
+{
+  "artifact_dir": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts",
+  "chain_validation_path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+  "forbidden_runtime_imports": [],
+  "generated_utc": "2026-06-15T16:23:07Z",
+  "lane_id": "platform_engineering",
+  "materialized_artifact_count": 5,
+  "materialized_artifacts": [
+    {
+      "artifact_kind": "report_markdown",
+      "component_id": "packet_contract_summary_markdown",
+      "executable_code": false,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_contract_summary_markdown.md",
+      "report_only": true,
+      "runtime_artifact": false,
+      "runtime_side_effect_artifact": false,
+      "sha256": "25B6762964995C9BB899C164AAF4B766570C969452FE1B0EF60354E6B3A6A9BB",
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_contract_summary_markdown"
+    },
+    {
+      "artifact_kind": "report_json",
+      "component_id": "packet_negative_fixture_matrix_json",
+      "executable_code": false,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_negative_fixture_matrix_json.json",
+      "report_only": true,
+      "runtime_artifact": false,
+      "runtime_side_effect_artifact": false,
+      "sha256": "3E948AFB2B03C96F8CB8CC6FB4824B1526261F8AD0334EB83B6A3874C2A0CF83",
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_negative_fixture_matrix_json"
+    },
+    {
+      "artifact_kind": "validation_json",
+      "component_id": "packet_preflight_gate_snapshot",
+      "executable_code": false,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_preflight_gate_snapshot.json",
+      "report_only": true,
+      "runtime_artifact": false,
+      "runtime_side_effect_artifact": false,
+      "sha256": "6F51E1E697077D0336030CE3092C17F0B2C24D8C5A028CD1ECE05A35D69A0645",
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_preflight_gate_snapshot"
+    },
+    {
+      "artifact_kind": "report_markdown",
+      "component_id": "packet_chain_readiness_pointer",
+      "executable_code": false,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_chain_readiness_pointer.md",
+      "report_only": true,
+      "runtime_artifact": false,
+      "runtime_side_effect_artifact": false,
+      "sha256": "94F414A557DE7634A04234F398183C20CE66DAC26685C9A972BDB0676509C74E",
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_chain_readiness_pointer"
+    },
+    {
+      "artifact_kind": "planning_markdown",
+      "component_id": "packet_adapter_todo_packet",
+      "executable_code": false,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-report-only-scaffolding-artifacts\\packet_adapter_todo_packet.md",
+      "report_only": true,
+      "runtime_artifact": false,
+      "runtime_side_effect_artifact": false,
+      "sha256": "45DCAA2CCDE47E1759B0182543D484C3931870A588FDDA0F9248F785E7AB6BB1",
+      "side_effects_performed": false,
+      "source_fixture_id": "allow_adapter_todo_packet"
+    }
+  ],
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "next_action": "Add these materialized report-only scaffolding artifacts to artifact traceability and prepare a human-readable runtime adapter approval packet, still with runtime code blocked.",
+  "packet_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-packet-latest.json",
+  "packet_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-scaffolding-packet-validation-latest.json",
+  "purpose": "Materialized local markdown/JSON artifacts from the report-only scaffolding packet.",
+  "report_only_scaffolding_allowed": true,
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_version": "temporal_inngest_adapter_runtime_report_only_scaffolding_artifacts.v1"
+}

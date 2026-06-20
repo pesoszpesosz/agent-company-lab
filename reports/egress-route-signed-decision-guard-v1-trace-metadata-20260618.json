@@ -1,0 +1,84 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-egress-route-signed-decision-guard-v1-20260618",
+  "task_id": "task-egress-route-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:22:42Z",
+  "summary": "Created a report-only signed-decision guard for the browser_read_only_gateway egress route. The guard accepts only deny or exact browser route preflight-only decisions and rejects route broadening, gateway registration, gateway start, live egress, browser session start, worker start, service-request mutation, model/API, MCP, public action, or external side effects.",
+  "source_intake_contract": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-20260618.json",
+  "source_gateway_docket": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\egress-route-signed-decision-guard-v1.schema.json",
+      "sha256": "e1c42f021587d59edcd93705123691e74032066eaa63375ef0b827cbc673f1ae"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_egress_route_signed_decision_guard.py",
+      "sha256": "a7eed704a2ded92660b36cfab29093cd2e77508d2cae0d2db545596e88db88a2"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_egress_route_signed_decision_guard.py",
+      "sha256": "e96231215f64ac61cf6e7977647f08013d4fbef3405867162e03995371fbffc6"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-guard-v1-20260618.json",
+      "sha256": "675cdbe4821a93d88ff72a95db3f53a3c35a7b730db2de6275f227c9558eb979"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "cfa6d41f6e4e7e8b02fe52bee1c620e46e0c6dffb14d26c2c64d65c17ec88d6d"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-guard-v1-20260618.md",
+      "sha256": "642e27d6fb8ea1a614ba67cde6bded2cd3e86e48f7f0c311757ef22890cab573"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_egress_route_signed_decision_guard.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+    "full_test_result": "29 tests passed",
+    "target_route_id": "browser_read_only_gateway",
+    "target_egress_type": "browser_read_only",
+    "fixture_count": 36,
+    "accepted_count": 2,
+    "rejected_count": 34,
+    "fixture_expectation_mismatch_count": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "decisions_applied": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "decision_authority_granted_by_contract": false,
+    "approval_granted_by_contract": false,
+    "apply_allowed": false,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "dependency_installs": 0,
+    "worker_registrations": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build egress route apply preflight blocker for the accepted browser_read_only_gateway decision before any gateway registration, browser session, worker start, or live egress."
+}

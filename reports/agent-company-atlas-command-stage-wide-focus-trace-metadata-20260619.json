@@ -1,0 +1,69 @@
+{
+  "traceId": "trace-agent-company-atlas-command-stage-wide-focus-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-stage-wide-focus-v1-20260619",
+  "eventId": "trace-atlas_command_stage_wide_focus_added-20260619",
+  "createdUtc": "2026-06-18T22:02:18Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "title": "Command Stage Wide Focus",
+  "summary": "Rebalanced the Command deck so the active lane detail becomes the wide center stage on desktop, with a compact lane rail, bounded support map, and a restrained scan motion layer.",
+  "changeType": "layout_and_motion",
+  "stageModel": {
+    "desktopColumns": [
+      "compact lane rail",
+      "wide active lane stage",
+      "supporting atlas map"
+    ],
+    "responsiveBehavior": "Below the desktop breakpoint, the existing stacked flow is preserved with the detail panel first.",
+    "motionBehavior": "The detail panel receives a subtle scan layer tied to the active lane stage instead of adding another decorative section."
+  },
+  "browserEvidence": {
+    "desktopCommandChronicle": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "detailWidth": 800,
+      "detailHeight": 365,
+      "detailOverflow": 0,
+      "laneRailWidth": 214,
+      "laneRailHeight": 640,
+      "mapWidth": 335,
+      "mapHeight": 640,
+      "workspaceHeight": 640,
+      "scanAnimation": "detailStageScan"
+    },
+    "compactCommandChronicle": {
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "detailWidth": 1121,
+      "detailOverflow": 0,
+      "laneListMaxHeight": "360px",
+      "responsiveStack": true
+    },
+    "mobileCommandChronicle": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "detailWidth": 347,
+      "detailOverflow": 0,
+      "responsiveStack": true
+    }
+  },
+  "verification": [
+    "python -m pytest tests/test_agent_company_atlas_command_workspace_first.py -q",
+    "node --check web/app.js",
+    "In-app browser QA on command deck Chronicle route at 1440x900, 1180x820, and 390x844"
+  ],
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "reports/agent-company-atlas-command-stage-wide-focus-trace-metadata-20260619.json",
+    "web/data/snapshot.json"
+  ]
+}

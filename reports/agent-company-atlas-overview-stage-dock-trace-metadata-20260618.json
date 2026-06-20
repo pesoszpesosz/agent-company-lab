@@ -1,0 +1,66 @@
+{
+  "id": "trace-atlas_overview_stage_dock_added-20260618",
+  "title": "Overview Stage Dock",
+  "createdUtc": "2026-06-18T21:13:20Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "summary": "Converted lane Overview from a long stacked module page into a compact mission-select stage with Quest, Runway, Crew, Forge, Gates, and Intel panels.",
+  "changes": [
+    "Overview now mounts one selected mission module at a time instead of preloading Quest, Runway, Crew, Forge, Gates, and Intel together.",
+    "The duplicated Overview header and tab row are hidden so the mission stage starts higher in the detail panel.",
+    "The default Quest module uses compact Overview-only rules; mobile hides redundant stage/event strips and command cards to keep the first screen playable."
+  ],
+  "browserEvidence": {
+    "desktop1440x900": {
+      "activeStage": "QUEST",
+      "dockVisible": true,
+      "stageButtons": 6,
+      "oldTopDisplay": "none",
+      "oldTabsDisplay": "none",
+      "mountedModules": {
+        "quest": 1,
+        "runway": 0,
+        "crew": 0,
+        "forge": 0,
+        "gates": 0,
+        "intel": 0
+      },
+      "detailHeight": 580,
+      "panelHeight": 586,
+      "horizontalOverflowPx": -15,
+      "gatesSwitchVerified": true
+    },
+    "mobile390x844": {
+      "activeStage": "QUEST",
+      "dockVisible": true,
+      "stageButtons": 6,
+      "oldTopDisplay": "none",
+      "oldTabsDisplay": "none",
+      "questCommandGridDisplay": "none",
+      "mountedModules": {
+        "quest": 1,
+        "runway": 0,
+        "crew": 0,
+        "forge": 0,
+        "gates": 0,
+        "intel": 0
+      },
+      "detailHeight": 393,
+      "panelHeight": 395,
+      "horizontalOverflowPx": -15,
+      "gatesSwitchVerified": true
+    }
+  },
+  "verification": {
+    "focused": "python -m pytest tests/test_agent_company_atlas_overview_stage_dock.py -q -> 1 passed",
+    "syntax": "node --check web\\app.js -> passed"
+  },
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "web/data/snapshot.json"
+  ]
+}

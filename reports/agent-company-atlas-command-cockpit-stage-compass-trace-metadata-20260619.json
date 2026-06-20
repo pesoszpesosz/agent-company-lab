@@ -1,0 +1,26 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-stage-compass-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-stage-compass-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_stage_compass_added-20260619",
+  "title": "Command Cockpit Stage Compass",
+  "timestamp": "2026-06-19T16:23:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Turned the existing Command Cockpit Overview module dock into a compact stage compass so module switching reads like playable stage selection without adding scroll height.",
+  "changes": [
+    "Added active-stage index and stage-count CSS variables to the Overview module dock.",
+    "Added a bounded animated compass runner and module sockets for Quest, Runway, Crew, Forge, Gates, and Intel.",
+    "Scoped the visual treatment to Command Cockpit and tightened mobile runner/socket sizing so the phone stage remains compact.",
+    "Recorded the change as a platform UI unlock in the generated snapshot history."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

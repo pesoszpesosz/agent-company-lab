@@ -1,0 +1,30 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "trace_id": "trace-agent-company-deep-research-wave14-20260617",
+  "span_kind": "current_source_research_wave",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-deep-research-wave14-20260617",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T19:58:00Z",
+  "source_count": 7,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\agent-company-deep-research-wave14-20260617.md",
+    "E:\\agent-company-lab\\reports\\agent-company-deep-research-wave14-20260617.json"
+  ],
+  "recommended_next_build": "runtime_start_preflight_validator_v1",
+  "runtime_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "credentials_created": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "summary": "Wave 14 refreshed current-source architecture signals across LangGraph, Dapr Agents, Cloudflare Agents, Microsoft Durable Agent Framework docs, mcp-agent, Browser Use, and Vercel Agent Browser. The immediate recommendation is a runtime-start preflight validator before any local worker process start."
+}

@@ -1,0 +1,131 @@
+{
+  "trace_id": "trace-agent-company-atlas-arcade-deck-v1-20260618",
+  "task_id": "task-agent-company-atlas-arcade-deck-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-arcade-deck-v1-20260618",
+  "event_id": "trace-atlas_arcade_deck_added-20260618",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T21:39:53Z",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "duplicate_key": "atlas-arcade-deck-v1",
+  "event_type": "atlas_arcade_deck_added",
+  "summary": "Added Arcade Deck, a data-driven minigame launcher that turns every lane minigame texture and registry hook into a launchable card with Play, Path, and Asset actions.",
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "reports/agent-company-atlas-arcade-deck-trace-metadata-20260618.json"
+  ],
+  "design_research": {
+    "sources": [
+      "https://www.stan.vision/journal/ui-card-design-examples-best-practices-and-common-patterns",
+      "https://uxdesign.cc/8-best-practices-for-ui-card-design-898f45bb60cc",
+      "https://behance.net/search/projects/mini%20game%20ui%20design",
+      "https://community.home-assistant.io/t/dashboard-chapter-2-let-s-redesign-the-cards-together/753839",
+      "https://dribbble.com/search/game-launcher-ui",
+      "https://interfaceingame.com/",
+      "https://baymard.com/blog/cards-dashboard-layout",
+      "https://www.simplethread.com/card-components-best-practices/"
+    ],
+    "pattern_notes": [
+      "Card grids should use consistent dimensions, clear content hierarchy, and predictable actions so large dashboards remain scannable.",
+      "Game-library launchers benefit from visual thumbnails, quick launch actions, and status metadata without turning each card into a dense report.",
+      "Minigame selectors should preserve player pacing with direct actions rather than autoplaying or hiding important state inside decorative motion.",
+      "The deck reuses existing generated lane textures instead of adding another asset dependency, keeping the standalone static repo fast."
+    ]
+  },
+  "implementation": {
+    "surface": "Top-level Arcade Deck panel between World Loom and Progression Constellation.",
+    "data_contract": [
+      "Reads lanes from snapshot.lanes.",
+      "Includes lanes with visual.minigame.texture.",
+      "Classifies custom modules through MINIGAME_REGISTRY via minigameDefinition(lane).",
+      "Uses gameStepCount(lane), lane progress, gate counts, lane avatar, realm, and minigame mechanic for card metadata.",
+      "Does not require hardcoded lane ids for rendering; future lanes appear after adding texture data."
+    ],
+    "actions": [
+      "data-arcade-launch opens selected lane Game view.",
+      "data-arcade-path opens selected lane Path Map view.",
+      "data-arcade-asset selects the lane and filters Visual Asset Vault to game textures."
+    ],
+    "visual_contract": [
+      "Stable 16:10 minigame texture previews.",
+      "Single-column mobile layout and auto-fit desktop card grid.",
+      "One active card mirrors selected lane state.",
+      "No nested page cards; repeated module cards are the only card layer."
+    ]
+  },
+  "verification": {
+    "tdd_red": {
+      "status": "passed",
+      "expected_failure": "Arcade Deck is not implemented yet",
+      "route": "http://localhost:5177/?verify=arcade-deck-red&cache=20260618-world-loom#lane=platform_engineering&view=overview",
+      "observed": {
+        "panel": false,
+        "cards": 0,
+        "activeCards": 0,
+        "playButtons": 0,
+        "pathButtons": 0,
+        "assetButtons": 0,
+        "textures": 0
+      }
+    },
+    "static": [
+      "node --check web/app.js"
+    ],
+    "browser_green": {
+      "route": "http://localhost:5177/?verify=arcade-deck-green&cache=20260618-arcade-deck#lane=platform_engineering&view=overview",
+      "result": {
+        "panel": true,
+        "cards": 12,
+        "activeCards": 1,
+        "playButtons": 12,
+        "pathButtons": 12,
+        "assetButtons": 12,
+        "textures": 12,
+        "loadedTextures": 12,
+        "overflow": false,
+        "clippedText": []
+      }
+    },
+    "interaction": {
+      "play": "platform_engineering PLAY opens #lane=platform_engineering&view=game with Systems Grid visible.",
+      "path": "platform_engineering PATH opens #lane=platform_engineering&view=path with Path Map visible.",
+      "asset": "platform_engineering ART filters Asset Vault to game, shows 12 game assets, and keeps the platform asset active."
+    },
+    "responsive": [
+      {
+        "label": "mobile",
+        "width": 390,
+        "cards": 12,
+        "activeCards": 1,
+        "loadedTextures": 12,
+        "gridColumns": 1,
+        "overflow": false,
+        "clippedText": []
+      },
+      {
+        "label": "desktop",
+        "width": 1280,
+        "cards": 12,
+        "activeCards": 1,
+        "loadedTextures": 12,
+        "gridColumns": 4,
+        "overflow": false,
+        "clippedText": []
+      },
+      {
+        "label": "wide",
+        "width": 1600,
+        "cards": 12,
+        "activeCards": 1,
+        "loadedTextures": 12,
+        "gridColumns": 5,
+        "overflow": false,
+        "clippedText": []
+      }
+    ]
+  },
+  "next_action": "Add optional per-lane animated module stingers or short sprite loops on top of Arcade Deck cards while preserving the data-driven static fallback."
+}

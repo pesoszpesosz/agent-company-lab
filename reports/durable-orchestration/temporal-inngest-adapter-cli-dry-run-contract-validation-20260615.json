@@ -1,0 +1,62 @@
+{
+  "all_checks_passed": true,
+  "api_calls": false,
+  "contract_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-contract-20260615.json",
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 14,
+  "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+  "generated_utc": "2026-06-15T14:40:25Z",
+  "no_execution_checks": {
+    "all_fixtures_disable_activity_schedule": true,
+    "all_fixtures_disable_api_calls": true,
+    "all_fixtures_disable_approval": true,
+    "all_fixtures_disable_assignment": true,
+    "all_fixtures_disable_external_side_effects": true,
+    "all_fixtures_disable_followup_emit": true,
+    "all_fixtures_disable_ledger_mutation": true,
+    "all_fixtures_disable_worker_start": true,
+    "contract_not_added_to_cli": true,
+    "live_statuses_match_fixture_inputs": true
+  },
+  "output_state_counts": {
+    "parked.awaiting_human_review": 11,
+    "terminal.completed_from_ledger_snapshot": 1,
+    "terminal.rejected_from_ledger_snapshot": 2
+  },
+  "runtime_boundary": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "cli_commands_added_to_runner": 0,
+    "cli_commands_executed": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_functions_registered": 0,
+    "inngest_service_started": false,
+    "python_files_modified": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_cli_dry_run_contract_validation.v1",
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

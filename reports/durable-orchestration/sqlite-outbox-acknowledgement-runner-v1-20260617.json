@@ -1,0 +1,167 @@
+{
+  "acknowledgements": [
+    {
+      "acknowledgement_id": "ack-f3181df67edc6df8",
+      "actual_failures": [],
+      "approval_posture": "local_only",
+      "decision": "local_preview_acknowledgement_candidate",
+      "external_side_effects": false,
+      "idempotency_key": "outbox-ack:msg-wave10-central-outbox-build-20260617:agent-company-ceo:queued",
+      "lane_id": "platform_engineering",
+      "message_id": "msg-wave10-central-outbox-build-20260617",
+      "message_type": "artifact_notice",
+      "mutates_service_request": false,
+      "preview_status": "acknowledgeable_local_preview",
+      "proposed_replay_status": "acknowledged",
+      "recipient_id": "agent-company-ceo",
+      "safe_to_acknowledge_now": true,
+      "service_request_id": null,
+      "service_request_status_snapshot": null,
+      "source_replay_status": "queued",
+      "starts_worker": false,
+      "writes_to_db": false
+    },
+    {
+      "acknowledgement_id": "ack-21ef85c98ab29635",
+      "actual_failures": [],
+      "approval_posture": "needs_human_review",
+      "decision": "park_gate_request_no_acknowledgement_mutation",
+      "external_side_effects": false,
+      "idempotency_key": "outbox-ack:msg-paid-code-parser-followup-20260617:lane-manager-paid_code_bounties-019ec612:queued",
+      "lane_id": "paid_code_bounties",
+      "message_id": "msg-paid-code-parser-followup-20260617",
+      "message_type": "gate_request",
+      "mutates_service_request": false,
+      "preview_status": "parked_awaiting_human_review",
+      "proposed_replay_status": "queued",
+      "recipient_id": "lane-manager-paid_code_bounties-019ec612",
+      "safe_to_acknowledge_now": false,
+      "service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "service_request_status_snapshot": "needs_review",
+      "source_replay_status": "queued",
+      "starts_worker": false,
+      "writes_to_db": false
+    },
+    {
+      "acknowledgement_id": "ack-e889e840040de915",
+      "actual_failures": [],
+      "approval_posture": "local_only",
+      "decision": "local_preview_acknowledgement_candidate",
+      "external_side_effects": false,
+      "idempotency_key": "outbox-ack:msg-ai-competition-arc-followup-20260617:lane-manager-ai_ml_competitions-019ec69a:queued",
+      "lane_id": "ai_ml_competitions",
+      "message_id": "msg-ai-competition-arc-followup-20260617",
+      "message_type": "dispatch",
+      "mutates_service_request": false,
+      "preview_status": "acknowledgeable_local_preview",
+      "proposed_replay_status": "acknowledged",
+      "recipient_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "safe_to_acknowledge_now": true,
+      "service_request_id": null,
+      "service_request_status_snapshot": null,
+      "source_replay_status": "queued",
+      "starts_worker": false,
+      "writes_to_db": false
+    }
+  ],
+  "db_counts_after": {
+    "agents": 11,
+    "artifacts": 985,
+    "lane_evidence": 211,
+    "lanes": 12,
+    "outcomes": 234,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 331,
+    "trace_events": 246
+  },
+  "db_counts_before": {
+    "agents": 11,
+    "artifacts": 985,
+    "lane_evidence": 211,
+    "lanes": 12,
+    "outcomes": 234,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 331,
+    "trace_events": 246
+  },
+  "generated_utc": "2026-06-17T17:38:59Z",
+  "lane_id": "platform_engineering",
+  "negative_probes": [
+    {
+      "actual_failures": [
+        "gate_request_must_remain_queued",
+        "human_review_required_before_acknowledgement",
+        "service_request_mutation_forbidden"
+      ],
+      "attempted_action": "acknowledge gate_request and mark delivered",
+      "expected_failures": [
+        "gate_request_must_remain_queued",
+        "human_review_required_before_acknowledgement",
+        "service_request_mutation_forbidden"
+      ],
+      "matches_expected": true,
+      "probe_id": "probe-gate-request-auto-ack"
+    },
+    {
+      "actual_failures": [
+        "worker_start_forbidden",
+        "ack_preview_is_not_execution"
+      ],
+      "attempted_action": "acknowledge local dispatch and start lane worker",
+      "expected_failures": [
+        "worker_start_forbidden",
+        "ack_preview_is_not_execution"
+      ],
+      "matches_expected": true,
+      "probe_id": "probe-local-dispatch-worker-start"
+    },
+    {
+      "actual_failures": [
+        "service_request_mutation_forbidden",
+        "message_has_no_service_request_id"
+      ],
+      "attempted_action": "acknowledge artifact notice by mutating service request state",
+      "expected_failures": [
+        "service_request_mutation_forbidden",
+        "message_has_no_service_request_id"
+      ],
+      "matches_expected": true,
+      "probe_id": "probe-artifact-notice-service-request-update"
+    }
+  ],
+  "next_local_test": "local_service_worker_request_state_machine_runner_v1_without_worker_start",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "runner_policy": {
+    "decision_validation_failed_count": 0,
+    "gate_request_disposition": "parked_awaiting_human_review",
+    "local_only_disposition": "acknowledgeable_local_preview",
+    "mode": "preview_only",
+    "outbox_source_of_truth": true,
+    "service_request_mutation_allowed": false,
+    "service_worker_queue_source_of_gate_status": true,
+    "worker_start_allowed": false,
+    "write_back_allowed": false
+  },
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "outbox_rows_updated": 0,
+    "public_actions": false,
+    "queue_enqueues": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.sqlite_outbox_acknowledgement_runner_preview.v1",
+  "source_decision_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-comparison-decision-packet-v1-validation-20260617.json",
+  "source_outbox_history_path": "E:\\agent-company-lab\\reports\\agent-company-central-outbox-history-v1-20260617.json",
+  "source_service_worker_queue_path": "E:\\agent-company-lab\\reports\\service-worker-request-queue-latest.json",
+  "task_id": "task-sqlite-outbox-acknowledgement-runner-v1-20260617"
+}

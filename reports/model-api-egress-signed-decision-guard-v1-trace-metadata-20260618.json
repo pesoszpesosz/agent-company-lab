@@ -1,0 +1,96 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-model-api-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-model-api-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T00:51:43Z",
+  "summary": "Created a report-only model/API egress signed-decision guard for model_api_gateway. The guard accepts only deny and report-only route-preflight decisions, rejects 50 provider-key, model-call, data-upload, cost, worker, service-request, and live-egress mutation fixtures, and preserves zero provider key use, zero model/API calls, zero training/private data upload, zero cost, zero worker starts, zero service-request mutation, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\model-api-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "37d0f6f922cbd64e03a1c25257833f12876e861c1bc9af26641216776359c297"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_model_api_egress_signed_decision_guard.py",
+      "sha256": "663f01e847093fc599602ed3b95d74d6c878b722b77345840e973f39f826c890"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_model_api_egress_signed_decision_guard.py",
+      "sha256": "4b3e59cb224bf6af6dd04a56d50d4ca83940380273d44c82770ea505ded80c19"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\model-api-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "194b5301baf2d3347e7d5448a459a24bda64717084b86dd2a124ba69b4ecaa1b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\model-api-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "9f8da46626a46ed40533a0ff35b36f429bf7d984219e8ceee7e1e29a2f5f01a7"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\model-api-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "9bcab581d6ff2b6b68d466676f512e7c58d9ace0ce5bfbf634fffcfcb0c3e4a6"
+    }
+  ],
+  "verification": {
+    "red_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_model_api_egress_signed_decision_guard.py",
+    "red_test_result": "failed before implementation because validate_model_api_egress_signed_decision_guard.py did not exist",
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_model_api_egress_signed_decision_guard.py E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "40 tests passed",
+    "target_route_id": "model_api_gateway",
+    "target_egress_type": "model_api",
+    "fixture_count": 52,
+    "accepted_count": 2,
+    "rejected_count": 50,
+    "provider_key_use_allowed": false,
+    "provider_keys_used": false,
+    "model_api_call_allowed": false,
+    "model_api_calls": false,
+    "training_data_upload_allowed": false,
+    "training_data_uploaded": false,
+    "max_cost_usd": 0,
+    "apply_allowed": false,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "provider_key_use_allowed": false,
+    "provider_keys_used": false,
+    "model_api_call_allowed": false,
+    "model_api_calls": false,
+    "training_data_upload_allowed": false,
+    "training_data_uploaded": false,
+    "max_cost_usd": 0,
+    "apply_allowed": false,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "browser_sessions_started": false,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build model API egress apply preflight blocker for the accepted model_api_gateway decision before any provider key use, model/API call, data upload, worker start, service-request mutation, or live egress."
+}

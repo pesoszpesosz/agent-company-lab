@@ -1,0 +1,53 @@
+{
+  "apply_allowed": false,
+  "bridge_id": "checkpoint-bridge-negative-model_api_called",
+  "bridge_mode": "local_fixture_only",
+  "checkpoint_contract_validation_path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-validation-20260617.json",
+  "dependency_import_allowed": false,
+  "dependency_install_allowed": false,
+  "local_adapter_kind": "checkpoint_interrupt_bridge_fixture",
+  "mapped_concepts": {
+    "checkpoint_state": "sqlite_task_artifact_outcome_trace_rows",
+    "graph_node": "lane_task_or_service_worker_step",
+    "interrupt": "checkpoint_interrupt_contract_v1",
+    "resume": "blocked_until_signed_operator_decision_and_apply_preflight"
+  },
+  "maps_to_checkpoint_interrupt_contract": true,
+  "required_followup_gates": [
+    "checkpoint_interrupt_contract_v1",
+    "runtime_start_preflight",
+    "signed_operator_runtime_decision",
+    "model_api_execution_gate",
+    "dependency_install_gate"
+  ],
+  "resume_allowed": false,
+  "runtime_adoption_allowed": false,
+  "runtime_boundary": {
+    "apply_commands_executed": 0,
+    "apply_commands_written": 0,
+    "browser_sessions_started": 0,
+    "checkpoint_resumes": 0,
+    "dependency_installs": 0,
+    "external_framework_imports": 0,
+    "external_side_effects": false,
+    "graph_nodes_executed": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": true,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "resume_commands_executed": 0,
+    "resume_commands_written": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.checkpoint_interrupt_bridge_fixture.v1",
+  "scorecard_validation_path": "E:\\agent-company-lab\\reports\\adapter-candidate-scorecard-v1-validation-20260617.json",
+  "source_candidate": "langchain-ai/langgraph",
+  "source_candidate_rank": 1,
+  "source_candidate_url": "https://github.com/langchain-ai/langgraph",
+  "worker_start_allowed": false
+}

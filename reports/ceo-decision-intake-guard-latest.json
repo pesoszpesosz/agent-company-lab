@@ -1,0 +1,101 @@
+{
+  "accepted_decision_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "example_empty_intake": {
+    "acceptance_reason": "No decision submitted; this guard only defines the intake contract.",
+    "accepted": false,
+    "allowed_action_scope": null,
+    "approved_blocker_ids": [],
+    "approver_identity": null,
+    "decision_packet_id": null,
+    "expiration_or_review_time": null,
+    "forbidden_actions_acknowledged": false,
+    "operator_confirmation_text": null,
+    "selected_option_id": null
+  },
+  "generated_utc": "2026-06-15T23:13:36Z",
+  "guard_evidence_id": "ceo-decision-intake-guard-20260616",
+  "guard_lane_id": "platform_engineering",
+  "guard_task_id": "task-ceo-decision-intake-guard-20260616",
+  "invalid_decision_rule_count": 6,
+  "invalid_decision_rules": [
+    {
+      "meaning": "A decision that does not name one known decision packet cannot be accepted.",
+      "rule_id": "reject_missing_packet_id"
+    },
+    {
+      "meaning": "Only the packet's draft option ids are admissible; free-form action words are insufficient.",
+      "rule_id": "reject_unknown_option"
+    },
+    {
+      "meaning": "Any approval must list exact allowed action scope and blocker ids.",
+      "rule_id": "reject_unbounded_scope"
+    },
+    {
+      "meaning": "Any text allowing public, account, payment, wallet, submission, or security-testing side effects outside the packet scope is invalid.",
+      "rule_id": "reject_forbidden_action_conflict"
+    },
+    {
+      "meaning": "Approvals need a time limit or explicit review point before work can begin.",
+      "rule_id": "reject_no_expiration_or_review"
+    },
+    {
+      "meaning": "Casual continuation language, copied packet text, or vague consent cannot be treated as approval.",
+      "rule_id": "reject_implicit_or_contextual_approval"
+    }
+  ],
+  "known_option_ids": [
+    "approve_bounded_readonly_scope",
+    "keep_held",
+    "reject_or_park_batch"
+  ],
+  "known_packet_ids": [
+    "decision-packet-batch-digital-products-marketplace-validation",
+    "decision-packet-batch-security-bounty-route-readiness",
+    "decision-packet-batch-paid-code-and-ai-ml-readonly"
+  ],
+  "lane_evidence_rows_after": 101,
+  "lane_evidence_rows_before": 100,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_intake_guard_ready_no_decisions_accepted",
+  "next_action": "Use this guard to validate any future CEO decision before mutating service requests or starting workers; reject ambiguous or unscoped approvals.",
+  "recommended_default": "reject_ambiguous_or_unscoped_decisions",
+  "required_field_count": 8,
+  "required_fields": [
+    "decision_packet_id",
+    "selected_option_id",
+    "approved_blocker_ids",
+    "allowed_action_scope",
+    "forbidden_actions_acknowledged",
+    "expiration_or_review_time",
+    "approver_identity",
+    "operator_confirmation_text"
+  ],
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_intake_guard.v1",
+  "source_decision_option_count": 9,
+  "source_drafts_evidence_id": "ceo-decision-packet-drafts-20260616",
+  "source_drafts_task_id": "task-ceo-decision-packet-drafts-20260616",
+  "source_drafts_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-packet-drafts-validation-latest.json",
+  "source_packet_draft_count": 3,
+  "summary": "Created a local CEO decision-intake guard for future packet decisions. It defines required fields and rejection rules, but accepts no decision.",
+  "task_rows_inserted_by_guard": 1,
+  "tasks_table_rows_after": 193,
+  "tasks_table_rows_before": 192
+}

@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-gate-decision-packet-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T22:15:33Z",
+  "packet_lane_id": "digital_products_templates_plugins",
+  "packet_task_id": "task-digital-products-local-gate-decision-packet-20260616",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "1617FC3D3314C05D9FA18DA0C5268FF2B91641DFBF0775F3452D4297FEF04054",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

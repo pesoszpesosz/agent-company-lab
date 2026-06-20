@@ -1,0 +1,21 @@
+{
+  "api_calls": false,
+  "artifact_slug": "optimism-portal-l2sender-fixture-plan-v1-20260618",
+  "browser_actions": false,
+  "external_side_effects": false,
+  "fixture_row_count": 6,
+  "generated_utc": "2026-06-17T22:12:32Z",
+  "lane_id": "security_bounty_private_reports",
+  "runtime": "codex_local_report_only",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "source_urls": [
+    "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/L1/OptimismPortal2.sol",
+    "https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/test/L1/OptimismPortal2.t.sol",
+    "https://specs.optimism.io/fault-proof/stage-one/optimism-portal.html",
+    "https://specs.optimism.io/protocol/withdrawals.html"
+  ],
+  "span_kind": "internal",
+  "submission_ready_count": 0,
+  "task_id": "task-optimism-portal-l2sender-fixture-plan-v1-20260618",
+  "trace_id": "trace-optimism-portal-l2sender-fixture-plan-v1-20260618"
+}

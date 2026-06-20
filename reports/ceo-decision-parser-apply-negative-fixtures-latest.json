@@ -1,0 +1,148 @@
+{
+  "accepted_apply_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_count": 6,
+  "fixture_evidence_id": "ceo-decision-parser-apply-negative-fixtures-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-ceo-decision-parser-apply-negative-fixtures-20260616",
+  "generated_utc": "2026-06-15T23:51:48Z",
+  "lane_evidence_rows_after": 110,
+  "lane_evidence_rows_before": 109,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_negative_fixtures_ready",
+  "mutation_applied_count": 0,
+  "negative_apply_fixture_count": 6,
+  "negative_apply_fixtures": [
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_explicit_mutation_approval",
+      "fixture_id": "missing-explicit-mutation-approval",
+      "submitted_apply": {
+        "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+        "explicit_mutation_approval_text": null,
+        "forbidden_actions_acknowledged": true,
+        "max_update_count": 1,
+        "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-runner-validation-latest.json",
+        "service_request_status_snapshot_required": true,
+        "target_service_request_ids": [
+          "req-wave4-digital-products-browser-readonly-20260614"
+        ]
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_readonly_scope_not_mutation_approval",
+      "fixture_id": "readonly-approval-not-mutation-approval",
+      "submitted_apply": {
+        "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+        "explicit_mutation_approval_text": "I approve only this bounded read-only browser validation scope for the listed blocker ids until 2026-06-16T23:59:59Z.",
+        "forbidden_actions_acknowledged": true,
+        "max_update_count": 1,
+        "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-runner-validation-latest.json",
+        "service_request_status_snapshot_required": true,
+        "target_service_request_ids": [
+          "req-wave4-digital-products-browser-readonly-20260614"
+        ]
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_target_service_request_ids",
+      "fixture_id": "missing-target-service-request-ids",
+      "submitted_apply": {
+        "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+        "explicit_mutation_approval_text": "I explicitly approve applying exactly one parser preview mutation to the named service request ids.",
+        "forbidden_actions_acknowledged": true,
+        "max_update_count": 1,
+        "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-runner-validation-latest.json",
+        "service_request_status_snapshot_required": true,
+        "target_service_request_ids": []
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unbounded_or_excessive_update_count",
+      "fixture_id": "unbounded-update-count",
+      "submitted_apply": {
+        "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+        "explicit_mutation_approval_text": "I explicitly approve applying parser preview mutations.",
+        "forbidden_actions_acknowledged": true,
+        "max_update_count": 99,
+        "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-runner-validation-latest.json",
+        "service_request_status_snapshot_required": true,
+        "target_service_request_ids": [
+          "req-wave4-digital-products-browser-readonly-20260614"
+        ]
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_forbidden_action_requested",
+      "fixture_id": "forbidden-action-requested",
+      "submitted_apply": {
+        "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+        "explicit_mutation_approval_text": "I explicitly approve applying the preview and opening the marketplace listing.",
+        "forbidden_actions_acknowledged": false,
+        "max_update_count": 1,
+        "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-runner-validation-latest.json",
+        "service_request_status_snapshot_required": true,
+        "target_service_request_ids": [
+          "req-wave4-digital-products-browser-readonly-20260614"
+        ]
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_service_request_status_snapshot",
+      "fixture_id": "missing-status-snapshot",
+      "submitted_apply": {
+        "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+        "explicit_mutation_approval_text": "I explicitly approve applying exactly one parser preview mutation to the named service request ids.",
+        "forbidden_actions_acknowledged": true,
+        "max_update_count": 1,
+        "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-runner-validation-latest.json",
+        "service_request_status_snapshot_required": false,
+        "target_service_request_ids": [
+          "req-wave4-digital-products-browser-readonly-20260614"
+        ]
+      }
+    }
+  ],
+  "next_action": "Use these fixtures before building any apply path; every unauthorized or underspecified apply attempt must be rejected before service request mutations are allowed.",
+  "queue_mutation_count": 0,
+  "recommended_default": "reject_apply_without_explicit_mutation_approval",
+  "required_apply_field_count": 7,
+  "required_apply_fields": [
+    "approval_packet_id",
+    "explicit_mutation_approval_text",
+    "target_service_request_ids",
+    "max_update_count",
+    "runner_validation_path",
+    "service_request_status_snapshot_required",
+    "forbidden_actions_acknowledged"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_negative_fixtures.v1",
+  "source_preflight_evidence_id": "ceo-decision-parser-mutation-preflight-20260616",
+  "source_preflight_task_id": "task-ceo-decision-parser-mutation-preflight-20260616",
+  "source_preflight_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-mutation-preflight-validation-latest.json",
+  "summary": "Created local negative fixtures for the future CEO decision parser apply path, covering missing mutation approval, read-only-only approval, missing targets, excessive update count, forbidden action conflict, and missing status snapshot.",
+  "task_rows_inserted_by_fixtures": 1,
+  "tasks_table_rows_after": 202,
+  "tasks_table_rows_before": 201
+}

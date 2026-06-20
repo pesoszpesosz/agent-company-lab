@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.public_action_egress_signed_decision_guard.v1",
+  "title": "Public Action Egress Signed Decision Guard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "decision",
+    "route_id",
+    "egress_type",
+    "source_gateway_docket_path",
+    "source_gateway_docket_sha256",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_gate_ids",
+    "allowed_evidence_artifact_paths",
+    "approval_is_not_apply",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "public_action_allowed",
+    "public_actions",
+    "browser_session_start_allowed",
+    "browser_sessions_started",
+    "worker_start_allowed",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.egress_route_signed_decision_intake_contract.v1"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["deny", "approve_route_preflight_only"]
+    },
+    "route_id": {
+      "const": "public_action_gateway"
+    },
+    "egress_type": {
+      "const": "public_submission"
+    },
+    "approval_is_not_apply": {
+      "const": true
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "public_action_allowed": {
+      "const": false
+    },
+    "public_actions": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "browser_sessions_started": {
+      "const": 0
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "service_requests_updated": {
+      "const": 0
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

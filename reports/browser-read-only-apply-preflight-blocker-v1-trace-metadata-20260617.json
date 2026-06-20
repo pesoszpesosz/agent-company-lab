@@ -1,0 +1,69 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-apply-preflight-blocker-v1-20260617",
+  "task_id": "task-browser-read-only-apply-preflight-blocker-v1-20260617",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "work_type": "local_tdd_blocker",
+  "generated_utc": "2026-06-17T20:22:14Z",
+  "summary": "Implemented browser read-only apply preflight blocker that prevents fixture approvals from assigning service requests or starting browser workers without a real signed operator decision artifact.",
+  "artifacts": [
+    {
+      "kind": "architecture_schema",
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-apply-preflight-blocker-v1.schema.json"
+    },
+    {
+      "kind": "preflight_tool",
+      "path": "E:\\agent-company-lab\\tools\\write_browser_read_only_apply_preflight_blocker.py"
+    },
+    {
+      "kind": "unittest",
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_apply_preflight_blocker.py"
+    },
+    {
+      "kind": "preflight_report_json",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-20260617.json"
+    },
+    {
+      "kind": "validation_report",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-validation-20260617.json"
+    },
+    {
+      "kind": "validation_markdown",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-20260617.md"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python E:\\agent-company-lab\\tests\\test_browser_read_only_apply_preflight_blocker.py",
+      "status": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+      "status": "passed",
+      "tests_run": 11
+    }
+  ],
+  "validation_summary": {
+    "all_checks_passed": true,
+    "failure_count": 0,
+    "apply_preflight_status": "blocked_no_real_signed_decision",
+    "real_signed_decision_present": false,
+    "accepted_guard_decision_count": 2,
+    "candidate_request_count": 7,
+    "apply_allowed": false,
+    "assignment_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "approval_rows_written": 0,
+    "decisions_applied": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Continue with browser-read-only real approval artifact intake or a broader service-worker approval authority matrix."
+}

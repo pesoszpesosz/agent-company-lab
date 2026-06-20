@@ -1,0 +1,342 @@
+{
+  "accepted_readiness_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_count": 6,
+  "fixture_evidence_id": "ceo-decision-parser-apply-readiness-negative-fixtures-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-ceo-decision-parser-apply-readiness-negative-fixtures-20260616",
+  "generated_utc": "2026-06-16T00:10:25Z",
+  "lane_evidence_rows_after": 115,
+  "lane_evidence_rows_before": 114,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_negative_fixtures_ready",
+  "mutation_applied_count": 0,
+  "negative_readiness_fixture_count": 6,
+  "negative_readiness_fixtures": [
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_operator_approval_bundle",
+      "fixture_id": "missing-operator-approvals",
+      "submitted_readiness": {
+        "apply_boundary": {
+          "apply_allowed_now": false,
+          "external_side_effects": false,
+          "requires_explicit_operator_apply_approval": true,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "planned_field_updates": {
+          "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+          "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+        },
+        "planned_update_sql_shape": {
+          "max_rows": 1,
+          "set_fields": [
+            "approval_scope",
+            "decision_note"
+          ],
+          "table": "service_requests",
+          "where": "request_id = :target_request_id AND status = 'needs_review'"
+        },
+        "required_operator_approvals": [],
+        "rollback_checks": [
+          "snapshot target service request before apply",
+          "verify status count delta is zero except intended field update",
+          "restore approval_scope and decision_note to previous values on failure",
+          "write post-apply validation artifact before any worker start"
+        ],
+        "rollback_snapshot": {
+          "approval_scope": null,
+          "decision_note": null,
+          "status": "needs_review",
+          "updated_at": "2026-06-14T14:37:52Z"
+        },
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "target_status_before": "needs_review",
+        "target_updated_at_before": "2026-06-14T14:37:52Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_stale_rollback_snapshot",
+      "fixture_id": "stale-rollback-snapshot",
+      "submitted_readiness": {
+        "apply_boundary": {
+          "apply_allowed_now": false,
+          "external_side_effects": false,
+          "requires_explicit_operator_apply_approval": true,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "planned_field_updates": {
+          "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+          "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+        },
+        "planned_update_sql_shape": {
+          "max_rows": 1,
+          "set_fields": [
+            "approval_scope",
+            "decision_note"
+          ],
+          "table": "service_requests",
+          "where": "request_id = :target_request_id AND status = 'needs_review'"
+        },
+        "required_operator_approvals": [
+          "explicitly approve this exact target request id",
+          "explicitly approve approval_scope field update text",
+          "explicitly approve decision_note field update text",
+          "confirm no browser/api/worker/account/payment/public/security/real-money action",
+          "confirm rollback snapshot is captured before apply"
+        ],
+        "rollback_checks": [
+          "snapshot target service request before apply",
+          "verify status count delta is zero except intended field update",
+          "restore approval_scope and decision_note to previous values on failure",
+          "write post-apply validation artifact before any worker start"
+        ],
+        "rollback_snapshot": {
+          "approval_scope": null,
+          "decision_note": null,
+          "status": "needs_review",
+          "updated_at": "2000-01-01T00:00:00Z"
+        },
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "target_status_before": "needs_review",
+        "target_updated_at_before": "2026-06-14T14:37:52Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_target_status_drift",
+      "fixture_id": "target-status-drift",
+      "submitted_readiness": {
+        "apply_boundary": {
+          "apply_allowed_now": false,
+          "external_side_effects": false,
+          "requires_explicit_operator_apply_approval": true,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "planned_field_updates": {
+          "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+          "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+        },
+        "planned_update_sql_shape": {
+          "max_rows": 1,
+          "set_fields": [
+            "approval_scope",
+            "decision_note"
+          ],
+          "table": "service_requests",
+          "where": "request_id = :target_request_id AND status = 'needs_review'"
+        },
+        "required_operator_approvals": [
+          "explicitly approve this exact target request id",
+          "explicitly approve approval_scope field update text",
+          "explicitly approve decision_note field update text",
+          "confirm no browser/api/worker/account/payment/public/security/real-money action",
+          "confirm rollback snapshot is captured before apply"
+        ],
+        "rollback_checks": [
+          "snapshot target service request before apply",
+          "verify status count delta is zero except intended field update",
+          "restore approval_scope and decision_note to previous values on failure",
+          "write post-apply validation artifact before any worker start"
+        ],
+        "rollback_snapshot": {
+          "approval_scope": null,
+          "decision_note": null,
+          "status": "needs_review",
+          "updated_at": "2026-06-14T14:37:52Z"
+        },
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "target_status_before": "complete",
+        "target_updated_at_before": "2026-06-14T14:37:52Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_planned_field_drift",
+      "fixture_id": "planned-field-drift",
+      "submitted_readiness": {
+        "apply_boundary": {
+          "apply_allowed_now": false,
+          "external_side_effects": false,
+          "requires_explicit_operator_apply_approval": true,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "planned_field_updates": {
+          "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+          "decision_note": "parser_apply_dry_run_preview_only_no_mutation",
+          "status": "complete"
+        },
+        "planned_update_sql_shape": {
+          "max_rows": 1,
+          "set_fields": [
+            "approval_scope",
+            "decision_note"
+          ],
+          "table": "service_requests",
+          "where": "request_id = :target_request_id AND status = 'needs_review'"
+        },
+        "required_operator_approvals": [
+          "explicitly approve this exact target request id",
+          "explicitly approve approval_scope field update text",
+          "explicitly approve decision_note field update text",
+          "confirm no browser/api/worker/account/payment/public/security/real-money action",
+          "confirm rollback snapshot is captured before apply"
+        ],
+        "rollback_checks": [
+          "snapshot target service request before apply",
+          "verify status count delta is zero except intended field update",
+          "restore approval_scope and decision_note to previous values on failure",
+          "write post-apply validation artifact before any worker start"
+        ],
+        "rollback_snapshot": {
+          "approval_scope": null,
+          "decision_note": null,
+          "status": "needs_review",
+          "updated_at": "2026-06-14T14:37:52Z"
+        },
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "target_status_before": "needs_review",
+        "target_updated_at_before": "2026-06-14T14:37:52Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unbounded_update_shape",
+      "fixture_id": "unbounded-update-shape",
+      "submitted_readiness": {
+        "apply_boundary": {
+          "apply_allowed_now": false,
+          "external_side_effects": false,
+          "requires_explicit_operator_apply_approval": true,
+          "service_requests_updated": 0,
+          "worker_starts": 0
+        },
+        "planned_field_updates": {
+          "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+          "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+        },
+        "planned_update_sql_shape": {
+          "max_rows": 99,
+          "set_fields": [
+            "approval_scope",
+            "decision_note"
+          ],
+          "table": "service_requests",
+          "where": "request_id = :target_request_id AND status = 'needs_review'"
+        },
+        "required_operator_approvals": [
+          "explicitly approve this exact target request id",
+          "explicitly approve approval_scope field update text",
+          "explicitly approve decision_note field update text",
+          "confirm no browser/api/worker/account/payment/public/security/real-money action",
+          "confirm rollback snapshot is captured before apply"
+        ],
+        "rollback_checks": [
+          "snapshot target service request before apply",
+          "verify status count delta is zero except intended field update",
+          "restore approval_scope and decision_note to previous values on failure",
+          "write post-apply validation artifact before any worker start"
+        ],
+        "rollback_snapshot": {
+          "approval_scope": null,
+          "decision_note": null,
+          "status": "needs_review",
+          "updated_at": "2026-06-14T14:37:52Z"
+        },
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "target_status_before": "needs_review",
+        "target_updated_at_before": "2026-06-14T14:37:52Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_side_effect_boundary_open",
+      "fixture_id": "side-effect-boundary-open",
+      "submitted_readiness": {
+        "apply_boundary": {
+          "apply_allowed_now": false,
+          "external_side_effects": true,
+          "requires_explicit_operator_apply_approval": true,
+          "service_requests_updated": 0,
+          "worker_starts": 1
+        },
+        "planned_field_updates": {
+          "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+          "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+        },
+        "planned_update_sql_shape": {
+          "max_rows": 1,
+          "set_fields": [
+            "approval_scope",
+            "decision_note"
+          ],
+          "table": "service_requests",
+          "where": "request_id = :target_request_id AND status = 'needs_review'"
+        },
+        "required_operator_approvals": [
+          "explicitly approve this exact target request id",
+          "explicitly approve approval_scope field update text",
+          "explicitly approve decision_note field update text",
+          "confirm no browser/api/worker/account/payment/public/security/real-money action",
+          "confirm rollback snapshot is captured before apply"
+        ],
+        "rollback_checks": [
+          "snapshot target service request before apply",
+          "verify status count delta is zero except intended field update",
+          "restore approval_scope and decision_note to previous values on failure",
+          "write post-apply validation artifact before any worker start"
+        ],
+        "rollback_snapshot": {
+          "approval_scope": null,
+          "decision_note": null,
+          "status": "needs_review",
+          "updated_at": "2026-06-14T14:37:52Z"
+        },
+        "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "target_status_before": "needs_review",
+        "target_updated_at_before": "2026-06-14T14:37:52Z"
+      }
+    }
+  ],
+  "next_action": "Use these fixtures before any apply-readiness runner or apply command; every drifted or underspecified readiness packet must be rejected before DB mutation is possible.",
+  "queue_mutation_count": 0,
+  "recommended_default": "reject_apply_readiness_when_packet_or_target_state_drifts",
+  "required_readiness_field_count": 6,
+  "required_readiness_fields": [
+    "target_request_id",
+    "planned_field_updates",
+    "planned_update_sql_shape",
+    "rollback_snapshot",
+    "rollback_checks",
+    "required_operator_approvals"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_negative_fixtures.v1",
+  "source_readiness_evidence_id": "ceo-decision-parser-apply-readiness-20260616",
+  "source_readiness_task_id": "task-ceo-decision-parser-apply-readiness-20260616",
+  "source_readiness_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-validation-latest.json",
+  "summary": "Created local negative fixtures for the apply-readiness gate, covering missing operator approvals, stale rollback snapshot, target status drift, planned field drift, unbounded update shape, and open side-effect boundary.",
+  "task_rows_inserted_by_fixtures": 1,
+  "tasks_table_rows_after": 207,
+  "tasks_table_rows_before": 206
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "trace_id": "trace-agent-company-atlas-milestone-runway-v1-20260618",
+  "task_id": "task-agent-company-atlas-milestone-runway-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-milestone-runway-v1-20260618",
+  "event_id": "trace-atlas_milestone_runway_added-20260618",
+  "duplicate_key": "atlas-milestone-runway-v1",
+  "event_type": "atlas_milestone_runway_added",
+  "outcome_type": "atlas_milestone_runway_added",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T22:22:47.3459323Z",
+  "summary": "Added the Milestone Runway to every lane Overview: a scrollable route spine built from checkpoint, gate, unlock, and trail-event data with a future-slot marker and Path, Chronicle, and Trail actions.",
+  "research": {
+    "sources": [
+      "https://prettyprogress.app/blog/project-timeline-visualization",
+      "https://www.figma.com/resource-library/user-journey-map/",
+      "https://craft.io/blog/5-awesome-roadmap-examples-youll-want-to-use/?video=getting-product-management-sht-done-with-chatgpt",
+      "https://www.projectmanager.com/blog/timeline-with-milestones",
+      "https://www.nngroup.com/articles/journey-mapping-101/",
+      "https://venngage.com/blog/timeline-examples/",
+      "https://www.atlassian.com/agile/project-management/gantt-chart"
+    ],
+    "pattern_notes": [
+      "Timeline and roadmap views should expose order, dependencies, progress, and work still ahead.",
+      "Journey-map patterns are useful because they show touchpoints, pain points, and current blockers rather than only finished tasks.",
+      "Milestone timelines use visible checkpoints to communicate progress quickly.",
+      "The Atlas version should celebrate unlocked progress without hiding gates, blockers, or pending-review states."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "data_contract": [
+      "milestoneRunwayNodes(lane) reuses pathMapNodes(lane) and chronicleTrail(lane).",
+      "renderMilestoneRunway(lane) appears after the Quest Cockpit in the lane Overview.",
+      "Runway actions are local detail-view navigation only: Path, Chronicle, and Trail.",
+      "No new schema was introduced; future lane checkpoints, gates, outcomes, and trail records extend the runway automatically."
+    ],
+    "ui_notes": [
+      "The route spine uses a progress rail, node rarity, compact stats, and a future-slot card for expandable lane growth.",
+      "The horizontal track scrolls independently so long lanes can keep growing without causing page overflow.",
+      "Mobile layout uses two stat columns and wider runway cards for readable touch navigation."
+    ]
+  },
+  "verification": {
+    "red": {
+      "route": "http://localhost:5177/?verify=milestone-runway-red&cache=20260618-crew-bridge-final#lane=money_source_discovery&view=overview",
+      "result": "Expected failure before implementation: panel false, nodes 0, checkpointNodes 0, gateNodes 0, unlockNodes 0, eventNodes 0, stats 0, actions []"
+    },
+    "static": [
+      "node --check web\\app.js -> exit 0",
+      "Invoke-WebRequest http://localhost:5177/?verify=milestone-runway-static-final&cache=20260618-milestone-runway#lane=money_source_discovery&view=overview -> StatusCode=200 Length=13653",
+      "ASCII verified for web/index.html, web/app.js, web/styles.css, web/README.md"
+    ],
+    "green": {
+      "route": "http://localhost:5177/?verify=milestone-runway-green-2&cache=20260618-milestone-runway-v2#lane=money_source_discovery&view=overview",
+      "result": "ok true; panel true; nodes 15; checkpointNodes 5; gateNodes 2; unlockNodes 3; eventNodes 5; futureNodes 1; stats 4; actions [chronicle,path,trail]; trackScrolls true; overflow false; clipped []"
+    },
+    "interaction": {
+      "routes": [
+        "http://localhost:5177/?verify=milestone-runway-interaction&cache=20260618-milestone-runway-v2#lane=money_source_discovery&view=overview",
+        "http://localhost:5177/?verify=milestone-runway-interaction-log&cache=20260618-milestone-runway-v2#lane=money_source_discovery&view=overview",
+        "http://localhost:5177/?verify=milestone-runway-interaction-trail&cache=20260618-milestone-runway-v2#lane=money_source_discovery&view=overview"
+      ],
+      "result": "ok true; PATH changed hash to view=path with active path tab and visible Path Map; LOG changed hash to view=chronicle with active chronicle tab and visible Chronicle; TRL changed hash to view=trail with active trail tab and visible Trail."
+    },
+    "responsive": [
+      "phone 390: ok true, nodes 15, statColumns 2, trackScrolls true, pageOverflow false, clipped []",
+      "desktop 1280: ok true, nodes 15, statColumns 4, trackScrolls true, pageOverflow false, clipped []",
+      "wide 1600: ok true, nodes 15, statColumns 4, trackScrolls true, pageOverflow false, clipped []"
+    ]
+  },
+  "source_hashes": {
+    "web/index.html": "5D541A3BE646BA1A141521C88122BEA36971FFF9DC091D5F7BAE5DEF5EE23A50",
+    "web/app.js": "71C84B2B8DBEADEE80EE897E99802844930E3087AA05672ADD290ACC770045FB",
+    "web/styles.css": "C4C8EB9E4EB5A6F187E25BC85F3225DFDEE3D188716AF9F2DD828FB1C2D160CC",
+    "web/README.md": "EC71C64DD8149DFFC4D8FFD7FE3071D324DDB33E335B1D123661350E577337CA"
+  },
+  "next_actions": [
+    "Add a lane-specific runway filter for blocker-only, unlock-only, and event-only views.",
+    "Generate animated future-slot artwork that can change by realm or minigame type.",
+    "Let new lane families choose alternate runway skins without changing the shared data contract."
+  ]
+}

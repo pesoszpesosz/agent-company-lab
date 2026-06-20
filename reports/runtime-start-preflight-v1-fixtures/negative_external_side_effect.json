@@ -1,0 +1,46 @@
+{
+  "activation_chain_validation_path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-validation-20260617.json",
+  "command_preview": {
+    "command_kind": "local_python_report_only",
+    "command_string": "python E:\\agent-company-lab\\tools\\runtime_adapter_harness.py --dry-run --no-execute",
+    "declared_read_paths": [
+      "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-validation-20260617.json",
+      "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-20260617.json"
+    ],
+    "declared_write_paths": [
+      "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-20260617.json",
+      "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-validation-20260617.json",
+      "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-20260617.md"
+    ],
+    "execution_allowed": false,
+    "mode": "preview_only"
+  },
+  "lane_id": "platform_engineering",
+  "operator_decision_status": "report_only_no_signed_start_authority",
+  "output_artifact_path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-20260617.json",
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "command_previews_executed": 0,
+    "credentials_created": false,
+    "dependencies_installed": 0,
+    "external_side_effects": true,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "runtime_processes_started": 0,
+    "service_requests_assigned": 0,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "runtime_preflight_id": "runtime-start-negative-external_side_effect",
+  "runtime_start_allowed": false,
+  "runtime_start_verdict": "dry_run_preview_valid_start_blocked",
+  "trace_id": "trace-runtime-start-preflight-v1-20260617",
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "worker_start_allowed": false
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.adapter_candidate_scorecard.v1",
+  "title": "Agent Company Adapter Candidate Scorecard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "candidate_count",
+    "selected_for_runtime_adoption_count",
+    "runtime_adoption_allowed",
+    "dependency_install_allowed",
+    "worker_start_allowed",
+    "external_side_effects",
+    "candidate_rows"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.adapter_candidate_scorecard.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "candidate_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "selected_for_runtime_adoption_count": {
+      "const": 0
+    },
+    "runtime_adoption_allowed": {
+      "const": false
+    },
+    "dependency_install_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    },
+    "candidate_rows": {
+      "type": "array"
+    }
+  }
+}

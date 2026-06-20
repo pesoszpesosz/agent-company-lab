@@ -1,0 +1,72 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/runtime-start-preflight-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Runtime Start Preflight v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "runtime_preflight_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "worker_pool_id": {
+      "const": "service-worker-local-runtime-adapter-pool"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "activation_chain_validation_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_decision_status": {
+      "enum": [
+        "missing",
+        "report_only_no_signed_start_authority",
+        "signed_start_approved"
+      ]
+    },
+    "runtime_start_verdict": {
+      "enum": [
+        "blocked_missing_activation_chain",
+        "blocked_failed_activation_chain",
+        "dry_run_preview_valid_start_blocked",
+        "approved_to_start"
+      ]
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "command_preview": {
+      "type": "object"
+    },
+    "output_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "runtime_preflight_id",
+    "worker_pool_id",
+    "lane_id",
+    "activation_chain_validation_path",
+    "operator_decision_status",
+    "runtime_start_verdict",
+    "runtime_start_allowed",
+    "worker_start_allowed",
+    "command_preview",
+    "output_artifact_path",
+    "trace_id",
+    "runtime_boundary"
+  ]
+}

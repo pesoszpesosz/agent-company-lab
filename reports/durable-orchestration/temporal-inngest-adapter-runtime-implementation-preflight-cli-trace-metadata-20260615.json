@@ -1,0 +1,15 @@
+{
+    "preflight_check_count":  9,
+    "passed_preflight_check_count":  9,
+    "upstream_validation_count":  4,
+    "upstream_validation_passed_count":  4,
+    "runtime_implementation_allowed":  false,
+    "runtime_code_write_allowed":  false,
+    "report_only_scaffolding_allowed":  true,
+    "chain_integrity_checked_report_count":  21,
+    "chain_integrity_failure_count":  0,
+    "forbidden_runtime_import_count":  0,
+    "model_api_gate_remains_parked":  true,
+    "model_api_pool_registered":  false,
+    "external_side_effects":  false
+}

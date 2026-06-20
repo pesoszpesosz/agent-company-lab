@@ -1,0 +1,112 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-account-wallet-payment-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-account-wallet-payment-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:54:14Z",
+  "summary": "Created a report-only account_wallet_payment_gateway signed-decision guard. The guard validates 70 fixtures, accepts only deny and preflight-only decision shapes, rejects 68 unsafe account, wallet, payment, legal/KYC/tax, real-money, service-request mutation, browser, MCP/model, and live-egress fixtures, and preserves zero account creation, zero terms acceptance, zero wallet creation, zero private-key/seed custody, zero fund transfer, zero payment action, zero KYC/tax/legal action, zero public payment-address publication, zero real-money action, zero worker starts, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\account-wallet-payment-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "08d8da3db4e0f5dfc0d45cc404fde9e654c37a7258c32f3e218f76154979e5b1"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_account_wallet_payment_egress_signed_decision_guard.py",
+      "sha256": "490b62f44815ae77d17f35d18f25b2a7b3931daf7fc7987803a7c5054629dab3"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_account_wallet_payment_egress_signed_decision_guard.py",
+      "sha256": "3e804406677973ab8472eeedfa0a0eda24a31b798ef83105e9e65c103cbaaddc"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "10a00870940ddae96d9017c4d2eec2c602acd2dac3bd05ec1216848292996eb9"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "ad94bc5129483c110e0ff82c97726fc1e417fb646ec3c2d4456b5088dc5e1f32"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "1a17203a4f011a9fce385dd98426451c3ec9d00277b8694971e6a71dacd0d214"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest tests.test_account_wallet_payment_egress_signed_decision_guard tests.test_egress_route_chain_integrity_audit",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "49 tests passed",
+    "target_route_id": "account_wallet_payment_gateway",
+    "target_egress_type": "account_wallet_payment",
+    "fixture_count": 70,
+    "accepted_count": 2,
+    "rejected_count": 68,
+    "apply_allowed": false,
+    "account_creation_allowed": false,
+    "terms_acceptance_allowed": false,
+    "wallet_creation_allowed": false,
+    "private_key_custody_allowed": false,
+    "funds_transfer_allowed": false,
+    "payment_action_allowed": false,
+    "legal_kyc_tax_action_allowed": false,
+    "public_payment_address_allowed": false,
+    "real_money_action_allowed": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "real_money_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_allowed": false,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "account_creation_allowed": false,
+    "accounts_created": 0,
+    "terms_acceptance_allowed": false,
+    "terms_accepted": 0,
+    "wallet_creation_allowed": false,
+    "wallets_created": 0,
+    "private_key_custody_allowed": false,
+    "private_keys_stored": 0,
+    "seed_phrases_stored": 0,
+    "funds_transfer_allowed": false,
+    "funds_transferred": 0,
+    "payment_action_allowed": false,
+    "payment_actions": false,
+    "payment_methods_changed": 0,
+    "legal_kyc_tax_action_allowed": false,
+    "legal_kyc_tax_actions": false,
+    "kyc_submissions": 0,
+    "tax_forms_submitted": 0,
+    "public_payment_address_allowed": false,
+    "payment_addresses_published": 0,
+    "real_money_action_allowed": false,
+    "real_money_actions": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build account_wallet_payment_gateway apply preflight blocker before any account creation, terms acceptance, wallet creation, private-key custody, fund transfer, payment method change, KYC/tax/legal action, public payment-address publication, service-request mutation, or live egress."
+}

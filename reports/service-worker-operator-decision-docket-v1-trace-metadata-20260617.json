@@ -1,0 +1,20 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "task_id": "task-service-worker-operator-decision-docket-v1-20260617",
+  "trace_id": "trace-service-worker-operator-decision-docket-v1-20260617",
+  "artifact_family": "service-worker-operator-decision-docket-v1",
+  "summary": "Generated a ranked manual operator/CRO decision docket for all 11 parked service requests, tying human decision packets and preflight rows into a CEO-readable review order without granting approval or starting workers.",
+  "validation_report": "E:\\agent-company-lab\\reports\\service-worker-operator-decision-docket-v1-validation-20260617.json",
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "docket_status": "ready_for_manual_operator_review",
+  "docket_count": 11,
+  "ready_for_manual_review_count": 11,
+  "top_ranked_request_id": "req-next-wave-security-report-route-review-20260614",
+  "report_only": true,
+  "approval_granted_by_docket": false,
+  "service_requests_mutated_by_docket": 0,
+  "worker_starts": 0,
+  "external_side_effects": false,
+  "next_action": "Use the docket as the CEO/CRO manual review order; any approve/reject action still requires separate explicit human action and signed scope."
+}

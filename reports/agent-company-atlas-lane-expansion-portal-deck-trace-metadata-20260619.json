@@ -1,0 +1,33 @@
+{
+  "id": "trace-agent-company-atlas-lane-expansion-portal-deck-v1-20260619",
+  "title": "Lane Expansion Portal Deck",
+  "created_at": "2026-06-19T20:05:20Z",
+  "kind": "ui_unlock",
+  "summary": "Worlds Launch now shows compact future lane and minigame sockets using a generated portal-deck texture.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/assets/system/lane-expansion-portal-deck-20260619.png",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "snapshot.lanes",
+      "lane.visual.minigame",
+      "MINIGAME_REGISTRY",
+      "visualAssetRecords"
+    ],
+    "outputs": [
+      "worldsExpansionPortalSlots",
+      "renderWorldsExpansionPortals",
+      "system-lane-expansion-portal-deck"
+    ]
+  },
+  "verification": {
+    "intent": "Reduce scroll pressure by making future lane expansion visible inside the existing Worlds Launch dock.",
+    "accessibility": "Portal sockets reuse button semantics and existing Worlds Launch action routes.",
+    "motion": "Sweep and ring animations use transform/opacity and include prefers-reduced-motion coverage."
+  }
+}

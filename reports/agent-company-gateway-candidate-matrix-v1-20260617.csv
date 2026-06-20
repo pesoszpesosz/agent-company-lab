@@ -1,0 +1,8 @@
+candidate,current_signal,lab_fit,main_risk,recommended_posture
+Local SQLite egress ledger,Matches existing CEO ledger and chain-integrity model,Highest immediate fit,Does not enforce live traffic by itself,Build first as report-only contract
+LiteLLM,Open-source AI Gateway for 100+ LLM providers plus MCP access by key/team/org,Best future local-first model and MCP gateway candidate,Needs lab ledger for browser/API/public action policy,Pattern now and possible approved local experiment later
+Portkey Gateway,Open-source gateway with routing fallbacks load balancing retries guardrails and multimodal support,Strong routing and guardrail reference,Live deployment adds dependency and credential surface,Pattern/reference until dependency review
+Kong AI Gateway / Agent Gateway,Unified API LLM MCP and A2A governance,Best enterprise traffic taxonomy reference,Enterprise complexity and not next local step,Reference for long-term traffic classes
+TrueFoundry AI/MCP/Agent Gateway,Unified registry step-level observability RBAC policy and governed MCP access,Strong enterprise control-plane reference,Commercial/platform scope too heavy before local contracts,Reference for agent registry and policy model
+Lunar/MCPX-style gateway,Govern LLM MCP and API traffic from distributed control plane,Strong distributed governance reference,Vendor-framed source needs independent verification,Reference for distributed-control-plane requirements
+AgentControl,Centralized runtime guardrails across frameworks,Useful lightweight evaluator reference,Small project and not full egress gateway,Pattern for local deny/allow evaluator shape

@@ -1,0 +1,135 @@
+{
+  "accepted_decision_type_count": 4,
+  "accepted_decision_types": [
+    "hold",
+    "approve_sandbox_dry_run_only",
+    "request_rework",
+    "reject_migration_path"
+  ],
+  "decision_intake_contract_count": 1,
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T11:48:35Z",
+  "intake_evidence_id": "agent-company-migration-decision-intake-contract-20260616",
+  "intake_lane_id": "platform_engineering",
+  "intake_task_id": "task-agent-company-migration-decision-intake-contract-20260616",
+  "lane_evidence_rows_after": 140,
+  "lane_evidence_rows_before": 139,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_intake_contract_ready_for_report_only_fixture_suite",
+  "negative_fixture_count": 8,
+  "negative_fixtures": [
+    {
+      "fixture_id": "missing_decision_id",
+      "reason": "decision_id is required"
+    },
+    {
+      "fixture_id": "unknown_decision_type",
+      "reason": "decision_type must be one of the review options"
+    },
+    {
+      "fixture_id": "live_apply_scope",
+      "reason": "live migration SQL apply is outside this contract"
+    },
+    {
+      "fixture_id": "missing_artifact_paths",
+      "reason": "artifact_paths must include review and validation artifacts"
+    },
+    {
+      "fixture_id": "expired_decision",
+      "reason": "expires_at must be in the future at parse time"
+    },
+    {
+      "fixture_id": "unsigned_decision",
+      "reason": "operator signature fields are required"
+    },
+    {
+      "fixture_id": "gated_action_bundle",
+      "reason": "browser/account/wallet/payment/public/security actions are forbidden"
+    },
+    {
+      "fixture_id": "service_request_mutation",
+      "reason": "service request mutation is forbidden by this intake"
+    }
+  ],
+  "next_action": "Build the report-only fixture suite next; do not parse or apply live operator decisions yet.",
+  "output_state_count": 4,
+  "output_states": [
+    "accepted_hold",
+    "accepted_sandbox_dry_run_preparation_only",
+    "accepted_rework_request",
+    "accepted_rejection_closeout"
+  ],
+  "parser_guard_count": 9,
+  "parser_guards": [
+    "parse_json_only_no_freeform_commands",
+    "require_all_fields_present",
+    "reject_unknown_decision_type",
+    "reject_live_apply_scope",
+    "reject_external_or_gated_action_requests",
+    "require_artifact_paths_match_operator_review_packet",
+    "require_expiration_and_signed_timestamp",
+    "emit_report_only_routing_result",
+    "never_apply_decision_inside_parser"
+  ],
+  "positive_fixture_count": 4,
+  "positive_fixtures": [
+    {
+      "decision_type": "hold",
+      "expected_state": "accepted_for_report_only_routing",
+      "fixture_id": "positive_hold"
+    },
+    {
+      "decision_type": "approve_sandbox_dry_run_only",
+      "expected_state": "accepted_for_sandbox_dry_run_preparation_only",
+      "fixture_id": "positive_approve_sandbox_dry_run_only"
+    },
+    {
+      "decision_type": "request_rework",
+      "expected_state": "accepted_for_report_only_routing",
+      "fixture_id": "positive_request_rework"
+    },
+    {
+      "decision_type": "reject_migration_path",
+      "expected_state": "accepted_for_report_only_routing",
+      "fixture_id": "positive_reject_migration_path"
+    }
+  ],
+  "recommended_default": "build_report_only_fixture_suite_next_without_applying_operator_decision",
+  "required_field_count": 8,
+  "required_fields": [
+    "decision_id",
+    "operator_name",
+    "decision_type",
+    "scope",
+    "artifact_paths",
+    "expires_at",
+    "risk_acknowledgement",
+    "signed_utc"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_intake_contract.v1",
+  "source_review_evidence_id": "agent-company-migration-operator-review-20260616",
+  "source_review_task_id": "task-agent-company-migration-operator-review-20260616",
+  "summary": "Prepared a report-only signed-decision intake contract for the migration operator review, including accepted decision types, required fields, fixtures, parser guards, and output states.",
+  "task_rows_inserted_by_intake_contract": 1,
+  "tasks_table_rows_after": 232,
+  "tasks_table_rows_before": 231
+}

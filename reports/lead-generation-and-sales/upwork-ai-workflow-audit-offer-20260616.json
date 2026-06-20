@@ -1,0 +1,80 @@
+{
+  "schema_version": "agent_company.lead_generation_and_sales.upwork_ai_workflow_audit_offer.v1",
+  "generated_utc": "2026-06-16T20:45:00Z",
+  "task_id": "task-upwork-ai-workflow-audit-offer-20260616",
+  "lane_id": "lead_generation_and_sales",
+  "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+  "decision": "create_local_offer_and_proof_asset_no_marketplace_action",
+  "source_urls": [
+    "https://www.upwork.com/hire/ai-automation-engineers/",
+    "https://www.upwork.com/hire/automation-freelancers/",
+    "https://www.upwork.com/freelance-jobs/artificial-intelligence/",
+    "https://www.upwork.com/resources/ai-automation-jobs-in-2026"
+  ],
+  "icps": [
+    {
+      "segment": "small_agency_with_repetitive_client_reporting",
+      "pain": "manual weekly reports and QA misses",
+      "audit_deliverable": "workflow map, automation candidates, risk-ranked plan",
+      "first_proof_asset": "manual reporting to automated dashboard audit"
+    },
+    {
+      "segment": "saas_founder_with_support_backlog",
+      "pain": "repeated support triage and data lookup",
+      "audit_deliverable": "AI support-routing blueprint with human approvals",
+      "first_proof_asset": "synthetic-ticket triage flow"
+    },
+    {
+      "segment": "operations_team_using_spreadsheets_and_email",
+      "pain": "manual handoffs and missed status updates",
+      "audit_deliverable": "process inventory and low-risk automation plan",
+      "first_proof_asset": "spreadsheet-to-ticket workflow mockup"
+    },
+    {
+      "segment": "dev_team_with_slow_qa_release_checks",
+      "pain": "manual regression checks and flaky releases",
+      "audit_deliverable": "test automation and CI improvement audit",
+      "first_proof_asset": "Playwright/GitHub Actions audit example"
+    }
+  ],
+  "offer_tiers": [
+    {
+      "tier": 1,
+      "name": "Workflow Audit Lite",
+      "scope": "process review, automation opportunity map, risk notes",
+      "external_gate": "client_contact_contract_payment"
+    },
+    {
+      "tier": 2,
+      "name": "Automation Blueprint",
+      "scope": "audit, implementation plan, tool stack, ROI estimate, risk register",
+      "external_gate": "profile_proposal_contract_payment"
+    },
+    {
+      "tier": 3,
+      "name": "Prototype Sprint",
+      "scope": "blueprint plus local prototype using approved demo data",
+      "external_gate": "contract_data_privacy_payment_scope_approval"
+    }
+  ],
+  "score": {
+    "expected_dollars_per_hour": 4,
+    "time_to_first_local_proof": 5,
+    "gate_burden": 4,
+    "repeatability": 4,
+    "agent_fit": 5
+  },
+  "next_action": "Create ai-workflow-audit-proof-asset-agency-reporting-20260616.md/json using synthetic data only.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

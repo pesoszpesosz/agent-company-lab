@@ -1,0 +1,32 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:44:08Z",
+  "trace_id": "trace-arc-agi-3-rules-gate-local-proof-20260618",
+  "task_id": "task-lane-scout-arc_agi_3-20260618",
+  "lane_id": "ai_ml_competitions",
+  "event_type": "arc_agi_3_rules_gate_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-agi-3-rules-gate-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-agi-3-rules-gate-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-agi-3-rules-gate-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "public_sources_read": 7,
+    "browser_sessions_started": 0,
+    "arc_or_kaggle_account_or_login": false,
+    "api_key_created_or_used": false,
+    "env_or_secret_file_written": false,
+    "dependencies_installed": 0,
+    "official_toolkit_or_games_run": false,
+    "official_or_gated_data_downloaded": false,
+    "scorecards_opened": 0,
+    "submissions_made": 0,
+    "notebooks_or_papers_published": 0,
+    "paid_compute_or_model_api": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Implement the standard-library ARC-AGI-3 micro-environment replay baseline locally; do not install the official toolkit, create/use API keys, log in, download official/gated data, open scorecards, submit to Kaggle, publish code/papers, use paid compute/model APIs, start workers/runtimes, or perform public actions without explicit approval."
+}

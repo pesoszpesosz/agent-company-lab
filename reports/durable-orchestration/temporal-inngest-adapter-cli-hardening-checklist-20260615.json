@@ -1,0 +1,200 @@
+{
+  "schema_version": "temporal_inngest_adapter_cli_hardening_checklist.v1",
+  "generated_local": "2026-06-15T17:59:10.4626749+03:00",
+  "generated_utc_approx": "2026-06-15T14:59:10Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-cli-hardening-checklist-20260615",
+  "source_code_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_code_sha256": "799400CC78D467426F30163906129988AF78A268C37F20E157FC46C3D4D09983",
+  "source_implementation_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-implementation-validation-20260615.json",
+  "source_dry_run_result_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-result-20260615.json",
+  "current_command_capability": {
+    "command": "dry-run-durable-service-request-reducer",
+    "fixture_json_required": true,
+    "optional_live_status_read": true,
+    "optional_result_path_write": true,
+    "service_request_mutation_allowed": false,
+    "api_call_allowed": false,
+    "external_runtime_allowed": false,
+    "action_outputs_forced_false": [
+      "ledger_mutation_allowed",
+      "approval_granted",
+      "assign_worker",
+      "start_worker",
+      "emit_followup_event",
+      "schedule_activity",
+      "call_api",
+      "external_side_effects_allowed"
+    ],
+    "observed_result_count": 14,
+    "observed_failure_count": 0
+  },
+  "hardening_checklist": [
+    {
+      "id": "hardening-p0-safe-result-path",
+      "priority": "P0",
+      "area": "result_path_policy",
+      "current_gap": "The helper accepts an arbitrary --result-path and creates parent directories before writing the payload.",
+      "recommendation": "Resolve --result-path and require it to stay inside E:\\agent-company-lab\\reports\\durable-orchestration unless an explicit future allow-outside flag is added and separately reviewed.",
+      "acceptance": "A path outside the durable-orchestration reports directory fails before file creation and exits nonzero."
+    },
+    {
+      "id": "hardening-p0-fixture-doc-schema",
+      "priority": "P0",
+      "area": "fixture_schema",
+      "current_gap": "The helper only checks that fixture_doc.fixtures is a list.",
+      "recommendation": "Require schema_version == agent_company.durable_adapter_reducer_fixture_set.v1 before iterating fixtures.",
+      "acceptance": "A missing or mismatched fixture schema_version fails with a clear validation error and no service-request mutation."
+    },
+    {
+      "id": "hardening-p0-no-result-write-on-validation-failure",
+      "priority": "P0",
+      "area": "failure_write_policy",
+      "current_gap": "The helper can write the result payload before exiting nonzero when failures exist.",
+      "recommendation": "Validate fixture shape and safe result path before writing. Prefer no result write when validation fails, except a future explicitly safe failure-artifact mode.",
+      "acceptance": "Malformed fixtures do not create or overwrite result-path output."
+    },
+    {
+      "id": "hardening-p1-required-fixture-fields",
+      "priority": "P1",
+      "area": "fixture_schema",
+      "current_gap": "Missing fixture_id, request_id, input, expected_output, or expected_exit can be converted into null/default values.",
+      "recommendation": "Require fixture_id, request_id, input, expected_output, and expected_exit top-level keys.",
+      "acceptance": "Any missing required top-level key fails validation with fixture index context."
+    },
+    {
+      "id": "hardening-p1-required-input-fields",
+      "priority": "P1",
+      "area": "fixture_schema",
+      "current_gap": "Input fields are read with .get and can silently become null.",
+      "recommendation": "Require non-empty strings for status_snapshot, event_name, risk_gate, worker_type, idempotency_key, and source_event_id.",
+      "acceptance": "Blank, null, or non-string input fields fail validation."
+    },
+    {
+      "id": "hardening-p1-action-booleans-explicit-false",
+      "priority": "P1",
+      "area": "gate_safety",
+      "current_gap": "The dry-run compares expected action booleans to false outputs, but malformed expected_output data is not prevalidated.",
+      "recommendation": "Require expected_output action fields to exist and be false for all mutation, approval, assignment, worker-start, event, activity, API, and external-effect fields.",
+      "acceptance": "A fixture with expected_output.call_api true or missing action booleans fails before result write."
+    },
+    {
+      "id": "hardening-p1-output-state-enum",
+      "priority": "P1",
+      "area": "reducer_contract",
+      "current_gap": "output_state is copied from expected_output without enum validation.",
+      "recommendation": "Restrict expected_output.output_state to parked.awaiting_human_review, terminal.completed_from_ledger_snapshot, or terminal.rejected_from_ledger_snapshot.",
+      "acceptance": "Unexpected output_state values fail validation."
+    },
+    {
+      "id": "hardening-p1-duplicate-identifiers",
+      "priority": "P1",
+      "area": "idempotency",
+      "current_gap": "Duplicate fixture_id, request_id, or idempotency_key values are not explicitly rejected.",
+      "recommendation": "Reject duplicate fixture IDs and idempotency keys; reject duplicate request IDs unless a future multi-event fixture mode is explicitly introduced.",
+      "acceptance": "Negative fixtures for duplicate fixture_id, request_id, and idempotency_key fail nonzero."
+    },
+    {
+      "id": "hardening-p1-resume-requirements-shape",
+      "priority": "P1",
+      "area": "human_review_contract",
+      "current_gap": "resume_requirements defaults to [] and can contain non-string values.",
+      "recommendation": "Require resume_requirements to be a non-empty list of non-empty strings for parked states and an explicit list for terminal states.",
+      "acceptance": "Malformed or empty parked resume_requirements fail validation."
+    },
+    {
+      "id": "hardening-p1-expected-exit",
+      "priority": "P1",
+      "area": "test_contract",
+      "current_gap": "expected_exit is not currently used to decide whether a fixture packet is supposed to pass or fail.",
+      "recommendation": "Require expected_exit.exit_code == 0 for the positive fixture set and use separate negative packets for malformed cases.",
+      "acceptance": "Positive fixture packet with any expected_exit.exit_code other than 0 fails schema validation."
+    },
+    {
+      "id": "hardening-p1-negative-fixture-packet",
+      "priority": "P1",
+      "area": "tests",
+      "current_gap": "Only positive fixtures are currently tested.",
+      "recommendation": "Add a negative-test fixture packet covering missing input, action true, duplicate idempotency, bad schema_version, and unsafe result path.",
+      "acceptance": "Negative tests exit nonzero for malformed data and prove service_requests remain unchanged."
+    },
+    {
+      "id": "hardening-p2-default-result-path-consistency",
+      "priority": "P2",
+      "area": "cli_contract",
+      "current_gap": "DURABLE_ADAPTER_DRY_RUN_DEFAULT_RESULT is defined but not wired into the parser or helper.",
+      "recommendation": "Either use the default latest path when --result-path is omitted and --json is false, or remove the unused constant.",
+      "acceptance": "Static analysis finds no unused durable dry-run default constant, or help text documents the default."
+    },
+    {
+      "id": "hardening-p2-resume-requirements-order",
+      "priority": "P2",
+      "area": "test_contract",
+      "current_gap": "resume_requirements comparison is strict list equality.",
+      "recommendation": "Keep strict order for canonical fixtures and document that order is semantic for review packet display, or normalize if future fixtures treat it as a set.",
+      "acceptance": "The chosen ordering policy is documented in the reducer contract and fixture validation."
+    },
+    {
+      "id": "hardening-p2-error-message-shape",
+      "priority": "P2",
+      "area": "operator_experience",
+      "current_gap": "Current failures are readable but not a formal validation-error schema.",
+      "recommendation": "Return validation errors with fixture_index, fixture_id when available, field, expected, actual, and remediation.",
+      "acceptance": "Malformed fixtures produce deterministic JSON validation errors under --json."
+    }
+  ],
+  "prioritized_implementation_plan": [
+    {
+      "priority": "P0",
+      "steps": [
+        "Add safe path resolver for --result-path before parent creation or write.",
+        "Add fixture document schema_version validation.",
+        "Stop result writes when fixture validation or safe-path validation fails."
+      ]
+    },
+    {
+      "priority": "P1",
+      "steps": [
+        "Add fixture field/type validation helpers.",
+        "Add explicit false checks for action booleans.",
+        "Add negative fixture packet and negative CLI tests."
+      ]
+    },
+    {
+      "priority": "P2",
+      "steps": [
+        "Resolve unused default-result constant by wiring or removing it.",
+        "Document resume_requirements ordering policy.",
+        "Normalize validation-error JSON shape."
+      ]
+    }
+  ],
+  "acceptance_tests": [
+    "Existing --help command still exposes --fixtures, --result-path, --json, and --check-live-status.",
+    "Existing positive fixture JSON dry-run returns 14 results, zero failures, and no service-request mutations.",
+    "Existing positive fixture result write succeeds inside durable-orchestration reports.",
+    "Malformed fixture missing input exits nonzero and does not write result output.",
+    "Malformed fixture with expected_output.call_api true exits nonzero and does not write result output.",
+    "Malformed fixture with duplicate idempotency_key exits nonzero and does not write result output.",
+    "Fixture document with wrong schema_version exits nonzero.",
+    "Result path outside durable-orchestration reports exits nonzero before parent creation.",
+    "Failed tests leave service_requests unchanged.",
+    "No Temporal server, Inngest service, worker, API call, approval, assignment, or external side effect occurs."
+  ],
+  "runtime_boundary": {
+    "code_changes_in_this_slice": 0,
+    "cli_commands_added_in_this_slice": 0,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Implement P0 hardening for safe result paths and fixture schema validation with apply_patch, then run positive and negative dry-run tests."
+}

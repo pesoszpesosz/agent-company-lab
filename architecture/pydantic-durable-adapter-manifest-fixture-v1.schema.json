@@ -1,0 +1,71 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/pydantic-durable-adapter-manifest-fixture-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Pydantic Durable Adapter Manifest Fixture v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.pydantic_durable_adapter_manifest_fixture.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-pydantic-durable-adapter-manifest-fixture-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "source_dbos_boundary_validation_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_pydantic_local_manifest_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "adapter_policy": {
+      "type": "object"
+    },
+    "manifest_cases": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_urls",
+    "source_dbos_boundary_validation_path",
+    "source_pydantic_local_manifest_path",
+    "adapter_policy",
+    "manifest_cases",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

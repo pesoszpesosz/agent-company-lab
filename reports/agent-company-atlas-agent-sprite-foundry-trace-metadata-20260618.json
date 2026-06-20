@@ -1,0 +1,86 @@
+{
+  "trace_id": "trace-agent-company-atlas-agent-sprite-foundry-v1-20260618",
+  "task_id": "task-agent-company-atlas-agent-sprite-foundry-v1-20260618",
+  "event_id": "trace-atlas_agent_sprite_foundry_added-20260618",
+  "created_at": "2026-06-18T08:52:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "agent_sprite_foundry",
+  "summary": "Added a generated-art Agent Sprite Foundry inside the Operator Roster so bot portraits, sprite readiness, lane bindings, thread identity, staged asks, and future agent slots become visible as an expandable character-production board.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0a0870205edf7573016a33aff2f3988191a12d3bbebe5efa0a.png",
+    "workspace_path": "web/assets/system/agent-sprite-foundry-20260618.png",
+    "bytes": 2109399,
+    "sha256": "F8729EB5CE3BEDF353F74EC1E8241CB5FEA36F9AA06C339FB8F918EC833A6EB1",
+    "prompt_summary": "Premium dark sci-fi bot character sprite foundry sheet with operator pods, portrait cards, sprite frame rails, animation sockets, future-agent slots, teal/amber/green/violet glow accents, no text, no logos, no faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/agent-sprite-foundry-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_agent_sprite_foundry.py",
+      "reports/agent-company-atlas-agent-sprite-foundry-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render an Agent Sprite Foundry inside the global Operator Roster after the Operator Identity Bay.",
+      "Use generated agent-sprite-foundry-20260618.png as the reusable character-production backdrop.",
+      "Derive bot cards from existing agent portraits, callsigns, specialties, lane bindings, thread ids, dispatch suggestions, and browser-local staged drafts without adding snapshot schema.",
+      "Summarize bot, portrait, lane-bind, thread, and future-slot coverage from existing records.",
+      "Expose COM, ASSET, and FORGE actions for jumping to selected bot Comms, the agent-portrait Asset Vault lens, and the Creator Kit bot gate.",
+      "Allow every lane-bound sprite card to drill into the source lane Comms view.",
+      "Render future bot slots so expanded agent companies have visible character capacity.",
+      "Register the foundry texture in the Visual Asset Vault system assets.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_agent_sprite_foundry.py -q failed before implementation on missing renderAgentSpriteFoundry call.",
+      "green": "pytest tests\\test_agent_company_atlas_agent_sprite_foundry.py -q passed after generated asset, renderer, styles, docs, cache token, handlers, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "agent_sprite_foundry_contract_test": "passed",
+      "asset_present_bytes": 2109399
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=agent-sprite-foundry-green",
+      "evidence": {
+        "agent_sprite_foundry_present": true,
+        "generated_art_loaded": true,
+        "stat_count": 5,
+        "card_count": 11,
+        "future_slot_count": 4,
+        "lane_linked_cards": 11,
+        "action_count": 3,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "COM -> selected bot lane Comms tab",
+          "ASSET -> agent Asset Vault lens with 11 visible portrait cards",
+          "FORGE -> Creator Kit bot gate",
+          "Sprite card -> selected lane Comms tab"
+        ],
+        "horizontal_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Agent Sprite Foundry with generated art, five stats, eleven sprite cards, four future slots, three local actions, zero bad rects, zero button text overflow, zero page horizontal overflow, and zero console errors."
+    }
+  }
+}

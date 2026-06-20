@@ -1,0 +1,86 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-egress-route-signed-decision-intake-contract-v1-20260618",
+  "task_id": "task-egress-route-signed-decision-intake-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:11:49Z",
+  "summary": "Created report-only signed-decision intake templates for all unified egress gateway routes. The contract covers 8 route templates and validates 30 fixtures, accepting 3 safe report-only decisions and rejecting 27 unsafe decisions, while preserving zero gateway registration, gateway start, live egress, worker start, runtime start, browser session, model/API, MCP, service-request mutation, public action, payment, wallet, account, or external side effects.",
+  "source_gateway_docket": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\egress-route-signed-decision-intake-contract-v1.schema.json",
+      "sha256": "d5ee842c7b51a7f96263a4cc07ed7a1fbfa5c0acafc9bf1aba119fb7d1648146"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_egress_route_signed_decision_intake_contract.py",
+      "sha256": "229f9cffdd39c72baaa09d5efe52fa0a2838c79bbadbf986f355e7c1abdd4a45"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_egress_route_signed_decision_intake_contract.py",
+      "sha256": "e5a46a49a93083561aca4b50e92a64477cff8f081191068be6a13d7726ad8ca0"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-20260618.json",
+      "sha256": "fd4e564fddf0ab2c1d1c271394bd5ed0e25de39d2be1daba8b6ac7f2d3d7d603"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+      "sha256": "e906c64685d0daa6bbc0c1903f000e810ad5a0ffa41c0cf7cd8fc3cb5c4e6ae2"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-20260618.md",
+      "sha256": "5501a81208de048e920953e1999cef56abe3b50fbef37575dacfde7e4ca0f83a"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_egress_route_signed_decision_intake_contract.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+    "full_test_result": "28 tests passed",
+    "route_count": 8,
+    "template_count": 8,
+    "fixture_count": 30,
+    "accepted_count": 3,
+    "rejected_count": 27,
+    "fixture_expectation_mismatch_count": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "decision_authority_granted_by_contract": false,
+    "approval_granted_by_contract": false,
+    "apply_allowed": false,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "dependency_installs": 0,
+    "worker_registrations": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build egress route signed-decision guard for one exact route decision before any apply preflight, gateway registration, gateway start, or live egress."
+}

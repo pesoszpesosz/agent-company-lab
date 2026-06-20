@@ -1,0 +1,41 @@
+{
+  "schema_version": "agent_company.security_program_rules_scope_ranker_report.v1",
+  "generated_utc": "2026-06-17T21:50:00Z",
+  "task_id": "task-security-program-rules-scope-ranker-v1-20260618",
+  "dataset_json": "E:\\agent-company-lab\\data\\security-program-rules-scope-ranker-v1-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\security-program-rules-scope-ranker-v1-20260618.csv",
+  "program_count": 7,
+  "submission_ready_count": 0,
+  "promoted_local_proofs": [
+    "immunefi_directory_scope_shortlist_v1",
+    "security_report_quality_gate_v1",
+    "lido_scope_rules_extraction_packet_v1"
+  ],
+  "lane_mapping": {
+    "lane_id": "security_bounty_private_reports",
+    "first_agent_type": "program_rules_reader",
+    "service_worker_needs": [
+      "browser_read_only_session",
+      "security_report_submission_gate",
+      "wallet_public_address_or_payment_reply",
+      "legal_kyc_tax_payment_gate"
+    ]
+  },
+  "decision": "Promote rules/scope research only. No security testing or report submission is ready.",
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build immunefi_directory_scope_shortlist_v1 and security_report_quality_gate_v1 before any target-specific testing or report drafting."
+}

@@ -1,0 +1,41 @@
+{
+  "all_checks_passed": true,
+  "api_calls": false,
+  "contract_still_not_installed": true,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T14:48:12Z",
+  "packet_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-implementation-review-packet-20260615.json",
+  "runtime_boundary": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "cli_command_added": false,
+    "cli_command_executed": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_functions_registered": 0,
+    "inngest_service_started": false,
+    "python_files_modified": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_cli_implementation_review_validation.v1",
+  "service_status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "source_static_result_count": 14,
+  "source_static_validation_passed": true,
+  "tool_file_unchanged": true,
+  "tool_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "tool_sha256_after_review": "0D40754274B5234416AFDD0B35F1BDF4D7F8C6D8DFEC193AA3ED60267CC585C5",
+  "tool_sha256_before_review": "0D40754274B5234416AFDD0B35F1BDF4D7F8C6D8DFEC193AA3ED60267CC585C5"
+}

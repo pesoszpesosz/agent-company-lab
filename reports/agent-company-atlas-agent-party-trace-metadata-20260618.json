@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "trace_id": "trace-agent-company-atlas-agent-party-v1-20260618",
+  "task_id": "task-agent-company-atlas-agent-party-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-agent-party-v1-20260618",
+  "event_id": "trace-atlas_agent_party_added-20260618",
+  "duplicate_key": "atlas-agent-party-v1",
+  "event_type": "atlas_agent_party_added",
+  "outcome_type": "atlas_agent_party_added",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T22:41:24.0207721Z",
+  "summary": "Added the Agent Party to each lane Overview so selected money paths show their bound bot portraits, readiness, gate pressure, thread id, top ask, and local COM/Q/PATH controls.",
+  "research": {
+    "sources": [
+      "https://fuselabcreative.com/ui-design-for-ai-agents/",
+      "https://www.creative-tim.com/ui/block/agent-management-list-01",
+      "https://agentsroom.dev/multi-agent-dashboard",
+      "https://thewingless.com/index.php/2023/12/01/a-glossary-of-game-ui-ux-design-terms-for-absolute-beginners-the-hud/",
+      "https://dribbble.com/search/quest-game-ui"
+    ],
+    "pattern_notes": [
+      "Agent UX benefits from transparency, control, status communication, and recovery cues rather than opaque automation.",
+      "Agent management dashboards commonly pair avatars with status, task counts, last activity, and action controls.",
+      "Multi-agent dashboards make ownership and real-time status visible so operators are not forced to reconstruct work from separate chats.",
+      "Game HUD and party-roster patterns keep essential character state visible inside the core loop."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "data_contract": [
+      "agentPartyRecords(lane) reuses botCommandRecords(), laneAgents(lane), and laneDispatchSuggestion(lane).",
+      "renderAgentParty(lane) appears in Overview after the Milestone Runway.",
+      "The panel reads existing snapshot agents, lane bindings, dispatch suggestions, staged drafts, agent visuals, and lane counts.",
+      "COM and PATH are local detail navigation; Q only stages a browser-local command draft and rerenders the selected lane Overview."
+    ],
+    "ui_notes": [
+      "Agent Party cards use generated agent portraits from agent-visuals.json when mapped.",
+      "Cards show readiness meter, pressure rail, level, gates, pending review, urgency, thread id, and staged state.",
+      "Mobile layout collapses summary and stat grids to two columns while keeping action buttons touch-friendly."
+    ]
+  },
+  "verification": {
+    "red": {
+      "route": "http://localhost:5177/?verify=agent-party-red&cache=20260618-runway-lenses-final#lane=money_source_discovery&view=overview",
+      "result": "Expected failure before implementation: panel false, cards 0, avatars 0, meters 0, actions [], stagedCards 0, errors []"
+    },
+    "green": {
+      "route": "http://localhost:5177/?verify=agent-party-green&cache=20260618-agent-party#lane=money_source_discovery&view=overview",
+      "result": "ok true; panel true; cards 1; avatars 1; meters 1; summary 4; actions [comms,path,queue]; Q changed queue label to OK and stagedCards to 1; PATH opened Path Map; COM opened Comms; no clipped text or console errors."
+    },
+    "responsive": [
+      "phone 390: ok true, cards 1, actions 3, summaryColumns 2, statColumns 2, pageOverflow false, clipped []",
+      "tablet 820: ok true, cards 1, actions 3, summaryColumns 2, statColumns 2, pageOverflow false, clipped []",
+      "desktop 1280: ok true, cards 1, actions 3, summaryColumns 4, statColumns 4, pageOverflow false, clipped []",
+      "wide 1600: ok true, cards 1, actions 3, summaryColumns 4, statColumns 4, pageOverflow false, clipped []"
+    ],
+    "static": [
+      "node --check web\\app.js -> exit 0",
+      "Invoke-WebRequest http://localhost:5177/?verify=agent-party-static-final&cache=20260618-agent-party#lane=money_source_discovery&view=overview -> StatusCode=200 Length=13643",
+      "python -m json.tool web\\data\\snapshot.json -> exit 0",
+      "ASCII verified for web/index.html, web/app.js, web/styles.css, web/README.md"
+    ]
+  },
+  "source_hashes": {
+    "web/index.html": "A3F9EEB79C4759A0ADF9DF58A1602FE1BA56D4D1D2AA16572D87414DF4BEBE36",
+    "web/app.js": "16792164570D9CBF934C282CD3D08F6BD9881ACFDAA97E41CA9B269B3DEC9334",
+    "web/styles.css": "D3DDAC5B0CBB2FED9D88BAD8E8E5EEBD79FABB5E7FE598A7FC464F7A7506D6A0",
+    "web/README.md": "486ABF080FC59EB6F11A0258E10A8B2F32AC148E9219A6E2D48E278CF9FF3A7E"
+  },
+  "next_actions": [
+    "Add lane-party animation skins that vary by minigame family.",
+    "Add optional local focus cycling for lanes with multiple bots.",
+    "Generate additional expansion portraits and connect spare agents as new lanes are created."
+  ]
+}

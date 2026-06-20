@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-deck-stage-compression-v1-20260619",
+  "taskId": "task-agent-company-atlas-deck-stage-compression-v1-20260619",
+  "eventId": "event-agent-company-atlas-deck-stage-compression-v1-20260619",
+  "title": "Deck Stage Compression",
+  "createdAt": "2026-06-19T05:28:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Bounded non-audit deck sections with internal scroll, stable scrollbars, and snap points while preserving the All deck as the full expandable audit view.",
+  "proof": [
+    "Added global bounded-stage rules for normal deck sections so Library, Worlds, History, Control, and Command no longer add unlimited page height.",
+    "Kept the All deck unbounded for standalone audit, export, and full-repository review workflows.",
+    "Updated README, cache markers, snapshot generation, and regression floors so the standalone dashboard records the scroll-reduction unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_deck_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

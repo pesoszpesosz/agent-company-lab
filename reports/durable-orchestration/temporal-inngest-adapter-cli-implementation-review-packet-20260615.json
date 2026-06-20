@@ -1,0 +1,144 @@
+{
+  "acceptance_invariants": [
+    "No dependency installation or new third-party import.",
+    "No Temporal/Inngest runtime start, registration, workflow, activity, or event emission.",
+    "No service_requests mutation of any kind.",
+    "No approvals, assignments, worker starts, API calls, browser/account/public/payment/wallet/security/legal actions.",
+    "Nonzero exit only for malformed fixture, live-status mismatch when requested, or expected-output mismatch."
+  ],
+  "acceptance_tests": [
+    {
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py dry-run-durable-service-request-reducer --help",
+      "expected": "Command help displays fixture/result/json/check-live-status options.",
+      "id": "help_lists_command"
+    },
+    {
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py dry-run-durable-service-request-reducer --fixtures E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json --json --check-live-status",
+      "expected": "14 result rows, output state counts 11 parked / 1 complete terminal / 2 rejected terminal, zero failures.",
+      "id": "fixture_result_matches_static_artifact"
+    },
+    {
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py dry-run-durable-service-request-reducer --fixtures E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json --result-path E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-result-latest.json",
+      "expected": "Writes only the requested local result JSON artifact and prints ok JSON.",
+      "id": "optional_result_write_is_local_only"
+    },
+    {
+      "command_preview": "Compare service_requests tracked fields before/after dry run.",
+      "expected": "No request status, assignment, start, completion, decision note, or updated_at changes.",
+      "id": "service_request_rows_unchanged"
+    }
+  ],
+  "api_calls": false,
+  "current_db_counts": {
+    "agents": 11,
+    "artifacts": 366,
+    "service_requests": 14,
+    "tasks": 119,
+    "trace_events": 135
+  },
+  "current_service_status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T14:48:12Z",
+  "implementation_no_go_conditions": [
+    "Proposed command writes to service_requests, approvals, agents pool registry, or task lifecycle tables.",
+    "Proposed command imports/starts Temporal, Inngest, browser automation, model providers, or network clients.",
+    "Proposed command treats fixture output as approval to execute worker actions.",
+    "Proposed command silently ignores live-status mismatch when --check-live-status is enabled."
+  ],
+  "next_local_proof": "implement_local_dry_run_cli_command_with_apply_patch_and_run_only_fixture_tests",
+  "proposed_code_surface": {
+    "add_imports": [],
+    "dispatch_insertion": {
+      "behavior": "init_db(conn) only for read-only live status checks, then call dry_run_durable_service_request_reducer(conn, args).",
+      "location": "main() command dispatch after write-trace-report or adjacent report-only commands"
+    },
+    "new_constants": [
+      "DURABLE_ORCHESTRATION_DIR = REPORTS_DIR / \"durable-orchestration\"",
+      "DURABLE_ADAPTER_DRY_RUN_DEFAULT_RESULT = DURABLE_ORCHESTRATION_DIR / \"temporal-inngest-adapter-cli-dry-run-result-latest.json\""
+    ],
+    "new_functions": [
+      {
+        "must_not_do": [
+          "write service_requests",
+          "approve/reject/assign/start/complete requests",
+          "register workers",
+          "call external APIs",
+          "import Temporal or Inngest",
+          "open browsers"
+        ],
+        "name": "dry_run_durable_service_request_reducer",
+        "responsibility": "Load fixture JSON and optional live DB statuses, compute deterministic dry-run results matching agent_company.durable_adapter_dry_run_result.v1, print JSON, optionally write a local result artifact.",
+        "suggested_location": "near other report writer functions before main()"
+      }
+    ],
+    "parser_insertion": {
+      "arguments": [
+        {
+          "description": "Fixture JSON path.",
+          "name": "--fixtures",
+          "required": true
+        },
+        {
+          "description": "Optional local JSON output path under reports/durable-orchestration.",
+          "name": "--result-path",
+          "required": false
+        },
+        {
+          "description": "Print JSON result to stdout.",
+          "name": "--json",
+          "required": false
+        },
+        {
+          "description": "Read service_requests statuses and fail on fixture mismatch; read-only.",
+          "name": "--check-live-status",
+          "required": false
+        }
+      ],
+      "location": "main() argparse setup near other read/report commands",
+      "subcommand": "dry-run-durable-service-request-reducer"
+    }
+  },
+  "review_decision": {
+    "browser_account_public_money_security_legal_readiness": "not_approved",
+    "external_runtime_readiness": "not_approved",
+    "local_code_change_readiness": "ready_after_review_packet_only_for_local_fixture_dry_run_command",
+    "model_api_readiness": "not_approved",
+    "service_request_mutation_readiness": "not_approved",
+    "summary": "A future local CLI command may be implemented only as a deterministic fixture reader/result writer. It must not approve, assign, start, mutate service_requests, call APIs, import durable runtimes, or touch external systems."
+  },
+  "rollback_plan": [
+    "Remove the new parser branch and dispatch branch from tools/agent_company.py.",
+    "Remove the pure dry-run helper function and any constants added only for the command.",
+    "Keep existing review/static artifacts immutable; do not delete ledger history."
+  ],
+  "runtime_boundary": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "cli_command_added": false,
+    "cli_command_executed": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_functions_registered": 0,
+    "inngest_service_started": false,
+    "python_files_modified": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_cli_implementation_review_packet.v1",
+  "source_contract_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-contract-20260615.json",
+  "source_fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+  "source_static_result_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-static-dry-run-result-validation-20260615.json",
+  "title": "Implementation review packet for optional local durable adapter dry-run CLI command",
+  "tool_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "tool_sha256_before_review": "0D40754274B5234416AFDD0B35F1BDF4D7F8C6D8DFEC193AA3ED60267CC585C5"
+}

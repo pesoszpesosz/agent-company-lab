@@ -1,0 +1,30 @@
+{
+  "traceId": "trace-agent-company-atlas-command-archive-focus-dock-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-archive-focus-dock-v1-20260619",
+  "eventId": "trace-atlas_command_archive_focus_dock_added-20260619",
+  "title": "Command Archive Focus Dock",
+  "createdUtc": "2026-06-19T00:49:30Z",
+  "summary": "Replaced the lower Command deck support-board stack with a focused archive dock so Relay, Dispatch, Command, Quest, Crew, Threads, Bots, and Operators open one at a time.",
+  "layoutEvidence": {
+    "intent": "Reduce Command deck scrolling without removing support-board access.",
+    "defaultPanel": "relay",
+    "panels": [
+      "relay",
+      "dispatch",
+      "command",
+      "quest",
+      "crew",
+      "threads",
+      "bots",
+      "operators"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_command_workspace_first.py"
+  ]
+}

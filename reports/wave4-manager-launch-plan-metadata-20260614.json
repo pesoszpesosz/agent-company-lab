@@ -1,0 +1,14 @@
+{
+  "span_kind": "internal",
+  "runtime": "local_cli",
+  "api_calls": false,
+  "external_side_effects": false,
+  "threads_created": false,
+  "launch_queue_count": 10,
+  "held_count": 2,
+  "wave4_lanes_promoted": [
+    "money_source_discovery",
+    "ai_ml_competitions",
+    "digital_products_templates_plugins"
+  ]
+}

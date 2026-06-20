@@ -1,0 +1,237 @@
+{
+  "api_calls": false,
+  "approval_granted_by_registry": false,
+  "current_assignment_request_count": 14,
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "execution_notice": "Pool registry report only. It registers no workers, grants no approval, assigns no service request, updates no service request, and starts nothing.",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T14:17:59Z",
+  "missing_pool_count": 7,
+  "pool_count": 7,
+  "pools": [
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "public browser read-only navigation",
+        "source URL and title capture",
+        "short compliant excerpt capture",
+        "local artifact writing"
+      ],
+      "current_lanes": [
+        "ai_ml_competitions",
+        "content_and_social_growth",
+        "digital_products_templates_plugins",
+        "money_source_discovery",
+        "paid_code_bounties",
+        "security_bounty_private_reports"
+      ],
+      "current_request_count": 7,
+      "current_worker_types": [
+        "browser_read_only"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "browser_action_worker",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-browser-read-only-pool",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "approved signed-in read-only inspection",
+        "no account setting changes",
+        "no public X/Grok action",
+        "local research note capture"
+      ],
+      "current_lanes": [
+        "platform_engineering"
+      ],
+      "current_request_count": 1,
+      "current_worker_types": [
+        "browser_signed_in_read_only"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "browser_action_worker",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-signed-in-browser-read-only-pool",
+      "worker_started": false,
+      "worker_type": "browser_signed_in_read_only"
+    },
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "legal/KYC/tax/payment requirement review",
+        "commitment and account-contract gate detection",
+        "user/CRO question packet writing"
+      ],
+      "current_lanes": [
+        "digital_products_templates_plugins"
+      ],
+      "current_request_count": 1,
+      "current_worker_types": [
+        "legal_kyc_tax_payment_review"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "chief_risk_officer",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-legal-kyc-payment-review-pool",
+      "worker_started": false,
+      "worker_type": "legal_kyc_tax_payment_review"
+    },
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "local deterministic runtime execution",
+        "artifact and trace emission",
+        "no network or account side effects"
+      ],
+      "current_lanes": [
+        "platform_engineering"
+      ],
+      "current_request_count": 2,
+      "current_worker_types": [
+        "local_runtime_adapter"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "observability_worker",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+      "worker_started": false,
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "provider/model/cost scope check",
+        "input/output artifact boundary check",
+        "cost and trace logging before any API call"
+      ],
+      "current_lanes": [
+        "platform_engineering"
+      ],
+      "current_request_count": 1,
+      "current_worker_types": [
+        "model_api_execution"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "observability_worker",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-model-api-execution-pool",
+      "worker_started": false,
+      "worker_type": "model_api_execution"
+    },
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "local evidence building",
+        "gate-specific checklist execution",
+        "artifact writing"
+      ],
+      "current_lanes": [
+        "platform_engineering"
+      ],
+      "current_request_count": 1,
+      "current_worker_types": [
+        "other_gated_worker"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "evidence_builder",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-other-gated-work-pool",
+      "worker_started": false,
+      "worker_type": "other_gated_worker"
+    },
+    {
+      "active_role_agent_ids": [],
+      "api_calls": false,
+      "approval_granted_by_registry": false,
+      "capabilities": [
+        "public-facing draft review",
+        "submission route risk review",
+        "spam/slop and account-health check"
+      ],
+      "current_lanes": [
+        "security_bounty_private_reports"
+      ],
+      "current_request_count": 1,
+      "current_worker_types": [
+        "public_submission"
+      ],
+      "external_side_effects": false,
+      "next_action": "Register a concrete service-worker pool/agent before using assignment previews.",
+      "pool_status": "missing_service_worker_pool",
+      "registered_pool_agent_ids": [],
+      "registered_pool_available": false,
+      "role_capacity_exists": false,
+      "role_id": "reputation_review_worker",
+      "service_request_assigned_by_registry": false,
+      "service_request_updated_by_registry": false,
+      "worker_pool_id": "service-worker-public-submission-review-pool",
+      "worker_started": false,
+      "worker_type": "public_submission"
+    }
+  ],
+  "role_counts": {
+    "browser_action_worker": 2,
+    "chief_risk_officer": 1,
+    "evidence_builder": 1,
+    "observability_worker": 2,
+    "reputation_review_worker": 1
+  },
+  "schema_version": "service_worker_pool_registry.v1",
+  "service_requests_assigned_by_registry": 0,
+  "service_requests_updated_by_registry": 0,
+  "status_counts": {
+    "missing_service_worker_pool": 7
+  },
+  "worker_starts": 0
+}

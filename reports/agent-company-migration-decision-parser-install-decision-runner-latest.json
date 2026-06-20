@@ -1,0 +1,192 @@
+{
+  "accepted_result_count": 4,
+  "evidence_rows_inserted_or_updated": 1,
+  "failed_fixture_count": 0,
+  "fixture_results": [
+    {
+      "actual_state": "accepted_hold",
+      "actual_valid": true,
+      "expected_guard": null,
+      "expected_state": "accepted_hold",
+      "expected_valid": true,
+      "fixture_id": "positive_hold",
+      "kind": "positive",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual_state": "accepted_one_file_write_only",
+      "actual_valid": true,
+      "expected_guard": null,
+      "expected_state": "accepted_one_file_write_only",
+      "expected_valid": true,
+      "fixture_id": "positive_approve_one_file_write_only",
+      "kind": "positive",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual_state": "accepted_preflight_rework",
+      "actual_valid": true,
+      "expected_guard": null,
+      "expected_state": "accepted_preflight_rework",
+      "expected_valid": true,
+      "fixture_id": "positive_request_preflight_rework",
+      "kind": "positive",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual_state": "accepted_install_rejection",
+      "actual_valid": true,
+      "expected_guard": null,
+      "expected_state": "accepted_install_rejection",
+      "expected_valid": true,
+      "fixture_id": "positive_reject_parser_install",
+      "kind": "positive",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_required_fields_present",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "missing_decision_id",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_required_fields_present"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_known_install_decision_type",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "unknown_decision_type",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_known_install_decision_type"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_target_path_matches_preflight",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "target_path_changed",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_target_path_matches_preflight"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_source_artifact_matches_preflight",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "missing_source_artifact",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_required_fields_present",
+        "guard_source_artifact_matches_preflight"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_not_expired",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "expired_decision",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_not_expired"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_signed_timestamp_present",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "unsigned_decision",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_required_fields_present",
+        "guard_signed_timestamp_present"
+      ]
+    },
+    {
+      "actual_state": "rejected_fixture_input",
+      "actual_valid": false,
+      "expected_guard": "guard_no_import_or_live_parse_permission",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "bundled_live_parse_permission",
+      "kind": "negative",
+      "passed": true,
+      "reasons": [
+        "guard_no_import_or_live_parse_permission"
+      ]
+    }
+  ],
+  "fixture_suite_count": 11,
+  "fixtures_evaluated": 11,
+  "generated_utc": "2026-06-16T12:58:55Z",
+  "install_decision_runner_count": 1,
+  "lane_evidence_rows_after": 152,
+  "lane_evidence_rows_before": 151,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_install_decision_runner_ready_for_report_only_parser_static_review",
+  "next_action": "Review the report-only runner results before any parser file write or import request.",
+  "output_state_count": 4,
+  "parser_guard_count": 8,
+  "passed_fixture_count": 11,
+  "recommended_default": "review_report_only_runner_results_next_without_writing_or_importing_parser",
+  "rejected_result_count": 7,
+  "runner_evidence_id": "agent-company-migration-decision-parser-install-decision-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-agent-company-migration-decision-parser-install-decision-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "report_only_fixtures_evaluated": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_install_decision_runner.v1",
+  "source_fixture_evidence_id": "agent-company-migration-decision-parser-install-decision-fixture-suite-20260616",
+  "source_fixture_task_id": "task-agent-company-migration-decision-parser-install-decision-fixture-suite-20260616",
+  "summary": "Evaluated the saved report-only install-decision fixture data without importing a parser, writing parser files, parsing live decisions, or applying an install decision.",
+  "task_rows_inserted_by_install_decision_runner": 1,
+  "tasks_table_rows_after": 244,
+  "tasks_table_rows_before": 243
+}

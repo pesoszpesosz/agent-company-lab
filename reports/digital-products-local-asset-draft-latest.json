@@ -1,0 +1,204 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "boundary_note_count": 4,
+  "boundary_notes": [
+    "This is a local draft artifact only; it is not a marketplace listing or public product page.",
+    "No marketplace browsing, seller account setup, pricing, payment, payout, or legal/tax review has been performed.",
+    "No revenue, demand, conversion, or buyer-count claim is made by this local draft.",
+    "Live validation requires the parked browser/legal/payment/public-action gates to be explicitly approved first."
+  ],
+  "checklist_row_count": 9,
+  "checklist_rows": [
+    {
+      "evidence": "Completed positioning answers.",
+      "phase": "pre-launch",
+      "status": "draftable_locally",
+      "task": "Fill the positioning template and mark any claims that need evidence."
+    },
+    {
+      "evidence": "Screenshot shot list.",
+      "phase": "pre-launch",
+      "status": "draftable_locally",
+      "task": "List screenshots needed for the product page or announcement."
+    },
+    {
+      "evidence": "QA pass table.",
+      "phase": "pre-launch",
+      "status": "draftable_locally",
+      "task": "Run a QA pass on links, copy, onboarding steps, and release notes."
+    },
+    {
+      "evidence": "Boundary README.",
+      "phase": "pre-launch",
+      "status": "draftable_locally",
+      "task": "Write a boundary README that avoids revenue claims and live validation claims."
+    },
+    {
+      "evidence": "Requires approved browser read-only service request.",
+      "phase": "gated",
+      "status": "blocked_by_gate",
+      "task": "Compare live marketplace demand, saturation, and buyer language."
+    },
+    {
+      "evidence": "Requires legal/KYC/tax/payment approval.",
+      "phase": "gated",
+      "status": "blocked_by_gate",
+      "task": "Review seller terms, payment setup, refunds, tax, and KYC obligations."
+    },
+    {
+      "evidence": "Requires public-action approval.",
+      "phase": "gated",
+      "status": "blocked_by_gate",
+      "task": "Create or update any public listing or product page."
+    },
+    {
+      "evidence": "Requires account/payment approval.",
+      "phase": "gated",
+      "status": "blocked_by_gate",
+      "task": "Connect payouts, accept agreements, or configure payment settings."
+    },
+    {
+      "evidence": "Post-launch review template.",
+      "phase": "post-launch",
+      "status": "future_only_after_approval",
+      "task": "After a future approved launch, review traffic, replies, conversion signals, support load, and next iteration."
+    }
+  ],
+  "draft_evidence_id": "digital-products-local-asset-draft-20260616",
+  "draft_file_count": 2,
+  "draft_files": [
+    {
+      "file_id": "positioning-template.md",
+      "sections": [
+        "buyer",
+        "problem",
+        "trigger",
+        "promise",
+        "proof",
+        "scope",
+        "risk",
+        "gate"
+      ],
+      "title": "AI Builder Launch Positioning Template"
+    },
+    {
+      "file_id": "launch-checklist.md",
+      "sections": [
+        "pre-launch",
+        "gated",
+        "post-launch"
+      ],
+      "title": "AI Builder Launch Checklist"
+    }
+  ],
+  "draft_lane_id": "digital_products_templates_plugins",
+  "draft_task_id": "task-digital-products-local-asset-draft-20260616",
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not publish this draft, browse marketplaces, create seller accounts, accept terms, configure payouts, set prices, or claim live demand from it.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this draft."
+  ],
+  "generated_utc": "2026-06-15T21:24:08Z",
+  "lane_evidence_rows_after": 81,
+  "lane_evidence_rows_before": 80,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "local_draft_complete_no_marketplace_listing_or_payment_action",
+  "next_action": "Run a local quality pass on the draft content and only request marketplace/browser/legal/payment gates if live demand or seller validation is needed.",
+  "positioning_answer_count": 10,
+  "positioning_answers": [
+    {
+      "answer": "Solo AI builder preparing a small product launch without a launch manager, launch checklist, or agency support.",
+      "field_id": "buyer"
+    },
+    {
+      "answer": "Launch work is scattered across notes, screenshots, copy drafts, QA reminders, and follow-up ideas.",
+      "field_id": "current-mess"
+    },
+    {
+      "answer": "The builder is close enough to launch that missed screenshots, broken links, unclear positioning, or no review loop would cost momentum.",
+      "field_id": "trigger"
+    },
+    {
+      "answer": "Organize the launch into one practical checklist pack that reduces missed steps and makes review easier, without promising revenue.",
+      "field_id": "promise"
+    },
+    {
+      "answer": "A filled example, a screenshot shot list, a QA pass table, and a post-launch review template should make the pack feel immediately usable.",
+      "field_id": "proof-needed"
+    },
+    {
+      "answer": "Positioning template, launch checklist, screenshot shot list, QA pass, post-launch review, and boundary README.",
+      "field_id": "included-assets"
+    },
+    {
+      "answer": "No marketplace listing, pricing advice, payment setup, launch agency service, traffic guarantee, or revenue claim.",
+      "field_id": "excluded-scope"
+    },
+    {
+      "answer": "The first positioning pass should take under thirty minutes for a focused builder with a known product.",
+      "field_id": "setup-time"
+    },
+    {
+      "answer": "The README must clarify that the pack is a local planning aid, not legal, tax, payment, or marketplace guidance.",
+      "field_id": "support-risk"
+    },
+    {
+      "answer": "Publishing, selling, pricing, seller account setup, payment setup, and live marketplace claims require browser/legal/payment gates first.",
+      "field_id": "validation-gate"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_asset_draft.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_outline_evidence_id": "digital-products-local-asset-outline-20260616",
+  "source_outline_task_id": "task-digital-products-local-asset-outline-20260616",
+  "source_outline_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-validation-latest.json",
+  "summary": "Created a local draft artifact for the AI builder launch checklist pack: one filled positioning template and one launch checklist table. The draft is explicitly not a marketplace listing, price, public page, or payment-enabled product.",
+  "task_rows_inserted_by_draft": 1,
+  "tasks_table_rows_after": 159,
+  "tasks_table_rows_before": 158
+}

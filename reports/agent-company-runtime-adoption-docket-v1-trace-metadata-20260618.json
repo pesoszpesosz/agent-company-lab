@@ -1,0 +1,71 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-agent-company-runtime-adoption-docket-v1-20260618",
+  "task_id": "task-agent-company-runtime-adoption-docket-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T22:57:10Z",
+  "summary": "Created a report-only runtime adoption docket from Wave 19 open-source stack radar. The docket classifies 27 candidates into reference-only, adapter-candidate, future-runtime-candidate, and blocked-dependency decisions while preserving zero install/runtime/worker/browser/model/MCP/public/payment side effects.",
+  "source_radar_dataset": "E:\\agent-company-lab\\data\\agent-company-open-source-stack-radar-wave19-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\agent-company-runtime-adoption-docket-v1.schema.json",
+      "sha256": "fd52ea640eed9b13eb0ecab5425cc92d2f8a82969d4dd80245ea845c97c662a4"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_agent_company_runtime_adoption_docket.py",
+      "sha256": "1ea22a84d671c50c89ba514b5ac0d2f097a6463515cd1b915b987c02a856d2f8"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_agent_company_runtime_adoption_docket.py",
+      "sha256": "131b0ebba141655692e227d78753799d34a5e034e35f355e810e556fc26313f1"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+      "sha256": "892e75fa53c1125faafd237e6abbf493659561ffc848f69fe537f271a4bb7ac3"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-validation-20260618.json",
+      "sha256": "92b6d18f0a1a0dc5188feffdc45ed9376c1041efb98bd985a4ec57cb339a717d"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.md",
+      "sha256": "b8093b0d00fa5016a46be769b024221a7584ab13abce4fc1b2f2d95e0c94e3c9"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_agent_company_runtime_adoption_docket.py",
+    "focused_test_result": "passed",
+    "source_candidate_count": 27,
+    "docket_item_count": 27,
+    "reference_only_count": 11,
+    "adapter_candidate_count": 4,
+    "future_runtime_candidate_count": 3,
+    "blocked_dependency_count": 9,
+    "adoption_allowed": false,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build worker_capability_class_registry_v1 before any dependency install or runtime adoption."
+}

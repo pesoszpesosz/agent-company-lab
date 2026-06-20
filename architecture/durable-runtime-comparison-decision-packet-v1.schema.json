@@ -1,0 +1,77 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/durable-runtime-comparison-decision-packet-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Durable Runtime Comparison Decision Packet v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.durable_runtime_comparison_decision_packet.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-durable-runtime-comparison-decision-packet-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_validation_paths": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "decision_summary": {
+      "type": "object"
+    },
+    "runtime_recommendations": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "object"
+      }
+    },
+    "implementation_sequence": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object"
+      }
+    },
+    "approval_gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_validation_paths",
+    "decision_summary",
+    "runtime_recommendations",
+    "implementation_sequence",
+    "approval_gates",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

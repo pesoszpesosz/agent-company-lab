@@ -1,0 +1,216 @@
+{
+  "schema_version": "agent_company.pydantic_durable_adapter_manifest_fixture.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-pydantic-durable-adapter-manifest-fixture-v1-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_urls": [
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/overview/",
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/temporal/",
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/dbos/",
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/prefect/",
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/restate/",
+    "https://pydantic.dev/docs/ai/guides/testing/",
+    "https://pydantic.dev/docs/ai/api/models/test/",
+    "https://pydantic.dev/docs/ai/api/models/function/",
+    "https://pydantic.dev/docs/ai/core-concepts/capabilities/",
+    "https://pydantic.dev/docs/ai/api/pydantic-ai/toolsets/"
+  ],
+  "source_dbos_boundary_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-validation-20260617.json",
+  "source_pydantic_local_manifest_path": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-worker-manifest-20260615.json",
+  "adapter_policy": {
+    "supported_reference_backends": [
+      "temporal",
+      "dbos",
+      "prefect",
+      "restate"
+    ],
+    "allowed_model_modes": [
+      "TestModel",
+      "FunctionModel"
+    ],
+    "forbidden_model_modes": [
+      "openai",
+      "anthropic",
+      "google",
+      "xai",
+      "bedrock",
+      "real_provider"
+    ],
+    "allow_model_requests": false,
+    "allow_model_api_calls": false,
+    "allow_pydantic_import_in_fixture": false,
+    "allow_durable_backend_import": false,
+    "allow_runtime_start": false,
+    "allow_mcp_server_start": false,
+    "require_static_toolset_ids_for_durable_backends": true,
+    "dynamic_toolsets_with_get_toolset_supported": false,
+    "real_mode_service_request_required": "req-pydantic-ai-model-backed-adapter-20260614"
+  },
+  "manifest_cases": [
+    {
+      "case_id": "case-valid-temporal-testmodel-static-tools",
+      "backend": "temporal",
+      "model_mode": "TestModel",
+      "allow_model_requests": false,
+      "model_api_call_requested": false,
+      "durable_backend_imported": false,
+      "runtime_started": false,
+      "mcp_server_started": false,
+      "toolsets": [
+        {
+          "toolset_id": "lane_context_reader",
+          "registration": "static",
+          "uses_get_toolset": false
+        }
+      ],
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-valid-dbos-functionmodel-static-tools",
+      "backend": "dbos",
+      "model_mode": "FunctionModel",
+      "allow_model_requests": false,
+      "model_api_call_requested": false,
+      "durable_backend_imported": false,
+      "runtime_started": false,
+      "mcp_server_started": false,
+      "toolsets": [
+        {
+          "toolset_id": "service_request_packet_reader",
+          "registration": "static",
+          "uses_get_toolset": false
+        }
+      ],
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-valid-prefect-testmodel-no-runtime",
+      "backend": "prefect",
+      "model_mode": "TestModel",
+      "allow_model_requests": false,
+      "model_api_call_requested": false,
+      "durable_backend_imported": false,
+      "runtime_started": false,
+      "mcp_server_started": false,
+      "toolsets": [
+        {
+          "toolset_id": "source_spec_reader",
+          "registration": "static",
+          "uses_get_toolset": false
+        }
+      ],
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-valid-restate-functionmodel-no-server",
+      "backend": "restate",
+      "model_mode": "FunctionModel",
+      "allow_model_requests": false,
+      "model_api_call_requested": false,
+      "durable_backend_imported": false,
+      "runtime_started": false,
+      "mcp_server_started": false,
+      "toolsets": [
+        {
+          "toolset_id": "central_outbox_reader",
+          "registration": "static",
+          "uses_get_toolset": false
+        }
+      ],
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-invalid-real-provider-openai",
+      "backend": "dbos",
+      "model_mode": "openai:gpt-5.2",
+      "allow_model_requests": true,
+      "model_api_call_requested": true,
+      "durable_backend_imported": false,
+      "runtime_started": false,
+      "mcp_server_started": false,
+      "toolsets": [
+        {
+          "toolset_id": "lane_context_reader",
+          "registration": "static",
+          "uses_get_toolset": false
+        }
+      ],
+      "expected_decision": "reject_real_model_without_service_request",
+      "expected_failures": [
+        "model_api_call_requested",
+        "model_requests_not_blocked",
+        "model_mode_not_allowed"
+      ]
+    },
+    {
+      "case_id": "case-invalid-dynamic-toolset-no-id",
+      "backend": "temporal",
+      "model_mode": "TestModel",
+      "allow_model_requests": false,
+      "model_api_call_requested": false,
+      "durable_backend_imported": false,
+      "runtime_started": false,
+      "mcp_server_started": false,
+      "toolsets": [
+        {
+          "toolset_id": "",
+          "registration": "dynamic",
+          "uses_get_toolset": true
+        }
+      ],
+      "expected_decision": "reject_durable_toolset_without_static_id",
+      "expected_failures": [
+        "dynamic_toolset_with_get_toolset_not_supported",
+        "toolset_id_missing"
+      ]
+    },
+    {
+      "case_id": "case-invalid-runtime-and-mcp-start",
+      "backend": "restate",
+      "model_mode": "FunctionModel",
+      "allow_model_requests": false,
+      "model_api_call_requested": false,
+      "durable_backend_imported": true,
+      "runtime_started": true,
+      "mcp_server_started": true,
+      "toolsets": [
+        {
+          "toolset_id": "remote_mcp_bridge",
+          "registration": "static",
+          "uses_get_toolset": false
+        }
+      ],
+      "expected_decision": "reject_runtime_or_mcp_start",
+      "expected_failures": [
+        "durable_backend_imported",
+        "mcp_server_started",
+        "runtime_started"
+      ]
+    }
+  ],
+  "runtime_boundary": {
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "pydantic_ai_imports": 0,
+    "durable_backend_imports": 0,
+    "agent_runs": 0,
+    "test_model_runs": 0,
+    "function_model_runs": 0,
+    "model_api_calls": false,
+    "model_requests_allowed": false,
+    "mcp_servers_started": 0,
+    "runtime_starts": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "next_local_test": "prefect_flow_manifest_for_local_source_refresh_without_runtime_start"
+}

@@ -1,0 +1,76 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-proof-cache-expand-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Made the Path Map Proof Cache progressively expandable so operators can reveal more artifact-preview cards in-place without overwhelming the first scan.",
+  "design_research": {
+    "queries": [
+      "progressive disclosure show more cards dashboard UX pattern",
+      "load more cards dashboard progressive disclosure UX",
+      "expandable activity feed show more items UX"
+    ],
+    "source_urls": [
+      "https://uxpatterns.dev/patterns/navigation/load-more",
+      "https://ixdf.org/literature/topics/progressive-disclosure",
+      "https://www.nngroup.com/articles/progressive-disclosure/",
+      "https://ui-patterns.com/patterns/ProgressiveDisclosure",
+      "https://www.patternfly.org/components/expandable-section/design-guidelines"
+    ],
+    "pattern_notes": [
+      "Load More gives operators explicit control over progressive exploration instead of forcing endless content.",
+      "Progressive disclosure keeps the first scan compact while allowing deeper review on request.",
+      "Expandable sections should preserve context and remove or update the control when all content is visible."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-proof-cache-expand-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail[].artifactPreview",
+      "browser-only state.proofLimitByLane",
+      "existing Event Proof lens"
+    ],
+    "ui_contract": [
+      "Default the Proof Cache to three cards per lane.",
+      "Reveal three additional proof cards per click using browser-local state only.",
+      "Show visible proof count against total proof-preview count.",
+      "Keep Proof Cache cards clickable into the existing Event Proof lens.",
+      "Keep the reveal action responsive inside the Path Map bottom grid."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-proof-expand-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, Proof Cache showed 3 cards, no data-expand-proof-cache control, and no Reveal more proof text."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-proof-expand-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Proof Cache started at 3 of 38 previews visible, revealed to 6 of 38 after one click, and an expanded proof card updated Event Proof to Digital products local post-polish readiness with 4 preview lines."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports revealed to 6 proof cards, updated Event Proof after selecting an expanded card, kept document width equal to viewport width, and reported no bad rectangles, console errors, or failed requests."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "metadata_json": "passed",
+      "http_status": 200
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_six_sources",
+      "passed": true
+    },
+    {
+      "name": "route_has_promising_and_gated_reasons",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_four_product_fit_routes",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_ten_launch_gates",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_six_next_local_artifacts",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_eight_hard_kill_reasons",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_terms_or_payout_accepted",
+      "passed": true
+    },
+    {
+      "name": "no_product_or_storefront_created",
+      "passed": true
+    },
+    {
+      "name": "no_checkout_or_payments",
+      "passed": true
+    },
+    {
+      "name": "no_api_or_customer_data",
+      "passed": true
+    },
+    {
+      "name": "no_public_action",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T07:06:11Z",
+  "schema_version": "lemon_squeezy_route_decision_local_proof.validation.v1",
+  "task_id": "task-lane-scout-lemon_squeezy_digital_products-20260618"
+}

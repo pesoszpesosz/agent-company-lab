@@ -1,0 +1,101 @@
+{
+  "traceId": "trace-agent-company-atlas-path-stage-signal-weather-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-stage-signal-weather-v1-20260618",
+  "eventId": "trace-atlas_path_stage_signal_weather_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-stage-signal-weather-trace-metadata-20260618",
+  "title": "Path Stage Signal Weather",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "ownerAgentId": "recovered-profitable-edge-infra",
+  "problem": "The bounded Path cockpit had richer stage art, but its motion still read too much like generic ambience. The Path view needed compact, premium animation that communicates blockers, proof, active work, and notes without adding scroll or another panel.",
+  "implementation": [
+    "Added pathStageWeatherSignals to convert lane blockers, proof, active work, and notes into a capped set of deterministic cockpit particles.",
+    "Mounted renderPathStageSignalWeather behind the Path board panels so the first viewport feels alive without changing the stage height.",
+    "Styled gate, proof, work, and note signals with subtle drift, readable micro-labels, blend-mode glow, and reduced-motion fallback.",
+    "Updated docs, cache tags, and regression coverage."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_stage_signal_weather.py"
+  ],
+  "browserEvidence": {
+    "desktop": {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "bodyDeck": "command",
+      "bodyDetail": "path",
+      "signalCount": 7,
+      "signalClasses": [
+        "path-stage-signal gate",
+        "path-stage-signal gate",
+        "path-stage-signal proof",
+        "path-stage-signal proof",
+        "path-stage-signal proof",
+        "path-stage-signal work",
+        "path-stage-signal work"
+      ],
+      "overflowX": 0,
+      "boardRect": {
+        "top": 163,
+        "width": 1195,
+        "height": 434
+      },
+      "weatherRect": {
+        "width": 1173,
+        "height": 412
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "bodyDeck": "command",
+      "bodyDetail": "path",
+      "signalCount": 7,
+      "overflowX": 0,
+      "boardRect": {
+        "top": 195,
+        "width": 306,
+        "height": 562
+      },
+      "weatherRect": {
+        "width": 284,
+        "height": 540
+      }
+    }
+  },
+  "verification": [
+    {
+      "type": "red-test",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_signal_weather.py -q",
+      "result": "failed before integration because the signal-weather generator, renderer, styles, README, and cache tags were not present"
+    },
+    {
+      "type": "focused-tests",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_signal_weather.py -q",
+      "result": "1 passed"
+    },
+    {
+      "type": "syntax",
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "passed"
+    },
+    {
+      "type": "full-suite",
+      "command": "python -m pytest E:\\agent-company-lab -q",
+      "result": "111 passed"
+    },
+    {
+      "type": "browser",
+      "command": "In-app browser verification on command/path route at 1280x900 and 390x844",
+      "result": "Path board visible, signal layer rendered, and horizontal overflow remained 0 on both viewports"
+    }
+  ],
+  "nextAction": "Continue replacing decorative motion with meaningful lane-state animation while tightening the Path cockpit into a premium no-scroll command surface."
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "before_support_costs_usd": 7.15,
+    "extra_payment_refund_support_reserve_usd": 0.9,
+    "lemon_squeezy_public_ecommerce_fee_estimate_usd": 0.95,
+    "margin_ratio_before_support": 0.7944,
+    "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+    "price_usd": 9
+  },
+  {
+    "before_support_costs_usd": 15.65,
+    "extra_payment_refund_support_reserve_usd": 1.9,
+    "lemon_squeezy_public_ecommerce_fee_estimate_usd": 1.45,
+    "margin_ratio_before_support": 0.8237,
+    "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+    "price_usd": 19
+  },
+  {
+    "before_support_costs_usd": 24.15,
+    "extra_payment_refund_support_reserve_usd": 2.9,
+    "lemon_squeezy_public_ecommerce_fee_estimate_usd": 1.95,
+    "margin_ratio_before_support": 0.8328,
+    "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+    "price_usd": 29
+  },
+  {
+    "before_support_costs_usd": 41.15,
+    "extra_payment_refund_support_reserve_usd": 4.9,
+    "lemon_squeezy_public_ecommerce_fee_estimate_usd": 2.95,
+    "margin_ratio_before_support": 0.8398,
+    "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+    "price_usd": 49
+  }
+]

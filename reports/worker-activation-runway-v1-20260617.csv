@@ -1,0 +1,8 @@
+worker_pool_id,current_request_count,current_review_route,best_next_evidence,activation_status,reason
+service-worker-local-runtime-adapter-pool,2,manual_review_register_later,identity envelope draft plus operator decision contract,closest_to_local_pilot,Local-only boundary reduces external risk and supports infrastructure verification
+service-worker-browser-read-only-pool,7,manual_review_register_later,identity envelope draft plus browser scope plus recording teardown policy,high_value_blocked,Highest request count but browser domain session policy is missing
+service-worker-model-api-execution-pool,1,manual_review_register_later,identity envelope draft plus egress ledger plus provider model cost scope,blocked_cost_and_api,Model/API calls need explicit cost provider input and output artifact scope
+service-worker-public-submission-review-pool,1,manual_review_register_later,CRO reputation gate plus public-action scope,blocked_public_action,Public action authority cannot be inferred from registration review
+service-worker-legal-kyc-payment-review-pool,1,manual_review_register_later,CRO legal payment scope,blocked_legal_payment,Legal KYC tax payment commitments require explicit user/CRO approval
+service-worker-signed-in-browser-read-only-pool,1,manual_review_hold,signed-in browser safety packet,hold,Signed-in browser state is higher risk than read-only browser research
+service-worker-other-gated-work-pool,1,manual_review_hold,narrower request-type definition,hold,Request type is too broad to activate safely

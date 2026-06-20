@@ -1,0 +1,130 @@
+{
+  "account_boundary": {
+    "login_allowed": false,
+    "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+    "settings_change_allowed": false,
+    "signup_allowed": false,
+    "terms_acceptance_allowed": false
+  },
+  "account_or_identity_action_allowed": false,
+  "allowed_actions": [
+    "retain local audit record",
+    "do not execute or reopen without a new service request"
+  ],
+  "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+  "approval_status_snapshot": "rejected",
+  "created_utc": "2026-06-14T21:59:06Z",
+  "credential_boundary": {
+    "credentials_allowed": false,
+    "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+    "otp_allowed": false,
+    "private_data_allowed": false
+  },
+  "data_boundary": {
+    "allowed_data_types": [
+      "local artifact references",
+      "public source URLs",
+      "page titles",
+      "short factual excerpts within copyright limits",
+      "local notes",
+      "approval and risk metadata"
+    ],
+    "allowed_hosts": [],
+    "disallowed_data_types": [
+      "credentials",
+      "OTP",
+      "payment details",
+      "tax/KYC data",
+      "wallet data",
+      "private files",
+      "non-public account data",
+      "unapproved signed-in content"
+    ],
+    "starting_urls": []
+  },
+  "execution_plan_path": "E:\\agent-company-lab\\reports\\service-catalog-latest.md",
+  "expected_output_artifacts": [
+    {
+      "kind": "service_worker_result_placeholder",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-service-intake-valid-20260614-result-placeholder.md",
+      "required": false
+    }
+  ],
+  "external_side_effects_allowed": false,
+  "input_artifacts": [
+    {
+      "kind": "source_service_request_artifact",
+      "path_or_url": "E:\\agent-company-lab\\reports\\service-catalog-latest.md",
+      "required": true
+    }
+  ],
+  "max_cost_usd": 0,
+  "metadata": {
+    "api_calls": false,
+    "approval_granted_by_this_artifact": false,
+    "assigned_agent_id": null,
+    "backfilled_from_service_requests_table": true,
+    "browser_opened": false,
+    "decision_note": "Validator positive-path test completed; no external action required or allowed.",
+    "external_side_effects": false
+  },
+  "model_or_api_cost_allowed": false,
+  "money_boundary": {
+    "deposit_allowed": false,
+    "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+    "payment_method_allowed": false,
+    "purchase_allowed": false,
+    "trade_allowed": false,
+    "wallet_signature_allowed": false,
+    "withdrawal_allowed": false
+  },
+  "objective": "Represent gated service request req-test-service-intake-valid-20260614 as a local service-worker queue row only; do not execute external side effects.",
+  "prohibited_actions": [
+    "execute without explicit approval",
+    "login unless explicitly approved",
+    "signup or account creation",
+    "accept terms or legal agreements",
+    "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+    "submit forms",
+    "publish, post, reply, comment, message, list, upload, or contact external parties",
+    "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+    "change account settings",
+    "bypass paywalls, rate limits, access controls, or platform rules"
+  ],
+  "public_action_allowed": false,
+  "public_action_boundary": {
+    "comment_allowed": false,
+    "issue_or_pr_allowed": false,
+    "marketplace_listing_allowed": false,
+    "message_allowed": false,
+    "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+    "post_allowed": false,
+    "submission_allowed": false
+  },
+  "real_money_allowed": false,
+  "replay_policy": {
+    "idempotency_key": "req-test-service-intake-valid-20260614:other_gated_worker:test_validator_no_external_action",
+    "replay_requires_new_approval_when": [
+      "any execution would occur",
+      "status is not approved or assigned",
+      "scope, risk gate, target, or worker type changes",
+      "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+    ],
+    "safe_to_replay_without_reapproval": false
+  },
+  "requesting_agent_id": "unassigned_requester_or_lane_manager",
+  "requesting_lane_id": "platform_engineering",
+  "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-service-intake-valid-20260614-result-placeholder.md",
+  "risk_gate": "test_validator_no_external_action",
+  "schema_version": "service_worker_request.v1",
+  "service_id": "real_money_trade_gate",
+  "source_service_request_id": "req-test-service-intake-valid-20260614",
+  "status": "rejected",
+  "stop_conditions": [
+    "service request status is not approved or assigned",
+    "requested action exceeds approval scope",
+    "required artifact/source is missing or ambiguous"
+  ],
+  "worker_request_id": "swr-test-service-intake-valid-20260614",
+  "worker_type": "other_gated_worker"
+}

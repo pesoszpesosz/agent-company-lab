@@ -1,0 +1,202 @@
+{
+  "schema_version": "agent_company.control_plane_scaling_radar_wave22.v1",
+  "generated_utc": "2026-06-18T03:11:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-control-plane-scaling-radar-wave22-20260618",
+  "purpose": "Evaluate current durable queue, workflow, and supervisor-control systems for scaling the local Agent Company control plane without enabling live workers.",
+  "recommended_next_build": "control_plane_scaling_decision_matrix_v1",
+  "source_count": 12,
+  "official_docs_count": 4,
+  "github_repo_count": 8,
+  "sources": [
+    {
+      "id": "temporal_message_passing",
+      "name": "Temporal workflow message passing",
+      "url": "https://docs.temporal.io/encyclopedia/workflow-message-passing",
+      "source_type": "official_docs",
+      "pattern": "Signals, Queries, and Updates split asynchronous writes, read-only inspection, and tracked read/write messages.",
+      "agent_company_fit": "Strong later fit for long-lived lane/service workflows, but only after local signed decisions and dry-run packet contracts are complete.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "hatchet_concurrency",
+      "name": "Hatchet concurrency control",
+      "url": "https://docs.hatchet.run/v1/concurrency",
+      "source_type": "official_docs",
+      "pattern": "Concurrency policies queue excess runs until resources are available.",
+      "agent_company_fit": "Useful for service-worker pool fairness and per-lane caps, but live workers remain blocked until human-approved service routes exist.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "trigger_queue_concurrency",
+      "name": "Trigger.dev queues and concurrency",
+      "url": "https://trigger.dev/docs/queue-concurrency",
+      "source_type": "official_docs",
+      "pattern": "Queues, concurrency limits, and waitpoints can checkpoint waiting parent tasks.",
+      "agent_company_fit": "Useful model for human approvals and non-deadlocking waits; first local adoption should be a decision matrix, not Trigger runtime execution.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "dbos_durable_workflows",
+      "name": "DBOS durable workflows",
+      "url": "https://docs.dbos.dev/python/tutorials/workflow-tutorial",
+      "source_type": "official_docs",
+      "pattern": "Workflow functions and steps provide durable execution for fault-tolerant background tasks.",
+      "agent_company_fit": "Closest conceptual match to local SQLite/Postgres-backed company ledger; evaluate as a migration path after packet and outbox contracts are stable.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "temporal_repo",
+      "name": "temporalio/temporal",
+      "url": "https://github.com/temporalio/temporal",
+      "source_type": "github_repo",
+      "github_stars": 21032,
+      "github_forks": 1667,
+      "github_open_issues": 771,
+      "github_pushed_at": "2026-06-18T02:00:50Z",
+      "license": "MIT",
+      "agent_company_fit": "Mature durable execution service for future production-scale service-worker workflows.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "hatchet_repo",
+      "name": "hatchet-dev/hatchet",
+      "url": "https://github.com/hatchet-dev/hatchet",
+      "source_type": "github_repo",
+      "github_stars": 7383,
+      "github_forks": 420,
+      "github_open_issues": 132,
+      "github_pushed_at": "2026-06-17T19:55:20Z",
+      "license": "MIT",
+      "agent_company_fit": "Queue and workflow engine with strong fit for worker-pool caps and AI-agent background tasks.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "dbos_repo",
+      "name": "dbos-inc/dbos-transact-py",
+      "url": "https://github.com/dbos-inc/dbos-transact-py",
+      "source_type": "github_repo",
+      "github_stars": 1425,
+      "github_forks": 71,
+      "github_open_issues": 3,
+      "github_pushed_at": "2026-06-17T21:39:17Z",
+      "license": "MIT",
+      "agent_company_fit": "Good candidate for a database-first durable adapter because the lab already treats SQLite as source of truth.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "trigger_repo",
+      "name": "triggerdotdev/trigger.dev",
+      "url": "https://github.com/triggerdotdev/trigger.dev",
+      "source_type": "github_repo",
+      "github_stars": 15380,
+      "github_forks": 1305,
+      "github_open_issues": 361,
+      "github_pushed_at": "2026-06-17T19:02:03Z",
+      "license": "Apache-2.0",
+      "agent_company_fit": "Strong hosted/managed task orchestration pattern for AI workflows; too side-effect-capable for immediate autonomous use.",
+      "adoption_disposition": "adapter_later"
+    },
+    {
+      "id": "restate_repo",
+      "name": "restatedev/restate",
+      "url": "https://github.com/restatedev/restate",
+      "source_type": "github_repo",
+      "github_stars": 4021,
+      "github_forks": 170,
+      "github_open_issues": 372,
+      "github_pushed_at": "2026-06-17T18:08:53Z",
+      "license": "NOASSERTION",
+      "agent_company_fit": "Good model for fault-tolerant services and durable RPC, but not first adoption because the lab needs inbox and decision packet contracts first.",
+      "adoption_disposition": "watch_later"
+    },
+    {
+      "id": "prefect_repo",
+      "name": "PrefectHQ/prefect",
+      "url": "https://github.com/PrefectHQ/prefect",
+      "source_type": "github_repo",
+      "github_stars": 22633,
+      "github_forks": 2341,
+      "github_open_issues": 834,
+      "github_pushed_at": "2026-06-18T01:06:19Z",
+      "license": "Apache-2.0",
+      "agent_company_fit": "Useful for data/source refresh flows; less directly suited to approval-heavy service-worker gating than Temporal/Hatchet/DBOS.",
+      "adoption_disposition": "watch_later"
+    },
+    {
+      "id": "dagster_repo",
+      "name": "dagster-io/dagster",
+      "url": "https://github.com/dagster-io/dagster",
+      "source_type": "github_repo",
+      "github_stars": 15713,
+      "github_forks": 2162,
+      "github_open_issues": 2650,
+      "github_pushed_at": "2026-06-17T19:10:02Z",
+      "license": "Apache-2.0",
+      "agent_company_fit": "Strong for data asset orchestration and observability; not first pick for agent-worker approvals.",
+      "adoption_disposition": "watch_later"
+    },
+    {
+      "id": "langgraph_repo",
+      "name": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "source_type": "github_repo",
+      "github_stars": 35076,
+      "github_forks": 5873,
+      "github_open_issues": 590,
+      "github_pushed_at": "2026-06-17T20:45:03Z",
+      "license": "MIT",
+      "agent_company_fit": "Best fit for agent-state graphs and human interrupts after local packet contracts mature.",
+      "adoption_disposition": "adapter_later"
+    }
+  ],
+  "decision_matrix_seed": [
+    {
+      "capability": "durable_lane_workflow",
+      "keep_local_now": "SQLite task/outcome/trace ledgers remain source of truth.",
+      "adapter_later": "Temporal or DBOS",
+      "first_gate": "Signed runtime-adapter implementation approval plus zero-side-effect dry run."
+    },
+    {
+      "capability": "service_worker_pool_queue",
+      "keep_local_now": "Report-only service-worker queue, assignment plan, pool registry, and gate map.",
+      "adapter_later": "Hatchet or Trigger.dev",
+      "first_gate": "Human-approved service request, worker-pool registration, readiness pass, and apply-command contract."
+    },
+    {
+      "capability": "human_supervisor_inbox",
+      "keep_local_now": "CEO/manager inbox packets and static dashboard views only.",
+      "adapter_later": "LangGraph Agent Inbox or custom local web dashboard",
+      "first_gate": "Explicit ceo_manager_inbox_packet_v1 design approval."
+    },
+    {
+      "capability": "source_refresh_data_jobs",
+      "keep_local_now": "Source-spec registry and report-only freshness scheduler.",
+      "adapter_later": "Prefect or Dagster",
+      "first_gate": "Per-source browser/API/public-action gate and cost/data policy."
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "github_metadata_reads": 8,
+    "web_docs_reads": 4,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "workflow_engines_started": 0,
+    "queues_created": 0,
+    "workers_started": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tasks_created_by_report": 0,
+    "tasks_updated_by_report": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "public_actions": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build control_plane_scaling_decision_matrix_v1 as a report-only matrix that ranks Temporal, DBOS, Hatchet, Trigger.dev, LangGraph, Prefect, Dagster, and Restate for each Agent Company capability without installing dependencies, creating queues, starting runtimes, mutating service requests, or performing external actions."
+}

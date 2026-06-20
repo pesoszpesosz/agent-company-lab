@@ -1,0 +1,25 @@
+{
+  "schema_version": "agent_company.optimism_single_asset_candidate_packet_report.v1",
+  "generated_utc": "2026-06-17T22:00:11Z",
+  "task_id": "task-optimism-single-asset-candidate-packet-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "title": "Optimism Single-Asset Candidate Packet v1",
+  "selected_asset": "OptimismPortal / OptimismPortal2",
+  "selected_asset_id": "optimism-sc-005",
+  "selected_filter_id": "olf-001",
+  "route": "local_review_allowed_quality_gate_required",
+  "why_this_asset": [
+    "OptimismPortal is an in-scope smart-contract asset.",
+    "It is the primary OP Stack deposit and withdrawal interface.",
+    "It exposes local-only reviewable invariants around withdrawal proof, finalization, replay protection, target safety, l2Sender handling, and ETHLockbox accounting.",
+    "It has a known public direct-implementation stranded-funds edge case, so duplicate control is mandatory before any related idea moves forward."
+  ],
+  "invariant_count": 10,
+  "recommended_first_invariants": [
+    "opi-007 l2Sender guard and reset",
+    "opi-008 ETHLockbox accounting on failed withdrawal target call"
+  ],
+  "not_a_finding": true,
+  "submission_ready_count": 0,
+  "next_action": "Write optimism_portal_invariant_memo_v1 for exactly one invariant group; do not run fork tests, live tests, browser work, or submissions."
+}

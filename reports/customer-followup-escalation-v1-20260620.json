@@ -1,0 +1,133 @@
+{
+  "escalation_items": [
+    {
+      "age_minutes": 159,
+      "current_next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
+      "lane_id": "ai_resources_lab",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_claim_or_start_lane_task_from_escalation",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_or_payment_action",
+        "do_not_duplicate_lane_manager_work"
+      ],
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 91,
+      "recommended_action": "Ask AI Resources to decide whether to reuse the lane manager, evolve one existing agent, or route to CEO decision batch.",
+      "target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
+      "task_status": "new"
+    },
+    {
+      "age_minutes": 159,
+      "current_next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
+      "lane_id": "ai_ml_competitions",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_claim_or_start_lane_task_from_escalation",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_or_payment_action",
+        "do_not_duplicate_lane_manager_work"
+      ],
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "priority": 76,
+      "recommended_action": "Ask AI Resources to decide whether to reuse the lane manager, evolve one existing agent, or route to CEO decision batch.",
+      "target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+      "task_status": "new"
+    },
+    {
+      "age_minutes": 159,
+      "current_next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
+      "lane_id": "money_source_discovery",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_claim_or_start_lane_task_from_escalation",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_or_payment_action",
+        "do_not_duplicate_lane_manager_work"
+      ],
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "priority": 76,
+      "recommended_action": "Ask AI Resources to decide whether to reuse the lane manager, evolve one existing agent, or route to CEO decision batch.",
+      "target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery",
+      "task_status": "new"
+    },
+    {
+      "age_minutes": 159,
+      "current_next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "lane_id": "paid_code_bounties",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_claim_or_start_lane_task_from_escalation",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_or_payment_action",
+        "do_not_duplicate_lane_manager_work"
+      ],
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 76,
+      "recommended_action": "Ask AI Resources to decide whether to reuse the lane manager, evolve one existing agent, or route to CEO decision batch.",
+      "target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "task_status": "new"
+    },
+    {
+      "age_minutes": 159,
+      "current_next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
+      "lane_id": "prediction_market_research",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_claim_or_start_lane_task_from_escalation",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_or_payment_action",
+        "do_not_duplicate_lane_manager_work"
+      ],
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "priority": 76,
+      "recommended_action": "Ask AI Resources to decide whether to reuse the lane manager, evolve one existing agent, or route to CEO decision batch.",
+      "target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+      "task_status": "new"
+    },
+    {
+      "age_minutes": 159,
+      "current_next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "lane_id": "youtube_content_channels",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_claim_or_start_lane_task_from_escalation",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_or_payment_action",
+        "do_not_duplicate_lane_manager_work"
+      ],
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "priority": 76,
+      "recommended_action": "Ask AI Resources to decide whether to reuse the lane manager, evolve one existing agent, or route to CEO decision batch.",
+      "target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "task_status": "new"
+    }
+  ],
+  "escalation_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab",
+  "generated_utc": "2026-06-20T20:57:36Z",
+  "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+  "json_path": "E:\\agent-company-lab\\reports\\customer-followup-escalation-v1-20260620.json",
+  "md_path": "E:\\agent-company-lab\\reports\\customer-followup-escalation-v1-20260620.md",
+  "monitor_report_path": "reports\\customer-followup-monitor-v1-20260620.json",
+  "next_action": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
+  "schema_version": "premium_customer_followup_escalation.v1",
+  "status": "escalation_needed",
+  "summary": "6 follow-up tasks from monitor `reports\\customer-followup-monitor-v1-20260620.json` require controlled triage.",
+  "target_surface": "ai_resources_lab",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

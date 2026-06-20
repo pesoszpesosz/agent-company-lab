@@ -1,0 +1,69 @@
+{
+  "approval_required": true,
+  "decision_granted": false,
+  "decision_rejected": false,
+  "exact_decision_prompt": "Approve only a read-only browser refresh for the five scope items, or reject/keep parked. This packet does not grant approval by itself.",
+  "forbidden_action_count": 6,
+  "forbidden_actions": [
+    "Do not sign in, register, accept terms, or change account settings.",
+    "Do not claim a bounty, comment, open a PR, fork for submission, contact maintainers, or make any public action.",
+    "Do not upload files, download gated/private data, or disclose private/user data.",
+    "Do not perform security testing, exploit validation, scanning, fuzzing, or proof-of-concept execution.",
+    "Do not touch wallets, payments, payout settings, KYC, tax forms, deposits, withdrawals, or real-money flows.",
+    "Do not call model/API providers, assign service workers, start workers, or mutate service requests from this packet."
+  ],
+  "generated_utc": "2026-06-15T20:55:45Z",
+  "next_action": "Human/CRO may approve, reject, or keep parked. If approved later, rerun service-worker scope diff, assignment, readiness, and chain integrity before any worker starts.",
+  "recommended_local_decision": "no_live_claim_without_refresh_gate",
+  "request_artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\packet.md",
+  "request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+  "request_lane_id": "paid_code_bounties",
+  "request_status": "needs_review",
+  "request_type": "browser_research",
+  "risk_gate": "catalog_required_approval_no_external_action",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.paid_code_browser_refresh_decision_packet.v1",
+  "scope_item_count": 5,
+  "scope_items": [
+    {
+      "description": "Read the target issue/bounty page to confirm whether it is open and still accepting new work.",
+      "scope_id": "issue-open-state"
+    },
+    {
+      "description": "Read comments, linked PRs, and claim indicators to detect active or accepted duplicate work.",
+      "scope_id": "claim-and-pr-state"
+    },
+    {
+      "description": "Read visible bounty terms, payout wording, attribution requirements, and account/payment caveats without accepting anything.",
+      "scope_id": "bounty-terms-snapshot"
+    },
+    {
+      "description": "Read public repo metadata, language/tooling hints, test/build docs, and recent activity to estimate local effort.",
+      "scope_id": "repo-readiness-snapshot"
+    },
+    {
+      "description": "Write a local refresh outcome note that updates go/no-go status; do not claim, comment, fork, or submit.",
+      "scope_id": "refresh-outcome-note"
+    }
+  ],
+  "service_id": "browser_read_only_session",
+  "source_answers_evidence_id": "paid-code-local-worksheet-answers-20260615",
+  "source_answers_path": "E:\\agent-company-lab\\reports\\paid-code-local-worksheet-answers-latest.json",
+  "source_answers_task_id": "task-paid-code-local-worksheet-answers-20260615",
+  "task_rows_inserted_by_packet": 0,
+  "tasks_table_rows_after": 149,
+  "tasks_table_rows_before": 149
+}

@@ -1,0 +1,9 @@
+{
+  "span_kind": "agent",
+  "runtime": "codex_desktop",
+  "api_calls": false,
+  "browser_actions": false,
+  "service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+  "service_request_status": "needs_review",
+  "realized_usd": 0
+}

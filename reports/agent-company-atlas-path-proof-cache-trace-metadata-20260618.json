@@ -1,0 +1,75 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-proof-cache-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Path Map Proof Cache card that surfaces recent artifactPreview-enabled trail events and lets operators jump the Event Proof lens directly to a proof artifact.",
+  "design_research": {
+    "queries": [
+      "document preview in activity feed dashboard UX pattern",
+      "artifact preview detail panel dashboard UX",
+      "inline document preview master detail dashboard UI"
+    ],
+    "source_urls": [
+      "https://cloudscape.design/gen-ai/patterns/artifact-previews/",
+      "https://dribbble.com/search/activity-feed-ui",
+      "https://dribbble.com/search/master-detail-view",
+      "https://vaadin.com/docs/latest/components/master-detail-layout",
+      "https://www.untitledui.com/components/activity-feeds"
+    ],
+    "pattern_notes": [
+      "A proof cache gives operators a scan-first summary before opening deeper detail.",
+      "Preview cards should be compact and clickable into the existing detail surface.",
+      "Master-detail systems work better when summary cards and detail lenses share the same selected-record state."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-proof-cache-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail[].artifactPreview",
+      "browser-only state.pathEventFocusByLane",
+      "existing Event Proof lens"
+    ],
+    "ui_contract": [
+      "Render up to three recent proof artifacts from artifactPreview-enabled lane trail events.",
+      "Use the existing data-path-event-focus path so Proof Cache cards update Node Intel's Event Proof lens.",
+      "Show proof artifact labels and first preview lines without adding a new schema or browser file reads.",
+      "Keep the cache responsive inside the Path Map bottom grid."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-proof-cache-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, .path-proof-cache was absent, .path-proof-item count was 0, and Proof Cache text was absent while Event Proof previews existed."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-proof-cache-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "The Path Map rendered a Proof Cache with 3 artifact cards. Clicking the first card updated the Event Proof lens to Digital products local gated hold register with 4 preview lines and no browser errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports rendered 3 proof cards, updated the Event Proof lens after a proof click, kept document width equal to viewport width, and reported no bad rectangles, console errors, or failed requests."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "metadata_json": "passed",
+      "http_status": 200
+    }
+  }
+}

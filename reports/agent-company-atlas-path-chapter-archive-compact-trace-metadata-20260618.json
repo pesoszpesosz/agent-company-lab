@@ -1,0 +1,35 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-archive-compact-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-archive-compact-v1-20260618",
+  "event_type": "atlas_path_chapter_archive_compacted",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Converted Path Map Chapter Archive from always-open deep dossier rendering into a compact level-cluster surface with explicit selected-chapter expansion and collapse.",
+  "changes": [
+    "Added pathChapterArchiveExpandedByLane state and pathChapterArchiveExpanded helper.",
+    "Added renderPathChapterLevelClusters for horizontal chapter level selection.",
+    "Hid the old chapter-card grid and kept chapter focus through the new cluster rail.",
+    "Moved selected-chapter dossier rendering behind an explicit Expand selected chapter dossier action.",
+    "Kept Collapse dossier near the archive summary so expanded history can be closed without hunting down the page."
+  ],
+  "verification": {
+    "node_check": "node --check web/app.js",
+    "pytest": "31 passed, 55 deselected with python -m pytest tests -q -k agent_company_atlas",
+    "browser": {
+      "mobile": {
+        "viewport": "390x820",
+        "compact_archive_height_px": 531,
+        "expanded_archive_height_px": 8236,
+        "collapsed_archive_height_px": 531,
+        "record_deck_default_rendered": false,
+        "record_deck_after_expand_rendered": true,
+        "body_overflow_x": 0
+      }
+    }
+  },
+  "next_visual_targets": [
+    "Virtualize or cluster other long Path Map modules below the archive.",
+    "Add stronger generated art and motion polish to compact level clusters.",
+    "Persist per-lane preferred compact/expanded archive state if repeated operator use shows that is useful."
+  ]
+}

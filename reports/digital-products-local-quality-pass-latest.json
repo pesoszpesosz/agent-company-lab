@@ -1,0 +1,143 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not publish, browse marketplaces, create seller accounts, accept terms, configure payouts, set prices, or claim live demand from this quality pass.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this quality pass."
+  ],
+  "generated_utc": "2026-06-19T22:04:10Z",
+  "lane_evidence_rows_after": 82,
+  "lane_evidence_rows_before": 81,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "quality_pass_complete_ready_for_local_packaging_no_public_action",
+  "next_action": "Create a local packaging manifest and README revision for the draft; keep live marketplace, listing, account, legal, and payment validation gated.",
+  "passed_check_count": 8,
+  "quality_check_count": 8,
+  "quality_checks": [
+    {
+      "check_id": "single-buyer",
+      "finding": "The draft names one buyer: a solo AI builder preparing a small product launch.",
+      "status": "pass"
+    },
+    {
+      "check_id": "practical-promise",
+      "finding": "The promise is operational: reduce missed launch steps and improve review, without income claims.",
+      "status": "pass"
+    },
+    {
+      "check_id": "specific-assets",
+      "finding": "The draft names concrete included assets: positioning template, checklist, screenshot list, QA pass, review, and README.",
+      "status": "pass"
+    },
+    {
+      "check_id": "fillable-template",
+      "finding": "The positioning template has ten filled answers and can be reused as a buyer-facing sample.",
+      "status": "pass"
+    },
+    {
+      "check_id": "checklist-coverage",
+      "finding": "The checklist covers pre-launch, gated validation, and future post-launch review phases.",
+      "status": "pass"
+    },
+    {
+      "check_id": "gate-preservation",
+      "finding": "Marketplace browsing, terms/payment review, public listing, and account/payment setup remain blocked by gates.",
+      "status": "pass"
+    },
+    {
+      "check_id": "no-live-demand-claim",
+      "finding": "Boundary notes explicitly say there is no live marketplace validation, buyer-count claim, or revenue claim.",
+      "status": "pass"
+    },
+    {
+      "check_id": "next-local-step",
+      "finding": "The next action is local packaging/quality work, not listing, pricing, seller setup, or public sale.",
+      "status": "pass"
+    }
+  ],
+  "quality_evidence_id": "digital-products-local-quality-pass-20260616",
+  "quality_lane_id": "digital_products_templates_plugins",
+  "quality_task_id": "task-digital-products-local-quality-pass-20260616",
+  "revision_item_count": 5,
+  "revision_items": [
+    {
+      "instruction": "Turn the boundary notes into a README section with scope, non-claims, gates, and how to use the pack.",
+      "priority": "high",
+      "revision_id": "add-readme-structure"
+    },
+    {
+      "instruction": "Add owner, status, due, and evidence columns to the launch checklist before packaging.",
+      "priority": "medium",
+      "revision_id": "split-checklist-columns"
+    },
+    {
+      "instruction": "Draft the screenshot shot list named in the pack so the asset set matches the promise.",
+      "priority": "medium",
+      "revision_id": "add-screenshot-shotlist"
+    },
+    {
+      "instruction": "Draft the QA pass table for links, copy, onboarding, screenshots, release notes, and boundary claims.",
+      "priority": "medium",
+      "revision_id": "add-qa-pass-table"
+    },
+    {
+      "instruction": "Create a local manifest of files that would be included if later approved for marketplace packaging.",
+      "priority": "low",
+      "revision_id": "add-local-packaging-manifest"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_quality_pass.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_draft_evidence_id": "digital-products-local-asset-draft-20260616",
+  "source_draft_task_id": "task-digital-products-local-asset-draft-20260616",
+  "source_draft_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-asset-draft-validation-latest.json",
+  "summary": "Ran a local quality pass on the AI builder launch checklist pack draft. The draft passes eight local readiness checks and has five packaging revisions to complete before any marketplace or legal/payment gate is requested.",
+  "task_rows_inserted_by_quality_pass": 1,
+  "tasks_table_rows_after": 161,
+  "tasks_table_rows_before": 160
+}

@@ -1,0 +1,397 @@
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from datetime import datetime, timezone
+from datetime import timedelta
+from pathlib import Path
+from typing import Any
+
+from agent_company_core.catalog import (
+    department_id,
+    list_evidence,
+    list_service_catalog,
+    list_source_specs,
+    seed,
+    seed_service_catalog,
+    seed_source_specs,
+    upsert_source_spec,
+    write_service_catalog_report,
+)
+from agent_company_core.control_reports import (
+    lane_recommendation,
+    list_status,
+    suggested_manager_task,
+    write_ceo_review,
+    write_company_expansion_gap_map,
+    write_dashboard,
+)
+from agent_company_core.control_plane_capacity_benchmark_runner import write_control_plane_capacity_benchmark_runner
+from agent_company_core.premium_customer_followup_escalation import write_premium_customer_followup_escalation
+from agent_company_core.premium_customer_followup_monitor import write_premium_customer_followup_monitor
+from agent_company_core.premium_customer_followup_synthesizer import write_premium_customer_followup_synthesis
+from agent_company_core.premium_customer_intake_router import write_premium_customer_input_route
+
+from agent_company_core.database import connect
+from agent_company_core.cli_durable_adapters import add_durable_adapter_commands, handle_durable_adapter_command
+from agent_company_core.cli_prompt_eval import add_prompt_eval_commands, handle_prompt_eval_command
+from agent_company_core.cli_registry_service_requests import add_registry_service_request_commands, handle_registry_service_request_command
+from agent_company_core.cli_service_workers import add_service_worker_commands, handle_service_worker_command
+from agent_company_core.cli_digital_products import add_digital_products_commands, handle_digital_products_command
+from agent_company_core.cli_ceo_decisions import add_ceo_decision_commands, handle_ceo_decision_command
+from agent_company_core.cli_agent_company_migration import add_agent_company_migration_commands, handle_agent_company_migration_command
+from agent_company_core.cli_money_paths import add_money_path_commands, handle_money_path_command
+from agent_company_core.cli_paid_code import add_paid_code_commands, handle_paid_code_command
+
+
+from agent_company_core.io import load_json, now_utc, parse_utc
+from agent_company_core.launch_packets import (
+    write_lane_thread_manifest,
+    write_launch_packets,
+    write_manager_packets,
+)
+
+
+from agent_company_core.profit_edge_import import import_profit_edge
+
+from agent_company_core.schema import init_db
+from agent_company_core.registry import record_trace_event
+from agent_company_core.reports import (
+    list_artifacts,
+    list_trace_events,
+    write_artifacts_report,
+    write_trace_report,
+)
+from agent_company_core.service_requests import write_service_request_review
+from agent_company_core.source_specs import (
+    proposed_source_spec_seed,
+    write_source_spec_seed_apply,
+    write_source_spec_seed_packets,
+    write_source_specs_report,
+)
+
+from agent_company_core.constants import *  # Transitional compatibility while CLI modules are split.
+from agent_company_core.utils import (
+    compact_text,
+    decode_json_list,
+    md_cell,
+    parse_json_arg,
+    parse_metadata_arg,
+    read_text_arg,
+    safe_id_fragment,
+    sha256_file,
+    sha256_text,
+)
+from agent_company_core.paths import (
+    DB_PATH,
+    LANE_TAXONOMY_PATH,
+    LAUNCH_DIR,
+    MANAGER_PACKET_DIR,
+    PROFIT_EDGE_ROOT,
+    REPORTS_DIR,
+    ROLE_REGISTRY_PATH,
+    ROOT,
+    SERVICE_CATALOG_PATH,
+    SOURCE_SPECS_PATH,
+)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Agent-company Phase 0 control plane")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("init")
+    sub.add_parser("seed")
+    sub.add_parser("status")
+    dashboard = sub.add_parser("write-dashboard")
+    dashboard.add_argument("--path")
+    ceo_review = sub.add_parser("write-ceo-review")
+    ceo_review.add_argument("--path")
+    company_gap_map = sub.add_parser("write-company-expansion-gap-map")
+    company_gap_map.add_argument("--path")
+    company_gap_map.add_argument("--json-path")
+    company_gap_map.add_argument("--validation-path")
+    capacity_benchmark = sub.add_parser("run-control-plane-capacity-benchmark")
+    capacity_benchmark.add_argument("--row-counts")
+    capacity_benchmark.add_argument("--run-id")
+    capacity_benchmark.add_argument("--work-dir")
+    capacity_benchmark.add_argument("--path")
+    capacity_benchmark.add_argument("--json-path")
+    capacity_benchmark.add_argument("--overwrite", action="store_true")
+    premium_customer_route = sub.add_parser("route-premium-customer-input")
+    premium_customer_route.add_argument("--input-path")
+    premium_customer_route.add_argument("--text")
+    premium_customer_route.add_argument("--text-file")
+    premium_customer_route.add_argument("--input-id")
+    premium_customer_route.add_argument("--title")
+    premium_customer_route.add_argument("--owner-agent-id")
+    premium_customer_route.add_argument("--dropbox-dir")
+    premium_customer_route.add_argument("--routes-dir")
+    premium_customer_route.add_argument("--ledger-json")
+    premium_customer_route.add_argument("--ledger-md")
+    premium_customer_route.add_argument("--update-feed-json")
+    premium_customer_route.add_argument("--update-feed-md")
+    premium_customer_route.add_argument("--overwrite", action="store_true")
+    premium_customer_route.add_argument("--no-db-record", action="store_true")
+    premium_customer_followups = sub.add_parser("synthesize-premium-customer-followups")
+    premium_customer_followups.add_argument("--route-packet", required=True)
+    premium_customer_followups.add_argument("--output-dir")
+    premium_customer_followups.add_argument("--ledger-json")
+    premium_customer_followups.add_argument("--ledger-md")
+    premium_customer_followups.add_argument("--update-feed-json")
+    premium_customer_followups.add_argument("--update-feed-md")
+    premium_customer_followups.add_argument("--no-db-record", action="store_true")
+    premium_customer_monitor = sub.add_parser("monitor-premium-customer-followups")
+    premium_customer_monitor.add_argument("--input-id")
+    premium_customer_monitor.add_argument("--stale-after-minutes", type=int, default=60)
+    premium_customer_monitor.add_argument("--now-utc")
+    premium_customer_monitor.add_argument("--path")
+    premium_customer_monitor.add_argument("--json-path")
+    premium_customer_monitor.add_argument("--ledger-json")
+    premium_customer_monitor.add_argument("--ledger-md")
+    premium_customer_monitor.add_argument("--update-feed-json")
+    premium_customer_monitor.add_argument("--update-feed-md")
+    premium_customer_monitor.add_argument("--no-db-record", action="store_true")
+    premium_customer_escalation = sub.add_parser("escalate-premium-customer-followups")
+    premium_customer_escalation.add_argument("--monitor-report", required=True)
+    premium_customer_escalation.add_argument("--target-surface", default="ai_resources_lab")
+    premium_customer_escalation.add_argument("--now-utc")
+    premium_customer_escalation.add_argument("--path")
+    premium_customer_escalation.add_argument("--json-path")
+    premium_customer_escalation.add_argument("--ledger-json")
+    premium_customer_escalation.add_argument("--ledger-md")
+    premium_customer_escalation.add_argument("--update-feed-json")
+    premium_customer_escalation.add_argument("--update-feed-md")
+    premium_customer_escalation.add_argument("--no-db-record", action="store_true")
+    add_money_path_commands(sub)
+    add_paid_code_commands(sub)
+    add_digital_products_commands(sub)
+    add_ceo_decision_commands(sub)
+    add_agent_company_migration_commands(sub)
+    source_specs_report = sub.add_parser("write-source-specs-report")
+    source_specs_report.add_argument("--path")
+    source_spec_seed_packets = sub.add_parser("write-source-spec-seed-packets")
+    source_spec_seed_packets.add_argument("--path")
+    source_spec_seed_packets.add_argument("--json-path")
+    source_spec_seed_packets.add_argument("--validation-path")
+    source_spec_seed_packets.add_argument("--packet-dir")
+    source_spec_seed_packets.add_argument("--gap-map-path")
+    source_spec_seed_apply = sub.add_parser("write-source-spec-seed-apply")
+    source_spec_seed_apply.add_argument("--path")
+    source_spec_seed_apply.add_argument("--json-path")
+    source_spec_seed_apply.add_argument("--validation-path")
+    source_spec_seed_apply.add_argument("--seed-packets-path")
+    service_catalog_report = sub.add_parser("write-service-catalog-report")
+    service_catalog_report.add_argument("--path")
+    service_catalog_report.add_argument("--service-id")
+    service_catalog_report.add_argument("--request-type")
+    service_catalog_report.add_argument("--owner-role-id")
+    service_catalog_report.add_argument("--status")
+    service_catalog_report.add_argument("--limit", type=int, default=100)
+    service_request_review = sub.add_parser("write-service-request-review")
+    service_request_review.add_argument("--path")
+    service_request_review.add_argument("--json-path")
+    service_request_review.add_argument("--request-id")
+    service_request_review.add_argument("--lane-id")
+    service_request_review.add_argument("--service-id")
+    service_request_review.add_argument("--request-type")
+    service_request_review.add_argument("--status")
+    service_request_review.add_argument("--limit", type=int, default=100)
+    add_service_worker_commands(sub)
+    sub.add_parser("write-launch-packets")
+    manager_packets = sub.add_parser("write-manager-packets")
+    manager_packets.add_argument("--dir")
+    lane_thread_manifest = sub.add_parser("write-lane-thread-manifest")
+    lane_thread_manifest.add_argument("--md-path")
+    lane_thread_manifest.add_argument("--json-path")
+    sub.add_parser("seed-source-specs")
+    sub.add_parser("seed-service-catalog")
+
+    import_pe = sub.add_parser("import-profit-edge")
+    import_pe.add_argument("--source-root", default=str(PROFIT_EDGE_ROOT))
+    import_pe.add_argument("--task-id", default="task-profit-edge-import-bridge-20260614")
+    import_pe.add_argument("--ledger-tail", type=int, default=40)
+
+    evidence = sub.add_parser("list-evidence")
+    evidence.add_argument("--lane-id")
+    evidence.add_argument("--limit", type=int, default=50)
+
+    source_specs = sub.add_parser("list-source-specs")
+    source_specs.add_argument("--lane-id")
+    source_specs.add_argument("--limit", type=int, default=50)
+
+    service_catalog = sub.add_parser("list-service-catalog")
+    service_catalog.add_argument("--service-id")
+    service_catalog.add_argument("--request-type")
+    service_catalog.add_argument("--owner-role-id")
+    service_catalog.add_argument("--status")
+    service_catalog.add_argument("--limit", type=int, default=50)
+
+    artifact_list = sub.add_parser("list-artifacts")
+    artifact_list.add_argument("--artifact-id")
+    artifact_list.add_argument("--lane-id")
+    artifact_list.add_argument("--task-id")
+    artifact_list.add_argument("--kind")
+    artifact_list.add_argument("--contains")
+    artifact_list.add_argument("--limit", type=int, default=50)
+
+    artifact_report = sub.add_parser("write-artifacts-report")
+    artifact_report.add_argument("--path")
+    artifact_report.add_argument("--artifact-id")
+    artifact_report.add_argument("--lane-id")
+    artifact_report.add_argument("--task-id")
+    artifact_report.add_argument("--kind")
+    artifact_report.add_argument("--contains")
+    artifact_report.add_argument("--limit", type=int, default=100)
+
+    trace_event = sub.add_parser("record-trace-event")
+    trace_event.add_argument("--event-id")
+    trace_event.add_argument("--trace-id", required=True)
+    trace_event.add_argument("--lane-id")
+    trace_event.add_argument("--task-id")
+    trace_event.add_argument("--agent-id")
+    trace_event.add_argument("--event-type", required=True)
+    trace_event.add_argument("--event-time")
+    trace_event.add_argument("--source")
+    trace_event.add_argument("--summary", required=True)
+    trace_event.add_argument("--metadata-json")
+    trace_event.add_argument("--metadata-file")
+    trace_event.add_argument("--artifact-path")
+
+    trace_list = sub.add_parser("list-trace-events")
+    trace_list.add_argument("--trace-id")
+    trace_list.add_argument("--lane-id")
+    trace_list.add_argument("--task-id")
+    trace_list.add_argument("--agent-id")
+    trace_list.add_argument("--event-type")
+    trace_list.add_argument("--limit", type=int, default=50)
+
+    trace_report = sub.add_parser("write-trace-report")
+    trace_report.add_argument("--path")
+    trace_report.add_argument("--trace-id")
+    trace_report.add_argument("--lane-id")
+    trace_report.add_argument("--task-id")
+    trace_report.add_argument("--agent-id")
+    trace_report.add_argument("--event-type")
+    trace_report.add_argument("--limit", type=int, default=100)
+
+    add_durable_adapter_commands(sub)
+
+    add_prompt_eval_commands(sub)
+
+    add_registry_service_request_commands(sub)
+
+    args = parser.parse_args()
+    with connect() as conn:
+        if args.cmd == "init":
+            init_db(conn)
+            print(json.dumps({"ok": True, "db": str(DB_PATH)}, indent=2))
+        elif args.cmd == "seed":
+            seed(conn)
+            print(json.dumps({"ok": True, "db": str(DB_PATH)}, indent=2))
+        elif handle_registry_service_request_command(conn, args):
+            pass
+        elif args.cmd == "status":
+            init_db(conn)
+            list_status(conn)
+        elif args.cmd == "write-dashboard":
+            init_db(conn)
+            write_dashboard(conn, args.path)
+        elif args.cmd == "write-ceo-review":
+            init_db(conn)
+            write_ceo_review(conn, args.path)
+        elif args.cmd == "write-company-expansion-gap-map":
+            init_db(conn)
+            write_company_expansion_gap_map(conn, args)
+        elif args.cmd == "run-control-plane-capacity-benchmark":
+            init_db(conn)
+            write_control_plane_capacity_benchmark_runner(conn, args)
+        elif args.cmd == "route-premium-customer-input":
+            init_db(conn)
+            write_premium_customer_input_route(conn, args)
+        elif args.cmd == "synthesize-premium-customer-followups":
+            init_db(conn)
+            write_premium_customer_followup_synthesis(conn, args)
+        elif args.cmd == "monitor-premium-customer-followups":
+            init_db(conn)
+            write_premium_customer_followup_monitor(conn, args)
+        elif args.cmd == "escalate-premium-customer-followups":
+            init_db(conn)
+            write_premium_customer_followup_escalation(conn, args)
+        elif handle_money_path_command(conn, args):
+            pass
+        elif handle_paid_code_command(conn, args):
+            pass
+        elif handle_digital_products_command(conn, args):
+            pass
+        elif handle_ceo_decision_command(conn, args):
+            pass
+        elif handle_agent_company_migration_command(conn, args):
+            pass
+        elif args.cmd == "write-source-specs-report":
+            init_db(conn)
+            write_source_specs_report(conn, args.path)
+        elif args.cmd == "write-source-spec-seed-packets":
+            init_db(conn)
+            write_source_spec_seed_packets(conn, args)
+        elif args.cmd == "write-source-spec-seed-apply":
+            init_db(conn)
+            write_source_spec_seed_apply(conn, args)
+        elif args.cmd == "write-service-catalog-report":
+            init_db(conn)
+            write_service_catalog_report(conn, args)
+        elif args.cmd == "write-service-request-review":
+            init_db(conn)
+            write_service_request_review(conn, args)
+        elif handle_service_worker_command(conn, args):
+            pass
+        elif args.cmd == "write-launch-packets":
+            init_db(conn)
+            write_launch_packets(conn)
+        elif args.cmd == "write-manager-packets":
+            init_db(conn)
+            write_manager_packets(conn, args.dir)
+        elif args.cmd == "write-lane-thread-manifest":
+            init_db(conn)
+            write_lane_thread_manifest(conn, args.md_path, args.json_path)
+        elif args.cmd == "seed-source-specs":
+            init_db(conn)
+            seed_source_specs(conn)
+            conn.commit()
+            print(json.dumps({"ok": True, "path": str(SOURCE_SPECS_PATH)}, indent=2))
+        elif args.cmd == "seed-service-catalog":
+            init_db(conn)
+            seed_service_catalog(conn)
+            conn.commit()
+            print(json.dumps({"ok": True, "path": str(SERVICE_CATALOG_PATH)}, indent=2))
+        elif args.cmd == "import-profit-edge":
+            import_profit_edge(conn, args)
+        elif args.cmd == "list-evidence":
+            init_db(conn)
+            list_evidence(conn, args)
+        elif args.cmd == "list-source-specs":
+            init_db(conn)
+            list_source_specs(conn, args)
+        elif args.cmd == "list-service-catalog":
+            init_db(conn)
+            list_service_catalog(conn, args)
+        elif args.cmd == "list-artifacts":
+            init_db(conn)
+            list_artifacts(conn, args)
+        elif args.cmd == "write-artifacts-report":
+            init_db(conn)
+            write_artifacts_report(conn, args)
+        elif args.cmd == "record-trace-event":
+            init_db(conn)
+            record_trace_event(conn, args)
+        elif args.cmd == "list-trace-events":
+            init_db(conn)
+            list_trace_events(conn, args)
+        elif args.cmd == "write-trace-report":
+            init_db(conn)
+            write_trace_report(conn, args)
+        elif handle_durable_adapter_command(conn, args):
+            pass
+        elif handle_prompt_eval_command(conn, args):
+            pass

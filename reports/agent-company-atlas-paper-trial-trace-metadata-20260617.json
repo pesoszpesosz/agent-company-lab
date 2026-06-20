@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "agent-company-atlas-trace.v1",
+  "traceId": "trace-agent-company-atlas-paper-trial-v1-20260617",
+  "generatedUtc": "2026-06-17T17:00:17Z",
+  "laneId": "local_trading_strategy_research",
+  "title": "Paper Trial Custom Minigame",
+  "status": "complete",
+  "research": {
+    "queries": [
+      "backtesting trading strategy dashboard risk drawdown visualization best practices",
+      "paper trading simulation backtest dashboard UI risk bands drawdown",
+      "trading strategy backtesting out of sample testing slippage paper trading"
+    ],
+    "takeaways": [
+      "Trading research dashboards should surface drawdown, risk, and validation gates rather than only upside curves.",
+      "Backtest and paper-trading workflows are clearer when data quality, validation, slippage, and live-trading boundaries are visually separate.",
+      "For a reusable public repo, this minigame should make simulation state explicit and keep broker/API/real-money actions visually sealed."
+    ],
+    "sources": [
+      "https://www.investopedia.com/terms/b/backtesting.asp",
+      "https://www.investopedia.com/terms/p/papertrade.asp",
+      "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts"
+    ]
+  },
+  "imageGeneration": {
+    "mode": "built_in_image_gen",
+    "sourcePath": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_077fe9e11c81b7ea016a32d21c173c8191b995a945cf922831.png",
+    "workspacePath": "web/assets/games/paper-trial-bg-20260617.png",
+    "prompt": "Use case: stylized-concept. Asset type: website game module background texture for a static dashboard minigame. Primary request: premium dark game UI background for a Paper Trial module about paper-only trading strategy research, backtesting, out-of-sample validation, slippage modeling, drawdown locks, and no-real-money gates. Scene/backdrop: futuristic quant simulation range with glowing backtest lanes, risk-band rails, drawdown barrier locks, historical-data tiles, paper-trade ghost orders, and a sealed live-trading vault gate. Subject: abstract paper-only trading lab, simulation tracks, equity-curve ribbons, risk shields, locked broker/API gate, validation checkpoints; no people. Style/medium: polished 3D game concept art, premium SaaS-game hybrid, precise and restrained. Composition/framing: wide landscape dashboard texture, dark calm center for UI overlays, richer detail along edges, no frame or border. Lighting/mood: cool analytical command center, blue and teal signal light with green validation accents and small amber warning locks. Color palette: dark charcoal, steel blue, cyan, teal, small green, restrained amber warning highlights, no dominant purple. Materials/textures: smoked glass, matte graphite, holographic charts, translucent risk bands, satin metal, soft volumetric glow. Constraints: no text, no letters, no numbers, no logos, no watermark, no people, no brand marks, no currency symbols, no readable chart labels, avoid clutter in the center."
+  },
+  "implementation": {
+    "filesChanged": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/README.md"
+    ],
+    "assetsCreated": [
+      "web/assets/games/paper-trial-bg-20260617.png"
+    ],
+    "frontend": [
+      "Added paper-trial dispatch in renderGameView and gameStepCount.",
+      "Added buildPaperTrialStages to derive five paper-trading simulation stages from lane trail text, counts, artifacts, traces, blockers, and gates.",
+      "Added renderPaperTrialGame and renderPaperStage with focused controls, trial verdict, animated simulation range, paper nodes, and stage cards.",
+      "Added responsive Paper Trial CSS for docked detail panels, stacked desktop, and mobile layouts."
+    ]
+  },
+  "validation": {
+    "static": {
+      "status": "passed",
+      "commands": [
+        "node --check web/app.js",
+        "python -m py_compile tools/generate_visual_dashboard_snapshot.py",
+        "python -m json.tool web/data/snapshot.json > $null",
+        "python -m json.tool web/data/lane-visuals.json > $null",
+        "python -m json.tool reports/agent-company-atlas-paper-trial-trace-metadata-20260617.json > $null",
+        "python tools/generate_visual_dashboard_snapshot.py",
+        "rg -n \"[^\\x00-\\x7F]\" web/index.html web/app.js web/styles.css web/README.md web/data/lane-visuals.json reports/agent-company-atlas-paper-trial-trace-metadata-20260617.json"
+      ]
+    },
+    "browser": {
+      "status": "passed",
+      "routes": [
+        {
+          "url": "http://localhost:5177/?verify=paper-trial&cache=20260617-paper-trial#lane=local_trading_strategy_research&view=game",
+          "viewport": "390x920",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "nodes": 5,
+          "stages": 5,
+          "controlCheck": "next advanced focus from Data Range to Paper Replay",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "boardOverflow": false
+        },
+        {
+          "url": "http://localhost:5177/?verify=paper-trial&cache=20260617-paper-trial#lane=local_trading_strategy_research&view=game",
+          "viewport": "1600x900",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "nodes": 5,
+          "stages": 5,
+          "heroColumns": "78px 193px",
+          "stageColumns": "309px",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "boardOverflow": false,
+          "consoleErrors": 0
+        },
+        {
+          "url": "http://localhost:5177/?verify=paper-trial&cache=20260617-paper-trial#lane=local_trading_strategy_research&view=game",
+          "viewport": "1280x800",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "nodes": 5,
+          "stages": 5,
+          "heroColumns": "78px 885px 132px",
+          "stageColumns": "221px 221px 221px 221px 221px",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "boardOverflow": false,
+          "consoleErrors": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.checkpoint_interrupt_bridge_fixture.v1",
+  "title": "Agent Company Checkpoint Interrupt Bridge Fixture v1",
+  "type": "object",
+  "required": [
+    "bridge_id",
+    "schema_version",
+    "source_candidate",
+    "source_candidate_rank",
+    "bridge_mode",
+    "local_adapter_kind",
+    "checkpoint_contract_validation_path",
+    "scorecard_validation_path",
+    "maps_to_checkpoint_interrupt_contract",
+    "runtime_adoption_allowed",
+    "dependency_install_allowed",
+    "dependency_import_allowed",
+    "resume_allowed",
+    "apply_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "bridge_id": {
+      "type": "string",
+      "pattern": "^checkpoint-bridge-[a-z0-9][a-z0-9-]{8,160}$"
+    },
+    "schema_version": {
+      "const": "agent_company.checkpoint_interrupt_bridge_fixture.v1"
+    },
+    "source_candidate": {
+      "const": "langchain-ai/langgraph"
+    },
+    "source_candidate_rank": {
+      "const": 1
+    },
+    "bridge_mode": {
+      "const": "local_fixture_only"
+    },
+    "local_adapter_kind": {
+      "const": "checkpoint_interrupt_bridge_fixture"
+    },
+    "checkpoint_contract_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "scorecard_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "maps_to_checkpoint_interrupt_contract": {
+      "const": true
+    },
+    "runtime_adoption_allowed": {
+      "const": false
+    },
+    "dependency_install_allowed": {
+      "const": false
+    },
+    "dependency_import_allowed": {
+      "const": false
+    },
+    "resume_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

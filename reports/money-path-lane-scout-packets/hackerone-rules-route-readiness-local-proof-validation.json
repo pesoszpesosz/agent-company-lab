@@ -1,0 +1,69 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_six_sources",
+      "passed": true
+    },
+    {
+      "name": "has_safe_harbor_source",
+      "passed": true
+    },
+    {
+      "name": "disambiguates_vdp_only_rows",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_twenty_program_fields",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_five_route_stages",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_eight_hard_kill_reasons",
+      "passed": true
+    },
+    {
+      "name": "has_local_allowed_stage",
+      "passed": true
+    },
+    {
+      "name": "no_testing_stage_allowed",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_hackerone_account",
+      "passed": true
+    },
+    {
+      "name": "no_browser_sessions",
+      "passed": true
+    },
+    {
+      "name": "no_program_contact_or_directory_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_targets_tested",
+      "passed": true
+    },
+    {
+      "name": "no_reports_payments_or_public_actions",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T07:15:32Z",
+  "schema_version": "hackerone_rules_route_readiness_local_proof.validation.v1",
+  "task_id": "task-lane-scout-hackerone_program_rules-20260618"
+}

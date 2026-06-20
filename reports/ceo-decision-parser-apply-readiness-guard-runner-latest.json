@@ -1,0 +1,94 @@
+{
+  "accepted_readiness_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_match_count": 6,
+  "generated_utc": "2026-06-16T09:12:52Z",
+  "lane_evidence_rows_after": 116,
+  "lane_evidence_rows_before": 115,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_guard_runner_passed_no_mutations",
+  "mutation_applied_count": 0,
+  "negative_readiness_fixture_count": 6,
+  "next_action": "Keep real apply disabled; next create a positive apply-readiness fixture that passes the guard but still requires explicit operator approval before any DB update command.",
+  "queue_mutation_count": 0,
+  "readiness_guard_execution_count": 6,
+  "readiness_guard_results": [
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_operator_approval_bundle",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_operator_approval_bundle",
+      "fixture_id": "missing-operator-approvals",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_stale_rollback_snapshot",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_stale_rollback_snapshot",
+      "fixture_id": "stale-rollback-snapshot",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_target_status_drift",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_target_status_drift",
+      "fixture_id": "target-status-drift",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_planned_field_drift",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_planned_field_drift",
+      "fixture_id": "planned-field-drift",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_unbounded_update_shape",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unbounded_update_shape",
+      "fixture_id": "unbounded-update-shape",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_side_effect_boundary_open",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_side_effect_boundary_open",
+      "fixture_id": "side-effect-boundary-open",
+      "matched_expected": true
+    }
+  ],
+  "recommended_default": "keep_apply_disabled_until_readiness_guard_passes_and_operator_approves",
+  "rejected_readiness_count": 6,
+  "runner_evidence_id": "ceo-decision-parser-apply-readiness-guard-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-ceo-decision-parser-apply-readiness-guard-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_guard_runner.v1",
+  "source_fixtures_evidence_id": "ceo-decision-parser-apply-readiness-negative-fixtures-20260616",
+  "source_fixtures_task_id": "task-ceo-decision-parser-apply-readiness-negative-fixtures-20260616",
+  "source_fixtures_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-negative-fixtures-validation-latest.json",
+  "summary": "Ran a local report-only apply-readiness guard against six negative readiness fixtures. The guard rejected every drifted, underspecified, or unsafe readiness packet and performed no mutation.",
+  "task_rows_inserted_by_runner": 1,
+  "tasks_table_rows_after": 208,
+  "tasks_table_rows_before": 207
+}

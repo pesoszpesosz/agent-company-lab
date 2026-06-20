@@ -1,0 +1,50 @@
+{
+  "acknowledgements_checked": 3,
+  "db_counts_after": {
+    "agents": 11,
+    "artifacts": 985,
+    "lane_evidence": 211,
+    "lanes": 12,
+    "outcomes": 234,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 331,
+    "trace_events": 246
+  },
+  "db_counts_before": {
+    "agents": 11,
+    "artifacts": 985,
+    "lane_evidence": 211,
+    "lanes": 12,
+    "outcomes": 234,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 331,
+    "trace_events": 246
+  },
+  "failed_count": 0,
+  "generated_utc": "2026-06-17T17:38:59Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\sqlite-outbox-acknowledgement-runner-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\sqlite-outbox-acknowledgement-runner-v1-20260617.md",
+  "negative_probes_checked": 3,
+  "next_local_test": "local_service_worker_request_state_machine_runner_v1_without_worker_start",
+  "preview_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\sqlite-outbox-acknowledgement-runner-v1-20260617.json",
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "outbox_rows_updated": 0,
+    "public_actions": false,
+    "queue_enqueues": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\sqlite-outbox-acknowledgement-runner-v1.schema.json",
+  "schema_version": "agent_company.sqlite_outbox_acknowledgement_runner_validation.v1",
+  "top_level_failures": []
+}

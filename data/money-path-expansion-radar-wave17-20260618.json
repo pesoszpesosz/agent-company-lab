@@ -1,0 +1,378 @@
+{
+  "schema_version": "agent_company.money_path_expansion_radar_wave17_dataset.v1",
+  "generated_utc": "2026-06-17T21:35:00Z",
+  "task_id": "task-money-path-expansion-radar-wave17-20260618",
+  "purpose": "Expand the agent-company money-path map with current online earning paths, source evidence, lane ownership, first local proof tasks, service-worker needs, and action gates.",
+  "paths": [
+    {
+      "path_id": "ai_training_data_annotation",
+      "label": "AI training, RLHF, data annotation, and expert evaluation work",
+      "lane_id": "money_source_discovery",
+      "first_agent_type": "platform_source_mapper",
+      "source_urls": [
+        "https://www.dataannotation.tech/",
+        "https://www.opentrain.ai/become-freelancer/",
+        "https://coursiv.io/blog/ai-training-jobs-2026",
+        "https://www.indeed.com/q-ai-annotation-l-remote-jobs.html"
+      ],
+      "evidence_summary": "Current sources show AI training work as flexible remote work with task availability variability, including coding, STEM, law, medicine, writing, RLHF, prompt evaluation, and annotation roles.",
+      "estimated_time_to_first_proof": "1-2 hours local profile/platform matrix",
+      "cashflow_horizon": "days_to_weeks_after_account_approval",
+      "account_needs": [
+        "platform applications",
+        "identity and tax/payment onboarding on many platforms",
+        "skills tests or domain screening"
+      ],
+      "service_worker_needs": [
+        "legal_kyc_tax_payment_gate",
+        "account_registration_intake",
+        "browser_read_only_session"
+      ],
+      "gates": [
+        "no account applications or KYC without user approval",
+        "no private resume/profile upload without approval"
+      ],
+      "local_next_proof": "ai_training_platform_gate_matrix_v1",
+      "priority": 8,
+      "risk": "medium_account_and_payment_gated",
+      "local_only_status": "ready_for_local_research"
+    },
+    {
+      "path_id": "ai_automation_freelance_services",
+      "label": "AI automation freelance services and workflow builds",
+      "lane_id": "lead_generation_and_sales",
+      "first_agent_type": "offer_builder",
+      "source_urls": [
+        "https://www.upwork.com/resources/ai-automation-jobs-in-2026",
+        "https://www.upwork.com/resources/ai-automation",
+        "https://www.fiverr.com/resources/guides/reports/business-trends-index-june-2026",
+        "https://www.fiverr.com/resources/guides/costs/ai-expert"
+      ],
+      "evidence_summary": "Upwork and Fiverr describe demand for AI automation, AI agents, workflow integration, custom apps, content automation, Shopify execution, and AI expert services with marketplace price ranges.",
+      "estimated_time_to_first_proof": "2-4 hours local offer and portfolio packet",
+      "cashflow_horizon": "days_to_weeks_after_outreach_or_marketplace_profile",
+      "account_needs": [
+        "freelance marketplace account or direct lead channel",
+        "portfolio artifact",
+        "proposal templates"
+      ],
+      "service_worker_needs": [
+        "outreach_delivery_gate",
+        "account_registration_intake",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "gates": [
+        "no cold outreach without reputation review",
+        "no marketplace listing without account and payment review"
+      ],
+      "local_next_proof": "ai_automation_offer_packet_v1",
+      "priority": 9,
+      "risk": "medium_public_reputation_and_account_gated",
+      "local_only_status": "ready_for_local_offer_build"
+    },
+    {
+      "path_id": "digital_products_ai_templates_plugins",
+      "label": "Digital products, AI templates, prompt packs, plugins, and workflow assets",
+      "lane_id": "digital_products_templates_plugins",
+      "first_agent_type": "market_gap_scout",
+      "source_urls": [
+        "https://gumroad.com/",
+        "https://gumroad.com/discover?query=engineering+templates",
+        "https://www.fiverr.com/resources/guides/business/make-money-with-ai",
+        "https://www.grandviewresearch.com/industry-analysis/creator-economy-market-report"
+      ],
+      "evidence_summary": "Creator/digital product sources emphasize selling what you know, AI prompts/templates, digital products, and a large growing creator economy market.",
+      "estimated_time_to_first_proof": "2-3 hours local product gap and landing-copy draft",
+      "cashflow_horizon": "weeks_after_product_pack_and_listing",
+      "account_needs": [
+        "Gumroad or marketplace account",
+        "payment/tax onboarding",
+        "product page and refund/terms copy"
+      ],
+      "service_worker_needs": [
+        "legal_kyc_tax_payment_gate",
+        "account_registration_intake",
+        "browser_read_only_session"
+      ],
+      "gates": [
+        "no listing or payment setup without user approval",
+        "no reused template resale without license check"
+      ],
+      "local_next_proof": "digital_product_gap_scorecard_v1",
+      "priority": 8,
+      "risk": "medium_marketplace_payment_license_gated",
+      "local_only_status": "ready_for_local_product_research"
+    },
+    {
+      "path_id": "paid_open_source_bounties",
+      "label": "Paid open-source feature/bug bounties",
+      "lane_id": "paid_code_bounties",
+      "first_agent_type": "repo_triager",
+      "source_urls": [
+        "https://opire.dev/",
+        "https://app.opire.dev/issues/01HWT2MKE4GWPJXDPMAFEAHHHE",
+        "https://algora.io/auth/login"
+      ],
+      "evidence_summary": "Opire shows live bounties on open-source GitHub issues with visible reward amounts; Algora positions itself around companies and engineers for paid work, though login-gated for details.",
+      "estimated_time_to_first_proof": "1-2 hours local bounty freshness and duplicate-owner check",
+      "cashflow_horizon": "days_to_weeks_after_clean_issue_and_accepted_pr",
+      "account_needs": [
+        "GitHub identity",
+        "bounty platform account",
+        "payout details after award"
+      ],
+      "service_worker_needs": [
+        "github_public_action_gate",
+        "wallet_public_address_or_payment_reply",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "gates": [
+        "no issue claim/comment/PR without public-action approval",
+        "no payout identifier post without explicit request and approval"
+      ],
+      "local_next_proof": "paid_code_fresh_bounty_scorecard_v1",
+      "priority": 9,
+      "risk": "medium_public_action_and_payout_gated",
+      "local_only_status": "ready_for_local_triage"
+    },
+    {
+      "path_id": "security_bug_bounties_web3_and_vdp",
+      "label": "Security bug bounties, web3 audits, and vulnerability disclosure",
+      "lane_id": "security_bounty_private_reports",
+      "first_agent_type": "program_rules_reader",
+      "source_urls": [
+        "https://immunefi.com/bug-bounty/",
+        "https://immunefi.com/bug-bounty/autonolas/information/",
+        "https://github.com/disclose/bug-bounty-platforms",
+        "https://github.com/tintinweb/bugbounty-companion"
+      ],
+      "evidence_summary": "Immunefi lists current web3 bug bounties with updated metrics; Disclose maintains a broad platform list; bugbounty-companion demonstrates scaling source checkout for Immunefi/C4-style programs.",
+      "estimated_time_to_first_proof": "2-5 hours local rules/scope and static-code hypothesis packet",
+      "cashflow_horizon": "weeks_to_months_after_valid_report",
+      "account_needs": [
+        "program platform account",
+        "safe harbor/rules review",
+        "payment or wallet details after valid bounty"
+      ],
+      "service_worker_needs": [
+        "security_report_submission_gate",
+        "browser_read_only_session",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "gates": [
+        "no security testing beyond public code review without rules approval",
+        "no private report submission without user/CRO approval"
+      ],
+      "local_next_proof": "security_program_rules_and_scope_ranker_v1",
+      "priority": 10,
+      "risk": "high_rules_security_submission_gated",
+      "local_only_status": "ready_for_local_rules_research"
+    },
+    {
+      "path_id": "ai_ml_competitions_and_hackathons",
+      "label": "AI/ML competitions, prize tracks, and hackathons",
+      "lane_id": "ai_ml_competitions",
+      "first_agent_type": "competition_scout",
+      "source_urls": [
+        "https://www.kaggle.com/competitions",
+        "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3/overview/abstract",
+        "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/rules",
+        "https://devpost.com/c/artificial-intelligence",
+        "https://devnetwork-ai-ml-hack-2026.devpost.com/",
+        "https://gitlab.devpost.com/rules"
+      ],
+      "evidence_summary": "Kaggle and Devpost list prize competitions and AI hackathons, including ARC Prize tracks, DevNetwork AI/ML hackathon, and sponsor prize tracks with cash or hardware/credits.",
+      "estimated_time_to_first_proof": "1-3 hours rules/prize/deadline fit gate",
+      "cashflow_horizon": "weeks_to_months_after_submission_and_judging",
+      "account_needs": [
+        "Kaggle or Devpost account",
+        "team profile",
+        "rules acceptance",
+        "potential tax/payment onboarding if prize won"
+      ],
+      "service_worker_needs": [
+        "browser_read_only_session",
+        "legal_kyc_tax_payment_gate",
+        "account_registration_intake"
+      ],
+      "gates": [
+        "no registration or rules acceptance without approval",
+        "no sponsor API key use without credential/data scope approval"
+      ],
+      "local_next_proof": "competition_prize_fit_matrix_v1",
+      "priority": 7,
+      "risk": "medium_registration_rules_time_gated",
+      "local_only_status": "ready_for_local_rules_matrix"
+    },
+    {
+      "path_id": "prediction_market_data_research",
+      "label": "Prediction-market data, analytics, paper strategies, and affiliate/content angles",
+      "lane_id": "prediction_market_research",
+      "first_agent_type": "market_scout",
+      "source_urls": [
+        "https://www.quicknode.com/builders-guide/best/top-9-prediction-market-apis-sdks",
+        "https://medium.com/@samuel.tinnerholm/the-top-prediction-market-apis-in-2026-ecb02baae641",
+        "https://www.marketwatch.com/story/thinking-about-insider-trading-on-prediction-markets-kalshi-wants-to-make-an-example-of-you-74d50486",
+        "https://www.theguardian.com/us-news/2026/jun/08/kalshi-polymarket-election-misinformation",
+        "https://track360.io/industries/prediction-markets"
+      ],
+      "evidence_summary": "Current sources show growing prediction-market APIs, analytics, compliance pressure, affiliate restrictions, and legal/market-integrity risks; data-only/paper research is the clean local lane.",
+      "estimated_time_to_first_proof": "2-4 hours data-source and compliance risk matrix",
+      "cashflow_horizon": "weeks_to_months_for_content_or_tools; trading requires approval",
+      "account_needs": [
+        "data API access for deeper analysis",
+        "KYC/trading account only if real-money promoted",
+        "affiliate account only if content route promoted"
+      ],
+      "service_worker_needs": [
+        "real_money_trade_gate",
+        "data_purchase_api_access_gate",
+        "legal_kyc_tax_payment_gate",
+        "public_action_execution"
+      ],
+      "gates": [
+        "no trades, deposits, withdrawals, or affiliate promotion without approval",
+        "avoid insider/nonpublic information and misinformation risks"
+      ],
+      "local_next_proof": "prediction_market_data_compliance_matrix_v1",
+      "priority": 6,
+      "risk": "high_financial_legal_reputation_gated",
+      "local_only_status": "ready_for_data_only_research"
+    },
+    {
+      "path_id": "newsletter_content_affiliate_products",
+      "label": "Newsletter/content monetization through sponsorships, subscriptions, affiliates, and products",
+      "lane_id": "content_and_social_growth",
+      "first_agent_type": "trend_scout",
+      "source_urls": [
+        "https://www.beehiiv.com/blog/how-to-make-money-from-your-newsletter",
+        "https://www.beehiiv.com/blog/how-to-monetize-content",
+        "https://www.beehiiv.com/features",
+        "https://www.grandviewresearch.com/industry-analysis/creator-economy-market-report"
+      ],
+      "evidence_summary": "Beehiiv describes newsletter monetization through sponsorships, subscriptions, affiliates, products, and services; creator economy sources show large market growth.",
+      "estimated_time_to_first_proof": "2-3 hours content offer and audience niche map",
+      "cashflow_horizon": "weeks_to_months_after_audience_or_product_loop",
+      "account_needs": [
+        "newsletter platform account",
+        "public brand profile",
+        "sponsorship or affiliate accounts later"
+      ],
+      "service_worker_needs": [
+        "public_action_execution",
+        "outreach_delivery_gate",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "gates": [
+        "no public posting or affiliate promotion without review",
+        "platform terms and sponsorship disclosures required"
+      ],
+      "local_next_proof": "newsletter_monetization_niche_packet_v1",
+      "priority": 6,
+      "risk": "medium_public_reputation_and_disclosure_gated",
+      "local_only_status": "ready_for_local_content_strategy"
+    },
+    {
+      "path_id": "web3_grants_airdrops_hackathons",
+      "label": "Web3 grants, airdrops, hackathons, and ecosystem programs",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "first_agent_type": "program_scout",
+      "source_urls": [
+        "https://immunefi.com/bug-bounty/",
+        "https://devpost.com/c/artificial-intelligence",
+        "https://github.com/tintinweb/bugbounty-companion"
+      ],
+      "evidence_summary": "Web3 earning routes overlap with bug bounties, ecosystem hackathons, grants, and audit competitions; upside can be high but wallet/account/legal gates dominate.",
+      "estimated_time_to_first_proof": "2-4 hours program terms/deadline/gate shortlist",
+      "cashflow_horizon": "weeks_to_months",
+      "account_needs": [
+        "program account",
+        "wallet address only after approval",
+        "potential team/project profile"
+      ],
+      "service_worker_needs": [
+        "wallet_setup_packet",
+        "wallet_public_address_or_payment_reply",
+        "legal_kyc_tax_payment_gate",
+        "browser_read_only_session"
+      ],
+      "gates": [
+        "no wallet creation/control or public address response without approval",
+        "no deployment or submission without rules review"
+      ],
+      "local_next_proof": "web3_program_gate_shortlist_v1",
+      "priority": 7,
+      "risk": "high_wallet_submission_terms_gated",
+      "local_only_status": "ready_for_terms_research"
+    },
+    {
+      "path_id": "micro_saas_agent_tools",
+      "label": "Micro-SaaS, agent tools, dashboards, and internal automation products",
+      "lane_id": "digital_products_templates_plugins",
+      "first_agent_type": "product_builder",
+      "source_urls": [
+        "https://www.fiverr.com/resources/guides/business/make-money-with-ai",
+        "https://www.upwork.com/resources/state-of-ai",
+        "https://www.upwork.com/resources/ai-automation-jobs-in-2026",
+        "https://gumroad.com/"
+      ],
+      "evidence_summary": "Fiverr and Upwork sources point to demand for AI apps, automation, agents, workflow builds, and custom applications; Gumroad supports first-dollar digital product distribution.",
+      "estimated_time_to_first_proof": "3-6 hours local MVP brief and paid-problem evidence packet",
+      "cashflow_horizon": "weeks_to_months",
+      "account_needs": [
+        "hosting/domain/payment later",
+        "marketplace or direct sales route",
+        "support/contact channel"
+      ],
+      "service_worker_needs": [
+        "legal_kyc_tax_payment_gate",
+        "data_purchase_api_access_gate",
+        "secrets_credentials_handling_gate",
+        "public_action_execution"
+      ],
+      "gates": [
+        "no paid API, billing, launch, or customer data handling without approval",
+        "no marketplace/public listing without review"
+      ],
+      "local_next_proof": "micro_saas_paid_problem_matrix_v1",
+      "priority": 8,
+      "risk": "medium_billing_api_public_launch_gated",
+      "local_only_status": "ready_for_local_problem_validation"
+    }
+  ],
+  "summary": {
+    "path_count": 10,
+    "ready_for_local_research_count": 10,
+    "requires_account_gate_count": 10,
+    "requires_payment_or_wallet_gate_count": 8,
+    "requires_public_action_gate_count": 6,
+    "highest_priority_paths": [
+      "security_bug_bounties_web3_and_vdp",
+      "ai_automation_freelance_services",
+      "paid_open_source_bounties"
+    ],
+    "recommended_next_local_tasks": [
+      "security_program_rules_and_scope_ranker_v1",
+      "ai_automation_offer_packet_v1",
+      "paid_code_fresh_bounty_scorecard_v1",
+      "ai_training_platform_gate_matrix_v1"
+    ]
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "security_tests": false,
+    "trades_or_deposits": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

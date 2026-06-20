@@ -1,0 +1,27 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-unlock-badges-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-unlock-badges-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_unlock_badges_added-20260619",
+  "title": "Command Cockpit Unlock Badges",
+  "timestamp": "2026-06-19T18:05:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Turned the cockpit signal strip into compact reward badges with glyphs, state metadata, and subtle motion.",
+  "changes": [
+    "Added GATE/WIN/RUN/XP glyphs to the Quest cockpit signal counters.",
+    "Added signal state metadata for locked, clear, earned, live, high, scout, and seed badge treatments.",
+    "Rendered signal badges with compact glyph chips and animated shine without adding a new cockpit row.",
+    "Tuned mobile badge sizing so the cockpit stays dense and readable.",
+    "Recorded the unlock-badge pass as the latest platform UI unlock in generated snapshot history."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

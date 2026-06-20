@@ -1,0 +1,30 @@
+{
+  "browser_sessions_started": 0,
+  "chain_checked_report_count": 45,
+  "chain_failure_count": 0,
+  "db_counts_before_closeout": {
+    "artifacts_total": 634,
+    "digital_evidence_total": 9,
+    "lane_evidence_total": 84,
+    "outcomes_total": 159,
+    "service_request_status_counts": {
+      "complete": 1,
+      "needs_review": 11,
+      "rejected": 2
+    },
+    "tasks_complete": 165,
+    "tasks_total": 165,
+    "trace_events_total": 170
+  },
+  "external_side_effects": false,
+  "files_all_checks_passed": true,
+  "files_failure_count": 0,
+  "files_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-package-files-validation-latest.json",
+  "files_validation_schema": "agent_company.digital_products_local_package_files_validation.v1",
+  "generated_utc": "2026-06-15T21:41:01Z",
+  "schema_version": "agent_company.digital_products_local_package_files_cli_test.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "741FBE3E3A550C8BF61FB5AE4EAFDAA97E4C177B28B9A33CA44577A29796F229",
+  "worker_starts": 0
+}

@@ -1,0 +1,171 @@
+{
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_asset_filter_changed": 1,
+    "browser_local_hash_changes": 3,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_panel_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_has_12_minigame_cards",
+      "passed": true
+    },
+    {
+      "name": "desktop_has_play_path_art_actions",
+      "passed": true
+    },
+    {
+      "name": "desktop_textures_loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop_responsive_grid_and_stingers",
+      "passed": true
+    },
+    {
+      "name": "play_action_opens_game_view",
+      "passed": true
+    },
+    {
+      "name": "path_action_opens_path_view",
+      "passed": true
+    },
+    {
+      "name": "art_action_filters_game_assets",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_panel_and_cards_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_single_column_loaded_actions",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "desktop_mobile_launcher_cards_textures_actions_and_responsive_checks_passed",
+  "desktop": {
+    "active_cards": 1,
+    "art_buttons": 12,
+    "cards": 12,
+    "console_error_count": 0,
+    "first_texture_natural_height": 1024,
+    "first_texture_natural_width": 1536,
+    "gated_cards": 7,
+    "grid_columns": 4,
+    "horizontal_overflow": false,
+    "loaded_textures": 24,
+    "panel_exists": true,
+    "panel_height": 1478,
+    "panel_visible": true,
+    "panel_width": 1221,
+    "path_buttons": 12,
+    "play_buttons": 12,
+    "ready_cards": 5,
+    "stinger_overlays": 36,
+    "textures": 24,
+    "title": "Agent Company Atlas",
+    "url": "http://127.0.0.1:8770/index.html?verify=arcade-deck-fresh-20260618#lane=platform_engineering&view=overview",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "generated_at": "2026-06-18T10:00:40Z",
+  "interactions": {
+    "active_assets_after_art": 1,
+    "art_button_count_for_platform_engineering": 1,
+    "art_filter_active_after_click": true,
+    "art_hash_after_click": "#lane=platform_engineering&view=overview",
+    "asset_vault_count_text_after_art": "12 / 65 game",
+    "path_button_count_for_platform_engineering": 1,
+    "path_hash_after_click": "#lane=platform_engineering&view=path",
+    "path_view_contains_path_map": true,
+    "path_view_contains_route_text": true,
+    "play_button_count_for_platform_engineering": 1,
+    "play_game_action_buttons": 3,
+    "play_game_contains_systems_grid": true,
+    "play_hash_after_click": "#lane=platform_engineering&view=game"
+  },
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "active_cards": 1,
+    "art_buttons": 12,
+    "cards": 12,
+    "console_error_count": 0,
+    "grid_columns": 1,
+    "horizontal_overflow": false,
+    "loaded_textures": 24,
+    "panel_exists": true,
+    "panel_height": 5656,
+    "panel_visible": true,
+    "panel_width": 347,
+    "path_buttons": 12,
+    "play_buttons": 12,
+    "textures": 24,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "next_action": "Continue closing Atlas platform tasks, starting with Arcade Deck animated stingers and Motion Forge verification.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_arcade_deck_browser_verification.v1",
+  "source_files": {
+    "app": {
+      "path": "E:\\agent-company-lab\\web\\app.js",
+      "sha256": "b6d44e8aacc9f7b266dbfde63f6bfd4054f263d7ca13787222e074ea94849d23",
+      "size_bytes": 457315
+    },
+    "index": {
+      "path": "E:\\agent-company-lab\\web\\index.html",
+      "sha256": "3a8fee2fe528b4aea399d4c625a696a1c0a31bd835febd03dd415a4b30e2c2b7",
+      "size_bytes": 15465
+    },
+    "prior_trace_metadata": {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-atlas-arcade-deck-trace-metadata-20260618.json",
+      "sha256": "7e89494c8276a6b6462ac015effd9c30e4fdc47555046a63ed2d694375cbf4db",
+      "size_bytes": 5412
+    },
+    "snapshot": {
+      "path": "E:\\agent-company-lab\\web\\data\\snapshot.json",
+      "sha256": "72efe0afa73bdb956008c174c2ffe81a47f5690dcfb028935853bd34de29a3ac",
+      "size_bytes": 1012967
+    },
+    "styles": {
+      "path": "E:\\agent-company-lab\\web\\styles.css",
+      "sha256": "29471a68a96617e8d5b56fb01e8846adabed0067073068c76e13a6d4b0dab5d6",
+      "size_bytes": 466443
+    }
+  },
+  "status": "arcade_deck_browser_verified",
+  "task_id": "task-agent-company-atlas-arcade-deck-v1-20260618"
+}

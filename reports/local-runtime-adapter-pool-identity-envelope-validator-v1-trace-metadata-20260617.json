@@ -1,0 +1,29 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "trace_id": "trace-local-runtime-adapter-pool-identity-envelope-validator-v1-20260617",
+  "span_kind": "local_validator_implementation",
+  "lane_id": "platform_engineering",
+  "task_id": "task-local-runtime-adapter-pool-identity-envelope-validator-v1-20260617",
+  "agent_id": "recovered-profitable-edge-infra",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\architecture\\local-runtime-adapter-pool-identity-envelope-v1.schema.json",
+    "E:\\agent-company-lab\\tools\\validate_local_runtime_adapter_pool_identity_envelope.py",
+    "E:\\agent-company-lab\\tests\\test_local_runtime_adapter_identity_envelope_validator.py",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-20260617.md",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures"
+  ],
+  "fixture_count": 26,
+  "accepted_count": 1,
+  "rejected_count": 25,
+  "all_checks_passed": true,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "model_api_calls": false,
+  "mcp_tool_calls": false,
+  "worker_starts": 0,
+  "service_requests_assigned": 0,
+  "worker_pools_registered": 0,
+  "summary": "Implemented local runtime adapter pool identity envelope validator v1 from a failing unittest through green validation."
+}

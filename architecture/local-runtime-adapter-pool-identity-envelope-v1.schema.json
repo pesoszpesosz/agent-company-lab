@@ -1,0 +1,233 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/local-runtime-adapter-pool-identity-envelope-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Local Runtime Adapter Pool Identity Envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "identity_envelope_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "identity_schema_version": {
+      "const": "agent_company.local_runtime_adapter_pool_identity_envelope.v1"
+    },
+    "created_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "expires_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "revocation_status": {
+      "enum": [
+        "active",
+        "revoked"
+      ]
+    },
+    "revocation_reason": {
+      "type": "string"
+    },
+    "worker_pool_id": {
+      "const": "service-worker-local-runtime-adapter-pool"
+    },
+    "agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role_id": {
+      "const": "observability_worker"
+    },
+    "department_id": {
+      "const": "service_worker_observability"
+    },
+    "lane_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "owner_agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_thread_id": {
+      "type": "string"
+    },
+    "principal_mode": {
+      "const": "non_human_worker_pool_candidate"
+    },
+    "delegation_chain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "operator_decision_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "activation_contract_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_service_request_types": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "lifecycle_test",
+          "model_api_execution"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "allowed_runtime_modes": {
+      "type": "array",
+      "items": {
+        "const": "report_only_local_dry_run"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "allowed_input_artifact_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_output_artifact_roots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "allowed_egress_types": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "allowed_targets": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "allowed_mcp_servers": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "allowed_mcp_tools": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "credential_policy": {
+      "const": "deny"
+    },
+    "browser_session_policy": {
+      "const": "deny"
+    },
+    "model_api_policy": {
+      "const": "deny_until_separate_costed_provider_approval"
+    },
+    "mcp_policy": {
+      "const": "deny_until_registry_gate_and_egress_event"
+    },
+    "wallet_policy": {
+      "const": "deny"
+    },
+    "payment_policy": {
+      "const": "deny"
+    },
+    "account_policy": {
+      "const": "deny"
+    },
+    "public_action_policy": {
+      "const": "deny"
+    },
+    "filesystem_policy": {
+      "type": "object"
+    },
+    "network_policy": {
+      "const": "deny"
+    },
+    "budget_scope": {
+      "type": "string"
+    },
+    "rate_limit_scope": {
+      "type": "string"
+    },
+    "data_sensitivity_ceiling": {
+      "enum": [
+        "public",
+        "local_report_only"
+      ]
+    },
+    "recording_required": {
+      "const": true
+    },
+    "redaction_required": {
+      "const": true
+    },
+    "trace_event_required": {
+      "const": true
+    },
+    "post_run_evidence_required": {
+      "const": true
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "policy_verifier": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "identity_envelope_id",
+    "identity_schema_version",
+    "created_utc",
+    "expires_utc",
+    "revocation_status",
+    "revocation_reason",
+    "worker_pool_id",
+    "agent_id",
+    "role_id",
+    "department_id",
+    "lane_ids",
+    "owner_agent_id",
+    "owner_thread_id",
+    "principal_mode",
+    "delegation_chain",
+    "operator_decision_artifact_path",
+    "activation_contract_artifact_path",
+    "allowed_service_request_types",
+    "allowed_runtime_modes",
+    "allowed_input_artifact_paths",
+    "allowed_output_artifact_roots",
+    "allowed_egress_types",
+    "allowed_targets",
+    "allowed_mcp_servers",
+    "allowed_mcp_tools",
+    "credential_policy",
+    "browser_session_policy",
+    "model_api_policy",
+    "mcp_policy",
+    "wallet_policy",
+    "payment_policy",
+    "account_policy",
+    "public_action_policy",
+    "filesystem_policy",
+    "network_policy",
+    "budget_scope",
+    "rate_limit_scope",
+    "data_sensitivity_ceiling",
+    "recording_required",
+    "redaction_required",
+    "trace_event_required",
+    "post_run_evidence_required",
+    "runtime_boundary",
+    "policy_verifier"
+  ]
+}

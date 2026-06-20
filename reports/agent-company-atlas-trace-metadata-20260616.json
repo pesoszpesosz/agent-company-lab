@@ -1,0 +1,9 @@
+{
+  "schema_version": "agent_company.visual_dashboard_trace.v1",
+  "external_side_effects": false,
+  "api_calls": false,
+  "browser_sessions_started": 0,
+  "worker_starts": 0,
+  "assets_generated": 1,
+  "web_files_added": 5
+}

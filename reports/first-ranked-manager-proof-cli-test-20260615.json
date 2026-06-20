@@ -1,0 +1,27 @@
+{
+  "chain_integrity": {
+    "all_checks_passed": true,
+    "checked_report_count": 34,
+    "failure_count": 0
+  },
+  "checks": {
+    "chain_integrity_refreshed": true,
+    "help_command": true,
+    "json_tool_proof": true,
+    "json_tool_validation": true,
+    "py_compile": true,
+    "write_first_ranked_manager_proof": true
+  },
+  "generated_utc": "2026-06-15T20:40:50Z",
+  "proof_result": {
+    "evidence_rows_inserted_or_updated": 1,
+    "live_tasks_completed": 1,
+    "live_tasks_created": 1,
+    "proof_lane_id": "paid_code_bounties",
+    "proof_task_id": "task-paid_code_bounties-first-local-proof-20260615",
+    "task_rows_inserted_by_proof": 1
+  },
+  "schema_version": "agent_company.first_ranked_manager_proof_cli_test.v1",
+  "source_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_sha256": "98D6C8F07A790983D87087E8127A9C39F6B8A543F73485FAB515533DC301D79C"
+}

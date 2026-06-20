@@ -1,0 +1,168 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/temporal-signal-shape-fixture-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Temporal Signal Shape Fixture v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.temporal_signal_shape_fixture.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-temporal-signal-shape-fixture-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "source_reducer_fixture_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "workflow_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "workflow_type": {
+          "const": "ServiceRequestLifecycleWorkflow"
+        },
+        "workflow_id_template": {
+          "const": "agent-company/service-request/{request_id}"
+        },
+        "defined_not_started": {
+          "const": true
+        },
+        "signal_handlers_defined_not_registered": {
+          "const": true
+        },
+        "queries_defined_not_executed": {
+          "const": true
+        }
+      },
+      "required": [
+        "workflow_type",
+        "workflow_id_template",
+        "defined_not_started",
+        "signal_handlers_defined_not_registered",
+        "queries_defined_not_executed"
+      ]
+    },
+    "allowed_signal_names": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_payload_fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_payload_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "signal_cases": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "request_id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "status_snapshot": {
+            "enum": [
+              "needs_review",
+              "complete",
+              "rejected"
+            ],
+            "type": "string"
+          },
+          "signal_name": {
+            "type": "string",
+            "minLength": 3
+          },
+          "payload": {
+            "type": "object"
+          },
+          "expected_shape_valid": {
+            "type": "boolean"
+          },
+          "expected_disposition": {
+            "type": "string",
+            "minLength": 3
+          },
+          "expected_reducer_state": {
+            "type": "string",
+            "minLength": 3
+          },
+          "expected_failures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "case_id",
+          "request_id",
+          "status_snapshot",
+          "signal_name",
+          "payload",
+          "expected_shape_valid",
+          "expected_disposition",
+          "expected_reducer_state",
+          "expected_failures"
+        ]
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_urls",
+    "source_reducer_fixture_path",
+    "workflow_contract",
+    "allowed_signal_names",
+    "required_payload_fields",
+    "forbidden_payload_fields",
+    "signal_cases",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

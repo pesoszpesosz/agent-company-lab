@@ -1,0 +1,150 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "decision_evidence_id": "digital-products-local-private-review-decision-20260616",
+  "decision_lane_id": "digital_products_templates_plugins",
+  "decision_task_id": "task-digital-products-local-private-review-decision-20260616",
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T21:57:16Z",
+  "lane_evidence_rows_after": 87,
+  "lane_evidence_rows_before": 86,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "continue_local_revision_queue_no_external_validation",
+  "next_action": "Draft the local revision pass from the six-item queue, then rerun local package completeness; do not browse, publish, list, price, create accounts, or configure payouts.",
+  "review_answer_count": 8,
+  "review_answers": [
+    {
+      "answer": "The first private-review buyer is specific enough: a solo AI builder packaging a small productized asset before any marketplace validation.",
+      "decision_effect": "keep_candidate",
+      "question_id": "buyer-fit"
+    },
+    {
+      "answer": "The promise avoids revenue, buyer-count, payout, and live-demand claims; keep all copy framed as a local launch checklist pack.",
+      "decision_effect": "keep_boundary_language",
+      "question_id": "promise-safety"
+    },
+    {
+      "answer": "The draft is usable, but it needs one filled example and a clearer first-run order before external review would be worth requesting.",
+      "decision_effect": "revise_locally",
+      "question_id": "asset-usability"
+    },
+    {
+      "answer": "The six-file manifest covers the workflow, while the two placeholder stubs should remain explicit until local revision fills them.",
+      "decision_effect": "revise_locally",
+      "question_id": "file-coverage"
+    },
+    {
+      "answer": "The README boundary language is clear enough for private review and should be repeated in the QA checklist and listing draft.",
+      "decision_effect": "propagate_boundaries",
+      "question_id": "readme-boundary"
+    },
+    {
+      "answer": "Marketplace, public listing, seller account, and payout gates are unambiguous and remain blocked without explicit approval.",
+      "decision_effect": "preserve_gates",
+      "question_id": "gate-clarity"
+    },
+    {
+      "answer": "Revise local packaging before requesting browser or legal/payment gates: fill examples, tighten copy, and rerun completeness.",
+      "decision_effect": "create_revision_queue",
+      "question_id": "private-review-next"
+    },
+    {
+      "answer": "Continue locally. The candidate has enough local coherence to justify one refinement pass, but not enough live proof to publish or sell.",
+      "decision_effect": "continue_local",
+      "question_id": "kill-or-continue"
+    }
+  ],
+  "revision_item_count": 6,
+  "revision_items": [
+    {
+      "action": "Add one filled sample checklist for a hypothetical solo AI-builder product launch.",
+      "artifact_target": "checklist",
+      "reason": "Improves asset usability without claiming live demand or outcomes.",
+      "revision_id": "fill-example-checklist"
+    },
+    {
+      "action": "Make the first paragraph name the buyer, job-to-be-done, and local-only boundary in plain language.",
+      "artifact_target": "readme",
+      "reason": "Keeps the first private review focused and avoids broad product claims.",
+      "revision_id": "tighten-buyer-statement"
+    },
+    {
+      "action": "Repeat the marketplace, account, legal, tax, KYC, payout, and publishing gates in the QA checklist.",
+      "artifact_target": "qa-checklist",
+      "reason": "Prevents the package from being mistaken for approval to validate or sell externally.",
+      "revision_id": "propagate-gate-language"
+    },
+    {
+      "action": "Replace the two placeholder stubs with local draft content or explicit local-review TODOs.",
+      "artifact_target": "package-files",
+      "reason": "Raises completeness before any gate request is considered.",
+      "revision_id": "complete-placeholder-stubs"
+    },
+    {
+      "action": "Add a scorecard for usefulness, clarity, boundary safety, and next local revision.",
+      "artifact_target": "review-notes",
+      "reason": "Makes the private review repeatable without external submission.",
+      "revision_id": "add-private-review-scorecard"
+    },
+    {
+      "action": "Rerun local package completeness after revisions and compare against this decision packet.",
+      "artifact_target": "validation",
+      "reason": "Maintains the trace from packet decision to updated package proof.",
+      "revision_id": "rerun-local-completeness"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_private_review_decision.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "selected_decision_id": "continue-local",
+  "source_packet_evidence_id": "digital-products-local-private-review-packet-20260616",
+  "source_packet_task_id": "task-digital-products-local-private-review-packet-20260616",
+  "source_packet_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-validation-latest.json",
+  "summary": "Recorded the local private-review decision for the AI builder launch checklist pack. The lane continues locally with a six-item revision queue and keeps browser, marketplace, account, legal, payment, wallet, API, and public actions gated.",
+  "task_rows_inserted_by_decision": 1,
+  "tasks_table_rows_after": 171,
+  "tasks_table_rows_before": 170
+}

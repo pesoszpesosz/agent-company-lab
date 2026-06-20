@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-desktop-footer-pin-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-desktop-footer-pin-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-desktop-footer-pin-v1-20260619",
+  "title": "Command Cockpit Desktop Footer Pin",
+  "createdAt": "2026-06-19T13:02:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Pinned the Overview mounted-stage footer rail inside the desktop Command Cockpit so level, quest, gate, and next-move state stay visible instead of falling below the stage.",
+  "proof": [
+    "Changed the Command Cockpit Overview footer rail to sticky positioning with a six-pixel stage-bottom offset.",
+    "Kept the mobile rail compression intact while making the desktop stage surface retain the live status rail.",
+    "Verified the live 1440x900 cockpit: rail bottom 824.6px, stage bottom 837.6px, rail inside stage, visible in viewport, and no horizontal overflow."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-desktop-footer-pin-trace-metadata-20260619.json"
+  ]
+}

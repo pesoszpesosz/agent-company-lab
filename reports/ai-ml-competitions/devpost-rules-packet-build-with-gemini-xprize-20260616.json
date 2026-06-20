@@ -1,0 +1,34 @@
+{
+  "schema_version": "agent_company.ai_ml_competitions.devpost_gemini_xprize_rules_packet.v1",
+  "generated_utc": "2026-06-16T20:56:00Z",
+  "task_id": "task-devpost-build-with-gemini-rules-packet-20260616",
+  "lane_id": "ai_ml_competitions",
+  "decision": "watchlist_rules_packet_no_registration",
+  "rule_signals": {
+    "prize_pool_usd": 2000000,
+    "deadline": "2026-08-17",
+    "eligible_entrant_types": ["age_of_majority_individuals", "teams", "small_organizations_under_25_employees"],
+    "requires_devpost_account": true,
+    "requires_google_cloud_product": true,
+    "requires_new_project": true,
+    "requires_ai_operated_business": true,
+    "real_users_revenue_emphasized": true
+  },
+  "go_conditions": [
+    "devpost_account_route_approved",
+    "google_cloud_api_cost_scope_approved",
+    "legal_entity_residency_eligibility_reviewed",
+    "public_action_plan_approved",
+    "credible_users_revenue_plan_before_deadline"
+  ],
+  "next_action": "Create gemini-xprize-agent-company-fit-gate-20260616.md.",
+  "runtime_boundary": {
+    "devpost_registration": false,
+    "google_cloud_or_api_use": false,
+    "account_actions": false,
+    "payment_or_revenue_actions": false,
+    "public_actions": false,
+    "submission": false,
+    "external_side_effects": false
+  }
+}

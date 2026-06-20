@@ -1,0 +1,25 @@
+{
+  "schema_version": "agent_company.optimism_portal_invariant_memo_report.v1",
+  "generated_utc": "2026-06-17T22:04:11Z",
+  "task_id": "task-optimism-portal-invariant-memo-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "title": "OptimismPortal opi-007 l2Sender Invariant Memo v1",
+  "selected_asset": "OptimismPortal / OptimismPortal2",
+  "selected_invariant": "opi-007 l2Sender guard and reset",
+  "status": "no_finding_local_memo",
+  "state_matrix_rows": 6,
+  "source_observation_count": 6,
+  "source_files": [
+    {
+      "name": "OptimismPortal2.sol",
+      "sha256": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F"
+    },
+    {
+      "name": "OptimismPortal2.t.sol",
+      "sha256": "FF9721FAD3CED4B7FBE7CE1B008EBD41897C2B3457F1D4E45EC0C209A28E3935"
+    }
+  ],
+  "conclusion": "No vulnerability claim. The source and upstream tests show a deliberate l2Sender reentrancy guard and reset pattern. The valuable next local task is explicit post-state assertion coverage across success, failed target, estimation revert, insufficient gas, nested call, and external-proof finalization paths.",
+  "submission_ready_count": 0,
+  "next_action": "Create a local fixture design packet or patch plan for l2Sender postcondition assertions before any proof execution."
+}

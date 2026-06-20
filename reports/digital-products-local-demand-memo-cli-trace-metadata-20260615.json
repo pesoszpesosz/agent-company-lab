@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-cli-test-20260615.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-cli-validation-20260615.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-cli-20260615.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-demand-memo-cli-20260615",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:09:48Z",
+  "memo_lane_id": "digital_products_templates_plugins",
+  "memo_task_id": "task-digital-products-local-demand-memo-20260615",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "8C0AC2AEE78CB5AFB2864AC00FBD0470DDC78941B0CFA07322E91D6EACF34B61",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

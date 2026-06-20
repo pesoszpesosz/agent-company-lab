@@ -1,0 +1,179 @@
+{
+  "schema_version": "agent_company.security_report_quality_gate.v1",
+  "generated_utc": "2026-06-17T21:54:02Z",
+  "task_id": "task-security-report-quality-gate-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "program_context": {
+    "platform": "Immunefi",
+    "program": "Optimism",
+    "mode": "report_only_quality_gate",
+    "submission_ready_count": 0,
+    "authorized_actions": [
+      "local artifact review",
+      "public read-only source review",
+      "local report draft validation"
+    ],
+    "forbidden_actions": [
+      "mainnet testing",
+      "public testnet testing",
+      "automated target traffic",
+      "account registration",
+      "private report submission",
+      "public disclosure",
+      "wallet action",
+      "payment action"
+    ]
+  },
+  "source_urls": [
+    "https://immunefi.com/blog/security-guides/how-to-submit-bug-reports-that-get-paid/",
+    "https://immunefi.com/rules/",
+    "https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/optimism/scope/"
+  ],
+  "quality_gates": [
+    {
+      "gate_id": "srg-001",
+      "name": "Program terms freshness",
+      "category": "source_freshness",
+      "required_evidence": "Candidate report includes current Immunefi rules, Optimism information page, Optimism scope page, and retrieval timestamp.",
+      "fail_condition": "Any report uses stale or uncited program terms.",
+      "status": "required_before_candidate_review"
+    },
+    {
+      "gate_id": "srg-002",
+      "name": "Asset in scope",
+      "category": "scope",
+      "required_evidence": "Candidate maps the affected component to the Optimism asset scope table and category.",
+      "fail_condition": "Affected asset is missing, third-party-only, retired, or not tied to an in-scope Optimism asset.",
+      "status": "hard_stop_if_missing"
+    },
+    {
+      "gate_id": "srg-003",
+      "name": "Impact in scope",
+      "category": "scope",
+      "required_evidence": "Candidate maps the alleged impact to an explicit Optimism in-scope impact and Immunefi severity class.",
+      "fail_condition": "Impact is inferred, best-practice-only, purely theoretical, or listed as out of scope.",
+      "status": "hard_stop_if_missing"
+    },
+    {
+      "gate_id": "srg-004",
+      "name": "Known issue and duplicate clearance",
+      "category": "duplicate_control",
+      "required_evidence": "Candidate passes optimism-known-issue-duplicate-matrix-v1 controls with row-level notes.",
+      "fail_condition": "Candidate overlaps known issue tables, duplicate routes, public disclosures, upstream-only routes, or default out-of-scope rows.",
+      "status": "hard_stop_if_uncleared"
+    },
+    {
+      "gate_id": "srg-005",
+      "name": "No prohibited testing",
+      "category": "safety",
+      "required_evidence": "Candidate proof plan is local-only and explicitly excludes mainnet, public testnet, automated target traffic, DoS, phishing, and third-party systems.",
+      "fail_condition": "Proof depends on live target interaction or any prohibited activity.",
+      "status": "hard_stop_for_autonomous_agent"
+    },
+    {
+      "gate_id": "srg-006",
+      "name": "Runnable local PoC plan",
+      "category": "proof",
+      "required_evidence": "Candidate includes a runnable local PoC or a precise local PoC build plan with commands, fixtures, expected output, and failure mode.",
+      "fail_condition": "PoC is only prose, pseudocode, screenshots, or a contract dump.",
+      "status": "required_before_report_draft"
+    },
+    {
+      "gate_id": "srg-007",
+      "name": "Exploitability and preconditions",
+      "category": "proof",
+      "required_evidence": "Candidate states attacker capabilities, required privileges, chain state assumptions, timing assumptions, and any unusual user interaction.",
+      "fail_condition": "Exploit requires unstated privileged access, unrealistic oracle behavior, governance capture, or unproven environment control.",
+      "status": "required_before_report_draft"
+    },
+    {
+      "gate_id": "srg-008",
+      "name": "Economic impact quantification",
+      "category": "impact",
+      "required_evidence": "Candidate estimates direct funds at risk, affected assets, impacted users/protocols, and maximum plausible damage.",
+      "fail_condition": "Impact is not quantified or selected impact does not match evidence.",
+      "status": "required_before_severity_claim"
+    },
+    {
+      "gate_id": "srg-009",
+      "name": "Severity classification alignment",
+      "category": "impact",
+      "required_evidence": "Candidate maps impact to Immunefi v2.3 severity language and Optimism reward category without overstating severity.",
+      "fail_condition": "Severity is misclassified, exaggerated, or mismatched to impact/asset category.",
+      "status": "required_before_severity_claim"
+    },
+    {
+      "gate_id": "srg-010",
+      "name": "Minimal reproduction and logs",
+      "category": "proof",
+      "required_evidence": "Candidate records exact reproduction steps, local command output, logs, diffs, traces, or state assertions.",
+      "fail_condition": "Reviewer cannot reproduce the issue from local artifacts.",
+      "status": "required_before_report_draft"
+    },
+    {
+      "gate_id": "srg-011",
+      "name": "Root cause and affected code path",
+      "category": "analysis",
+      "required_evidence": "Candidate identifies the vulnerable code path, invariant violation, missing check, or protocol design failure.",
+      "fail_condition": "Report only shows symptoms or broad suspicion.",
+      "status": "required_before_report_draft"
+    },
+    {
+      "gate_id": "srg-012",
+      "name": "Remediation guidance",
+      "category": "analysis",
+      "required_evidence": "Candidate proposes a specific mitigation, patch direction, or invariant to enforce.",
+      "fail_condition": "No actionable recommendation or recommendation breaks intended behavior.",
+      "status": "required_before_report_draft"
+    },
+    {
+      "gate_id": "srg-013",
+      "name": "Report quality structure",
+      "category": "report_quality",
+      "required_evidence": "Draft has title, summary, affected asset, vulnerability details, impact, risk breakdown, PoC, remediation, references, and scope notes.",
+      "fail_condition": "Draft is vague, three-line, AI-spray-like, missing runnable proof, or not in English.",
+      "status": "required_before_submission_packet"
+    },
+    {
+      "gate_id": "srg-014",
+      "name": "KYC and payout awareness",
+      "category": "payout_gate",
+      "required_evidence": "Draft packet states that KYC may be required for payout and that no payout account setup is authorized here.",
+      "fail_condition": "Agent assumes payout path or asks for sensitive personal/payment data.",
+      "status": "operator_review_required"
+    },
+    {
+      "gate_id": "srg-015",
+      "name": "Responsible publication guard",
+      "category": "disclosure",
+      "required_evidence": "Draft packet records no public disclosure and no publication without the program's responsible-publication approval path.",
+      "fail_condition": "Candidate suggests public post, GitHub issue, social thread, or disclosure before fix/payment/approval.",
+      "status": "hard_stop_for_public_action"
+    },
+    {
+      "gate_id": "srg-016",
+      "name": "Submission authorization",
+      "category": "approval",
+      "required_evidence": "A separate approved security_report_submission_gate service request exists for the exact program, asset, report, and route.",
+      "fail_condition": "No exact approved service request exists.",
+      "status": "hard_stop_before_submission"
+    },
+    {
+      "gate_id": "srg-017",
+      "name": "Side-effect audit",
+      "category": "boundary",
+      "required_evidence": "Validation confirms no browser/account/service-request assignment/worker/runtime/security-test/report/public/wallet/payment/external side effects.",
+      "fail_condition": "Any side effect occurred without exact approval.",
+      "status": "required_for_all_packets"
+    }
+  ],
+  "summary": {
+    "gate_count": 17,
+    "hard_stop_count": 7,
+    "submission_ready_count": 0,
+    "next_required_artifact": "optimism_local_review_candidate_filter_v1",
+    "next_action": "Use this gate before any Optimism target-specific code review, report draft, or submission packet."
+  }
+}

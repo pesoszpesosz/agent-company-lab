@@ -1,0 +1,14 @@
+{
+  "api_calls": false,
+  "catalog_service_id": "legal_kyc_tax_payment_gate",
+  "db_request_created": true,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-14T15:26:51Z",
+  "lane_id": "digital_products_templates_plugins",
+  "missing_fields": [],
+  "request_id": "req-next-wave-digital-legal-payment-review-20260614",
+  "request_type": "legal_kyc_tax_payment",
+  "source": "agent_company.py scaffold-service-request",
+  "validation_ok": true,
+  "warnings": []
+}

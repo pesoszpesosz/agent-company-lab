@@ -1,0 +1,26 @@
+{
+  "boundary": {
+    "allo_profile_or_pool_created": false,
+    "browser_sessions_started": 0,
+    "donations_checkouts_matching_claims_or_payouts": 0,
+    "external_side_effects": 0,
+    "gitcoin_account_or_login": false,
+    "github_oauth_or_credentials_used": false,
+    "grant_applications_submitted": 0,
+    "kyc_or_identity_verification_started": false,
+    "model_mcp_or_external_api_calls": 0,
+    "passport_or_stamps_connected": false,
+    "public_posts_or_contribution_solicitation": 0,
+    "service_requests_mutated": 0,
+    "tag_requests_or_round_applications": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "local_proof_completed",
+  "generated_at": "2026-06-18T07:37:06Z",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "schema_version": "gitcoin_grant_fit_local_proof.trace.v1",
+  "source": "tools/create_gitcoin_grant_fit_local_proof.py",
+  "summary": "Gitcoin grant-fit packet created with no account, GitHub OAuth, KYC, Passport, wallet, transaction, grant submission, payment, public action, runtime, model/MCP call, or external side effect.",
+  "task_id": "task-lane-scout-gitcoin_grants-20260618"
+}

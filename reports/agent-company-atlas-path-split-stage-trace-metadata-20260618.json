@@ -1,0 +1,50 @@
+{
+  "id": "trace-agent-company-atlas-path-split-stage-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-split-stage-v1-20260618",
+  "event_id": "trace-atlas_path_split_stage_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-split-stage-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Split Stage",
+  "summary": "Changed the wide Path Map mission stage from a vertical stack into a split HUD: Mission Glance and Stage Ribbon sit beside the Core Deck while archive and utility modules resume full-width below.",
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_split_stage.py"
+  ],
+  "browser_verification": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-split-stage-final3-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "body_deck": "command",
+    "scroll_y": 0,
+    "overflow_x": 0,
+    "path_map_board_y": 220,
+    "path_mission_glance_y": 231,
+    "path_mission_glance_height": 182,
+    "path_stage_ribbon_y": 458,
+    "path_stage_ribbon_height": 66,
+    "path_stage_ribbon_bottom": 524,
+    "path_core_deck_y": 231,
+    "path_core_deck_height": 327,
+    "path_core_deck_bottom": 558,
+    "path_core_tabs_y": 239,
+    "path_core_tabs_bottom": 286,
+    "path_chapter_archive_y": 568,
+    "path_chapter_archive_grid_column": "1 / -1",
+    "path_utility_dock_y": 1005,
+    "path_utility_dock_grid_column": "1 / -1"
+  },
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_split_stage.py -q failed before implementation because mission-stage grid columns were missing.",
+    "Browser runtime caught an over-tall split Mission Glance; the test was strengthened and the split-mode Mission Glance, stat cards, and ribbon were compacted.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_split_stage.py -q",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_viewport_stage.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_mission_stage.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas (41 passed, 55 deselected)",
+    "python -c snapshot check confirmed split task and split trace are present with 12 lanes"
+  ]
+}

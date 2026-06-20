@@ -1,0 +1,377 @@
+{
+  "brief_fields": [
+    "program_url",
+    "observed_utc",
+    "program_name",
+    "program_type",
+    "program_status",
+    "public_or_private",
+    "requires_invitation",
+    "identity_or_2fa_requirement",
+    "reward_program",
+    "cash_reward_range",
+    "kudos_or_points_only",
+    "managed_by_bugcrowd",
+    "safe_harbor_status",
+    "disclose_io_status",
+    "official_communication_channels",
+    "disclosure_policy",
+    "brief_last_updated",
+    "target_groups",
+    "in_scope_targets",
+    "out_of_scope_targets",
+    "target_technology",
+    "reward_range_by_target",
+    "vrt_priority_mapping",
+    "program_rules",
+    "forbidden_testing",
+    "credential_or_test_account_policy",
+    "rate_limit_or_automation_policy",
+    "known_issues_available",
+    "duplicate_risk_signal",
+    "submission_limit_or_throttle",
+    "report_required_fields",
+    "proof_of_concept_expectations",
+    "payment_method_or_tax_gate",
+    "local_static_candidate_source",
+    "score",
+    "kill_reasons",
+    "next_local_action"
+  ],
+  "hard_kill_reasons": [
+    "vdp_charity_points_only_or_no_cash_reward_for_cash_lane",
+    "program_private_invite_or_membership_required",
+    "brief_unreadable_without_account_or_terms_acceptance",
+    "scope_or_reward_range_unclear",
+    "safe_harbor_or_disclosure_terms_missing_or_partial_without_clarity",
+    "requires_testing_out_of_scope_targets",
+    "requires_live_security_testing_without_explicit_approval",
+    "requires_credentials_pii_social_engineering_dos_spam_or_phishing",
+    "known_issue_duplicate_or_first_reporter_status_unlikely",
+    "vrt_priority_too_low_or_non_exploitable_for_cash_effort",
+    "submission_limit_or_platform_privilege_risk_unclear",
+    "cannot_produce_local_static_or_fixture_based_proof"
+  ],
+  "program_rows": [
+    {
+      "brief_last_updated": "saved_public_snippet",
+      "cash_reward_range": {
+        "max": 5000,
+        "min": 150
+      },
+      "credential_or_test_account_policy": "no_credentials_for_local_fixture",
+      "disclose_io_status": "clear",
+      "disclosure_policy": "coordinated_private_report",
+      "duplicate_risk_signal": "not_checked_no_browser_session",
+      "forbidden_testing": [
+        "dos",
+        "social_engineering",
+        "credential_attacks",
+        "pii_access",
+        "live_scanning"
+      ],
+      "identity_or_2fa_requirement": "unknown_requires_review",
+      "in_scope_targets": [
+        "https://github.com/example/reward-oss"
+      ],
+      "known_issues_available": true,
+      "kudos_or_points_only": false,
+      "local_static_candidate_source": "public_source_code_review_only",
+      "managed_by_bugcrowd": true,
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [
+        "bugcrowd_platform_only_after_approval"
+      ],
+      "out_of_scope_targets": [
+        "production_services",
+        "customer_data",
+        "social_engineering",
+        "dos"
+      ],
+      "payment_method_or_tax_gate": "unknown_requires_human_review",
+      "program_name": "Example Reward OSS brief saved row",
+      "program_rules": [
+        "source_review_ok",
+        "no_live_target_testing_in_this_packet"
+      ],
+      "program_status": "open",
+      "program_type": "reward",
+      "program_url": "https://bugcrowd.com/example-reward-oss",
+      "proof_of_concept_expectations": "local_static_or_fixture_evidence_only",
+      "public_or_private": "public",
+      "rate_limit_or_automation_policy": "unknown_do_not_test",
+      "report_required_fields": [
+        "summary",
+        "target",
+        "technical_severity",
+        "vrt",
+        "details",
+        "attachments"
+      ],
+      "requires_invitation": false,
+      "reward_program": true,
+      "reward_range_by_target": {
+        "public_source_repository": "$150-$5000"
+      },
+      "safe_harbor_status": "full_or_clear_disclose_io",
+      "submission_limit_or_throttle": "unknown",
+      "target_groups": [
+        "public_source_repository",
+        "documentation"
+      ],
+      "target_technology": [
+        "python",
+        "web"
+      ],
+      "vrt_priority_mapping": "P2_or_P3_if_exploitable"
+    },
+    {
+      "brief_last_updated": "saved_public_snippet",
+      "cash_reward_range": {
+        "max": 0,
+        "min": 0
+      },
+      "credential_or_test_account_policy": "unknown",
+      "disclose_io_status": "partial",
+      "disclosure_policy": "coordinated_disclosure",
+      "duplicate_risk_signal": "unknown",
+      "forbidden_testing": [
+        "active_testing_without_approval"
+      ],
+      "identity_or_2fa_requirement": "unknown",
+      "in_scope_targets": [
+        "https://example-vdp.invalid"
+      ],
+      "known_issues_available": false,
+      "kudos_or_points_only": true,
+      "local_static_candidate_source": "practice_only_no_cash",
+      "managed_by_bugcrowd": false,
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [
+        "program_email_or_platform"
+      ],
+      "out_of_scope_targets": [
+        "everything_else"
+      ],
+      "payment_method_or_tax_gate": "not_applicable_no_cash",
+      "program_name": "Example VDP saved row",
+      "program_rules": [
+        "read_policy_only"
+      ],
+      "program_status": "open",
+      "program_type": "vdp",
+      "program_url": "https://bugcrowd.com/example-vdp",
+      "proof_of_concept_expectations": "unknown",
+      "public_or_private": "public",
+      "rate_limit_or_automation_policy": "unknown",
+      "report_required_fields": [
+        "summary",
+        "details"
+      ],
+      "requires_invitation": false,
+      "reward_program": false,
+      "reward_range_by_target": {},
+      "safe_harbor_status": "partial",
+      "submission_limit_or_throttle": "unknown",
+      "target_groups": [
+        "web"
+      ],
+      "target_technology": [
+        "web"
+      ],
+      "vrt_priority_mapping": "informational"
+    },
+    {
+      "brief_last_updated": "hidden",
+      "cash_reward_range": {
+        "max": 10000,
+        "min": 250
+      },
+      "credential_or_test_account_policy": "private",
+      "disclose_io_status": "unknown",
+      "disclosure_policy": "private",
+      "duplicate_risk_signal": "private",
+      "forbidden_testing": [
+        "all_testing_without_membership"
+      ],
+      "identity_or_2fa_requirement": "invite_membership_required",
+      "in_scope_targets": [],
+      "known_issues_available": false,
+      "kudos_or_points_only": false,
+      "local_static_candidate_source": "none_private_membership_required",
+      "managed_by_bugcrowd": true,
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [],
+      "out_of_scope_targets": [],
+      "payment_method_or_tax_gate": "unknown_requires_human_review",
+      "program_name": "Example private invite row",
+      "program_rules": [
+        "membership_required"
+      ],
+      "program_status": "invite_only",
+      "program_type": "reward",
+      "program_url": "https://bugcrowd.com/example-private-invite",
+      "proof_of_concept_expectations": "private",
+      "public_or_private": "private",
+      "rate_limit_or_automation_policy": "private",
+      "report_required_fields": [],
+      "requires_invitation": true,
+      "reward_program": true,
+      "reward_range_by_target": {},
+      "safe_harbor_status": "private_unreadable",
+      "submission_limit_or_throttle": "private",
+      "target_groups": [],
+      "target_technology": [],
+      "vrt_priority_mapping": "private"
+    },
+    {
+      "brief_last_updated": "saved_public_snippet",
+      "cash_reward_range": {
+        "max": 1500,
+        "min": 50
+      },
+      "credential_or_test_account_policy": "no_test_credentials",
+      "disclose_io_status": "partial",
+      "disclosure_policy": "private_report",
+      "duplicate_risk_signal": "not_checked_no_browser_session",
+      "forbidden_testing": [
+        "scanning",
+        "dos",
+        "credential_attacks",
+        "pii"
+      ],
+      "identity_or_2fa_requirement": "unknown_requires_review",
+      "in_scope_targets": [
+        "https://example-web-only.invalid"
+      ],
+      "known_issues_available": true,
+      "kudos_or_points_only": false,
+      "local_static_candidate_source": "no_public_source_static_path",
+      "managed_by_bugcrowd": true,
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [
+        "bugcrowd_platform_only_after_approval"
+      ],
+      "out_of_scope_targets": [
+        "automated_scanning",
+        "dos",
+        "social_engineering",
+        "pii"
+      ],
+      "payment_method_or_tax_gate": "unknown_requires_human_review",
+      "program_name": "Example reward web-only row",
+      "program_rules": [
+        "must_review_full_brief_before_testing"
+      ],
+      "program_status": "open",
+      "program_type": "reward",
+      "program_url": "https://bugcrowd.com/example-reward-web-only",
+      "proof_of_concept_expectations": "live_repro_expected_but_not_allowed_here",
+      "public_or_private": "public",
+      "rate_limit_or_automation_policy": "unknown",
+      "report_required_fields": [
+        "summary",
+        "target",
+        "vrt",
+        "details"
+      ],
+      "requires_invitation": false,
+      "reward_program": true,
+      "reward_range_by_target": {
+        "web": "$50-$1500"
+      },
+      "safe_harbor_status": "partial",
+      "submission_limit_or_throttle": "unknown",
+      "target_groups": [
+        "web"
+      ],
+      "target_technology": [
+        "web"
+      ],
+      "vrt_priority_mapping": "P4_or_unknown_from_snippet"
+    }
+  ],
+  "schema_version": "security_bounty.bugcrowd_no_login_public_program_fixture.v1",
+  "scoring_rubric": [
+    {
+      "factor": "reward_clarity",
+      "good": "brief shows reward ranges for the specific in-scope target",
+      "points": 20
+    },
+    {
+      "factor": "scope_clarity",
+      "good": "in-scope and out-of-scope target groups are explicit",
+      "points": 15
+    },
+    {
+      "factor": "safe_harbor_clarity",
+      "good": "full safe harbor or clear disclose.io terms are visible",
+      "points": 15
+    },
+    {
+      "factor": "vrt_fit",
+      "good": "candidate weakness maps cleanly to VRT P1-P3 with realistic impact",
+      "points": 10
+    },
+    {
+      "factor": "local_static_proofability",
+      "good": "candidate can be proven from source, docs, fixtures, or local reproduction",
+      "points": 15
+    },
+    {
+      "factor": "duplicate_known_issue_risk",
+      "good": "known issues or public examples do not already cover the path",
+      "points": 10
+    },
+    {
+      "factor": "low_harm_profile",
+      "good": "no out-of-scope, DoS, spam, PII, social engineering, or credential-heavy testing needed",
+      "points": 10
+    },
+    {
+      "factor": "payment_gate_clarity",
+      "good": "reward payout method/tax steps are known and remain post-award gates",
+      "points": 5
+    }
+  ],
+  "source": "manually_saved_public_program_list_and_bounty_brief_snippets_no_bugcrowd_login_no_testing",
+  "source_gate_notes": [
+    "At least six current/public or local sources are recorded.",
+    "Packet separates Reward programs from VDP, charity, private, invite, and non-cash rows.",
+    "At least twenty brief fields are defined.",
+    "At least five triage stages are defined.",
+    "At least eight hard kill reasons are defined.",
+    "At least one local-only stage is allowed and no live testing stage is allowed.",
+    "Boundary proves no Bugcrowd account, browser session, program follow, support contact, target test, report, payment, public action, worker/runtime, model/MCP call, or external side effect occurred.",
+    "Bugcrowd describes the public list as a comprehensive list of bug bounty and vulnerability disclosure programs curated by the hacker community.",
+    "The list is discovery-only; individual program briefs still control scope, rules, rewards, and disclosure.",
+    "Bugcrowd positions the hacker route as a way to report vulnerabilities ethically and earn rewards.",
+    "The page advertises public engagements, triage, standardized VRT, program variety, and payments to hackers.",
+    "This supports a rules-first bounty lane but not account setup, testing, submission, or payment setup.",
+    "Public programs are open to researchers, while private programs require invitations and may have geographic, identity, trust, or skill restrictions.",
+    "The docs say each program brief includes specific disclosure policy and rules that researchers must follow.",
+    "Preset filters separate Reward, Vulnerability Disclosure, Charity, participating, invite, and hidden program categories.",
+    "Bugcrowd says the bounty brief contains targets, goals, scope, out-of-scope areas, additional rules, rewards, and expected review timing.",
+    "It says to review the complete brief before beginning testing.",
+    "It states out-of-scope testing can lead to out-of-scope results, point penalties, platform escalation, or bans.",
+    "It notes VDP programs no longer offer point rewards, which reinforces reward-route separation.",
+    "Bugcrowd describes disclose.io as a vendor-agnostic framework for safe harbor in bug bounty and vulnerability disclosure programs.",
+    "Program owners should provide in-scope properties, rewards, official communication channels, and disclosure policy.",
+    "Bugcrowd distinguishes full safe harbor from partial safe harbor, so the triage packet must capture the safe harbor status.",
+    "Bugcrowd says vulnerability reports should explain where the bug was found, who it affects, reproduction, affected parameters, and proof-of-concept support.",
+    "Required report fields include summary title, target, technical severity/VRT, vulnerability details, and attachments.",
+    "Submissions cannot be edited after being reported, making the submit action an explicit approval gate.",
+    "Cash rewards require a program that offers cash, an in-scope valid bug, reproducibility by triage or the program owner, and first-reporter status.",
+    "Reward amount is set by the program owner with Bugcrowd input and varies by program, priority, and business impact.",
+    "Duplicate and known issues can block cash reward eligibility.",
+    "Bugcrowd VRT is the baseline priority-rating resource for common vulnerabilities.",
+    "The public page exposes a downloadable JSON VRT 1.18 and a GitHub conversation route for taxonomy changes.",
+    "VRT priority is necessary but not sufficient for cash: program scope, impact, duplicates, and owner decision still matter.",
+    "The prior security scan recommended rules-first security bounty work and static review before any target activity.",
+    "It ranked Bugcrowd-like program rule review as high-upside only after scope and authorization are clear.",
+    "The HackerOne packet established the reusable security-bounty pattern: classify reward route, scope, safe harbor, duplicate risk, reporting route, and payment gates before any testing.",
+    "Bugcrowd uses a distinct vocabulary around bounty briefs, VRT, CrowdStream, and safe harbor icons, so it gets its own packet."
+  ],
+  "source_proof_path": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\bugcrowd-rules-first-triage-local-proof.json",
+  "source_scout_task_id": "task-lane-scout-bugcrowd_program_rules-20260618"
+}

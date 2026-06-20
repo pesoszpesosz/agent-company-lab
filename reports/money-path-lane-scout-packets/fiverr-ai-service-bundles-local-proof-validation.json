@@ -1,0 +1,56 @@
+{
+  "schema_version": "digital_products.fiverr_ai_service_bundles_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:32:55Z",
+  "task_id": "task-lane-scout-fiverr_ai_services-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\fiverr-ai-service-bundles-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\fiverr-ai-service-bundles-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "three_bundles_present",
+      "passed": true
+    },
+    {
+      "check": "all_bundles_have_scope_deliverables_turnaround",
+      "passed": true
+    },
+    {
+      "check": "all_bundles_have_gates",
+      "passed": true
+    },
+    {
+      "check": "all_bundles_have_local_evidence_assets",
+      "passed": true
+    },
+    {
+      "check": "recommended_first_bundle_present",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "acceptance_checks_present",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "fiverr_account_or_login": false,
+    "seller_profile_created_or_edited": false,
+    "gigs_created_or_edited": 0,
+    "messages_sent": 0,
+    "orders_or_payments": 0,
+    "terms_or_payout_setup": false,
+    "client_private_data_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_eight_sources",
+      "passed": true
+    },
+    {
+      "name": "has_hackathon_source",
+      "passed": true
+    },
+    {
+      "name": "has_terms_source",
+      "passed": true
+    },
+    {
+      "name": "disambiguates_buidl",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_twenty_opportunity_fields",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_six_route_stages",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_eight_scoring_factors",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_ten_hard_kill_reasons",
+      "passed": true
+    },
+    {
+      "name": "has_local_allowed_stage",
+      "passed": true
+    },
+    {
+      "name": "no_submission_stage_allowed",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_wallet",
+      "passed": true
+    },
+    {
+      "name": "no_profiles_or_submissions",
+      "passed": true
+    },
+    {
+      "name": "no_vote_payment_or_public_action",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T07:44:12Z",
+  "schema_version": "dorahacks_scout_template_local_proof.validation.v1",
+  "task_id": "task-lane-scout-dorahacks_hackathons_grants-20260618"
+}

@@ -1,0 +1,37 @@
+{
+  "generated_utc": "2026-06-14T14:52:00Z",
+  "source_plan": "E:\\agent-company-lab\\reports\\wave4-manager-launch-plan-20260614.md",
+  "threads_created": true,
+  "external_side_effects": false,
+  "browser_actions": false,
+  "public_actions": false,
+  "threads": [
+    {
+      "lane_id": "money_source_discovery",
+      "thread_id": "019ec699-e02b-7ce1-a7a6-32afc857c254",
+      "title": "Wave4 Manager - Money Source Discovery",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-money-source-discovery\\outputs",
+      "manager_packet": "E:\\agent-company-lab\\reports\\manager-packets\\money_source_discovery-manager-packet.md",
+      "starter_service_request": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "boundary": "Read-only source mapping only until approved service request."
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "thread_id": "019ec69a-3c39-7de3-849b-f2d19a2d03da",
+      "title": "Wave4 Manager - AI ML Competitions",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-ai-ml-competitions\\outputs",
+      "manager_packet": "E:\\agent-company-lab\\reports\\manager-packets\\ai_ml_competitions-manager-packet.md",
+      "starter_service_request": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "boundary": "Competition research and local baseline planning only until approved service request."
+    },
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "thread_id": "019ec69a-9fe3-7530-b83e-ae404554bca7",
+      "title": "Wave4 Manager - Digital Products",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-digital-products-templates-plugins\\outputs",
+      "manager_packet": "E:\\agent-company-lab\\reports\\manager-packets\\digital_products_templates_plugins-manager-packet.md",
+      "starter_service_request": "req-wave4-digital-products-browser-readonly-20260614",
+      "boundary": "Product research and local prototype planning only until approved service request."
+    }
+  ]
+}

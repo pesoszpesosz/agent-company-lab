@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.public_action_egress_apply_command_contract.v1",
+  "title": "Public Action Egress Apply Command Contract v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "command_id",
+    "command_type",
+    "target_route_id",
+    "target_egress_type",
+    "source_apply_preflight_blocker_path",
+    "source_guard_validation_path",
+    "expected_source_apply_preflight_status",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "exact_action_body_approval_path",
+    "exact_action_body_approval_present",
+    "allowed_scope",
+    "target_request_ids",
+    "immutable_action_body_sha256",
+    "apply_command_allowed",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "public_action_allowed",
+    "public_actions",
+    "browser_session_start_allowed",
+    "account_actions",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.public_action_egress_apply_command_contract.v1"
+    },
+    "command_type": {
+      "type": "string",
+      "enum": ["deny_noop", "report_only_apply_command_contract"]
+    },
+    "target_route_id": {
+      "const": "public_action_gateway"
+    },
+    "target_egress_type": {
+      "const": "public_submission"
+    },
+    "apply_command_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "public_action_allowed": {
+      "const": false
+    },
+    "public_actions": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "account_actions": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

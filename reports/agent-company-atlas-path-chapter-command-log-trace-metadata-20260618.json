@@ -1,0 +1,85 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-command-log-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-command-log-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_command_log_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Command Log inside the selected Path Map Chapter Archive record deck so each chapter shows the current suggested local draft, staged outbox items, browser-local operator history, and chapter context in one compact handoff timeline.",
+  "design_research": {
+    "queries": [
+      "command center activity log UX pattern operations dashboard timeline handoff",
+      "audit trail dashboard UX activity log command center design pattern",
+      "incident response handoff timeline tasks communication log dashboard UX"
+    ],
+    "source_urls": [
+      "https://www.atlassian.com/incident-management/handbook",
+      "https://www.atlassian.com/incident-management/handbook/incident-response",
+      "https://www.nngroup.com/articles/dashboards-preattentive/",
+      "https://www.ibm.com/docs/en/decision-intelligence?topic=dashboards-drill-down-capabilities"
+    ],
+    "pattern_notes": [
+      "Command-center dashboards need fast status recognition plus a clear path to the next action.",
+      "Handoff timelines are more useful when they combine current state, queued work, and recent operator actions.",
+      "Audit-style activity logs should be compact, sequential, and scoped to the thing the operator is inspecting."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_command_log.py",
+      "reports/agent-company-atlas-path-chapter-command-log-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.dispatchConsole.suggestions[]",
+      "browser-local state.stagedDispatches",
+      "browser-local state.dispatchHistory",
+      "pathChapterArchiveItems(trail).items",
+      "pathChapterTone(chapter)"
+    ],
+    "ui_contract": [
+      "Render Chapter Command Log inside the selected Chapter Archive record deck.",
+      "Show the current suggested local command for the selected lane.",
+      "Show staged outbox and browser-local history rows scoped to the lane when present.",
+      "Always include selected chapter context so fresh browsers still have a useful handoff trail.",
+      "Expose Q, COM, and TRL actions without sending messages or starting workers.",
+      "Keep the log responsive with no clipped labels or horizontal overflow."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_command_log.py -q failed before frontend wiring on missing function pathChapterCommandLogRecords.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_command_log.py -q passed after implementation."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-command-log-scriptfresh#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Command Log for the 06/15 chapter with five entries: suggested gated draft, queued outbox drafts, local operator history, and selected chapter context. Actions rendered as OK/COM/TRL after the fresh script cache loaded."
+    },
+    "local_queue_action": {
+      "status": "passed",
+      "evidence": "The command-log Q/OK button resolved to exactly one element and clicked successfully through the existing browser-local lane staging handler. The detail panel now refreshes after staging so queued lanes can show OK state."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one command log with five entries, OK/COM/TRL actions, no horizontal overflow, no bad rectangles, no clipped command text, and no console errors."
+    }
+  }
+}

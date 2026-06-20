@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "agent-company-atlas-trace.v1",
+  "traceId": "trace-agent-company-atlas-offer-route-v1-20260617",
+  "generatedUtc": "2026-06-17T16:51:07Z",
+  "laneId": "lead_generation_and_sales",
+  "title": "Offer Route Custom Minigame",
+  "status": "complete",
+  "research": {
+    "queries": [
+      "sales pipeline visualization CRM kanban board stages UI best practices",
+      "deal flow pipeline dashboard visualization stages scoring UI",
+      "gamification sales pipeline dashboard progress achievements UI"
+    ],
+    "takeaways": [
+      "Deal-flow interfaces commonly organize work by pipeline stages and make bottlenecks visible.",
+      "Qualification, evidence, safety, and close readiness can be represented as route gates without requiring live outreach.",
+      "A reusable lane minigame should score generic trail and count signals rather than hard-coded workspace assumptions."
+    ],
+    "sources": [
+      "https://www.salesforce.com/sales/pipeline/",
+      "https://www.atlassian.com/agile/kanban/boards",
+      "https://www.pipedrive.com/en/blog/sales-pipeline"
+    ]
+  },
+  "imageGeneration": {
+    "mode": "built_in_image_gen",
+    "sourcePath": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_077fe9e11c81b7ea016a32d0389ce481918c151473e9ebceb3.png",
+    "workspacePath": "web/assets/games/offer-route-bg-20260617.png",
+    "prompt": "Use case: stylized-concept. Asset type: website game module background texture for a static dashboard minigame. Primary request: premium dark game UI background for an Offer Route module about lead generation, sales qualification, truthful outreach, offer packaging, and safe channel gates. Scene/backdrop: futuristic deal room strategy table with glowing pipeline lanes, offer cards, qualification locks, route arrows, stage gates, opt-out safety rails, and warm contract-light accents. Subject: abstract sales route board, cards, gates, signal nodes, protected channel paths, small luminous deal tokens; no people. Style/medium: polished 3D game concept art, premium SaaS-game hybrid, sophisticated and restrained. Composition/framing: wide landscape dashboard texture, dark open center with negative space for UI cards, richer detail along left and right edges, no frame or border. Lighting/mood: high-end command center, focused, strategic, warm amber and coral highlights balanced with teal control lights. Color palette: dark charcoal, muted coral, amber, teal, small green success accents, subtle violet only in shadows. Materials/textures: smoked glass, matte graphite, holographic pipeline lines, satin metal, soft volumetric glow. Constraints: no text, no letters, no numbers, no logos, no watermark, no people, no brand marks, no currency symbols, avoid clutter in the center."
+  },
+  "implementation": {
+    "filesChanged": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/README.md"
+    ],
+    "assetsCreated": [
+      "web/assets/games/offer-route-bg-20260617.png"
+    ],
+    "frontend": [
+      "Added offer-route dispatch in renderGameView and gameStepCount.",
+      "Added buildOfferRouteStages to derive five sales-route stages from lane trail text, counts, artifacts, traces, blockers, and gates.",
+      "Added renderOfferRouteGame and renderOfferStage with focused controls, route verdict, animated pipeline, route nodes, and stage cards.",
+      "Added responsive Offer Route CSS for docked detail panels, stacked desktop, and mobile layouts."
+    ]
+  },
+  "validation": {
+    "static": {
+      "status": "passed",
+      "commands": [
+        "node --check web/app.js",
+        "python -m py_compile tools/generate_visual_dashboard_snapshot.py",
+        "python -m json.tool web/data/snapshot.json > $null",
+        "python -m json.tool web/data/lane-visuals.json > $null",
+        "python -m json.tool reports/agent-company-atlas-offer-route-trace-metadata-20260617.json > $null",
+        "python tools/generate_visual_dashboard_snapshot.py",
+        "rg -n \"[^\\x00-\\x7F]\" web/index.html web/app.js web/styles.css web/README.md web/data/lane-visuals.json reports/agent-company-atlas-offer-route-trace-metadata-20260617.json"
+      ]
+    },
+    "browser": {
+      "status": "passed",
+      "routes": [
+        {
+          "url": "http://localhost:5177/?verify=offer-route&cache=20260617-offer-route#lane=lead_generation_and_sales&view=game",
+          "viewport": "390x920",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "nodes": 5,
+          "stages": 5,
+          "controlCheck": "next advanced focus from Offer Packet to ICP Fit",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "boardOverflow": false
+        },
+        {
+          "url": "http://localhost:5177/?verify=offer-route&cache=20260617-offer-route#lane=lead_generation_and_sales&view=game",
+          "viewport": "1600x900",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "nodes": 5,
+          "stages": 5,
+          "heroColumns": "78px 193px",
+          "stageColumns": "309px",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "boardOverflow": false,
+          "consoleErrors": 0
+        },
+        {
+          "url": "http://localhost:5177/?verify=offer-route&cache=20260617-offer-route#lane=lead_generation_and_sales&view=game",
+          "viewport": "1280x800",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "nodes": 5,
+          "stages": 5,
+          "heroColumns": "78px 885px 132px",
+          "stageColumns": "221px 221px 221px 221px 221px",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "boardOverflow": false,
+          "consoleErrors": 0
+        }
+      ]
+    }
+  }
+}

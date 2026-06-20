@@ -1,0 +1,8 @@
+{
+  "lane_id": "ai_ml_competitions",
+  "target_url": "https://www.kaggle.com/competitions",
+  "allowed_read_scope": "Public competition listings and rules/overview pages only. Capture prize route, deadline, dataset access gate, evaluation metric, and account/submission requirements.",
+  "forbidden_actions": "No login, signup, competition join, dataset download, notebook submit, acceptance of rules, payment, or public action.",
+  "evidence_needed": "A local AI/ML competition shortlist with deadlines, prize route, dataset gate, baseline feasibility, and service requests needed before participation.",
+  "session_sensitivity": "public_read_only"
+}

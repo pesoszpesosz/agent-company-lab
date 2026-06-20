@@ -1,0 +1,44 @@
+{
+  "acknowledgements_checked": 3,
+  "db_counts_after": {
+    "agents": 11,
+    "artifacts": 979,
+    "lane_evidence": 210,
+    "lanes": 12,
+    "outcomes": 233,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 330,
+    "trace_events": 245
+  },
+  "db_counts_before": {
+    "agents": 11,
+    "artifacts": 979,
+    "lane_evidence": 210,
+    "lanes": 12,
+    "outcomes": 233,
+    "service_requests": 14,
+    "source_specs": 13,
+    "tasks": 330,
+    "trace_events": 245
+  },
+  "external_side_effects": false,
+  "failed_count": 0,
+  "negative_probes_checked": 3,
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "outbox_rows_updated": 0,
+    "public_actions": false,
+    "queue_enqueues": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.trace_metadata.sqlite_outbox_acknowledgement_runner.v1"
+}

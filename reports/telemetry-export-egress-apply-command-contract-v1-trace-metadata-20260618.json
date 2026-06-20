@@ -1,0 +1,39 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-telemetry-export-egress-apply-command-contract-v1-20260618",
+  "task_id": "task-telemetry-export-egress-apply-command-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "event_type": "telemetry_export_apply_command_contract_completed",
+  "target_route_id": "telemetry_export_gateway",
+  "target_egress_type": "telemetry_export",
+  "status": "report_only_contract_ready_no_external_action",
+  "zero_side_effect_boundary": {
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "telemetry_exports": 0,
+    "external_trace_exports": 0,
+    "private_prompts_uploaded": 0,
+    "credentials_exported": 0,
+    "unredacted_logs_synced": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_side_effects": false
+  },
+  "evidence": [
+    "E:\\agent-company-lab\\architecture\\telemetry-export-egress-apply-command-contract-v1.schema.json",
+    "E:\\agent-company-lab\\tools\\validate_telemetry_export_egress_apply_command_contract.py",
+    "E:\\agent-company-lab\\tests\\test_telemetry_export_egress_apply_command_contract.py",
+    "E:\\agent-company-lab\\reports\\telemetry-export-egress-apply-command-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-validation-20260618.json"
+  ],
+  "verification": [
+    "python -m unittest tests.test_telemetry_export_egress_apply_command_contract tests.test_egress_route_chain_integrity_audit"
+  ],
+  "next_action": "All report-only egress route chains now have their required non-live guard layers; continue only after real signed operator decisions and route-specific approval evidence exists."
+}

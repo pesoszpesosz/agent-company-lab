@@ -1,0 +1,24 @@
+{
+  "id": "trace-agent-company-atlas-path-core-motion-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-core-motion-v1-20260618",
+  "event_id": "trace-atlas_path_core_motion_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-core-motion-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Core Motion Rail",
+  "summary": "Added a data-driven motion rail to the Path Core Deck so SCAN, COMMAND, and ROUTE switches show a deliberate runner, progress value, and active beacon without adding vertical panels.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_path_core_motion.py"
+  ],
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_motion.py -q failed before implementation on missing pathCoreMotionMeta.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_motion.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser runtime: loaded platform_engineering Path Map in command deck, confirmed initial scan rail with three beacons and zero overflow, clicked ROUTE by measured coordinates, then confirmed active route beacon, 100% core progress, route rail mounted, mission scan/command strip unmounted, and overflow 0."
+  ]
+}

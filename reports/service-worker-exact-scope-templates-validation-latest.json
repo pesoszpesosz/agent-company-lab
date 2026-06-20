@@ -1,0 +1,35 @@
+{
+  "all_templates_no_approval": true,
+  "all_templates_require_manual_review": true,
+  "api_calls": false,
+  "draft_templates_written": 14,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T10:21:14Z",
+  "route_counts": {
+    "draft_scope_template_for_human_review": 11,
+    "terminal_complete_do_not_approve": 1,
+    "terminal_rejected_do_not_approve": 2
+  },
+  "schema_version": "service_worker_exact_scope_templates_validation.v1",
+  "scope_templates_path": "E:\\agent-company-lab\\reports\\service-worker-exact-scope-templates-latest.json",
+  "service_requests_approved_by_report": 0,
+  "service_requests_started_by_report": 0,
+  "service_requests_updated_by_report": 0,
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "templates_grant_approval": false,
+  "validated_count": 14,
+  "worker_starts": 0,
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "client_outreach_or_proposals": 0,
+    "client_private_data_used": false,
+    "dms_follows_quotes_or_tags": 0,
+    "external_side_effects": 0,
+    "fiverr_account_or_login": false,
+    "gig_or_listing_created": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_payout_setup": 0,
+    "public_posts_or_replies": 0,
+    "review_entries_created": 3,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "x_account_or_login": false
+  },
+  "decision": "draft_review_only_no_public_action",
+  "generated_at": "2026-06-18T08:55:01Z",
+  "global_gates": [
+    "no_fiverr_account_login_or_profile_change",
+    "no_gig_listing_or_marketplace_submission",
+    "no_public_post_reply_dm_or_follow",
+    "no_client_outreach_or_proposal",
+    "no_client_data_credentials_or_private_assets",
+    "no_model_mcp_or_paid_api_call",
+    "no_claim_of_realized_revenue_or_platform_rank",
+    "no_legal_tax_payment_or_payout_setup"
+  ],
+  "lane_id": "content_and_social_growth",
+  "next_local_action": "If the operator approves, create exact public-copy drafts for these three entries as local files only. Do not post, reply, DM, follow, quote, tag, create a Fiverr gig/listing, contact clients, use private data, or run model/API calls from this packet alone.",
+  "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+  "required_human_decisions": [
+    "exact_public_copy_review",
+    "source_link_and_claim_review",
+    "tone_and_human_voice_review",
+    "forbidden_claims_review",
+    "platform_logo_asset_and_ip_review",
+    "cta_offer_and_public_channel_review",
+    "x_fiverr_account_action_review",
+    "public_post_or_reply_approval"
+  ],
+  "review_entries": [
+    {
+      "approval_required_before": [
+        "turning outline into public copy",
+        "adding CTA, offer link, DM prompt, Fiverr reference, or sales language",
+        "posting to X, Fiverr, LinkedIn, blog, email, or any public channel",
+        "replying, DMing, following, tagging, quoting, or client outreach",
+        "using screenshots, customer examples, private data, copyrighted media, or platform logos"
+      ],
+      "cta_state": "no_post_no_cta",
+      "day": 1,
+      "forbidden_claims": [
+        "guaranteed revenue, client growth, ranking, reach, followers, or conversion",
+        "Fiverr endorsement, platform eligibility, seller approval, or marketplace rank",
+        "autonomous execution without human review",
+        "handling credentials, private client data, payment flows, or public posting by default",
+        "legal, tax, employment, compliance, or regulated-industry advice",
+        "use of copyrighted likenesses, music, media, or client assets without rights review"
+      ],
+      "format": "short_thread_draft",
+      "internal_outline": [
+        "Bad agent offers promise autonomy.",
+        "Good agent offers start with workflow boundaries.",
+        "The sellable artifact is a scoped map plus acceptance tests."
+      ],
+      "offer_fit": "agent workflow audit, workflow map, local automation spec",
+      "review_decision": "draft_review_ready_no_post",
+      "risk_note": "Avoid claiming autonomous execution or income results.",
+      "source_links": [
+        "https://www.businessinsider.com/fiverr-ceo-artificial-intelligence-job-market-hiring-skills-ai-2025-5",
+        "https://www.theverge.com/news/615252/fiverr-go-freelancer-ai-models",
+        "https://www.windowscentral.com/artificial-intelligence/fiverr-announces-layoffs-ai-restructuring",
+        "https://arxiv.org/abs/2602.00139"
+      ],
+      "theme_id": "ai_agent_services",
+      "theme_signal": "Reported demand spike for AI Agent services.",
+      "tone_checks": [
+        "human-sounding, specific, and non-hype",
+        "teaches one useful operating distinction before mentioning any offer",
+        "states boundaries as a strength rather than a fear disclaimer",
+        "does not ask readers to buy, DM, follow, click, or contact",
+        "does not imply the operator has delivered paid Fiverr results",
+        "format remains `short_thread_draft` and draft stays internal"
+      ],
+      "working_title": "Why AI-agent gigs fail before the first prompt"
+    },
+    {
+      "approval_required_before": [
+        "turning outline into public copy",
+        "adding CTA, offer link, DM prompt, Fiverr reference, or sales language",
+        "posting to X, Fiverr, LinkedIn, blog, email, or any public channel",
+        "replying, DMing, following, tagging, quoting, or client outreach",
+        "using screenshots, customer examples, private data, copyrighted media, or platform logos"
+      ],
+      "cta_state": "no_post_no_cta",
+      "day": 2,
+      "forbidden_claims": [
+        "guaranteed revenue, client growth, ranking, reach, followers, or conversion",
+        "Fiverr endorsement, platform eligibility, seller approval, or marketplace rank",
+        "autonomous execution without human review",
+        "handling credentials, private client data, payment flows, or public posting by default",
+        "legal, tax, employment, compliance, or regulated-industry advice",
+        "use of copyrighted likenesses, music, media, or client assets without rights review"
+      ],
+      "format": "single_post_draft",
+      "internal_outline": [
+        "Name three gates: credentials, payments, public actions.",
+        "Explain why boundaries increase buyer trust."
+      ],
+      "offer_fit": "AI workflow review, decision memo, implementation checklist",
+      "review_decision": "draft_review_ready_no_post",
+      "risk_note": "Avoid generic AI hype; show specific constraints and review gates.",
+      "source_links": [
+        "https://www.businessinsider.com/fiverr-ceo-artificial-intelligence-job-market-hiring-skills-ai-2025-5",
+        "https://www.theverge.com/news/615252/fiverr-go-freelancer-ai-models",
+        "https://www.windowscentral.com/artificial-intelligence/fiverr-announces-layoffs-ai-restructuring",
+        "https://arxiv.org/abs/2602.00139"
+      ],
+      "theme_id": "human_judgment_after_ai",
+      "theme_signal": "AI-first labor-market commentary still values nuance and judgment.",
+      "tone_checks": [
+        "human-sounding, specific, and non-hype",
+        "teaches one useful operating distinction before mentioning any offer",
+        "states boundaries as a strength rather than a fear disclaimer",
+        "does not ask readers to buy, DM, follow, click, or contact",
+        "does not imply the operator has delivered paid Fiverr results",
+        "format remains `single_post_draft` and draft stays internal"
+      ],
+      "working_title": "The human part of AI service work is deciding what not to automate"
+    },
+    {
+      "approval_required_before": [
+        "turning outline into public copy",
+        "adding CTA, offer link, DM prompt, Fiverr reference, or sales language",
+        "posting to X, Fiverr, LinkedIn, blog, email, or any public channel",
+        "replying, DMing, following, tagging, quoting, or client outreach",
+        "using screenshots, customer examples, private data, copyrighted media, or platform logos"
+      ],
+      "cta_state": "no_post_no_cta",
+      "day": 3,
+      "forbidden_claims": [
+        "guaranteed revenue, client growth, ranking, reach, followers, or conversion",
+        "Fiverr endorsement, platform eligibility, seller approval, or marketplace rank",
+        "autonomous execution without human review",
+        "handling credentials, private client data, payment flows, or public posting by default",
+        "legal, tax, employment, compliance, or regulated-industry advice",
+        "use of copyrighted likenesses, music, media, or client assets without rights review"
+      ],
+      "format": "checklist",
+      "internal_outline": [
+        "Intake form.",
+        "Data classification.",
+        "Draft output.",
+        "Human review.",
+        "Approval log.",
+        "Metric after one week."
+      ],
+      "offer_fit": "small business AI ops calendar, SOP pack, automation backlog",
+      "review_decision": "draft_review_ready_no_post",
+      "risk_note": "Avoid regulated advice or handling client credentials.",
+      "source_links": [
+        "https://www.businessinsider.com/fiverr-ceo-artificial-intelligence-job-market-hiring-skills-ai-2025-5",
+        "https://www.theverge.com/news/615252/fiverr-go-freelancer-ai-models",
+        "https://www.windowscentral.com/artificial-intelligence/fiverr-announces-layoffs-ai-restructuring",
+        "https://arxiv.org/abs/2602.00139"
+      ],
+      "theme_id": "small_business_ai_operations",
+      "theme_signal": "Research and marketplace signals point to businesses buying leverage, not tools.",
+      "tone_checks": [
+        "human-sounding, specific, and non-hype",
+        "teaches one useful operating distinction before mentioning any offer",
+        "states boundaries as a strength rather than a fear disclaimer",
+        "does not ask readers to buy, DM, follow, click, or contact",
+        "does not imply the operator has delivered paid Fiverr results",
+        "format remains `checklist` and draft stays internal"
+      ],
+      "working_title": "Small-business AI ops checklist"
+    }
+  ],
+  "schema_version": "content_growth.fiverr_trends_no_post_review_packet.v1",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-fiverr_2026_trends-20260618",
+  "status": "fiverr_trends_no_post_review_packet_ready_local_only",
+  "task_id": "task-fiverr-trends-no-post-review-packet-v1-20260618"
+}

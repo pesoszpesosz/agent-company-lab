@@ -1,0 +1,22 @@
+control_id,control_type,scope_area,decision,submission_effect,required_check
+optimism-dup-001,known_issue_table,Smart Contract,duplicate_check_required,not_submission_ready,Compare against Optimism smart-contract known issues before code review or draft report.
+optimism-dup-002,known_issue_table,Blockchain/DLT,duplicate_check_required,not_submission_ready,Compare against Optimism Blockchain/DLT known issues before promotion.
+optimism-dup-003,upstream_route_check,Blockchain/DLT,upstream_route_check_required,not_submission_ready,Search upstream reth and Ethereum Foundation status before op-reth promotion.
+optimism-dup-004,known_issue_hard_stop,Blockchain/DLT,hard_stop_until_cleared,not_submission_ready,Compare networking/devp2p claims against Ethereum devp2p known issues.
+optimism-dup-005,program_out_of_scope,Blockchain/DLT,hard_stop,blocked,Reject public JSON-RPC or Beacon API exposure dependency.
+optimism-dup-006,program_out_of_scope,Blockchain/DLT,hard_stop,blocked,Reject chain-operator best-practice or network-topology-only claims.
+optimism-dup-007,program_out_of_scope,Blockchain/DLT,hard_stop,blocked,Reject Alt-DA feature claims for op-node or op-batcher.
+optimism-dup-008,program_out_of_scope,Blockchain/DLT,hard_stop,blocked,Reject end-of-service execution client candidates such as op-geth.
+optimism-dup-009,program_out_of_scope,Smart Contract,hard_stop_for_third_party_bridge_only,not_submission_ready,Separate canonical bridge behavior from third-party custom token bridge bugs.
+optimism-dup-010,program_out_of_scope,Smart Contract,hard_stop_if_detected_by_op_dispute_mon,not_submission_ready,Prove dispute-game issue is not already detected/resolved by op-dispute-mon.
+optimism-dup-011,program_out_of_scope,Smart Contract,hard_stop,blocked,Reject proof-of-whale based attacks on Fault Proofs.
+optimism-dup-012,documented_bridge_issue,Smart Contract,hard_stop_unless_new_bypass,not_submission_ready,Reject fake ERC20 bridge issue restatement without new bypass.
+optimism-dup-013,documented_known_nonimpact,Smart Contract,hard_stop_unless_new_affected_layout,not_submission_ready,Reject ResolvedDelegateProxy storage-slot non-impact restatement.
+optimism-dup-014,documented_bridge_edge_case,Smart Contract,hard_stop_unless_distinct_new_impact,not_submission_ready,Reject documented L1 contract deposit edge case restatement.
+optimism-dup-015,documented_griefing_case,Smart Contract,hard_stop_unless_new_impact,not_submission_ready,Reject large-data/gas griefing restatement without new impact.
+optimism-dup-016,documented_griefing_case,Smart Contract,hard_stop_unless_new_bypass,not_submission_ready,Reject MAX_RESOURCE_LIMIT griefing restatement without new bypass.
+optimism-dup-017,documented_foot_gun,Smart Contract,hard_stop_for_configuration_foot_gun,blocked,Reject user/developer/token bridge configuration foot guns.
+optimism-dup-018,web_app_route_check,Web & App,browser_and_scope_gate_required,not_submission_ready,Confirm web asset is in-scope and not out-of-scope before report-quality review.
+optimism-dup-019,default_out_of_scope,All categories,quality_gate_required,not_submission_ready,Pass all default out-of-scope filters before draft report.
+optimism-dup-020,prohibited_activity_gate,All categories,hard_stop_for_autonomous_agent,blocked,No live testing without local-fork/runtime/browser/submission gates.
+optimism-dup-021,feasibility_review,All categories,quality_gate_required,not_submission_ready,Include feasibility and downgrade-risk notes before draft report.

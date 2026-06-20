@@ -1,0 +1,232 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/durable-runtime-adapter-matrix-v2.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Durable Runtime Adapter Matrix v2",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.durable_runtime_adapter_matrix.v2"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-durable-runtime-adapter-matrix-v2-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_basis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "minLength": 10
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 10
+          }
+        },
+        "required": [
+          "url",
+          "claim"
+        ]
+      }
+    },
+    "artifact_actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dependency_installs": {
+          "type": "boolean"
+        },
+        "dependency_imports": {
+          "type": "boolean"
+        },
+        "runtime_starts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "queue_enqueues": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "service_request_mutations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "api_calls": {
+          "type": "boolean"
+        },
+        "model_api_calls": {
+          "type": "boolean"
+        },
+        "browser_sessions_started": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "external_side_effects": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dependency_installs",
+        "dependency_imports",
+        "runtime_starts",
+        "queue_enqueues",
+        "service_request_mutations",
+        "api_calls",
+        "model_api_calls",
+        "browser_sessions_started",
+        "external_side_effects"
+      ]
+    },
+    "matrix": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "runtime_id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "display_name": {
+            "type": "string",
+            "minLength": 3
+          },
+          "category": {
+            "type": "string",
+            "minLength": 3
+          },
+          "source_urls": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 10
+            }
+          },
+          "candidate_role": {
+            "type": "string",
+            "minLength": 20
+          },
+          "safe_now": {
+            "type": "boolean"
+          },
+          "fits_existing_gates": {
+            "type": "boolean"
+          },
+          "adoption_requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "approval_dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "capabilities": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "artifact_actions": {
+            "$ref": "#/properties/artifact_actions"
+          },
+          "first_local_test": {
+            "type": "string",
+            "minLength": 10
+          },
+          "promotion_decision": {
+            "type": "string",
+            "minLength": 5
+          },
+          "stop_conditions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "runtime_id",
+          "display_name",
+          "category",
+          "source_urls",
+          "candidate_role",
+          "safe_now",
+          "fits_existing_gates",
+          "adoption_requirements",
+          "approval_dependencies",
+          "capabilities",
+          "risks",
+          "artifact_actions",
+          "first_local_test",
+          "promotion_decision",
+          "stop_conditions",
+          "score"
+        ]
+      }
+    },
+    "recommended_next_local_tests": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 20
+    },
+    "boundary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_basis",
+    "artifact_actions",
+    "matrix",
+    "recommended_next_local_tests",
+    "decision",
+    "boundary"
+  ]
+}

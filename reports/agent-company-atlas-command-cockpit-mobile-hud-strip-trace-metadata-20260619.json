@@ -1,0 +1,26 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-mobile-hud-strip-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-mobile-hud-strip-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-mobile-hud-strip-v1-20260619",
+  "title": "Command Cockpit Mobile HUD Strip",
+  "createdAt": "2026-06-19T11:54:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the selected-lane HUD into a mobile-first status strip inside the Command Cockpit so the first narrow viewport shows lane identity, signal cells, and bot presence without clipping the mission console below.",
+  "proof": [
+    "Added a Command Cockpit-only mobile marker and README unlock entry.",
+    "Scoped mobile HUD CSS to smaller core avatar and level meter sockets.",
+    "Kept XP/proof/cleared/gate signals visible as compact cells.",
+    "Compressed the bot identity row and hid deeper next-action copy, arena, and control matrix on narrow Command Cockpit screens.",
+    "Recorded a regression test for the mobile HUD strip behavior."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py",
+    "reports/agent-company-atlas-command-cockpit-mobile-hud-strip-trace-metadata-20260619.json"
+  ]
+}

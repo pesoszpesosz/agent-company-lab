@@ -1,0 +1,12 @@
+{
+  "api_calls": false,
+  "commands_executed": 0,
+  "external_side_effects": false,
+  "manual_hold_count": 2,
+  "manual_register_later_count": 5,
+  "packet_count": 7,
+  "registers_pools": false,
+  "runtime": "local_python_report_writer",
+  "span_kind": "registration_review_packets",
+  "starts_workers": false
+}

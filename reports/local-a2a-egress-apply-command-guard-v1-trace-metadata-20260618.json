@@ -1,0 +1,96 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-local-a2a-egress-apply-command-guard-v1-20260618",
+  "task_id": "task-local-a2a-egress-apply-command-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T00:43:27Z",
+  "summary": "Created a report-only local A2A egress apply-command guard for local_agent_to_agent_report_only. The guard accepts only deny_noop and report-only guard command shapes, rejects 39 local A2A execution and boundary-mutation fixtures, and preserves zero command writes/execution, gateway registration/start, agent message sends, service-request mutation, worker starts, browser/model/API/MCP use, live egress, or external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\local-a2a-egress-apply-command-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\local-a2a-egress-apply-preflight-blocker-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\local-a2a-egress-signed-decision-guard-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\local-a2a-egress-apply-command-guard-v1.schema.json",
+      "sha256": "d9ebc95093ff982c8bbdca872d51adc1bb6af2c57411c65dcf438fa87b5cd438"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_local_a2a_egress_apply_command_guard.py",
+      "sha256": "264a3a9430e823dfa70a41ae6f5c62154484ac605b27f98b482c77c4623973e6"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_local_a2a_egress_apply_command_guard.py",
+      "sha256": "ecba556385e66c32c3d3074539d2a3706a65dd497fa4afa91a06853cebf94911"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\local-a2a-egress-apply-command-guard-v1-20260618.json",
+      "sha256": "69422f51c0ec3ad251eae5ca87524add49bf3bdefd6605f293a358fccc3f9078"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\local-a2a-egress-apply-command-guard-v1-validation-20260618.json",
+      "sha256": "89f99b3aad709f1748f3fb4ac8d491ee14692ada87b9bd78ad8492a16811f83a"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\local-a2a-egress-apply-command-guard-v1-20260618.md",
+      "sha256": "c612267f2a622521c59d0dfc6b3c04eba6d9a5ef8693eaa3eecb189ca327b2c3"
+    }
+  ],
+  "verification": {
+    "red_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_local_a2a_egress_apply_command_guard.py",
+    "red_test_result": "failed before implementation because validate_local_a2a_egress_apply_command_guard.py did not exist",
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_local_a2a_egress_apply_command_guard.py",
+    "focused_test_result": "passed",
+    "chain_audit_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+    "chain_audit_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "39 tests passed",
+    "target_route_id": "local_agent_to_agent_report_only",
+    "target_egress_type": "agent_to_agent",
+    "fixture_count": 41,
+    "accepted_count": 2,
+    "rejected_count": 39,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "agent_message_send_allowed": false,
+    "agent_messages_sent": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "agent_message_send_allowed": false,
+    "agent_messages_sent": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Keep local A2A egress blocked until a real signed operator local A2A egress decision and exact command preview exist; no agent message send, service-request mutation, worker start, or live egress is permitted by this guard."
+}

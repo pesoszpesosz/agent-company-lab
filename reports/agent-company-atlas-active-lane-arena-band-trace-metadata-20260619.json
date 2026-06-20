@@ -1,0 +1,29 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-arena-band-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-arena-band-v1-20260619",
+  "eventId": "trace-atlas_active_lane_arena_band_added-20260619",
+  "title": "Active Lane Arena Band",
+  "createdUtc": "2026-06-19T01:24:20Z",
+  "summary": "Added a compact animated five-node route inside the active lane HUD so each selected path shows spawn, quest, proof, gate, and trail motion without adding another scroll section.",
+  "layoutEvidence": {
+    "intent": "Improve animation quality and game feel while keeping the selected path first viewport compact.",
+    "surface": "active-lane-hud-arena",
+    "routeNodes": [
+      "spawn level",
+      "quest progress",
+      "proof count",
+      "gate pressure",
+      "trail depth"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

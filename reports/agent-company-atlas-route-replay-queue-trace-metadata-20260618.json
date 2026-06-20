@@ -1,0 +1,86 @@
+{
+  "trace_id": "trace-agent-company-atlas-route-replay-queue-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Stage Queue to Route Replay so operators can see the current and upcoming filtered replay stages, then jump directly into the Event Proof lens from a compact playable itinerary.",
+  "design_research": {
+    "queries": [
+      "timeline queue UI upcoming steps design pattern",
+      "Material Design lists component queues filter chips",
+      "game UI quest log stage queue upcoming milestones design"
+    ],
+    "source_urls": [
+      "https://m3.material.io/components/chips",
+      "https://clarity.design/documentation/multi-step-workflow",
+      "https://uxpatterns.dev/patterns/data-display/timeline",
+      "https://www.pixelcrushers.com/dialogue_system/manual/html/quest_log_window.html"
+    ],
+    "pattern_notes": [
+      "Filter chips are compact controls for selecting or narrowing visible content.",
+      "Stepper and timeline patterns work best when users can navigate freely across stages.",
+      "Quest logs and timelines should expose state, history, and recovery context without forcing operators to read an entire trail."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-route-replay-queue-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathReplayFilterByLane",
+      "browser-only state.pathReplayIndexByLane",
+      "existing pathEventGlyphType classification",
+      "existing Event Proof focus state"
+    ],
+    "ui_contract": [
+      "Render a four-card Stage Queue inside Route Replay using the active filtered replay list.",
+      "Mark the active stage as Now, wrap upcoming stages when the filtered list is shorter than the route tail, and keep glyphs aligned with event type.",
+      "Clicking a queued stage updates Route Replay index and Event Proof focus without mutating snapshot data.",
+      "Replay Lens filters, NEXT, latest, and play/pause continue to operate inside the same filtered stage list.",
+      "The queue collapses to one column on narrow viewports and preserves the static no-build repo contract."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=route-replay-queue-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, Path Map had 0 .path-replay-queue panels and 0 data-path-replay-jump controls while Route Replay was present at Stage 1 of 64."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=route-replay-queue-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Stage Queue with 4 jump cards, first card marked Now, stage jumps 0-3, mixed service and outcome glyphs, stats 64 events / 38 proofs / 0% run, and no bad rectangles."
+    },
+    "filtered_jump": {
+      "status": "passed",
+      "evidence": "Service filter narrowed the replay to 6 shown stages; clicking queue jump 2 moved the title to Stage 3 of 6 with four service queue cards and 6/64 lens stats."
+    },
+    "filtered_playback": {
+      "status": "passed",
+      "evidence": "Outcome filter moved to Stage 4 of 31, play changed the badge to playing and the button to PAUSE, then auto-advanced the queue Now card to Stage 5 of 31 before pause restored PLAY."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one queue with 4 items, no Route Replay overflow, document width equal to client width, and single-column queue layout below the mobile breakpoint."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "edited_files_ascii": "passed",
+      "http_status": 200,
+      "console_errors": 0
+    }
+  }
+}

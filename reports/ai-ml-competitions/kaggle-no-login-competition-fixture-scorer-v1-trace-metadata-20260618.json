@@ -1,0 +1,35 @@
+{
+  "boundary": {
+    "api_token_or_credentials_created": false,
+    "browser_sessions_started": 0,
+    "competition_data_downloaded": 0,
+    "competition_rules_accepted": false,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "local_baseline_candidate_count": 4,
+    "model_mcp_or_external_api_calls": 0,
+    "notebooks_executed": 0,
+    "payments_or_tax_forms": 0,
+    "public_notebooks_or_comments": 0,
+    "saved_rows_created": 4,
+    "scored_rows": 4,
+    "service_requests_mutated": 0,
+    "submission_ready_count": 0,
+    "submissions_made": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "kaggle_no_login_competition_fixture_scorer_created",
+  "generated_at": "2026-06-18T09:01:57Z",
+  "lane_id": "ai_ml_competitions",
+  "packet_summary": {
+    "kill_only_count": 0,
+    "local_baseline_candidate_count": 4,
+    "row_count": 4,
+    "source_acceptance_checks": 6,
+    "submission_ready_count": 0
+  },
+  "schema_version": "ai_ml_competitions.kaggle_no_login_competition_fixture_scorer.trace.v1",
+  "source": "tools/create_kaggle_no_login_competition_fixture_scorer.py",
+  "summary": "Local no-login Kaggle fixture scorer created; zero submission-ready rows.",
+  "task_id": "task-kaggle-no-login-competition-fixture-scorer-v1-20260618"
+}

@@ -1,0 +1,1083 @@
+{
+  "api_calls": false,
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "draft_templates_written": 14,
+  "execution_notice": "Draft-only exact-scope templates for human/CRO review. They grant no approval and do not assign, start, complete, enqueue, update, or execute service workers.",
+  "external_side_effects": false,
+  "filters": {
+    "lane_id": null,
+    "request_id": null,
+    "status": null
+  },
+  "generated_utc": "2026-06-15T10:21:14Z",
+  "request_count": 14,
+  "route_counts": {
+    "draft_scope_template_for_human_review": 11,
+    "terminal_complete_do_not_approve": 1,
+    "terminal_rejected_do_not_approve": 2
+  },
+  "schema_version": "service_worker_exact_scope_templates.v1",
+  "scope_templates": [
+    {
+      "allowed_actions": [
+        "after explicit approval, inspect approved signed-in research surface in read-only mode",
+        "capture local notes and source references",
+        "avoid likes, follows, replies, posts, settings, messages, and account changes"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "x.com",
+        "grok.com",
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "research_enrichment",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-grok-research-worker-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+      "service_id": "browser_signed_in_read_only",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-grok-research-worker-20260614",
+      "starting_urls": [
+        "approved_signed_in_research_surface_required_before_execution"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-grok-research-worker-20260614` and worker request `swr-grok-research-worker-20260614`, allow `browser_signed_in_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a signed-in read-only research enrichment worker for req-grok-research-worker-20260614; capture research notes and perform no public X/Grok action, account setting change, or message/post/reply. Allowed actions: after explicit approval, inspect approved signed-in research surface in read-only mode; capture local notes and source references; avoid likes, follows, replies, posts, settings, messages, and account changes Allowed hosts: x.com; grok.com; scope_defined_in_source_packet Starting URLs: approved_signed_in_research_surface_required_before_execution Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-grok-research-worker-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-grok-research-worker-20260614",
+      "worker_started": false,
+      "worker_type": "browser_signed_in_read_only"
+    },
+    {
+      "allowed_actions": [
+        "prepare local review notes",
+        "identify required legal, tax, KYC, payment, seller, and contractual decisions",
+        "produce questions for the user/CRO"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope defined in the source packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "legal_kyc_tax_payment",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-digital-legal-payment-review-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+      "service_id": "legal_kyc_tax_payment_gate",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "starting_urls": [
+        "scope defined in the source packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-next-wave-digital-legal-payment-review-20260614` and worker request `swr-next-wave-digital-legal-payment-review-20260614`, allow `legal_kyc_tax_payment_review` worker activity only after separate explicit user/CRO approval. Objective: Review legal, KYC, tax, payment, and seller-account requirements for req-next-wave-digital-legal-payment-review-20260614 as a local decision packet only; make no commitments and enter no private data. Allowed actions: prepare local review notes; identify required legal, tax, KYC, payment, seller, and contractual decisions; produce questions for the user/CRO Allowed hosts: scope defined in the source packet Starting URLs: scope defined in the source packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-digital-legal-payment-review-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; work would create a commitment, public action, account action, payment setup, report submission, or contact Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614",
+      "worker_started": false,
+      "worker_type": "legal_kyc_tax_payment_review"
+    },
+    {
+      "allowed_actions": [
+        "Open public pages on allowed hosts after approval",
+        "Follow public help, documentation, pricing, fees, terms, refund, payout, seller, and prohibited-content links on allowed hosts",
+        "Record source URLs and page titles",
+        "Summarize factual marketplace requirements with short compliant excerpts only",
+        "Capture local Markdown notes and optional screenshots"
+      ],
+      "allowed_data_types": [
+        "public marketing page text",
+        "public help/documentation page text",
+        "public page title",
+        "public URL",
+        "local screenshot if approval permits browser capture"
+      ],
+      "allowed_hosts": [
+        "gumroad.com",
+        "www.lemonsqueezy.com",
+        "lemonsqueezy.com",
+        "promptbase.com"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "login",
+        "signup",
+        "seller onboarding",
+        "terms acceptance",
+        "listing creation",
+        "product upload",
+        "payment setup",
+        "tax form entry",
+        "KYC form entry",
+        "purchase",
+        "public promotion",
+        "comments or messages",
+        "saving settings",
+        "submitting forms",
+        "entering credentials, OTPs, payment details, personal data, private files, or wallet information",
+        "using signed-in pages",
+        "bypassing paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md",
+        "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-route-comparison-20260614.json",
+        "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-blocker-note-20260614.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "starting_urls": [
+        "https://gumroad.com/",
+        "https://www.lemonsqueezy.com/ecommerce/digital-products",
+        "https://promptbase.com/sell"
+      ],
+      "stop_conditions": [
+        "The source service request is not approved and assigned",
+        "Any page asks for login, signup, account creation, seller onboarding, consent acceptance, payment, tax, KYC, private data, credentials, OTP, wallet action, or file upload",
+        "A required page is not public or requires a signed-in state",
+        "A link leaves the allowed hosts",
+        "The browser worker cannot distinguish public guidance from contractual acceptance",
+        "The task would require a public action, marketplace listing, or real-money/payment action"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-next-wave-digital-marketplace-browser-readonly-20260614` and worker request `swr-next-wave-digital-marketplace-browser-readonly-20260615`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, read public Gumroad, Lemon Squeezy, and PromptBase marketplace pages for terms, fees, payouts, listing requirements, refund constraints, prohibited content, and seller requirements relevant to Agent Skill Starter Kit. Allowed actions: Open public pages on allowed hosts after approval; Follow public help, documentation, pricing, fees, terms, refund, payout, seller, and prohibited-content links on allowed hosts; Record source URLs and page titles; Summarize factual marketplace requirements with short compliant excerpts only; Capture local Markdown notes and optional screenshots Allowed hosts: gumroad.com; www.lemonsqueezy.com; lemonsqueezy.com; promptbase.com Starting URLs: https://gumroad.com/; https://www.lemonsqueezy.com/ecommerce/digital-products; https://promptbase.com/sell Allowed data: public marketing page text; public help/documentation page text; public page title; public URL; local screenshot if approval permits browser capture Required outputs: E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md; E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-route-comparison-20260614.json; E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-blocker-note-20260614.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; login; signup; seller onboarding; terms acceptance; listing creation; product upload; payment setup; tax form entry; KYC form entry; purchase; public promotion; comments or messages; saving settings; submitting forms; entering credentials, OTPs, payment details, personal data, private files, or wallet information; using signed-in pages; bypassing paywalls, rate limits, access controls, or platform rules Stop conditions: The source service request is not approved and assigned; Any page asks for login, signup, account creation, seller onboarding, consent acceptance, payment, tax, KYC, private data, credentials, OTP, wallet action, or file upload; A required page is not public or requires a signed-in state; A link leaves the allowed hosts; The browser worker cannot distinguish public guidance from contractual acceptance; The task would require a public action, marketplace listing, or real-money/payment action Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "paid_code_bounties",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "starting_urls": [
+        "scope_defined_in_source_packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-next-wave-paid-code-algora-archestra-browser-readonly-20260614` and worker request `swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a public read-only browser research worker for req-next-wave-paid-code-algora-archestra-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action. Allowed actions: read public allowed pages after approval; capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts; stop at login, account, payment, public action, or private-data boundaries Allowed hosts: scope_defined_in_source_packet Starting URLs: scope_defined_in_source_packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "security_bounty_private_reports",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "starting_urls": [
+        "scope_defined_in_source_packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-next-wave-security-google-oss-vrp-browser-readonly-20260614` and worker request `swr-next-wave-security-google-oss-vrp-browser-readonly-20260614`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a public read-only browser research worker for req-next-wave-security-google-oss-vrp-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action. Allowed actions: read public allowed pages after approval; capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts; stop at login, account, payment, public action, or private-data boundaries Allowed hosts: scope_defined_in_source_packet Starting URLs: scope_defined_in_source_packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "prepare local submission route review",
+        "check required approvals and private/public route constraints",
+        "draft next approval questions only"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope defined in the source packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "security_bounty_private_reports",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "security_report_submission",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-report-route-review-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+      "service_id": "security_report_submission_gate",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+      "starting_urls": [
+        "scope defined in the source packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-next-wave-security-report-route-review-20260614` and worker request `swr-next-wave-security-report-route-review-20260614`, allow `public_submission` worker activity only after separate explicit user/CRO approval. Objective: Prepare or review a private/public submission route for req-next-wave-security-report-route-review-20260614 as a local packet only; do not submit, comment, message, publish, or contact anyone. Allowed actions: prepare local submission route review; check required approvals and private/public route constraints; draft next approval questions only Allowed hosts: scope defined in the source packet Starting URLs: scope defined in the source packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-report-route-review-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; work would create a commitment, public action, account action, payment setup, report submission, or contact Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-next-wave-security-report-route-review-20260614",
+      "worker_started": false,
+      "worker_type": "public_submission"
+    },
+    {
+      "allowed_actions": [
+        "prepare local cost/scope review",
+        "identify provider, model, max cost, input/output artifact scope, and data sensitivity",
+        "wait for explicit approval before any API call"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope defined in the source packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "model_api_execution",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-pydantic-ai-model-backed-adapter-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+      "service_id": "model_api_execution",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "starting_urls": [
+        "scope defined in the source packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "provider, model, max cost, data scope, or output artifact path is not approved"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-pydantic-ai-model-backed-adapter-20260614` and worker request `swr-pydantic-ai-model-backed-adapter-20260614`, allow `model_api_execution` worker activity only after separate explicit user/CRO approval. Objective: Review a cost-bearing model/API execution request for req-pydantic-ai-model-backed-adapter-20260614; do not call external providers until provider, model, max cost, and artifact scope are explicitly approved. Allowed actions: prepare local cost/scope review; identify provider, model, max cost, input/output artifact scope, and data sensitivity; wait for explicit approval before any API call Allowed hosts: scope defined in the source packet Starting URLs: scope defined in the source packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-pydantic-ai-model-backed-adapter-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; provider, model, max cost, data scope, or output artifact path is not approved Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-pydantic-ai-model-backed-adapter-20260614",
+      "worker_started": false,
+      "worker_type": "model_api_execution"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "content_and_social_growth",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-browser-readonly-complete-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+      "starting_urls": [
+        "scope_defined_in_source_packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-test-browser-readonly-complete-20260614` and worker request `swr-test-browser-readonly-complete-20260614`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a public read-only browser research worker for req-test-browser-readonly-complete-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action. Allowed actions: read public allowed pages after approval; capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts; stop at login, account, payment, public action, or private-data boundaries Allowed hosts: scope_defined_in_source_packet Starting URLs: scope_defined_in_source_packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-browser-readonly-complete-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-test-browser-readonly-complete-20260614",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "retain local audit record",
+        "do not execute or reopen without a new service request"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope defined in the source packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": "approval-req-test-lifecycle-approve-20260614",
+      "latest_approval_status": "approved",
+      "max_cost_usd": 0,
+      "next_action": "Do not approve this terminal row; retain audit evidence or create a new scoped request.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "complete",
+      "request_type": "lifecycle_test",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-lifecycle-approve-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "test_no_external_action",
+      "service_id": "local_runtime_adapter",
+      "service_request_updated": false,
+      "service_status": "complete",
+      "source_service_request_id": "req-test-lifecycle-approve-20260614",
+      "starting_urls": [
+        "scope defined in the source packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. Do not approve or start terminal request `req-test-lifecycle-approve-20260614` while its service status is `complete`. Keep this as audit text only, or create a fresh service request with a fresh exact scope if work is still needed.",
+      "template_route": "terminal_complete_do_not_approve",
+      "worker_request_id": "swr-test-lifecycle-approve-20260614",
+      "worker_started": false,
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "allowed_actions": [
+        "retain local audit record",
+        "do not execute or reopen without a new service request"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope defined in the source packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": "rejection-req-test-lifecycle-reject-20260614",
+      "latest_approval_status": "rejected",
+      "max_cost_usd": 0,
+      "next_action": "Do not approve this terminal row; retain audit evidence or create a new scoped request.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "rejected",
+      "request_type": "lifecycle_test",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-lifecycle-reject-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "test_no_external_action",
+      "service_id": "local_runtime_adapter",
+      "service_request_updated": false,
+      "service_status": "rejected",
+      "source_service_request_id": "req-test-lifecycle-reject-20260614",
+      "starting_urls": [
+        "scope defined in the source packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. Do not approve or start terminal request `req-test-lifecycle-reject-20260614` while its service status is `rejected`. Keep this as audit text only, or create a fresh service request with a fresh exact scope if work is still needed.",
+      "template_route": "terminal_rejected_do_not_approve",
+      "worker_request_id": "swr-test-lifecycle-reject-20260614",
+      "worker_started": false,
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "allowed_actions": [
+        "retain local audit record",
+        "do not execute or reopen without a new service request"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope defined in the source packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "platform_engineering",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": "rejection-req-test-service-intake-valid-20260614",
+      "latest_approval_status": "rejected",
+      "max_cost_usd": 0,
+      "next_action": "Do not approve this terminal row; retain audit evidence or create a new scoped request.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "rejected",
+      "request_type": "real_money_trade",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-service-intake-valid-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "test_validator_no_external_action",
+      "service_id": "real_money_trade_gate",
+      "service_request_updated": false,
+      "service_status": "rejected",
+      "source_service_request_id": "req-test-service-intake-valid-20260614",
+      "starting_urls": [
+        "scope defined in the source packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. Do not approve or start terminal request `req-test-service-intake-valid-20260614` while its service status is `rejected`. Keep this as audit text only, or create a fresh service request with a fresh exact scope if work is still needed.",
+      "template_route": "terminal_rejected_do_not_approve",
+      "worker_request_id": "swr-test-service-intake-valid-20260614",
+      "worker_started": false,
+      "worker_type": "other_gated_worker"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "ai_ml_competitions",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "starting_urls": [
+        "scope_defined_in_source_packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-wave4-ai-ml-competitions-browser-readonly-20260614` and worker request `swr-wave4-ai-ml-competitions-browser-readonly-20260614`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a public read-only browser research worker for req-wave4-ai-ml-competitions-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action. Allowed actions: read public allowed pages after approval; capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts; stop at login, account, payment, public action, or private-data boundaries Allowed hosts: scope_defined_in_source_packet Starting URLs: scope_defined_in_source_packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-digital-products-browser-readonly-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "starting_urls": [
+        "scope_defined_in_source_packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-wave4-digital-products-browser-readonly-20260614` and worker request `swr-wave4-digital-products-browser-readonly-20260614`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a public read-only browser research worker for req-wave4-digital-products-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action. Allowed actions: read public allowed pages after approval; capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts; stop at login, account, payment, public action, or private-data boundaries Allowed hosts: scope_defined_in_source_packet Starting URLs: scope_defined_in_source_packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-digital-products-browser-readonly-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-wave4-digital-products-browser-readonly-20260614",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "allowed_data_types": [
+        "local artifact references",
+        "public source URLs",
+        "page titles",
+        "short factual excerpts within copyright limits",
+        "local notes",
+        "approval and risk metadata"
+      ],
+      "allowed_hosts": [
+        "scope_defined_in_source_packet"
+      ],
+      "api_calls": false,
+      "approval_command_requires_manual_review": true,
+      "approval_granted_by_template": false,
+      "external_side_effects": false,
+      "lane_id": "money_source_discovery",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "max_cost_usd": 0,
+      "next_action": "Human/CRO may copy-edit this draft into approve-service-request only after checking current scope, packet, risk gate, and stop conditions.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "request_type": "browser_research",
+      "required_denials": [
+        "no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data",
+        "no login, signup, account creation, account settings changes, or terms/legal acceptance",
+        "no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action",
+        "no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact",
+        "no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope",
+        "no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions",
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "required_output_paths": [
+        "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-money-source-discovery-browser-readonly-20260614-result-placeholder.md"
+      ],
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "service_request_updated": false,
+      "service_status": "needs_review",
+      "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "starting_urls": [
+        "scope_defined_in_source_packet"
+      ],
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "suggested_exact_scope": "DRAFT ONLY - NOT APPROVED. For source service request `req-wave4-money-source-discovery-browser-readonly-20260614` and worker request `swr-wave4-money-source-discovery-browser-readonly-20260614`, allow `browser_read_only` worker activity only after separate explicit user/CRO approval. Objective: After explicit approval only, run a public read-only browser research worker for req-wave4-money-source-discovery-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action. Allowed actions: read public allowed pages after approval; capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts; stop at login, account, payment, public action, or private-data boundaries Allowed hosts: scope_defined_in_source_packet Starting URLs: scope_defined_in_source_packet Allowed data: local artifact references; public source URLs; page titles; short factual excerpts within copyright limits; local notes; approval and risk metadata Required outputs: E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-money-source-discovery-browser-readonly-20260614-result-placeholder.md Hard denials: no credentials, OTPs, secrets, private files, private data, payment details, tax/KYC data, or wallet data; no login, signup, account creation, account settings changes, or terms/legal acceptance; no payments, purchases, deposits, withdrawals, trades, wallet connections, wallet signatures, or real-money action; no public posts, comments, replies, messages, listings, uploads, form submissions, issue/PR actions, or external contact; no external side effects, API/provider/model calls, paid cost, worker start, or queue mutation unless separately approved in an exact scope; no bypassing paywalls, rate limits, access controls, platform rules, or the packet stop conditions; execute without explicit approval; login unless explicitly approved; signup or account creation; accept terms or legal agreements; enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information; submit forms; publish, post, reply, comment, message, list, upload, or contact external parties; purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions; change account settings; bypass paywalls, rate limits, access controls, or platform rules Stop conditions: service request status is not approved or assigned; requested action exceeds approval scope; required artifact/source is missing or ambiguous; page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission; worker would need to leave allowed host/scope Max cost USD: 0. This draft expires unless separately approved with `approve-service-request`; this report grants no approval, assignment, start authority, browser action, API call, public action, payment, trade, submission, or external side effect.",
+      "template_route": "draft_scope_template_for_human_review",
+      "worker_request_id": "swr-wave4-money-source-discovery-browser-readonly-20260614",
+      "worker_started": false,
+      "worker_type": "browser_read_only"
+    }
+  ],
+  "service_requests_approved_by_report": 0,
+  "service_requests_started_by_report": 0,
+  "service_requests_updated_by_report": 0,
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "templates_grant_approval": false,
+  "worker_starts": 0,
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

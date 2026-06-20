@@ -1,0 +1,28 @@
+{
+  "boundary": {
+    "api_credentials_created_or_used": false,
+    "browser_sessions_started": 0,
+    "deposits_withdrawals_or_wallet_approvals": 0,
+    "external_side_effects": 0,
+    "market_data_api_calls": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "orderbook_api_calls": 0,
+    "orders_or_trades": 0,
+    "payments_or_tax_forms": 0,
+    "polymarket_account_or_login": false,
+    "polymarket_us_account_or_login": false,
+    "private_key_or_session_signer_used": false,
+    "public_actions_or_referrals": 0,
+    "relayer_or_bridge_calls": 0,
+    "service_requests_mutated": 0,
+    "wallet_created_or_connected": false,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "local_proof_completed",
+  "generated_at": "2026-06-18T07:27:45Z",
+  "lane_id": "prediction_market_research",
+  "schema_version": "polymarket_route_gate_local_proof.trace.v1",
+  "source": "tools/create_polymarket_route_gate_local_proof.py",
+  "summary": "Polymarket route-gate packet created with no account, wallet, API call, payment, trade, runtime, public action, model/MCP call, or external side effect.",
+  "task_id": "task-lane-scout-polymarket_docs_research-20260618"
+}

@@ -1,0 +1,44 @@
+{
+  "generated_utc": "2026-06-14T16:00:00Z",
+  "external_side_effects": false,
+  "public_actions": false,
+  "browser_actions": false,
+  "real_money_actions": false,
+  "gated_service_requests": [
+    "req-next-wave-digital-marketplace-browser-readonly-20260614",
+    "req-next-wave-digital-legal-payment-review-20260614",
+    "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+    "req-next-wave-security-report-route-review-20260614",
+    "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+  ],
+  "dispatches": [
+    {
+      "lane_id": "money_source_discovery",
+      "thread_id": "019ec699-e02b-7ce1-a7a6-32afc857c254",
+      "task_id": "task-money-source-proof-queue-schema-20260614",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "scope": "Machine-readable proof queue derived from local weekly delta table only; no browser/current-source verification."
+    },
+    {
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "thread_id": "019ec613-54d0-7d13-ada3-d448a4b4cc99",
+      "task_id": "task-web3-glamsterdam-m1-source-map-20260614",
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "scope": "Local M1 source map and duplicate sweep only; no ESP submission, account, wallet, legal/payment step, deployment, quest, public project, or transaction."
+    },
+    {
+      "lane_id": "lead_generation_and_sales",
+      "thread_id": "019ec613-9786-7a70-97fd-21143953b39f",
+      "task_id": "task-leadgen-source-category-policy-review-20260614",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "scope": "Local source-category and data-handling policy review only; no real leads, scraping, outreach, CRM upload, or account use."
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+      "task_id": "task-prediction-archived-packet-parser-checker-20260614",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "scope": "Local archived-packet parser/checker only; no live venue calls, accounts, credentials, orders, trading APIs, deposits, withdrawals, or real-money trades."
+    }
+  ]
+}

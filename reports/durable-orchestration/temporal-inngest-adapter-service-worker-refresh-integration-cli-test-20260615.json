@@ -1,0 +1,63 @@
+{
+  "schema_version": "temporal_inngest_adapter_service_worker_refresh_integration_cli_test.v1",
+  "generated_local": "2026-06-15T18:31:04.8625261+03:00",
+  "generated_utc_approx": "2026-06-15T15:31:04Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-service-worker-refresh-integration-cli-20260615",
+  "tool_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "tool_sha256_before": "572696D6766B4548F9B29692110C9F630F991A74E9AD7613BAE001F96013B081",
+  "tool_sha256_after": "EC1A8B95CEDE2FE63E89A4CDEF4D81DF27FC287213C5AA6211BC524ED00A14F9",
+  "generated_artifacts": {
+    "integration_json": {
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-latest.json",
+      "sha256": "87C5798343CBE00E43CE94B540C5C96D173FB5E6A0A61EAE17393CFDEE30F2D9"
+    },
+    "integration_validation_json": {
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-validation-latest.json",
+      "sha256": "8B226E7388E58C5491711A606EC4DFC8D537254DB007AA5AFF3AE35D840EC5DB"
+    },
+    "integration_markdown": {
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-latest.md",
+      "sha256": "34D5233A5B87A39CF3B5E416203D6A46BB29159FD5D170726BD564C599C96B11"
+    },
+    "chain_integrity_validation": {
+      "path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+      "sha256": "19EF70B1200DF304DAAB704604F16A098DA0BBEB06C054A4ED55073BF05426C8"
+    }
+  },
+  "checks": {
+    "syntax_ok": true,
+    "help_ok": true,
+    "integration_command_ok": true,
+    "integration_reducer_result_count": 14,
+    "integration_failure_count": 0,
+    "integration_validation_json_ok": true,
+    "chain_integrity_ok": true,
+    "chain_integrity_checked_report_count": 18,
+    "chain_integrity_failure_count": 0,
+    "service_request_mutation_count": 0,
+    "model_api_gate_remains_parked": true,
+    "model_api_pool_registered": false
+  },
+  "runtime_boundary": {
+    "python_files_modified": 1,
+    "cli_commands_added_to_runner": 1,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Use write-durable-adapter-service-worker-integration as the report-only preflight before future Temporal/Inngest adapter implementation work."
+}

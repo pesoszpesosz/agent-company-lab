@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-lane-cartridge-rail-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-lane-cartridge-rail-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-lane-cartridge-rail-v1-20260619",
+  "title": "Command Cockpit Lane Cartridge Rail",
+  "createdAt": "2026-06-19T14:31:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the desktop Command Cockpit lane rail into shorter level-select cartridges so more money paths are visible before rail scrolling.",
+  "proof": [
+    "Reduced cockpit lane-card height, padding, avatar size, repeated realm text, and redundant state badge chrome while preserving lane identity.",
+    "Kept compact level, gate, win, live, and signal-pip state visible on every lane cartridge.",
+    "Scoped the compression to the Command Cockpit desktop rail so mobile keeps its existing horizontal launch strip."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_lane_rail_signal_pips.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-lane-cartridge-rail-trace-metadata-20260619.json"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_interface_negative_fixtures_cli_validation.v1",
+    "created_at":  "2026-06-15T15:56:30Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-interface-negative-fixtures-cli-20260615",
+    "command_added_count":  1,
+    "negative_fixture_count":  8,
+    "rejected_fixture_count":  8,
+    "accepted_fixture_count":  0,
+    "chain_integrity_checked_report_count":  20,
+    "chain_integrity_failure_count":  0,
+    "forbidden_runtime_import_count":  0,
+    "all_negative_fixtures_rejected":  true,
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_mutation_count":  0,
+    "model_api_gate_remains_parked":  true,
+    "model_api_pool_registered":  false,
+    "all_checks_passed":  true,
+    "failure_count":  0,
+    "failures":  [
+
+                 ],
+    "next_action":  "Promote these negative fixtures into the durable adapter implementation preflight before writing any Temporal/Inngest runtime adapter code."
+}

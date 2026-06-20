@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-stage-footer-rail-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-stage-footer-rail-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-stage-footer-rail-v1-20260619",
+  "title": "Command Cockpit Stage Footer Rail",
+  "createdAt": "2026-06-19T12:45:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Turned the empty floor below the compact Overview mission panel into a mounted-stage footer rail with level, quest progress, gate pressure, and next-move cells.",
+  "proof": [
+    "Added activeLaneStageFooterRail markup fed by lane level, quest checkpoint progress, blockers, pending requests, and next action.",
+    "Scoped the rail to the Command Cockpit Overview mounted stage with a flex floor anchor and animated sweep line.",
+    "Verified the live 390x760 cockpit: rail bottom 671px, bottom dock y 692px, 21px clearance, no horizontal overflow."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-stage-footer-rail-trace-metadata-20260619.json"
+  ]
+}

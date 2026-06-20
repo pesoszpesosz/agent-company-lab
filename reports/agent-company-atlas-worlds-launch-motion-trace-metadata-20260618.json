@@ -1,0 +1,67 @@
+{
+  "event_type": "atlas_worlds_launch_motion_added",
+  "task_id": "task-agent-company-atlas-worlds-launch-motion-v1-20260618",
+  "trace_id": "trace-agent-company-atlas-worlds-launch-motion-v1-20260618",
+  "event_id": "trace-atlas_worlds_launch_motion_added-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Upgraded Worlds Launch with a lightweight animated node-link route layer and reduced-motion fallbacks.",
+  "date": "2026-06-18",
+  "research_influence": [
+    "Dashboard design pattern research supports compact spatial arrangements instead of long stacked dashboards.",
+    "Gamification patterns emphasize levels, progress, avatars, and visible performance paths."
+  ],
+  "changes": [
+    "Added renderWorldsLaunchRoute(lanes) to derive route nodes from visible priority lanes.",
+    "Added a desktop route-map layer with a glowing line, route runner, active-node pulse, and focus scan.",
+    "Kept mobile/tablet compact by hiding the route-map layer and preserving internal action/lane rails.",
+    "Added reduced-motion fallbacks for the Worlds launch atmosphere, focus scan, route runner, and active node.",
+    "Updated README and contract tests to preserve the motion layer."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_worlds_launch.py"
+  ],
+  "verification": {
+    "static": [
+      "node --check E:\\agent-company-lab\\web\\app.js",
+      "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas"
+    ],
+    "browser": {
+      "desktop": {
+        "viewport": "1280x720",
+        "worlds_sections": 4,
+        "route_node_count": 6,
+        "active_route_nodes": 1,
+        "runner_animation": "worldsLaunchRouteRunner",
+        "route_map_display": "block",
+        "launcher_height": 324,
+        "page_height": 3745,
+        "horizontal_overflow": false
+      },
+      "tablet": {
+        "viewport": "820x900",
+        "worlds_sections": 4,
+        "route_map_display": "none",
+        "launcher_height": 480,
+        "horizontal_overflow": false
+      },
+      "mobile": {
+        "viewport": "390x844",
+        "worlds_sections": 4,
+        "route_map_display": "none",
+        "launcher_height": 495,
+        "horizontal_overflow": false
+      },
+      "console_errors": 0
+    }
+  },
+  "next_iteration": [
+    "Improve animation in the lane detail Path Map without increasing first-screen scroll.",
+    "Add richer generated sprite/texture language for bots and lane cards.",
+    "Continue replacing static dashboard stacks with compact game-board selectors."
+  ]
+}

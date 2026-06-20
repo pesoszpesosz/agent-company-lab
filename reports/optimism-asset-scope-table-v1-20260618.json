@@ -1,0 +1,54 @@
+{
+  "schema_version": "agent_company.optimism_asset_scope_table_report.v1",
+  "generated_utc": "2026-06-17T21:53:00Z",
+  "task_id": "task-optimism-asset-scope-table-v1-20260618",
+  "dataset_json": "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.csv",
+  "program": "Optimism",
+  "source_urls": [
+    "https://immunefi.com/bug-bounty/optimism/scope/",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/optimism/resources/"
+  ],
+  "asset_count": 33,
+  "category_counts": {
+    "Blockchain/DLT": 4,
+    "Smart Contract": 19,
+    "Web & App": 10
+  },
+  "coverage_reconciliation": {
+    "observed_total_assets_in_scope": 33,
+    "extracted_asset_rows": 33,
+    "row_count_matches_program_total": true
+  },
+  "decision": "Asset scope table is now complete enough for local duplicate-matrix and report-quality work, but still not enough for target-specific testing or submission.",
+  "promoted_local_proofs": [
+    "optimism_known_issue_duplicate_matrix_v1",
+    "security_report_quality_gate_v1"
+  ],
+  "blocked_actions": [
+    "no code clone/build/run",
+    "no node or Docker start",
+    "no mainnet or public testnet testing",
+    "no web/DNS probing",
+    "no wallet/account/login/KYC/payment action",
+    "no Immunefi submission or public disclosure"
+  ],
+  "boundary": {
+    "report_only": true,
+    "public_read_only_headless_page_extraction_sessions": 1,
+    "service_worker_browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build optimism_known_issue_duplicate_matrix_v1 and security_report_quality_gate_v1 before any target-specific code review."
+}

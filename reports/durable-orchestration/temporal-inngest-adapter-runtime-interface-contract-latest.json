@@ -1,0 +1,102 @@
+{
+  "forbidden_runtime_imports": [],
+  "generated_utc": "2026-06-15T15:42:52Z",
+  "interface_contract_count": 4,
+  "interface_contracts": [
+    {
+      "contract_id": "temporal_workflow_identity_preview",
+      "defined_not_started": true,
+      "reason_blocked": "external runtime start requires explicit approval",
+      "runtime": "temporal",
+      "schedule_activity_allowed": false,
+      "source_fields": [
+        "request_id"
+      ],
+      "start_allowed": false,
+      "workflow_id_template": "agent-company/service-request/{request_id}",
+      "workflow_type": "ServiceRequestLifecycleWorkflow"
+    },
+    {
+      "contract_id": "inngest_event_identity_preview",
+      "defined_not_emitted": true,
+      "event_emit_allowed": false,
+      "event_name_template": "agent_company/service_request.{status_event}",
+      "idempotency_key_template": "service-request-event:{request_id}:{event_name}:{status_snapshot}:{risk_gate}",
+      "reason_blocked": "event emission requires explicit approval",
+      "runtime": "inngest",
+      "source_fields": [
+        "request_id",
+        "event_name",
+        "status_snapshot",
+        "risk_gate"
+      ]
+    },
+    {
+      "contract_id": "reducer_to_service_worker_refresh_disposition",
+      "defined_not_executed": true,
+      "parked_disposition": "refresh_local_review_packets_only",
+      "parked_state": "parked.awaiting_human_review",
+      "runtime": "local_report_only",
+      "service_request_mutation_allowed": false,
+      "terminal_dispositions": [
+        "terminal_no_refresh_start_or_replay",
+        "terminal_rejected_no_revive_or_replay"
+      ]
+    },
+    {
+      "contract_id": "runtime_gate_enforcement",
+      "defined_not_executed": true,
+      "forbidden_runtime_import_count": 0,
+      "forbidden_until_explicit_approval": [
+        "dependency install",
+        "runtime import",
+        "server start",
+        "worker start",
+        "workflow start",
+        "activity schedule",
+        "event emit",
+        "service request assignment",
+        "model API call",
+        "external browser/account/payment/wallet/security action"
+      ],
+      "negative_import_scan_scope": "E:\\agent-company-lab\\tools\\agent_company.py",
+      "runtime": "local_report_only"
+    }
+  ],
+  "lane_id": "platform_engineering",
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "next_action": "Implement static interface-contract negative fixtures and add this generated contract validation to the orchestration readiness chain before any runtime adapter code.",
+  "parked_rows": 11,
+  "purpose": "Define local-only interface contracts for future Temporal/Inngest adapter work without importing, starting, emitting, scheduling, or mutating anything.",
+  "reducer_result_count": 14,
+  "runtime_boundary": {
+    "api_calls": false,
+    "approvals_granted": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_functions_registered": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_runtime_interface_contract.v1",
+  "source_artifacts": {
+    "integration_validation": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-validation-latest.json",
+    "reducer_result": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-p2-cleanup-positive-result-20260615.json",
+    "runtime_readiness_validation": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-validation-20260615.json"
+  },
+  "terminal_rows": 3
+}

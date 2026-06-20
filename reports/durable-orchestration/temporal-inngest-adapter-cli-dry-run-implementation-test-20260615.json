@@ -1,0 +1,64 @@
+{
+  "api_calls": false,
+  "commands": {
+    "help": {
+      "args": [
+        "C:\\Python314\\python.exe",
+        "E:\\agent-company-lab\\tools\\agent_company.py",
+        "dry-run-durable-service-request-reducer",
+        "--help"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    "json_dry_run": {
+      "args": [
+        "C:\\Python314\\python.exe",
+        "E:\\agent-company-lab\\tools\\agent_company.py",
+        "dry-run-durable-service-request-reducer",
+        "--fixtures",
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+        "--json",
+        "--check-live-status"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    "write_dry_run": {
+      "args": [
+        "C:\\Python314\\python.exe",
+        "E:\\agent-company-lab\\tools\\agent_company.py",
+        "dry-run-durable-service-request-reducer",
+        "--fixtures",
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+        "--result-path",
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-result-20260615.json",
+        "--check-live-status"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"ok\": true,\n  \"path\": \"E:\\\\agent-company-lab\\\\reports\\\\durable-orchestration\\\\temporal-inngest-adapter-cli-dry-run-result-20260615.json\",\n  \"failure_count\": 0\n}\n"
+    }
+  },
+  "external_side_effects": false,
+  "fixtures": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+  "generated_utc": "2026-06-15T14:52:56Z",
+  "result_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-result-20260615.json",
+  "schema_version": "temporal_inngest_adapter_cli_dry_run_implementation_test.v1",
+  "service_request_mutations_detected": {},
+  "summary": {
+    "help_ok": true,
+    "json_dry_run_ok": true,
+    "output_state_counts": {
+      "parked.awaiting_human_review": 11,
+      "terminal.completed_from_ledger_snapshot": 1,
+      "terminal.rejected_from_ledger_snapshot": 2
+    },
+    "result_count": 14,
+    "service_request_mutation_count": 0,
+    "syntax_ok": true,
+    "write_dry_run_ok": true
+  },
+  "tool_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "tool_sha256": "799400CC78D467426F30163906129988AF78A268C37F20E157FC46C3D4D09983"
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-mcp-egress-apply-command-guard-v1-20260618",
+  "task_id": "task-mcp-egress-apply-command-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:55:06Z",
+  "summary": "Created a report-only MCP egress apply-command guard for mcp_tool_gateway. The guard accepts only deny_noop and report-only guard command shapes, rejects 49 MCP execution and boundary-mutation fixtures, and preserves zero command writes/execution, gateway registration/start, MCP server enable/start, MCP tool calls, credential access, worker starts, service-request mutation, live egress, or external side effects.",
+  "source_apply_preflight_validation": "E:\\agent-company-lab\\reports\\mcp-egress-apply-preflight-blocker-v1-validation-20260618.json",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\mcp-egress-signed-decision-guard-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\mcp-egress-apply-command-guard-v1.schema.json",
+      "sha256": "8cf18610059384d715a5ea47668965569a7ddcf5188b51faa0c209ae668ec1e1"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_mcp_egress_apply_command_guard.py",
+      "sha256": "ea73edc96d39aad1337dafe6af9983d4789f4189f08c1bc664407b034b7975c2"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_mcp_egress_apply_command_guard.py",
+      "sha256": "0f11f44284959e9002e22b78b504f1232b5340a2241307b49b1c94c34a8c1a38"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\mcp-egress-apply-command-guard-v1-20260618.json",
+      "sha256": "852a5b5b1d636c862fb6736d70046fc0485e4e95d7c52d5bf49528a6303dafd3"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\mcp-egress-apply-command-guard-v1-validation-20260618.json",
+      "sha256": "66826f8a268df2fc06c1885feb8a353660c676b4aade79077444414ff3cb4bb4"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\mcp-egress-apply-command-guard-v1-20260618.md",
+      "sha256": "843f76025242e3e8a4454977679d6995db68b9674ef2b10fbcc56de8efe87209"
+    }
+  ],
+  "verification": {
+    "red_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_mcp_egress_apply_command_guard.py",
+    "red_test_result": "failed before implementation because validate_mcp_egress_apply_command_guard.py did not exist",
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_mcp_egress_apply_command_guard.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "35 tests passed",
+    "target_route_id": "mcp_tool_gateway",
+    "target_egress_type": "mcp_tool",
+    "fixture_count": 51,
+    "accepted_count": 2,
+    "rejected_count": 49,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "mcp_server_enable_allowed": false,
+    "mcp_tool_call_allowed": false,
+    "mcp_servers_started": 0,
+    "mcp_servers_enabled": 0,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "credential_access_allowed": false,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "mcp_server_enable_allowed": false,
+    "mcp_tool_call_allowed": false,
+    "mcp_servers_started": 0,
+    "mcp_servers_enabled": 0,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "credential_access_allowed": false,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Keep MCP egress blocked until a real signed operator MCP egress decision and exact command preview exist; then build an execution guard before any MCP server enable/start, MCP tool call, credential access, worker start, or live egress."
+}

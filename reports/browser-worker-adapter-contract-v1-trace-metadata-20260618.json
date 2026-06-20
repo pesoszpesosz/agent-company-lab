@@ -1,0 +1,17 @@
+{
+  "accepted_count": 1,
+  "api_calls": false,
+  "artifact_slug": "browser-worker-adapter-contract-v1-20260618",
+  "browser_actions": false,
+  "contract_verdict": "adapter_contract_valid_start_blocked",
+  "external_side_effects": false,
+  "fixture_count": 26,
+  "generated_utc": "2026-06-20T21:07:30Z",
+  "lane_id": "platform_engineering",
+  "rejected_count": 25,
+  "runtime": "codex_local_report_only",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "span_kind": "internal",
+  "task_id": "task-browser-worker-adapter-contract-v1-20260618",
+  "trace_id": "trace-browser-worker-adapter-contract-v1-20260618"
+}

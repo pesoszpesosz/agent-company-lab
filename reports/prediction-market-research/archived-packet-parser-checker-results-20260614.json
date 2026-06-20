@@ -1,0 +1,526 @@
+{
+  "accounts_or_credentials": false,
+  "actionable": [],
+  "actionable_candidates": 0,
+  "event_status_counts": {
+    "official_value_seen_no_edge": 8,
+    "pre_close_watch": 4
+  },
+  "files": [
+    {
+      "headers": {
+        "Events": "32",
+        "Generated UTC": "2026-06-14T14:59:07.9148250Z",
+        "Review candidates": "0",
+        "Rows": "2804",
+        "Series": "KXBTC, KXETH, KXXRP, KXDOGE",
+        "Status": "pre_close_watch",
+        "https": "//kalshi.com/markets/KXBTC-26JUN1409-B60350",
+        "source": "https://kalshi.com/markets/KXETH-26JUN1417-B1710"
+      },
+      "parsed_packets": 0,
+      "path": "E:\\profit-edge-lab\\reports\\kalshi-crypto-settlement-lag-latest.md"
+    },
+    {
+      "headers": {
+        "Close UTC": "2026-06-13T10:00:00.0000000Z",
+        "Event": "KXBTC-26JUN1306",
+        "Generated UTC": "2026-06-13T10:09:07.5956915Z",
+        "Minutes to close": "-9.13",
+        "Official value seen": "63712.97",
+        "Review candidates": "0",
+        "Rows": "188",
+        "Status": "official_value_seen_no_edge",
+        "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B59550"
+      },
+      "parsed_packets": 12,
+      "path": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md"
+    },
+    {
+      "headers": {
+        "Generated UTC": "2026-06-13T10:09:35.8611115Z",
+        "Review candidates": "0",
+        "Rows": "1013",
+        "Settlement pending": "0",
+        "Status": "pre_close_watch",
+        "source": "https://kalshi.com/markets/KXMVECROSSCATEGORY-S2026F0A9E3D333A-AD11D66F8CD"
+      },
+      "parsed_packets": 20,
+      "path": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md"
+    }
+  ],
+  "generated_utc": "2026-06-14T15:31:24Z",
+  "killed_candidates": 32,
+  "killed_sample": [
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B59950 $59,900 to 59,999.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B59950",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60050 $60,000 to 60,099.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60050",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B59850 $59,800 to 59,899.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B59850",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B59650 $59,600 to 59,699.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B59650",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B59750 $59,700 to 59,799.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B59750",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60150 $60,100 to 60,199.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60150",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60550 $60,500 to 60,599.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60550",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60650 $60,600 to 60,699.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60650",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60450 $60,400 to 60,499.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60450",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60250 $60,200 to 60,299.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60250",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B60350 $60,300 to 60,399.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B60350",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+      "market": "KXBTC-26JUN1306-B59550 $59,500 to 59,599.99",
+      "noAsk": 1.0,
+      "noBid": 0.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "no_nonterminal_stale_quote",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "no",
+      "source": "https://kalshi.com/markets/KXBTC-26JUN1306-B59550",
+      "yesAsk": 1.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S202689330DBCCE6-10842E21057 no Target Price: $63,776.59,no Target Price: $0.0872147,no Target Price: $1,673.37,yes Target Price: $67.3187,yes Target Price: $1.1419",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202689330DBCCE6-10842E21057",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S2026A5D92312EBC-540E9E083F6 no Target Price: $63,776.59,yes Target Price: $1.1419",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5D92312EBC-540E9E083F6",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T10:00:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S202665F70C31EE7-0C4A49B3533 no Target Price: $63,776.59,no Target Price: $1,673.37,yes Target Price: $1.1419",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202665F70C31EE7-0C4A49B3533",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T09:45:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S202616FBE35D46C-128D1B9AE75 no Target Price: $63,786.54,no Target Price: $0.0872164,yes Target Price: $1,672.84,no Target Price: $67.3665,no Target Price: $1.1425",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202616FBE35D46C-128D1B9AE75",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T09:30:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S202638E1F66F4D0-25C0CF3731F no Target Price: $0.0872708,no Target Price: $1,674.22,no Target Price: $1.1435",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202638E1F66F4D0-25C0CF3731F",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T09:30:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S202605728D4211A-4898706CE6F yes Target Price: $63,778.83,no Target Price: $0.0872708,no Target Price: $1,674.22,no Target Price: $1.1435",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202605728D4211A-4898706CE6F",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T09:15:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S2026251A4D7A285-8235CEFC972 no Target Price: $63,778.94,yes Target Price: $0.0871178,yes Target Price: $1,673.81,yes Target Price: $67.3107,yes Target Price: $1.1426",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026251A4D7A285-8235CEFC972",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    },
+    {
+      "close": "2026-06-13T09:15:00.0000000Z",
+      "flags": [
+        "not_active"
+      ],
+      "input": "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md",
+      "market": "KXMVESPORTSMULTIGAMEEXTENDED-S20263D4F962196F-CACA25CD867 no Target Price: $63,778.94,yes Target Price: $1,673.81",
+      "noAsk": 1.0,
+      "noBid": 1.0,
+      "reasons": [
+        "review_false",
+        "not_active_or_finalized",
+        "fees_unverified",
+        "depth_unverified",
+        "venue_eligibility_unverified",
+        "real_money_gate_absent"
+      ],
+      "result": "yes",
+      "source": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20263D4F962196F-CACA25CD867",
+      "yesAsk": 0.0,
+      "yesBid": 0.0
+    }
+  ],
+  "mode": "offline_local_archived_packets_only",
+  "network_calls": false,
+  "orders_or_trades": false,
+  "parsed_packets": 32,
+  "realized_usd": 0,
+  "reason_counts": {
+    "depth_unverified": 32,
+    "fees_unverified": 32,
+    "no_nonterminal_stale_quote": 12,
+    "not_active_or_finalized": 32,
+    "real_money_gate_absent": 32,
+    "review_false": 32,
+    "venue_eligibility_unverified": 32
+  },
+  "thresholds": {
+    "stale_losing_bid_min": 0.02,
+    "stale_winning_ask_max": 0.98
+  }
+}

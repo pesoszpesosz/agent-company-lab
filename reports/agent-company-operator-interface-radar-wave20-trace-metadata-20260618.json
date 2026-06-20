@@ -1,0 +1,42 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-agent-company-operator-interface-radar-wave20-20260618",
+  "task_id": "task-agent-company-operator-interface-radar-wave20-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "event_type": "operator_interface_radar_wave",
+  "source": "github_primary_read_only",
+  "candidate_count": 9,
+  "github_metadata_reads": 9,
+  "github_readme_reads": 8,
+  "top_recommendations": [
+    "ceo_operator_event_surface_contract_v1",
+    "delegated_tool_auth_request_packet_v1",
+    "multi_agent_room_handoff_contract_v1",
+    "agent_action_reversibility_policy_matrix_v1"
+  ],
+  "zero_side_effect_boundary": {
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "public_actions": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "security_testing_actions": false,
+    "external_side_effects": false
+  },
+  "evidence": [
+    "E:\\agent-company-lab\\data\\agent-company-operator-interface-radar-wave20-20260618.json",
+    "E:\\agent-company-lab\\data\\agent-company-operator-interface-radar-wave20-20260618.csv",
+    "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618.md",
+    "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618-validation.json"
+  ],
+  "next_action": "Build ceo_operator_event_surface_contract_v1 locally before adding more visual dashboard or live worker communication surfaces."
+}

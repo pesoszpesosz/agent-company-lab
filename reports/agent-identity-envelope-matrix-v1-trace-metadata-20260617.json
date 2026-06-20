@@ -1,0 +1,24 @@
+{
+  "source_count": 13,
+  "candidate_count": 10,
+  "github_repo_metadata_count": 9,
+  "recommended_next_builds": [
+    "agent_identity_envelope_contract_v1",
+    "worker_pool_operator_decision_contract_v1",
+    "agent_egress_event_ledger_v1",
+    "mcp_tool_registry_gate_v1"
+  ],
+  "runtime_boundary": {
+    "identity_system_installed": false,
+    "credentials_created": false,
+    "spiffe_ids_issued": false,
+    "svids_issued": false,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": "agent_company.worker_pool_operator_decision_packet.v1",
+  "generated_utc": "2026-06-17T19:06:41Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-worker-pool-operator-decision-packet-v1-20260617",
+  "purpose": "Define the operator decision artifact required before any worker pool can be registered from existing review packets.",
+  "source_artifacts": {
+    "worker_pool_registration_review": "E:\\agent-company-lab\\reports\\worker-pool-registration-review-v1-20260617.json",
+    "agent_identity_envelope_matrix": "E:\\agent-company-lab\\reports\\agent-identity-envelope-matrix-v1-20260617.json",
+    "service_worker_chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  },
+  "allowed_decisions": [
+    "approve_identity_envelope_draft",
+    "approve_register_later_preflight",
+    "hold",
+    "reject",
+    "request_more_evidence"
+  ],
+  "required_fields": [
+    "decision_id",
+    "decision_schema_version",
+    "created_utc",
+    "expires_utc",
+    "operator_id",
+    "operator_attestation",
+    "source_review_packet_id",
+    "source_review_artifact_path",
+    "worker_pool_id",
+    "decision",
+    "decision_rationale",
+    "allowed_next_action",
+    "identity_envelope_required",
+    "identity_envelope_artifact_path",
+    "allowed_service_request_types",
+    "allowed_egress_types",
+    "credential_scope",
+    "browser_scope",
+    "mcp_scope",
+    "model_api_scope",
+    "wallet_scope",
+    "payment_scope",
+    "public_action_scope",
+    "budget_scope",
+    "recording_required",
+    "redaction_required",
+    "runtime_boundary",
+    "must_not_do",
+    "approval_limitations",
+    "supersedes_decision_id",
+    "revocation_status"
+  ],
+  "review_rows": [
+    {
+      "worker_pool_id": "service-worker-browser-read-only-pool",
+      "priority": "high",
+      "source_route": "manual_review_register_later",
+      "current_request_count": 7,
+      "recommended_decision_shape": "approve_identity_envelope_draft",
+      "required_blockers": [
+        "identity_envelope_required",
+        "read_only_browser_domain_scope_required",
+        "session_recording_policy_required"
+      ]
+    },
+    {
+      "worker_pool_id": "service-worker-signed-in-browser-read-only-pool",
+      "priority": "low",
+      "source_route": "manual_review_hold",
+      "current_request_count": 1,
+      "recommended_decision_shape": "hold",
+      "required_blockers": [
+        "signed_in_browser_safety_missing",
+        "session_policy_missing"
+      ]
+    },
+    {
+      "worker_pool_id": "service-worker-legal-kyc-payment-review-pool",
+      "priority": "medium",
+      "source_route": "manual_review_register_later",
+      "current_request_count": 1,
+      "recommended_decision_shape": "approve_identity_envelope_draft",
+      "required_blockers": [
+        "cro_scope_required",
+        "legal_kyc_tax_payment_scope_required"
+      ]
+    },
+    {
+      "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+      "priority": "high",
+      "source_route": "manual_review_register_later",
+      "current_request_count": 2,
+      "recommended_decision_shape": "approve_identity_envelope_draft",
+      "required_blockers": [
+        "identity_envelope_required",
+        "local_only_runtime_boundary_required"
+      ]
+    },
+    {
+      "worker_pool_id": "service-worker-model-api-execution-pool",
+      "priority": "medium",
+      "source_route": "manual_review_register_later",
+      "current_request_count": 1,
+      "recommended_decision_shape": "approve_identity_envelope_draft",
+      "required_blockers": [
+        "provider_scope_required",
+        "model_scope_required",
+        "cost_scope_required",
+        "input_output_artifact_scope_required",
+        "egress_ledger_required"
+      ]
+    },
+    {
+      "worker_pool_id": "service-worker-other-gated-work-pool",
+      "priority": "low",
+      "source_route": "manual_review_hold",
+      "current_request_count": 1,
+      "recommended_decision_shape": "hold",
+      "required_blockers": [
+        "request_type_too_broad"
+      ]
+    },
+    {
+      "worker_pool_id": "service-worker-public-submission-review-pool",
+      "priority": "medium",
+      "source_route": "manual_review_register_later",
+      "current_request_count": 1,
+      "recommended_decision_shape": "approve_identity_envelope_draft",
+      "required_blockers": [
+        "cro_scope_required",
+        "reputation_review_required",
+        "public_action_scope_required"
+      ]
+    }
+  ],
+  "negative_fixtures": [
+    "missing_operator_attestation",
+    "expired_decision",
+    "unknown_pool_id",
+    "packet_pool_mismatch",
+    "direct_register_action",
+    "assign_service_request_action",
+    "starts_worker_action",
+    "browser_scope_escalation",
+    "credential_scope_implicit",
+    "public_action_escalation",
+    "model_api_cost_missing",
+    "wallet_payment_allowed"
+  ],
+  "runtime_boundary": {
+    "report_only": true,
+    "registers_pools": false,
+    "assigns_service_requests": false,
+    "starts_workers": false,
+    "executes_command_previews": false,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "recommended_next_build": "worker_pool_operator_decision_contract_v1_schema_and_negative_fixture_suite"
+}

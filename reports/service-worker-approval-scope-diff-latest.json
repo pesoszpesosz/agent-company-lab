@@ -1,0 +1,1609 @@
+{
+  "api_calls": false,
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "execution_notice": "Read-only approval-scope diff. It grants no approval and does not assign, start, complete, enqueue, or execute service workers.",
+  "external_side_effects": false,
+  "filters": {
+    "lane_id": null,
+    "request_id": null,
+    "status": null
+  },
+  "generated_utc": "2026-06-15T10:21:10Z",
+  "request_count": 14,
+  "route_counts": {
+    "missing_exact_scope": 9,
+    "scope_text_without_approval_record": 2,
+    "terminal_complete_scope_audit_only": 1,
+    "terminal_rejected_scope_audit_only": 2
+  },
+  "schema_version": "service_worker_approval_scope_diff.v1",
+  "scope_compatible_count": 0,
+  "scope_diffs": [
+    {
+      "allowed_actions": [
+        "after explicit approval, inspect approved signed-in research surface in read-only mode",
+        "capture local notes and source references",
+        "avoid likes, follows, replies, posts, settings, messages, and account changes"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": false,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": true,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {
+        "grok.com": false,
+        "x.com": false
+      },
+      "lane_id": "platform_engineering",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present",
+        "host_scope_ok"
+      ],
+      "next_action": "Record an approved approval row with the exact scope before assignment or start.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "research_enrichment",
+      "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+      "route": "scope_text_without_approval_record",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "Read-only Grok/X research enrichment only",
+      "service_id": "browser_signed_in_read_only",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-grok-research-worker-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-grok-research-worker-20260614",
+      "worker_type": "browser_signed_in_read_only"
+    },
+    {
+      "allowed_actions": [
+        "prepare local review notes",
+        "identify required legal, tax, KYC, payment, seller, and contractual decisions",
+        "produce questions for the user/CRO"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "legal_kyc_tax_payment",
+      "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "legal_kyc_tax_payment_gate",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+      ],
+      "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614",
+      "worker_type": "legal_kyc_tax_payment_review"
+    },
+    {
+      "allowed_actions": [
+        "Open public pages on allowed hosts after approval",
+        "Follow public help, documentation, pricing, fees, terms, refund, payout, seller, and prohibited-content links on allowed hosts",
+        "Record source URLs and page titles",
+        "Summarize factual marketplace requirements with short compliant excerpts only",
+        "Capture local Markdown notes and optional screenshots"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": false,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {
+        "gumroad.com": false,
+        "lemonsqueezy.com": false,
+        "promptbase.com": false,
+        "www.lemonsqueezy.com": false
+      },
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present",
+        "host_scope_ok"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "login",
+        "signup",
+        "seller onboarding",
+        "terms acceptance",
+        "listing creation",
+        "product upload",
+        "payment setup",
+        "tax form entry",
+        "KYC form entry",
+        "purchase",
+        "public promotion",
+        "comments or messages",
+        "saving settings",
+        "submitting forms",
+        "entering credentials, OTPs, payment details, personal data, private files, or wallet information",
+        "using signed-in pages",
+        "bypassing paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "The source service request is not approved and assigned",
+        "Any page asks for login, signup, account creation, seller onboarding, consent acceptance, payment, tax, KYC, private data, credentials, OTP, wallet action, or file upload",
+        "A required page is not public or requires a signed-in state",
+        "A link leaves the allowed hosts",
+        "The browser worker cannot distinguish public guidance from contractual acceptance",
+        "The task would require a public action, marketplace listing, or real-money/payment action"
+      ],
+      "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "paid_code_bounties",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "security_bounty_private_reports",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "prepare local submission route review",
+        "check required approvals and private/public route constraints",
+        "draft next approval questions only"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "security_bounty_private_reports",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "security_report_submission",
+      "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "security_report_submission_gate",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+      ],
+      "worker_request_id": "swr-next-wave-security-report-route-review-20260614",
+      "worker_type": "public_submission"
+    },
+    {
+      "allowed_actions": [
+        "prepare local cost/scope review",
+        "identify provider, model, max cost, input/output artifact scope, and data sensitivity",
+        "wait for explicit approval before any API call"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": true,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": true
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": true,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": true
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": true,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "platform_engineering",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Record an approved approval row with the exact scope before assignment or start.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "model_api_execution",
+      "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+      "route": "scope_text_without_approval_record",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "Not approved yet. Proposed scope: dry-run one lane with local artifact output only; no account/browser/public/wallet/trading actions.",
+      "service_id": "model_api_execution",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "provider, model, max cost, data scope, or output artifact path is not approved"
+      ],
+      "worker_request_id": "swr-pydantic-ai-model-backed-adapter-20260614",
+      "worker_type": "model_api_execution"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "content_and_social_growth",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-test-browser-readonly-complete-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "retain local audit record",
+        "do not execute or reopen without a new service request"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": true,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": true
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": true,
+        "host_scope_ok": true,
+        "latest_approval_approved": true,
+        "latest_approval_exists": true,
+        "latest_approval_not_expired": true,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": true,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "platform_engineering",
+      "latest_approval_exact_scope": "Lifecycle test only. No external action. Agent may assign/start/complete and attach local proof artifact.",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": "approval-req-test-lifecycle-approve-20260614",
+      "latest_approval_status": "approved",
+      "missing_or_failed_checks": [
+        "side_effect_denials_present"
+      ],
+      "next_action": "Do not start; keep terminal audit evidence or create a new request with a fresh scope.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "complete",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "lifecycle_test",
+      "risk_gate": "test_no_external_action",
+      "route": "terminal_complete_scope_audit_only",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "Lifecycle test only. No external action. Agent may assign/start/complete and attach local proof artifact.",
+      "service_id": "local_runtime_adapter",
+      "service_status": "complete",
+      "source_service_request_id": "req-test-lifecycle-approve-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous"
+      ],
+      "worker_request_id": "swr-test-lifecycle-approve-20260614",
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "allowed_actions": [
+        "retain local audit record",
+        "do not execute or reopen without a new service request"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": true,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": true
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": true,
+        "latest_approval_not_expired": true,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": true,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "platform_engineering",
+      "latest_approval_exact_scope": "Lifecycle rejection-path test. No external action required or allowed.",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": "rejection-req-test-lifecycle-reject-20260614",
+      "latest_approval_status": "rejected",
+      "missing_or_failed_checks": [
+        "latest_approval_approved",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Do not start; keep terminal audit evidence or create a new request with a fresh scope.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "rejected",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "lifecycle_test",
+      "risk_gate": "test_no_external_action",
+      "route": "terminal_rejected_scope_audit_only",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "local_runtime_adapter",
+      "service_status": "rejected",
+      "source_service_request_id": "req-test-lifecycle-reject-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous"
+      ],
+      "worker_request_id": "swr-test-lifecycle-reject-20260614",
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "allowed_actions": [
+        "retain local audit record",
+        "do not execute or reopen without a new service request"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": true,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": true
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": true,
+        "latest_approval_not_expired": true,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": true,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "platform_engineering",
+      "latest_approval_exact_scope": "Validator positive-path test completed; no external action required or allowed.",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": "rejection-req-test-service-intake-valid-20260614",
+      "latest_approval_status": "rejected",
+      "missing_or_failed_checks": [
+        "latest_approval_approved",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Do not start; keep terminal audit evidence or create a new request with a fresh scope.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "rejected",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "real_money_trade",
+      "risk_gate": "test_validator_no_external_action",
+      "route": "terminal_rejected_scope_audit_only",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "real_money_trade_gate",
+      "service_status": "rejected",
+      "source_service_request_id": "req-test-service-intake-valid-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous"
+      ],
+      "worker_request_id": "swr-test-service-intake-valid-20260614",
+      "worker_type": "other_gated_worker"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "ai_ml_competitions",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-wave4-digital-products-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "allowed_actions": [
+        "read public allowed pages after approval",
+        "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+        "stop at login, account, payment, public action, or private-data boundaries"
+      ],
+      "approval_granted_by_report": false,
+      "boundary_checks": [
+        {
+          "boundary": "credential_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "account_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "money_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "public_action_boundary",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "model_or_api_cost",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        },
+        {
+          "boundary": "external_side_effects",
+          "ok": false,
+          "packet_allows": false,
+          "positive_conflicts": [],
+          "required_denial_present": false
+        }
+      ],
+      "checks": {
+        "approval_scope_matches_service_scope": false,
+        "host_scope_ok": true,
+        "latest_approval_approved": false,
+        "latest_approval_exists": false,
+        "latest_approval_not_expired": false,
+        "no_positive_side_effect_conflicts": true,
+        "packet_valid": true,
+        "report_grants_approval": false,
+        "scope_present": false,
+        "side_effect_denials_present": false
+      },
+      "host_mentions": {},
+      "lane_id": "money_source_discovery",
+      "latest_approval_exact_scope": "",
+      "latest_approval_expires_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "missing_or_failed_checks": [
+        "scope_present",
+        "latest_approval_exists",
+        "latest_approval_approved",
+        "latest_approval_not_expired",
+        "approval_scope_matches_service_scope",
+        "side_effect_denials_present"
+      ],
+      "next_action": "Write an exact approval scope that names allowed actions, required denials, hosts, and output artifacts.",
+      "packet_errors": [],
+      "packet_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json",
+      "packet_source": "existing_packet",
+      "packet_status": "needs_review",
+      "prohibited_actions": [
+        "execute without explicit approval",
+        "login unless explicitly approved",
+        "signup or account creation",
+        "accept terms or legal agreements",
+        "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+        "submit forms",
+        "publish, post, reply, comment, message, list, upload, or contact external parties",
+        "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+        "change account settings",
+        "bypass paywalls, rate limits, access controls, or platform rules"
+      ],
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "route": "missing_exact_scope",
+      "scope_compatible_with_packet": false,
+      "service_approval_scope": "",
+      "service_id": "browser_read_only_session",
+      "service_status": "needs_review",
+      "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "start_allowed_by_report": false,
+      "stop_conditions": [
+        "service request status is not approved or assigned",
+        "requested action exceeds approval scope",
+        "required artifact/source is missing or ambiguous",
+        "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+        "worker would need to leave allowed host/scope"
+      ],
+      "worker_request_id": "swr-wave4-money-source-discovery-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    }
+  ],
+  "service_requests_approved_by_report": 0,
+  "service_requests_started_by_report": 0,
+  "service_requests_updated_by_report": 0,
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "worker_starts": 0
+}

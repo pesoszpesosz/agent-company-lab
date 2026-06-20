@@ -1,0 +1,172 @@
+{
+  "all_evidence_present": true,
+  "all_lanes_active_and_owned": true,
+  "all_owner_agents_registered": true,
+  "all_packets_report_only": true,
+  "all_referenced_service_requests_parked": true,
+  "all_source_specs_present": true,
+  "blocked_candidate_count": 0,
+  "candidate_rows": [
+    {
+      "blockers": [],
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-digital_products_templates_plugins-first-local-proof-20260615 --lane-id digital_products_templates_plugins --title \"Prepare first local marketplace demand proof packet\" --priority 86 --owner-agent-id lane-manager-digital_products_templates_plugins-019ec69a --duplicate-key digital_products_templates_plugins-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\digital_products_templates_plugins-manager-proof-task-20260615.md --next-action \"Use existing local evidence and source specs to draft a no-account marketplace demand proof packet with target product categories, validation questions, and approval gates.\"",
+      "duplicate_key": "digital_products_templates_plugins-first-local-proof-20260615",
+      "duplicate_key_exists": false,
+      "evidence_id": "first-local-evidence-digital_products_templates_plugins-20260615",
+      "lane_id": "digital_products_templates_plugins",
+      "markdown_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\digital_products_templates_plugins-manager-proof-task-20260615.md",
+      "missing_request_count": 0,
+      "non_parked_request_count": 0,
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "packet_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\digital_products_templates_plugins-manager-proof-task-20260615.json",
+      "parked_request_ids": [
+        "req-wave4-digital-products-browser-readonly-20260614",
+        "req-next-wave-digital-legal-payment-review-20260614",
+        "req-next-wave-digital-marketplace-browser-readonly-20260614"
+      ],
+      "ready_for_manual_promotion": true,
+      "source_spec_id": "digital_products_marketplace_demand_source_seed",
+      "task_id": "task-digital_products_templates_plugins-first-local-proof-20260615",
+      "task_id_exists": false
+    },
+    {
+      "blockers": [],
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-security_bounty_private_reports-first-local-proof-20260615 --lane-id security_bounty_private_reports --title \"Prepare first local private-report route proof packet\" --priority 86 --owner-agent-id lane-manager-security_bounty_private_reports-019ec612 --duplicate-key security_bounty_private_reports-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\security_bounty_private_reports-manager-proof-task-20260615.md --next-action \"Use imported local bounty evidence to draft a private-report route proof packet with scope, duplicate-check checklist, and explicit security-testing gates.\"",
+      "duplicate_key": "security_bounty_private_reports-first-local-proof-20260615",
+      "duplicate_key_exists": false,
+      "evidence_id": "pe-ledger-bazelbuild-buildtools-buildozer-label-traversal-wo-0426669d4438",
+      "lane_id": "security_bounty_private_reports",
+      "markdown_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\security_bounty_private_reports-manager-proof-task-20260615.md",
+      "missing_request_count": 0,
+      "non_parked_request_count": 0,
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "packet_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\security_bounty_private_reports-manager-proof-task-20260615.json",
+      "parked_request_ids": [
+        "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "req-next-wave-security-report-route-review-20260614"
+      ],
+      "ready_for_manual_promotion": true,
+      "source_spec_id": "security_profit_edge_scan_import",
+      "task_id": "task-security_bounty_private_reports-first-local-proof-20260615",
+      "task_id_exists": false
+    },
+    {
+      "blockers": [],
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-ai_ml_competitions-first-local-proof-20260615 --lane-id ai_ml_competitions --title \"Prepare first local AI/ML competition shortlist proof packet\" --priority 86 --owner-agent-id lane-manager-ai_ml_competitions-019ec69a --duplicate-key ai_ml_competitions-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\ai_ml_competitions-manager-proof-task-20260615.md --next-action \"Use local public-prize source specs to draft a competition shortlist proof packet with eligibility, account gates, timeline, and no-submission boundary.\"",
+      "duplicate_key": "ai_ml_competitions-first-local-proof-20260615",
+      "duplicate_key_exists": false,
+      "evidence_id": "first-local-evidence-ai_ml_competitions-20260615",
+      "lane_id": "ai_ml_competitions",
+      "markdown_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\ai_ml_competitions-manager-proof-task-20260615.md",
+      "missing_request_count": 0,
+      "non_parked_request_count": 0,
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "packet_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\ai_ml_competitions-manager-proof-task-20260615.json",
+      "parked_request_ids": [
+        "req-wave4-ai-ml-competitions-browser-readonly-20260614"
+      ],
+      "ready_for_manual_promotion": true,
+      "source_spec_id": "ai_ml_competitions_public_prize_source_seed",
+      "task_id": "task-ai_ml_competitions-first-local-proof-20260615",
+      "task_id_exists": false
+    },
+    {
+      "blockers": [],
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-content_and_social_growth-first-local-proof-20260615 --lane-id content_and_social_growth --title \"Prepare first local read-only social research proof packet\" --priority 86 --owner-agent-id lane-manager-content_and_social_growth-019ec613 --duplicate-key content_and_social_growth-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\content_and_social_growth-manager-proof-task-20260615.md --next-action \"Use local social-growth source specs to draft a read-only research proof packet with candidate topics, reply/follow gates, and no-posting boundary.\"",
+      "duplicate_key": "content_and_social_growth-first-local-proof-20260615",
+      "duplicate_key_exists": false,
+      "evidence_id": "first-local-evidence-content_and_social_growth-20260615",
+      "lane_id": "content_and_social_growth",
+      "markdown_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\content_and_social_growth-manager-proof-task-20260615.md",
+      "missing_request_count": 0,
+      "non_parked_request_count": 0,
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "packet_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\content_and_social_growth-manager-proof-task-20260615.json",
+      "parked_request_ids": [
+        "req-test-browser-readonly-complete-20260614"
+      ],
+      "ready_for_manual_promotion": true,
+      "source_spec_id": "content_grok_x_read_only_research",
+      "task_id": "task-content_and_social_growth-first-local-proof-20260615",
+      "task_id_exists": false
+    },
+    {
+      "blockers": [],
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-money_source_discovery-first-local-proof-20260615 --lane-id money_source_discovery --title \"Prepare first local money-source venue registry proof packet\" --priority 86 --owner-agent-id lane-manager-money_source_discovery-019ec699 --duplicate-key money_source_discovery-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\money_source_discovery-manager-proof-task-20260615.md --next-action \"Use local discovery source specs to draft a venue registry proof packet with source-quality criteria, repeatable scan fields, and no-account boundary.\"",
+      "duplicate_key": "money_source_discovery-first-local-proof-20260615",
+      "duplicate_key_exists": false,
+      "evidence_id": "first-local-evidence-money_source_discovery-20260615",
+      "lane_id": "money_source_discovery",
+      "markdown_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\money_source_discovery-manager-proof-task-20260615.md",
+      "missing_request_count": 0,
+      "non_parked_request_count": 0,
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "packet_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\money_source_discovery-manager-proof-task-20260615.json",
+      "parked_request_ids": [
+        "req-wave4-money-source-discovery-browser-readonly-20260614"
+      ],
+      "ready_for_manual_promotion": true,
+      "source_spec_id": "money_source_discovery_public_venue_source_seed",
+      "task_id": "task-money_source_discovery-first-local-proof-20260615",
+      "task_id_exists": false
+    },
+    {
+      "blockers": [],
+      "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-paid_code_bounties-first-local-proof-20260615 --lane-id paid_code_bounties --title \"Prepare first local paid-code bounty duplicate-check proof packet\" --priority 86 --owner-agent-id lane-manager-paid_code_bounties-019ec612 --duplicate-key paid_code_bounties-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\paid_code_bounties-manager-proof-task-20260615.md --next-action \"Use imported paid-code evidence to draft a duplicate-check proof packet with repo-readiness checks, payout-gate notes, and no-claim boundary.\"",
+      "duplicate_key": "paid_code_bounties-first-local-proof-20260615",
+      "duplicate_key_exists": false,
+      "evidence_id": "pe-ledger-fuzoe-pd-hunter-18-org-list-expansion-4db3aa286661",
+      "lane_id": "paid_code_bounties",
+      "markdown_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\paid_code_bounties-manager-proof-task-20260615.md",
+      "missing_request_count": 0,
+      "non_parked_request_count": 0,
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "packet_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\paid_code_bounties-manager-proof-task-20260615.json",
+      "parked_request_ids": [
+        "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+      ],
+      "ready_for_manual_promotion": true,
+      "source_spec_id": "paid_code_profit_edge_scan_import",
+      "task_id": "task-paid_code_bounties-first-local-proof-20260615",
+      "task_id_exists": false
+    }
+  ],
+  "duplicate_duplicate_key_count": 0,
+  "duplicate_task_id_count": 0,
+  "generated_utc": "2026-06-15T20:28:49Z",
+  "live_tasks_created": 0,
+  "next_action": "Choose which ready manager proof task to promote, then create the live local task explicitly; do not start browser/account/payment/security/API workers without separate approval.",
+  "promotion_candidate_count": 6,
+  "proof_task_packet_count": 6,
+  "proof_task_packets_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets-latest.json",
+  "purpose": "Verify report-only manager proof-task packets are clean for later explicit manual promotion to live local tasks.",
+  "ready_for_manual_promotion_count": 6,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.manager_proof_task_promotion_preflight.v1",
+  "service_requests_after": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "service_requests_before": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "task_rows_inserted_by_preflight": 0,
+  "tasks_table_rows_after": 141,
+  "tasks_table_rows_before": 141
+}

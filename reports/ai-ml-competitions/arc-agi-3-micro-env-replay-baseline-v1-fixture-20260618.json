@@ -1,0 +1,52 @@
+{
+  "environment_count": 3,
+  "environments": [
+    {
+      "action_space": [
+        "left",
+        "right",
+        "pick",
+        "open"
+      ],
+      "env_id": "key_door_line",
+      "initial_state": {
+        "door_open": false,
+        "has_key": false,
+        "position": 0
+      },
+      "max_steps": 7,
+      "title": "Pick up a key, move to the door, then open it."
+    },
+    {
+      "action_space": [
+        "press_red",
+        "press_blue",
+        "press_green"
+      ],
+      "env_id": "color_clue_button",
+      "initial_state": {
+        "clue": "green",
+        "pressed": null
+      },
+      "max_steps": 1,
+      "title": "Read a color clue and press the matching button."
+    },
+    {
+      "action_space": [
+        "left",
+        "right",
+        "toggle",
+        "wait"
+      ],
+      "env_id": "bridge_toggle_goal",
+      "initial_state": {
+        "bridge_down": false,
+        "position": 0
+      },
+      "max_steps": 4,
+      "title": "Lower a bridge with a toggle before crossing to the goal."
+    }
+  ],
+  "schema_version": "ai_ml_competitions.arc_agi_3_micro_env_fixture.v1",
+  "source": "synthetic_local_only_no_official_arc_data"
+}

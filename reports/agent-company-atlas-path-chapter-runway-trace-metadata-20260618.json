@@ -1,0 +1,96 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-runway-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-runway-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_runway_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Runway sequence rail to the Path Map Chapter Archive so the active chapter lens becomes a playable visual chain with progress, glyph stages, reveal-more depth, and direct Event Proof plus Route Replay synchronization.",
+  "design_research": {
+    "queries": [
+      "UX timeline drilldown event sequence filtering dashboard pattern milestones blockers",
+      "game UI progression timeline level unlock path design pattern",
+      "activity timeline event log drill down UX design pattern"
+    ],
+    "source_urls": [
+      "https://uxpatterns.dev/patterns/data-display/timeline",
+      "https://gamedesignskills.com/game-design/game-progression/",
+      "https://www.nngroup.com/articles/filters/",
+      "https://www.nngroup.com/articles/faceted-search/",
+      "https://grafana.com/docs/grafana/latest/explore/simplified-exploration/logs/",
+      "https://getstream.io/blog/activity-feed-design/"
+    ],
+    "pattern_notes": [
+      "Timeline patterns make event history easier to scan when each point stays clickable and chronological.",
+      "Game progression systems work by making the journey, current position, and next reward visible.",
+      "Faceted filters and log drilldowns reduce overload when long histories need to stay expandable without flattening into one giant list."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_runway.py",
+      "reports/agent-company-atlas-path-chapter-runway-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathChapterFocusByLane",
+      "browser-only state.pathChapterRecordLensByLane",
+      "browser-only state.pathChapterRunwayLimitByLane",
+      "browser-only state.pathEventFocusByLane",
+      "existing pathEventGlyphType classification",
+      "existing Route Replay focus state"
+    ],
+    "ui_contract": [
+      "Render a Chapter Runway inside the selected Chapter Archive record deck.",
+      "Use the active chapter lens as the runway input, so All, Proof, Unlock, Service, Task, Trace, and Gate lenses each get their own sequence rail.",
+      "Show twelve runway stages by default, using existing event glyphs and passed/active states.",
+      "Reveal more runway stages in browser-local batches without mutating snapshot data.",
+      "Clicking a runway node focuses Event Proof and synchronizes Route Replay through the existing event-focus contract.",
+      "Preserve responsive wrapping with no horizontal overflow or clipped runway labels."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_runway.py -q failed before implementation on missing pathChapterRunwayLimitByLane.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_runway.py -q passed after implementation."
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-runway-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Runway with 12 nodes, header 'Chapter Runway Full event chain 1 / 43', reveal 'Extend runway by 12', no bad rectangles, and no horizontal overflow."
+    },
+    "lens_and_reveal": {
+      "status": "passed",
+      "evidence": "Selecting Proof changed the runway to 'proof chain 1 / 22' with 12 proof nodes and reveal 'Extend runway by 10'. Revealing expanded the proof runway to 22 nodes and removed the reveal control."
+    },
+    "focus_sync": {
+      "status": "passed",
+      "evidence": "Clicking the second proof runway node focused 'Digital products local post-approval simulation plan', moved Event Proof to 4 / 64, and kept Route Replay synchronized to the latest matching replay stage."
+    },
+    "active_fallback": {
+      "status": "passed",
+      "evidence": "Fresh route load shows one visible active runway node even when browser-local event focus points outside the visible first batch."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one runway, twelve nodes, one active node, no bad rectangles, no clipped runway text, and no horizontal overflow."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "runway_contract_test": "passed",
+      "console_errors": 0
+    }
+  }
+}

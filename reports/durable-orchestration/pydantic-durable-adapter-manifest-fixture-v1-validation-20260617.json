@@ -1,0 +1,119 @@
+{
+  "cases_checked": 7,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:38:01Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-20260617.md",
+  "next_local_test": "prefect_flow_manifest_for_local_source_refresh_without_runtime_start",
+  "passed_count": 7,
+  "rows": [
+    {
+      "actual_failures": [],
+      "backend": "temporal",
+      "case_id": "case-valid-temporal-testmodel-static-tools",
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": [],
+      "matches_expected": true,
+      "model_mode": "TestModel"
+    },
+    {
+      "actual_failures": [],
+      "backend": "dbos",
+      "case_id": "case-valid-dbos-functionmodel-static-tools",
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": [],
+      "matches_expected": true,
+      "model_mode": "FunctionModel"
+    },
+    {
+      "actual_failures": [],
+      "backend": "prefect",
+      "case_id": "case-valid-prefect-testmodel-no-runtime",
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": [],
+      "matches_expected": true,
+      "model_mode": "TestModel"
+    },
+    {
+      "actual_failures": [],
+      "backend": "restate",
+      "case_id": "case-valid-restate-functionmodel-no-server",
+      "expected_decision": "valid_manifest_only_reference",
+      "expected_failures": [],
+      "matches_expected": true,
+      "model_mode": "FunctionModel"
+    },
+    {
+      "actual_failures": [
+        "model_api_call_requested",
+        "model_mode_not_allowed",
+        "model_requests_not_blocked"
+      ],
+      "backend": "dbos",
+      "case_id": "case-invalid-real-provider-openai",
+      "expected_decision": "reject_real_model_without_service_request",
+      "expected_failures": [
+        "model_api_call_requested",
+        "model_mode_not_allowed",
+        "model_requests_not_blocked"
+      ],
+      "matches_expected": true,
+      "model_mode": "openai:gpt-5.2"
+    },
+    {
+      "actual_failures": [
+        "dynamic_toolset_with_get_toolset_not_supported",
+        "toolset_id_missing"
+      ],
+      "backend": "temporal",
+      "case_id": "case-invalid-dynamic-toolset-no-id",
+      "expected_decision": "reject_durable_toolset_without_static_id",
+      "expected_failures": [
+        "dynamic_toolset_with_get_toolset_not_supported",
+        "toolset_id_missing"
+      ],
+      "matches_expected": true,
+      "model_mode": "TestModel"
+    },
+    {
+      "actual_failures": [
+        "durable_backend_imported",
+        "mcp_server_started",
+        "runtime_started"
+      ],
+      "backend": "restate",
+      "case_id": "case-invalid-runtime-and-mcp-start",
+      "expected_decision": "reject_runtime_or_mcp_start",
+      "expected_failures": [
+        "durable_backend_imported",
+        "mcp_server_started",
+        "runtime_started"
+      ],
+      "matches_expected": true,
+      "model_mode": "FunctionModel"
+    }
+  ],
+  "runtime_boundary": {
+    "agent_runs": 0,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "durable_backend_imports": 0,
+    "external_side_effects": false,
+    "function_model_runs": 0,
+    "mcp_servers_started": 0,
+    "model_api_calls": false,
+    "model_requests_allowed": false,
+    "pydantic_ai_imports": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "test_model_runs": 0,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\pydantic-durable-adapter-manifest-fixture-v1.schema.json",
+  "schema_version": "agent_company.pydantic_durable_adapter_manifest_fixture_validation.v1",
+  "top_level_failures": []
+}

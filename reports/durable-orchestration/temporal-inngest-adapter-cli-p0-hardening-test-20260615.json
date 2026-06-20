@@ -1,0 +1,81 @@
+{
+  "schema_version": "temporal_inngest_adapter_cli_p0_hardening_test.v1",
+  "generated_local": "2026-06-15T18:05:35.6657317+03:00",
+  "generated_utc_approx": "2026-06-15T15:05:35Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-cli-p0-hardening-20260615",
+  "tool_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "tool_sha256": "2F9DFB3957FDC0653C58D37445C42A478C1CA41150D23D7107A57C592F4CA117",
+  "positive_fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+  "positive_result_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-p0-hardening-positive-result-20260615.json",
+  "positive_result_sha256": "5E73F1BA5735F993ADA33B93C01ECAF4406CD22BBA1BF2A7CFFBDFCA4F67502E",
+  "negative_fixture_paths": {
+    "bad_schema": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-negative-bad-schema-20260615.json",
+    "action_true": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-negative-action-true-20260615.json"
+  },
+  "negative_fixture_sha256": {
+    "bad_schema": "38E2F4A79B486608754B2C93F19F7122D0705C7D899E508D45BCA9033FB50BD1",
+    "action_true": "A80B34C55C9C46EC2274BAC3C0F6DC752E88B1F8374A676C9EF90479D555169B"
+  },
+  "checks": {
+    "syntax_ok": true,
+    "help_ok": true,
+    "positive_json_dry_run_ok": true,
+    "positive_json_result_count": 14,
+    "positive_json_failure_count": 0,
+    "positive_write_ok": true,
+    "safe_result_path_write_ok": true,
+    "unsafe_result_path_rejected": true,
+    "unsafe_result_path_exit_code": 1,
+    "unsafe_result_path_created": false,
+    "bad_schema_rejected": true,
+    "bad_schema_exit_code": 1,
+    "failure_result_path_not_written": true,
+    "failure_result_exit_code": 1,
+    "negative_failure_result_created": false,
+    "service_request_mutation_count": 0
+  },
+  "negative_test_observations": [
+    {
+      "name": "unsafe_result_path_rejected",
+      "exit_code": 1,
+      "path_before": false,
+      "path_after": false,
+      "output": "Result path must stay inside E:\\agent-company-lab\\reports\\durable-orchestration; got E:\\agent-company-lab\\reports\\temporal-inngest-adapter-cli-unsafe-result-20260615.json"
+    },
+    {
+      "name": "bad_schema_rejected",
+      "exit_code": 1,
+      "output": "Fixture JSON schema_version must be agent_company.durable_adapter_reducer_fixture_set.v1; got 'agent_company.bad_fixture_schema.v1'"
+    },
+    {
+      "name": "failure_result_path_not_written",
+      "exit_code": 1,
+      "path_before": false,
+      "path_after": false,
+      "output": "{\"ok\": false, \"path\": \"E:\\\\agent-company-lab\\\\reports\\\\durable-orchestration\\\\temporal-inngest-adapter-cli-p0-hardening-negative-action-result-20260615.json\", \"failure_count\": 1}"
+    }
+  ],
+  "runtime_boundary": {
+    "python_files_modified": 1,
+    "report_artifacts_created": 5,
+    "cli_commands_added_to_runner": 0,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Implement P1 fixture field/type validation and duplicate-id negative tests before broad dry-run usage."
+}

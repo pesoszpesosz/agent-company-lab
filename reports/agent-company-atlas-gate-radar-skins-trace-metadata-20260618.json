@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "trace_id": "trace-agent-company-atlas-gate-radar-skins-v1-20260618",
+  "task_id": "task-agent-company-atlas-gate-radar-skins-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-gate-radar-skins-v1-20260618",
+  "event_id": "trace-atlas_gate_radar_skins_added-20260618",
+  "duplicate_key": "atlas-gate-radar-skins-v1",
+  "event_type": "atlas_gate_radar_skins_added",
+  "outcome_type": "atlas_gate_radar_skins_added",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "created_at": "2026-06-18",
+  "summary": "Added per-lane Gate Radar filters, signal classification, generated sigil artwork, Asset Vault registration, and responsive layout hardening.",
+  "research": {
+    "sources": [
+      "https://safe.security/resources/insights/cyber-risk-heat-map/",
+      "https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2022/what-is-a-risk-heat-map-and-how-can-it-help-your-risk-management-strategy",
+      "https://www.metricstream.com/learn/risk-heat-map.html",
+      "https://appfire.com/resources/blog/project-risk-assessment-examples",
+      "https://dribbble.com/search/filter-game"
+    ],
+    "pattern_notes": [
+      "Risk heat maps and matrices make blocker pressure easier to prioritize when they separate higher-impact items from watch-list items.",
+      "Filter chips help dense dashboards narrow to the class of risk that needs attention without changing the underlying data.",
+      "Game UI radar/sigil language can add atmosphere while still exposing actionable blocker text and next actions."
+    ]
+  },
+  "generated_asset": {
+    "tool": "built-in image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0d22b680175dbfc7016a33270b4e888191a058a62b7efc28c1.png",
+    "project_path": "web/assets/system/gate-radar-sigil-sheet-20260618.png",
+    "sha256": "AEC6DB2F3633C80CD47F3DE777D8C9EB3305C1D569AD554364C4678BB54A7AEA",
+    "prompt_summary": "Premium sci-fi blocker radar sigil sheet with six abstract circular gate glyphs for blocker, review, account, browser, payment, and public-action states; no text, labels, logos, or watermark."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/gate-radar-sigil-sheet-20260618.png"
+    ],
+    "data_contract": [
+      "Gate radar filters are browser-local per-lane preferences under agent-company-atlas.gate-radar-filter.v1.",
+      "gateRadarCategory(item) classifies existing gate/service-request/promotion text into blocker, review, browser, account, payment, or public without adding snapshot schema.",
+      "renderGateRadar(lane) filters radar pings and cards while keeping pressure stats derived from the full signal set.",
+      "The generated sigil sheet is used in Gate Radar cards and registered as a system asset in the Visual Asset Vault."
+    ],
+    "ui_notes": [
+      "Filter chips render only for categories present in the selected lane's radar items.",
+      "Gate cards show cropped sigils from the generated sheet so categories read visually before the user reads text.",
+      "Stats now auto-fit with a minimum width to avoid clipped labels in constrained wide layouts."
+    ]
+  },
+  "verification": {
+    "red": {
+      "route": "http://localhost:5177/?verify=gate-radar-skins-red&cache=20260618-gate-radar#lane=money_source_discovery&view=overview",
+      "result": "Expected failure before implementation: panel true, filters [], sigils 0, activeFilter null, no console errors."
+    },
+    "green": {
+      "route": "http://localhost:5177/?verify=gate-radar-skins-green&cache=20260618-gate-radar-skins#lane=money_source_discovery&view=overview",
+      "result": "ok true; filters [all, blocker, browser]; sigils 1; generated board asset loaded; blocker filter persisted to localStorage; no clipped text, page overflow, console errors, or failed requests."
+    },
+    "responsive": [
+      "phone 390: ok true; filters 3; sigils 1; statColumns 2; boardColumns 1; no overflow/clipped text/errors.",
+      "tablet 820: ok true; filters 3; sigils 1; statColumns 2; boardColumns 1; no overflow/clipped text/errors.",
+      "desktop 1280: ok true; filters 3; sigils 1; boardColumns 2; no overflow/clipped text/errors.",
+      "wide 1600: ok true; filters 3; sigils 1; boardColumns 2; no overflow/clipped text/errors after stat auto-fit fix."
+    ],
+    "asset_vault": {
+      "route": "http://localhost:5177/?verify=gate-radar-skins-asset-vault&cache=20260618-gate-radar-skins#lane=money_source_discovery&view=overview",
+      "result": "ok true; Gate Radar sigil sheet card found; image complete; naturalWidth 1254; Asset Vault count 43 assets; no console errors or failed requests."
+    },
+    "static": [
+      "node --check web\\app.js -> exit 0",
+      "python -m json.tool web\\data\\snapshot.json -> exit 0",
+      "ASCII verified for web/index.html, web/app.js, web/styles.css, and web/README.md"
+    ]
+  },
+  "source_hashes": {
+    "web/index.html": "C4EEB4907BB5600C41E3D9724A06C4EFA9278E28238C0FC194C382B551D8F244",
+    "web/app.js": "C46244B15729DE32A31D405B3E6411BDC0AA82BA3E0EB4104F3CB2BB5046E5F2",
+    "web/styles.css": "E5F25A50FE108E899DEDCA00609329A5D07BC113DCF0F265F90C5B6FCD1E949C",
+    "web/README.md": "BE7FE61CD8BD378156762EDA80595E8A8734CF85419255A849F3AC6DE1C688B5",
+    "web/assets/system/gate-radar-sigil-sheet-20260618.png": "AEC6DB2F3633C80CD47F3DE777D8C9EB3305C1D569AD554364C4678BB54A7AEA"
+  },
+  "next_actions": [
+    "Add realm-specific radar skins that swap sigil palettes or scope motifs by lane pack.",
+    "Add an optional Gate Radar notes field in browser-local drafts so operators can annotate blocker triage without mutating snapshot data.",
+    "Extend the generated sigil approach into per-lane animated blocker badges for the Arcade Deck and Path Map."
+  ]
+}

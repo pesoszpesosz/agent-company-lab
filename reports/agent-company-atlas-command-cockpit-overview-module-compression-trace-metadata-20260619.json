@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-overview-module-compression-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-overview-module-compression-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-overview-module-compression-v1-20260619",
+  "title": "Command Cockpit Overview Module Compression",
+  "createdAt": "2026-06-19T09:14:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the default Overview mission module inside the Command Cockpit mounted stage so the first selected-lane module reads like a compact mission board.",
+  "proof": [
+    "Added tested Command Cockpit CSS that tightens the Overview dock grid, module meter, stage buttons, and Overview detail-section spacing.",
+    "Kept the compression scoped to the Command Cockpit so richer Overview layouts outside that stage retain their existing spacing.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the Overview module compression unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

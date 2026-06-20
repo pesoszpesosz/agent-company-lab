@@ -1,0 +1,25 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-world-map-strip-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-world-map-strip-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_world_map_strip_added-20260619",
+  "title": "Command Cockpit World Map Strip",
+  "timestamp": "2026-06-19T15:07:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Added a compact world-map strip to the Command Cockpit Overview HUD so the selected money path shows its world, level, quest, proof, gate, and bot state before deeper scrolling.",
+  "changes": [
+    "Derived six map nodes from lane realm, level progress, quest checkpoints, evidence, gate pressure, and owner bot.",
+    "Replaced the Overview HUD route row with a compact animated world-map strip only inside the Command Cockpit.",
+    "Contained the strip horizontally on narrow screens so new lanes and long labels do not create page overflow."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

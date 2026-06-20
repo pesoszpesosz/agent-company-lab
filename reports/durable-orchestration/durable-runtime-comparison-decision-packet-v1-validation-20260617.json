@@ -1,0 +1,73 @@
+{
+  "failed_count": 0,
+  "generated_utc": "2026-06-20T12:40:47Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-comparison-decision-packet-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-comparison-decision-packet-v1-20260617.md",
+  "next_local_test": "sqlite_outbox_acknowledgement_runner_v1_without_service_request_mutation",
+  "packet_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-comparison-decision-packet-v1-20260617.json",
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "database_provisioning": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "event_sends": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "public_actions": false,
+    "queue_enqueues": 0,
+    "runtime_starts": 0,
+    "server_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "workflow_starts": 0
+  },
+  "runtime_recommendations_checked": 7,
+  "schema_path": "E:\\agent-company-lab\\architecture\\durable-runtime-comparison-decision-packet-v1.schema.json",
+  "schema_version": "agent_company.durable_runtime_comparison_decision_packet_validation.v1",
+  "source_rows": [
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-service-worker-reducer-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\inngest-event-flow-control-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\prefect-flow-manifest-source-refresh-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    },
+    {
+      "ok": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\restate-agent-service-boundary-fixture-v1-validation-20260617.json",
+      "status": "ok"
+    }
+  ],
+  "source_validations_checked": 8,
+  "top_level_failures": []
+}

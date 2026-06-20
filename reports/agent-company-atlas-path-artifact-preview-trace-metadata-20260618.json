@@ -1,0 +1,82 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-artifact-preview-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Embedded safe local artifact previews into Path Map Event Proof so selected trail events can show compact packet/report context without leaving the static dashboard.",
+  "design_research": {
+    "queries": [
+      "document preview in activity feed dashboard UX pattern",
+      "artifact preview detail panel dashboard UX",
+      "inline document preview master detail dashboard UI"
+    ],
+    "source_urls": [
+      "https://cloudscape.design/gen-ai/patterns/artifact-previews/",
+      "https://dribbble.com/search/activity-feed-ui",
+      "https://dribbble.com/search/master-detail-view",
+      "https://vaadin.com/docs/latest/components/master-detail-layout",
+      "https://www.untitledui.com/components/activity-feeds"
+    ],
+    "pattern_notes": [
+      "Artifact previews should show compact content, labels, metadata, and nearby actions without replacing the user's context.",
+      "Activity feeds are easier to scan when selected records expose proof snippets inline.",
+      "Master-detail layouts support deeper inspection when the detail panel remains responsive and bounded."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "tools/generate_visual_dashboard_snapshot.py",
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-artifact-preview-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail[].artifact",
+      "local text-like files inside the repo root",
+      "Event Proof selected trail event"
+    ],
+    "ui_contract": [
+      "Resolve artifact paths only inside the repo root and skip URLs, missing files, and unsupported/binary extensions.",
+      "Embed optional artifactPreview objects with label, kind, up to four cleaned preview lines, and truncation state.",
+      "Render Artifact Preview inside the Event Proof lens only when preview lines exist.",
+      "Keep previews compact, wrapped, and compatible with the static browser-only dashboard.",
+      "Preserve existing trail navigation and selected event behavior."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-artifact-preview-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, the selected event had a local artifact path but no .path-artifact-preview panel, no preview lines, and 0 snapshot trail events with artifactPreview."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-artifact-preview-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "The Event Proof lens rendered a 4-line Artifact Preview for packet.md; stepping to NEWER swapped the lens and preview to marketplace-readiness-matrix-20260614 with no browser errors or failed requests."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports rendered the preview after a neighboring event step, kept document width equal to viewport width, and reported no bad rectangles, console errors, or failed requests."
+    },
+    "snapshot_data": {
+      "status": "passed",
+      "evidence": "digital_products_templates_plugins regenerated with 38 trail events containing artifactPreview."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "py_compile_snapshot_generator": "passed",
+      "snapshot_json": "passed",
+      "metadata_json": "passed",
+      "http_status": 200
+    }
+  }
+}

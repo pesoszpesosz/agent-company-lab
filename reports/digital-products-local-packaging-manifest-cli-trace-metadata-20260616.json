@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-packaging-manifest-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:35:46Z",
+  "manifest_lane_id": "digital_products_templates_plugins",
+  "manifest_task_id": "task-digital-products-local-packaging-manifest-20260616",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "A110AD2F93742FACAAEDBFA452F369A8AB68248E76BC8146824F94F0BED57475",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

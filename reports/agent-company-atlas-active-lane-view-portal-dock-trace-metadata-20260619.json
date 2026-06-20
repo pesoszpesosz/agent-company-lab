@@ -1,0 +1,30 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-view-portal-dock-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-view-portal-dock-v1-20260619",
+  "eventId": "trace-atlas_active_lane_view_portal_dock_added-20260619",
+  "title": "Active Lane View Portal Dock",
+  "createdUtc": "2026-06-19T02:31:20Z",
+  "summary": "Added an always-visible view portal dock inside the active lane HUD so Overview, Path, Chronicle, Trail, Game, and Comms remain reachable even when compact views hide the old tab row.",
+  "layoutEvidence": {
+    "intent": "Make the clicked-path HUD operate like a command pad and reduce scrolling between lane views.",
+    "surface": "active-lane-view-portals",
+    "portals": [
+      "overview",
+      "path",
+      "chronicle",
+      "trail",
+      "game",
+      "comms"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

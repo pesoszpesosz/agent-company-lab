@@ -1,0 +1,88 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-mcp-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-mcp-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:42:46Z",
+  "summary": "Created a report-only signed-decision guard for the mcp_tool_gateway egress route. The guard accepts only deny or exact MCP route preflight-only decisions with the MCP registry gate, egress ledger, identity envelope, and signed-operator gate present; it rejects MCP server enable/start, MCP tool calls, credential creation/access, worker starts, service-request mutation, browser/model/API use, public actions, and live egress.",
+  "source_gateway_docket": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\mcp-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "87b83e79d2e2f439bd5e75b0d7cc577f22abfac831b36e6c5f3eb842d1712710"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_mcp_egress_signed_decision_guard.py",
+      "sha256": "bebe7bbd9e014db1a1e4acb375e7de38bece15280c4624d2d5243edbe8685304"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_mcp_egress_signed_decision_guard.py",
+      "sha256": "91c676dee0e05e0e5e383538f924111f209d742ab63a1cc513141f84b6eda5c3"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\mcp-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "3b271dbd35bfa1b51914328149d7285412dcac4349fa799992f55fd9ea2e65bf"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\mcp-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "543cffa820b219ac0c15fd3d66300ddd0fb2a8a0e909ec076c1ed2c065c5eab6"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\mcp-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "f81270c7c09272190bcde7ef1c753ef482ef7e2e703a58e8f81bf6948bc9c31b"
+    }
+  ],
+  "verification": {
+    "red_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_mcp_egress_signed_decision_guard.py",
+    "red_test_result": "failed before implementation because validate_mcp_egress_signed_decision_guard.py did not exist",
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_mcp_egress_signed_decision_guard.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "33 tests passed",
+    "target_route_id": "mcp_tool_gateway",
+    "target_egress_type": "mcp_tool",
+    "fixture_count": 46,
+    "accepted_count": 2,
+    "rejected_count": 44,
+    "mcp_servers_started": 0,
+    "mcp_servers_enabled": 0,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "mcp_servers_started": 0,
+    "mcp_servers_enabled": 0,
+    "mcp_tool_call_allowed": false,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "credential_access_allowed": false,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build MCP egress apply preflight blocker for the accepted mcp_tool_gateway decision before any gateway registration, MCP server enable/start, MCP tool call, credential access, worker start, or live egress."
+}

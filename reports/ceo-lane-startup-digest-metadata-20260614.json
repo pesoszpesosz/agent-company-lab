@@ -1,0 +1,15 @@
+{
+  "api_calls": false,
+  "lanes_summarized": 6,
+  "missing_lane": "prediction_market_research",
+  "runtime": "local_artifact_synthesis",
+  "span_kind": "WORKFLOW",
+  "top_recommendations": [
+    "paid_code_bounties read-only explicit-payout scout",
+    "security rules_android local proof packet",
+    "web3 EF ESP local grant proposal packet",
+    "lead_generation fictional audit rubric",
+    "content/social non-account trend template",
+    "local_trading XAU paper-evidence intake"
+  ]
+}

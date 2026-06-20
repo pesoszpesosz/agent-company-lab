@@ -1,0 +1,82 @@
+{
+  "trace_id": "trace-agent-company-atlas-route-replay-filters-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added browser-local Replay Lens glyph filters to Route Replay so operators can narrow long lane histories by proof, service, outcome, task, gate, or trace stages while keeping Event Proof synchronized.",
+  "design_research": {
+    "queries": [
+      "timeline filtering event type chips UX pattern dashboard",
+      "activity feed filter by event type UX chips",
+      "game UI legend icon filter timeline"
+    ],
+    "source_urls": [
+      "https://m3.material.io/components/chips/guidelines",
+      "https://www.eleken.co/blog-posts/filter-ux-and-ui-for-saas",
+      "https://smart-interface-design-patterns.com/articles/badges-chips-tags-pills/",
+      "https://www.wowhead.com/news/ui-improvements-on-the-war-within-beta-search-boxes-map-legend-343545",
+      "https://uxpatterns.dev/patterns/data-display/timeline"
+    ],
+    "pattern_notes": [
+      "Filter chips are compact controls for selecting and filtering content.",
+      "Filtering must clearly remove or narrow content, not merely reorder it.",
+      "Icon legends and advanced filters help large game-like maps and timelines stay legible."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-route-replay-filters-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "browser-only state.pathReplayFilterByLane",
+      "existing pathEventGlyphType classification",
+      "existing Event Proof focus state"
+    ],
+    "ui_contract": [
+      "Render Replay Lens filter chips inside Route Replay with glyph icons and counts.",
+      "Keep filters browser-local and avoid snapshot or schema mutation.",
+      "Filter only Route Replay's playable stage list while leaving the raw trail and Event Stream intact.",
+      "Selecting a filter jumps to the first matching stage and synchronizes Event Proof.",
+      "NEXT and play/pause operate within the filtered stage list.",
+      "Disabled chips remain visible for zero-count event types so the legend stays complete."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=route-replay-filter-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, Path Map had 0 .path-replay-filters panels, 0 data-path-replay-filter controls, and no All stages or Replay Lens text."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?cache=20260618-route-replay-filters-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered 7 filter chips: All 64, Proof 22, Service 6, Outcome 31, Task 0 disabled, Gate 0 disabled, Trace 5. Service selected Stage 1 of 6 with service glyphs; Outcome selected Stage 1 of 31 with outcome glyphs; All restored Stage 1 of 64."
+    },
+    "filtered_playback": {
+      "status": "passed",
+      "evidence": "With Service active, NEXT advanced to Stage 2 of 6, replay and Event Proof kept glyph-service, and play/pause toggled while Service stayed active."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports rendered 7 filter chips, selected Service, showed Stage 1 of 6, kept glyph-service, and reported no bad rectangles or console errors."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "edited_files_ascii": "passed",
+      "http_status": 200
+    }
+  }
+}

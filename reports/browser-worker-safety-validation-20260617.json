@@ -1,0 +1,159 @@
+{
+  "account_actions": false,
+  "browser_sessions_started": 0,
+  "cases_checked": 9,
+  "external_side_effects": false,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\browser-worker-safety-fixture-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:46:42Z",
+  "json_path": "E:\\agent-company-lab\\reports\\browser-worker-safety-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\browser-worker-safety-fixture-v1-20260617.md",
+  "model_api_calls": false,
+  "passed_count": 9,
+  "payment_actions": false,
+  "public_actions": false,
+  "rows": [
+    {
+      "actual_classification": "public_read_only",
+      "actual_decision": "allow_after_approval",
+      "actual_prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "browser_read_only_session",
+      "case_id": "case-public-digital-marketplace-readonly",
+      "failures": [],
+      "lane_id": "digital_products_templates_plugins",
+      "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614"
+    },
+    {
+      "actual_classification": "signed_in_read_only",
+      "actual_decision": "needs_human_cro_review",
+      "actual_prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "browser_signed_in_read_only",
+      "case_id": "case-signed-in-x-grok-readonly",
+      "failures": [],
+      "lane_id": "platform_engineering",
+      "request_id": "req-grok-research-worker-20260614"
+    },
+    {
+      "actual_classification": "public_action",
+      "actual_decision": "block_until_separate_gate",
+      "actual_prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "outreach_delivery_gate",
+      "case_id": "case-upwork-proposal-submit",
+      "failures": [],
+      "lane_id": "lead_generation_and_sales",
+      "request_id": null
+    },
+    {
+      "actual_classification": "wallet_or_payment_action",
+      "actual_decision": "prohibit",
+      "actual_prohibited_actions": [
+        "payment_action",
+        "public_action",
+        "real_money_action",
+        "service_request_mutation",
+        "wallet_action"
+      ],
+      "actual_required_gate": "wallet_setup_packet",
+      "case_id": "case-wallet-connect-airdrop",
+      "failures": [],
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "request_id": null
+    },
+    {
+      "actual_classification": "public_action",
+      "actual_decision": "block_until_separate_gate",
+      "actual_prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "github_public_action_gate",
+      "case_id": "case-github-issue-comment",
+      "failures": [],
+      "lane_id": "paid_code_bounties",
+      "request_id": null
+    },
+    {
+      "actual_classification": "public_read_only",
+      "actual_decision": "allow_after_approval",
+      "actual_prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "security_testing",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "browser_read_only_session",
+      "case_id": "case-security-vrp-read-rules",
+      "failures": [],
+      "lane_id": "security_bounty_private_reports",
+      "request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614"
+    },
+    {
+      "actual_classification": "security_sensitive_action",
+      "actual_decision": "prohibit",
+      "actual_prohibited_actions": [
+        "account_action",
+        "public_action",
+        "security_testing",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "security_report_submission_gate",
+      "case_id": "case-security-live-test",
+      "failures": [],
+      "lane_id": "security_bounty_private_reports",
+      "request_id": null
+    },
+    {
+      "actual_classification": "account_or_profile_action",
+      "actual_decision": "block_until_separate_gate",
+      "actual_prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "account_registration_intake",
+      "case_id": "case-account-create-devpost",
+      "failures": [],
+      "lane_id": "ai_ml_competitions",
+      "request_id": null
+    },
+    {
+      "actual_classification": "model_or_api_action",
+      "actual_decision": "prohibit",
+      "actual_prohibited_actions": [
+        "account_action",
+        "model_api_call",
+        "service_request_mutation"
+      ],
+      "actual_required_gate": "model_api_execution_gate",
+      "case_id": "case-model-api-key-console",
+      "failures": [],
+      "lane_id": "platform_engineering",
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614"
+    }
+  ],
+  "schema_path": "E:\\agent-company-lab\\architecture\\browser-worker-safety-fixture-v1.schema.json",
+  "schema_version": "agent_company.browser_worker_safety_validation.v1",
+  "security_testing_actions": false,
+  "service_requests_updated": 0,
+  "wallet_actions": false,
+  "worker_starts": 0
+}

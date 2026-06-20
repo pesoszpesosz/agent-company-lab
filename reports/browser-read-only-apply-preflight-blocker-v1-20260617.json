@@ -1,0 +1,92 @@
+{
+  "accepted_guard_decision_count": 2,
+  "all_checks_passed": true,
+  "apply_allowed": false,
+  "apply_preflight_status": "blocked_no_real_signed_decision",
+  "assignment_allowed": false,
+  "assignment_preflight_validation_path": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json",
+  "assignment_preflight_validation_sha256": "1b9a7cb26384aea622d79025583a0bb187978a7a6bbb1f4f3f5f5b3c87a64a8c",
+  "blocker_reason": "no_real_signed_operator_decision_artifact",
+  "browser_session_start_allowed": false,
+  "candidate_request_count": 9,
+  "checks": [
+    {
+      "check_id": "signed_approval_guard_passes",
+      "detail": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json",
+      "passed": true
+    },
+    {
+      "check_id": "guard_does_not_allow_assignment_or_browser_start",
+      "detail": "Guard accepts authority for later preflight only.",
+      "passed": true
+    },
+    {
+      "check_id": "signed_guard_adapter_contract_gate_present_valid_start_blocked",
+      "detail": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+      "passed": true
+    },
+    {
+      "check_id": "assignment_preflight_still_blocks_without_signed_approval",
+      "detail": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json",
+      "passed": true
+    },
+    {
+      "check_id": "real_signed_decision_absent",
+      "detail": "No real signed operator browser-read-only decision artifact was supplied.",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-20T21:07:29Z",
+  "guard_adapter_contract_gate": "present_valid_start_blocked",
+  "guard_adapter_contract_validation_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+  "guard_report_path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-20260617.json",
+  "guard_report_sha256": "cd8a5d16a8fbdbab35b358dfc254cb2b813ada63b181ae8c68e014855c21a50b",
+  "guard_summary": {
+    "accepted_count": 2,
+    "adapter_contract_gate": "present_valid_start_blocked",
+    "adapter_contract_validation_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+    "all_checks_passed": true,
+    "assignment_allowed": false,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "guard_validation_path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json",
+    "rejected_count": 26,
+    "worker_start_allowed": false,
+    "worker_starts": 0
+  },
+  "guard_validation_path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json",
+  "guard_validation_sha256": "21e59ea154fd79fb7758db6dfb722ce9f8cc019240bb87908ab9418c4299db55",
+  "next_action": "Provide a real signed operator browser-read-only decision artifact, run it through the signed approval guard, then build an apply-command preflight before queue mutation or browser start.",
+  "real_signed_decision_path": "",
+  "real_signed_decision_present": false,
+  "rejected_guard_decision_count": 26,
+  "runtime_boundary": {
+    "account_actions": false,
+    "apply_commands_executed": 0,
+    "apply_commands_written": 0,
+    "approval_rows_written": 0,
+    "browser_sessions_started": 0,
+    "credentials_accessed": false,
+    "decisions_applied": 0,
+    "external_side_effects": false,
+    "file_transfer_actions": false,
+    "form_submit_actions": false,
+    "login_actions": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\browser-read-only-apply-preflight-blocker-v1.schema.json",
+  "schema_version": "agent_company.browser_read_only_apply_preflight_blocker.v1",
+  "worker_start_allowed": false
+}

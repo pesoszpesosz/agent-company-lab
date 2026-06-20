@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-legacy-chrome-collapse-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-legacy-chrome-collapse-v1-20260619",
+  "eventId": "event-agent-company-atlas-active-lane-legacy-chrome-collapse-v1-20260619",
+  "title": "Active Lane Legacy Chrome Collapse",
+  "createdAt": "2026-06-19T03:50:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Collapsed the older selected-lane title/stat header and duplicate tab row across every mounted lane view so the active HUD, view portals, and bounded stage become the primary cockpit.",
+  "proof": [
+    "Added a global selected-lane chrome collapse rule for detail top and detail tabs.",
+    "Kept navigation in the active lane HUD view portals instead of the duplicate tab row.",
+    "Updated the standalone README, cache markers, snapshot generator, and snapshot regression floors."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

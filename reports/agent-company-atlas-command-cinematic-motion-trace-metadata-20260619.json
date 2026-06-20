@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cinematic-motion-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cinematic-motion-v1-20260619",
+  "eventId": "trace-atlas_command_cinematic_motion_added-20260619",
+  "title": "Command Cinematic Motion",
+  "createdUtc": "2026-06-19T00:32:10Z",
+  "summary": "Added scoped cinematic motion layers to the Command deck: active lane depth, smoother rail pips, and atlas map glide effects without adding scroll height.",
+  "browserEvidence": {
+    "target": "http://127.0.0.1:5177/index.html#lane=platform_engineering&view=chronicle&deck=command",
+    "expected": [
+      "Command deck keeps the compact stage layout from the mobile stack pass.",
+      "The active detail panel has layered sweep and depth-grid motion.",
+      "The active lane rail uses softer pulse and glint motion.",
+      "The atlas map has scoped glide and depth-drift overlays."
+    ]
+  },
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_command_workspace_first.py"
+  ]
+}

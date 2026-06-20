@@ -1,0 +1,26 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-viewport-fit-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-viewport-fit-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_viewport_fit_added-20260619",
+  "title": "Command Cockpit Viewport Fit",
+  "timestamp": "2026-06-19T17:34:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Reduced cockpit overview scrolling by removing the duplicate stage-card row and compressing secondary readouts into a HUD-sized command surface.",
+  "changes": [
+    "Hid the old Quest stage-card grid in Command Cockpit Overview so the level map becomes the single route-state surface.",
+    "Tightened the cockpit grid proportions around the current run and Quest route map.",
+    "Compressed signal readouts into compact two-column HUD cells.",
+    "Kept action buttons in a fixed command strip beside the route map.",
+    "Recorded the viewport-fit pass as the latest platform UI unlock in generated snapshot history."
+  ],
+  "artifacts": [
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

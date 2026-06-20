@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.egress_route_chain_integrity_audit.v1",
+  "title": "Egress Route Chain Integrity Audit v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "route_count",
+    "route_audits",
+    "full_chain_route_count",
+    "partial_chain_route_count",
+    "recommended_next_route_id",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "browser_sessions_started",
+    "worker_starts",
+    "external_side_effects",
+    "all_checks_passed",
+    "failure_count",
+    "failures"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.egress_route_chain_integrity_audit.v1"
+    },
+    "route_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "route_audits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "route_id",
+          "egress_type",
+          "chain_status",
+          "present_layers",
+          "missing_layers",
+          "live_egress_allowed"
+        ],
+        "properties": {
+          "route_id": { "type": "string" },
+          "chain_status": {
+            "enum": ["full_report_only_chain", "partial_shared_chain"]
+          },
+          "present_layers": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "missing_layers": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "live_egress_allowed": { "const": false }
+        },
+        "additionalProperties": true
+      }
+    },
+    "gateway_registration_allowed": { "const": false },
+    "gateway_start_allowed": { "const": false },
+    "live_egress_allowed": { "const": false },
+    "browser_sessions_started": { "const": 0 },
+    "worker_starts": { "const": 0 },
+    "external_side_effects": { "const": false }
+  },
+  "additionalProperties": true
+}

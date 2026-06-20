@@ -1,0 +1,39 @@
+{
+  "id": "artifact-agent-company-atlas-path-utility-dock-trace-metadata-20260618",
+  "taskId": "task-agent-company-atlas-path-utility-dock-v1-20260618",
+  "traceId": "trace-agent-company-atlas-path-utility-dock-v1-20260618",
+  "eventId": "trace-atlas_path_utility_dock_added-20260618",
+  "date": "2026-06-18",
+  "summary": "Path Map lower utility stack replaced with a compact module dock. Radar, Node Intel, Proof Cache, Route Replay, Handoff, Notes, and Event Stream remain available through horizontal tabs while only the selected module is mounted.",
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_path_utility_dock.py"
+  ],
+  "verification": {
+    "syntax": "node --check E:\\agent-company-lab\\web\\app.js",
+    "focusedTest": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_utility_dock.py -q",
+    "atlasSuite": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "atlasSuiteResult": "32 passed, 55 deselected",
+    "browser": {
+      "url": "http://127.0.0.1:5177/index.html?verify=path-utility-dock-20260618#lane=platform_engineering&view=path&deck=command",
+      "viewport": "390x820",
+      "defaultDock": {
+        "documentHeight": 27028,
+        "dockHeight": 353,
+        "tabCount": 7,
+        "mountedUtilityCards": 1,
+        "bottomGridExists": false,
+        "horizontalOverflow": 0
+      },
+      "proofTab": {
+        "activeTab": "Proof 106 cards",
+        "panelClass": "path-brief-card path-proof-cache",
+        "mountedUtilityCards": 1,
+        "horizontalOverflow": 0
+      }
+    }
+  }
+}

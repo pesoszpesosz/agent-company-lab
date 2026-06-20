@@ -1,0 +1,162 @@
+{
+  "approval_granted_by_intake_packet": false,
+  "approval_question_count": 6,
+  "approval_questions": [
+    {
+      "current_default": "no",
+      "question": "Should dependency installation for Temporal/Inngest adapter implementation be allowed?",
+      "question_id": "approve_dependency_install_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should importing Temporal/Inngest runtime libraries be allowed?",
+      "question_id": "approve_runtime_import_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should starting Temporal/Inngest runtimes, workflows, activities, or event emitters be allowed?",
+      "question_id": "approve_runtime_start_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should service request assignment or mutation be allowed from adapter code?",
+      "question_id": "approve_service_request_mutation_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should the parked model/API adapter request be assigned or used?",
+      "question_id": "approve_model_api_scope"
+    },
+    {
+      "current_default": "no",
+      "question": "Should any browser, account, payment, wallet, security-test, or public submission action be allowed?",
+      "question_id": "approve_external_side_effect_scope"
+    }
+  ],
+  "decision_field_count": 12,
+  "decision_packet_ready_for_human_review": true,
+  "generated_utc": "2026-06-15T16:46:19Z",
+  "lane_id": "platform_engineering",
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "next_action": "Human may fill this decision intake packet, but executable runtime code remains blocked until an explicit signed approval artifact exists and is validated.",
+  "purpose": "Human decision intake packet for a future Temporal/Inngest runtime adapter approval decision; this packet records required fields but grants no approval.",
+  "required_decision_fields": [
+    {
+      "default": "",
+      "field_id": "decision_id",
+      "purpose": "Stable human decision identifier for audit traceability.",
+      "required": true
+    },
+    {
+      "allowed_values": [
+        "deny",
+        "approve_limited_runtime_implementation"
+      ],
+      "default": "deny",
+      "field_id": "decision",
+      "purpose": "Explicitly deny or approve a limited implementation scope.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "approver",
+      "purpose": "Human approver identity or handle.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "signed_utc",
+      "purpose": "UTC timestamp when the human decision was made.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "expires_utc",
+      "purpose": "Expiry timestamp for any approval scope.",
+      "required": true
+    },
+    {
+      "default": [],
+      "field_id": "approved_question_ids",
+      "purpose": "Exact approval question IDs granted by the decision.",
+      "required": true
+    },
+    {
+      "default": [
+        "approve_dependency_install_scope",
+        "approve_runtime_import_scope",
+        "approve_runtime_start_scope",
+        "approve_service_request_mutation_scope",
+        "approve_model_api_scope",
+        "approve_external_side_effect_scope"
+      ],
+      "field_id": "denied_question_ids",
+      "purpose": "Exact approval question IDs denied or still parked.",
+      "required": true
+    },
+    {
+      "default": "none",
+      "field_id": "provider_model_and_cost_cap",
+      "purpose": "Provider, model, max cost, and data scope if model/API work is approved.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "artifact_output_path",
+      "purpose": "Allowed local output artifact path for implementation or runtime evidence.",
+      "required": true
+    },
+    {
+      "default": [],
+      "field_id": "allowed_runtime_side_effects",
+      "purpose": "Exact runtime side effects allowed; empty means none.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "rollback_plan",
+      "purpose": "How to stop/revert any approved runtime work.",
+      "required": true
+    },
+    {
+      "default": "",
+      "field_id": "human_notes",
+      "purpose": "Optional human rationale or constraints.",
+      "required": false
+    }
+  ],
+  "requires_all_questions_answered": true,
+  "requires_artifact_output_path": true,
+  "requires_budget_cap": true,
+  "requires_explicit_signed_decision": true,
+  "requires_no_external_side_effects_default": true,
+  "requires_rollback_plan": true,
+  "requires_scope_expiration": true,
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_version": "temporal_inngest_adapter_runtime_human_decision_intake_packet.v1",
+  "source_approval_packet_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-human-approval-packet-latest.json",
+  "source_approval_packet_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-human-approval-packet-validation-latest.json"
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.local_a2a_egress_apply_preflight_blocker.v1",
+  "title": "Local A2A Egress Apply Preflight Blocker v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "target_route_id",
+    "target_egress_type",
+    "apply_preflight_status",
+    "blocker_reason",
+    "guard_validation_path",
+    "real_signed_decision_present",
+    "apply_command_contract_present",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "agent_message_send_allowed",
+    "agent_messages_sent",
+    "worker_start_allowed",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "external_side_effects",
+    "all_checks_passed",
+    "failure_count",
+    "failures"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.local_a2a_egress_apply_preflight_blocker.v1"
+    },
+    "target_route_id": {
+      "const": "local_agent_to_agent_report_only"
+    },
+    "target_egress_type": {
+      "const": "agent_to_agent"
+    },
+    "apply_preflight_status": {
+      "type": "string",
+      "enum": [
+        "blocked_no_real_signed_decision",
+        "blocked_fixture_decision_not_real",
+        "blocked_no_apply_command_contract",
+        "blocked_guard_not_passing",
+        "blocked_apply_contract_not_passing"
+      ]
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "agent_message_send_allowed": {
+      "const": false
+    },
+    "agent_messages_sent": {
+      "const": 0
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "service_requests_updated": {
+      "const": 0
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "mcp_tool_calls": {
+      "const": false
+    },
+    "browser_sessions_started": {
+      "const": 0
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

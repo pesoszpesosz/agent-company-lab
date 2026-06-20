@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.egress_route_signed_decision_intake_contract.v1",
+  "title": "Egress Route Signed Decision Intake Contract v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "decision",
+    "route_id",
+    "egress_type",
+    "source_gateway_docket_path",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_gate_ids",
+    "approval_is_not_apply",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "worker_start_allowed",
+    "runtime_start_allowed",
+    "browser_session_start_allowed",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.egress_route_signed_decision_intake_contract.v1"
+    },
+    "decision_id": { "type": "string", "minLength": 1 },
+    "decision": {
+      "type": "string",
+      "enum": ["deny", "approve_route_preflight_only"]
+    },
+    "route_id": { "type": "string", "minLength": 1 },
+    "egress_type": { "type": "string", "minLength": 1 },
+    "source_gateway_docket_path": { "type": "string", "minLength": 1 },
+    "source_gateway_docket_sha256": { "type": "string" },
+    "operator_id": { "type": "string", "minLength": 1 },
+    "operator_attestation": { "type": "string", "minLength": 1 },
+    "signed_utc": { "type": "string", "minLength": 1 },
+    "expires_utc": { "type": "string", "minLength": 1 },
+    "allowed_scope": { "type": "string", "minLength": 1 },
+    "allowed_gate_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "allowed_evidence_artifact_paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "approval_is_not_apply": { "const": true },
+    "gateway_registration_allowed": { "const": false },
+    "gateway_start_allowed": { "const": false },
+    "live_egress_allowed": { "const": false },
+    "worker_registration_allowed": { "const": false },
+    "worker_start_allowed": { "const": false },
+    "runtime_start_allowed": { "const": false },
+    "browser_session_start_allowed": { "const": false },
+    "service_requests_assigned": { "const": 0 },
+    "service_requests_updated": { "const": 0 },
+    "model_api_calls": { "const": false },
+    "mcp_tool_calls": { "const": false },
+    "external_side_effects": { "const": false },
+    "rollback_plan": { "type": "string", "minLength": 1 },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

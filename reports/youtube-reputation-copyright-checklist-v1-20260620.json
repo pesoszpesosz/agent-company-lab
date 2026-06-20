@@ -1,0 +1,31 @@
+{
+  "schema_version": "youtube_reputation_copyright_checklist.v1",
+  "generated_utc": "2026-06-20T17:18:00Z",
+  "lane_id": "youtube_content_channels",
+  "status": "local_checklist",
+  "checklist": [
+    "every_factual_claim_has_source_or_is_internal_build_commentary",
+    "no_customer_video_copied_mirrored_or_paraphrased_too_closely",
+    "no_third_party_thumbnail_logo_music_clip_chart_screenshot_or_voice_without_license_or_review",
+    "no_unproven_revenue_customer_result_sponsorship_certification_or_endorsement_claim",
+    "no_financial_legal_security_or_tax_advice_as_professional_advice",
+    "no_exploit_vulnerability_or_target_specific_security_detail_publicized",
+    "no_account_upload_comment_reply_monetization_or_affiliate_action_included",
+    "clear_audience_promise_and_safe_cta",
+    "script_can_stand_alone_without_private_company_context",
+    "public_action_route_explicit_if_promoted_for_upload"
+  ],
+  "gate_result_values": [
+    "pass_for_local_expansion",
+    "revise_before_expansion",
+    "needs_source_review",
+    "needs_public_action_packet",
+    "blocked_by_account_or_terms_gate",
+    "blocked_by_copyright_or_reputation_risk"
+  ],
+  "zero_side_effect_boundary": {
+    "uploads_approved": false,
+    "public_actions_approved": false,
+    "external_side_effects": false
+  }
+}

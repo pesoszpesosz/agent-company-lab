@@ -1,0 +1,22 @@
+{
+  "all_checks_passed": true,
+  "approves_actions": false,
+  "blocked_by_gate_count": 4,
+  "calls_apis": false,
+  "completed_foundation_count": 3,
+  "creates_tasks": false,
+  "entry_count": 10,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-17T18:42:52Z",
+  "json_path": "E:\\agent-company-lab\\reports\\ceo-dispatch-batch-v1-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\ceo-dispatch-batch-v1-20260617.md",
+  "ready_local_dispatch_count": 2,
+  "schema_path": "E:\\agent-company-lab\\architecture\\ceo-dispatch-batch-v1.schema.json",
+  "schema_version": "agent_company.ceo_dispatch_batch_validation.v1",
+  "source_dag_validation_path": "E:\\agent-company-lab\\reports\\agent-task-dag-contract-v1-validation-20260617.json",
+  "starts_workers": false,
+  "updates_service_requests": false,
+  "waiting_on_dependencies_count": 1
+}

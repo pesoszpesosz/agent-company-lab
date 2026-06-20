@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "comms-deck-v1",
+  "feature": {
+    "id": "lane-comms-deck",
+    "title": "Lane Comms Command Deck",
+    "view": "comms",
+    "purpose": "Give each lane a local operator console for owner agent, thread, brief packet, gate boundary, and command draft visibility."
+  },
+  "researchInfluences": [
+    {
+      "name": "Command-center hierarchy",
+      "url": "https://muz.li/blog/best-dashboard-design-examples-inspirations-for-2026/",
+      "takeaway": "Use strong hierarchy and low visual noise."
+    },
+    {
+      "name": "Agent UX override loop",
+      "url": "https://fuselabcreative.com/ui-design-for-ai-agents/",
+      "takeaway": "Show what the agent is doing, why, and how an operator can override or recover."
+    },
+    {
+      "name": "Milestone communication",
+      "url": "https://www.atlassian.com/work-management/project-management/project-planning/milestone-chart",
+      "takeaway": "Keep major transition points visible without burying status in task detail."
+    }
+  ],
+  "implementation": {
+    "routes": [
+      "#lane=digital_products_templates_plugins&view=comms"
+    ],
+    "localOnly": true,
+    "sideEffects": "Copies or exposes a local draft only; does not send messages, start workers, mutate service requests, browse, publish, trade, pay, or perform account actions.",
+    "dataSources": [
+      "lane.ownerAgentId",
+      "lane.ownerThreadId",
+      "snapshot.agents",
+      "lane.gateMap",
+      "lane.serviceRequests",
+      "lane.recentTasks",
+      "lane.recentOutcomes",
+      "lane.promotionCandidate.command_preview"
+    ]
+  },
+  "validation": {
+    "nodeCheck": "passed",
+    "jsonValidation": "passed",
+    "snapshotRegenerated": true,
+    "desktopComms": {
+      "activeTab": "comms",
+      "consoleCount": 1,
+      "rosterCount": 1,
+      "briefLines": 3,
+      "commandDrafts": 1,
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "mobileComms": {
+      "viewport": "390x840",
+      "tabGrid": "2 columns",
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "dispatchRegression": {
+      "digital_products_templates_plugins_game": "foundry-run",
+      "paid_code_bounties_game": "claim-scout",
+      "platform_engineering_game": "generic checkpoint fallback",
+      "consoleErrors": 0
+    }
+  }
+}

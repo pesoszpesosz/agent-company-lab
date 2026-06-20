@@ -1,0 +1,163 @@
+{
+  "trace_id": "trace-agent-company-atlas-motion-forge-v1-20260618",
+  "task_id": "task-agent-company-atlas-motion-forge-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-motion-forge-v1-20260618",
+  "event_id": "trace-atlas_motion_forge_added-20260618",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T22:01:18Z",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "duplicate_key": "atlas-motion-forge-v1",
+  "event_type": "atlas_motion_forge_added",
+  "summary": "Added Motion Forge, a reusable animation audit surface that groups lane minigame stingers into motion families, shows live samples, exposes reduced-motion coverage, and links directly into Arcade Deck, game assets, and lane-specific games.",
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "reports/agent-company-atlas-motion-forge-trace-metadata-20260618.json"
+  ],
+  "design_research": {
+    "sources": [
+      "https://www.framer.com/blog/posts/the-ultimate-guide-to-animations-in-design-systems/",
+      "https://www.designsystems.com/motion-and-accessibility/",
+      "https://motion.zajno.com/",
+      "https://www.uxpin.com/studio/blog/ui-animation-principles/",
+      "https://uxdesign.cc/ui-animation-principles-for-a-better-user-experience-c0c601d7abfe",
+      "https://github.com/hexiao0225/motion-recipes"
+    ],
+    "pattern_notes": [
+      "Motion systems should be tokenized, documented, and auditable instead of scattered through one-off effects.",
+      "Reduced-motion behavior must be a visible contract in premium interactive systems.",
+      "Transform and opacity animation keep dense dashboards smoother than layout-affecting motion.",
+      "Motion should communicate state, relationship, or affordance and should not obscure labels or controls."
+    ]
+  },
+  "implementation": {
+    "surface": "Motion Forge panel below Arcade Deck.",
+    "data_contract": [
+      "motionForgeTypes() groups arcade lanes by arcadeStingerType(lane).",
+      "renderMotionForge() shows motion family stats, a selected-lane sample, and quick actions for ARC, ART, and PLAY.",
+      "renderMotionTypeCard() exposes data-motion-type and data-motion-lane hooks for future automation and lane expansion.",
+      "Motion state uses the Atlas is-active class convention for selected motion cards and selected lane chips."
+    ],
+    "motion_types": [
+      "drift",
+      "grid",
+      "map",
+      "pulse",
+      "route",
+      "scan",
+      "spark"
+    ],
+    "performance_contract": [
+      "Live samples reuse transform and opacity keyframes from Arcade Deck stingers.",
+      "The panel advertises reduced-motion CSS coverage and disables sample animation under prefers-reduced-motion.",
+      "Responsive rules collapse the audit grid to one column on narrow screens without horizontal overflow."
+    ],
+    "source_hashes": {
+      "web/index.html": "0D7B0B664C2B8717665FC588B98885D42990C8B5C66475C8119A71851515D41D",
+      "web/app.js": "46EC8B6478023A3755AFB580C7CAC482AE8FEEDB830E28C38ABEF319151658C8",
+      "web/styles.css": "9D41119ABF0EEEBFB6D1F321B3304814DCDFF7B25FA61C151A5C642FB933231E",
+      "web/README.md": "FC05C5FE3BF841F48A27258BA25EC59285DA8F9BECDDFE2D14B3AB194CCBDBD3"
+    }
+  },
+  "verification": {
+    "tdd_red": {
+      "status": "passed",
+      "expected_failure": "Motion Forge was not implemented yet",
+      "route": "http://localhost:5177/?verify=motion-forge-red&cache=20260618-arcade-stingers#lane=platform_engineering&view=overview",
+      "observed": {
+        "panel": false,
+        "cards": 0,
+        "samples": 0,
+        "laneChips": 0,
+        "actions": [],
+        "typeKeys": [],
+        "reducedMotionSignal": false
+      }
+    },
+    "browser_green": {
+      "route": "http://localhost:5177/?verify=motion-forge-green-4&cache=20260618-motion-forge-v4#lane=platform_engineering&view=overview",
+      "result": {
+        "panel": true,
+        "cards": 6,
+        "samples": 6,
+        "laneChips": 12,
+        "activeCards": 1,
+        "activeChips": 1,
+        "actions": [
+          "arcade",
+          "assets",
+          "game"
+        ],
+        "animated": 21,
+        "overflow": false,
+        "clipped": [],
+        "heading": "Grid motion audit"
+      }
+    },
+    "interaction": {
+      "route": "http://localhost:5177/?verify=motion-forge-interaction-7&cache=20260618-motion-forge-v7#lane=platform_engineering&view=overview",
+      "result": {
+        "arcadeVisible": true,
+        "activeAssetFilter": "game",
+        "assetCountText": "12 / 42 game",
+        "gameAssets": 12,
+        "laneHash": "#lane=money_source_discovery&view=overview",
+        "motionHeading": "Map motion audit",
+        "gameHash": "#lane=money_source_discovery&view=game",
+        "activeTab": "game",
+        "gameLabel": "Lane-Specific Minigame",
+        "gameVisible": true
+      }
+    },
+    "responsive": [
+      {
+        "label": "phone",
+        "width": 390,
+        "cards": 6,
+        "samples": 6,
+        "laneChips": 12,
+        "activeCards": 1,
+        "activeChips": 1,
+        "animated": 21,
+        "columns": 1,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "label": "desktop",
+        "width": 1280,
+        "cards": 6,
+        "samples": 6,
+        "laneChips": 12,
+        "activeCards": 1,
+        "activeChips": 1,
+        "animated": 21,
+        "columns": 3,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "label": "wide",
+        "width": 1600,
+        "cards": 6,
+        "samples": 6,
+        "laneChips": 12,
+        "activeCards": 1,
+        "activeChips": 1,
+        "animated": 21,
+        "columns": 4,
+        "overflow": false,
+        "clipped": []
+      }
+    ],
+    "static": [
+      "node --check web/app.js",
+      "ASCII check for edited text files",
+      "Invoke-WebRequest localhost returned STATUS 200"
+    ]
+  },
+  "next_action": "Add optional generated sprite-loop asset families or a Three.js lane portal preview for the highest-value lane modules."
+}

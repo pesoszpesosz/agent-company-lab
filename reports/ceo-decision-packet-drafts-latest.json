@@ -1,0 +1,143 @@
+{
+  "approval_request_count": 0,
+  "decision_option_count": 9,
+  "draft_evidence_id": "ceo-decision-packet-drafts-20260616",
+  "draft_lane_id": "platform_engineering",
+  "draft_task_id": "task-ceo-decision-packet-drafts-20260616",
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T23:09:47Z",
+  "lane_evidence_rows_after": 100,
+  "lane_evidence_rows_before": 99,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_packet_drafts_ready_not_submitted",
+  "next_action": "CEO/operator can review these packet drafts and later issue an explicit scoped decision; until then all blockers remain held.",
+  "packet_draft_count": 3,
+  "packet_drafts": [
+    {
+      "covered_blocker_ids": [
+        "req-next-wave-digital-legal-payment-review-20260614",
+        "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "req-wave4-digital-products-browser-readonly-20260614",
+        "hold-live-marketplace-demand",
+        "hold-live-terms-and-fees",
+        "hold-public-listing-action",
+        "hold-account-or-payment-setup"
+      ],
+      "decision_options": [
+        {
+          "meaning": "Approve only the bounded read-only or review scope named in this packet, with no public, account, payment, wallet, or submission side effects.",
+          "option_id": "approve_bounded_readonly_scope",
+          "status": "draft_only_not_requested"
+        },
+        {
+          "meaning": "Keep every blocker in this batch held and require a fresh review later.",
+          "option_id": "keep_held",
+          "status": "draft_only_not_requested"
+        },
+        {
+          "meaning": "Reject or park the batch so lane managers stop waiting on it and continue other local proof work.",
+          "option_id": "reject_or_park_batch",
+          "status": "draft_only_not_requested"
+        }
+      ],
+      "default_recommendation": "hold",
+      "human_prompt": "Choose whether to approve only read-only validation/legal review, keep all holds, or reject the marketplace route.",
+      "lane_focus": "digital_products_templates_plugins",
+      "non_authority_notice": "This packet is a draft. Selecting text from it in a future message is not approval unless the user explicitly grants the exact scope.",
+      "packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+      "priority": 1,
+      "source_batch_id": "batch-digital-products-marketplace-validation",
+      "why_it_matters": "This lane has the most complete local product packet and the largest cluster of related gates."
+    },
+    {
+      "covered_blocker_ids": [
+        "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "req-next-wave-security-report-route-review-20260614"
+      ],
+      "decision_options": [
+        {
+          "meaning": "Approve only the bounded read-only or review scope named in this packet, with no public, account, payment, wallet, or submission side effects.",
+          "option_id": "approve_bounded_readonly_scope",
+          "status": "draft_only_not_requested"
+        },
+        {
+          "meaning": "Keep every blocker in this batch held and require a fresh review later.",
+          "option_id": "keep_held",
+          "status": "draft_only_not_requested"
+        },
+        {
+          "meaning": "Reject or park the batch so lane managers stop waiting on it and continue other local proof work.",
+          "option_id": "reject_or_park_batch",
+          "status": "draft_only_not_requested"
+        }
+      ],
+      "default_recommendation": "hold",
+      "human_prompt": "Decide whether read-only rules/scope review is worth approving before any report-route work.",
+      "lane_focus": "security_bounty_private_reports",
+      "non_authority_notice": "This packet is a draft. Selecting text from it in a future message is not approval unless the user explicitly grants the exact scope.",
+      "packet_id": "decision-packet-batch-security-bounty-route-readiness",
+      "priority": 2,
+      "source_batch_id": "batch-security-bounty-route-readiness",
+      "why_it_matters": "Security routes can become payout-relevant, but submission and testing gates must stay strict."
+    },
+    {
+      "covered_blocker_ids": [
+        "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "req-wave4-ai-ml-competitions-browser-readonly-20260614"
+      ],
+      "decision_options": [
+        {
+          "meaning": "Approve only the bounded read-only or review scope named in this packet, with no public, account, payment, wallet, or submission side effects.",
+          "option_id": "approve_bounded_readonly_scope",
+          "status": "draft_only_not_requested"
+        },
+        {
+          "meaning": "Keep every blocker in this batch held and require a fresh review later.",
+          "option_id": "keep_held",
+          "status": "draft_only_not_requested"
+        },
+        {
+          "meaning": "Reject or park the batch so lane managers stop waiting on it and continue other local proof work.",
+          "option_id": "reject_or_park_batch",
+          "status": "draft_only_not_requested"
+        }
+      ],
+      "default_recommendation": "hold",
+      "human_prompt": "Approve or hold read-only public page refreshes for paid-code and competition opportunities.",
+      "lane_focus": "paid_code_bounties_ai_ml_competitions",
+      "non_authority_notice": "This packet is a draft. Selecting text from it in a future message is not approval unless the user explicitly grants the exact scope.",
+      "packet_id": "decision-packet-batch-paid-code-and-ai-ml-readonly",
+      "priority": 3,
+      "source_batch_id": "batch-paid-code-and-ai-ml-readonly",
+      "why_it_matters": "These are low-commitment discovery gates that can refresh payout/rules evidence without public action."
+    }
+  ],
+  "recommended_default": "hold_all_gated_work_until_explicit_approval",
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_packet_drafts.v1",
+  "source_active_blocker_count": 15,
+  "source_high_leverage_batch_count": 3,
+  "source_triage_batch_count": 5,
+  "source_triage_evidence_id": "ceo-blocker-triage-20260616",
+  "source_triage_task_id": "task-ceo-blocker-triage-20260616",
+  "source_triage_validation_path": "E:\\agent-company-lab\\reports\\ceo-blocker-triage-validation-latest.json",
+  "summary": "Drafted local CEO decision packets for the three high-leverage blocker batches. The packets present approve/hold/reject options but request or execute nothing.",
+  "task_rows_inserted_by_drafts": 1,
+  "tasks_table_rows_after": 192,
+  "tasks_table_rows_before": 191
+}

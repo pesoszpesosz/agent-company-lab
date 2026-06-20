@@ -1,0 +1,110 @@
+{
+  "schema_version": "agent_company.deep_research_wave.v1",
+  "wave": 14,
+  "generated_utc": "2026-06-17T19:58:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-deep-research-wave14-20260617",
+  "purpose": "Refresh current-source architecture signals for durable agent-company infrastructure after identity, egress, MCP, and activation-chain validators landed.",
+  "sources": [
+    {
+      "id": "langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "decision": "conceptual_reference_possible_future_graph_adapter",
+      "signals": [
+        "durable_execution",
+        "human_in_the_loop",
+        "stateful_long_running_agents",
+        "observability"
+      ]
+    },
+    {
+      "id": "dapr_agents",
+      "url": "https://github.com/dapr/dapr-agents",
+      "decision": "distributed_worker_reference",
+      "signals": [
+        "durable_workflow",
+        "state_management",
+        "virtual_actors",
+        "pubsub",
+        "telemetry"
+      ]
+    },
+    {
+      "id": "cloudflare_agents",
+      "url": "https://github.com/cloudflare/agents",
+      "decision": "per_agent_persistent_state_reference",
+      "signals": [
+        "durable_objects",
+        "stateful_agents",
+        "mcp",
+        "workflows",
+        "hibernation"
+      ]
+    },
+    {
+      "id": "microsoft_durable_agent_framework",
+      "url": "https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/durable-task/sdks/durable-agents-microsoft-agent-framework.md",
+      "decision": "durable_approval_wait_reference",
+      "signals": [
+        "persistent_sessions",
+        "automatic_checkpointing",
+        "multi_agent_orchestration",
+        "human_approval_waits"
+      ]
+    },
+    {
+      "id": "mcp_agent",
+      "url": "https://github.com/lastmile-ai/mcp-agent",
+      "decision": "future_mcp_adapter_candidate",
+      "signals": [
+        "mcp_aggregation",
+        "workflow_decorators",
+        "temporal_execution",
+        "secrets_config"
+      ]
+    },
+    {
+      "id": "browser_use",
+      "url": "https://github.com/browser-use/browser-use",
+      "decision": "future_browser_read_only_harness_candidate",
+      "signals": [
+        "rust_core",
+        "browser_harness",
+        "persistent_tools",
+        "recovery_loops"
+      ]
+    },
+    {
+      "id": "agent_browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "decision": "future_native_browser_cli_candidate",
+      "signals": [
+        "rust_cli",
+        "rust_daemon",
+        "direct_cdp",
+        "windows_x64"
+      ]
+    }
+  ],
+  "recommended_next_builds": [
+    "runtime_start_preflight_validator_v1",
+    "browser_read_only_worker_policy_v1",
+    "mcp_adapter_candidate_matrix_v1",
+    "lane_manager_workflow_runtime_map_v1"
+  ],
+  "immediate_recommendation": "runtime_start_preflight_validator_v1",
+  "runtime_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "credentials_created": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "boundary": {
+    "accounts_created": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": 0,
+    "logins_performed": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_payouts_kyc_tax_actions": 0,
+    "service_requests_approved": 0,
+    "service_requests_assigned": 0,
+    "service_requests_completed": 0,
+    "service_requests_created": 1,
+    "service_requests_started": 0,
+    "submissions_or_public_actions": 0,
+    "terms_accepted": 0,
+    "uploads_or_marketplace_drafts": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "service_request_packet_scaffolded",
+  "generated_at": "2026-06-18T08:00:36Z",
+  "lane_id": "digital_products_templates_plugins",
+  "request_id": "req-promptbase-guideline-readonly-review-20260618",
+  "schema_version": "digital_products.promptbase_guideline_readonly_service_request.trace.v1",
+  "source": "tools/create_promptbase_readonly_service_request.py",
+  "summary": "PromptBase read-only guideline service request created in needs_review without approval, assignment, browser execution, or external side effects.",
+  "task_id": "task-promptbase-guideline-readonly-service-request-20260618"
+}

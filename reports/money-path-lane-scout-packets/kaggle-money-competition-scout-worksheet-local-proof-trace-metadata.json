@@ -1,0 +1,21 @@
+{
+  "boundary": {
+    "api_token_or_credentials_created": false,
+    "competition_data_downloaded": 0,
+    "competition_rules_accepted": false,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "public_notebooks_or_comments": 0,
+    "submissions_made": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "local_proof_completed",
+  "generated_at": "2026-06-18T07:02:31Z",
+  "lane_id": "ai_ml_competitions",
+  "schema_version": "kaggle_money_competition_scout_worksheet_local_proof.trace.v1",
+  "source": "tools/create_kaggle_money_competition_scout_worksheet_local_proof.py",
+  "summary": "Kaggle scout worksheet created with no account, data download, submission, public action, or runtime.",
+  "task_id": "task-lane-scout-kaggle_money_competitions-20260618"
+}

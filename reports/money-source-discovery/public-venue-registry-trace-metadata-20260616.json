@@ -1,0 +1,11 @@
+{
+  "row_count": 20,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "account_actions": false,
+  "wallet_actions": false,
+  "payment_actions": false,
+  "public_actions": false,
+  "security_testing_actions": false,
+  "real_money_actions": false
+}

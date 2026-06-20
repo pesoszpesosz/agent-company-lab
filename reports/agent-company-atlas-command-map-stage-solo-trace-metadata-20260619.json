@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-map-stage-solo-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-map-stage-solo-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-map-stage-solo-v1-20260619",
+  "title": "Command Map Stage Solo",
+  "createdAt": "2026-06-19T06:18:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Added command map solo layout so the Map stage hides lane/detail columns and expands the atlas map across the bounded command surface.",
+  "proof": [
+    "Added a tested command map stage mode that turns the workspace into one full-width map grid.",
+    "Hid the lane rail and selected-lane detail panel only while the Command deck's Map stage is active.",
+    "Updated mobile sizing, README, cache markers, and snapshot metadata so the standalone dashboard records the map-stage unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

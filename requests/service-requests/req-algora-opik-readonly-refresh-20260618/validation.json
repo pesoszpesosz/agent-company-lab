@@ -1,0 +1,62 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "request_id_present",
+      "passed": true
+    },
+    {
+      "name": "browser_service_selected",
+      "passed": true
+    },
+    {
+      "name": "status_needs_review",
+      "passed": true
+    },
+    {
+      "name": "target_urls_relevant",
+      "passed": true
+    },
+    {
+      "name": "intake_has_all_required_fields",
+      "passed": true
+    },
+    {
+      "name": "execution_not_approved",
+      "passed": true
+    },
+    {
+      "name": "service_request_created_once",
+      "passed": true
+    },
+    {
+      "name": "no_service_execution_mutations",
+      "passed": true
+    },
+    {
+      "name": "no_browser_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_public_claim_or_pr",
+      "passed": true
+    },
+    {
+      "name": "no_cla_payment_or_security_testing",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T08:11:48Z",
+  "request_id": "req-algora-opik-readonly-refresh-20260618",
+  "schema_version": "paid_code.algora_opik_readonly_service_request.validation.v1",
+  "task_id": "task-algora-opik-readonly-refresh-service-request-20260618"
+}

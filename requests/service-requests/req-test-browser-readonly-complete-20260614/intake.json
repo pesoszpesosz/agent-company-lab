@@ -1,0 +1,8 @@
+{
+  "allowed_read_scope": "Public search/results metadata only; no posting, liking, following, replying, settings, or private messages.",
+  "evidence_needed": "Local packet-generation acceptance proof only; no browser should be opened for this test.",
+  "forbidden_actions": "No submit, publish, like, follow, reply, repost, login, credential, account setting, payment, or private-data action.",
+  "lane_id": "content_and_social_growth",
+  "session_sensitivity": "public_or_already_approved_read_only",
+  "target_url": "https://x.com/search?q=ai%20agents"
+}

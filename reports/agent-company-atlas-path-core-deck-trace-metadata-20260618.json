@@ -1,0 +1,28 @@
+{
+  "id": "trace-agent-company-atlas-path-core-deck-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-core-deck-v1-20260618",
+  "event_id": "trace-atlas_path_core_deck_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-core-deck-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Core Deck",
+  "summary": "Compacted the immediate Path Map stack by moving Mission Scan, Route Command, and Route Rail into SCAN/COMMAND/ROUTE tabs with one selected panel mounted at a time.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_path_core_deck.py",
+    "tests/test_agent_company_atlas_path_command_strip.py",
+    "tests/test_agent_company_atlas_path_route_spine.py",
+    "tests/test_agent_company_atlas_path_mission_glance.py"
+  ],
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py -q failed before implementation on missing pathCoreDeckViewByLane.",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_command_strip.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_route_spine.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_mission_glance.py -q",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser runtime: default Core Deck mounted only Mission Scan; coordinate click on ROUTE switched active panel to route, unmounted Mission Scan and Command Strip, mounted one Route Rail, and kept overflow at 0.",
+    "Browser viewport override did not apply in this session: fresh and selected tabs still reported 1280px width. Mobile compactness is covered by CSS contract assertions for horizontal tabs and overflow-safe scroll behavior."
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "contract_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-contract-validation-latest.json",
+  "fixtures": [
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "dependency_install": true
+      },
+      "candidate_action": "install Temporal dependency for adapter prototype",
+      "expected_rejection_reason": "dependency installs require explicit approval",
+      "fixture_id": "reject_dependency_install_temporalio",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "dependency_import": true,
+        "runtime_import": true
+      },
+      "candidate_action": "import Temporal runtime symbols",
+      "expected_rejection_reason": "runtime imports require explicit approval",
+      "fixture_id": "reject_temporal_runtime_import",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "temporal_workflow_start": true
+      },
+      "candidate_action": "start ServiceRequestLifecycleWorkflow",
+      "expected_rejection_reason": "workflow starts require explicit approval",
+      "fixture_id": "reject_temporal_workflow_start",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "temporal_activity_schedule": true
+      },
+      "candidate_action": "schedule service-worker refresh activity",
+      "expected_rejection_reason": "activity scheduling requires explicit approval",
+      "fixture_id": "reject_temporal_activity_schedule",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "inngest_event_emit": true
+      },
+      "candidate_action": "emit service request lifecycle event",
+      "expected_rejection_reason": "event emission requires explicit approval",
+      "fixture_id": "reject_inngest_event_emit",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "service_request_mutation": true
+      },
+      "candidate_action": "assign or update a parked service request",
+      "expected_rejection_reason": "service-request mutation requires explicit approval",
+      "fixture_id": "reject_service_request_mutation",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "worker_start": true
+      },
+      "candidate_action": "start model/API worker pool",
+      "expected_rejection_reason": "worker starts require explicit approval",
+      "fixture_id": "reject_worker_start",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": false,
+      "blocked_signals": {
+        "api_call": true,
+        "external_side_effect": true
+      },
+      "candidate_action": "call a model API through the parked adapter request",
+      "expected_rejection_reason": "API calls and external side effects require explicit approval",
+      "fixture_id": "reject_model_api_call",
+      "observed_disposition": "rejected.blocked_by_runtime_interface_contract",
+      "rejected": true,
+      "side_effects_performed": false
+    }
+  ],
+  "forbidden_runtime_imports": [],
+  "generated_utc": "2026-06-15T15:55:11Z",
+  "lane_id": "platform_engineering",
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "negative_fixture_count": 8,
+  "next_action": "Promote these negative fixtures into the durable adapter implementation preflight before writing any Temporal/Inngest runtime adapter code.",
+  "purpose": "Static negative fixtures that keep future Temporal/Inngest adapter work report-only until explicit runtime/action approval exists.",
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_runtime_interface_negative_fixtures.v1"
+}

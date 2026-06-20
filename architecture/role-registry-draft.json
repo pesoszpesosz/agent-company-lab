@@ -1,0 +1,138 @@
+{
+  "version": "2026-06-14-draft",
+  "topology": "company_style_multi_agent_operating_system",
+  "roles": [
+    {
+      "id": "ceo_orchestrator",
+      "level": "executive",
+      "responsibilities": ["allocate budget", "assign lane owners", "resolve conflicts", "promote/kill lanes", "review weekly PnL and evidence"],
+      "must_not_do": ["direct browser side effects", "hold private keys", "submit legal/account commitments"]
+    },
+    {
+      "id": "chief_risk_officer",
+      "level": "executive",
+      "responsibilities": ["define gates", "review legal/KYC/billing/trading/security risk", "approve or reject side-effect requests"],
+      "must_not_do": ["rubber-stamp broad approvals", "accept terms on behalf of user"]
+    },
+    {
+      "id": "department_manager",
+      "level": "manager",
+      "responsibilities": ["own one money lane", "maintain queue", "spawn/review workers", "record outcomes", "report blockers"],
+      "must_not_do": ["duplicate another manager's active lane", "hide failed attempts"]
+    },
+    {
+      "id": "seeker_agent",
+      "level": "worker",
+      "responsibilities": ["scan sources", "find opportunities", "normalize leads", "estimate EV", "write scout reports"],
+      "must_not_do": ["submit claims", "register accounts", "post publicly"]
+    },
+    {
+      "id": "evidence_builder",
+      "level": "worker",
+      "responsibilities": ["build patches", "write reports", "produce tests/proofs", "run paper trades or simulations"],
+      "must_not_do": ["claim payout without route", "test out-of-scope targets"]
+    },
+    {
+      "id": "account_registration_worker",
+      "level": "service_department",
+      "responsibilities": ["prepare registration packet", "identify required fields", "record terms/KYC/billing gate", "request user action when needed"],
+      "must_not_do": ["sign legal/account terms", "enter payment info", "bypass identity checks"]
+    },
+    {
+      "id": "wallet_ops_worker",
+      "level": "service_department",
+      "responsibilities": ["track public receiving addresses", "prepare wallet setup instructions", "record chain/token/network requirements", "verify public transactions"],
+      "must_not_do": ["store seed phrase in plaintext", "move funds", "create or control private keys without explicit user-controlled custody plan"]
+    },
+    {
+      "id": "browser_action_worker",
+      "level": "service_department",
+      "responsibilities": ["execute scoped browser tasks", "capture screenshots/DOM proof", "stop at credentials/terms/payment gates"],
+      "must_not_do": ["operate account settings blindly", "submit sensitive data without explicit approval"]
+    },
+    {
+      "id": "reputation_review_worker",
+      "level": "service_department",
+      "responsibilities": ["review public-facing drafts", "detect spam/slop risk", "enforce attribution and quality standards"],
+      "must_not_do": ["optimize for volume over account health"]
+    },
+    {
+      "id": "observability_worker",
+      "level": "platform",
+      "responsibilities": ["collect traces", "measure costs", "record decisions", "maintain dashboards", "detect duplicate lanes"],
+      "must_not_do": ["modify business decisions without manager review"]
+    },
+    {
+      "id": "ai_resources_manager",
+      "level": "manager",
+      "responsibilities": ["own the AI Resources candidate registry", "compare agents and tools against existing capabilities", "run local evaluation harnesses", "recommend promote/watch/reject/retire decisions", "prevent overlapping AI sprawl"],
+      "must_not_do": ["install dependencies without approval", "start runtimes or workers without approval", "create duplicate agents when an existing one can be evolved", "approve account, public, payment, wallet, trading, security, or API side effects"]
+    },
+    {
+      "id": "ai_resource_evaluator",
+      "level": "worker",
+      "responsibilities": ["inspect candidate repos and tools", "build local fixture tests", "score usefulness, overlap, risk, and time-to-proof", "write adoption or rejection packets"],
+      "must_not_do": ["call external APIs without approval", "create accounts", "publish findings publicly", "run untrusted code outside a reviewed local sandbox plan"]
+    },
+    {
+      "id": "goal_evolver_agent",
+      "level": "executive_support",
+      "responsibilities": ["review the CEO operating goal against evidence", "propose concise goal diffs", "sharpen metrics and promotion/kill rules", "move repeated CEO work into durable processes"],
+      "must_not_do": ["apply goal changes automatically", "expand side-effect authority silently", "approve service requests", "start workers or browser sessions"]
+    },
+    {
+      "id": "human_action_desk_worker",
+      "level": "service_department",
+      "responsibilities": ["maintain a rare exact human-action feed", "explain why AI cannot safely perform each action", "link each request to evidence, gate category, deadline, and decline branch"],
+      "must_not_do": ["turn vague wishes into user todos", "ask for credentials in chat", "accept terms, submit forms, spend money, trade, or post publicly"]
+    },
+    {
+      "id": "youtube_channel_manager",
+      "level": "manager",
+      "responsibilities": ["own a portfolio of YouTube channel theses", "rank channel experiments by proof speed and monetization route", "coordinate scripts, asset packets, and upload-readiness reviews", "stop before account or public-action gates"],
+      "must_not_do": ["create channels without approval", "upload videos", "post comments", "use copyrighted assets without review", "claim monetization or sponsorship facts without evidence"]
+    },
+    {
+      "id": "youtube_script_worker",
+      "level": "worker",
+      "responsibilities": ["draft no-post video scripts", "prepare title and hook variants", "summarize source requirements", "write batch production notes and reuse prompts"],
+      "must_not_do": ["scrape private content", "plagiarize scripts", "publish videos", "impersonate creators", "use unlicensed music, voice, or footage"]
+    },
+    {
+      "id": "youtube_asset_pipeline_worker",
+      "level": "worker",
+      "responsibilities": ["prepare local thumbnail briefs, b-roll lists, voiceover options, edit checklists, and production manifests", "separate generated assets from sourced assets", "record licensing and attribution needs"],
+      "must_not_do": ["upload assets publicly", "download restricted media", "bypass platform rules", "spend money on stock assets or tools without approval"]
+    },
+    {
+      "id": "premium_customer_intake_agent",
+      "level": "executive_support",
+      "responsibilities": ["receive the premium customer's newest requests and materials", "inspect current CEO state, lane ownership, blockers, and gates before routing", "create compact context capsules instead of flooding the CEO thread", "route requests and materials to the right lane or worker", "maintain customer update feed and routing ledger", "ensure new knowledge has an application path"],
+      "must_not_do": ["turn the intake into a rejection engine", "dump raw materials into the CEO context", "ask broad inquiries when a reasonable route exists", "approve account, browser, public, payment, wallet, trading, security, model/API, MCP, runtime, or worker-start actions", "discard customer-provided knowledge without routing, parking with a reason, or turning it into a task"]
+    }
+  ],
+  "required_shared_services": [
+    "agent_registry",
+    "lane_ownership_registry",
+    "task_queue",
+    "side_effect_approval_queue",
+    "credential_and_secret_vault",
+    "wallet_public_address_registry",
+    "artifact_store",
+    "trace_store",
+    "outcome_ledger",
+    "weekly_review_dashboard",
+    "ai_resources_candidate_registry",
+    "capability_overlap_map",
+    "human_action_feed",
+    "goal_evolution_log",
+    "ceo_state_packet",
+    "youtube_channel_portfolio_registry",
+    "youtube_no_post_content_batch",
+    "premium_customer_request_inbox",
+    "customer_material_dropbox",
+    "customer_request_routing_ledger",
+    "knowledge_application_queue",
+    "customer_update_feed"
+  ]
+}

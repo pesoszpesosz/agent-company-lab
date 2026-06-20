@@ -1,0 +1,38 @@
+{
+  "schema_version": "customer_update_feed.v2",
+  "generated_utc": "2026-06-20T17:18:00Z",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "status": "active_local_update_feed",
+  "updates": [
+    {
+      "update_id": "customer-update-youtube-no-post-batch-created-20260620-002",
+      "generated_utc": "2026-06-20T17:18:00Z",
+      "summary": "YouTube lane now has its first no-post proof.",
+      "applied": [
+        "10_structured_script_briefs",
+        "30_title_variants",
+        "10_thumbnail_briefs",
+        "production_manifest",
+        "reputation_copyright_checklist",
+        "youtube_material_route_template"
+      ],
+      "human_action_needed": false,
+      "next": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1."
+    },
+    {
+      "update_id": "customer-update-premium-intake-installed-20260620-001",
+      "generated_utc": "2026-06-20T17:04:00Z",
+      "summary": "Premium customer intake was installed and claimed.",
+      "applied": [
+        "premium_customer_intake_agent_added",
+        "premium_customer_intake_lane_added_and_claimed",
+        "premium_customer_intake_router_v1_added"
+      ],
+      "human_action_needed": false,
+      "next": "Future customer requests and materials route through intake so raw material does not pollute CEO context."
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-node-echo-rail-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-node-echo-rail-v1-20260619",
+  "traceId": "trace-atlas_command_cockpit_node_echo_rail_added-20260619",
+  "title": "Command Cockpit Node Echo Rail",
+  "createdAt": "2026-06-19T19:35:20Z",
+  "summary": "Projected selected-node path history, blocker, and next-action signals directly inside the Command Cockpit Quest board.",
+  "changes": [
+    "Adds reusable role-aware Quest node echoes for realm, level, checkpoint, gate, and next-action states.",
+    "Renders a four-chip animated echo rail inside the Quest board so clicked nodes reveal richer path context without adding vertical layout.",
+    "Compresses the echo rail for cockpit and mobile views so the board remains first-screen friendly."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ]
+}

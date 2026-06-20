@@ -1,0 +1,35 @@
+{
+  "generated_utc": "2026-06-14T13:05:00Z",
+  "lane_id": "prediction_market_research",
+  "reason": "The original prediction manager thread remained active/interrupted with zero shared startup records after recovery prompts and repeated monitor checks.",
+  "original_thread": {
+    "thread_id": "019ec612-9996-7603-a593-38281608d3dc",
+    "title": "Agent Company - Prediction Manager",
+    "observed_status": "active/inProgress",
+    "shared_records_after_recovery": {
+      "lane_owner": null,
+      "tasks": 0,
+      "artifacts": 0,
+      "outcomes": 0,
+      "trace_events": 0
+    }
+  },
+  "replacement_thread": {
+    "thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+    "title": "Agent Company - Prediction Manager Relaunch",
+    "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-prediction-manager-relaunch\\outputs"
+  },
+  "hard_stops": [
+    "data/paper-only",
+    "no account setup",
+    "no KYC",
+    "no deposits or withdrawals",
+    "no orders or trades",
+    "no wallet actions",
+    "no broker/API keys",
+    "no market manipulation",
+    "no real-money action without approved service request"
+  ],
+  "old_thread_guard": "The original thread was warned to inspect shared lane ownership before any further action and not duplicate if replacement records exist.",
+  "next_action": "Monitor shared DB for prediction_market_research owner/task/artifact/outcome/trace. Complete recovery only after startup records land."
+}

@@ -1,0 +1,80 @@
+{
+  "trace_id": "trace-agent-company-atlas-route-replay-glyphs-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Generated and wired a Route Replay event glyph sprite sheet so replay stages, Event Proof, Path Map mini-events, and the Visual Asset Vault communicate event type visually.",
+  "design_research": {
+    "queries": [
+      "game UI icon design visual hierarchy event types",
+      "dashboard iconography visual hierarchy status icons UX",
+      "timeline icons activity feed UX pattern"
+    ],
+    "source_urls": [
+      "https://carbondesignsystem.com/patterns/status-indicator-pattern/",
+      "https://www.nngroup.com/articles/visual-indicators-differentiators/",
+      "https://www.aubergine.co/insights/a-guide-to-designing-chronological-activity-feeds",
+      "https://uxpatterns.dev/patterns/data-display/timeline",
+      "https://www.sketch.com/blog/game-ui-design/"
+    ],
+    "pattern_notes": [
+      "Status indicators become more scannable when icon, shape, color, and label work together.",
+      "Timeline and activity-feed rows should include compact visual indicators beside short activity descriptions.",
+      "Game UI can use spatial and meta visual cues to make state legible without adding more explanatory text."
+    ]
+  },
+  "image_generation": {
+    "mode": "built_in_image_gen",
+    "source_folder": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f",
+    "workspace_asset": "web/assets/system/route-replay-event-glyph-sheet-20260618.png",
+    "dimensions": "1536x1024",
+    "prompt_summary": "A 3x2 premium sci-fi fantasy event glyph sprite sheet: proof crystal/document, trace signal path, outcome trophy, gate lock, task cog/checkpoint, and service beacon, with no text, no logos, and consistent spacing."
+  },
+  "implementation": {
+    "files": [
+      "web/assets/system/route-replay-event-glyph-sheet-20260618.png",
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-route-replay-glyphs-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Keep glyph selection data-driven from snapshot event kind and nearby event text without schema changes.",
+      "Use the generated 3x2 sheet as a CSS sprite for proof, trace, outcome, gate, task, and service event types.",
+      "Render glyphs in Route Replay stage cards, Event Proof headers, and Path Map mini-event rows.",
+      "Register the glyph sheet as a system asset in the Visual Asset Vault.",
+      "Keep all glyph rows responsive and non-overlapping on mobile and desktop widths."
+    ]
+  },
+  "verification": {
+    "image_file": {
+      "status": "passed",
+      "evidence": "route-replay-event-glyph-sheet-20260618.png is a valid 1536x1024 PNG copied into web/assets/system."
+    },
+    "static": {
+      "status": "passed",
+      "evidence": "node --check web/app.js, snapshot JSON validation, edited-file ASCII checks, and local HTTP 200 for the page and glyph sheet passed."
+    },
+    "browser_path_map": {
+      "status": "passed",
+      "route": "http://localhost:5177/?cache=20260618-route-replay-glyphs-green2#lane=digital_products_templates_plugins&view=path",
+      "evidence": "After NEXT, replay and Event Proof glyphs used glyph-service at 54px and 46px with background-position 100% 100%; mini-events rendered glyph-outcome and glyph-proof crops; no bad rectangles or console errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "Each tested viewport rendered 1 replay glyph, 1 Event Proof glyph, 18 mini-event glyphs, and 20 glyphs with the sprite-sheet background, with no bad rectangles or console errors."
+    },
+    "browser_asset_vault": {
+      "status": "passed",
+      "evidence": "The system Asset Vault filter rendered a Route Replay event glyph sheet card with image src ./assets/system/route-replay-event-glyph-sheet-20260618.png at 317x154."
+    }
+  }
+}

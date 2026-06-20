@@ -1,0 +1,5 @@
+candidate,proposed_status,rationale,required_blocker
+local-report-only-fixture-mcp,approved_report_only,Safe local fixture for validating registry schema with no server start,contract validator required
+github-mcp-server-read-only-subset,under_review,High utility for paid-code and bounty work but write/public tools are dangerous,explicit tool allowlist and public-action block
+browser-automation-mcp-read-only,under_review,Useful for research workers but browser session boundaries must be explicit,browser scope recording teardown policy
+unknown-public-registry-server,disabled,Default posture for discovered but unreviewed server,manual review required

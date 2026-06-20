@@ -1,0 +1,81 @@
+{
+  "schema_version": "ceo_state_packet.v1",
+  "generated_utc": "2026-06-20T16:52:00Z",
+  "status": "current_local_state_packet",
+  "company_counts": {
+    "lanes": 14,
+    "departments": 21,
+    "roles": 17,
+    "agents": 15,
+    "tasks": 579,
+    "artifacts": 2401,
+    "outcomes": 418,
+    "trace_events": 509,
+    "service_requests": 16
+  },
+  "current_decision_batch": [
+    "ai_resources_candidate_registry",
+    "human_action_feed",
+    "ceo_state_packet",
+    "youtube_lane_scout_packet",
+    "control_plane_capacity_benchmark_packet"
+  ],
+  "active_new_lanes": [
+    {
+      "lane_id": "ai_resources_lab",
+      "department": "AI Resources",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "status": "active"
+    },
+    {
+      "lane_id": "youtube_content_channels",
+      "department": "Audience/Distribution",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "status": "active"
+    }
+  ],
+  "gate_state": {
+    "service_requests_needing_review": 13,
+    "service_requests_rejected": 2,
+    "service_requests_complete": 1,
+    "immediate_human_action_required_for_local_only_work": 0
+  },
+  "open_tasks": [
+    {
+      "task_id": "task-agent-company-atlas-agent-party-v1-20260618",
+      "lane_id": "platform_engineering",
+      "priority": 2,
+      "status": "new"
+    },
+    {
+      "task_id": "task-agent-company-atlas-runway-lenses-v1-20260618",
+      "lane_id": "platform_engineering",
+      "priority": 2,
+      "status": "new"
+    }
+  ],
+  "promoted_work": [
+    "ceo_operating_goal_v1_active",
+    "ai_resources_lab_active_and_claimed",
+    "goal_evolver_agent_registered",
+    "human_action_desk_worker_registered",
+    "youtube_content_channels_active_and_claimed"
+  ],
+  "next_dispatch_queue": [
+    "create_ai_resources_candidate_evaluation_packet_v1",
+    "create_youtube_no_post_content_batch_v1",
+    "create_control_plane_capacity_benchmark_packet_v1",
+    "convert_blocker_triage_into_manager_dispatch_batch",
+    "refresh_atlas_snapshot_after_material_lane_additions"
+  ],
+  "zero_side_effect_boundary": {
+    "service_requests_approved": 0,
+    "workers_started": 0,
+    "model_api_mcp_calls": 0,
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "payments_trades_wallets_security_testing": 0,
+    "external_side_effects": false
+  }
+}

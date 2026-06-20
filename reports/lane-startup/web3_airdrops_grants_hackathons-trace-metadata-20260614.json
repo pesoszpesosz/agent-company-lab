@@ -1,0 +1,10 @@
+{
+  "span_kind": "WORKFLOW",
+  "runtime": "codex_web_read_only_plus_local_control_plane",
+  "api_calls": true,
+  "external_actions": "read_only_web_fetches_only",
+  "wallet_actions": false,
+  "account_registrations": false,
+  "public_actions": false,
+  "service_request_required_for_next_action": true
+}

@@ -1,0 +1,63 @@
+{
+  "accepted_decision_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_dry_run_preview_count": 1,
+  "expected_rejection_count": 6,
+  "fixture_suite_count": 7,
+  "generated_utc": "2026-06-15T23:35:38Z",
+  "lane_evidence_rows_after": 106,
+  "lane_evidence_rows_before": 105,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_fixture_suite_ready_parser_not_executed",
+  "negative_fixture_count": 6,
+  "next_action": "Use this suite as the acceptance gate for a report-only parser; do not execute or apply parser results until the suite passes and mutation approval exists.",
+  "parser_execution_count": 0,
+  "positive_fixture_count": 1,
+  "recommended_default": "pass_fixture_suite_before_parser_execution",
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_fixture_suite.v1",
+  "source_negative_evidence_id": "ceo-decision-intake-negative-fixtures-20260616",
+  "source_negative_task_id": "task-ceo-decision-intake-negative-fixtures-20260616",
+  "source_negative_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-intake-negative-fixtures-validation-latest.json",
+  "source_positive_evidence_id": "ceo-decision-parser-positive-fixture-20260616",
+  "source_positive_task_id": "task-ceo-decision-parser-positive-fixture-20260616",
+  "source_positive_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-positive-fixture-validation-latest.json",
+  "suite_entries": [
+    {
+      "expected_result": "reject_all",
+      "fixture_count": 6,
+      "source_path": "E:\\agent-company-lab\\reports\\ceo-decision-intake-negative-fixtures-latest.json",
+      "suite_entry_id": "negative-fixtures"
+    },
+    {
+      "expected_preview_state": "would_create_bounded_service_request_update",
+      "expected_result": "dry_run_preview_only",
+      "fixture_count": 1,
+      "source_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-positive-fixture-latest.json",
+      "suite_entry_id": "positive-fixture"
+    }
+  ],
+  "suite_evidence_id": "ceo-decision-parser-fixture-suite-20260616",
+  "suite_lane_id": "platform_engineering",
+  "suite_task_id": "task-ceo-decision-parser-fixture-suite-20260616",
+  "summary": "Created a local parser fixture-suite manifest combining six negative fixtures and one positive dry-run fixture. A future parser must pass the suite before any queue mutation path is allowed.",
+  "task_rows_inserted_by_suite": 1,
+  "tasks_table_rows_after": 198,
+  "tasks_table_rows_before": 197
+}

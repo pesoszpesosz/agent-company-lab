@@ -1,0 +1,59 @@
+{
+  "traceId": "trace-agent-company-atlas-command-top-hud-compact-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-top-hud-compact-v1-20260619",
+  "eventId": "trace-atlas_command_top_hud_compact_added-20260619",
+  "createdUtc": "2026-06-18T22:31:12Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "title": "Command Top HUD Compact",
+  "summary": "Compacted the Command deck's top chrome so the active lane workspace starts much higher in the first viewport while preserving the deck switcher and selected-lane rail state.",
+  "changeType": "first_viewport_density",
+  "stageModel": {
+    "desktopBehavior": "The Command deck shortens the app shell padding, topbar, Atlas mark, snapshot pill, deck dock, and deck buttons so the workspace begins near the top of the viewport.",
+    "mobileBehavior": "The mobile topbar keeps its stacked flow, the deck dock remains horizontally scrollable, and deck subtitles stay hidden to preserve compact controls.",
+    "motionBehavior": "The existing active deck sweep remains in place, but the reduced chrome makes the animation read as a HUD indicator instead of a large navigation block."
+  },
+  "browserEvidence": {
+    "desktopCommandChronicle": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "previousWorkspaceY": 226,
+      "workspaceY": 116,
+      "topbarHeight": 48,
+      "deckDockHeight": 48,
+      "deckButtonMinHeight": "36px",
+      "deckSubtitleDisplay": "none",
+      "activeLaneFirst": "platform_engineering",
+      "detailOverflow": 0
+    },
+    "mobileCommandChronicle": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "workspaceY": 176,
+      "topbarHeight": 93,
+      "deckDockHeight": 63,
+      "topbarFlexDirection": "column",
+      "dockOverflowX": "auto",
+      "deckSubtitleDisplay": "none",
+      "activeLaneFirst": "platform_engineering",
+      "detailOverflow": 0
+    }
+  },
+  "verification": [
+    "python -m pytest tests/test_agent_company_atlas_command_workspace_first.py -q",
+    "node --check web/app.js",
+    "In-app browser QA on command deck Chronicle route at 1440x900 and 390x844"
+  ],
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "reports/agent-company-atlas-command-top-hud-compact-trace-metadata-20260619.json",
+    "web/data/snapshot.json"
+  ]
+}

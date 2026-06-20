@@ -1,0 +1,131 @@
+{
+  "schema_version": "agent_company.gateway_candidate_matrix.v1",
+  "generated_utc": "2026-06-17T19:12:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-gateway-candidate-matrix-v1-20260617",
+  "executive_takeaway": "Do not install or run a live AI gateway yet. Build a local egress-governance contract first, keep the SQLite CEO ledger authoritative, and use LiteLLM as the best future local-first model/MCP gateway candidate.",
+  "candidates": [
+    {
+      "id": "local_sqlite_egress_ledger",
+      "current_signal": "Matches existing CEO ledger and chain-integrity model.",
+      "lab_fit": "highest_immediate_fit",
+      "main_risk": "Does not perform live gateway enforcement by itself.",
+      "recommended_posture": "build_first_report_only_contract"
+    },
+    {
+      "id": "litellm",
+      "current_signal": "Open-source AI Gateway for 100+ LLM providers with MCP access controls by key, team, and organization.",
+      "lab_fit": "best_future_local_first_model_mcp_gateway_candidate",
+      "main_risk": "Needs the lab ledger for browser, API, public action, account, wallet, and payment policy.",
+      "recommended_posture": "pattern_now_possible_approved_local_experiment_later",
+      "sources": [
+        "https://github.com/BerriAI/litellm",
+        "https://docs.litellm.ai/docs/mcp"
+      ]
+    },
+    {
+      "id": "portkey_gateway",
+      "current_signal": "Open-source AI Gateway with routing, fallbacks, load balancing, retries, guardrails, multimodal support, and agentic workflow integrations.",
+      "lab_fit": "strong_guardrail_and_routing_reference",
+      "main_risk": "Live deployment adds dependency and credential surface.",
+      "recommended_posture": "pattern_reference_until_dependency_review",
+      "sources": [
+        "https://portkey.ai/docs/product/open-source",
+        "https://github.com/portkey-ai/gateway",
+        "https://portkey.ai/blog/bringing-guardrails-on-the-gateway/"
+      ]
+    },
+    {
+      "id": "kong_ai_agent_gateway",
+      "current_signal": "Unified API, LLM, MCP, and agent-to-agent governance from a mature gateway platform.",
+      "lab_fit": "best_enterprise_traffic_taxonomy_reference",
+      "main_risk": "Enterprise complexity and not a next local step.",
+      "recommended_posture": "reference_for_long_term_traffic_classes",
+      "sources": [
+        "https://konghq.com/products/kong-ai-gateway",
+        "https://www.prnewswire.com/news-releases/kong-ai-gateway-now-supports-agent-to-agent-traffic-becoming-the-most-comprehensive-ai-gateway-for-the-agentic-era-302741741.html",
+        "https://github.com/Kong/kong"
+      ]
+    },
+    {
+      "id": "truefoundry_agent_gateway",
+      "current_signal": "Unified registry, step-level observability, RBAC, policy enforcement, governed MCP access, retries, timeouts, and fallbacks.",
+      "lab_fit": "strong_enterprise_control_plane_reference",
+      "main_risk": "Commercial/platform scope is too broad before local contracts exist.",
+      "recommended_posture": "reference_for_agent_registry_and_policy_model",
+      "sources": [
+        "https://www.truefoundry.com/",
+        "https://www.businesswire.com/news/home/20260602233322/en/TrueFoundry-Launches-Agent-Gateway-to-Close-the-Enterprise-AI-Governance-Gap"
+      ]
+    },
+    {
+      "id": "lunar_mcpx_style_gateway",
+      "current_signal": "Architecture argument for governing LLM, MCP, and API traffic through distributed control plane.",
+      "lab_fit": "strong_distributed_governance_reference",
+      "main_risk": "Vendor-framed source needs independent verification before adoption.",
+      "recommended_posture": "reference_for_distributed_control_plane_requirements",
+      "sources": [
+        "https://www.lunar.dev/post/top-5-ai-gateways-in-2026"
+      ]
+    },
+    {
+      "id": "agentcontrol",
+      "current_signal": "Centralized runtime guardrails across frameworks using configurable evaluators.",
+      "lab_fit": "lightweight_evaluator_reference",
+      "main_risk": "Small project and not a full egress gateway.",
+      "recommended_posture": "pattern_for_local_deny_allow_evaluator_shape",
+      "sources": [
+        "https://github.com/agentcontrol/agent-control"
+      ]
+    }
+  ],
+  "recommended_local_contract": {
+    "id": "agent_egress_event_ledger_v1",
+    "default_policy": "deny",
+    "required_fields": [
+      "event_id",
+      "request_id",
+      "task_id",
+      "lane_id",
+      "agent_id",
+      "worker_pool_id",
+      "egress_type",
+      "target",
+      "tool_or_model",
+      "input_artifact_path",
+      "output_artifact_path",
+      "credential_scope",
+      "budget_scope",
+      "approval_artifact_path",
+      "policy_verdict",
+      "policy_reasons",
+      "redaction_required",
+      "recording_required",
+      "created_utc",
+      "expires_utc",
+      "runtime_boundary"
+    ],
+    "egress_types": [
+      "model_api",
+      "mcp_tool",
+      "direct_api",
+      "browser_read_only",
+      "browser_signed_in",
+      "public_submission",
+      "wallet_payment",
+      "agent_to_agent"
+    ]
+  },
+  "runtime_boundary": {
+    "gateway_started": false,
+    "gateway_installed": false,
+    "api_keys_created": false,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "recommended_next_build": "agent_egress_event_ledger_v1_report_only_schema_fixture_packet"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-account-wallet-payment-egress-apply-command-contract-v1-20260618",
+  "task_id": "task-account-wallet-payment-egress-apply-command-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T02:12:30Z",
+  "summary": "Implemented report-only account_wallet_payment_gateway apply-command contract and advanced route-chain recommendation to telemetry_export_gateway signed_decision_guard while preserving zero account, wallet, payment, real-money, worker, browser, MCP/model, live-egress, and external side effects.",
+  "red_green_evidence": {
+    "red_command": "python -m unittest tests.test_account_wallet_payment_egress_apply_command_contract tests.test_egress_route_chain_integrity_audit",
+    "red_result": "failed before implementation because validate_account_wallet_payment_egress_apply_command_contract.py was missing and route-chain still reported 6 full chains",
+    "green_command": "python -m unittest tests.test_account_wallet_payment_egress_apply_command_contract tests.test_egress_route_chain_integrity_audit",
+    "green_result": "Ran 2 tests in 0.693s OK"
+  },
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\account-wallet-payment-egress-apply-command-contract-v1.schema.json",
+      "sha256": "9f46473694fb54a6d06cf1fca01ad45aa1b18c22efef9f109cbb3481104d148f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_account_wallet_payment_egress_apply_command_contract.py",
+      "sha256": "2ac1a8194fdf7dfb7a903dce0f4d408f5996bde49abd869dbe84e8fa0969b068"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_account_wallet_payment_egress_apply_command_contract.py",
+      "sha256": "dbf4c836ea90f9dc72a0c76b6cf96db3ec20a084d6359f0ece87489443d3dd50"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-apply-command-contract-v1-20260618.json",
+      "sha256": "6fc677206716e4b5fd12003e5cea6547901408000b48368faf2f8f51aa6838fe"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-apply-command-contract-v1-validation-20260618.json",
+      "sha256": "83a16631fdc42e7989c30fc15ad7bb148d0e517c63020d8099178f7408800fc0"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-apply-command-contract-v1-20260618.md",
+      "sha256": "d5237d536f69de74a8eb263ad9ed9bb862f45025fe948ae3c2c35f5e932c4b8a"
+    }
+  ],
+  "validation_summary": {
+    "fixture_count": 71,
+    "accepted_count": 2,
+    "rejected_count": 69,
+    "failure_count": 0,
+    "all_checks_passed": true
+  },
+  "route_chain_effect": {
+    "route_id": "account_wallet_payment_gateway",
+    "chain_status_after": "full_report_only_chain",
+    "full_chain_route_count": 7,
+    "partial_chain_route_count": 1,
+    "recommended_next_route_id_after": "telemetry_export_gateway",
+    "recommended_next_layer_after": "signed_decision_guard"
+  },
+  "blocked_actions": [
+    "account_creation",
+    "terms_acceptance",
+    "wallet_creation",
+    "private_key_custody",
+    "seed_phrase_custody",
+    "fund_transfer",
+    "payment_method_change",
+    "kyc_tax_legal_action",
+    "public_payment_address_publication",
+    "service_request_mutation",
+    "worker_start",
+    "browser_start",
+    "model_api_call",
+    "mcp_tool_call",
+    "live_egress",
+    "external_side_effect"
+  ]
+}

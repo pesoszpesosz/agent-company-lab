@@ -1,0 +1,33 @@
+{
+  "all_gap_lanes_have_seed_packet": true,
+  "all_seed_packets_report_only": true,
+  "gap_map_path": "E:\\agent-company-lab\\reports\\company-expansion-gap-map-latest.json",
+  "generated_utc": "2026-06-15T17:08:09Z",
+  "missing_source_spec_lane_count": 0,
+  "next_action": "Review these seed packets and convert accepted proposals into source_specs registry rows in a separate local-only task.",
+  "packet_dir": "E:\\agent-company-lab\\reports\\source-spec-seed-packets",
+  "packet_rows": [],
+  "purpose": "Report-only draft source-spec packets for owned lanes currently missing source specs.",
+  "registry_file_modified_by_packet": false,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.source_spec_seed_packets.v1",
+  "seed_packet_count": 0,
+  "source_spec_gap_count_from_gap_map": 0,
+  "source_spec_gap_lane_ids": [],
+  "source_specs_inserted_by_packet": 0,
+  "source_specs_table_rows_after": 13,
+  "source_specs_table_rows_before": 13
+}

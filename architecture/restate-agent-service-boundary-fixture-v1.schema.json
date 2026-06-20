@@ -1,0 +1,71 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/restate-agent-service-boundary-fixture-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Restate Agent Service Boundary Fixture v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.restate_agent_service_boundary_fixture.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-restate-agent-service-boundary-fixture-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "source_prefect_validation_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_outbox_history_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "service_boundary_policy": {
+      "type": "object"
+    },
+    "agent_service_cases": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_urls",
+    "source_prefect_validation_path",
+    "source_outbox_history_path",
+    "service_boundary_policy",
+    "agent_service_cases",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

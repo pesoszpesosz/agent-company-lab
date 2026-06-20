@@ -1,0 +1,11 @@
+candidate,current_signal,best_use_for_lab,risk_if_adopted_too_early,recommended_posture
+Local SQLite identity envelope,Matches current CEO ledger and artifact model,Immediate source of truth for worker identity scopes expiry and approval evidence,No cryptographic runtime attestation by itself,Build first as report-only contract
+SPIFFE/SPIRE,Workload identity standard with attestation and SVID issuance,Future cryptographic identity for long-running workers or sandbox runtimes,Operational complexity and not enough for authorization alone,Pattern now install only after runtime approval
+OpenFGA,Agent authorization docs and agents-as-principals modeling,Fine-grained relation and task authorization,Requires careful resource modeling and not complete egress or credential system,Strong future mapping target
+OPA/Rego,General-purpose policy engine,Deny allow pause policy decisions over identity envelopes and egress events,Policy sprawl without simple local data model,Pattern for policy evaluator
+Cedar,Structured app authorization policy language,Readable action/resource/context policy,Needs integration surface and policy tooling,Secondary policy-language candidate
+SpiceDB/Zanzibar,Scalable fine-grained authz store,Future relation-based scale path,Overkill until many real resources and workers,Watch as future scale path
+Casbin,Mature ACL/RBAC/ABAC authorization library,Lightweight local policy checks for prototypes,Can drift from ledger if not tied to artifacts,Pattern only
+OPAL,Policy and data distribution for OPA/Cedar style systems,Future policy distribution to workers,Too much infrastructure before live fleet,Later-stage reference
+MCP identity broker and inventory controls,Register MCP servers disable by default audit tool calls,Required pattern for future MCP access,Live integration touches credentials,Implement locally as registry rules first
+CoSAI Agentic IAM,2026 agentic identity and access-management framework,Requirements checklist for lifecycle delegation audit and risk controls,Guidance not implementation,Use as completion rubric

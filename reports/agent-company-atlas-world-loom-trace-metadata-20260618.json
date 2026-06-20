@@ -1,0 +1,84 @@
+{
+  "trace_id": "trace-agent-company-atlas-world-loom-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "world_loom_lane_selector",
+  "summary": "Added a generated-art World Loom panel that turns nearby lane worlds into a cinematic manual selector with level, gate, unlock, avatar, realm, and direct Path/Game/Comms/Asset jumps.",
+  "design_research": {
+    "queries": [
+      "carousel UX guidelines manual control avoid autoplay",
+      "3D card carousel CSS performance dashboard UI pattern",
+      "cinematic dashboard UI data visualization game world selector"
+    ],
+    "source_urls": [
+      "https://www.ryviu.com/blog/auto-play-vs-manual-carousels",
+      "https://www.sliderrevolution.com/design/carousel-ux/",
+      "https://uxpatterns.dev/patterns/content-management/carousel",
+      "https://freefrontend.com/css-carousels/",
+      "https://muz.li/inspiration/dashboard-inspiration/"
+    ],
+    "pattern_notes": [
+      "Manual carousel controls preserve operator pacing and avoid attention theft.",
+      "Carousel cards should stay simple, readable, and non-critical; the underlying lane map and list remain the primary navigation.",
+      "CSS transforms can add a light 3D feeling without adding a heavy runtime dependency.",
+      "Cinematic dashboard surfaces need a clear hierarchy so visual polish does not hide status, gates, or next actions."
+    ]
+  },
+  "generated_asset": {
+    "tool_mode": "built_in_image_gen",
+    "source_output": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0a35708fab5ee21f016a330ff07438819b847cb357963ee115.png",
+    "workspace_path": "web/assets/system/world-loom-portal-20260618.png",
+    "prompt": "Premium cinematic command-room portal backdrop for a game-like agent-company lane world selector, showing layered holographic world gates, abstract lane portals, subtle depth, polished sci-fi glass surfaces, dark graphite and teal/amber highlights, no text, no logos, no humans, no watermark."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/world-loom-portal-20260618.png",
+      "reports/agent-company-atlas-world-loom-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[]",
+      "snapshot.totals",
+      "lane.visual.avatar",
+      "lane.visual.realm",
+      "lane.level",
+      "lane.score",
+      "lane.counts.blockers",
+      "lane.counts.pendingRequests",
+      "lane.counts.outcomes",
+      "chronicleNextAction(lane)"
+    ],
+    "ui_contract": [
+      "Render World Loom after Atlas Relay and before Progression Constellation.",
+      "Use the generated portal-hall system asset as the left-side cinematic visual.",
+      "Render at least five lane-world cards around the currently selected lane, with exactly one active card.",
+      "Previous and next controls manually rotate selected lane focus without autoplay.",
+      "Path, Game, and Comms actions open the selected lane detail views.",
+      "ART filters the Visual Asset Vault to system assets and exposes the World Loom portal art.",
+      "The panel remains static-site compatible and does not start workers, send commands, or perform external actions."
+    ]
+  },
+  "verification": {
+    "tdd": {
+      "red": "Playwright behavior check first failed with panel=false, backdrop empty, cards=0, activeCards=0, controls=0, actions=0.",
+      "green": "After implementation the same behavior check found the generated backdrop, 7 cards, 1 active card, 2 step controls, 4 actions, and no horizontal overflow."
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=world-loom-responsive&cache=20260618-world-loom-v2#lane=platform_engineering&view=overview",
+      "engine": "Playwright against local Chrome",
+      "checks": [
+        "390x920 viewport: World Loom rendered one stacked column, 7 lane cards, 1 active card, 4 actions, loaded the generated image, had no clipped panel text, no horizontal overflow, no console errors, and no failed responses.",
+        "1280x800 viewport: World Loom rendered image and control column side by side, 7 lane cards, 1 active card, 4 actions, no clipped panel text, no horizontal overflow, no console errors, and no failed responses.",
+        "1600x900 viewport: World Loom rendered the wide layout with 7 lane cards, 1 active card, 4 actions, no clipped panel text, no horizontal overflow, no console errors, and no failed responses.",
+        "Next control changed selected lane from Platform Engineering to Digital Products Templates Plugins.",
+        "PATH action opened the selected lane Path Map.",
+        "GAME action opened the selected lane Game tab and rendered a known game surface.",
+        "ART action filtered the Asset Vault to system assets and showed World Loom portal hall."
+      ]
+    }
+  }
+}

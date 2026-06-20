@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.model_api_egress_apply_preflight_blocker.v1",
+  "title": "Model API Egress Apply Preflight Blocker v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "target_route_id",
+    "target_egress_type",
+    "apply_preflight_status",
+    "blocker_reason",
+    "real_signed_decision_present",
+    "apply_command_contract_present",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "provider_key_use_allowed",
+    "provider_keys_used",
+    "model_api_call_allowed",
+    "model_api_calls",
+    "training_data_upload_allowed",
+    "training_data_uploaded",
+    "max_cost_usd",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.model_api_egress_apply_preflight_blocker.v1"
+    },
+    "target_route_id": {
+      "const": "model_api_gateway"
+    },
+    "target_egress_type": {
+      "const": "model_api"
+    },
+    "apply_preflight_status": {
+      "type": "string",
+      "enum": [
+        "blocked_no_real_signed_decision",
+        "blocked_guard_not_passing",
+        "blocked_no_apply_command_contract",
+        "blocked_fixture_decision_not_real"
+      ]
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "provider_key_use_allowed": {
+      "const": false
+    },
+    "provider_keys_used": {
+      "const": false
+    },
+    "model_api_call_allowed": {
+      "const": false
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "training_data_upload_allowed": {
+      "const": false
+    },
+    "training_data_uploaded": {
+      "const": false
+    },
+    "max_cost_usd": {
+      "const": 0
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

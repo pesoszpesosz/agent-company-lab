@@ -1,0 +1,89 @@
+{
+  "traceId": "trace-agent-company-atlas-path-stage-shell-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-stage-shell-v1-20260618",
+  "eventId": "trace-atlas_path_stage_shell_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-stage-shell-trace-metadata-20260618",
+  "title": "Path Stage Shell",
+  "date": "2026-06-18",
+  "summary": "Changed direct Path view from a first-pass vertical stack into a bounded stage shell. Archive and Tools now mount only as explicit depth modes, while STAGE remains the default cockpit.",
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_stage_shell.py"
+  ],
+  "behavior": {
+    "defaultDepth": "stage",
+    "depthModes": [
+      "stage",
+      "archive",
+      "utility"
+    ],
+    "defaultMountsArchive": false,
+    "defaultMountsUtility": false,
+    "proofShortcutOpens": "utility/proof",
+    "archiveShortcutOpens": "archive"
+  },
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-stage-shell-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "defaultStage": {
+      "depthView": "stage",
+      "activeDepthText": "Stage",
+      "archiveMounted": false,
+      "utilityMounted": false,
+      "boardHeight": 437,
+      "boardBottom": 427,
+      "stageDepthValue": "20%",
+      "gaugeValue": "20%",
+      "overflowX": 0,
+      "panelBottomWithinViewport": true
+    },
+    "archiveDepth": {
+      "depthView": "archive",
+      "activeDepthText": "Archive",
+      "archiveMounted": true,
+      "utilityMounted": false
+    },
+    "proofShortcut": {
+      "depthView": "utility",
+      "activeDepthText": "Tools",
+      "activeUtility": "Proof",
+      "archiveMounted": false,
+      "utilityMounted": true,
+      "proofMounted": true
+    }
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_shell.py -q",
+      "phase": "red",
+      "result": "1 failed because pathStageDepthByLane was not implemented."
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_shell.py -q",
+      "phase": "green",
+      "result": "1 passed in 0.08s"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_shell.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_path_chrome.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_split_stage.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_hud_strip.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_motion_director.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py -q",
+      "phase": "focused regression",
+      "result": "6 passed in 0.15s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "phase": "syntax",
+      "result": "exit 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "phase": "full atlas",
+      "result": "45 passed, 55 deselected in 0.19s"
+    }
+  ],
+  "nextAction": "Continue toward a richer one-screen command experience by reducing the remaining surrounding page chrome and adding more direct visual status for bots and lane blockers inside the stage shell."
+}

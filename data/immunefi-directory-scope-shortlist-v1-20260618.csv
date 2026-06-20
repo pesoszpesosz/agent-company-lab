@@ -1,0 +1,10 @@
+rank,program_id,program_name,maximum_bounty_usd,last_updated,shortlist_score,verdict,source_url,local_next_work
+1,optimism,Optimism,2000042,2026-06-16,91,promote_rules_extraction_first,https://immunefi.com/bug-bounty/optimism/information/,optimism_scope_rules_extraction_packet_v1
+2,ens,ENS,250000,2026-06-17,88,promote_known_issue_safe_rules_packet,https://immunefi.com/bug-bounty/ens/information/,ens_scope_known_issues_matrix_v1
+3,lido,Lido,2000000,2026-03-26,84,promote_rules_extraction_but_high_duplicate_risk,https://immunefi.com/bug-bounty/lido/information/,lido_scope_rules_extraction_packet_v1
+4,immutable,Immutable,1000000,2026-01-29,81,promote_audit_gap_matrix_after_optimism_ens_lido,https://immunefi.com/bug-bounty/immutable/information/,immutable_contract_audit_gap_matrix_v1
+5,lista_dao,Lista DAO,1000000,2026-05-29,76,watch_and_extract_scope_before_any_target_work,https://immunefi.com/bug-bounty/listadao/scope/,lista_dao_scope_page_extraction_v1
+6,sei,Sei,500000,2026-06-16,74,promote_after_contract_first_candidates,https://immunefi.com/bug-bounty/sei/scope/,sei_chain_scope_rules_packet_v1
+7,drips,Drips,100000,2024-11-18,71,good_low_kyc_rules_training_target,https://immunefi.com/bug-bounty/drips/information/,drips_audit_known_issue_diff_packet_v1
+8,immunefi,Immunefi,50000,2025-11-17,64,use_as_rules_training_not_primary_cashflow,https://immunefi.com/bug-bounty/immunefi/information/,immunefi_platform_scope_training_packet_v1
+9,obyte,Obyte,50000,2026-06-15,58,park_low_ev_until_specific_static_signal_exists,https://immunefi.com/bug-bounty/obyte/information/,obyte_impact_threshold_packet_v1

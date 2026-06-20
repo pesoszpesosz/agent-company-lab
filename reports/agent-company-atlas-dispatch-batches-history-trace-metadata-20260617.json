@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "dispatch-batches-history-v1",
+  "feature": {
+    "id": "dispatch-batch-builder-history",
+    "title": "Dispatch Batch Builder and Operator History",
+    "purpose": "Upgrade the Atlas Dispatch Console from single staged drafts into grouped command batches with a browser-local operator history and copy recovery path."
+  },
+  "research": [
+    {
+      "name": "Bulk Action UX",
+      "url": "https://www.eleken.co/blog-posts/bulk-actions-ux",
+      "takeaway": "Bulk actions should save time while preserving trust, clear target counts, and mobile-friendly controls."
+    },
+    {
+      "name": "Transactional Outbox Pattern",
+      "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+      "takeaway": "Outbox flows should stage messages durably before a separate sender processes them; Atlas keeps this local-only and does not send."
+    },
+    {
+      "name": "Mission Control Visibility",
+      "url": "https://www.agentcenter.cloud/blogs/openclaw-dashboard-mission-control",
+      "takeaway": "Agent command centers need recent activity and task state visibility so operators can understand what agents are doing."
+    },
+    {
+      "name": "Minimal Command Center Architecture",
+      "url": "https://www.jontsai.com/2026/02/12/building-mission-control-for-my-ai-workforce-introducing-openclaw-command-center",
+      "takeaway": "A lightweight static command center remains easy for agents and users to inspect, modify, and run without a heavy build stack."
+    }
+  ],
+  "implementation": {
+    "uiSurface": "Dispatch Console",
+    "storage": {
+      "outbox": "localStorage: agent-company-atlas.dispatch-outbox.v1",
+      "history": "localStorage: agent-company-atlas.dispatch-history.v1"
+    },
+    "sourceFiles": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Stage top three visible suggestions into a grouped local batch.",
+      "Stage all visible suggestions into the local outbox.",
+      "Group staged drafts by dispatch kind with source-lane chips.",
+      "Open source lane Comms from grouped batch chips.",
+      "Copy all staged commands as one batch.",
+      "Show a manual copy buffer when browser clipboard access is unavailable.",
+      "Archive all staged drafts and clear local operator history."
+    ],
+    "safetyBoundary": "The feature only stages, copies, groups, archives, and logs local drafts. It does not send messages, approve gates, mutate the control plane, or start workers."
+  },
+  "validation": {
+    "staticChecks": {
+      "nodeCheck": "passed",
+      "pythonCompile": "passed",
+      "jsonValidation": "passed",
+      "asciiCheck": "passed"
+    },
+    "snapshot": {
+      "regenerated": true,
+      "lanes": 12,
+      "dispatchSuggestions": 12,
+      "visibleSuggestionCards": 8,
+      "topSuggestion": "Review gate before any live action",
+      "topLane": "Digital Products Templates Plugins"
+    },
+    "browserDesktop": {
+      "initialSuggestions": 8,
+      "initialOutboxCards": 0,
+      "topThreeStageOutboxCards": 3,
+      "topThreeBatchGroups": 1,
+      "topThreeHistoryRows": 1,
+      "reloadPersistence": "passed",
+      "batchLaneClickThrough": "#lane=platform_engineering&view=comms",
+      "batchCopyFallbackBufferVisible": true,
+      "batchCopyFallbackTextLength": 1886,
+      "cleanupOutboxCards": 0,
+      "cleanupHistoryRows": 0,
+      "consoleErrors": 0,
+      "pageOverflow": false
+    },
+    "browserMobile": {
+      "viewport": "390x840",
+      "dispatchGridColumns": "328px",
+      "batchGridColumns": "328px",
+      "suggestionGridColumns": "302px",
+      "visibleSuggestions": 8,
+      "consoleErrors": 0,
+      "pageOverflow": false
+    }
+  }
+}

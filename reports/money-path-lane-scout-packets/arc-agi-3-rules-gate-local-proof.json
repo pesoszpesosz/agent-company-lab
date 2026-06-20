@@ -1,0 +1,198 @@
+{
+  "schema_version": "ai_ml_competitions.arc_agi_3_rules_gate_local_proof.v1",
+  "generated_utc": "2026-06-18T06:44:08Z",
+  "task_id": "task-lane-scout-arc_agi_3-20260618",
+  "lane_id": "ai_ml_competitions",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "status": "arc_agi_3_rules_gate_ready_local_only",
+  "source_observations": [
+    {
+      "source_id": "arc_agi_3_track_rules",
+      "url": "https://arcprize.org/competitions/2026/arc-agi-3",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "ARC-AGI-3 is the 2026 interactive reasoning track. It lists $850K total, a $700K grand prize for 100%, guaranteed top-score and milestone prizes, Kaggle submission, no internet during evaluation, and open-source code/method requirements for prize eligibility.",
+      "route_effect": "Competition action requires Kaggle/rules, submission, open-source/license, and offline-evaluation readiness gates."
+    },
+    {
+      "source_id": "arc_docs_local_vs_online",
+      "url": "https://docs.arcprize.org/local-vs-online",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "ARC docs recommend local development and testing with the engine: fast, no rate limits, many instances, and no API key. Online mode gives scorecards, shareable replays, and leaderboard visibility but requires an API key and is rate limited.",
+      "route_effect": "Local/offline toy baselines are allowed; online scorecards, API keys, shareable replays, and leaderboard effects are gated."
+    },
+    {
+      "source_id": "arc_docs_api_keys",
+      "url": "https://docs.arcprize.org/api-keys",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "API key creation requires logging in with Google or GitHub on the ARC platform, then creating a key and setting it in an environment variable or .env file.",
+      "route_effect": "API key creation and storage are account/credential gates and should not be performed by an autonomous lane task."
+    },
+    {
+      "source_id": "arc_docs_toolkit",
+      "url": "https://docs.arcprize.org/toolkit/overview",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "The open-source Python toolkit supports local development, custom games, and local/API interaction. The quickstart installs arc-agi and optionally uses an API key; recent changelog mentions competition mode and official scoring.",
+      "route_effect": "Installing/running the official toolkit can be a later local runtime task, but this rules-gate packet performs no dependency install or worker/runtime start."
+    },
+    {
+      "source_id": "arc_docs_scoring_methodology",
+      "url": "https://docs.arcprize.org/methodology",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "ARC-AGI-3 uses Relative Human Action Efficiency. Scoring measures level completion and action efficiency against human baselines; internal reasoning/tool calls do not count as environment actions, but submitted environment actions do.",
+      "route_effect": "Local baselines should log completion and action count, not just final success, and should prefer efficient exploration over brute-force action spam."
+    },
+    {
+      "source_id": "arc_docs_recordings_scorecards",
+      "url": "https://docs.arcprize.org/recordings",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "Official recordings are available for API and swarm modes. Local toolkit runs without API do not generate online recordings; swarm can save local recording files in JSONL format.",
+      "route_effect": "The next local proof should write its own replay JSON/JSONL without using online scorecards or API replay infrastructure."
+    },
+    {
+      "source_id": "local_arc_prize_baseline_packet",
+      "url": "E:/agent-company-lab/reports/money-path-lane-scout-packets/arc-prize-2026-baseline-local-proof.md",
+      "observed_utc": "2026-06-18T06:44:08Z",
+      "local_summary": "Existing local baseline packet recommends an ARC-AGI-3 offline agent baseline and a micro-environment replay sprint, while keeping Kaggle account/rules, official data, submission, paid compute/API, worker/runtime, and public actions blocked.",
+      "route_effect": "This packet converts that baseline into a precise go/no-go gate checklist."
+    }
+  ],
+  "gate_matrix": [
+    {
+      "gate_id": "local_synthetic_micro_env",
+      "status": "allowed_now",
+      "allowed_actions": [
+        "Write synthetic turn-based toy environments.",
+        "Run deterministic policies using Python standard library.",
+        "Record local JSON/JSONL replays.",
+        "Score completion and action counts locally."
+      ],
+      "blocked_actions": [
+        "official ARC data download",
+        "Kaggle submission",
+        "ARC online scorecards",
+        "API key use"
+      ],
+      "approval_needed": false
+    },
+    {
+      "gate_id": "official_toolkit_install_or_runtime",
+      "status": "needs_explicit_local_runtime_approval",
+      "allowed_actions": [
+        "Draft dependency/install plan.",
+        "Review docs and API surface."
+      ],
+      "blocked_actions": [
+        "pip/uv install",
+        "running official games",
+        "starting worker runtime",
+        "downloading game sources"
+      ],
+      "approval_needed": true
+    },
+    {
+      "gate_id": "arc_api_key_and_online_scorecard",
+      "status": "blocked",
+      "allowed_actions": [
+        "Prepare key-handling checklist.",
+        "Describe online scoring route."
+      ],
+      "blocked_actions": [
+        "Google/GitHub login",
+        "API key creation",
+        ".env write",
+        "online scorecard open/close",
+        "leaderboard-visible runs"
+      ],
+      "approval_needed": true
+    },
+    {
+      "gate_id": "kaggle_competition_submission",
+      "status": "blocked",
+      "allowed_actions": [
+        "Prepare submission-readiness checklist.",
+        "Review public rules."
+      ],
+      "blocked_actions": [
+        "Kaggle login",
+        "rules acceptance",
+        "competition submission",
+        "notebook publication",
+        "official evaluation"
+      ],
+      "approval_needed": true
+    },
+    {
+      "gate_id": "open_source_release",
+      "status": "blocked",
+      "allowed_actions": [
+        "Draft license/readme checklist.",
+        "Check third-party dependency licenses locally."
+      ],
+      "blocked_actions": [
+        "GitHub publication",
+        "public repo creation",
+        "release upload",
+        "paper/public claim"
+      ],
+      "approval_needed": true
+    },
+    {
+      "gate_id": "paid_compute_or_model_api",
+      "status": "blocked",
+      "allowed_actions": [
+        "Estimate compute needs.",
+        "Design offline-first experiments."
+      ],
+      "blocked_actions": [
+        "paid GPU/compute",
+        "external model API calls",
+        "cloud jobs",
+        "billing setup"
+      ],
+      "approval_needed": true
+    }
+  ],
+  "next_local_proof": {
+    "proof_id": "arc_agi_3_micro_env_replay_gate_safe_v1",
+    "allowed_scope": "Python standard-library-only synthetic environments and local replay files.",
+    "required_outputs": [
+      "micro-env fixture JSON with three toy environments.",
+      "policy runner JSON/Markdown report comparing random vs exploration-memory policy.",
+      "replay JSONL for each run.",
+      "validation JSON proving no official data, account, API key, dependency install, runtime worker, paid compute, submission, or public action."
+    ],
+    "success_criteria": [
+      "Exploration-memory policy beats random on at least two of three environments.",
+      "Every run has action count, terminal state, and replay file.",
+      "Validation confirms local-only zero external side effects.",
+      "Failure taxonomy identifies at least three future solver improvements."
+    ]
+  },
+  "decision": "only_local_synthetic_micro_env_allowed_now",
+  "acceptance_checks": [
+    "ARC-AGI-3 competition, toolkit, local-vs-online, API key, scoring, and recording constraints are summarized.",
+    "Allowed local actions are separated from gated official/toolkit/API/Kaggle/public actions.",
+    "Every external or credentialed route has an explicit approval gate.",
+    "The next local proof is scoped to standard-library synthetic environments and local replay artifacts.",
+    "No account, API key, dependency install, official data, runtime worker, submission, payment/paid compute, public action, or external side effect occurs."
+  ],
+  "boundary": {
+    "public_sources_read": 7,
+    "browser_sessions_started": 0,
+    "arc_or_kaggle_account_or_login": false,
+    "api_key_created_or_used": false,
+    "env_or_secret_file_written": false,
+    "dependencies_installed": 0,
+    "official_toolkit_or_games_run": false,
+    "official_or_gated_data_downloaded": false,
+    "scorecards_opened": 0,
+    "submissions_made": 0,
+    "notebooks_or_papers_published": 0,
+    "paid_compute_or_model_api": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Implement the standard-library ARC-AGI-3 micro-environment replay baseline locally; do not install the official toolkit, create/use API keys, log in, download official/gated data, open scorecards, submit to Kaggle, publish code/papers, use paid compute/model APIs, start workers/runtimes, or perform public actions without explicit approval."
+}

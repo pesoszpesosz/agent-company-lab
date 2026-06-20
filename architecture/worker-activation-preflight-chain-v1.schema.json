@@ -1,0 +1,78 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/worker-activation-preflight-chain-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Worker Activation Preflight Chain v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "chain_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "worker_pool_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "identity_validation_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "egress_validation_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mcp_registry_validation_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "activation_preflight_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_decision_status": {
+      "enum": [
+        "missing",
+        "report_only",
+        "signed_approved"
+      ]
+    },
+    "chain_verdict": {
+      "enum": [
+        "blocked_missing_validator",
+        "blocked_failed_validator",
+        "preflight_passed_registration_blocked",
+        "approved_registration_candidate"
+      ]
+    },
+    "registration_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "mcp_tool_call_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "chain_id",
+    "worker_pool_id",
+    "lane_id",
+    "identity_validation_path",
+    "egress_validation_path",
+    "mcp_registry_validation_path",
+    "activation_preflight_path",
+    "operator_decision_status",
+    "chain_verdict",
+    "registration_allowed",
+    "worker_start_allowed",
+    "mcp_tool_call_allowed",
+    "runtime_boundary"
+  ]
+}

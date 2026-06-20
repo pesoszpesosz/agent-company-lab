@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.service_worker_operator_decision_docket.v1",
+  "title": "Agent Company Service Worker Operator Decision Docket v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "docket_status",
+    "docket_count",
+    "ready_for_manual_review_count",
+    "approval_granted_by_docket",
+    "decision_authority_granted_by_docket",
+    "service_requests_assigned_by_docket",
+    "service_requests_updated_by_docket",
+    "worker_starts",
+    "external_side_effects",
+    "docket_rows"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.service_worker_operator_decision_docket.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "docket_status": {
+      "enum": [
+        "ready_for_manual_operator_review",
+        "blocked_input_validation_failed"
+      ]
+    },
+    "docket_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ready_for_manual_review_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "approval_granted_by_docket": {
+      "const": false
+    },
+    "decision_authority_granted_by_docket": {
+      "const": false
+    },
+    "service_requests_assigned_by_docket": {
+      "const": 0
+    },
+    "service_requests_updated_by_docket": {
+      "const": 0
+    },
+    "worker_starts": {
+      "const": 0
+    },
+    "external_side_effects": {
+      "const": false
+    },
+    "docket_rows": {
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-switch-deck-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-switch-deck-v1-20260619",
+  "eventId": "trace-atlas_active_lane_switch_deck_added-20260619",
+  "title": "Active Lane Switch Deck",
+  "createdUtc": "2026-06-19T02:02:40Z",
+  "summary": "Added a compact level-select switch deck inside the active lane HUD so the current lane and highest-pressure paths can be reached without relying on the long lane rail.",
+  "layoutEvidence": {
+    "intent": "Reduce lane-selection scrolling as the company grows while keeping the selected path game-like and compact.",
+    "surface": "active-lane-switch-deck",
+    "selectionModel": [
+      "selected lane first",
+      "highest blocker pressure",
+      "active work",
+      "pending requests",
+      "lane level"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

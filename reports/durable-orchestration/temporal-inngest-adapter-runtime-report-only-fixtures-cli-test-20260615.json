@@ -1,0 +1,72 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_report_only_fixtures_cli_test.v1",
+    "created_at":  "2026-06-15T16:10:51Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-report-only-fixtures-cli-20260615",
+    "command_added":  "write-durable-adapter-runtime-report-only-fixtures",
+    "source_sha256_before":  "BF34FA93036C5EE32783ADCB18CA35C56F952B12D6CCB08002A1BF172C878EF9",
+    "source_sha256_after":  "AF74F16E2F432A9214667A9DF976EB1C452752706901486D3DBBB0BB63E344D4",
+    "commands_run":  [
+                         "python -m py_compile E:\\agent-company-lab\\tools\\agent_company.py",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-report-only-fixtures --help",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-report-only-fixtures",
+                         "python -m json.tool temporal-inngest-adapter-runtime-report-only-fixtures-latest.json",
+                         "python -m json.tool temporal-inngest-adapter-runtime-report-only-fixtures-validation-latest.json",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-service-worker-chain-integrity --path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md --json-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json --validation-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                     ],
+    "generated_artifacts":  {
+                                "fixtures_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-fixtures-latest.json",
+                                "fixtures_validation_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-fixtures-validation-latest.json",
+                                "fixtures_markdown":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-report-only-fixtures-latest.md",
+                                "chain_validation_json":  "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                            },
+    "hashes":  {
+                   "source":  "AF74F16E2F432A9214667A9DF976EB1C452752706901486D3DBBB0BB63E344D4",
+                   "fixtures_json":  "23D105C618D12E9BD24747C2BF18681C4E3B530AD76AF9CD0DDD08DE73FBAD87",
+                   "fixtures_validation_json":  "8E8E0FF9165F08041240FB0E45F62C7C4DCC05DA739DE5CA6DDFC83EC47A0A2F",
+                   "fixtures_markdown":  "37D05E5FADABFF89EFE077D838DD9235FFDB83220DD7E0D4AE614C9B4AEA009C",
+                   "chain_validation_json":  "138E12C510285697C0C74F4AF657DA51A89BEC8F2138F2C39C3FDB7A51DFDF45"
+               },
+    "validation_summary":  {
+                               "report_only_fixture_count":  5,
+                               "accepted_report_only_fixture_count":  5,
+                               "rejected_report_only_fixture_count":  0,
+                               "runtime_fixture_count":  0,
+                               "runtime_side_effect_fixture_count":  0,
+                               "preflight_validation_passed":  true,
+                               "runtime_implementation_allowed":  false,
+                               "runtime_code_write_allowed":  false,
+                               "report_only_scaffolding_allowed":  true,
+                               "forbidden_runtime_import_count":  0,
+                               "model_api_gate_remains_parked":  true,
+                               "model_api_pool_registered":  false,
+                               "all_checks_passed":  true,
+                               "failure_count":  0
+                           },
+    "chain_integrity":  {
+                            "checked_report_count":  22,
+                            "failure_count":  0,
+                            "all_checks_passed":  true
+                        },
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_effects":  {
+                                    "status_unchanged":  true,
+                                    "model_api_request_status":  "needs_review",
+                                    "model_api_request_assigned":  false,
+                                    "model_api_pool_registered":  false,
+                                    "service_request_mutation_count":  0
+                                },
+    "next_action":  "Create the local report-only adapter scaffolding packet from these allowed fixtures, without importing Temporal/Inngest or starting runtimes."
+}

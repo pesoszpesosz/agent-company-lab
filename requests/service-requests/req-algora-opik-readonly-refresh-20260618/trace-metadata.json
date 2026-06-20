@@ -1,0 +1,28 @@
+{
+  "boundary": {
+    "accounts_or_logins": 0,
+    "browser_sessions_started": 0,
+    "cla_or_terms_accepted": false,
+    "external_side_effects": 0,
+    "github_comments_claims_prs_or_forks": 0,
+    "live_algora_fetch": false,
+    "live_github_fetch": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payout_or_payment_actions": 0,
+    "security_testing": 0,
+    "service_requests_approved": 0,
+    "service_requests_assigned": 0,
+    "service_requests_completed": 0,
+    "service_requests_created": 1,
+    "service_requests_started": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "service_request_packet_scaffolded",
+  "generated_at": "2026-06-18T08:11:48Z",
+  "lane_id": "paid_code_bounties",
+  "request_id": "req-algora-opik-readonly-refresh-20260618",
+  "schema_version": "paid_code.algora_opik_readonly_service_request.trace.v1",
+  "source": "tools/create_algora_opik_readonly_service_request.py",
+  "summary": "Algora/Opik read-only refresh request created in needs_review without approval, assignment, browser execution, claim, PR, payment, or external side effects.",
+  "task_id": "task-algora-opik-readonly-refresh-service-request-20260618"
+}

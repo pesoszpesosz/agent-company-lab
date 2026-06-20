@@ -1,0 +1,70 @@
+{
+  "schema_version": "agent_company.ai_ml_competitions.arc_prize_feasibility_memo.v1",
+  "generated_utc": "2026-06-16T20:41:00Z",
+  "task_id": "task-arc-prize-feasibility-memo-20260616",
+  "lane_id": "ai_ml_competitions",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "decision": "promote_local_baseline_only_no_account_or_submission",
+  "source_urls": [
+    "https://arcprize.org/competitions",
+    "https://arcprize.org/competitions/2026",
+    "https://arcprize.org/competitions/2026/arc-agi-2",
+    "https://arcprize.org/competitions/2026/arc-agi-3",
+    "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2"
+  ],
+  "key_dates": {
+    "competition_start": "2026-03-25",
+    "arc_agi_3_milestone_1": "2026-06-30",
+    "arc_agi_3_milestone_2": "2026-09-30",
+    "submissions_due": "2026-11-02",
+    "papers_due": "2026-11-08",
+    "results_announced": "2026-12-04"
+  },
+  "approach_ranking": [
+    {
+      "rank": 1,
+      "approach": "hybrid_symbolic_search_plus_llm_critique",
+      "local_proof": "toy grid-transform harness with rule candidates and deterministic verifier",
+      "risk": "may_not_transfer_to_official_tasks"
+    },
+    {
+      "rank": 2,
+      "approach": "program_synthesis_library_survey",
+      "local_proof": "small Python DSL and two synthetic transforms",
+      "risk": "framework_building_time_sink"
+    },
+    {
+      "rank": 3,
+      "approach": "test_time_adaptation_notes",
+      "local_proof": "memo comparing adaptation methods without large-model training",
+      "risk": "compute_and_data_constraints"
+    },
+    {
+      "rank": 4,
+      "approach": "paper_track_synthesis",
+      "local_proof": "outline of what a small open-source solver experiment could teach",
+      "risk": "may_require_actual_competition_entry_for_submission"
+    }
+  ],
+  "score": {
+    "prize_upside": 5,
+    "time_to_first_local_proof": 3,
+    "gate_burden": 4,
+    "competition_intensity": 5,
+    "strategic_value": 5
+  },
+  "kill_criterion": "Do not request external competition approval unless a local toy harness demonstrates at least three distinct grid-transform families with deterministic verification.",
+  "next_action": "Create arc-local-toy-harness-plan-20260616.md.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

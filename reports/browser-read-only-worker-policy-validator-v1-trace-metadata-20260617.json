@@ -1,0 +1,66 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-worker-policy-v1-20260617",
+  "task_id": "task-browser-read-only-worker-policy-validator-v1-20260617",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "work_type": "local_tdd_validator",
+  "generated_utc": "2026-06-17T20:10:42Z",
+  "summary": "Implemented browser read-only worker policy validator to accept only public no-login read-only plans while blocking browser/session starts and all external side effects.",
+  "artifacts": [
+    {
+      "kind": "architecture_schema",
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-worker-policy-v1.schema.json"
+    },
+    {
+      "kind": "validator_runner",
+      "path": "E:\\agent-company-lab\\tools\\validate_browser_read_only_worker_policy.py"
+    },
+    {
+      "kind": "unittest",
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_worker_policy_validator.py"
+    },
+    {
+      "kind": "validator_report_json",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-20260617.json"
+    },
+    {
+      "kind": "validation_report",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-validation-20260617.json"
+    },
+    {
+      "kind": "validation_markdown",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-20260617.md"
+    },
+    {
+      "kind": "fixture_directory",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python E:\\agent-company-lab\\tests\\test_browser_read_only_worker_policy_validator.py",
+      "status": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+      "status": "passed",
+      "tests_run": 8
+    }
+  ],
+  "validation_summary": {
+    "all_checks_passed": true,
+    "failure_count": 0,
+    "fixture_count": 29,
+    "accepted_count": 1,
+    "rejected_count": 28,
+    "policy_verdict": "public_read_only_plan_valid_start_blocked",
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Wire this policy into browser_read_only_session assignment preflight after operator approval exists for any actual browser worker start."
+}

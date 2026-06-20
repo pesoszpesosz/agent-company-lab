@@ -1,0 +1,105 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-public-action-egress-apply-command-contract-v1-20260618",
+  "task_id": "task-public-action-egress-apply-command-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:48:28Z",
+  "summary": "Created a report-only public_action_gateway apply-command contract. The contract validates 51 fixtures, accepts only deny/no-op and report-only contract shapes, rejects 49 unsafe/live public-action command shapes, and preserves zero posts, zero form submissions, zero PRs, zero bounty claims, zero messages, zero browser sessions, zero account actions, zero service-request mutations, zero worker starts, zero MCP/model calls, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\public-action-egress-apply-preflight-blocker-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\public-action-egress-signed-decision-guard-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\public-action-egress-apply-command-contract-v1.schema.json",
+      "sha256": "b0ff16154d4f5beaa3eee2ef102317f8943967007ad8fbb069c9252d9e8be02f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_public_action_egress_apply_command_contract.py",
+      "sha256": "ebe3452c4ab2af59862d2153fd040b353ec665ffe0922d3ca74c19d03d616f64"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_public_action_egress_apply_command_contract.py",
+      "sha256": "931c9c4a24e6b33b72dfbd3e5d5d40f8e955530d4bcb16bdad1fd6c28fa4e0bb"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-apply-command-contract-v1-20260618.json",
+      "sha256": "094df0e954d41bc05ba5e14570d93e2fe1c82bfba139fd552a52d13da2833307"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-apply-command-contract-v1-validation-20260618.json",
+      "sha256": "7d53e3b3ad5f7c7632282b989f16557598c7ce5b2ff9f9cfa8dce0afe92a470b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-apply-command-contract-v1-20260618.md",
+      "sha256": "cdc4f217630408c47ced7f5a7160736f53c3acf48f76733dab390243b39c4d8a"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest tests.test_public_action_egress_apply_command_contract tests.test_egress_route_chain_integrity_audit",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "48 tests passed",
+    "target_route_id": "public_action_gateway",
+    "target_egress_type": "public_submission",
+    "fixture_count": 51,
+    "accepted_count": 2,
+    "rejected_count": 49,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "public_action_allowed": false,
+    "public_actions": false,
+    "posts_created": 0,
+    "forms_submitted": 0,
+    "prs_opened": 0,
+    "bounty_claims": 0,
+    "messages_sent": 0,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "public_action_allowed": false,
+    "public_actions": false,
+    "posts_created": 0,
+    "forms_submitted": 0,
+    "prs_opened": 0,
+    "bounty_claims": 0,
+    "messages_sent": 0,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build public_action_gateway apply-command guard only after a real signed operator decision, exact action-body approval, and executable command preview exist; otherwise continue to account_wallet_payment_gateway signed-decision guard."
+}

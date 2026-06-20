@@ -1,0 +1,46 @@
+{
+  "schema_version": "agent_company.paid_code_bounties.algora_live_candidate_refresh_packet.v1",
+  "generated_utc": "2026-06-16T20:54:00Z",
+  "task_id": "task-algora-live-candidate-refresh-20260616",
+  "lane_id": "paid_code_bounties",
+  "output_schema_fields": [
+    "candidate_id",
+    "algora_url",
+    "github_issue_url",
+    "amount_usd",
+    "state",
+    "claim_count",
+    "repo_health",
+    "local_testability",
+    "decision",
+    "gate"
+  ],
+  "rejection_rules": [
+    "missing_explicit_amount",
+    "completed_or_closed",
+    "tiny_amount_and_crowded",
+    "requires_credentials_paid_services_private_data_or_account_setup",
+    "broad_or_subjective_acceptance",
+    "requires_public_action_to_clarify_terms"
+  ],
+  "seed_rows": [
+    {"candidate": "algora_org_examples", "decision": "reference_only"},
+    {"candidate": "golemcloud", "decision": "watchlist_only"},
+    {"candidate": "capsoftware_cap", "decision": "reject_low_amount_crowding"},
+    {"candidate": "turso_golem_tsperf_prettier_categories", "decision": "next_read_only_source_refresh"}
+  ],
+  "next_action": "Implement algora-candidate-refresh-fixture-20260616.json with configured public URLs and no-network parser fixture.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "github_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

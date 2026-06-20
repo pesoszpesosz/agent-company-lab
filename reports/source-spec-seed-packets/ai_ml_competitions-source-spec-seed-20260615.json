@@ -1,0 +1,35 @@
+{
+  "forbidden_actions": [
+    "Do not insert this packet into source_specs without a separate explicit task.",
+    "Do not browse, register accounts, accept terms, download gated datasets, publish listings, submit work, touch wallets/payments, or send outreach from this packet.",
+    "Do not mutate service requests or assign workers from this packet."
+  ],
+  "generated_utc": "2026-06-15T17:00:55Z",
+  "lane_id": "ai_ml_competitions",
+  "next_action": "Review and, if accepted, convert into a source-spec registry row in a separate local-only task.",
+  "proposed_source_spec": {
+    "cadence": "lane_owner_on_demand_or_weekly",
+    "id": "ai_ml_competitions_public_prize_source_seed",
+    "lane_id": "ai_ml_competitions",
+    "name": "AI/ML Competition Public Prize Source Seed",
+    "notes": "Use to find prize competitions and benchmark tasks. Account creation, dataset download behind terms, submissions, and paid compute all require separate gates.",
+    "outputs": [
+      "E:\\agent-company-lab\\reports\\ai-ml-competitions\\public-prize-source-refresh-YYYYMMDD.md",
+      "lane_evidence",
+      "service_request_candidates"
+    ],
+    "refresh_command": "Prepare a read-only public listing scan only after lane manager claim; save results to a dated local shortlist artifact.",
+    "risk_gate": "read_only_public_research_no_account_submission_dataset_download_or_terms_acceptance",
+    "source_paths": [
+      "Kaggle competitions listing",
+      "DrivenData competitions listing",
+      "EvalAI challenges listing",
+      "AICrowd challenges listing",
+      "Hugging Face competitions/spaces calls when prize route is explicit"
+    ],
+    "source_type": "public_competition_registry"
+  },
+  "registry_insert_allowed": false,
+  "report_only": true,
+  "schema_version": "agent_company.source_spec_seed_packet.v1"
+}

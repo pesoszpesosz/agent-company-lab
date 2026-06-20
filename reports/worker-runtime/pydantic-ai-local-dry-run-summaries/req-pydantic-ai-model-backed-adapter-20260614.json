@@ -1,0 +1,96 @@
+{
+  "api_calls": false,
+  "approval_granted_by_summary": false,
+  "decision_authority_granted_by_summary": false,
+  "decision_support": {
+    "current_blocking_gate": "human_cro_approval_required",
+    "human_question": "Should the user, CEO, and CRO authorize a concrete provider/model/max-cost/artifact scope, reject it, or keep it parked?",
+    "local_readout": [
+      "The packet is valid and ready for human/CRO/CEO review, but it is not executable.",
+      "The request is cost-bearing model/API execution, so provider, model, max cost, input data scope, and output artifact path must be named before any approval.",
+      "The current scope is draft-only and incompatible because there is no current approval record and side-effect denials are only in draft scope text.",
+      "The recommended worker pool is missing, so even an approved scope would still need a registered worker pool before assignment/start."
+    ],
+    "minimum_information_needed_before_manual_approval": [
+      "provider and model identifier",
+      "maximum cost in USD and stop condition",
+      "exact input artifacts and data sensitivity classification",
+      "exact output artifact paths",
+      "who is allowed to run the command and under which trace/task ID",
+      "confirmation that no browser/account/payment/public/real-money action is bundled with the model call"
+    ],
+    "missing_or_failed_scope_checks": [
+      "latest_approval_exists",
+      "latest_approval_approved",
+      "latest_approval_not_expired",
+      "approval_scope_matches_service_scope",
+      "side_effect_denials_present"
+    ],
+    "pool_status": "missing_service_worker_pool",
+    "preconditions": {
+      "approve_preview_present": true,
+      "chain_integrity_all_checks_passed": true,
+      "current_gate_human_cro_approval_required": true,
+      "manual_review_required": true,
+      "packet_valid": true,
+      "reject_preview_present": true,
+      "service_status_needs_review": true
+    },
+    "recommended_local_next_action": "Keep service request in needs_review; use this summary to draft a CEO/CRO review checklist or reject/park until provider/model/cost/data/output scope is concrete.",
+    "recommended_worker_pool_id": "service-worker-model-api-execution-pool",
+    "recommended_worker_role_id": "observability_worker",
+    "required_authorities": [
+      "human_user",
+      "chief_risk_officer",
+      "ceo_orchestrator"
+    ],
+    "review_priority": 20,
+    "review_route": "ready_for_human_cro_review_high_risk",
+    "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+    "scope_compatible_with_packet": false
+  },
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T12:42:00Z",
+  "lane_id": "platform_engineering",
+  "mode": "local_decision_support_summary_only",
+  "proof_of_non_execution": {
+    "api_calls": false,
+    "approval_granted_by_summary": false,
+    "chain_integrity_all_checks_passed_before_summary": true,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "manifest_execution_allowed": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0
+  },
+  "rejection_granted_by_summary": false,
+  "runtime_shape": {
+    "api_calls": false,
+    "authoritative_control_plane": "current_sqlite_reports",
+    "dependency_imported": false,
+    "dependency_installed": false,
+    "external_side_effects": false,
+    "mode": "local_artifact_summary_only",
+    "model_api_calls": false,
+    "model_shape": "pydantic_ai.models.test.TestModel",
+    "runtime_family": "pydantic-ai",
+    "runtime_id": "pydantic_ai_local_dry_run"
+  },
+  "schema_version": "pydantic_ai_local_dry_run_packet_summary.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_paths": {
+    "chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "decision_packet_json": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets\\req-pydantic-ai-model-backed-adapter-20260614.json",
+    "decision_packet_markdown": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets\\req-pydantic-ai-model-backed-adapter-20260614.md",
+    "manifest": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-worker-manifest-20260615.json"
+  },
+  "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+  "summary_id": "summary-req-pydantic-ai-model-backed-adapter-20260614",
+  "worker_starts": 0,
+  "worker_type": "model_api_execution"
+}

@@ -1,0 +1,1146 @@
+{
+  "accepted_count": 1,
+  "all_checks_passed": true,
+  "browser_session_start_allowed": false,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 29,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:29Z",
+  "next_action": "After operator approval exists, wire this policy into browser_read_only_session assignment preflight before any in-app browser or Browser Use worker starts.",
+  "policy_verdict": "public_read_only_plan_valid_start_blocked",
+  "positive_fixture": {
+    "browser_session_start_allowed": false,
+    "expected_result": "pass_read_only_plan_start_blocked",
+    "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614"
+  },
+  "rejected_count": 28,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_public_read_only_plan_start_blocked",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\positive_public_read_only_plan_start_blocked.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": true,
+        "browser_session_start_allowed": false,
+        "errors": [],
+        "policy_plan_id": "browser-read-only-policy-positive-public-plan",
+        "policy_verdict": "public_read_only_plan_valid_start_blocked",
+        "rejected": false,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "8a89a10ca51be495bad9016feb3486f3ea68c405f62d48b841d24d61ddb5b324"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_service_request",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_missing_service_request.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "service_request_not_found"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-missing_service_request",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-missing-browser-readonly",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "87e4a1e897438c4ea9ce478960a60bed8ada27c5ec8db4b1434f67c4ad4b5476"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wrong_service_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_wrong_service_id.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "service_id_must_be_browser_read_only_session"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-wrong_service_id",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "c23b6a93a02ea4daee3cc7817cda34cd2bb726ecdf2d23aa033bfa721f196826"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_signed_in_session",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_signed_in_session.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "session_mode_must_be_public_read_only_no_login"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-signed_in_session",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "3bf863a0676861102b20ff1dc07c119b1b877b8dabdb15698206c5a568d44c96"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_unknown_session",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_unknown_session.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "session_mode_must_be_public_read_only_no_login"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-unknown_session",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "e14d522ae9fb27089b78b097f87a467c993f4a5156018f637c1663d7bf30b4b2"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_allowlist",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_missing_allowlist.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_domains_must_be_nonempty",
+          "target_url_host_must_be_in_allowed_domains"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-missing_allowlist",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "f97679bee48094c9d3b5c5a48216fa23cc7a64c7dc8b9b2693bfd87dcce90288"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wildcard_domain",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_wildcard_domain.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_domains_must_not_use_wildcards",
+          "target_url_host_must_be_in_allowed_domains"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-wildcard_domain",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "22572485d139e7b44ba30f0a7f8e376db5921f1974d0ae884b63c14d6fa1adb2"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_unbounded_navigation",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_unbounded_navigation.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "navigation_scope_must_be_explicit_allowlist_only"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-unbounded_navigation",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "be29d6a4525f581994e6cee0363bdf835602fa9432a2c92821088c9e8254d6c7"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_target_outside_allowlist",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_target_outside_allowlist.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "target_url_host_must_be_in_allowed_domains"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-target_outside_allowlist",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "5959108fb3d5ca95092401025f47c12297ce03902609eb3695687175e830166f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_http_url",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_http_url.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "target_urls_must_be_https"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-http_url",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "cad68453566a7b03d2df3afd584bd2894b5e0b08dc973f129876476e3934316b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_login_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_login_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_login"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-login_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "4f00b1eaf75707e41ee5ca82cfbcf214b7d23b02c671c0bf94aa43435ef18e6f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_form_submit_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_form_submit_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_form_submit_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-form_submit_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "9d1b486a1d6bcac4c7ff5beac3ad4474c2e7f424a818efdcc9ee5fc61cd46e5b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_public_action_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_public_action_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_public_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-public_action_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "2102c7174fb4700b1a03f4853d0e1525306b7ed12afad2aedf3cccab4e2cfdcd"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_account_action_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_account_action_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_account_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-account_action_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "22734c961894be1d1eb432b0db378c7dd5015df2b8d3601301ae238447a800a8"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wallet_action_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_wallet_action_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_wallet_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-wallet_action_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "4646c01cef3090820369a6f0bdc9439d38388269bd39eb721dc2ea71a7bb7227"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_payment_action_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_payment_action_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_payment_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-payment_action_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "7d4d51eedf655782edeeb2a8b01d69200a5e6328485a419eeebe35f647c39b01"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_security_testing_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_security_testing_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_security_testing_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-security_testing_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "76c55195dfcf328e0cd1aec15ee45743c927d04ba0bb22b6d63e56e8813401d9"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_file_upload_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_file_upload_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_file_transfer_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-file_upload_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "560a5f503e25b60f61d46c74a835b63a2c165f2ef9123a109d36a794ac2e1de4"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_file_download_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_file_download_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "allowed_actions_include_prohibited_file_transfer_actions"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-file_download_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "7cef50ec8f8ead6e87c3682d3ebb67899acf06f16fcc0ca587b988aa17a706c5"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_capture_log",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_missing_capture_log.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "declared_capture_log_path_missing"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-missing_capture_log",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "a0fb60b7ae493646aca5468a9b1df79fc31c0e3fd41b03a56f13cb32cd10cdd2"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_output_artifact",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_missing_output_artifact.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "evidence_output_artifact_path_missing"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-missing_output_artifact",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "cb7f7de2dcbb09668f0bdee1668649e5b9b6636156212e5860911551f949889c"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_teardown_not_required",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_teardown_not_required.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "teardown_required_must_be_true"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-teardown_not_required",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "9d04847d9d50d9871929da55be08b5fda1ad62adacaced2fd582467848f5295b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_browser_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_browser_start_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "browser_session_start_allowed_must_be_false"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-browser_start_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "18cb289c2de8224c27d16519bdbc6813376560516ab974363245bfcb2b70d475"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_worker_start_allowed.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "worker_start_allowed_must_be_false"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-worker_start_allowed",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "3997b143e5cb8b2bc04afcfec8908a3b90b2b160658ee7d86c23ea3c1df80243"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_browser_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_browser_started.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "runtime_boundary_browser_sessions_started_must_equal_0"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-browser_started",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "4f84b9105780ec0c59a72961ea8ec26b4a069dd334091b7355fee8af58df8575"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_assigned",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_service_request_assigned.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-service_request_assigned",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "401d719e03f7f8a821b6d02a02bc0bbf0d7e007c49f9d5529c5b63dda14a3f76"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_mutated",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_service_request_mutated.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "runtime_boundary_service_requests_mutated_must_equal_0"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-service_request_mutated",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "b2a3c18138b84b7e2c9f4a2ed1312b2eb66fb5a5a4c6e101ed30c1bcf7195951"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_mcp_tool_called",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_mcp_tool_called.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "runtime_boundary_mcp_tool_calls_must_equal_False"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-mcp_tool_called",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "bf4a3cc3302f97622830b0707722e2fdaebe4ce0002fbea3d1d31d19d0615c6b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures\\negative_external_side_effect.json",
+      "result": {
+        "accepted_for_browser_read_only_policy": false,
+        "browser_session_start_allowed": false,
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "policy_plan_id": "browser-read-only-policy-negative-external_side_effect",
+        "policy_verdict": "rejected_policy_violation",
+        "rejected": true,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_accessed": false,
+          "external_side_effects": false,
+          "file_transfer_actions": false,
+          "form_submit_actions": false,
+          "login_actions": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "security_testing_actions": false,
+          "service_requests_assigned": 0,
+          "service_requests_mutated": 0,
+          "wallet_actions": false,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "f73b0df47158796ce84810554e974127f883516b59f3181ee762dda8f1db33a9"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_accessed": false,
+    "external_side_effects": false,
+    "file_transfer_actions": false,
+    "form_submit_actions": false,
+    "login_actions": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\browser-read-only-worker-policy-v1.schema.json",
+  "schema_version": "agent_company.browser_read_only_worker_policy_report.v1",
+  "service_request_source": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "trace_id": "trace-browser-read-only-worker-policy-v1-20260617",
+  "worker_start_allowed": false
+}

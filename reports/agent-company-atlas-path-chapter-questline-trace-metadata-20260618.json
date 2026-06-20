@@ -1,0 +1,90 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-questline-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-questline-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_questline_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Questline stage strip inside the selected Path Map Chapter Archive record deck so each chapter reads as a compact spawn/proof/gate/task/unlock/next-move run map before the deeper dossier modules.",
+  "design_research": {
+    "queries": [
+      "game UI progress timeline milestones blockers quest log dashboard design pattern",
+      "progressive disclosure timeline dashboard milestones blockers UX pattern",
+      "quest log UI milestones blockers progress dashboard game design"
+    ],
+    "source_urls": [
+      "https://ixdf.org/literature/topics/progressive-disclosure",
+      "https://www.nngroup.com/articles/progressive-disclosure/",
+      "https://designmodo.com/progress-step-ui/",
+      "https://www.pixelcrushers.com/dialogue_system/manual/html/quest_log_window.html",
+      "https://dribbble.com/search/quest-game-ui"
+    ],
+    "pattern_notes": [
+      "Progressive disclosure keeps complex dashboards scannable by putting the highest-signal state first and deeper records behind focused interaction.",
+      "Progress-step patterns give users a fast sense of where a process stands, especially when labels and icons clarify each step.",
+      "Quest logs work when they summarize active and completed states while preserving a route back into detailed records."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_questline.py",
+      "reports/agent-company-atlas-path-chapter-questline-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "pathChapterArchiveItems(trail).items",
+      "chapter.counts.proof",
+      "chapter.counts.gate",
+      "chapter.counts.service",
+      "chapter.counts.task",
+      "chapter.counts.outcome",
+      "chapter.counts.trace",
+      "pathEventKey(item)",
+      "chronicleNextAction(lane)"
+    ],
+    "ui_contract": [
+      "Render Chapter Questline inside the selected Chapter Archive record deck before Spoils and deeper modules.",
+      "Show six stable stages: Spawn, Proof, Gate, Tasks, Unlock, and Next.",
+      "Tone stages as unlocked, gated, advancing, clear, locked, or scouting from existing chapter counts.",
+      "Expose real source stages as data-path-event-focus controls for the existing Event Proof lens.",
+      "Keep empty stages visible as inert markers so new standalone repos understand the expected chapter progression.",
+      "Use only browser-local interaction and do not mutate the snapshot or contact agents."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_questline.py -q failed before frontend wiring on missing function pathChapterQuestlineStages.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_questline.py -q passed after implementation."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-questline-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Chapter Questline with six stages, four clickable source stages, an animated progress meter, cache-busted CSS/JS, no horizontal overflow, and zero console errors."
+    },
+    "event_focus_action": {
+      "status": "passed",
+      "evidence": "The Proof stage resolved to exactly one data-path-event-focus target, clicked successfully, marked the matching chapter record active, and updated the existing Event Proof lens with no console errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one Questline with six stages, four clickable source stages, a visible progress meter, no horizontal overflow, no bad rectangles, no clipped stage text, and no console errors."
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-mission-cartridge-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-mission-cartridge-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_mission_cartridge_added-20260619",
+  "title": "Command Cockpit Mission Cartridge",
+  "timestamp": "2026-06-19T16:05:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Added a generated game-HUD texture and tighter mobile selected-lane header so the Command Cockpit feels more premium while the playable stage starts sooner.",
+  "changes": [
+    "Generated and copied a reusable cockpit mission-cartridge texture into web/assets/system for standalone repo use.",
+    "Applied the texture behind the selected-lane Command Cockpit status HUD with dark glass overlays so text remains readable.",
+    "Tightened mobile HUD rows, stat cells, bot socket, and world-map strip height to reduce pre-stage scrolling on phones.",
+    "Registered the texture in the Visual Asset Vault as a system asset so future agent-company forks can discover and reuse it."
+  ],
+  "artifacts": [
+    "web/assets/system/command-cockpit-mission-cartridge-20260619.png",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ],
+  "image_prompt": "Premium sci-fi mission-control HUD texture with dark glass, holographic route sockets, scan lines, and teal/amber/coral/violet accents; no text, logos, brands, characters, or watermarks."
+}

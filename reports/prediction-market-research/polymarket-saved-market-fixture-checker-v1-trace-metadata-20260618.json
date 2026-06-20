@@ -1,0 +1,38 @@
+{
+  "boundary": {
+    "api_credentials_created_or_used": false,
+    "browser_sessions_started": 0,
+    "deposits_withdrawals_or_wallet_approvals": 0,
+    "external_side_effects": 0,
+    "market_data_api_calls": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "orderbook_api_calls": 0,
+    "orders_or_trades": 0,
+    "paper_rows_emitted": 4,
+    "payments_or_tax_forms": 0,
+    "polymarket_account_or_login": false,
+    "polymarket_us_account_or_login": false,
+    "private_key_or_session_signer_used": false,
+    "promotable_candidates": 0,
+    "public_actions_or_referrals": 0,
+    "relayer_or_bridge_calls": 0,
+    "saved_market_rows_created": 4,
+    "service_requests_mutated": 0,
+    "wallet_created_or_connected": false,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "polymarket_saved_market_fixture_checker_created",
+  "generated_at": "2026-06-18T09:20:02Z",
+  "lane_id": "prediction_market_research",
+  "packet_summary": {
+    "killed_count": 4,
+    "paper_rows": 4,
+    "promotable_count": 0,
+    "row_count": 4,
+    "source_acceptance_checks": 7
+  },
+  "schema_version": "prediction_market_research.polymarket_saved_market_fixture_checker.trace.v1",
+  "source": "tools/create_polymarket_saved_market_fixture_checker.py",
+  "summary": "Local Polymarket saved-market fixture checker created; paper-only rows, zero live API/wallet/trade action.",
+  "task_id": "task-polymarket-saved-market-fixture-checker-v1-20260618"
+}

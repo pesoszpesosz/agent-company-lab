@@ -1,0 +1,75 @@
+{
+  "schema_version": "agent_company.money_path_expansion_radar_wave17_report.v1",
+  "generated_utc": "2026-06-17T21:35:00Z",
+  "task_id": "task-money-path-expansion-radar-wave17-20260618",
+  "dataset_json": "E:\\agent-company-lab\\data\\money-path-expansion-radar-wave17-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\money-path-expansion-radar-wave17-20260618.csv",
+  "path_count": 10,
+  "source_url_count": 41,
+  "lane_count": 9,
+  "summary": {
+    "ready_for_local_research_count": 10,
+    "requires_account_gate_count": 10,
+    "requires_payment_or_wallet_gate_count": 8,
+    "requires_public_action_gate_count": 6,
+    "highest_priority_paths": [
+      "security_bug_bounties_web3_and_vdp",
+      "ai_automation_freelance_services",
+      "paid_open_source_bounties"
+    ],
+    "recommended_next_local_tasks": [
+      "security_program_rules_and_scope_ranker_v1",
+      "ai_automation_offer_packet_v1",
+      "paid_code_fresh_bounty_scorecard_v1",
+      "ai_training_platform_gate_matrix_v1"
+    ]
+  },
+  "lane_assignments": {
+    "money_source_discovery": [
+      "ai_training_data_annotation"
+    ],
+    "lead_generation_and_sales": [
+      "ai_automation_freelance_services"
+    ],
+    "digital_products_templates_plugins": [
+      "digital_products_ai_templates_plugins",
+      "micro_saas_agent_tools"
+    ],
+    "paid_code_bounties": [
+      "paid_open_source_bounties"
+    ],
+    "security_bounty_private_reports": [
+      "security_bug_bounties_web3_and_vdp"
+    ],
+    "ai_ml_competitions": [
+      "ai_ml_competitions_and_hackathons"
+    ],
+    "prediction_market_research": [
+      "prediction_market_data_research"
+    ],
+    "content_and_social_growth": [
+      "newsletter_content_affiliate_products"
+    ],
+    "web3_airdrops_grants_hackathons": [
+      "web3_grants_airdrops_hackathons"
+    ]
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "security_tests": false,
+    "trades_or_deposits": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Create local proof packets for the top four money paths without account registration, public actions, security testing, trades, wallets, or payment setup."
+}

@@ -1,0 +1,8 @@
+{
+  "allowed_read_scope": "Read public Google OSS VRP rendered rules/scope/safe-harbor/submission-route text relevant to bazelbuild/rules_android. Capture whether rules_android appears in scope, reward/safe-harbor constraints, and submission route blockers.",
+  "evidence_needed": "Markdown rules-route review with source URLs, scope status, safe-harbor text summary, submission route, account requirements, and decision: submit-gate-ready, local-repro-needed, or park.",
+  "forbidden_actions": "No login, account creation, report submission, OAuth, public comment, PR, issue, exploit attempt, live target testing, private data, or payout chasing.",
+  "lane_id": "security_bounty_private_reports",
+  "session_sensitivity": "public_pages_only_no_signed_in_session",
+  "target_url": "https://bughunters.google.com/open-source-security"
+}

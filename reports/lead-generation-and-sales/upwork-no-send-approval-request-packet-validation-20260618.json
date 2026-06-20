@@ -1,0 +1,65 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "selected_offer_present",
+      "passed": true
+    },
+    {
+      "name": "fit_score_present",
+      "passed": true
+    },
+    {
+      "name": "send_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "profile_action_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "login_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "payment_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "required_decisions_complete",
+      "passed": true
+    },
+    {
+      "name": "pre_send_checklist_complete",
+      "passed": true
+    },
+    {
+      "name": "evidence_assets_present",
+      "passed": true
+    },
+    {
+      "name": "no_upwork_side_effects",
+      "passed": true
+    },
+    {
+      "name": "no_private_or_payment_action",
+      "passed": true
+    },
+    {
+      "name": "no_service_request_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T07:56:38Z",
+  "schema_version": "lead_generation.upwork_no_send_approval_request_packet.validation.v1",
+  "task_id": "task-upwork-no-send-approval-request-packet-20260618"
+}

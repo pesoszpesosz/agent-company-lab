@@ -1,0 +1,56 @@
+{
+  "schema_version": "temporal_inngest_adapter_service_worker_refresh_integration_validation.v1",
+  "generated_local": "2026-06-15T18:21:46.3808331+03:00",
+  "generated_utc_approx": "2026-06-15T15:21:46Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-service-worker-refresh-integration-20260615",
+  "integration_map_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-20260615.json",
+  "checks": {
+    "reducer_result_count": 14,
+    "parked_rows_mapped_to_review_refresh": 11,
+    "terminal_completed_rows_mapped_to_no_replay": 1,
+    "terminal_rejected_rows_mapped_to_no_revive": 2,
+    "human_decision_packet_count_matches_parked_rows": true,
+    "post_decision_refresh_plan_count_matches_parked_rows": true,
+    "decision_preflight_count_matches_parked_rows": true,
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_checked_report_count": 17,
+    "chain_integrity_failure_count": 0,
+    "model_api_gate_remains_parked": true,
+    "model_api_pool_registered": false,
+    "no_external_runtime_started": true,
+    "no_actions_granted": true
+  },
+  "service_requests_by_status_before_registration": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "model_api_request": {
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "status": "needs_review",
+    "assigned_agent_id": null,
+    "started_at": null,
+    "completed_at": null,
+    "decision_note": null
+  },
+  "runtime_boundary": {
+    "commands_executed_by_this_report": 0,
+    "approval_granted": false,
+    "rejection_granted": false,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Implement a report-only CLI command that materializes this integration map from current reducer and service-worker artifacts, then add it to chain-integrity validation."
+}

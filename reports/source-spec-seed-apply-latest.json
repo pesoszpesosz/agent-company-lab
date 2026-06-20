@@ -1,0 +1,52 @@
+{
+  "all_applied_specs_present_in_db": true,
+  "all_applied_specs_present_in_registry": true,
+  "applied_spec_count": 3,
+  "applied_specs": [
+    {
+      "lane_id": "ai_ml_competitions",
+      "packet_path": "E:\\agent-company-lab\\reports\\source-spec-seed-packets\\ai_ml_competitions-source-spec-seed-20260615.json",
+      "source_type": "public_competition_registry",
+      "spec_id": "ai_ml_competitions_public_prize_source_seed"
+    },
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "packet_path": "E:\\agent-company-lab\\reports\\source-spec-seed-packets\\digital_products_templates_plugins-source-spec-seed-20260615.json",
+      "source_type": "public_marketplace_research",
+      "spec_id": "digital_products_marketplace_demand_source_seed"
+    },
+    {
+      "lane_id": "money_source_discovery",
+      "packet_path": "E:\\agent-company-lab\\reports\\source-spec-seed-packets\\money_source_discovery-source-spec-seed-20260615.json",
+      "source_type": "public_venue_registry",
+      "spec_id": "money_source_discovery_public_venue_source_seed"
+    }
+  ],
+  "generated_utc": "2026-06-15T17:05:23Z",
+  "next_action": "Regenerate source-spec, gap-map, and seed-packet reports; missing source-spec count should now be zero.",
+  "purpose": "Apply validated local source-spec seed packets to the source-spec registry and DB; no refresh commands or external actions are executed.",
+  "registry_file_modified_by_apply": true,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.source_spec_seed_apply.v1",
+  "seed_packet_count": 3,
+  "seed_packets_path": "E:\\agent-company-lab\\reports\\source-spec-seed-packets-latest.json",
+  "source_spec_gap_count_after_apply": 0,
+  "source_specs_inserted_or_updated": 3,
+  "source_specs_registry_count_after": 13,
+  "source_specs_registry_count_before": 10,
+  "source_specs_table_rows_after": 13,
+  "source_specs_table_rows_before": 10
+}

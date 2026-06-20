@@ -1,0 +1,18 @@
+{
+  "agent_id": "recovered-profitable-edge-infra",
+  "all_gap_lanes_have_seed_packet": true,
+  "all_seed_packets_report_only": true,
+  "external_side_effects": false,
+  "generated_at": "2026-06-15T17:00:54.911716+00:00",
+  "lane_id": "platform_engineering",
+  "missing_source_spec_lane_count": 3,
+  "next_action": "Review source-spec seed packets and convert accepted proposals into source_specs registry rows in a separate local-only task.",
+  "registry_file_modified_by_packet": false,
+  "schema_version": "agent_company.source_spec_seed_packets_cli_trace_metadata.v1",
+  "seed_packet_count": 3,
+  "source_spec_gap_count_from_gap_map": 3,
+  "source_specs_inserted_by_packet": 0,
+  "source_specs_table_rows_after": 10,
+  "source_specs_table_rows_before": 10,
+  "task_id": "task-source-spec-seed-packets-cli-20260615"
+}

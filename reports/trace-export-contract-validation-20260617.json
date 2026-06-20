@@ -1,0 +1,48 @@
+{
+  "backend_calls": false,
+  "external_side_effects": false,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\trace-export-contract-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:49:27Z",
+  "json_path": "E:\\agent-company-lab\\reports\\trace-export-contract-validation-20260617.json",
+  "jsonl_preview_path": "E:\\agent-company-lab\\reports\\trace-export-contract-preview-20260617.jsonl",
+  "markdown_path": "E:\\agent-company-lab\\reports\\trace-export-contract-v1-20260617.md",
+  "passed_count": 4,
+  "rows": [
+    {
+      "event_id": "trace-central-outbox-history-v1-20260617",
+      "failures": [],
+      "lane_id": "platform_engineering",
+      "runtime": "python_stdlib",
+      "span_kind": "ARTIFACT",
+      "trace_id": "trace-central-outbox-history-v1-20260617"
+    },
+    {
+      "event_id": "trace-agent-company-deep-research-wave10-20260617",
+      "failures": [],
+      "lane_id": "platform_engineering",
+      "runtime": "codex_web_and_github_public",
+      "span_kind": "SOURCE_REFRESH",
+      "trace_id": "trace-agent-company-wave10-20260617"
+    },
+    {
+      "event_id": "trace-evidence-algora-candidate-refresh-fixture-check-20260616",
+      "failures": [],
+      "lane_id": "paid_code_bounties",
+      "runtime": "python_stdlib",
+      "span_kind": "EVALUATOR",
+      "trace_id": "trace-executable-local-proof-wave-20260616"
+    },
+    {
+      "event_id": "trace-evidence-arc-toy-harness-run-20260616",
+      "failures": [],
+      "lane_id": "ai_ml_competitions",
+      "runtime": "python_stdlib",
+      "span_kind": "EVALUATOR",
+      "trace_id": "trace-executable-local-proof-wave-20260616"
+    }
+  ],
+  "schema_path": "E:\\agent-company-lab\\architecture\\trace-export-contract-v1.schema.json",
+  "schema_version": "agent_company.trace_export_contract_validation.v1",
+  "spans_checked": 4
+}

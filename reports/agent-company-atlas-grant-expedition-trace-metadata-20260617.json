@@ -1,0 +1,97 @@
+{
+  "id": "agent-company-atlas-grant-expedition-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "module": "Grant Expedition",
+  "purpose": "Promote the Web3 grants, hackathons, bounties, and airdrop-adjacent lane from a generic checkpoint game into a lane-specific expedition map with generated portal texture, five evidence-derived route sites, and explicit wallet/deployment/submission gates.",
+  "research": {
+    "queries": [
+      "grant management dashboard deadline pipeline UI inspiration",
+      "hackathon project submission dashboard milestones judging UI",
+      "web3 grants hackathon bounty dashboard wallet submission gates UI",
+      "Ethereum Foundation Ecosystem Support Program wishlist grants RFP",
+      "ETHGlobal hackathon project submission judging criteria",
+      "DoraHacks grant bounty hackathon dashboard submission"
+    ],
+    "reference_urls": [
+      "https://esp.ethereum.foundation/",
+      "https://ethglobal.com/",
+      "https://dorahacks.io/"
+    ],
+    "design_takeaways": [
+      "Grant and hackathon work should show source discovery, fit scoring, prototype readiness, deadline route state, and submission readiness as separate stations.",
+      "Web3-specific wallet, deployment, transaction, quest, public application, and payment boundaries should be visible as sealed gates.",
+      "The lane should feel like an expedition map rather than a generic task list, while remaining entirely local and reusable."
+    ]
+  },
+  "image_generation": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_03e9bb14426b80a9016a32d8512d1881918c16dc93640cd625.png",
+    "workspace_path": "web/assets/games/grant-expedition-bg-20260617.png",
+    "prompt_summary": "Premium dark Web3 builder observatory expedition map with grant portals, hackathon gates, route ribbons, prototype blueprint tiles, proof beacons, duplicate-sweep compass, and sealed wallet/submission vault; no text, people, logos, or currency symbols."
+  },
+  "implementation": {
+    "files_changed": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/README.md"
+    ],
+    "assets_added": [
+      "web/assets/games/grant-expedition-bg-20260617.png"
+    ],
+    "frontend_features": [
+      "Added grant-expedition dispatch and step-count support.",
+      "Added five data-derived route sites: Source Atlas, Grant Fit, Prototype Camp, Deadline Route, and Wallet Gate.",
+      "Added a lane-specific board with portal nodes, route shimmer, orbit rings, meter cards, sealed gate states, and responsive desktop/mobile layouts.",
+      "Added versioned cache keys and README documentation for standalone reuse."
+    ],
+    "safety_boundaries": [
+      "The module reads local trail/snapshot data only.",
+      "It does not connect to grant portals, hackathon accounts, wallets, deployments, transactions, quests, payment systems, or submission flows.",
+      "The wallet station visualizes those boundaries as sealed."
+    ]
+  },
+  "validation": {
+    "static": {
+      "node_check_web_app_js": "passed",
+      "lane_visuals_json": "passed",
+      "asset_exists": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=grant-expedition&cache=20260617-grant-expedition#lane=web3_airdrops_grants_hackathons&view=game",
+      "mobile_390x920": {
+        "texture_loaded": true,
+        "stages": 5,
+        "nodes": 5,
+        "initial_focus": "Source Atlas",
+        "next_focus": "Grant Fit",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      },
+      "desktop_docked_1600x900": {
+        "texture_loaded": true,
+        "stages": 5,
+        "nodes": 5,
+        "hero_columns": "78px 193px",
+        "stage_columns": "309px",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      },
+      "desktop_stacked_1280x800": {
+        "texture_loaded": true,
+        "stages": 5,
+        "nodes": 5,
+        "hero_columns": "78px 885px 132px",
+        "stage_columns": "221px 221px 221px 221px 221px",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      }
+    }
+  }
+}

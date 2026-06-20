@@ -1,0 +1,98 @@
+{
+  "schema_version": "product_package_manifest.v1",
+  "generated_date": "2026-06-14",
+  "lane_id": "digital_products_templates_plugins",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "folder": "E:/agent-company-lab/products/agent-skill-starter-kit-v0",
+    "package_status": "internal_review_manifest_only",
+    "zip_created": false,
+    "public_listing_ready": false,
+    "realized_usd": 0
+  },
+  "boundary": {
+    "seller_account_actions": false,
+    "payment_tax_kyc_actions": false,
+    "browser_or_marketplace_actions": false,
+    "zip_upload_or_publication": false,
+    "public_promotion": false,
+    "real_money_actions": false
+  },
+  "summary": {
+    "file_count": 12,
+    "total_bytes": 21670,
+    "non_ascii_files_found": 0,
+    "required_gate_terms_missing": 0,
+    "manifest_hash_algorithm": "SHA256"
+  },
+  "files": [
+    {
+      "path": "docs/buyer-guide.md",
+      "bytes": 1554,
+      "sha256": "d680cdd927d0f67b0b29069b0a7148808ef965e15727ce2a9246eb65b68ad3c2"
+    },
+    {
+      "path": "docs/license-and-ip-note.md",
+      "bytes": 1477,
+      "sha256": "06d1915faf9c6dc489bb1c8015cf3e0c2bfa129cb6e6d0c8eb6434d816e89c8d"
+    },
+    {
+      "path": "docs/listing-draft.md",
+      "bytes": 1737,
+      "sha256": "5d716f468e916d7ccb32ae56b22d4d3ba15770a52f043cb24128cae7da10ee35"
+    },
+    {
+      "path": "docs/screenshot-plan.md",
+      "bytes": 1111,
+      "sha256": "1f4d00b660a6e7cbb8df5b6d22c4233e04b0b300935f47287caab4c5cd045ab3"
+    },
+    {
+      "path": "examples/local-research-skill/sample-output.md",
+      "bytes": 1021,
+      "sha256": "ffef4ee635ac60f2459f7104621396dab2ff638cd205bf618d09e490544e9d98"
+    },
+    {
+      "path": "examples/local-research-skill/SKILL.md",
+      "bytes": 2153,
+      "sha256": "77cc8f92edbd1baab88814e22c76f3356fff1269589615a74284e079005df0d0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3544,
+      "sha256": "d1a37031fd3bdb8be274bb831598e8d45108469fc46bdd8b11276fa119c3aae2"
+    },
+    {
+      "path": "templates/acceptance-review.template.md",
+      "bytes": 1300,
+      "sha256": "c743b49bb1cd0611da4f5af7cbd59560f8cef6d327323d0fbd793f26f305a65d"
+    },
+    {
+      "path": "templates/artifact-contract.template.md",
+      "bytes": 1168,
+      "sha256": "36c20fbd97cc2ea15a176994ceb7d50c1c301dae690a678abfdecabbc9f89293"
+    },
+    {
+      "path": "templates/gate-checklist.template.md",
+      "bytes": 2029,
+      "sha256": "85fa022701091518a524447c6a24e099298dd9569b5ac04d6dac224afd8c2888"
+    },
+    {
+      "path": "templates/service-request-checklist.template.md",
+      "bytes": 1589,
+      "sha256": "772719198037441534a47c8a6427b70accebc75db787fa08282e6f0a9fe8011e"
+    },
+    {
+      "path": "templates/SKILL.template.md",
+      "bytes": 2987,
+      "sha256": "bc8f1b5c7832c788f4fd5b95e794e9215c393e09e8ac77388572254ba65ad99f"
+    }
+  ],
+  "internal_review_checklist": [
+    "Confirm all files are original local Markdown.",
+    "Confirm no marketplace screenshots, signed-in pages, account data, credentials, or private data are included.",
+    "Confirm buyer-facing copy avoids guaranteed revenue, compliance, marketplace approval, or platform endorsement claims.",
+    "Confirm license/IP note is reviewed before public listing.",
+    "Confirm browser marketplace terms, legal/KYC/tax/payment, and public-action gates are approved before any upload or sale."
+  ],
+  "next_safe_local_action": "Prepare optional local screenshot placeholders or wait for approved marketplace/legal review; do not create zip uploads, seller accounts, or public listings."
+}

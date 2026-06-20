@@ -1,0 +1,137 @@
+{
+  "schema_version": "agent_company.local_runtime_adapter_pool_activation_preflight.v1",
+  "generated_utc": "2026-06-17T19:16:01Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-local-runtime-adapter-pool-activation-preflight-v1-20260617",
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "role_id": "observability_worker",
+  "department_id": "service_worker_observability",
+  "worker_type": "local_runtime_adapter",
+  "source_review_route": "manual_review_register_later",
+  "current_request_count": 2,
+  "runway_status": "closest_to_local_pilot",
+  "source_artifacts": {
+    "worker_activation_runway": "E:\\agent-company-lab\\reports\\worker-activation-runway-v1-20260617.json",
+    "worker_pool_registration_review": "E:\\agent-company-lab\\reports\\worker-pool-registration-review-v1-20260617.json",
+    "worker_pool_operator_decision_packet": "E:\\agent-company-lab\\reports\\worker-pool-operator-decision-packet-v1-20260617.json",
+    "agent_identity_envelope_matrix": "E:\\agent-company-lab\\reports\\agent-identity-envelope-matrix-v1-20260617.json",
+    "agent_egress_event_ledger_packet": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-packet-v1-20260617.json",
+    "worker_pool_assignment_preflight": "E:\\agent-company-lab\\reports\\worker-pool-assignment-preflight-v1-20260617.json",
+    "service_worker_chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  },
+  "preflight_verdict": "not_ready_register_candidate",
+  "activation_score": {
+    "score": 4,
+    "max_score": 10,
+    "interpretation": "Candidate is correctly chosen, but activation is still gated."
+  },
+  "required_evidence_before_registration_candidate": [
+    "operator_decision_contract",
+    "identity_envelope_contract",
+    "egress_ledger_contract",
+    "assignment_preflight_contract",
+    "runtime_start_preflight_contract",
+    "chain_integrity_layer"
+  ],
+  "gate_results": [
+    {
+      "gate_id": "source_review_exists",
+      "status": "pass",
+      "evidence": "worker-pool-registration-review-v1-20260617.json contains service-worker-local-runtime-adapter-pool"
+    },
+    {
+      "gate_id": "runway_selected_pilot",
+      "status": "pass",
+      "evidence": "worker-activation-runway-v1 marks pool as closest_to_local_pilot"
+    },
+    {
+      "gate_id": "operator_decision_contract",
+      "status": "missing",
+      "blocker": "contract_validator_required"
+    },
+    {
+      "gate_id": "identity_envelope_contract",
+      "status": "missing",
+      "blocker": "identity_envelope_contract_required"
+    },
+    {
+      "gate_id": "egress_ledger_contract",
+      "status": "packet_only",
+      "blocker": "egress_validator_required"
+    },
+    {
+      "gate_id": "assignment_preflight",
+      "status": "blocked",
+      "evidence": "assignable_now_count=0",
+      "blocker": "no_requests_assignable"
+    },
+    {
+      "gate_id": "runtime_start_preflight",
+      "status": "missing",
+      "blocker": "runtime_preflight_required"
+    },
+    {
+      "gate_id": "chain_integrity_layer",
+      "status": "missing",
+      "blocker": "integrity_layer_required"
+    },
+    {
+      "gate_id": "registration_allowed",
+      "status": "blocked",
+      "blocker": "operator_and_identity_validators_missing"
+    },
+    {
+      "gate_id": "worker_start_allowed",
+      "status": "blocked",
+      "blocker": "ready_to_start_count_zero"
+    }
+  ],
+  "negative_fixtures": [
+    "register_without_operator_decision",
+    "register_without_identity_envelope",
+    "identity_allows_browser",
+    "identity_allows_model_api",
+    "identity_allows_mcp",
+    "identity_allows_wallet_payment",
+    "assignment_before_pool_exists",
+    "assignment_without_approved_request",
+    "worker_start_without_runtime_preflight",
+    "missing_output_artifact_path",
+    "missing_trace_id",
+    "external_side_effects_true",
+    "command_preview_executed"
+  ],
+  "minimal_future_runtime_boundary": {
+    "local_filesystem_reads": "declared_artifact_paths_only",
+    "local_filesystem_writes": "declared_report_output_paths_only",
+    "network": false,
+    "browser": false,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "credentials": false,
+    "account_wallet_payment_public_actions": false,
+    "command_mode": "deterministic_dry_run_or_preview_only",
+    "trace_event_required": true,
+    "output_artifact_required": true,
+    "post_run_evidence_seal_required": true
+  },
+  "runtime_boundary": {
+    "report_only": true,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "command_previews_executed": 0,
+    "local_runtime_processes_started": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "dependencies_installed": 0,
+    "credentials_created": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "recommended_next_build": "local_runtime_adapter_pool_activation_contract_v1_schema_negative_fixture_suite"
+}

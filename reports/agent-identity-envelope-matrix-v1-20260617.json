@@ -1,0 +1,145 @@
+{
+  "schema_version": "agent_company.agent_identity_envelope_matrix.v1",
+  "generated_utc": "2026-06-17T19:22:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-identity-envelope-matrix-v1-20260617",
+  "executive_takeaway": "Every future worker should have a short-lived scoped non-human identity envelope before registration, assignment, gateway egress, browser use, model calls, MCP tools, wallet/payment/account actions, or public submissions.",
+  "recommended_local_contract": {
+    "id": "agent_identity_envelope_v1",
+    "default_policy": "deny_all_external_and_privileged_actions",
+    "minimum_fields": [
+      "identity_envelope_id",
+      "agent_id",
+      "agent_type",
+      "role_id",
+      "department_id",
+      "lane_ids",
+      "worker_pool_id",
+      "owner_agent_id",
+      "owner_thread_id",
+      "principal_mode",
+      "delegation_chain",
+      "approval_artifact_path",
+      "allowed_service_request_types",
+      "allowed_egress_types",
+      "allowed_targets",
+      "allowed_mcp_servers",
+      "allowed_mcp_tools",
+      "browser_session_policy",
+      "credential_policy",
+      "wallet_policy",
+      "payment_policy",
+      "public_action_policy",
+      "data_sensitivity_ceiling",
+      "budget_scope",
+      "rate_limit_scope",
+      "recording_required",
+      "redaction_required",
+      "created_utc",
+      "expires_utc",
+      "revocation_status",
+      "revocation_reason",
+      "future_spiffe_id",
+      "future_trust_domain",
+      "policy_verifier",
+      "runtime_boundary"
+    ]
+  },
+  "candidate_count": 10,
+  "candidates": [
+    {
+      "id": "local_sqlite_identity_envelope",
+      "recommended_posture": "build_first_report_only_contract"
+    },
+    {
+      "id": "spiffe_spire",
+      "recommended_posture": "pattern_now_install_only_after_runtime_approval",
+      "sources": [
+        "https://github.com/spiffe/spire",
+        "https://spiffe.io/docs/latest/spire-about/spire-concepts/",
+        "https://github.com/spiffe/spiffe/blob/main/standards/SPIFFE_Workload_API.md"
+      ]
+    },
+    {
+      "id": "openfga",
+      "recommended_posture": "strong_future_mapping_target",
+      "sources": [
+        "https://openfga.dev/docs/modeling/agents",
+        "https://openfga.dev/docs/modeling/agents/agents-as-principals",
+        "https://github.com/openfga/openfga"
+      ]
+    },
+    {
+      "id": "opa_rego",
+      "recommended_posture": "pattern_for_policy_evaluator",
+      "sources": [
+        "https://github.com/open-policy-agent/opa"
+      ]
+    },
+    {
+      "id": "cedar",
+      "recommended_posture": "secondary_policy_language_candidate",
+      "sources": [
+        "https://github.com/cedar-policy/cedar"
+      ]
+    },
+    {
+      "id": "spicedb_zanzibar",
+      "recommended_posture": "watch_as_future_scale_path",
+      "sources": [
+        "https://github.com/authzed/spicedb"
+      ]
+    },
+    {
+      "id": "casbin",
+      "recommended_posture": "pattern_only",
+      "sources": [
+        "https://github.com/apache/casbin"
+      ]
+    },
+    {
+      "id": "opal",
+      "recommended_posture": "later_stage_reference",
+      "sources": [
+        "https://github.com/permitio/opal"
+      ]
+    },
+    {
+      "id": "mcp_identity_inventory_controls",
+      "recommended_posture": "implement_locally_as_registry_rules_first",
+      "sources": [
+        "https://www.paloaltonetworks.com/blog/identity-security/secure-ai-agents-controls-visibility-mcp-data-access/",
+        "https://www.truefoundry.com/",
+        "https://www.businesswire.com/news/home/20260602233322/en/TrueFoundry-Launches-Agent-Gateway-to-Close-the-Enterprise-AI-Governance-Gap"
+      ]
+    },
+    {
+      "id": "cosai_agentic_iam",
+      "recommended_posture": "use_as_completion_rubric",
+      "sources": [
+        "https://www.coalitionforsecureai.org/wp-content/uploads/2026/04/agentic-identity-and-access-control.pdf",
+        "https://www.oasis-open.org/2026/05/06/coalition-for-secure-ai-unveils-new-agentic-identity-and-security-research-following-high-profile-sessions-at-rsac-2026/",
+        "https://www.coalitionforsecureai.org/resources/"
+      ]
+    }
+  ],
+  "runtime_boundary": {
+    "identity_system_installed": false,
+    "credentials_created": false,
+    "spiffe_ids_issued": false,
+    "svids_issued": false,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false
+  },
+  "recommended_next_builds": [
+    "agent_identity_envelope_contract_v1",
+    "worker_pool_operator_decision_contract_v1",
+    "agent_egress_event_ledger_v1",
+    "mcp_tool_registry_gate_v1"
+  ]
+}

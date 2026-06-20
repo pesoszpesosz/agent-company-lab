@@ -1,0 +1,55 @@
+{
+  "schema_version": "paid_code.algora_comet_opik_claim_readiness_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:27:07Z",
+  "task_id": "task-lane-scout-algora_comet_opik-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\algora-comet-opik-claim-readiness-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\algora-comet-opik-claim-readiness-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "source_observations_present",
+      "passed": true
+    },
+    {
+      "check": "program_pause_recorded",
+      "passed": true
+    },
+    {
+      "check": "six_fixture_candidates_present",
+      "passed": true
+    },
+    {
+      "check": "prettier_local_candidate_not_external_go",
+      "passed": true
+    },
+    {
+      "check": "readiness_gates_include_public_and_payment_blocks",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "decision_is_no_go_external_claim",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "live_algora_fetch": false,
+    "live_github_fetch": false,
+    "accounts_or_logins": 0,
+    "cla_or_terms_accepted": false,
+    "github_comments_claims_or_prs": 0,
+    "forks_created": 0,
+    "payout_or_payment_actions": 0,
+    "security_testing": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  }
+}

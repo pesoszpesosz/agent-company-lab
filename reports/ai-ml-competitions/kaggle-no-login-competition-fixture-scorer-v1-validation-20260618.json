@@ -1,0 +1,92 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "api_token_or_credentials_created": false,
+    "browser_sessions_started": 0,
+    "competition_data_downloaded": 0,
+    "competition_rules_accepted": false,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "local_baseline_candidate_count": 4,
+    "model_mcp_or_external_api_calls": 0,
+    "notebooks_executed": 0,
+    "payments_or_tax_forms": 0,
+    "public_notebooks_or_comments": 0,
+    "saved_rows_created": 4,
+    "scored_rows": 4,
+    "service_requests_mutated": 0,
+    "submission_ready_count": 0,
+    "submissions_made": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "at_least_four_saved_rows",
+      "passed": true
+    },
+    {
+      "name": "saved_rows_match_scores",
+      "passed": true
+    },
+    {
+      "name": "all_rows_have_action_or_kill_reason",
+      "passed": true
+    },
+    {
+      "name": "zero_submission_ready",
+      "passed": true
+    },
+    {
+      "name": "has_local_baseline_candidate",
+      "passed": true
+    },
+    {
+      "name": "has_kill_reasons",
+      "passed": true
+    },
+    {
+      "name": "source_records_401_gate",
+      "passed": true
+    },
+    {
+      "name": "fixture_exists",
+      "passed": true
+    },
+    {
+      "name": "results_exists",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_api_token_or_credentials",
+      "passed": true
+    },
+    {
+      "name": "no_rules_acceptance_or_data_download",
+      "passed": true
+    },
+    {
+      "name": "no_notebook_or_submission",
+      "passed": true
+    },
+    {
+      "name": "no_payment_public_or_browser_action",
+      "passed": true
+    },
+    {
+      "name": "no_service_runtime_model_mutation",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T09:01:57Z",
+  "schema_version": "ai_ml_competitions.kaggle_no_login_competition_fixture_scorer.validation.v1",
+  "task_id": "task-kaggle-no-login-competition-fixture-scorer-v1-20260618"
+}

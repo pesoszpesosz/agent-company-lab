@@ -1,0 +1,60 @@
+{
+  "schema_version": "temporal_inngest_adapter_service_worker_refresh_integration_cli_validation.v1",
+  "generated_local": "2026-06-15T18:31:04.8625261+03:00",
+  "generated_utc_approx": "2026-06-15T15:31:04Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-service-worker-refresh-integration-cli-20260615",
+  "source_code_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_code_sha256_before": "572696D6766B4548F9B29692110C9F630F991A74E9AD7613BAE001F96013B081",
+  "source_code_sha256_after": "EC1A8B95CEDE2FE63E89A4CDEF4D81DF27FC287213C5AA6211BC524ED00A14F9",
+  "implemented_items": [
+    "added write-durable-adapter-service-worker-integration report-only CLI command",
+    "generated latest durable integration JSON, validation JSON, and markdown artifacts from current reducer/service-worker reports",
+    "added durable integration validation as the 18th service-worker chain-integrity layer"
+  ],
+  "checks": {
+    "syntax_ok": true,
+    "help_ok": true,
+    "integration_command_ok": true,
+    "integration_validation_all_checks_passed": true,
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_checked_report_count": 18,
+    "service_request_mutation_count": 0,
+    "model_api_gate_remains_parked": true,
+    "model_api_pool_registered": false
+  },
+  "service_requests_by_status_after": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "model_api_request_after": {
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "status": "needs_review",
+    "assigned_agent_id": null,
+    "started_at": null,
+    "completed_at": null,
+    "decision_note": null
+  },
+  "runtime_boundary": {
+    "python_files_modified": 1,
+    "cli_commands_added_to_runner": 1,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Use write-durable-adapter-service-worker-integration as the report-only preflight before future Temporal/Inngest adapter implementation work."
+}

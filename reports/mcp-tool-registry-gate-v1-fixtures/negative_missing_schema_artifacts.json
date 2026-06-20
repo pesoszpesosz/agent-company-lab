@@ -1,0 +1,92 @@
+{
+  "allowed_agent_ids": [
+    "service-worker-local-runtime-adapter-pool"
+  ],
+  "allowed_identity_envelope_ids": [
+    "identity-positive-local-runtime-adapter-report-only"
+  ],
+  "allowed_lanes": [
+    "platform_engineering"
+  ],
+  "allowed_tools": [
+    "local-report-only-fixture-mcp.echo_artifact_summary"
+  ],
+  "allowed_worker_pool_ids": [
+    "service-worker-local-runtime-adapter-pool"
+  ],
+  "approval_artifact_path": "",
+  "blocked_tools": [
+    "*"
+  ],
+  "browser_capable": false,
+  "budget_scope": "zero_or_not_applicable",
+  "created_utc": "2026-06-17T19:48:00Z",
+  "credential_requirements": "none",
+  "data_sensitivity_ceiling": "local_report_only",
+  "default_status": "approved_report_only",
+  "digest_or_commit": "local-fixture-no-package",
+  "egress_event_required": true,
+  "expires_utc": "2099-01-01T00:00:00Z",
+  "file_system_capable": false,
+  "license": "internal-report-only",
+  "logging_required": true,
+  "mcp_registry_entry_id": "mcp-entry-negative-missing_schema_artifacts",
+  "network_scope": "none",
+  "oauth_or_auth_mode": "none",
+  "package_or_endpoint": "local-fixture-only",
+  "payment_or_wallet_capable": false,
+  "public_action_capable": false,
+  "publisher": "agent-company-lab",
+  "publisher_verification": "local_fixture",
+  "rate_limit_scope": "local_only",
+  "recording_required": true,
+  "redaction_required": true,
+  "review_artifact_path": "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-packet-v1-20260617.json",
+  "revocation_status": "active",
+  "risk_tier": "local_report_only",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "credentials_created": false,
+    "external_side_effects": false,
+    "mcp_servers_enabled": 0,
+    "mcp_servers_installed": 0,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "registry_publications": 0,
+    "report_only": true,
+    "service_requests_assigned": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "server_id": "local-report-only-fixture-mcp",
+  "server_name": "Local Report Only Fixture MCP",
+  "server_source_type": "local_fixture",
+  "source_url": "",
+  "tool": {
+    "allowed_input_artifact_types": [
+      "local_report_json"
+    ],
+    "default_policy_verdict": "allow_report_only_preflight",
+    "required_output_artifact_type": "local_report_json",
+    "requires_egress_event": true,
+    "requires_identity_envelope": true,
+    "requires_operator_decision": true,
+    "requires_post_execution_evidence": true,
+    "risk_reasons": [
+      "local_fixture_only",
+      "no_server_start",
+      "no_tool_call"
+    ],
+    "server_id": "local-report-only-fixture-mcp",
+    "tool_description": "Local fixture for validating registry fields; no server is started and no tool is called.",
+    "tool_id": "local-report-only-fixture-mcp.echo_artifact_summary",
+    "tool_input_schema_artifact_path": "",
+    "tool_name": "echo_artifact_summary",
+    "tool_output_schema_artifact_path": "E:\\agent-company-lab\\architecture\\mcp-tool-registry-gate-v1.schema.json",
+    "tool_side_effect_class": "read_only"
+  },
+  "version": "2026-06-17",
+  "write_action_capable": false
+}

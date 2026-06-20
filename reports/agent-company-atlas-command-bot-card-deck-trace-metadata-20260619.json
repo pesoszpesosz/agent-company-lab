@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-bot-card-deck-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-bot-card-deck-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-bot-card-deck-v1-20260619",
+  "title": "Command Bot Card Deck",
+  "createdAt": "2026-06-19T07:22:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed Bots-stage command cards with smaller summary chips, portraits, stat tiles, hidden long ask/thread copy, and wider command buttons for faster command-room scanning.",
+  "proof": [
+    "Added tested Bots-stage card rules that tighten summary chips, avatar rows, lane rows, and stat tiles.",
+    "Hid long ask and thread copy only inside the Bots command room so command cards fit more controls above the fold.",
+    "Updated README, cache markers, snapshot generation, and regression floors so the standalone dashboard records the compact bot-card unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

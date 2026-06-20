@@ -1,0 +1,72 @@
+{
+  "task_id": "task-agent-company-atlas-control-runway-v1-20260618",
+  "trace_id": "trace-agent-company-atlas-control-runway-v1-20260618",
+  "event_id": "trace-atlas_control_runway_added-20260618",
+  "event_type": "atlas_control_runway_added",
+  "event_time": "2026-06-18T00:00:00Z",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Added a compact Control Runway to the first-screen Company State panel so the default deck shows game-like lane levels, gate pressure, staged activity, and Command-deck drill-through without increasing long-scroll pressure.",
+  "implementation": {
+    "feature": "Control Runway",
+    "location": "Control deck Company State panel",
+    "data_sources": [
+      "snapshot.lanes",
+      "snapshot.missionFeed.items",
+      "snapshot.dispatchConsole.suggestions",
+      "browser-local staged dispatches"
+    ],
+    "behavior": [
+      "Renders the selected lane plus the highest-pressure active lanes as compact level nodes.",
+      "Shows active, gate, and staged counts derived from existing snapshot/browser-local data.",
+      "Routes runway node clicks into the Command deck and opens the lane detail panel.",
+      "Uses internal horizontal runway scrolling on small screens to avoid increasing page-level scroll and overflow."
+    ],
+    "generated_asset": null
+  },
+  "files_changed": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_control_runway.py",
+    "reports/agent-company-atlas-control-runway-trace-metadata-20260618.json",
+    "web/data/snapshot.json"
+  ],
+  "verification": {
+    "static": [
+      {
+        "command": "node --check E:\\agent-company-lab\\web\\app.js",
+        "result": "passed"
+      },
+      {
+        "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_control_runway.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_deck_dock.py -q",
+        "result": "2 passed"
+      },
+      {
+        "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+        "result": "24 passed, 55 deselected"
+      }
+    ],
+    "browser": [
+      {
+        "url": "http://127.0.0.1:5177/?verify=control-runway#lane=platform_engineering&view=overview&deck=control",
+        "finding": "Control Runway rendered 6 level nodes, exactly 1 active node, 3 visible Control deck sections, 0 document horizontal overflow, and no console warnings/errors."
+      },
+      {
+        "finding": "Runway node click switched to the Command deck, opened the lane detail panel, updated the hash to view=trail&deck=command, and produced no console warnings/errors."
+      },
+      {
+        "finding": "Responsive QA at 390x844, 820x1180, and 1280x720 showed visible runway, 6 nodes, 0 page-level horizontal overflow, and no console warnings/errors."
+      },
+      {
+        "finding": "Small-screen runway was changed from a stacked grid to contained internal horizontal scrolling after QA found the stacked version added avoidable scroll height."
+      }
+    ]
+  },
+  "follow_up": [
+    "Add generated texture/sprite treatment to the Control Runway if the next iteration focuses on visual polish assets.",
+    "Add similar compact level tracks to Worlds and History decks without increasing default scroll.",
+    "Continue replacing passive summaries with direct game-style interactions and deck-preserving route transitions."
+  ]
+}

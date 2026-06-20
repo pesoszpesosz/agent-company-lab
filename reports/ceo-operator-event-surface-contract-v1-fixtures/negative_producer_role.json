@@ -1,0 +1,81 @@
+{
+  "approval_granted_by_event": false,
+  "consumer_role": "all_managers",
+  "event_label": "CEO review snapshot",
+  "event_surface_status": "report_only_contract",
+  "event_transport_enabled": false,
+  "event_type": "ceo_review_snapshot",
+  "external_side_effects": false,
+  "mcp_tool_call_allowed": false,
+  "model_api_call_allowed": false,
+  "payload_contract": {
+    "optional_fields": [
+      "service_request_id",
+      "gate_id",
+      "route_id",
+      "artifact_id",
+      "outcome_id",
+      "trace_id",
+      "human_note",
+      "next_action"
+    ],
+    "required_fields": [
+      "event_id",
+      "event_type",
+      "lane_id",
+      "task_id",
+      "agent_id",
+      "summary",
+      "source_artifact_path",
+      "created_utc"
+    ]
+  },
+  "producer_role": "",
+  "public_action_allowed": false,
+  "required_gate_ids": [
+    "agent_egress_event_ledger_v1",
+    "service_worker_chain_integrity_v1",
+    "unified_agent_egress_gateway_docket_v1"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "approval_rows_written": 0,
+    "browser_sessions_started": 0,
+    "decisions_applied": 0,
+    "dependency_installs": 0,
+    "event_transports_started": 0,
+    "external_side_effects": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "operator_events_emitted": 0,
+    "operator_events_persisted": 0,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "runtime_starts": 0,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "sse_connections_opened": 0,
+    "tasks_created": 0,
+    "tasks_updated": 0,
+    "wallet_actions": false,
+    "websocket_connections_opened": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_operator_event_surface_contract.v1",
+  "service_request_mutation_allowed": false,
+  "source_artifact_paths": [
+    "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618-validation.json",
+    "E:\\agent-company-lab\\reports\\ceo-review-latest.md",
+    "E:\\agent-company-lab\\reports\\control-plane-status-latest.md",
+    "E:\\agent-company-lab\\reports\\trace-events-latest.md",
+    "E:\\agent-company-lab\\reports\\artifacts-latest.md",
+    "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  ],
+  "sse_enabled": false,
+  "websocket_enabled": false,
+  "worker_start_allowed": false
+}

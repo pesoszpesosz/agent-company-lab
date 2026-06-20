@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.checkpoint_interrupt_contract.v1",
+  "title": "Agent Company Checkpoint Interrupt Contract v1",
+  "type": "object",
+  "required": [
+    "checkpoint_id",
+    "schema_version",
+    "source_kind",
+    "lane_id",
+    "interrupt_reason",
+    "manual_review_required",
+    "resume_allowed",
+    "apply_allowed",
+    "worker_start_allowed",
+    "required_artifacts",
+    "source_research_validation_path",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "checkpoint_id": {
+      "type": "string",
+      "pattern": "^checkpoint-[a-z0-9][a-z0-9-]{8,160}$"
+    },
+    "schema_version": {
+      "const": "agent_company.checkpoint_interrupt_contract.v1"
+    },
+    "source_kind": {
+      "enum": [
+        "lane_task",
+        "service_request",
+        "runtime_candidate"
+      ]
+    },
+    "lane_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "service_request_id": {
+      "type": "string"
+    },
+    "interrupt_reason": {
+      "enum": [
+        "human_review_required",
+        "service_worker_gate",
+        "runtime_adoption_gate",
+        "checkpoint_resume_guard"
+      ]
+    },
+    "manual_review_required": {
+      "const": true
+    },
+    "resume_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "required_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "source_research_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "operator_docket_validation_path": {
+      "type": "string"
+    },
+    "apply_preflight_validation_path": {
+      "type": "string"
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "trace_id": "trace-agent-company-atlas-runway-lenses-v1-20260618",
+  "task_id": "task-agent-company-atlas-runway-lenses-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-runway-lenses-v1-20260618",
+  "event_id": "trace-atlas_runway_lenses_added-20260618",
+  "duplicate_key": "atlas-runway-lenses-v1",
+  "event_type": "atlas_runway_lenses_added",
+  "outcome_type": "atlas_runway_lenses_added",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T22:33:59.1992376Z",
+  "summary": "Added local Milestone Runway lenses so each lane Overview can switch between All, Gates, Unlocks, Events, and Future route layers without changing snapshot data.",
+  "research": {
+    "sources": [
+      "https://www.eleken.co/blog-posts/segmented-control-ui",
+      "https://primer.style/product/components/segmented-control/guidelines/",
+      "https://docs.gamecreator.io/quests/ui/",
+      "https://www.pixelcrushers.com/dialogue_system/manual/html/quest_log_window.html",
+      "https://builtin.com/articles/gamify-ux-design-process"
+    ],
+    "pattern_notes": [
+      "Segmented controls are appropriate for closely related choices that immediately affect the visible object or view.",
+      "Quest-log interfaces commonly separate active, completed, hidden, and task-filtered states so operators do not scan unrelated records.",
+      "Gamified progress works best when filters reveal meaningful milestones, blockers, and achievements instead of adding decoration alone.",
+      "The Atlas lens row should stay local and reversible so it helps operators inspect a lane without mutating control-plane records."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "data_contract": [
+      "state.milestoneLensByLane stores browser-local active lenses by lane id.",
+      "milestoneLensOptions(nodes) derives All, Gates, Unlocks, Events, and Future counts from existing runway nodes.",
+      "milestoneNodeMatchesLens(node, lens) filters existing checkpoint, gate, unlock, and event nodes without adding new schema.",
+      "The Future lens renders only the generated future-slot card; empty filtered states render an explanatory runway card."
+    ],
+    "ui_notes": [
+      "Lens controls use a segmented, count-first button layout with aria-pressed state.",
+      "Non-All lenses apply a subtle runway sweep animation and the future slot has a lightweight pulse.",
+      "The lens grid uses container-aware auto-fit columns so narrow detail panes on wide layouts do not clip labels."
+    ]
+  },
+  "verification": {
+    "red": {
+      "route": "http://localhost:5177/?verify=runway-lens-red-2&cache=20260618-milestone-runway-final#lane=money_source_discovery&view=overview",
+      "result": "Expected failure before implementation: lensCount 0, lenses [], hasActiveLens false, hasLensStats false, initialNodes 15, errors []"
+    },
+    "green": {
+      "route": "http://localhost:5177/?verify=runway-lens-green-v2&cache=20260618-runway-lens-v2#lane=money_source_discovery&view=overview",
+      "result": "ok true; All 15 nodes; Gates 2 gate-like nodes; Unlocks 3 unlock nodes; Events 5 event nodes; Future 1 future node; every lens became active with no clipped text or console errors."
+    },
+    "responsive": [
+      "phone 390: ok true, active blockers, lensCount 5, nodes 2, lensColumns 2, pageOverflow false, clipped []",
+      "tablet 820: ok true, active blockers, lensCount 5, nodes 2, lensColumns 2, pageOverflow false, clipped []",
+      "desktop 1280: ok true, active blockers, lensCount 5, nodes 2, no page overflow, clipped []",
+      "wide 1600: ok true after auto-fit fix, active blockers, lensCount 5, nodes 2, lensColumns 2, pageOverflow false, clipped []"
+    ],
+    "static": [
+      "node --check web\\app.js -> exit 0",
+      "Invoke-WebRequest http://localhost:5177/?verify=runway-lens-static-2&cache=20260618-runway-lens-v2#lane=money_source_discovery&view=overview -> StatusCode=200 Length=13653",
+      "python -m json.tool web\\data\\snapshot.json -> exit 0",
+      "ASCII verified for web/index.html, web/app.js, web/styles.css, web/README.md"
+    ]
+  },
+  "source_hashes": {
+    "web/index.html": "A3A9676880726E78569961D27EC73E87FC45DDBF4CC61A5D24E808C1A60B4C7C",
+    "web/app.js": "272A45C3D2053A7990D307952E58C0D2F93F28F18E3843E9396EFBB4B9FD6D67",
+    "web/styles.css": "4818432778F2730F47587C1F3EA7A5A2B9E25766C20BE056DFAD9215835FAFE6",
+    "web/README.md": "499C5265448DDD4ECB46414D1F8E9590C5B5CCBCDE9500E873713F103FD5F745"
+  },
+  "next_actions": [
+    "Add lane-specific lens skins so different minigame families can change the Runway visual tone.",
+    "Persist optional operator lens preferences in localStorage if repeated lane reviews need memory.",
+    "Connect a future visual asset generator to the Future lens so each realm can preview a different next-slot texture."
+  ]
+}

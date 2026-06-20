@@ -1,0 +1,48 @@
+{
+  "span_kind": "AGENT",
+  "runtime": "codex_control_plane_capacity_benchmark",
+  "api_calls": false,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "accounts_created": 0,
+  "public_actions": 0,
+  "service_requests_approved_or_assigned": 0,
+  "worker_starts": 0,
+  "benchmark_targets": [
+    1000,
+    10000,
+    100000
+  ],
+  "synthetic_db_path": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_v1_20260620.sqlite",
+  "raw_json_path": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_v1_20260620.raw.json",
+  "production_schema_change": "non_destructive_indexes_only",
+  "dashboard_feed_cap_change": {
+    "file": "tools/visual_dashboard_snapshot_trail.py",
+    "company_feed_event_limit_before": 92,
+    "company_feed_event_limit_after": 120,
+    "mission_feed_trace_count_after": 127
+  },
+  "runner_followup": {
+    "status": "complete",
+    "command": "python tools\\agent_company.py run-control-plane-capacity-benchmark",
+    "runner_module": "E:\\agent-company-lab\\tools\\agent_company_core\\control_plane_capacity_benchmark_runner.py",
+    "runner_report": "E:\\agent-company-lab\\reports\\control-plane-capacity-benchmark-runner-v1-20260620.md",
+    "runner_json": "E:\\agent-company-lab\\reports\\control-plane-capacity-benchmark-runner-v1-20260620.json",
+    "synthetic_runner_db": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_runner_v1_20260620.sqlite",
+    "verified_row_counts": [
+      1000,
+      10000,
+      100000
+    ]
+  },
+  "applied_indexes": [
+    "idx_tasks_lane_created",
+    "idx_tasks_status_priority_created",
+    "idx_artifacts_lane_created",
+    "idx_artifacts_task_created",
+    "idx_outcomes_lane_created",
+    "idx_outcomes_task_created",
+    "idx_service_requests_status_created",
+    "idx_service_requests_lane_status"
+  ]
+}

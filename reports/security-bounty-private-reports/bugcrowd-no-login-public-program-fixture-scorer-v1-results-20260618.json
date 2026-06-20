@@ -1,0 +1,337 @@
+{
+  "aggregate_kill_reasons": [
+    "cannot_produce_local_static_or_fixture_based_proof",
+    "known_issue_duplicate_or_first_reporter_status_unlikely",
+    "program_private_invite_or_membership_required",
+    "requires_credentials_pii_social_engineering_dos_spam_or_phishing",
+    "safe_harbor_or_disclosure_terms_missing_or_partial_without_clarity",
+    "scope_or_reward_range_unclear",
+    "submission_limit_or_platform_privilege_risk_unclear",
+    "vdp_charity_points_only_or_no_cash_reward_for_cash_lane",
+    "vrt_priority_too_low_or_non_exploitable_for_cash_effort"
+  ],
+  "kill_or_wait_count": 3,
+  "report_draft_save_ready_count": 0,
+  "report_submission_ready_count": 0,
+  "row_count": 4,
+  "rows": [
+    {
+      "brief_last_updated": "saved_public_snippet",
+      "candidate_class": "local_static_vrt_candidate",
+      "cash_reward_range": {
+        "max": 5000,
+        "min": 150
+      },
+      "credential_or_test_account_policy": "no_credentials_for_local_fixture",
+      "disclose_io_status": "clear",
+      "disclosure_policy": "coordinated_private_report",
+      "duplicate_risk_signal": "not_checked_no_browser_session",
+      "forbidden_testing": [
+        "dos",
+        "social_engineering",
+        "credential_attacks",
+        "pii_access",
+        "live_scanning"
+      ],
+      "identity_or_2fa_requirement": "unknown_requires_review",
+      "in_scope_targets": [
+        "https://github.com/example/reward-oss"
+      ],
+      "kill_reasons": [
+        "known_issue_duplicate_or_first_reporter_status_unlikely",
+        "submission_limit_or_platform_privilege_risk_unclear"
+      ],
+      "known_issues_available": true,
+      "kudos_or_points_only": false,
+      "local_static_candidate_source": "public_source_code_review_only",
+      "managed_by_bugcrowd": true,
+      "next_local_action": "Create local-only VRT/source-review checklist and private report skeleton; do not test live targets.",
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [
+        "bugcrowd_platform_only_after_approval"
+      ],
+      "out_of_scope_targets": [
+        "production_services",
+        "customer_data",
+        "social_engineering",
+        "dos"
+      ],
+      "payment_method_or_tax_gate": "unknown_requires_human_review",
+      "program_name": "Example Reward OSS brief saved row",
+      "program_rules": [
+        "source_review_ok",
+        "no_live_target_testing_in_this_packet"
+      ],
+      "program_status": "open",
+      "program_type": "reward",
+      "program_url": "https://bugcrowd.com/example-reward-oss",
+      "proof_of_concept_expectations": "local_static_or_fixture_evidence_only",
+      "public_or_private": "public",
+      "rate_limit_or_automation_policy": "unknown_do_not_test",
+      "report_draft_save_ready": false,
+      "report_required_fields": [
+        "summary",
+        "target",
+        "technical_severity",
+        "vrt",
+        "details",
+        "attachments"
+      ],
+      "report_submission_ready": false,
+      "requires_invitation": false,
+      "reward_program": true,
+      "reward_range_by_target": {
+        "public_source_repository": "$150-$5000"
+      },
+      "safe_harbor_status": "full_or_clear_disclose_io",
+      "score": 90,
+      "security_testing_allowed": false,
+      "static_candidate_draft": {
+        "allowed_evidence": [
+          "local source excerpt",
+          "fixture reproduction",
+          "VRT mapping note",
+          "impact and remediation draft"
+        ],
+        "draft_type": "local_static_bugcrowd_candidate",
+        "forbidden_evidence": [
+          "live target proof",
+          "credentials",
+          "scanner output",
+          "PII/customer data",
+          "Bugcrowd platform draft"
+        ],
+        "submission_state": "not_submittable_without_full_brief_duplicate_scope_payment_review_and_operator_approval",
+        "target": "https://github.com/example/reward-oss",
+        "title_template": "Potential source-code issue mapped to Bugcrowd VRT",
+        "vrt_mapping": "P2_or_P3_if_exploitable"
+      },
+      "submission_limit_or_throttle": "unknown",
+      "target_groups": [
+        "public_source_repository",
+        "documentation"
+      ],
+      "target_technology": [
+        "python",
+        "web"
+      ],
+      "vrt_priority_mapping": "P2_or_P3_if_exploitable"
+    },
+    {
+      "brief_last_updated": "saved_public_snippet",
+      "candidate_class": "kill_or_wait",
+      "cash_reward_range": {
+        "max": 0,
+        "min": 0
+      },
+      "credential_or_test_account_policy": "unknown",
+      "disclose_io_status": "partial",
+      "disclosure_policy": "coordinated_disclosure",
+      "duplicate_risk_signal": "unknown",
+      "forbidden_testing": [
+        "active_testing_without_approval"
+      ],
+      "identity_or_2fa_requirement": "unknown",
+      "in_scope_targets": [
+        "https://example-vdp.invalid"
+      ],
+      "kill_reasons": [
+        "cannot_produce_local_static_or_fixture_based_proof",
+        "known_issue_duplicate_or_first_reporter_status_unlikely",
+        "requires_credentials_pii_social_engineering_dos_spam_or_phishing",
+        "safe_harbor_or_disclosure_terms_missing_or_partial_without_clarity",
+        "scope_or_reward_range_unclear",
+        "vdp_charity_points_only_or_no_cash_reward_for_cash_lane",
+        "vrt_priority_too_low_or_non_exploitable_for_cash_effort"
+      ],
+      "known_issues_available": false,
+      "kudos_or_points_only": true,
+      "local_static_candidate_source": "practice_only_no_cash",
+      "managed_by_bugcrowd": false,
+      "next_local_action": "",
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [
+        "program_email_or_platform"
+      ],
+      "out_of_scope_targets": [
+        "everything_else"
+      ],
+      "payment_method_or_tax_gate": "not_applicable_no_cash",
+      "program_name": "Example VDP saved row",
+      "program_rules": [
+        "read_policy_only"
+      ],
+      "program_status": "open",
+      "program_type": "vdp",
+      "program_url": "https://bugcrowd.com/example-vdp",
+      "proof_of_concept_expectations": "unknown",
+      "public_or_private": "public",
+      "rate_limit_or_automation_policy": "unknown",
+      "report_draft_save_ready": false,
+      "report_required_fields": [
+        "summary",
+        "details"
+      ],
+      "report_submission_ready": false,
+      "requires_invitation": false,
+      "reward_program": false,
+      "reward_range_by_target": {},
+      "safe_harbor_status": "partial",
+      "score": 5,
+      "security_testing_allowed": false,
+      "static_candidate_draft": null,
+      "submission_limit_or_throttle": "unknown",
+      "target_groups": [
+        "web"
+      ],
+      "target_technology": [
+        "web"
+      ],
+      "vrt_priority_mapping": "informational"
+    },
+    {
+      "brief_last_updated": "hidden",
+      "candidate_class": "kill_or_wait",
+      "cash_reward_range": {
+        "max": 10000,
+        "min": 250
+      },
+      "credential_or_test_account_policy": "private",
+      "disclose_io_status": "unknown",
+      "disclosure_policy": "private",
+      "duplicate_risk_signal": "private",
+      "forbidden_testing": [
+        "all_testing_without_membership"
+      ],
+      "identity_or_2fa_requirement": "invite_membership_required",
+      "in_scope_targets": [],
+      "kill_reasons": [
+        "cannot_produce_local_static_or_fixture_based_proof",
+        "known_issue_duplicate_or_first_reporter_status_unlikely",
+        "program_private_invite_or_membership_required",
+        "requires_credentials_pii_social_engineering_dos_spam_or_phishing",
+        "safe_harbor_or_disclosure_terms_missing_or_partial_without_clarity",
+        "scope_or_reward_range_unclear",
+        "submission_limit_or_platform_privilege_risk_unclear",
+        "vrt_priority_too_low_or_non_exploitable_for_cash_effort"
+      ],
+      "known_issues_available": false,
+      "kudos_or_points_only": false,
+      "local_static_candidate_source": "none_private_membership_required",
+      "managed_by_bugcrowd": true,
+      "next_local_action": "",
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [],
+      "out_of_scope_targets": [],
+      "payment_method_or_tax_gate": "unknown_requires_human_review",
+      "program_name": "Example private invite row",
+      "program_rules": [
+        "membership_required"
+      ],
+      "program_status": "invite_only",
+      "program_type": "reward",
+      "program_url": "https://bugcrowd.com/example-private-invite",
+      "proof_of_concept_expectations": "private",
+      "public_or_private": "private",
+      "rate_limit_or_automation_policy": "private",
+      "report_draft_save_ready": false,
+      "report_required_fields": [],
+      "report_submission_ready": false,
+      "requires_invitation": true,
+      "reward_program": true,
+      "reward_range_by_target": {},
+      "safe_harbor_status": "private_unreadable",
+      "score": 25,
+      "security_testing_allowed": false,
+      "static_candidate_draft": null,
+      "submission_limit_or_throttle": "private",
+      "target_groups": [],
+      "target_technology": [],
+      "vrt_priority_mapping": "private"
+    },
+    {
+      "brief_last_updated": "saved_public_snippet",
+      "candidate_class": "kill_or_wait",
+      "cash_reward_range": {
+        "max": 1500,
+        "min": 50
+      },
+      "credential_or_test_account_policy": "no_test_credentials",
+      "disclose_io_status": "partial",
+      "disclosure_policy": "private_report",
+      "duplicate_risk_signal": "not_checked_no_browser_session",
+      "forbidden_testing": [
+        "scanning",
+        "dos",
+        "credential_attacks",
+        "pii"
+      ],
+      "identity_or_2fa_requirement": "unknown_requires_review",
+      "in_scope_targets": [
+        "https://example-web-only.invalid"
+      ],
+      "kill_reasons": [
+        "cannot_produce_local_static_or_fixture_based_proof",
+        "known_issue_duplicate_or_first_reporter_status_unlikely",
+        "safe_harbor_or_disclosure_terms_missing_or_partial_without_clarity",
+        "submission_limit_or_platform_privilege_risk_unclear",
+        "vrt_priority_too_low_or_non_exploitable_for_cash_effort"
+      ],
+      "known_issues_available": true,
+      "kudos_or_points_only": false,
+      "local_static_candidate_source": "no_public_source_static_path",
+      "managed_by_bugcrowd": true,
+      "next_local_action": "",
+      "observed_utc": "2026-06-18T07:19:52Z",
+      "official_communication_channels": [
+        "bugcrowd_platform_only_after_approval"
+      ],
+      "out_of_scope_targets": [
+        "automated_scanning",
+        "dos",
+        "social_engineering",
+        "pii"
+      ],
+      "payment_method_or_tax_gate": "unknown_requires_human_review",
+      "program_name": "Example reward web-only row",
+      "program_rules": [
+        "must_review_full_brief_before_testing"
+      ],
+      "program_status": "open",
+      "program_type": "reward",
+      "program_url": "https://bugcrowd.com/example-reward-web-only",
+      "proof_of_concept_expectations": "live_repro_expected_but_not_allowed_here",
+      "public_or_private": "public",
+      "rate_limit_or_automation_policy": "unknown",
+      "report_draft_save_ready": false,
+      "report_required_fields": [
+        "summary",
+        "target",
+        "vrt",
+        "details"
+      ],
+      "report_submission_ready": false,
+      "requires_invitation": false,
+      "reward_program": true,
+      "reward_range_by_target": {
+        "web": "$50-$1500"
+      },
+      "safe_harbor_status": "partial",
+      "score": 50,
+      "security_testing_allowed": false,
+      "static_candidate_draft": null,
+      "submission_limit_or_throttle": "unknown",
+      "target_groups": [
+        "web"
+      ],
+      "target_technology": [
+        "web"
+      ],
+      "vrt_priority_mapping": "P4_or_unknown_from_snippet"
+    }
+  ],
+  "schema_version": "security_bounty.bugcrowd_no_login_public_program_scores.v1",
+  "security_testing_allowed_count": 0,
+  "source": "manually_saved_public_program_list_and_bounty_brief_snippets_no_bugcrowd_login_no_testing",
+  "static_candidate_draft_count": 1
+}

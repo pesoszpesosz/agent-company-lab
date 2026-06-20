@@ -1,0 +1,253 @@
+{
+  "adapter_integration_contract": {
+    "authority": "SQLite service_requests ledger remains authoritative; reducer output is a deterministic preview and must not mutate authority state.",
+    "external_runtime_policy": "Temporal and Inngest integration remains manifest/report-only until a separate explicit runtime approval exists.",
+    "human_review_packet_refresh": "Only parked.awaiting_human_review rows are eligible for local packet refresh.",
+    "idempotency": "Reducer idempotency keys remain preview keys. Report refresh commands may be rerun, but they do not grant approvals or start workers.",
+    "model_api_gate_policy": "req-pydantic-ai-model-backed-adapter-20260614 remains parked until provider, model, cost, credential route, scope, and worker pool are approved.",
+    "terminal_row_policy": "Completed and rejected rows are terminal evidence rows and must not be revived, replay-started, or converted into review packets by orchestration adapters."
+  },
+  "current_state": {
+    "chain_integrity_checked_report_count": 17,
+    "chain_integrity_failure_count": 0,
+    "decision_preflight_count": 11,
+    "human_decision_packet_count": 11,
+    "post_decision_refresh_plan_count": 11,
+    "reducer_failure_count": 0,
+    "reducer_output_state_counts": {
+      "parked.awaiting_human_review": 11,
+      "terminal.completed_from_ledger_snapshot": 1,
+      "terminal.rejected_from_ledger_snapshot": 2
+    },
+    "reducer_result_count": 14,
+    "resume_requirements_order_policy": "strict_order_is_semantic_for_review_packet_display"
+  },
+  "generated_utc": "2026-06-15T15:30:09Z",
+  "lane_id": "platform_engineering",
+  "next_action": "Add generated durable integration validation to the refreshed chain-integrity report, then use the report-only integration command before any future orchestration adapter work.",
+  "purpose": "Map the hardened durable reducer dry-run contract to existing service-worker decision packet refresh commands without starting external orchestration runtimes or mutating service requests.",
+  "request_rows": [
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-grok-research-worker-20260614",
+      "worker_type": "browser_signed_in_read_only"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "worker_type": "legal_kyc_tax_payment_review"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-next-wave-security-report-route-review-20260614",
+      "worker_type": "public_submission"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "worker_type": "model_api_execution"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-test-browser-readonly-complete-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "input_status": "complete",
+      "integration_disposition": "terminal_no_refresh_start_or_replay",
+      "output_state": "terminal.completed_from_ledger_snapshot",
+      "request_id": "req-test-lifecycle-approve-20260614",
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "input_status": "rejected",
+      "integration_disposition": "terminal_rejected_no_revive_or_replay",
+      "output_state": "terminal.rejected_from_ledger_snapshot",
+      "request_id": "req-test-lifecycle-reject-20260614",
+      "worker_type": "local_runtime_adapter"
+    },
+    {
+      "input_status": "rejected",
+      "integration_disposition": "terminal_rejected_no_revive_or_replay",
+      "output_state": "terminal.rejected_from_ledger_snapshot",
+      "request_id": "req-test-service-intake-valid-20260614",
+      "worker_type": "other_gated_worker"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    },
+    {
+      "input_status": "needs_review",
+      "integration_disposition": "refresh_local_review_packets_only",
+      "output_state": "parked.awaiting_human_review",
+      "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "worker_type": "browser_read_only"
+    }
+  ],
+  "runtime_boundary": {
+    "api_calls": false,
+    "approval_granted": false,
+    "commands_executed_by_this_report": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "rejection_granted": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_service_worker_refresh_integration.v1",
+  "source_artifacts": {
+    "chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "decision_preflight_validation": "E:\\agent-company-lab\\reports\\service-worker-decision-preflight-validation-latest.json",
+    "hardened_reducer_result": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-p2-cleanup-positive-result-20260615.json",
+    "human_decision_packets_validation": "E:\\agent-company-lab\\reports\\service-worker-human-decision-packets-validation-latest.json",
+    "post_decision_refresh_plan_validation": "E:\\agent-company-lab\\reports\\service-worker-post-decision-refresh-plan-validation-latest.json"
+  },
+  "state_mapping": [
+    {
+      "allowed_followup_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-decision-preflight"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "blocked_actions": [
+        "approve-service-request",
+        "assign-service-request",
+        "start-service-request",
+        "complete-service-request",
+        "Temporal workflow start",
+        "Temporal activity schedule",
+        "Inngest event emit",
+        "worker process start",
+        "API call",
+        "external browser/account/payment/wallet/security action"
+      ],
+      "integration_disposition": "refresh_local_review_packets_only",
+      "reducer_output_state": "parked.awaiting_human_review",
+      "resume_requirements_source": "Use reducer result resume_requirements in strict order when rendering human review packet display.",
+      "row_count": 11,
+      "service_request_statuses": [
+        "needs_review"
+      ]
+    },
+    {
+      "allowed_followup_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "blocked_actions": [
+        "approve-service-request",
+        "assign-service-request",
+        "start-service-request",
+        "complete-service-request",
+        "Temporal workflow replay start",
+        "Inngest event emit"
+      ],
+      "integration_disposition": "terminal_no_refresh_start_or_replay",
+      "reducer_output_state": "terminal.completed_from_ledger_snapshot",
+      "row_count": 1,
+      "service_request_statuses": [
+        "complete"
+      ]
+    },
+    {
+      "allowed_followup_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "blocked_actions": [
+        "approve-service-request",
+        "assign-service-request",
+        "start-service-request",
+        "complete-service-request",
+        "Temporal workflow replay start",
+        "Inngest event emit"
+      ],
+      "integration_disposition": "terminal_rejected_no_revive_or_replay",
+      "reducer_output_state": "terminal.rejected_from_ledger_snapshot",
+      "row_count": 2,
+      "service_request_statuses": [
+        "rejected"
+      ]
+    }
+  ]
+}

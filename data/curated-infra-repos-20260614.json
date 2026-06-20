@@ -1,0 +1,2679 @@
+[
+    {
+        "createdAt":  "2023-08-09T18:33:12Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Build resilient agents.",
+        "forkCount":  5825,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  342
+                   },
+        "latestRelease":  {
+                              "name":  "langgraph==1.2.5",
+                              "tagName":  "1.2.5",
+                              "url":  "https://github.com/langchain-ai/langgraph/releases/tag/1.2.5",
+                              "publishedAt":  "2026-06-12T20:31:14Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "langchain-ai/langgraph",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T01:19:32Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "chatgpt"
+                                 },
+                                 {
+                                     "name":  "deepagents"
+                                 },
+                                 {
+                                     "name":  "enterprise"
+                                 },
+                                 {
+                                     "name":  "framework"
+                                 },
+                                 {
+                                     "name":  "gemini"
+                                 },
+                                 {
+                                     "name":  "generative-ai"
+                                 },
+                                 {
+                                     "name":  "langchain"
+                                 },
+                                 {
+                                     "name":  "langgraph"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "multiagent"
+                                 },
+                                 {
+                                     "name":  "open-source"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "pydantic"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "rag"
+                                 }
+                             ],
+        "stargazerCount":  34691,
+        "url":  "https://github.com/langchain-ai/langgraph",
+        "watchers":  {
+                         "totalCount":  160
+                     }
+    },
+    {
+        "createdAt":  "2023-08-18T11:43:45Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "A programming framework for agentic AI",
+        "forkCount":  8895,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  537
+                   },
+        "latestRelease":  {
+                              "name":  "python-v0.7.5",
+                              "tagName":  "python-v0.7.5",
+                              "url":  "https://github.com/microsoft/autogen/releases/tag/python-v0.7.5",
+                              "publishedAt":  "2025-09-30T06:18:26Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "cc-by-4.0",
+                            "name":  "Creative Commons Attribution 4.0 International",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "microsoft/autogen",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-04-15T11:59:09Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "chatgpt"
+                                 },
+                                 {
+                                     "name":  "llm-agent"
+                                 },
+                                 {
+                                     "name":  "llm-framework"
+                                 },
+                                 {
+                                     "name":  "agentic"
+                                 },
+                                 {
+                                     "name":  "agentic-agi"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "autogen"
+                                 },
+                                 {
+                                     "name":  "framework"
+                                 },
+                                 {
+                                     "name":  "autogen-ecosystem"
+                                 }
+                             ],
+        "stargazerCount":  58940,
+        "url":  "https://github.com/microsoft/autogen",
+        "watchers":  {
+                         "totalCount":  526
+                     }
+    },
+    {
+        "createdAt":  "2023-10-27T03:26:59Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+        "forkCount":  7490,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  62
+                   },
+        "latestRelease":  {
+                              "name":  "1.14.7",
+                              "tagName":  "1.14.7",
+                              "url":  "https://github.com/crewAIInc/crewAI/releases/tag/1.14.7",
+                              "publishedAt":  "2026-06-11T17:13:46Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "crewAIInc/crewAI",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T07:19:50Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "llms"
+                                 },
+                                 {
+                                     "name":  "aiagentframework"
+                                 }
+                             ],
+        "stargazerCount":  53523,
+        "url":  "https://github.com/crewAIInc/crewAI",
+        "watchers":  {
+                         "totalCount":  382
+                     }
+    },
+    {
+        "createdAt":  "2025-03-11T03:42:36Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "A lightweight, powerful framework for multi-agent workflows",
+        "forkCount":  4189,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  49
+                   },
+        "latestRelease":  {
+                              "name":  "v0.17.5",
+                              "tagName":  "v0.17.5",
+                              "url":  "https://github.com/openai/openai-agents-python/releases/tag/v0.17.5",
+                              "publishedAt":  "2026-06-11T04:11:51Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "openai/openai-agents-python",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-13T06:18:40Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "framework"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "harness"
+                                 }
+                             ],
+        "stargazerCount":  27137,
+        "url":  "https://github.com/openai/openai-agents-python",
+        "watchers":  {
+                         "totalCount":  215
+                     }
+    },
+    {
+        "createdAt":  "2022-11-02T04:24:54Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "LlamaIndex is the leading document agent and OCR platform",
+        "forkCount":  7556,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  186
+                   },
+        "latestRelease":  {
+                              "name":  "v0.14.22",
+                              "tagName":  "v0.14.22",
+                              "url":  "https://github.com/run-llama/llama_index/releases/tag/v0.14.22",
+                              "publishedAt":  "2026-05-14T20:22:24Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "run-llama/llama_index",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-12T19:29:18Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "application"
+                                 },
+                                 {
+                                     "name":  "data"
+                                 },
+                                 {
+                                     "name":  "fine-tuning"
+                                 },
+                                 {
+                                     "name":  "framework"
+                                 },
+                                 {
+                                     "name":  "llamaindex"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "rag"
+                                 },
+                                 {
+                                     "name":  "vector-database"
+                                 },
+                                 {
+                                     "name":  "multi-agents"
+                                 }
+                             ],
+        "stargazerCount":  50115,
+        "url":  "https://github.com/run-llama/llama_index",
+        "watchers":  {
+                         "totalCount":  280
+                     }
+    },
+    {
+        "createdAt":  "2024-06-21T15:55:04Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "AI Agent Framework, the Pydantic way",
+        "forkCount":  2215,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  408
+                   },
+        "latestRelease":  {
+                              "name":  "v1.107.0 (2026-06-10)",
+                              "tagName":  "v1.107.0",
+                              "url":  "https://github.com/pydantic/pydantic-ai/releases/tag/v1.107.0",
+                              "publishedAt":  "2026-06-10T14:40:24Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "pydantic/pydantic-ai",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T01:01:49Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agent-framework"
+                                 },
+                                 {
+                                     "name":  "pydantic"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "genai"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 }
+                             ],
+        "stargazerCount":  17746,
+        "url":  "https://github.com/pydantic/pydantic-ai",
+        "watchers":  {
+                         "totalCount":  113
+                     }
+    },
+    {
+        "createdAt":  "2023-06-30T09:04:55Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
+        "forkCount":  8789,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  24
+                   },
+        "latestRelease":  {
+                              "name":  "Patch release: v0.8.1",
+                              "tagName":  "v0.8.1",
+                              "url":  "https://github.com/FoundationAgents/MetaGPT/releases/tag/v0.8.1",
+                              "publishedAt":  "2024-04-22T10:56:23Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "FoundationAgents/MetaGPT",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-01-21T10:12:33Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agent"
+                                 },
+                                 {
+                                     "name":  "gpt"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "metagpt"
+                                 },
+                                 {
+                                     "name":  "multi-agent"
+                                 }
+                             ],
+        "stargazerCount":  68781,
+        "url":  "https://github.com/FoundationAgents/MetaGPT",
+        "watchers":  {
+                         "totalCount":  912
+                     }
+    },
+    {
+        "createdAt":  "2023-03-17T21:41:54Z",
+        "defaultBranchRef":  {
+                                 "name":  "master"
+                             },
+        "description":  "🐫 CAMEL: The first and the best multi-agent framework. Finding the Scaling Law of Agents. https://www.camel-ai.org",
+        "forkCount":  1946,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  213
+                   },
+        "latestRelease":  {
+                              "name":  "v0.2.90",
+                              "tagName":  "v0.2.90",
+                              "url":  "https://github.com/camel-ai/camel/releases/tag/v0.2.90",
+                              "publishedAt":  "2026-03-22T08:37:36Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "camel-ai/camel",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-12T09:37:53Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai-societies"
+                                 },
+                                 {
+                                     "name":  "artificial-intelligence"
+                                 },
+                                 {
+                                     "name":  "deep-learning"
+                                 },
+                                 {
+                                     "name":  "large-language-models"
+                                 },
+                                 {
+                                     "name":  "multi-agent-systems"
+                                 },
+                                 {
+                                     "name":  "natural-language-processing"
+                                 },
+                                 {
+                                     "name":  "communicative-ai"
+                                 },
+                                 {
+                                     "name":  "cooperative-ai"
+                                 },
+                                 {
+                                     "name":  "agent"
+                                 }
+                             ],
+        "stargazerCount":  17183,
+        "url":  "https://github.com/camel-ai/camel",
+        "watchers":  {
+                         "totalCount":  120
+                     }
+    },
+    {
+        "createdAt":  "2023-05-11T01:09:00Z",
+        "defaultBranchRef":  {
+                                 "name":  "master"
+                             },
+        "description":  "The Enterprise-Grade Production-Ready Multi-Agent Orchestration Framework. Website: https://swarms.ai",
+        "forkCount":  949,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  26
+                   },
+        "latestRelease":  {
+                              "name":  "6.8.1",
+                              "tagName":  "6.8.1",
+                              "url":  "https://github.com/kyegomez/swarms/releases/tag/6.8.1",
+                              "publishedAt":  "2024-12-27T20:30:59Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "kyegomez/swarms",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-13T23:09:58Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "artificial-intelligence"
+                                 },
+                                 {
+                                     "name":  "langchain"
+                                 },
+                                 {
+                                     "name":  "machine-learning"
+                                 },
+                                 {
+                                     "name":  "swarms"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "prompt-engineering"
+                                 },
+                                 {
+                                     "name":  "prompt-toolkit"
+                                 },
+                                 {
+                                     "name":  "prompting"
+                                 },
+                                 {
+                                     "name":  "tree-of-thoughts"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "chatgpt"
+                                 },
+                                 {
+                                     "name":  "gpt4all"
+                                 },
+                                 {
+                                     "name":  "huggingface"
+                                 },
+                                 {
+                                     "name":  "langchain-python"
+                                 },
+                                 {
+                                     "name":  "agentic-workflow"
+                                 },
+                                 {
+                                     "name":  "multi-agent-systems"
+                                 },
+                                 {
+                                     "name":  "agentic-ai"
+                                 },
+                                 {
+                                     "name":  "claude-code"
+                                 }
+                             ],
+        "stargazerCount":  6849,
+        "url":  "https://github.com/kyegomez/swarms",
+        "watchers":  {
+                         "totalCount":  64
+                     }
+    },
+    {
+        "createdAt":  "2023-11-16T02:29:26Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Reliable Multi-Agent Orchestration Framework",
+        "forkCount":  1060,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  1
+                   },
+        "latestRelease":  {
+                              "name":  "v1.10.1",
+                              "tagName":  "v1.10.1",
+                              "url":  "https://github.com/VRSEN/agency-swarm/releases/tag/v1.10.1",
+                              "publishedAt":  "2026-06-11T17:05:13Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "VRSEN/agency-swarm",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-12T00:13:04Z",
+        "repositoryTopics":  null,
+        "stargazerCount":  4445,
+        "url":  "https://github.com/VRSEN/agency-swarm",
+        "watchers":  {
+                         "totalCount":  105
+                     }
+    },
+    {
+        "createdAt":  "2024-10-31T16:00:56Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+        "forkCount":  11020,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  66
+                   },
+        "latestRelease":  {
+                              "name":  "0.13.2",
+                              "tagName":  "0.13.2",
+                              "url":  "https://github.com/browser-use/browser-use/releases/tag/0.13.2",
+                              "publishedAt":  "2026-06-12T22:45:04Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "browser-use/browser-use",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-13T21:08:02Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "ai-tools"
+                                 },
+                                 {
+                                     "name":  "browser-automation"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "browser-use"
+                                 },
+                                 {
+                                     "name":  "playwright"
+                                 }
+                             ],
+        "stargazerCount":  98747,
+        "url":  "https://github.com/browser-use/browser-use",
+        "watchers":  {
+                         "totalCount":  439
+                     }
+    },
+    {
+        "createdAt":  "2026-04-17T01:56:15Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Browser Harness | Self-healing harness that enables LLMs to complete any task.",
+        "forkCount":  1391,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  14
+                   },
+        "latestRelease":  null,
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "browser-use/browser-harness",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-13T23:47:37Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai-agent"
+                                 },
+                                 {
+                                     "name":  "browser-agent"
+                                 },
+                                 {
+                                     "name":  "browser-automation"
+                                 },
+                                 {
+                                     "name":  "browser-use"
+                                 },
+                                 {
+                                     "name":  "cdp"
+                                 },
+                                 {
+                                     "name":  "cloud-browser"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "playwright"
+                                 },
+                                 {
+                                     "name":  "web-automation"
+                                 },
+                                 {
+                                     "name":  "browser-use-box"
+                                 },
+                                 {
+                                     "name":  "browser-use-cloud"
+                                 },
+                                 {
+                                     "name":  "persistent-browser"
+                                 },
+                                 {
+                                     "name":  "telegram-agent"
+                                 },
+                                 {
+                                     "name":  "vps-agent"
+                                 }
+                             ],
+        "stargazerCount":  14797,
+        "url":  "https://github.com/browser-use/browser-harness",
+        "watchers":  {
+                         "totalCount":  42
+                     }
+    },
+    {
+        "createdAt":  "2026-01-11T05:38:15Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Browser automation CLI for AI agents",
+        "forkCount":  2275,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  268
+                   },
+        "latestRelease":  {
+                              "name":  "v0.27.3",
+                              "tagName":  "v0.27.3",
+                              "url":  "https://github.com/vercel-labs/agent-browser/releases/tag/v0.27.3",
+                              "publishedAt":  "2026-06-12T23:22:24Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "vercel-labs/agent-browser",
+        "primaryLanguage":  {
+                                "name":  "Rust"
+                            },
+        "pushedAt":  "2026-06-12T23:22:24Z",
+        "repositoryTopics":  null,
+        "stargazerCount":  36020,
+        "url":  "https://github.com/vercel-labs/agent-browser",
+        "watchers":  {
+                         "totalCount":  96
+                     }
+    },
+    {
+        "createdAt":  "2019-06-22T09:24:21Z",
+        "defaultBranchRef":  {
+                                 "name":  "master"
+                             },
+        "description":  "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+        "forkCount":  58532,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  452
+                   },
+        "latestRelease":  {
+                              "name":  "n8n@2.25.7",
+                              "tagName":  "n8n@2.25.7",
+                              "url":  "https://github.com/n8n-io/n8n/releases/tag/n8n%402.25.7",
+                              "publishedAt":  "2026-06-10T09:00:17Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "n8n-io/n8n",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-14T09:30:22Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "automation"
+                                 },
+                                 {
+                                     "name":  "ipaas"
+                                 },
+                                 {
+                                     "name":  "n8n"
+                                 },
+                                 {
+                                     "name":  "workflow"
+                                 },
+                                 {
+                                     "name":  "typescript"
+                                 },
+                                 {
+                                     "name":  "self-hosted"
+                                 },
+                                 {
+                                     "name":  "integrations"
+                                 },
+                                 {
+                                     "name":  "workflow-automation"
+                                 },
+                                 {
+                                     "name":  "cli"
+                                 },
+                                 {
+                                     "name":  "development"
+                                 },
+                                 {
+                                     "name":  "low-code"
+                                 },
+                                 {
+                                     "name":  "data-flow"
+                                 },
+                                 {
+                                     "name":  "integration-framework"
+                                 },
+                                 {
+                                     "name":  "apis"
+                                 },
+                                 {
+                                     "name":  "low-code-platform"
+                                 },
+                                 {
+                                     "name":  "no-code"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "mcp"
+                                 },
+                                 {
+                                     "name":  "mcp-client"
+                                 },
+                                 {
+                                     "name":  "mcp-server"
+                                 }
+                             ],
+        "stargazerCount":  192443,
+        "url":  "https://github.com/n8n-io/n8n",
+        "watchers":  {
+                         "totalCount":  1110
+                     }
+    },
+    {
+        "createdAt":  "2023-04-12T07:40:24Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Production-ready platform for agentic workflow development.",
+        "forkCount":  22842,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  295
+                   },
+        "latestRelease":  {
+                              "name":  "v1.14.2 - Security fixes, agent groundwork, workflow reliability, and deployment updates",
+                              "tagName":  "1.14.2",
+                              "url":  "https://github.com/langgenius/dify/releases/tag/1.14.2",
+                              "publishedAt":  "2026-05-19T05:34:25Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "langgenius/dify",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-14T05:11:09Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "gpt"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "rag"
+                                 },
+                                 {
+                                     "name":  "orchestration"
+                                 },
+                                 {
+                                     "name":  "gpt-4"
+                                 },
+                                 {
+                                     "name":  "agent"
+                                 },
+                                 {
+                                     "name":  "nextjs"
+                                 },
+                                 {
+                                     "name":  "workflow"
+                                 },
+                                 {
+                                     "name":  "genai"
+                                 },
+                                 {
+                                     "name":  "gemini"
+                                 },
+                                 {
+                                     "name":  "automation"
+                                 },
+                                 {
+                                     "name":  "low-code"
+                                 },
+                                 {
+                                     "name":  "mcp"
+                                 },
+                                 {
+                                     "name":  "no-code"
+                                 },
+                                 {
+                                     "name":  "agentic-ai"
+                                 },
+                                 {
+                                     "name":  "agentic-framework"
+                                 },
+                                 {
+                                     "name":  "agentic-workflow"
+                                 }
+                             ],
+        "stargazerCount":  145153,
+        "url":  "https://github.com/langgenius/dify",
+        "watchers":  {
+                         "totalCount":  808
+                     }
+    },
+    {
+        "createdAt":  "2023-03-31T12:23:09Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Build AI Agents, Visually",
+        "forkCount":  24511,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  671
+                   },
+        "latestRelease":  {
+                              "name":  "flowise@3.1.2",
+                              "tagName":  "flowise@3.1.2",
+                              "url":  "https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.2",
+                              "publishedAt":  "2026-04-14T13:58:32Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "FlowiseAI/Flowise",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-10T07:32:39Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "artificial-intelligence"
+                                 },
+                                 {
+                                     "name":  "chatgpt"
+                                 },
+                                 {
+                                     "name":  "large-language-models"
+                                 },
+                                 {
+                                     "name":  "low-code"
+                                 },
+                                 {
+                                     "name":  "no-code"
+                                 },
+                                 {
+                                     "name":  "javascript"
+                                 },
+                                 {
+                                     "name":  "react"
+                                 },
+                                 {
+                                     "name":  "typescript"
+                                 },
+                                 {
+                                     "name":  "langchain"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "rag"
+                                 },
+                                 {
+                                     "name":  "chatbot"
+                                 },
+                                 {
+                                     "name":  "workflow-automation"
+                                 },
+                                 {
+                                     "name":  "agentic-ai"
+                                 },
+                                 {
+                                     "name":  "agentic-workflow"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "multiagent-systems"
+                                 }
+                             ],
+        "stargazerCount":  53558,
+        "url":  "https://github.com/FlowiseAI/Flowise",
+        "watchers":  {
+                         "totalCount":  356
+                     }
+    },
+    {
+        "createdAt":  "2023-05-18T17:47:09Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "🪢 Open source AI engineering platform: LLM evals, observability, metrics, prompt management, playground, datasets. Integrates with OpenTelemetry, LangChain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 ",
+        "forkCount":  3010,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  322
+                   },
+        "latestRelease":  {
+                              "name":  "v3.185.0",
+                              "tagName":  "v3.185.0",
+                              "url":  "https://github.com/langfuse/langfuse/releases/tag/v3.185.0",
+                              "publishedAt":  "2026-06-12T11:48:13Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "langfuse/langfuse",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-13T21:33:32Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "analytics"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "llmops"
+                                 },
+                                 {
+                                     "name":  "large-language-models"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "self-hosted"
+                                 },
+                                 {
+                                     "name":  "ycombinator"
+                                 },
+                                 {
+                                     "name":  "monitoring"
+                                 },
+                                 {
+                                     "name":  "observability"
+                                 },
+                                 {
+                                     "name":  "open-source"
+                                 },
+                                 {
+                                     "name":  "langchain"
+                                 },
+                                 {
+                                     "name":  "llama-index"
+                                 },
+                                 {
+                                     "name":  "evaluation"
+                                 },
+                                 {
+                                     "name":  "prompt-engineering"
+                                 },
+                                 {
+                                     "name":  "prompt-management"
+                                 },
+                                 {
+                                     "name":  "playground"
+                                 },
+                                 {
+                                     "name":  "llm-evaluation"
+                                 },
+                                 {
+                                     "name":  "llm-observability"
+                                 },
+                                 {
+                                     "name":  "autogen"
+                                 }
+                             ],
+        "stargazerCount":  29039,
+        "url":  "https://github.com/langfuse/langfuse",
+        "watchers":  {
+                         "totalCount":  98
+                     }
+    },
+    {
+        "createdAt":  "2022-11-09T23:44:35Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "AI Observability \u0026 Evaluation",
+        "forkCount":  922,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  520
+                   },
+        "latestRelease":  {
+                              "name":  "arize-phoenix: v17.5.0",
+                              "tagName":  "arize-phoenix-v17.5.0",
+                              "url":  "https://github.com/Arize-ai/phoenix/releases/tag/arize-phoenix-v17.5.0",
+                              "publishedAt":  "2026-06-12T21:52:28Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "Arize-ai/phoenix",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T06:17:04Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "llmops"
+                                 },
+                                 {
+                                     "name":  "ai-monitoring"
+                                 },
+                                 {
+                                     "name":  "ai-observability"
+                                 },
+                                 {
+                                     "name":  "llm-eval"
+                                 },
+                                 {
+                                     "name":  "aiengineering"
+                                 },
+                                 {
+                                     "name":  "datasets"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "llms"
+                                 },
+                                 {
+                                     "name":  "prompt-engineering"
+                                 },
+                                 {
+                                     "name":  "anthropic"
+                                 },
+                                 {
+                                     "name":  "evals"
+                                 },
+                                 {
+                                     "name":  "llm-evaluation"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "langchain"
+                                 },
+                                 {
+                                     "name":  "llamaindex"
+                                 },
+                                 {
+                                     "name":  "smolagents"
+                                 }
+                             ],
+        "stargazerCount":  10130,
+        "url":  "https://github.com/Arize-ai/phoenix",
+        "watchers":  {
+                         "totalCount":  57
+                     }
+    },
+    {
+        "createdAt":  "2023-02-27T17:39:42Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Integrate cutting-edge LLM technology quickly and easily into your apps",
+        "forkCount":  4647,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  141
+                   },
+        "latestRelease":  {
+                              "name":  "python-1.43.0",
+                              "tagName":  "python-1.43.0",
+                              "url":  "https://github.com/microsoft/semantic-kernel/releases/tag/python-1.43.0",
+                              "publishedAt":  "2026-06-03T22:39:40Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "microsoft/semantic-kernel",
+        "primaryLanguage":  {
+                                "name":  "C#"
+                            },
+        "pushedAt":  "2026-06-12T22:35:21Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "artificial-intelligence"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "sdk"
+                                 }
+                             ],
+        "stargazerCount":  28115,
+        "url":  "https://github.com/microsoft/semantic-kernel",
+        "watchers":  {
+                         "totalCount":  292
+                     }
+    },
+    {
+        "createdAt":  "2025-03-25T18:44:21Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Agent2Agent (A2A) is an open protocol enabling communication and interoperability between opaque agentic applications.",
+        "forkCount":  2464,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  241
+                   },
+        "latestRelease":  {
+                              "name":  "v1.0.1",
+                              "tagName":  "v1.0.1",
+                              "url":  "https://github.com/a2aproject/A2A/releases/tag/v1.0.1",
+                              "publishedAt":  "2026-05-28T11:34:36Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "a2aproject/A2A",
+        "primaryLanguage":  {
+                                "name":  "Shell"
+                            },
+        "pushedAt":  "2026-06-12T10:40:26Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "a2a"
+                                 },
+                                 {
+                                     "name":  "a2a-mcp"
+                                 },
+                                 {
+                                     "name":  "a2a-protocol"
+                                 },
+                                 {
+                                     "name":  "a2a-server"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "generative-ai"
+                                 },
+                                 {
+                                     "name":  "linux-foundation"
+                                 }
+                             ],
+        "stargazerCount":  24275,
+        "url":  "https://github.com/a2aproject/A2A",
+        "watchers":  {
+                         "totalCount":  233
+                     }
+    },
+    {
+        "createdAt":  "2024-11-19T01:10:17Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Model Context Protocol Servers",
+        "forkCount":  11000,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  337
+                   },
+        "latestRelease":  {
+                              "name":  "Release 2026.1.26",
+                              "tagName":  "2026.1.26",
+                              "url":  "https://github.com/modelcontextprotocol/servers/releases/tag/2026.1.26",
+                              "publishedAt":  "2026-01-27T12:11:26Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "modelcontextprotocol/servers",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-07T22:29:30Z",
+        "repositoryTopics":  null,
+        "stargazerCount":  87195,
+        "url":  "https://github.com/modelcontextprotocol/servers",
+        "watchers":  {
+                         "totalCount":  620
+                     }
+    },
+    {
+        "createdAt":  "2024-09-24T20:26:52Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Specification and documentation for the Model Context Protocol",
+        "forkCount":  1588,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  147
+                   },
+        "latestRelease":  {
+                              "name":  "2025-11-25",
+                              "tagName":  "2025-11-25",
+                              "url":  "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2025-11-25",
+                              "publishedAt":  "2025-11-25T21:17:42Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "modelcontextprotocol/modelcontextprotocol",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-13T22:17:38Z",
+        "repositoryTopics":  null,
+        "stargazerCount":  8396,
+        "url":  "https://github.com/modelcontextprotocol/modelcontextprotocol",
+        "watchers":  {
+                         "totalCount":  173
+                     }
+    },
+    {
+        "createdAt":  "2019-10-16T22:15:35Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Temporal service",
+        "forkCount":  1655,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  526
+                   },
+        "latestRelease":  {
+                              "name":  "v1.29.7",
+                              "tagName":  "v1.29.7",
+                              "url":  "https://github.com/temporalio/temporal/releases/tag/v1.29.7",
+                              "publishedAt":  "2026-06-12T16:51:23Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "temporalio/temporal",
+        "primaryLanguage":  {
+                                "name":  "Go"
+                            },
+        "pushedAt":  "2026-06-14T08:25:54Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "workflows"
+                                 },
+                                 {
+                                     "name":  "workflow-engine"
+                                 },
+                                 {
+                                     "name":  "workflow-automation"
+                                 },
+                                 {
+                                     "name":  "workflow-management"
+                                 },
+                                 {
+                                     "name":  "workflow-management-system"
+                                 },
+                                 {
+                                     "name":  "distributed-systems"
+                                 },
+                                 {
+                                     "name":  "golang"
+                                 },
+                                 {
+                                     "name":  "service-bus"
+                                 },
+                                 {
+                                     "name":  "service-fabric"
+                                 },
+                                 {
+                                     "name":  "microservices-architecture"
+                                 },
+                                 {
+                                     "name":  "microservice-framework"
+                                 },
+                                 {
+                                     "name":  "microservice-orchestration"
+                                 },
+                                 {
+                                     "name":  "cronjob-scheduler"
+                                 },
+                                 {
+                                     "name":  "distributed-cron"
+                                 },
+                                 {
+                                     "name":  "orchestrator"
+                                 },
+                                 {
+                                     "name":  "durable-execution"
+                                 }
+                             ],
+        "stargazerCount":  20961,
+        "url":  "https://github.com/temporalio/temporal",
+        "watchers":  {
+                         "totalCount":  115
+                     }
+    },
+    {
+        "createdAt":  "2018-06-29T21:59:26Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+        "forkCount":  2335,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  794
+                   },
+        "latestRelease":  {
+                              "name":  "3.7.4 - From cradle to grave",
+                              "tagName":  "3.7.4",
+                              "url":  "https://github.com/PrefectHQ/prefect/releases/tag/3.7.4",
+                              "publishedAt":  "2026-06-05T17:23:31Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "PrefectHQ/prefect",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-13T09:09:52Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "workflow"
+                                 },
+                                 {
+                                     "name":  "data-engineering"
+                                 },
+                                 {
+                                     "name":  "data-science"
+                                 },
+                                 {
+                                     "name":  "workflow-engine"
+                                 },
+                                 {
+                                     "name":  "prefect"
+                                 },
+                                 {
+                                     "name":  "infrastructure"
+                                 },
+                                 {
+                                     "name":  "ml-ops"
+                                 },
+                                 {
+                                     "name":  "data-ops"
+                                 },
+                                 {
+                                     "name":  "automation"
+                                 },
+                                 {
+                                     "name":  "orchestration"
+                                 },
+                                 {
+                                     "name":  "data"
+                                 },
+                                 {
+                                     "name":  "observability"
+                                 },
+                                 {
+                                     "name":  "pipeline"
+                                 }
+                             ],
+        "stargazerCount":  22602,
+        "url":  "https://github.com/PrefectHQ/prefect",
+        "watchers":  {
+                         "totalCount":  195
+                     }
+    },
+    {
+        "createdAt":  "2018-04-30T16:30:04Z",
+        "defaultBranchRef":  {
+                                 "name":  "master"
+                             },
+        "description":  "An orchestration platform for the development, production, and observation of data assets.",
+        "forkCount":  2159,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  2182
+                   },
+        "latestRelease":  {
+                              "name":  "1.13.9 (core) / 0.29.9 (libraries)",
+                              "tagName":  "1.13.9",
+                              "url":  "https://github.com/dagster-io/dagster/releases/tag/1.13.9",
+                              "publishedAt":  "2026-06-11T19:16:52Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "dagster-io/dagster",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-12T19:19:16Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "data-pipelines"
+                                 },
+                                 {
+                                     "name":  "dagster"
+                                 },
+                                 {
+                                     "name":  "workflow"
+                                 },
+                                 {
+                                     "name":  "data-science"
+                                 },
+                                 {
+                                     "name":  "workflow-automation"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "scheduler"
+                                 },
+                                 {
+                                     "name":  "data-orchestrator"
+                                 },
+                                 {
+                                     "name":  "etl"
+                                 },
+                                 {
+                                     "name":  "analytics"
+                                 },
+                                 {
+                                     "name":  "data-engineering"
+                                 },
+                                 {
+                                     "name":  "mlops"
+                                 },
+                                 {
+                                     "name":  "orchestration"
+                                 },
+                                 {
+                                     "name":  "data-integration"
+                                 },
+                                 {
+                                     "name":  "metadata"
+                                 }
+                             ],
+        "stargazerCount":  15682,
+        "url":  "https://github.com/dagster-io/dagster",
+        "watchers":  {
+                         "totalCount":  155
+                     }
+    },
+    {
+        "createdAt":  "2015-04-13T18:04:58Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
+        "forkCount":  17237,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  1177
+                   },
+        "latestRelease":  {
+                              "name":  "Apache Airflow Helm Chart 1.22.0",
+                              "tagName":  "helm-chart/1.22.0",
+                              "url":  "https://github.com/apache/airflow/releases/tag/helm-chart/1.22.0",
+                              "publishedAt":  "2026-06-13T23:37:21Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "apache/airflow",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T10:18:41Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "airflow"
+                                 },
+                                 {
+                                     "name":  "apache"
+                                 },
+                                 {
+                                     "name":  "apache-airflow"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "scheduler"
+                                 },
+                                 {
+                                     "name":  "workflow"
+                                 },
+                                 {
+                                     "name":  "automation"
+                                 },
+                                 {
+                                     "name":  "dag"
+                                 },
+                                 {
+                                     "name":  "data-engineering"
+                                 },
+                                 {
+                                     "name":  "data-integration"
+                                 },
+                                 {
+                                     "name":  "data-orchestrator"
+                                 },
+                                 {
+                                     "name":  "data-pipelines"
+                                 },
+                                 {
+                                     "name":  "data-science"
+                                 },
+                                 {
+                                     "name":  "elt"
+                                 },
+                                 {
+                                     "name":  "etl"
+                                 },
+                                 {
+                                     "name":  "machine-learning"
+                                 },
+                                 {
+                                     "name":  "mlops"
+                                 },
+                                 {
+                                     "name":  "orchestration"
+                                 },
+                                 {
+                                     "name":  "workflow-engine"
+                                 },
+                                 {
+                                     "name":  "workflow-orchestration"
+                                 }
+                             ],
+        "stargazerCount":  45803,
+        "url":  "https://github.com/apache/airflow",
+        "watchers":  {
+                         "totalCount":  780
+                     }
+    },
+    {
+        "createdAt":  "2016-10-25T19:38:30Z",
+        "defaultBranchRef":  {
+                                 "name":  "master"
+                             },
+        "description":  "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.",
+        "forkCount":  7683,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  2836
+                   },
+        "latestRelease":  {
+                              "name":  "Ray-2.55.1",
+                              "tagName":  "ray-2.55.1",
+                              "url":  "https://github.com/ray-project/ray/releases/tag/ray-2.55.1",
+                              "publishedAt":  "2026-04-22T20:24:41Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "ray-project/ray",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T09:03:40Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ray"
+                                 },
+                                 {
+                                     "name":  "distributed"
+                                 },
+                                 {
+                                     "name":  "parallel"
+                                 },
+                                 {
+                                     "name":  "machine-learning"
+                                 },
+                                 {
+                                     "name":  "reinforcement-learning"
+                                 },
+                                 {
+                                     "name":  "deep-learning"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "rllib"
+                                 },
+                                 {
+                                     "name":  "hyperparameter-search"
+                                 },
+                                 {
+                                     "name":  "optimization"
+                                 },
+                                 {
+                                     "name":  "data-science"
+                                 },
+                                 {
+                                     "name":  "hyperparameter-optimization"
+                                 },
+                                 {
+                                     "name":  "serving"
+                                 },
+                                 {
+                                     "name":  "deployment"
+                                 },
+                                 {
+                                     "name":  "pytorch"
+                                 },
+                                 {
+                                     "name":  "tensorflow"
+                                 },
+                                 {
+                                     "name":  "llm-serving"
+                                 },
+                                 {
+                                     "name":  "large-language-models"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "llm-inference"
+                                 }
+                             ],
+        "stargazerCount":  42865,
+        "url":  "https://github.com/ray-project/ray",
+        "watchers":  {
+                         "totalCount":  480
+                     }
+    },
+    {
+        "createdAt":  "2026-03-31T19:07:34Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "From a goal to a task DAG, automatically. TypeScript-native multi-agent orchestration.",
+        "forkCount":  2389,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  5
+                   },
+        "latestRelease":  {
+                              "name":  "v1.6.0",
+                              "tagName":  "v1.6.0",
+                              "url":  "https://github.com/open-multi-agent/open-multi-agent/releases/tag/v1.6.0",
+                              "publishedAt":  "2026-06-06T17:25:44Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "open-multi-agent/open-multi-agent",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-11T18:05:33Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agent-framework"
+                                 },
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "claude"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "model-agnostic"
+                                 },
+                                 {
+                                     "name":  "multi-agent"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "orchestration"
+                                 },
+                                 {
+                                     "name":  "task-scheduling"
+                                 },
+                                 {
+                                     "name":  "typescript"
+                                 },
+                                 {
+                                     "name":  "anthropic"
+                                 },
+                                 {
+                                     "name":  "nodejs"
+                                 },
+                                 {
+                                     "name":  "ollama"
+                                 },
+                                 {
+                                     "name":  "structured-output"
+                                 },
+                                 {
+                                     "name":  "tool-use"
+                                 },
+                                 {
+                                     "name":  "deepseek"
+                                 },
+                                 {
+                                     "name":  "gemini"
+                                 },
+                                 {
+                                     "name":  "grok"
+                                 },
+                                 {
+                                     "name":  "local-llm"
+                                 },
+                                 {
+                                     "name":  "mcp"
+                                 }
+                             ],
+        "stargazerCount":  6374,
+        "url":  "https://github.com/open-multi-agent/open-multi-agent",
+        "watchers":  {
+                         "totalCount":  61
+                     }
+    },
+    {
+        "createdAt":  "2026-01-09T03:36:29Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Teams-first Multi-agent orchestration for Claude Code",
+        "forkCount":  3304,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  0
+                   },
+        "latestRelease":  {
+                              "name":  "v4.14.7",
+                              "tagName":  "v4.14.7",
+                              "url":  "https://github.com/Yeachan-Heo/oh-my-claudecode/releases/tag/v4.14.7",
+                              "publishedAt":  "2026-06-14T09:43:43Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "Yeachan-Heo/oh-my-claudecode",
+        "primaryLanguage":  {
+                                "name":  "TypeScript"
+                            },
+        "pushedAt":  "2026-06-14T09:35:14Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agentic-coding"
+                                 },
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "claude"
+                                 },
+                                 {
+                                     "name":  "claude-code"
+                                 },
+                                 {
+                                     "name":  "oh-my-opencode"
+                                 },
+                                 {
+                                     "name":  "opencode"
+                                 },
+                                 {
+                                     "name":  "vibe-coding"
+                                 },
+                                 {
+                                     "name":  "automation"
+                                 },
+                                 {
+                                     "name":  "multi-agent-systems"
+                                 },
+                                 {
+                                     "name":  "parallel-execution"
+                                 }
+                             ],
+        "stargazerCount":  36357,
+        "url":  "https://github.com/Yeachan-Heo/oh-my-claudecode",
+        "watchers":  {
+                         "totalCount":  126
+                     }
+    },
+    {
+        "createdAt":  "2026-02-23T14:35:04Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "🏛️ 三省六部制 · OpenClaw Multi-Agent Orchestration System — 9 specialized AI agents with real-time dashboard, model config, and full audit trails",
+        "forkCount":  1692,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  33
+                   },
+        "latestRelease":  null,
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "cft0808/edict",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-04T16:30:08Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai-orchestration"
+                                 },
+                                 {
+                                     "name":  "dashboard"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "multi-agent"
+                                 },
+                                 {
+                                     "name":  "openclaw"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "autonomous-agents"
+                                 },
+                                 {
+                                     "name":  "claude"
+                                 },
+                                 {
+                                     "name":  "kanban"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "orchestration"
+                                 },
+                                 {
+                                     "name":  "workflow-automation"
+                                 }
+                             ],
+        "stargazerCount":  16055,
+        "url":  "https://github.com/cft0808/edict",
+        "watchers":  {
+                         "totalCount":  71
+                     }
+    },
+    {
+        "createdAt":  "2026-03-22T14:52:26Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Audit-grade multi-agent orchestration for CLI coding agents (Claude Code, Codex, Gemini CLI, +40 more). HMAC-chained audit log, signed agent cards, per-artefact lineage, air-gap deploy. The orchestrator your compliance team will sign off on. https://bernstein.run",
+        "forkCount":  48,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  11
+                   },
+        "latestRelease":  {
+                              "name":  "v2.7.0",
+                              "tagName":  "v2.7.0",
+                              "url":  "https://github.com/sipyourdrink-ltd/bernstein/releases/tag/v2.7.0",
+                              "publishedAt":  "2026-05-24T15:53:42Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "sipyourdrink-ltd/bernstein",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T09:40:49Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai-agents"
+                                 },
+                                 {
+                                     "name":  "mcp-server"
+                                 },
+                                 {
+                                     "name":  "claude-code"
+                                 },
+                                 {
+                                     "name":  "model-context-protocol"
+                                 },
+                                 {
+                                     "name":  "agent-framework"
+                                 },
+                                 {
+                                     "name":  "ai-coding"
+                                 },
+                                 {
+                                     "name":  "cli-tool"
+                                 },
+                                 {
+                                     "name":  "coding-agent"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "agent-orchestrator"
+                                 },
+                                 {
+                                     "name":  "aider"
+                                 },
+                                 {
+                                     "name":  "codex-cli"
+                                 },
+                                 {
+                                     "name":  "multi-agent"
+                                 },
+                                 {
+                                     "name":  "swe-bench"
+                                 },
+                                 {
+                                     "name":  "deterministic-scheduler"
+                                 },
+                                 {
+                                     "name":  "hmac-audit"
+                                 },
+                                 {
+                                     "name":  "parallel-worktrees"
+                                 },
+                                 {
+                                     "name":  "agentic-ai"
+                                 },
+                                 {
+                                     "name":  "anthropic"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 }
+                             ],
+        "stargazerCount":  571,
+        "url":  "https://github.com/sipyourdrink-ltd/bernstein",
+        "watchers":  {
+                         "totalCount":  9
+                     }
+    },
+    {
+        "createdAt":  "2026-03-18T08:03:04Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "Production-grade multi-agent orchestration platform - JSON-defined agents, multi-tier memory, and built-in observability. Battle-tested on 200+ enterprise AI agents. Now fully open-sourced (prod at https://kiwiq.ai).",
+        "forkCount":  113,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  6
+                   },
+        "latestRelease":  null,
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "rcortx/kiwiq",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-04-13T18:33:03Z",
+        "repositoryTopics":  null,
+        "stargazerCount":  1017,
+        "url":  "https://github.com/rcortx/kiwiq",
+        "watchers":  {
+                         "totalCount":  6
+                     }
+    },
+    {
+        "createdAt":  "2025-08-29T10:53:48Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "A production-oriented multi-agent orchestration framework.",
+        "forkCount":  317,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  0
+                   },
+        "latestRelease":  {
+                              "name":  "Shannon v0.5.1",
+                              "tagName":  "v0.5.1",
+                              "url":  "https://github.com/Kocoro-lab/Shannon/releases/tag/v0.5.1",
+                              "publishedAt":  "2026-06-02T13:20:33Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "Kocoro-lab/Shannon",
+        "primaryLanguage":  {
+                                "name":  "Go"
+                            },
+        "pushedAt":  "2026-06-08T03:32:31Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agent"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "multi-agent-systems"
+                                 }
+                             ],
+        "stargazerCount":  2004,
+        "url":  "https://github.com/Kocoro-lab/Shannon",
+        "watchers":  {
+                         "totalCount":  17
+                     }
+    },
+    {
+        "createdAt":  "2025-05-01T20:48:50Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "AssetOpsBench - Industry 4.0: A unified benchmark and framework for building, orchestrating, and evaluating domain-specific AI agents for Industry 4.0 asset operations and maintenance, with 460+ scenarios, 5 specialist agents (IoT, FMSR, TSFM, Work Order,...), and multi-agent orchestration blueprints (MetaAgent, AgentHive) over MCP.",
+        "forkCount":  264,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  23
+                   },
+        "latestRelease":  null,
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "IBM/AssetOpsBench",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T01:11:48Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "llm-agents"
+                                 },
+                                 {
+                                     "name":  "model-context-protocol"
+                                 },
+                                 {
+                                     "name":  "time-series-forecasting"
+                                 },
+                                 {
+                                     "name":  "condition-based-maintenance"
+                                 },
+                                 {
+                                     "name":  "hvac-maintenance"
+                                 },
+                                 {
+                                     "name":  "iot"
+                                 },
+                                 {
+                                     "name":  "predictive-maintenance"
+                                 },
+                                 {
+                                     "name":  "ai-for-physical-assets"
+                                 }
+                             ],
+        "stargazerCount":  1776,
+        "url":  "https://github.com/IBM/AssetOpsBench",
+        "watchers":  {
+                         "totalCount":  9
+                     }
+    },
+    {
+        "createdAt":  "2023-08-28T02:18:13Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "ChatDev 2.0: Dev All through LLM-powered Multi-Agent Collaboration",
+        "forkCount":  4163,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  44
+                   },
+        "latestRelease":  {
+                              "name":  "v2.2.0:",
+                              "tagName":  "v2.2.0",
+                              "url":  "https://github.com/OpenBMB/ChatDev/releases/tag/v2.2.0",
+                              "publishedAt":  "2026-03-23T02:10:51Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "OpenBMB/ChatDev",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-05-27T12:41:14Z",
+        "repositoryTopics":  null,
+        "stargazerCount":  33400,
+        "url":  "https://github.com/OpenBMB/ChatDev",
+        "watchers":  {
+                         "totalCount":  359
+                     }
+    },
+    {
+        "createdAt":  "2023-03-16T09:21:07Z",
+        "defaultBranchRef":  {
+                                 "name":  "master"
+                             },
+        "description":  "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+        "forkCount":  46143,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  271
+                   },
+        "latestRelease":  {
+                              "name":  "autogpt-platform-beta-v0.6.63",
+                              "tagName":  "autogpt-platform-beta-v0.6.63",
+                              "url":  "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.6.63",
+                              "publishedAt":  "2026-06-10T20:56:47Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "Significant-Gravitas/AutoGPT",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-13T23:47:18Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 },
+                                 {
+                                     "name":  "artificial-intelligence"
+                                 },
+                                 {
+                                     "name":  "autonomous-agents"
+                                 },
+                                 {
+                                     "name":  "llama-api"
+                                 },
+                                 {
+                                     "name":  "agentic-ai"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "claude"
+                                 },
+                                 {
+                                     "name":  "gpt"
+                                 }
+                             ],
+        "stargazerCount":  184932,
+        "url":  "https://github.com/Significant-Gravitas/AutoGPT",
+        "watchers":  {
+                         "totalCount":  1535
+                     }
+    },
+    {
+        "createdAt":  "2024-03-13T03:33:31Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "🙌 OpenHands: AI-Driven Development",
+        "forkCount":  9777,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  134
+                   },
+        "latestRelease":  {
+                              "name":  "1.8.0 - 2026-06-10",
+                              "tagName":  "1.8.0",
+                              "url":  "https://github.com/OpenHands/OpenHands/releases/tag/1.8.0",
+                              "publishedAt":  "2026-06-10T16:58:51Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "OpenHands/OpenHands",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T04:08:39Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agent"
+                                 },
+                                 {
+                                     "name":  "artificial-intelligence"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "chatgpt"
+                                 },
+                                 {
+                                     "name":  "claude-ai"
+                                 },
+                                 {
+                                     "name":  "cli"
+                                 },
+                                 {
+                                     "name":  "developer-tools"
+                                 },
+                                 {
+                                     "name":  "gpt"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 }
+                             ],
+        "stargazerCount":  76980,
+        "url":  "https://github.com/OpenHands/OpenHands",
+        "watchers":  {
+                         "totalCount":  456
+                     }
+    },
+    {
+        "createdAt":  "2024-04-02T04:09:47Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] ",
+        "forkCount":  2132,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  21
+                   },
+        "latestRelease":  {
+                              "name":  "v1.1.0: 10s of thousands of training trajectories",
+                              "tagName":  "v1.1.0",
+                              "url":  "https://github.com/SWE-agent/SWE-agent/releases/tag/v1.1.0",
+                              "publishedAt":  "2025-05-22T16:11:39Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "mit",
+                            "name":  "MIT License",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "SWE-agent/SWE-agent",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-10T22:08:28Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "agent"
+                                 },
+                                 {
+                                     "name":  "ai"
+                                 },
+                                 {
+                                     "name":  "developer-tools"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "agent-based-model"
+                                 },
+                                 {
+                                     "name":  "lms"
+                                 },
+                                 {
+                                     "name":  "cybersecurity"
+                                 }
+                             ],
+        "stargazerCount":  19505,
+        "url":  "https://github.com/SWE-agent/SWE-agent",
+        "watchers":  {
+                         "totalCount":  110
+                     }
+    },
+    {
+        "createdAt":  "2023-07-27T00:09:52Z",
+        "defaultBranchRef":  {
+                                 "name":  "litellm_internal_staging"
+                             },
+        "description":  "Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging. [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]",
+        "forkCount":  8864,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  1387
+                   },
+        "latestRelease":  {
+                              "name":  "v1.89.0",
+                              "tagName":  "v1.89.0",
+                              "url":  "https://github.com/BerriAI/litellm/releases/tag/v1.89.0",
+                              "publishedAt":  "2026-06-14T00:05:01Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "other",
+                            "name":  "Other",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "BerriAI/litellm",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-14T06:58:37Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "anthropic"
+                                 },
+                                 {
+                                     "name":  "langchain"
+                                 },
+                                 {
+                                     "name":  "llm"
+                                 },
+                                 {
+                                     "name":  "llmops"
+                                 },
+                                 {
+                                     "name":  "openai"
+                                 },
+                                 {
+                                     "name":  "ai-gateway"
+                                 },
+                                 {
+                                     "name":  "azure-openai"
+                                 },
+                                 {
+                                     "name":  "bedrock"
+                                 },
+                                 {
+                                     "name":  "gateway"
+                                 },
+                                 {
+                                     "name":  "openai-proxy"
+                                 },
+                                 {
+                                     "name":  "vertex-ai"
+                                 },
+                                 {
+                                     "name":  "llm-gateway"
+                                 },
+                                 {
+                                     "name":  "litellm"
+                                 },
+                                 {
+                                     "name":  "mcp-gateway"
+                                 }
+                             ],
+        "stargazerCount":  50306,
+        "url":  "https://github.com/BerriAI/litellm",
+        "watchers":  {
+                         "totalCount":  208
+                     }
+    },
+    {
+        "createdAt":  "2024-11-30T01:47:40Z",
+        "defaultBranchRef":  {
+                                 "name":  "main"
+                             },
+        "description":  "🚀 The fast, Pythonic way to build MCP servers and clients.",
+        "forkCount":  2067,
+        "isArchived":  false,
+        "isFork":  false,
+        "issues":  {
+                       "totalCount":  243
+                   },
+        "latestRelease":  {
+                              "name":  "v3.4.2: Heads Up",
+                              "tagName":  "v3.4.2",
+                              "url":  "https://github.com/PrefectHQ/fastmcp/releases/tag/v3.4.2",
+                              "publishedAt":  "2026-06-06T01:29:58Z"
+                          },
+        "licenseInfo":  {
+                            "key":  "apache-2.0",
+                            "name":  "Apache License 2.0",
+                            "nickname":  ""
+                        },
+        "nameWithOwner":  "PrefectHQ/fastmcp",
+        "primaryLanguage":  {
+                                "name":  "Python"
+                            },
+        "pushedAt":  "2026-06-06T01:30:50Z",
+        "repositoryTopics":  [
+                                 {
+                                     "name":  "model-context-protocol"
+                                 },
+                                 {
+                                     "name":  "fastmcp"
+                                 },
+                                 {
+                                     "name":  "mcp"
+                                 },
+                                 {
+                                     "name":  "agents"
+                                 },
+                                 {
+                                     "name":  "llms"
+                                 },
+                                 {
+                                     "name":  "mcp-clients"
+                                 },
+                                 {
+                                     "name":  "mcp-servers"
+                                 },
+                                 {
+                                     "name":  "mcp-tools"
+                                 },
+                                 {
+                                     "name":  "python"
+                                 }
+                             ],
+        "stargazerCount":  25620,
+        "url":  "https://github.com/PrefectHQ/fastmcp",
+        "watchers":  {
+                         "totalCount":  116
+                     }
+    }
+]

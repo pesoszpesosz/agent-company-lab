@@ -1,0 +1,84 @@
+{
+  "trace_id": "trace-agent-company-atlas-company-quest-board-v1-20260618",
+  "task_id": "task-agent-company-atlas-company-quest-board-v1-20260618",
+  "event_id": "trace-atlas_company_quest_board_added-20260618",
+  "created_at": "2026-06-18T08:06:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "company_quest_board",
+  "summary": "Added a generated-art Company Quest Board between the Dispatch Console and bot command surfaces so all lane tasks, blockers, wins, pressure, and staged drafts are visible as a global mission board.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0d8d7e614f01b2b9016a33a6bb142c819180767fbbf2a20025.png",
+    "workspace_path": "web/assets/system/company-quest-board-20260618.png",
+    "bytes": 2553001,
+    "sha256": "C19DE838271FB72C88910C89A2FAB2EF43B25912D99662E8B56046159838EA38",
+    "prompt_summary": "Premium dark sci-fi company quest board command table with mission cards, lane rails, blocker gates, completed-task medals, trace sparks, expansion slots, teal/amber/green/violet glows, no text, no logos, no faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/company-quest-board-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_company_quest_board.py",
+      "reports/agent-company-atlas-company-quest-board-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a Company Quest Board between the Dispatch Console and bot command surfaces.",
+      "Use generated company-quest-board-20260618.png as the reusable global mission-board backdrop.",
+      "Derive lane cards from existing tasks, service requests, gate maps, outcomes, dispatch suggestions, and browser-local staged drafts.",
+      "Rank lane cards by task/gate pressure and visible movement without adding snapshot schema.",
+      "Expose TASKS, GATES, and WINS actions through existing Mission Feed filters.",
+      "Allow each quest card to drill into its lane overview.",
+      "Register the quest-board texture in the Visual Asset Vault system assets.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_company_quest_board.py -q failed before implementation on missing companyQuestBoard selector.",
+      "green": "pytest tests\\test_agent_company_atlas_company_quest_board.py -q passed after generated asset, renderer, styles, docs, cache token, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "company_quest_board_contract_test": "passed",
+      "asset_present_bytes": 2553001
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=company-quest-board-green",
+      "evidence": {
+        "company_quest_board_present": true,
+        "generated_backdrop_loaded": true,
+        "stat_count": 5,
+        "quest_card_count": 9,
+        "lane_linked_cards": 9,
+        "action_count": 3,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "TASKS -> Mission Feed task filter",
+          "GATES -> Mission Feed service_request filter",
+          "WINS -> Mission Feed outcome filter",
+          "Quest card -> selected lane overview"
+        ],
+        "horizontal_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Company Quest Board with generated backdrop, five stats, nine lane cards, three local actions, zero bad rects, zero button text overflow, zero page horizontal overflow, and zero console errors."
+    }
+  }
+}

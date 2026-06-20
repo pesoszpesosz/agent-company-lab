@@ -1,0 +1,35 @@
+{
+  "forbidden_actions": [
+    "Do not insert this packet into source_specs without a separate explicit task.",
+    "Do not browse, register accounts, accept terms, download gated datasets, publish listings, submit work, touch wallets/payments, or send outreach from this packet.",
+    "Do not mutate service requests or assign workers from this packet."
+  ],
+  "generated_utc": "2026-06-15T17:00:55Z",
+  "lane_id": "money_source_discovery",
+  "next_action": "Review and, if accepted, convert into a source-spec registry row in a separate local-only task.",
+  "proposed_source_spec": {
+    "cadence": "lane_owner_on_demand_or_weekly",
+    "id": "money_source_discovery_public_venue_source_seed",
+    "lane_id": "money_source_discovery",
+    "name": "Money Source Discovery Public Venue Source Seed",
+    "notes": "Use to widen the online money-path map. Any registration, outreach, wallet, payment, or public submission remains separately gated.",
+    "outputs": [
+      "E:\\agent-company-lab\\reports\\money-source-discovery\\public-venue-source-refresh-YYYYMMDD.md",
+      "lane_evidence",
+      "service_request_candidates"
+    ],
+    "refresh_command": "Prepare a read-only source registry scan only after lane manager claim; classify venue, payout route, account gate, and proof artifact.",
+    "risk_gate": "read_only_discovery_no_registration_outreach_wallet_payment_or_submission",
+    "source_paths": [
+      "public bounty and paid-task venue lists",
+      "grant and hackathon aggregators",
+      "creator-marketplace opportunity lists",
+      "AI evaluation and data-labeling opportunity pages",
+      "local profit-edge imported negative and parked rows"
+    ],
+    "source_type": "public_venue_registry"
+  },
+  "registry_insert_allowed": false,
+  "report_only": true,
+  "schema_version": "agent_company.source_spec_seed_packet.v1"
+}

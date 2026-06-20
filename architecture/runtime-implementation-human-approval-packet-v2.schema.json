@@ -1,0 +1,85 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/runtime-implementation-human-approval-packet-v2.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Runtime Implementation Human Approval Packet v2",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_implementation_human_approval_packet.v2"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-runtime-implementation-human-approval-packet-v2-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source_evidence": {
+      "type": "object"
+    },
+    "approval_questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "required_decision_fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "approval_granted_by_packet": {
+      "const": false
+    },
+    "runtime_implementation_allowed": {
+      "const": false
+    },
+    "runtime_code_write_allowed": {
+      "const": false
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "purpose",
+    "source_evidence",
+    "approval_questions",
+    "runtime_candidates",
+    "required_decision_fields",
+    "runtime_boundary",
+    "approval_granted_by_packet",
+    "runtime_implementation_allowed",
+    "runtime_code_write_allowed",
+    "next_action"
+  ]
+}

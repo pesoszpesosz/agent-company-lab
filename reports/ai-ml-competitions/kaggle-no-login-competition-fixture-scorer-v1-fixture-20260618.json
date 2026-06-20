@@ -1,0 +1,199 @@
+{
+  "hard_kill_reasons": [
+    "no_cash_prize_or_unclear_prize",
+    "deadline_too_close_for_first_local_baseline",
+    "rules_or_eligibility_unreadable_without_account",
+    "requires_accepting_terms_or_downloading_data_before_review",
+    "medical_biometric_child_or_sensitive_data_provenance_unclear",
+    "external_data_policy_unclear",
+    "requires_paid_compute_or_large_gpu_without budget approval",
+    "requires_team_or_organization_commitment",
+    "requires_public_notebook_or_writeup_before approval",
+    "tax_payment_or_country_eligibility_unclear",
+    "cannot_reproduce_baseline_locally"
+  ],
+  "rows": [
+    {
+      "baseline_available_locally": true,
+      "category": "featured",
+      "code_competition": false,
+      "competition_group": "general",
+      "competition_url_or_slug": "featured-tabular-forecasting-cash-prize-saved-snippet",
+      "compute_requirements": "small_tabular_baseline_likely_cpu_ok",
+      "data_access_requires_rules_acceptance": true,
+      "days_to_deadline": 58,
+      "deadline_utc": "2026-08-15T23:59:00Z",
+      "eligibility_flags": [
+        "country_payment_tax_review_required"
+      ],
+      "expected_hours_to_first_submission": 6,
+      "external_data_policy": "unclear_until_specific_rules_review",
+      "license_or_ip_terms_summary": "unread_specific_rules",
+      "observed_utc": "2026-06-18T07:02:31Z",
+      "payout_route_reviewable": false,
+      "prize_usd_or_text": "$25,000",
+      "rules_clarity": false,
+      "skill_fit": "tabular_forecasting",
+      "source_route": "manual_saved_public_listing_snippet",
+      "submission_type": "csv_predictions",
+      "teams_count": 84,
+      "title": "Saved featured tabular forecasting competition snippet"
+    },
+    {
+      "baseline_available_locally": false,
+      "category": "research",
+      "code_competition": true,
+      "competition_group": "research",
+      "competition_url_or_slug": "research-medical-image-cash-prize-saved-snippet",
+      "compute_requirements": "gpu_likely_required",
+      "data_access_requires_rules_acceptance": true,
+      "days_to_deadline": 104,
+      "deadline_utc": "2026-09-30T23:59:00Z",
+      "eligibility_flags": [
+        "sensitive_data_review_required",
+        "organization_commitment_possible"
+      ],
+      "expected_hours_to_first_submission": 40,
+      "external_data_policy": "medical_data_provenance_unclear",
+      "license_or_ip_terms_summary": "publication_and_ip_terms_unread",
+      "observed_utc": "2026-06-18T07:02:31Z",
+      "payout_route_reviewable": false,
+      "prize_usd_or_text": "$50,000",
+      "rules_clarity": false,
+      "skill_fit": "vision",
+      "source_route": "manual_saved_public_rules_snippet",
+      "submission_type": "notebook_or_model_artifact",
+      "teams_count": 442,
+      "title": "Saved medical imaging research prize snippet"
+    },
+    {
+      "baseline_available_locally": true,
+      "category": "playground",
+      "code_competition": false,
+      "competition_group": "playground",
+      "competition_url_or_slug": "playground-practice-no-cash-saved-snippet",
+      "compute_requirements": "cpu_ok",
+      "data_access_requires_rules_acceptance": true,
+      "days_to_deadline": 32,
+      "deadline_utc": "2026-07-20T23:59:00Z",
+      "eligibility_flags": [],
+      "expected_hours_to_first_submission": 4,
+      "external_data_policy": "standard_practice_unknown",
+      "license_or_ip_terms_summary": "unread_specific_rules",
+      "observed_utc": "2026-06-18T07:02:31Z",
+      "payout_route_reviewable": false,
+      "prize_usd_or_text": "swag_or_no_cash_prize",
+      "rules_clarity": false,
+      "skill_fit": "tabular_practice",
+      "source_route": "manual_saved_public_listing_snippet",
+      "submission_type": "csv_predictions",
+      "teams_count": 2380,
+      "title": "Saved playground practice competition snippet"
+    },
+    {
+      "baseline_available_locally": true,
+      "category": "featured",
+      "code_competition": true,
+      "competition_group": "general",
+      "competition_url_or_slug": "code-agent-routing-challenge-saved-snippet",
+      "compute_requirements": "local_stub_harness_possible_no_official_data",
+      "data_access_requires_rules_acceptance": true,
+      "days_to_deadline": 44,
+      "deadline_utc": "2026-08-01T23:59:00Z",
+      "eligibility_flags": [
+        "team_rules_review_required",
+        "tax_payment_review_required"
+      ],
+      "expected_hours_to_first_submission": 10,
+      "external_data_policy": "must_be_checked_before_any_submission",
+      "license_or_ip_terms_summary": "unread_specific_rules",
+      "observed_utc": "2026-06-18T07:02:31Z",
+      "payout_route_reviewable": false,
+      "prize_usd_or_text": "$10,000",
+      "rules_clarity": false,
+      "skill_fit": "agentic_orchestration",
+      "source_route": "manual_saved_public_listing_and_rules_snippet",
+      "submission_type": "code",
+      "teams_count": 126,
+      "title": "Saved code/agent routing challenge snippet"
+    }
+  ],
+  "schema_version": "ai_ml_competitions.kaggle_no_login_saved_rows_fixture.v1",
+  "scoring_rubric": [
+    {
+      "factor": "prize",
+      "good": "cash prize explicit and nonzero",
+      "points": 20
+    },
+    {
+      "factor": "deadline",
+      "good": "at least 14 days to first useful local baseline",
+      "points": 15
+    },
+    {
+      "factor": "data_access",
+      "good": "data can be inspected after approved rules review; no private/medical ambiguity",
+      "points": 15
+    },
+    {
+      "factor": "baseline_feasibility",
+      "good": "simple local baseline or public tutorial can be reproduced without paid compute",
+      "points": 15
+    },
+    {
+      "factor": "competition_density",
+      "good": "low/moderate team count or niche expertise advantage",
+      "points": 10
+    },
+    {
+      "factor": "rules_clarity",
+      "good": "external data, team, code, and IP rules are unambiguous",
+      "points": 10
+    },
+    {
+      "factor": "skill_fit",
+      "good": "tabular/NLP/vision/agentic task matches available local skills",
+      "points": 10
+    },
+    {
+      "factor": "payout_route",
+      "good": "eligibility and tax/payment route can be reviewed before submission",
+      "points": 5
+    }
+  ],
+  "source": "manually_saved_public_listing_and_rules_snippets_no_kaggle_login_no_api_token",
+  "source_gate_notes": [
+    "Worksheet records the 401 unauthenticated API result instead of pretending active listings were captured.",
+    "Worksheet separates listing, data-access, local-baseline, and submission gates.",
+    "At least fifteen fields are defined for future candidate rows.",
+    "At least four candidate classes are defined.",
+    "At least eight hard kill reasons are defined.",
+    "No Kaggle login, token, data download, rules acceptance, notebook run, submission, public comment, or payment action occurred.",
+    "Official competition listing exists but is JavaScript-heavy in text fetches.",
+    "Use it as a human/browser review source only after an approved read-only browser request.",
+    "Read-only unauthenticated probe returned HTTP 401 Unauthorized.",
+    "Automated current listing refresh requires an approved Kaggle credential/API-token route.",
+    "The official Kaggle CLI can list competitions, download competition data, and submit to competitions.",
+    "These capabilities must be split into separate scout, data-access, and submission gates.",
+    "Kaggle CLI authentication requires a Kaggle account and token or OAuth flow.",
+    "Any credential generation, account login, or API-token storage is gated.",
+    "The CLI supports competition list filters by group, category, prize sort, deadlines, teams, and created date.",
+    "It also supports files, download, submit, submissions, leaderboard, and discussion topics commands.",
+    "Kaggle competitions can be paid or unpaid.",
+    "Submission, leaderboard, and prize/IP conditions vary by competition and must be read in the specific rules.",
+    "Recent Kaggle ecosystem research frames the platform as a broad competition, notebook, model, dataset, and discussion ecosystem.",
+    "Use discussions and prior writeups as learning signals, not as permission to submit.",
+    "Prior competition lane work kept account, official data, submission, paid compute, and public action blocked.",
+    "Reuse that gate posture for Kaggle prize scouting."
+  ],
+  "source_proof_path": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\kaggle-money-competition-scout-worksheet-local-proof.json",
+  "source_scout_task_id": "task-lane-scout-kaggle_money_competitions-20260618",
+  "source_urls": [
+    "https://www.kaggle.com/competitions",
+    "https://www.kaggle.com/api/v1/competitions/list?category=featured&page=1",
+    "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/README.md",
+    "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/README.md",
+    "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competitions.md",
+    "https://en.wikipedia.org/wiki/Kaggle"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "traceId": "trace-agent-company-atlas-path-stage-nav-dock-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-stage-nav-dock-v1-20260618",
+  "eventId": "trace-atlas_path_stage_nav_dock_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-stage-nav-dock-trace-metadata-20260618",
+  "title": "Path Stage Nav Dock",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "ownerAgentId": "recovered-profitable-edge-infra",
+  "problem": "The Path view was becoming more game-like, but a duplicated text tab row still sat outside the cockpit and made the stage feel like a webpage stack. The first Path screen needed less chrome and more in-world navigation.",
+  "implementation": [
+    "Added renderPathStageNavDock as a compact in-board HUD with overview, map, log, trail, play, and comms controls.",
+    "Hid the duplicated Path-mode detail tab row while preserving navigation through data-detail-view buttons.",
+    "Added top stage padding and responsive sizing so the HUD does not overlap Mission Glance on desktop or mobile.",
+    "Updated docs, cache tags, and regression coverage."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_stage_nav_dock.py"
+  ],
+  "browserEvidence": {
+    "desktop": {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "oldTabsDisplay": "none",
+      "navButtonCount": 6,
+      "navOverlapsMission": false,
+      "overflowX": 0,
+      "scrollY": 0,
+      "boardRect": {
+        "top": 139,
+        "width": 1195,
+        "height": 470
+      },
+      "navRect": {
+        "top": 150,
+        "width": 298,
+        "height": 37
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "oldTabsDisplay": "none",
+      "navButtonCount": 6,
+      "navOverlapsMission": false,
+      "overflowX": 0,
+      "scrollY": 0,
+      "boardRect": {
+        "top": 201,
+        "width": 306,
+        "height": 562
+      },
+      "navRect": {
+        "top": 210,
+        "width": 212,
+        "height": 33
+      }
+    }
+  },
+  "verification": [
+    {
+      "type": "red-test",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_nav_dock.py -q",
+      "result": "failed before integration because the cockpit nav renderer, hidden Path tab row, styles, README, and cache tags were not present"
+    },
+    {
+      "type": "focused-tests",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_nav_dock.py -q",
+      "result": "1 passed"
+    },
+    {
+      "type": "syntax",
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "passed"
+    },
+    {
+      "type": "full-suite",
+      "command": "python -m pytest E:\\agent-company-lab -q",
+      "result": "112 passed"
+    },
+    {
+      "type": "browser",
+      "command": "In-app browser verification on command/path route at 1280x900 and 390x844",
+      "result": "Old detail tabs hidden, six-button HUD nav visible, no Mission Glance overlap, no horizontal overflow, and no page scroll at load"
+    }
+  ],
+  "nextAction": "Continue tightening the Path cockpit into a premium first-screen command level, then bring the same no-scroll game-stage discipline to lane minigames."
+}

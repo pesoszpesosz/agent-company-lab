@@ -1,0 +1,18 @@
+{
+  "all_checks_passed": true,
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-gate-decision-packet-cli-20260616",
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T22:15:33Z",
+  "outcome_created_or_updated": true,
+  "packet_lane_id": "digital_products_templates_plugins",
+  "packet_task_id": "task-digital-products-local-gate-decision-packet-20260616",
+  "registered_artifact_count": 7,
+  "schema_version": "agent_company.digital_products_local_gate_decision_packet_cli_validation.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "trace_event_created_or_updated": true,
+  "worker_starts": 0
+}

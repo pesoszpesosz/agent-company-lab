@@ -1,0 +1,78 @@
+{
+  "trace_id": "trace-agent-company-atlas-thread-nexus-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "thread_nexus_bot_ownership_network",
+  "summary": "Added a Thread Nexus panel that turns agents, lanes, thread ids, blockers, staged commands, and top asks into a visual bot ownership network with direct path, comms, and staging controls.",
+  "design_research": {
+    "queries": [
+      "network graph dashboard UX team coordination status cards best practices",
+      "agent dashboard thread management UI pattern command center",
+      "node link diagram dashboard visualizing relationships UX"
+    ],
+    "source_urls": [
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards",
+      "https://github.com/builderz-labs/mission-control",
+      "https://flourish.studio/visualisations/network-charts/",
+      "https://www.visualizing.org/node-link-diagram",
+      "https://fuselabcreative.com/ui-design-for-ai-agents/"
+    ],
+    "pattern_notes": [
+      "Operational dashboards should prioritize glanceable status, focused drill-down, and clear actions over decorative density.",
+      "Mission-control style agent surfaces benefit from showing ownership, progress, and command readiness together.",
+      "Node-link diagrams are useful when relationship structure is the important question, but need accompanying details for exact status and next actions.",
+      "AI agent interfaces should expose context, trust state, and human control points rather than hiding orchestration behind generic chat."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-thread-nexus-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.agents[]",
+      "snapshot.lanes[]",
+      "lane.thread_id",
+      "lane.current_blockers[]",
+      "lane.pending_decisions[]",
+      "lane.progress_percent",
+      "lane.path[]",
+      "lane.current_task",
+      "botCommandRecords()",
+      "stagedCommands"
+    ],
+    "ui_contract": [
+      "Render Thread Nexus between the Dispatch Console and Bot Command Matrix.",
+      "Show one network node per command record, with active, ready, gated, and staged visual states.",
+      "Show a central Atlas relay hub connected to every bot node.",
+      "Show aggregate counts for ready bots, gated bots, staged commands, and open asks.",
+      "Show the selected bot focus card with lane, thread id, level, status, blockers, top ask, and quick controls.",
+      "PATH opens the selected lane's Path Map, COM opens the selected lane's command deck, and Q stages the suggested command.",
+      "Show a top-ask queue that can jump directly to the related lane overview.",
+      "The panel is local-only; it does not send external messages, start workers, or perform account actions."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "server_status": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=thread-nexus&cache=20260618-thread-nexus#lane=platform_engineering&view=overview",
+      "engine": "Playwright against local Chrome",
+      "checks": [
+        "390x920 viewport: Thread Nexus rendered 11 nodes, 11 links, 1 column, no horizontal overflow, no offscreen nodes, no console errors, and no failed responses.",
+        "1280x800 viewport: Thread Nexus rendered 11 nodes, 11 links, 2 columns, active selected node, 7 gated nodes, 4 queue items, no horizontal overflow, and no failed responses.",
+        "1280x800 interaction: PATH changed the route to #lane=platform_engineering&view=path and rendered Path Map.",
+        "1280x800 interaction: COM changed the route to #lane=platform_engineering&view=comms and rendered the command deck.",
+        "1280x800 interaction: Q changed the dispatch count from 0 staged to 1 staged, marked 1 Thread Nexus node as staged and gated, and marked 1 Bot Command Matrix card as staged.",
+        "1600x900 viewport: Thread Nexus rendered 11 nodes, 11 links, 2 columns, no horizontal overflow, no offscreen nodes, no console errors, and no failed responses."
+      ]
+    }
+  }
+}

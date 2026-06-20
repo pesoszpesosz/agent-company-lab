@@ -1,0 +1,153 @@
+{
+  "accepted_result_count": 4,
+  "evidence_rows_inserted_or_updated": 1,
+  "failed_fixture_count": 0,
+  "fixture_results": [
+    {
+      "actual": "accept",
+      "expected": "accept",
+      "fixture_id": "positive_hold",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual": "accept",
+      "expected": "accept",
+      "fixture_id": "positive_approve_sandbox_dry_run_only",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual": "accept",
+      "expected": "accept",
+      "fixture_id": "positive_request_rework",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual": "accept",
+      "expected": "accept",
+      "fixture_id": "positive_reject_migration_path",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "missing_decision_id",
+      "passed": true,
+      "reasons": [
+        "missing_required_fields"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "unknown_decision_type",
+      "passed": true,
+      "reasons": [
+        "unknown_decision_type"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "live_apply_scope",
+      "passed": true,
+      "reasons": [
+        "forbidden_scope"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "missing_artifact_paths",
+      "passed": true,
+      "reasons": [
+        "missing_artifact_paths"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "expired_decision",
+      "passed": true,
+      "reasons": [
+        "expired_or_missing_expiration"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "unsigned_decision",
+      "passed": true,
+      "reasons": [
+        "missing_required_fields",
+        "unsigned_decision"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "gated_action_bundle",
+      "passed": true,
+      "reasons": [
+        "forbidden_scope"
+      ]
+    },
+    {
+      "actual": "reject",
+      "expected": "reject",
+      "fixture_id": "service_request_mutation",
+      "passed": true,
+      "reasons": [
+        "forbidden_scope"
+      ]
+    }
+  ],
+  "fixture_runner_count": 1,
+  "fixture_suite_count": 12,
+  "fixtures_evaluated": 12,
+  "generated_utc": "2026-06-16T12:00:38Z",
+  "lane_evidence_rows_after": 142,
+  "lane_evidence_rows_before": 141,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_fixture_runner_ready_for_report_only_parser_scaffold",
+  "next_action": "Build the report-only parser scaffold next; do not parse live decisions or apply operator decisions.",
+  "output_state_count": 4,
+  "parser_guard_count": 9,
+  "passed_fixture_count": 12,
+  "recommended_default": "build_report_only_parser_scaffold_next_without_parsing_live_decisions",
+  "rejected_result_count": 8,
+  "runner_evidence_id": "agent-company-migration-decision-fixture-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-agent-company-migration-decision-fixture-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "report_only_fixtures_evaluated": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_fixture_runner.v1",
+  "source_suite_evidence_id": "agent-company-migration-decision-fixture-suite-20260616",
+  "source_suite_task_id": "task-agent-company-migration-decision-fixture-suite-20260616",
+  "summary": "Evaluated the migration decision fixture suite with a deterministic report-only runner; all 12 synthetic fixtures matched expected accept/reject outcomes.",
+  "task_rows_inserted_by_fixture_runner": 1,
+  "tasks_table_rows_after": 234,
+  "tasks_table_rows_before": 233
+}

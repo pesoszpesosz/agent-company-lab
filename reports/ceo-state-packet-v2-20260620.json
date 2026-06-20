@@ -1,0 +1,56 @@
+{
+  "schema_version": "ceo_state_packet.v2",
+  "generated_utc": "2026-06-20T17:04:00Z",
+  "status": "current_local_state_packet_after_premium_customer_intake_install",
+  "company_counts": {
+    "lanes": 15,
+    "departments": 22,
+    "roles": 18,
+    "agents": 16,
+    "tasks": 580,
+    "artifacts": 2413,
+    "outcomes": 419,
+    "trace_events": 510,
+    "service_requests": 16
+  },
+  "active_new_lanes": [
+    {
+      "lane_id": "ai_resources_lab",
+      "department": "AI Resources",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "status": "active"
+    },
+    {
+      "lane_id": "youtube_content_channels",
+      "department": "Audience/Distribution",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "status": "active"
+    },
+    {
+      "lane_id": "premium_customer_intake",
+      "department": "Customer/Operator Success",
+      "owner_agent_id": "premium-customer-intake-agent-20260620",
+      "status": "active"
+    }
+  ],
+  "new_ceo_context_rule": "Customer raw requests and materials flow through premium_customer_intake. The CEO receives compact capsules, route status, and applied-knowledge deltas.",
+  "current_decision_batch": [
+    "use_premium_intake_for_future_customer_requests_and_lane_materials",
+    "create_youtube_no_post_content_batch_v1",
+    "create_control_plane_capacity_benchmark_packet_v1",
+    "convert_blocker_triage_into_manager_dispatch"
+  ],
+  "human_action_state": {
+    "immediate_human_action_required": false
+  },
+  "zero_side_effect_boundary": {
+    "service_requests_approved": 0,
+    "workers_started": 0,
+    "model_api_mcp_calls": 0,
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "payments_trades_wallets_security_testing": 0,
+    "external_side_effects": false
+  }
+}

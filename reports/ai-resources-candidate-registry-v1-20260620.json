@@ -1,0 +1,139 @@
+{
+  "schema_version": "ai_resources_candidate_registry.v1",
+  "generated_utc": "2026-06-20T16:52:00Z",
+  "lane_id": "ai_resources_lab",
+  "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+  "status": "report_only_seed_registry",
+  "evaluation_rules": [
+    "prefer_existing_agent_or_tool_evolution_before_creating_duplicates",
+    "require_local_proof_artifact_before_promotion",
+    "fast_fail_after_two_focused_work_blocks_without_useful_local_proof",
+    "keep_license_account_api_cost_browser_public_wallet_payment_and_security_gates_explicit",
+    "record_every_adoption_or_rejection_as_an_artifact"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "ceo_state_packet_v1",
+      "category": "company_memory",
+      "why_test": "Keep the CEO context window small while preserving decisions.",
+      "first_local_proof": "Current-state packet from SQLite and reports.",
+      "disposition": "promote_now",
+      "risk_gate": "local_report_only"
+    },
+    {
+      "candidate_id": "human_action_feed_v1",
+      "category": "human_in_loop",
+      "why_test": "Separate required user actions from optional approvals.",
+      "first_local_proof": "Feed with no-immediate-action status and optional gate queue.",
+      "disposition": "promote_now",
+      "risk_gate": "local_report_only"
+    },
+    {
+      "candidate_id": "youtube_no_post_content_batch_v1",
+      "category": "money_lane_workflow",
+      "why_test": "Start YouTube content experiments without account or upload actions.",
+      "first_local_proof": "Ten script/title/asset briefs and gate map.",
+      "disposition": "promote_now",
+      "risk_gate": "no_public_action"
+    },
+    {
+      "candidate_id": "langgraph_agent_inbox_patterns",
+      "category": "supervisor_inbox",
+      "why_test": "Existing radar shows useful packet shape without live transport.",
+      "first_local_proof": "Local packet schema only.",
+      "disposition": "watch",
+      "risk_gate": "no_transport_no_runtime"
+    },
+    {
+      "candidate_id": "temporal_workflow_adapter",
+      "category": "durable_orchestration",
+      "why_test": "Future fit for long-running service-worker workflows.",
+      "first_local_proof": "Report-only decision matrix and dry-run fixture.",
+      "disposition": "watch",
+      "risk_gate": "runtime_adapter_approval_required"
+    },
+    {
+      "candidate_id": "dbos_workflow_adapter",
+      "category": "durable_orchestration",
+      "why_test": "Closest to database-first posture if SQLite later moves to Postgres.",
+      "first_local_proof": "Local reducer fixture against copied data.",
+      "disposition": "watch",
+      "risk_gate": "runtime_adapter_approval_required"
+    },
+    {
+      "candidate_id": "hatchet_queue_adapter",
+      "category": "worker_queues",
+      "why_test": "Useful future queue and concurrency model.",
+      "first_local_proof": "Report-only pool-cap simulation.",
+      "disposition": "watch",
+      "risk_gate": "runtime_adapter_approval_required"
+    },
+    {
+      "candidate_id": "triggerdev_wait_queue_adapter",
+      "category": "worker_queues",
+      "why_test": "Useful waitpoint and human approval patterns.",
+      "first_local_proof": "Report-only waitpoint packet.",
+      "disposition": "watch",
+      "risk_gate": "runtime_adapter_approval_required"
+    },
+    {
+      "candidate_id": "pydantic_ai_testmodel_adapter",
+      "category": "model_harness",
+      "why_test": "Existing local adapter can test prompts without paid API calls.",
+      "first_local_proof": "Fixture-only eval run.",
+      "disposition": "keep_and_harden",
+      "risk_gate": "no_paid_api_call"
+    },
+    {
+      "candidate_id": "openai_agents_manifest_only_adapter",
+      "category": "model_harness",
+      "why_test": "Preserves future agent shape without running external tools.",
+      "first_local_proof": "Manifest validation only.",
+      "disposition": "keep_and_harden",
+      "risk_gate": "manifest_only_no_api_call"
+    },
+    {
+      "candidate_id": "promptbase_skill_route",
+      "category": "marketplace_route",
+      "why_test": "Existing product may fit prompt or skill marketplace routes.",
+      "first_local_proof": "Eligibility packet from local asset and public-source notes.",
+      "disposition": "test_soon",
+      "risk_gate": "account_payment_public_listing_approval_required"
+    },
+    {
+      "candidate_id": "algora_opik_bounty_route",
+      "category": "paid_code_route",
+      "why_test": "Existing worksheets can be hardened before live claims.",
+      "first_local_proof": "Claim-readiness packet and duplicate check.",
+      "disposition": "test_soon",
+      "risk_gate": "public_claim_pr_approval_required"
+    },
+    {
+      "candidate_id": "kaggle_arc_baseline_harness",
+      "category": "competition_route",
+      "why_test": "Prize upside exists, but time-to-cash is high.",
+      "first_local_proof": "Local baseline packet and rules gate.",
+      "disposition": "test_after_higher_roi_routes",
+      "risk_gate": "account_dataset_submission_approval_required"
+    },
+    {
+      "candidate_id": "kalshi_public_data_worksheet",
+      "category": "prediction_market_route",
+      "why_test": "Public market data can support paper-only research.",
+      "first_local_proof": "No-auth schema and paper worksheet.",
+      "disposition": "test_after_product_and_code_lanes",
+      "risk_gate": "real_money_trade_approval_required"
+    }
+  ],
+  "next_action": "Create ai_resources_candidate_evaluation_packet_v1 for ceo_state_packet_v1, human_action_feed_v1, and youtube_no_post_content_batch_v1.",
+  "zero_side_effect_boundary": {
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "browser_sessions": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions": 0,
+    "model_api_mcp_calls": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

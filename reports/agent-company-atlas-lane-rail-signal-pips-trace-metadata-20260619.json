@@ -1,0 +1,67 @@
+{
+  "traceId": "trace-agent-company-atlas-lane-rail-signal-pips-v1-20260619",
+  "taskId": "task-agent-company-atlas-lane-rail-signal-pips-v1-20260619",
+  "eventId": "trace-atlas_lane_rail_signal_pips_added-20260619",
+  "createdUtc": "2026-06-18T22:18:44Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "title": "Lane Rail Signal Pips",
+  "summary": "Added compact animated level, progress, and gate signal pips to each lane rail card and promoted the selected lane to the top of the rail so the active path stays visible.",
+  "changeType": "compact_state_and_motion",
+  "stageModel": {
+    "railSignals": [
+      "level charge",
+      "progress charge",
+      "gate pressure"
+    ],
+    "selectedLaneBehavior": "The active lane is promoted to the top of the compact rail while the rest of the lane set remains available below it.",
+    "motionBehavior": "Signal pips wake on the active lane and receive a restrained sweep animation, with reduced-motion handling preserved."
+  },
+  "browserEvidence": {
+    "desktopCommandChronicle": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "firstLane": "platform_engineering",
+      "activeLane": "platform_engineering",
+      "laneButtons": 12,
+      "signalCount": 12,
+      "pipCount": 36,
+      "activeVisibleInsidePanel": true,
+      "detailOverflow": 0,
+      "workspaceHeight": 640,
+      "activePipAnimation": "laneRailPipWake",
+      "signalSweepAnimation": "laneRailSignalSweep"
+    },
+    "mobileCommandChronicle": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "firstLane": "platform_engineering",
+      "activeLane": "platform_engineering",
+      "laneButtons": 12,
+      "signalCount": 12,
+      "pipCount": 36,
+      "activeVisibleInsidePanel": true,
+      "detailOverflow": 0,
+      "activePipAnimation": "laneRailPipWake",
+      "signalSweepAnimation": "laneRailSignalSweep"
+    }
+  },
+  "verification": [
+    "python -m pytest tests/test_agent_company_atlas_lane_rail_signal_pips.py -q",
+    "node --check web/app.js",
+    "In-app browser QA on command deck Chronicle route at 1440x900 and 390x844"
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_lane_rail_signal_pips.py",
+    "reports/agent-company-atlas-lane-rail-signal-pips-trace-metadata-20260619.json",
+    "web/data/snapshot.json"
+  ]
+}

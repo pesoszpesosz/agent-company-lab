@@ -1,0 +1,12 @@
+{
+  "span_kind": "internal",
+  "runtime": "codex_desktop_thread_tool",
+  "api_calls": false,
+  "external_side_effects": false,
+  "nudged_threads": [
+    "019ec699-e02b-7ce1-a7a6-32afc857c254",
+    "019ec69a-3c39-7de3-849b-f2d19a2d03da",
+    "019ec69a-9fe3-7530-b83e-ae404554bca7"
+  ],
+  "reason": "Wave-4 startup completion/status check after launch"
+}

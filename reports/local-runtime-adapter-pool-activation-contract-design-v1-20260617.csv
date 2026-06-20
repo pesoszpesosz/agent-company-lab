@@ -1,0 +1,23 @@
+fixture_id,expected_result,reason
+wrong_worker_pool_id,reject,only service-worker-local-runtime-adapter-pool is in scope
+wrong_role_id,reject,role must be observability_worker
+wrong_department_id,reject,department must be service_worker_observability
+expired_contract,reject,activation contract must be time-bounded
+missing_operator_decision,reject,operator decision artifact required
+operator_decision_authorizes_registration,reject,this contract cannot authorize direct registration
+missing_identity_envelope,reject,identity envelope required
+identity_allows_browser,reject,local runtime adapter cannot use browser
+identity_allows_model_api,reject,local runtime adapter cannot call model/API
+identity_allows_mcp,reject,local runtime adapter cannot call MCP tools
+identity_allows_credentials,reject,credential use denied
+identity_allows_public_action,reject,public actions denied
+missing_egress_contract,reject,egress contract required
+egress_allows_live_network,reject,no live network egress allowed
+assignment_mutation_true,reject,no assignment mutation allowed
+missing_runtime_start_preflight,reject,runtime start preflight required before start phase
+missing_output_artifact_path,reject,output artifact path required
+missing_trace_id,reject,trace id required
+missing_teardown_plan,reject,teardown or rollback plan required
+external_side_effects_true,reject,external side effects denied
+command_preview_executed,reject,command previews are non-authoritative
+positive_report_only_activation_candidate,pass_report_only_activation_candidate,all evidence present and all live effects denied

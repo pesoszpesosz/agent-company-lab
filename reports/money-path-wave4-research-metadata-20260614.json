@@ -1,0 +1,26 @@
+{
+  "generated_utc": "2026-06-14T13:22:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-money-path-wave4-research-20260614",
+  "agent_id": "recovered-profitable-edge-infra",
+  "candidate_lane_count": 7,
+  "top_candidate_lanes": [
+    "money_source_discovery",
+    "ai_ml_competitions",
+    "digital_products_templates_plugins"
+  ],
+  "human_only_lanes": [
+    "ai_training_eval_gigs",
+    "qa_usability_testing_gigs"
+  ],
+  "artifact_ids": [
+    "artifact-money-path-wave4-report-20260614",
+    "artifact-money-path-source-registry-wave4-20260614"
+  ],
+  "recommended_next_build": "service_request_packet_factory_after_design_approval",
+  "public_actions": false,
+  "browser_actions": false,
+  "real_money_actions": false,
+  "account_actions": false,
+  "api_calls": false
+}

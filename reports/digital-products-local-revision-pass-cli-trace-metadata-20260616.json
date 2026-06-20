@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-revision-pass-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-revision-pass-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-revision-pass-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-revision-pass-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-revision-pass-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-revision-pass-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-revision-pass-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T22:04:58Z",
+  "revision_lane_id": "digital_products_templates_plugins",
+  "revision_task_id": "task-digital-products-local-revision-pass-20260616",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "AF6E76D19C25B823D2D8AA0AA7E7C25F5151075951916E467CD8B0A119879510",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

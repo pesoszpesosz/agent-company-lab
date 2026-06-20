@@ -1,0 +1,36 @@
+{
+  "schema_version": "agent_company.lead_generation_and_sales.ai_workflow_audit_proof_asset.v1",
+  "generated_utc": "2026-06-16T20:58:00Z",
+  "task_id": "task-ai-workflow-audit-proof-asset-agency-reporting-20260616",
+  "lane_id": "lead_generation_and_sales",
+  "synthetic_client": "Northstar Creative Ops",
+  "pain_points": [
+    "4_hours_weekly_copy_paste",
+    "campaign_name_error_risk",
+    "late_status_updates",
+    "no_consistent_approval_trail"
+  ],
+  "automation_candidates": [
+    "csv_spreadsheet_importer",
+    "report_section_generator",
+    "status_collector_form",
+    "approval_log",
+    "dashboard_export"
+  ],
+  "before_after": {
+    "manual_time_before_hours": 4,
+    "prototype_target_hours": 1.5,
+    "approval_trail_before": "email_thread",
+    "approval_trail_after": "structured_log"
+  },
+  "next_action": "Create upwork-profile-and-proposal-draft-20260616.md only as a local draft.",
+  "runtime_boundary": {
+    "upwork_profile": false,
+    "proposals_sent": 0,
+    "client_contact": false,
+    "contract_or_payment_action": false,
+    "real_client_data": false,
+    "public_action": false,
+    "external_side_effects": false
+  }
+}

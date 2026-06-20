@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.mcp_egress_signed_decision_guard.v1",
+  "title": "MCP Egress Signed Decision Guard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "decision",
+    "route_id",
+    "egress_type",
+    "source_gateway_docket_path",
+    "source_gateway_docket_sha256",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_gate_ids",
+    "approval_is_not_apply",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "worker_start_allowed",
+    "browser_session_start_allowed",
+    "mcp_servers_started",
+    "mcp_servers_enabled",
+    "mcp_tool_call_allowed",
+    "credentials_created",
+    "credential_access_allowed",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.egress_route_signed_decision_intake_contract.v1"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["deny", "approve_route_preflight_only"]
+    },
+    "route_id": {
+      "const": "mcp_tool_gateway"
+    },
+    "egress_type": {
+      "const": "mcp_tool"
+    },
+    "approval_is_not_apply": {
+      "const": true
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "worker_registration_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "mcp_servers_started": {
+      "const": 0
+    },
+    "mcp_servers_enabled": {
+      "const": 0
+    },
+    "mcp_tool_call_allowed": {
+      "const": false
+    },
+    "credentials_created": {
+      "const": false
+    },
+    "credential_access_allowed": {
+      "const": false
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "service_requests_updated": {
+      "const": 0
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "mcp_tool_calls": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

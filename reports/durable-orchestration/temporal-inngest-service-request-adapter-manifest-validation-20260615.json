@@ -1,0 +1,40 @@
+{
+  "all_checks_passed": true,
+  "all_no_execution": true,
+  "all_rows_execution_disabled": true,
+  "api_calls": false,
+  "approvals_granted": 0,
+  "artifact_integrity_note": "Final SHA-256 values are stored in the SQLite artifacts table and verified after file write; self-hashes are intentionally omitted from this payload to avoid recursive hash churn.",
+  "complete_count": 1,
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "expected_status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T14:28:46Z",
+  "inngest_events_emitted": 0,
+  "inngest_functions_registered": 0,
+  "inngest_service_started": false,
+  "manifest_count": 14,
+  "manifest_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-service-request-adapter-manifest-20260615.json",
+  "needs_review_count": 11,
+  "rejected_count": 2,
+  "schema_version": "temporal_inngest_service_request_adapter_manifest_validation.v1",
+  "service_requests_assigned": 0,
+  "service_requests_total": 14,
+  "service_requests_updated": 0,
+  "source_status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "temporal_server_started": false,
+  "temporal_workflows_started": 0,
+  "terminal_count": 3,
+  "worker_starts": 0
+}

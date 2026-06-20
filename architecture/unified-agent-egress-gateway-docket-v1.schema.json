@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.unified_agent_egress_gateway_docket.v1",
+  "title": "Unified Agent Egress Gateway Docket v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "source_capability_registry_path",
+    "source_capability_class_count",
+    "route_count",
+    "gateway_routes",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "worker_registration_allowed",
+    "worker_start_allowed",
+    "runtime_start_allowed",
+    "browser_session_start_allowed",
+    "model_api_calls",
+    "mcp_tool_calls",
+    "external_side_effects",
+    "all_checks_passed",
+    "failure_count",
+    "failures"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.unified_agent_egress_gateway_docket.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "source_capability_registry_path": {
+      "type": "string"
+    },
+    "source_capability_class_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "route_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "gateway_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "route_id",
+          "egress_type",
+          "capability_class_ids",
+          "allowed_phase",
+          "required_gates",
+          "blocked_actions",
+          "required_evidence",
+          "live_execution_allowed"
+        ],
+        "properties": {
+          "route_id": { "type": "string" },
+          "egress_type": { "type": "string" },
+          "capability_class_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "allowed_phase": { "type": "string" },
+          "required_gates": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 2
+          },
+          "blocked_actions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "required_evidence": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "live_execution_allowed": { "const": false }
+        },
+        "additionalProperties": true
+      }
+    },
+    "gateway_registration_allowed": { "const": false },
+    "gateway_start_allowed": { "const": false },
+    "live_egress_allowed": { "const": false },
+    "worker_registration_allowed": { "const": false },
+    "worker_start_allowed": { "const": false },
+    "runtime_start_allowed": { "const": false },
+    "browser_session_start_allowed": { "const": false },
+    "service_requests_assigned": { "const": 0 },
+    "service_requests_updated": { "const": 0 },
+    "dependency_installs": { "const": 0 },
+    "model_api_calls": { "const": false },
+    "mcp_tool_calls": { "const": false },
+    "account_actions": { "const": false },
+    "wallet_actions": { "const": false },
+    "payment_actions": { "const": false },
+    "public_actions": { "const": false },
+    "security_testing_actions": { "const": false },
+    "external_side_effects": { "const": false },
+    "all_checks_passed": { "type": "boolean" },
+    "failure_count": { "type": "integer", "minimum": 0 },
+    "failures": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

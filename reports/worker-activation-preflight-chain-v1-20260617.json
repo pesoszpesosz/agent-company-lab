@@ -1,0 +1,436 @@
+{
+  "accepted_count": 1,
+  "activation_preflight_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-activation-preflight-v1-20260617.json",
+  "all_checks_passed": true,
+  "chain_verdict": "preflight_passed_registration_blocked",
+  "composed_validators": {
+    "egress": {
+      "accepted_count": 1,
+      "all_checks_passed": true,
+      "exists": true,
+      "failure_count": 0,
+      "path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+      "rejected_count": 23
+    },
+    "identity": {
+      "accepted_count": 1,
+      "all_checks_passed": true,
+      "exists": true,
+      "failure_count": 0,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
+      "rejected_count": 25
+    },
+    "mcp_registry": {
+      "accepted_count": 1,
+      "all_checks_passed": true,
+      "exists": true,
+      "failure_count": 0,
+      "path": "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-v1-validation-20260617.json",
+      "rejected_count": 21
+    }
+  },
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 11,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:40Z",
+  "mcp_tool_call_allowed": false,
+  "next_action": "Use this chain as the pre-registration blocker; build a runtime-start preflight only after a signed operator decision route exists.",
+  "registration_allowed": false,
+  "rejected_count": 10,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_preflight_passed_registration_blocked",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\positive_preflight_passed_registration_blocked.json",
+      "result": {
+        "accepted_for_activation_preflight": true,
+        "chain_id": "chain-positive-local-runtime-preflight",
+        "errors": [],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": false,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "5cee6770da0c612e190382fb1b7ebc8471b07a3efe7553b40da324a98ea052d9"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_identity_validator",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_missing_identity_validator.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-missing_identity_validator",
+        "errors": [
+          "identity_validation_path_missing"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "0ffeda5cabb7b6f3b1f4e4ec440095635bf2bed8e5405dc06af3aa7f2fa16cd7"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_egress_validator",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_missing_egress_validator.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-missing_egress_validator",
+        "errors": [
+          "egress_validation_path_missing"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "a0616ac89d84b2f2bc9f9557de5febe20bffd45cad04486a4eb2f56da4f211aa"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_mcp_registry_validator",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_missing_mcp_registry_validator.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-missing_mcp_registry_validator",
+        "errors": [
+          "mcp_registry_validation_path_missing"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "55aa69c79748f3c8cbe5b733a2ab1dfc4896445f7d197f8af84622731bdac6d8"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_signed_approval_claimed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_signed_approval_claimed.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-signed_approval_claimed",
+        "errors": [
+          "operator_decision_must_remain_report_only"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "69f0a63cc6169d66912440c4d1df4159f539ce7b4733a542e307a321d2502205"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_registration_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_registration_allowed.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-registration_allowed",
+        "errors": [
+          "chain_verdict_must_block_registration",
+          "registration_allowed_must_be_false"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "85dfe13dc0d2d36fb8edbd6210f989f806120c496e1cf24bcc9e36acab0c29fd"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_worker_start_allowed.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-worker_start_allowed",
+        "errors": [
+          "worker_start_allowed_must_be_false"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "7775a1d62a44b516cc5fa5308d1be30e201b1a19b2a803028191a1532def49e0"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_mcp_tool_call_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_mcp_tool_call_allowed.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-mcp_tool_call_allowed",
+        "errors": [
+          "mcp_tool_call_allowed_must_be_false"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "3a7495040117ca5492ccb067e8e2d2d3cabcfc5300fae4b80e0287ee4b53af4d"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_registered_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_worker_registered_side_effect.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-worker_registered_side_effect",
+        "errors": [
+          "runtime_boundary_worker_pools_registered_must_equal_0"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "fd202b5f7145fde820f47caa043b3cf047b7a9ec8bcaec66bee69a7d68c1286b"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_assigned_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_service_request_assigned_side_effect.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-service_request_assigned_side_effect",
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "e9b2085275116c72df7d94e0245d9403fb74695312e995e14a0e845dbf2183eb"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effect",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\worker-activation-preflight-chain-v1-fixtures\\negative_external_side_effect.json",
+      "result": {
+        "accepted_for_activation_preflight": false,
+        "chain_id": "chain-negative-external_side_effect",
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "mcp_tool_call_allowed": false,
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "mcp_servers_started": 0,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "worker_start_allowed": false
+      },
+      "sha256": "7f8f3d16fcb8f8572f86b1b16ab6d5d8de204f1af293dd7fc3aa9561858f5eae"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_created": false,
+    "external_side_effects": false,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "service_requests_assigned": 0,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\worker-activation-preflight-chain-v1.schema.json",
+  "schema_version": "agent_company.worker_activation_preflight_chain_report.v1",
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "worker_start_allowed": false
+}

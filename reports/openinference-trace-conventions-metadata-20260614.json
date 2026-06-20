@@ -1,0 +1,6 @@
+{
+  "api_calls": false,
+  "convention_version": "2026-06-14-v1",
+  "runtime": "local_control_plane",
+  "span_kind": "WORKFLOW"
+}

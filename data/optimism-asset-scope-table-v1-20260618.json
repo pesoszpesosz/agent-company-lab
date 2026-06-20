@@ -1,0 +1,363 @@
+{
+  "schema_version": "agent_company.optimism_asset_scope_table.v1",
+  "generated_utc": "2026-06-17T21:53:00Z",
+  "task_id": "task-optimism-asset-scope-table-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "source_program": {
+    "program_id": "optimism",
+    "scope_url": "https://immunefi.com/bug-bounty/optimism/scope/",
+    "information_url": "https://immunefi.com/bug-bounty/optimism/information/",
+    "extraction_method": "public read-only page text extraction with installed headless Edge category clicks; no login, form, submission, probing, testing, or mutation",
+    "observed_total_assets_in_scope": 33,
+    "extracted_asset_rows": 33
+  },
+  "assets": [
+    {
+      "asset_id": "optimism-bdl-001",
+      "category": "Blockchain/DLT",
+      "name": "op-reth",
+      "target": "https://github.com/ethereum-optimism/optimism/tree/develop/rust/op-reth",
+      "added_on": "2026-06-12",
+      "duplicate_risk_note": "High upstream reth overlap; check upstream reth and Ethereum Foundation disclosures before any claim.",
+      "allowed_next_step": "Source-map only; no build, node start, or execution client testing."
+    },
+    {
+      "asset_id": "optimism-bdl-002",
+      "category": "Blockchain/DLT",
+      "name": "Primacy of Impact placeholder",
+      "target": "Primacy Of Impact",
+      "added_on": "2026-03-11",
+      "duplicate_risk_note": "Placeholder row; must be tied to a concrete in-scope impact and owned Optimism asset before promotion.",
+      "allowed_next_step": "Use only as classification row in impact matrix."
+    },
+    {
+      "asset_id": "optimism-bdl-003",
+      "category": "Blockchain/DLT",
+      "name": "op-dispute-mon",
+      "target": "https://github.com/ethereum-optimism/optimism/tree/develop/op-dispute-mon",
+      "added_on": "2024-05-29",
+      "duplicate_risk_note": "Scope notes say some op-challenger/dispute-game conditions detected by op-dispute-mon are excluded or lower value.",
+      "allowed_next_step": "Map detector coverage and excluded dispute-game cases only."
+    },
+    {
+      "asset_id": "optimism-bdl-004",
+      "category": "Blockchain/DLT",
+      "name": "op-node",
+      "target": "https://github.com/ethereum-optimism/optimism/tree/develop/op-node",
+      "added_on": "2024-05-29",
+      "duplicate_risk_note": "Alt-DA feature of op-node/op-batcher is out of scope; node/network tests remain blocked.",
+      "allowed_next_step": "Map docs/spec links and local-only review surfaces; no node start."
+    },
+    {
+      "asset_id": "optimism-sc-001",
+      "category": "Smart Contract",
+      "name": "L1StandardBridge",
+      "target": "https://etherscan.io/address/0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+      "funds_signal": "$286.1M",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Bridge foot-gun scenarios and documented fake ERC20 withdrawal protection are specifically called out; check exclusions first.",
+      "allowed_next_step": "Asset-map only; no transaction or fork test."
+    },
+    {
+      "asset_id": "optimism-sc-002",
+      "category": "Smart Contract",
+      "name": "L2OutputOracle",
+      "target": "https://etherscan.io/address/0xdfe97868233d1aa22e815a266982f2cf17685a27",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Legacy/upgrade-era component; check known issues and current relevance before review.",
+      "allowed_next_step": "Map current code and deprecation status only."
+    },
+    {
+      "asset_id": "optimism-sc-003",
+      "category": "Smart Contract",
+      "name": "DelayedWETH",
+      "target": "https://etherscan.io/address/0xE497B094d6DbB3D5E4CaAc9a14696D7572588d14",
+      "funds_signal": "",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Fault-proof bond/withdrawal paths need known-issue and op-dispute-mon coverage checks.",
+      "allowed_next_step": "Map relationship to dispute-game flows."
+    },
+    {
+      "asset_id": "optimism-sc-004",
+      "category": "Smart Contract",
+      "name": "L1ERC721Bridge",
+      "target": "https://etherscan.io/address/0x5a7749f83b81B301cAb5f48EB8516B986DAef23D",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Third-party custom token bridges are out of scope; distinguish canonical bridge logic from token/project misconfiguration.",
+      "allowed_next_step": "Scope-map only."
+    },
+    {
+      "asset_id": "optimism-sc-005",
+      "category": "Smart Contract",
+      "name": "OptimismPortal",
+      "target": "https://etherscan.io/address/0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Known ETH deposit-to-contract stranding edge case is documented; check exclusion before promoting related ideas.",
+      "allowed_next_step": "Map portal invariants and documented edge cases only."
+    },
+    {
+      "asset_id": "optimism-sc-006",
+      "category": "Smart Contract",
+      "name": "L1CrossDomainMessenger",
+      "target": "https://etherscan.io/address/0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Large-data/gas cross-chain message griefing is documented; claims need bypass or new impact.",
+      "allowed_next_step": "Map message-flow exclusions only."
+    },
+    {
+      "asset_id": "optimism-sc-007",
+      "category": "Smart Contract",
+      "name": "DisputeGameFactory",
+      "target": "https://etherscan.io/address/0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+      "funds_signal": "",
+      "added_on": "2024-05-29",
+      "duplicate_risk_note": "Fault Proofs have proof-of-whale and op-dispute-mon exclusions; duplicate matrix required first.",
+      "allowed_next_step": "Map dispute-game known exclusions."
+    },
+    {
+      "asset_id": "optimism-sc-008",
+      "category": "Smart Contract",
+      "name": "AddressManager",
+      "target": "https://etherscan.io/address/0xdE1FCfB0851916CA5101820A69b13a4E276bd81F",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Privileged-address-only impacts are default out of scope unless additional privilege modification exists.",
+      "allowed_next_step": "Map upgrade/admin assumptions."
+    },
+    {
+      "asset_id": "optimism-sc-009",
+      "category": "Smart Contract",
+      "name": "ProxyAdmin",
+      "target": "https://etherscan.io/address/0x543bA4AADBAb8f9025686Bd03993043599c6fB04",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Proxy implementations are in scope when proxy is listed; avoid privileged-address-only claims.",
+      "allowed_next_step": "Map proxy-to-implementation only."
+    },
+    {
+      "asset_id": "optimism-sc-010",
+      "category": "Smart Contract",
+      "name": "OptimismMintableERC20Factory",
+      "target": "https://etherscan.io/address/0x75505a97BD334E7BD3C476893285569C4136Fa0F",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Bridge/token foot guns are documented; distinguish user/developer error from protocol impact.",
+      "allowed_next_step": "Map canonical token factory assumptions."
+    },
+    {
+      "asset_id": "optimism-sc-011",
+      "category": "Smart Contract",
+      "name": "PermissionedDisputeGame",
+      "target": "https://etherscan.io/address/0xE9daD167EF4DE8812C1abD013Ac9570C616599A0",
+      "funds_signal": "",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Dispute-game resolution issues need op-dispute-mon and known-issue checks before promotion.",
+      "allowed_next_step": "Map to dispute-game impact classes."
+    },
+    {
+      "asset_id": "optimism-sc-012",
+      "category": "Smart Contract",
+      "name": "AnchorStateRegistry",
+      "target": "https://etherscan.io/address/0x18DAc71c228D1C32c99489B7323d441E1175e443",
+      "funds_signal": "",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Fault-proof state anchoring; duplicate matrix required.",
+      "allowed_next_step": "Map state-root assumptions only."
+    },
+    {
+      "asset_id": "optimism-sc-013",
+      "category": "Smart Contract",
+      "name": "OptimismPortal Implementation",
+      "target": "https://etherscan.io/address/0xe2F826324b2faf99E513D16D266c3F80aE87832B",
+      "funds_signal": "",
+      "added_on": "2024-05-29",
+      "duplicate_risk_note": "Implementation row; compare against proxy scope and known portal edge cases.",
+      "allowed_next_step": "Map proxy/implementation version only."
+    },
+    {
+      "asset_id": "optimism-sc-014",
+      "category": "Smart Contract",
+      "name": "FaultDisputeGame",
+      "target": "https://etherscan.io/address/0x4146DF64D83acB0DcB0c1a4884a16f090165e122",
+      "funds_signal": "",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Proof-of-whale and detected dispute-game cases are excluded or lower value.",
+      "allowed_next_step": "Map known dispute-game exclusions."
+    },
+    {
+      "asset_id": "optimism-sc-015",
+      "category": "Smart Contract",
+      "name": "PreimageOracle",
+      "target": "https://etherscan.io/address/0xD326E10B8186e90F4E2adc5c13a2d0C137ee8b34",
+      "funds_signal": "",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Fault-proof support component; needs upstream audit and known issue review.",
+      "allowed_next_step": "Map audit references only."
+    },
+    {
+      "asset_id": "optimism-sc-016",
+      "category": "Smart Contract",
+      "name": "SystemConfig",
+      "target": "https://etherscan.io/address/0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "funds_signal": "",
+      "added_on": "2024-03-11",
+      "duplicate_risk_note": "Chain-operator best-practice violations are out of scope; avoid configuration-only claims.",
+      "allowed_next_step": "Map config/state assumptions."
+    },
+    {
+      "asset_id": "optimism-sc-017",
+      "category": "Smart Contract",
+      "name": "MIPS",
+      "target": "https://etherscan.io/address/0x0f8EdFbDdD3c0256A80AD8C0F2560B1807873C9c",
+      "funds_signal": "",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Fault-proof VM component; check audits and known dispute-game exclusions.",
+      "allowed_next_step": "Map to proof system docs only."
+    },
+    {
+      "asset_id": "optimism-sc-018",
+      "category": "Smart Contract",
+      "name": "Primacy of Impact placeholder",
+      "target": "Primacy Of Impact",
+      "funds_signal": "",
+      "added_on": "2026-03-11",
+      "duplicate_risk_note": "Placeholder row; not a concrete asset by itself.",
+      "allowed_next_step": "Use only for severity/asset-placeholder guidance."
+    },
+    {
+      "asset_id": "optimism-sc-019",
+      "category": "Smart Contract",
+      "name": "PolicyEngineStaking",
+      "target": "https://optimistic.etherscan.io/address/0xb5CB7a05DD1311195982A26DFC8222477f9D8179",
+      "funds_signal": "",
+      "added_on": "2026-05-21",
+      "duplicate_risk_note": "L2/Optimistic Etherscan asset; check whether impact directly affects OP Stack/Optimism protocol before any claim.",
+      "allowed_next_step": "Map role and protocol-financial-impact requirement."
+    },
+    {
+      "asset_id": "optimism-web-001",
+      "category": "Web & App",
+      "name": "Main OP Labs blog",
+      "target": "https://blog.oplabs.co/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Live web probing, DNS probing, and XSS/subdomain testing are blocked; listed out-of-scope domains must be checked first.",
+      "allowed_next_step": "Catalog-only; no live probing."
+    },
+    {
+      "asset_id": "optimism-web-002",
+      "category": "Web & App",
+      "name": "Main OP Labs website",
+      "target": "https://www.oplabs.co/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Public web testing remains gated.",
+      "allowed_next_step": "Catalog-only."
+    },
+    {
+      "asset_id": "optimism-web-003",
+      "category": "Web & App",
+      "name": "Optimism's Careers page",
+      "target": "http://jobs.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Likely third-party employment surface; no probing or account actions.",
+      "allowed_next_step": "Catalog-only and ownership check."
+    },
+    {
+      "asset_id": "optimism-web-004",
+      "category": "Web & App",
+      "name": "Optimism's Community page",
+      "target": "https://community.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "No authenticated action, social, or public interaction.",
+      "allowed_next_step": "Catalog-only."
+    },
+    {
+      "asset_id": "optimism-web-005",
+      "category": "Web & App",
+      "name": "Optimism's Console",
+      "target": "https://console.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Console/account behavior likely needs account gate; no login or probing.",
+      "allowed_next_step": "Catalog-only and gate mapping."
+    },
+    {
+      "asset_id": "optimism-web-006",
+      "category": "Web & App",
+      "name": "Optimism's Specs",
+      "target": "https://specs.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Safe as documentation source; no security testing.",
+      "allowed_next_step": "Use as rules/source reference."
+    },
+    {
+      "asset_id": "optimism-web-007",
+      "category": "Web & App",
+      "name": "Optimism's Docs",
+      "target": "https://docs.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Safe as documentation source; no security testing.",
+      "allowed_next_step": "Use as rules/source reference."
+    },
+    {
+      "asset_id": "optimism-web-008",
+      "category": "Web & App",
+      "name": "Optimism's App",
+      "target": "https://app.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "App/wallet interactions are explicitly gated; no live app testing.",
+      "allowed_next_step": "Catalog-only and wallet-gate mapping."
+    },
+    {
+      "asset_id": "optimism-web-009",
+      "category": "Web & App",
+      "name": "Optimism's Gateway",
+      "target": "http://gateway.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "Gateway/wallet interactions are explicitly gated; no live app testing.",
+      "allowed_next_step": "Catalog-only and wallet-gate mapping."
+    },
+    {
+      "asset_id": "optimism-web-010",
+      "category": "Web & App",
+      "name": "Main Optimism website",
+      "target": "https://www.optimism.io/",
+      "added_on": "2025-10-03",
+      "duplicate_risk_note": "No web probing, DNS probing, or public action.",
+      "allowed_next_step": "Catalog-only."
+    }
+  ],
+  "category_counts": {
+    "Blockchain/DLT": 4,
+    "Smart Contract": 19,
+    "Web & App": 10
+  },
+  "coverage_reconciliation": {
+    "observed_total_assets_in_scope": 33,
+    "extracted_asset_rows": 33,
+    "row_count_matches_program_total": true
+  },
+  "next_recommended_local_proofs": [
+    "optimism_known_issue_duplicate_matrix_v1",
+    "security_report_quality_gate_v1",
+    "optimism_local_harness_plan_v1_after_runtime_gate"
+  ],
+  "boundary": {
+    "report_only": true,
+    "public_read_only_headless_page_extraction_sessions": 1,
+    "service_worker_browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

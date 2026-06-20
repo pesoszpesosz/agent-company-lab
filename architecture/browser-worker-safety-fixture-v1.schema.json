@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.browser_worker_safety_fixture.v1",
+  "title": "Agent Company Browser Worker Safety Fixture v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "source_service_catalog",
+    "classification_policy",
+    "cases",
+    "external_side_effects"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.browser_worker_safety_fixture.v1"
+    },
+    "generated_utc": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "source_service_catalog": {
+      "type": "string",
+      "minLength": 3
+    },
+    "classification_policy": {
+      "type": "object",
+      "required": [
+        "allowed_classes",
+        "hard_stop_tokens",
+        "review_required_classes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "allowed_classes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "public_read_only",
+              "signed_in_read_only",
+              "public_action",
+              "account_or_profile_action",
+              "wallet_or_payment_action",
+              "security_sensitive_action",
+              "model_or_api_action",
+              "prohibited"
+            ]
+          }
+        },
+        "hard_stop_tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_required_classes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "$defs": {
+    "case": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "lane_id",
+        "request_id",
+        "target_url",
+        "session_sensitivity",
+        "action_text",
+        "requested_evidence",
+        "expected_classification",
+        "expected_decision",
+        "expected_required_gate",
+        "expected_prohibited_actions",
+        "external_side_effects"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "pattern": "^case-[a-z0-9][a-z0-9-]{4,120}$"
+        },
+        "lane_id": {
+          "type": "string"
+        },
+        "request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_url": {
+          "type": "string"
+        },
+        "session_sensitivity": {
+          "enum": [
+            "public",
+            "signed_in_named_scope",
+            "private_or_sensitive",
+            "unknown"
+          ]
+        },
+        "action_text": {
+          "type": "string",
+          "minLength": 5
+        },
+        "requested_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_classification": {
+          "enum": [
+            "public_read_only",
+            "signed_in_read_only",
+            "public_action",
+            "account_or_profile_action",
+            "wallet_or_payment_action",
+            "security_sensitive_action",
+            "model_or_api_action",
+            "prohibited"
+          ]
+        },
+        "expected_decision": {
+          "enum": [
+            "allow_after_approval",
+            "needs_human_cro_review",
+            "block_until_separate_gate",
+            "prohibit"
+          ]
+        },
+        "expected_required_gate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_prohibited_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "external_side_effects": {
+          "const": false
+        }
+      }
+    }
+  }
+}

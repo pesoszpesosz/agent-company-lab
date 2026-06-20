@@ -1,0 +1,73 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-apply-command-contract-v1-20260618",
+  "task_id": "task-browser-read-only-apply-command-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T22:46:00Z",
+  "summary": "Implemented a report-only browser read-only apply-command contract. The contract accepts only deny/no-op and report-only contract-review command shapes while the apply preflight is blocked without a real signed operator decision; it rejects target request IDs, apply authority, queue mutation, browser start, worker start, public action, payment, and external side-effect variants.",
+  "source_apply_preflight_validation": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-validation-20260617.json",
+  "source_signed_guard_validation": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json",
+  "source_adapter_contract_validation": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-apply-command-contract-v1.schema.json",
+      "sha256": "08c8989efadf54c191e7baf1bc6776dbebab880f91fcbc269ab3537df9e63334"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_browser_read_only_apply_command_contract.py",
+      "sha256": "44bb606b47be1f650abdfab2b3506b7ea7f849ae89be9be951909342968adef8"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_apply_command_contract.py",
+      "sha256": "472742ea565cdc870a9530fffe01ec4e2a31f43ab21be93ea35236663ecb59ce"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-command-contract-v1-20260618.json",
+      "sha256": "8b56b3913980d0b6ed1180c310bf19ecbd21a96c680cc7aa9902026e1c9f7424"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-command-contract-v1-validation-20260618.json",
+      "sha256": "46a514f52c2245ae90516749fcb468bec00a6a1443cabcc9717c2f923d83ea19"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-command-contract-v1-20260618.md",
+      "sha256": "fcb79722792997c232724a966b9aeb13fa69b6d1dd7195b8aaf56a4b882ed707"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_browser_read_only_apply_command_contract.py",
+    "focused_test_result": "passed",
+    "accepted_count": 2,
+    "rejected_count": 27,
+    "source_apply_preflight_status": "blocked_no_real_signed_decision",
+    "source_guard_adapter_contract_gate": "present_valid_start_blocked",
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "assignment_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "approval_rows_written": 0,
+    "decisions_applied": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Keep browser apply command implementation blocked until a real signed operator decision artifact exists and a separate apply preflight validates exact request IDs and zero side effects."
+}

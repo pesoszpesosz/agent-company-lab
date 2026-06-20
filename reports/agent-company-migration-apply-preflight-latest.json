@@ -1,0 +1,95 @@
+{
+  "apply_command_contract": {
+    "command_name": "apply-agent-company-department-schema-migration",
+    "default_enabled": false,
+    "must_refuse_when": [
+      "approval_missing",
+      "backup_missing",
+      "dry_run_failed",
+      "service_request_drift_detected"
+    ],
+    "required_inputs": [
+      "operator_approval_id",
+      "backup_path",
+      "dry_run_report_path",
+      "migration_draft_path"
+    ]
+  },
+  "apply_command_contract_count": 1,
+  "dry_run_step_count": 8,
+  "dry_run_steps": [
+    "copy_agent_company_sqlite_to_timestamped_sandbox",
+    "run_report_only_sql_against_sandbox_copy",
+    "execute_validation_queries_against_sandbox_copy",
+    "compare_table_and_index_inventory_against_plan",
+    "verify_existing_tasks_and_lane_evidence_counts_on_sandbox",
+    "run_rollback_sql_against_sandbox_copy",
+    "verify_rollback_restores_pre_apply_table_inventory",
+    "write_sandbox_dry_run_report_before_live_apply_request"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-19T23:16:41Z",
+  "lane_evidence_rows_after": 138,
+  "lane_evidence_rows_before": 137,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_apply_preflight_ready_for_operator_review_packet",
+  "next_action": "Prepare the operator review packet next, still without running the apply command or executing migration SQL.",
+  "operator_gate_count": 7,
+  "operator_gates": [
+    "operator_approval_required_before_sql_execution",
+    "backup_agent_company_sqlite_before_apply",
+    "run_migration_against_throwaway_copy_first",
+    "confirm_no_service_request_state_mutation",
+    "confirm_no_worker_threads_started",
+    "confirm_no_browser_account_wallet_payment_public_or_security_actions",
+    "record_post_apply_integrity_report_before_next_layer"
+  ],
+  "preflight_check_count": 9,
+  "preflight_checks": [
+    "source_migration_validation_all_checks_passed",
+    "migration_sql_present_but_not_executed",
+    "operator_approval_missing_by_design",
+    "backup_path_required_before_apply",
+    "throwaway_copy_dry_run_required_before_apply",
+    "rollback_sql_present_for_every_index_and_table",
+    "service_request_counts_must_remain_constant",
+    "worker_pool_must_remain_stopped",
+    "post_apply_chain_integrity_required_before_next_layer"
+  ],
+  "preflight_evidence_id": "agent-company-migration-apply-preflight-20260616",
+  "preflight_lane_id": "platform_engineering",
+  "preflight_packet_count": 1,
+  "preflight_task_id": "task-agent-company-migration-apply-preflight-20260616",
+  "recommended_default": "prepare_operator_review_next_without_running_apply_command",
+  "rollback_drill_count": 3,
+  "rollback_drills": [
+    "drop_planned_indexes_in_reverse_order_on_sandbox",
+    "drop_planned_tables_in_reverse_order_on_sandbox",
+    "re-run_chain_integrity_after_sandbox_rollback"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "migration_sql_executed": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_apply_preflight.v1",
+  "source_migration_evidence_id": "agent-company-report-only-migration-draft-20260616",
+  "source_migration_task_id": "task-agent-company-report-only-migration-draft-20260616",
+  "summary": "Prepared a report-only migration apply-preflight packet with checks, dry-run steps, command contract, rollback drills, and operator gates; the apply command remains disabled.",
+  "task_rows_inserted_by_preflight": 1,
+  "tasks_table_rows_after": 230,
+  "tasks_table_rows_before": 229
+}

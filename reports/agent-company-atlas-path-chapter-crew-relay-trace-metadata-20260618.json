@@ -1,0 +1,85 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-crew-relay-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-crew-relay-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_crew_relay_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Crew Relay inside the selected Path Map Chapter Archive record deck so each chapter shows the responsible lane bots, thread context, proof/gate/trace pressure, and local COM/Q handoff controls.",
+  "design_research": {
+    "queries": [
+      "team handoff dashboard UX command center ownership dashboard patterns",
+      "incident command dashboard handoff owner status communication UX",
+      "collaboration activity feed assigned owner compact card UX dashboard"
+    ],
+    "source_urls": [
+      "https://www.atlassian.com/incident-management/handbook",
+      "https://www.atlassian.com/incident-management/handbook/incident-response",
+      "https://www.nngroup.com/articles/dashboards-preattentive/",
+      "https://www.ibm.com/docs/en/decision-intelligence?topic=dashboards-drill-down-capabilities"
+    ],
+    "pattern_notes": [
+      "Command-center surfaces need an at-a-glance shared operating picture with enough status to act quickly.",
+      "Incident-style handoffs work best when the owner, current state, next action, and communication channel are visible together.",
+      "Dashboard drilldowns should start from summary context and reveal the detailed record stack only when the operator asks for it."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_crew_relay.py",
+      "reports/agent-company-atlas-path-chapter-crew-relay-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.agents[]",
+      "snapshot.lanes[].ownerAgentId",
+      "snapshot.lanes[].ownerThreadId",
+      "snapshot.dispatchConsole.suggestions[]",
+      "pathChapterArchiveItems(trail).counts",
+      "browser-local staged dispatch outbox"
+    ],
+    "ui_contract": [
+      "Render Chapter Crew Relay inside the selected Chapter Archive record deck.",
+      "Derive crew cards from laneAgents(lane), falling back to lane owner metadata for new repos without bound agent records.",
+      "Show chapter pressure for proof, gates, traces, and dispatch urgency.",
+      "Expose COM and Q actions while keeping Q as a browser-local staged draft only.",
+      "Keep the relay responsive with no clipped labels or horizontal overflow."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_crew_relay.py -q failed before frontend wiring on missing function pathChapterCrewRecords.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_crew_relay.py -q passed after implementation."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-crew-final#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Crew Relay for the 06/15 chapter with Foundry Lead, thread id, gate-watch role, 43 proof pressure, 3 gates, 0 traces, 94 urgency, and OK/COM/TRL actions."
+    },
+    "local_queue_action": {
+      "status": "passed",
+      "evidence": "The relay-scoped Q/OK button resolved to exactly one element, clicked successfully, kept the relay in staged state, updated the browser-local Dispatch Console outbox count, and produced no console errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one relay, one crew card, OK/COM/TRL actions, no horizontal overflow, no bad rectangles, and no clipped crew text. The narrow wide-desktop Path Map column collapsed to one clean relay column after the auto-fit grid fix."
+    }
+  }
+}

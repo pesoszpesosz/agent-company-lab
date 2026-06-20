@@ -1,0 +1,37 @@
+{
+  "schema_version": "agent_company.optimism_scope_rules_extraction_validation.v1",
+  "generated_utc": "2026-06-17T21:42:00Z",
+  "task_id": "task-optimism-scope-rules-extraction-packet-v1-20260618",
+  "checked_files": [
+    "E:\\agent-company-lab\\data\\optimism-scope-rules-extraction-packet-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-scope-rules-extraction-packet-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-scope-rules-extraction-packet-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-scope-rules-extraction-packet-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\optimism-scope-rules-extraction-packet-v1-trace-metadata-20260618.json"
+  ],
+  "program_id": "optimism",
+  "source_url_count": 6,
+  "asset_count_observed": 33,
+  "impact_count_observed": 27,
+  "blocked_action_count": 9,
+  "required_service_gate_count": 6,
+  "submission_ready": false,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

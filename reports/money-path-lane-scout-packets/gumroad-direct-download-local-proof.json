@@ -1,0 +1,170 @@
+{
+  "schema_version": "digital_products.gumroad_direct_download_local_proof.v1",
+  "generated_utc": "2026-06-18T06:41:33Z",
+  "task_id": "task-lane-scout-gumroad_direct_download-20260618",
+  "lane_id": "digital_products_templates_plugins",
+  "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+  "status": "gumroad_direct_download_packet_ready_local_only",
+  "source_observations": [
+    {
+      "source_id": "gumroad_features",
+      "url": "https://gumroad.com/features",
+      "observed_utc": "2026-06-18T06:41:33Z",
+      "local_summary": "Gumroad's public features page describes a simple creator-commerce flow for digital downloads, ebooks, courses, memberships, subscriptions, multiple versions, license keys, lightweight DRM, and immediate customer access after purchase.",
+      "route_effect": "A local file bundle is a plausible route if it stays a downloadable product, not a consulting/service promise."
+    },
+    {
+      "source_id": "gumroad_pricing",
+      "url": "https://gumroad.com/pricing",
+      "observed_utc": "2026-06-18T06:41:33Z",
+      "local_summary": "Gumroad's pricing page states 10% plus $0.50 per transaction for profile/direct-link sales, 30% for marketplace-discovered sales, no monthly charge, and merchant-of-record tax handling from January 1, 2025.",
+      "route_effect": "Direct-link economics can be modeled locally, but account, payout, tax, and terms review remain gated before listing."
+    },
+    {
+      "source_id": "gumroad_prohibited_products",
+      "url": "https://gumroad.com/prohibited",
+      "observed_utc": "2026-06-18T06:41:33Z",
+      "local_summary": "Gumroad's prohibited-products page blocks categories including deceptive marketing, crypto products, hacking/cracking materials, copyrighted/unauthorized goods, gambling, bulk marketing/spam tools, and certain services/consulting/business-opportunity offerings.",
+      "route_effect": "The product must avoid revenue promises, crypto/security-bypass claims, spam tools, unauthorized assets, consulting delivery, and get-rich/business-opportunity positioning."
+    },
+    {
+      "source_id": "local_agent_skill_starter_kit",
+      "url": "E:/agent-company-lab/products/agent-skill-starter-kit-v0/",
+      "observed_utc": "2026-06-18T06:41:33Z",
+      "local_summary": "Local product bundle contains README, listing draft, screenshot plan, buyer guide, license/IP note, templates, and a fictional local-research example skill.",
+      "route_effect": "This is the strongest Gumroad direct-download candidate because it is already file-based and has local listing/IP notes."
+    },
+    {
+      "source_id": "local_ai_builder_launch_pack",
+      "url": "E:/agent-company-lab/reports/digital-products-local-package-files-latest.md",
+      "observed_utc": "2026-06-18T06:41:33Z",
+      "local_summary": "Local AI builder launch checklist pack has package-file, quality-pass, and packaging-manifest evidence, with gates preserved for live marketplace research, terms, listings, accounts, payouts, and payment setup.",
+      "route_effect": "This is a second candidate, but it is less directly materialized as a product directory than the Agent Skill Starter Kit."
+    }
+  ],
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "candidate_id": "agent_skill_starter_kit_v0",
+      "working_title": "Agent Skill Starter Kit: Templates For Safer Reusable AI-Agent Workflows",
+      "product_type": "downloadable_markdown_template_kit",
+      "download_shape": [
+        "README.md",
+        "templates/SKILL.template.md",
+        "templates/gate-checklist.template.md",
+        "templates/service-request-checklist.template.md",
+        "templates/artifact-contract.template.md",
+        "templates/acceptance-review.template.md",
+        "examples/local-research-skill/SKILL.md",
+        "examples/local-research-skill/sample-output.md",
+        "docs/buyer-guide.md",
+        "docs/license-and-ip-note.md",
+        "docs/listing-draft.md",
+        "docs/screenshot-plan.md"
+      ],
+      "readiness_score": 91,
+      "why": "Already packaged as a concrete file tree, avoids live client data, and can be positioned as templates rather than consulting, revenue claims, or platform endorsement.",
+      "required_pre_listing_fixes": [
+        "Review Gumroad prohibited-products list against the final listing copy.",
+        "Avoid consulting, get-rich, crypto, hacking/cracking, spam, revenue, compliance, or platform-approval claims.",
+        "Confirm the license/IP note matches the intended buyer license.",
+        "Create a local zip manifest and checksum before any upload approval.",
+        "Human-review title, category, price, refund language, and all claims."
+      ],
+      "gates": [
+        "gumroad_account",
+        "seller_terms",
+        "payout_setup",
+        "tax_payment_review",
+        "public_listing",
+        "ip_license_claims_review"
+      ],
+      "local_evidence_assets": [
+        "products/agent-skill-starter-kit-v0/README.md",
+        "products/agent-skill-starter-kit-v0/docs/listing-draft.md",
+        "products/agent-skill-starter-kit-v0/docs/license-and-ip-note.md"
+      ]
+    },
+    {
+      "candidate_id": "ai_builder_launch_checklist_pack",
+      "working_title": "AI Builder Launch Checklist Pack",
+      "product_type": "downloadable_markdown_launch_planning_pack",
+      "download_shape": [
+        "README.md",
+        "positioning-template.md",
+        "launch-checklist.md",
+        "screenshot-shotlist.md",
+        "qa-pass.md",
+        "post-launch-review.md"
+      ],
+      "readiness_score": 76,
+      "why": "The package has strong local QA and manifest evidence, but it currently exists mainly as reports rather than a single product directory ready for checksum/zip review.",
+      "required_pre_listing_fixes": [
+        "Materialize the six files into a product folder.",
+        "Run a file presence and link check.",
+        "Remove any language implying marketplace validation, buyer count, revenue, conversion, or payout.",
+        "Human-review whether launch-planning language is safely a template product and not a business-opportunity/service offer."
+      ],
+      "gates": [
+        "gumroad_account",
+        "seller_terms",
+        "payout_setup",
+        "tax_payment_review",
+        "public_listing",
+        "ip_license_claims_review"
+      ],
+      "local_evidence_assets": [
+        "reports/digital-products-local-packaging-manifest-latest.md",
+        "reports/digital-products-local-package-files-latest.md",
+        "reports/digital-products-local-quality-pass-latest.md"
+      ]
+    }
+  ],
+  "recommended_first_candidate": "agent_skill_starter_kit_v0",
+  "direct_link_unit_economics": [
+    {
+      "price_usd": 9,
+      "gumroad_direct_fee_usd": 1.4,
+      "before_other_costs_usd": 7.6,
+      "note": "Uses 10% + $0.50 direct/profile fee from public pricing page; ignores refunds, chargebacks, income tax, payment-country differences, and paid promotion."
+    },
+    {
+      "price_usd": 19,
+      "gumroad_direct_fee_usd": 2.4,
+      "before_other_costs_usd": 16.6,
+      "note": "Middle planning price for a compact template bundle."
+    },
+    {
+      "price_usd": 29,
+      "gumroad_direct_fee_usd": 3.4,
+      "before_other_costs_usd": 25.6,
+      "note": "Higher planning price; needs stronger proof of utility before public use."
+    }
+  ],
+  "decision": "go_local_only_prepare_no_publish_approval_packet",
+  "why": "Gumroad supports direct digital downloads and the starter kit is already a file-based local product. External action remains blocked because Gumroad account, seller terms, payout/tax/payment, prohibited-category, IP/license, listing copy, price, refund language, and public listing gates have not been approved.",
+  "acceptance_checks": [
+    "Official Gumroad feature, pricing, and prohibited-product sources are summarized.",
+    "At least two local product candidates are compared.",
+    "A recommended first candidate is selected from existing local product assets.",
+    "Direct-link unit economics are modeled using the public direct/profile fee only as an internal planning estimate.",
+    "No Gumroad account/login, seller setup, terms acceptance, payout setup, upload, listing, price publication, public action, payment action, service-request mutation, worker/runtime start, model/API call, or external side effect occurs."
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "gumroad_account_or_login": false,
+    "seller_profile_created_or_edited": false,
+    "terms_or_seller_agreement_accepted": false,
+    "products_uploaded_or_edited": 0,
+    "listings_published": 0,
+    "prices_published": 0,
+    "payout_or_payment_setup": false,
+    "orders_or_payments": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create a no-publish Gumroad approval request packet for Agent Skill Starter Kit v0; include seller terms/prohibited-products review, IP/license review, price/refund/copy review, zip checksum plan, payout/tax/payment gate, and public listing approval."
+}

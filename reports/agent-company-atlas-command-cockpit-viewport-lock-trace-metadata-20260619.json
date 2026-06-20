@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-viewport-lock-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-viewport-lock-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-viewport-lock-v1-20260619",
+  "title": "Command Cockpit Viewport Lock",
+  "createdAt": "2026-06-19T09:46:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Locked the Command Cockpit selected-lane surface into a bounded one-screen stack so the operator keeps context while the mounted stage owns the scroll.",
+  "proof": [
+    "Scoped the Command Cockpit detail panel to a fixed-height grid with hidden outer overflow, reducing nested page scrolling.",
+    "Turned the selected lane detail content into a column stack and let the mounted stage flex into the remaining space as the only internal scroll surface.",
+    "Added a Command Cockpit-only animated runner to the active Overview module button so module switching reads as a game-board action.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the viewport lock unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

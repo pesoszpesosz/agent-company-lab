@@ -1,0 +1,253 @@
+{
+  "schema_version": "lead_generation.upwork_ai_offer_matrix_local_proof.v1",
+  "generated_utc": "2026-06-18T06:21:52Z",
+  "task_id": "task-lane-scout-upwork_ai_freelance_work-20260618",
+  "lane_id": "lead_generation_and_sales",
+  "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+  "status": "upwork_ai_offer_matrix_ready_local_only",
+  "sources": [
+    {
+      "source_id": "upwork_ai_jobs_page",
+      "url": "https://www.upwork.com/freelance-jobs/artificial-intelligence/",
+      "observed_utc": "2026-06-18T06:21:52Z",
+      "evidence": [
+        "Public page listed AI and automation categories including AI integration developers, chatbot developers, AI developers, automation experts, N8N experts, and AI consultants.",
+        "Public page displayed sample AI jobs including AI Agent Engineer, AI Product Builder, work support for a senior gen AI role, AI Coaching Platform Developer, AI Social Media Operator, and AI Automation Specialist.",
+        "Public page displayed an AI engineer median hourly rate range of USD 35-60."
+      ]
+    },
+    {
+      "source_id": "upwork_in_demand_skills_2026",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "observed_utc": "2026-06-18T06:21:52Z",
+      "evidence": [
+        "Upwork reported AI-enabled skills grew 109% year over year in its 2026 in-demand skills release.",
+        "The release highlighted AI integration, AI data annotation and labeling, AI chatbot development, and AI video generation and editing as growth areas.",
+        "The report also listed stable adjacent categories such as full-stack development, data analytics, scripting and automation, lead generation, and marketing automation."
+      ]
+    },
+    {
+      "source_id": "local_leadgen_offer_assets",
+      "url": "E:/agent-company-lab/reports/lead-generation-and-sales/",
+      "observed_utc": "2026-06-18T06:21:52Z",
+      "evidence": [
+        "Existing local AI workflow audit offer packet exists.",
+        "Existing synthetic agency reporting proof asset exists.",
+        "Existing Upwork profile/proposal draft exists and is marked local-only."
+      ]
+    }
+  ],
+  "local_assets": [
+    "E:/agent-company-lab/reports/lead-generation-and-sales/upwork-ai-workflow-audit-offer-20260616.md",
+    "E:/agent-company-lab/reports/lead-generation-and-sales/ai-workflow-audit-proof-asset-agency-reporting-20260616.md",
+    "E:/agent-company-lab/reports/lead-generation-and-sales/upwork-profile-and-proposal-draft-20260616.md",
+    "E:/agent-company-lab/reports/money-path-lane-scout-packet-v1-20260618.md",
+    "E:/agent-company-lab/reports/control-plane-status-latest.md"
+  ],
+  "archetype_count": 5,
+  "archetypes": [
+    {
+      "archetype_id": "supervised_ai_agent_workflow",
+      "public_signal": "AI Agent Engineer for automated social media content and publishing workflow.",
+      "source_ids": [
+        "upwork_ai_jobs_page"
+      ],
+      "buyer_pain": "The buyer wants agentic content operations, but needs supervision, approvals, and predictable handoff points.",
+      "offer_name": "Supervised AI Agent Workflow Audit",
+      "local_deliverables": [
+        "Workflow map",
+        "approval-point checklist",
+        "risk-ranked automation candidates",
+        "synthetic agent workflow proof packet"
+      ],
+      "local_asset_fit": [
+        "upwork-ai-workflow-audit-offer-20260616.md",
+        "agent company service-gate reports"
+      ],
+      "forbidden_claims": [
+        "No promise of fully autonomous posting",
+        "No promise of follower/revenue growth",
+        "No profile/proposal/client action"
+      ],
+      "external_gates": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action",
+        "client_data_privacy"
+      ]
+    },
+    {
+      "archetype_id": "ai_product_or_crm_builder",
+      "public_signal": "AI Product Builder / CRM project sample and AI-enabled product work.",
+      "source_ids": [
+        "upwork_ai_jobs_page",
+        "upwork_in_demand_skills_2026"
+      ],
+      "buyer_pain": "The buyer wants a product/CRM concept shaped into implementable workflow and data boundaries.",
+      "offer_name": "AI Product Workflow Blueprint",
+      "local_deliverables": [
+        "MVP workflow brief",
+        "data/object model sketch",
+        "automation risk register",
+        "prototype-readiness checklist"
+      ],
+      "local_asset_fit": [
+        "control-plane-status-latest.md",
+        "agent company dashboard/report artifacts"
+      ],
+      "forbidden_claims": [
+        "No promise of production CRM delivery without scoped contract",
+        "No handling credentials or client systems",
+        "No fixed revenue or conversion claim"
+      ],
+      "external_gates": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action",
+        "client_data_privacy",
+        "runtime_start"
+      ]
+    },
+    {
+      "archetype_id": "agent_architecture_support",
+      "public_signal": "Gen AI role sample referenced agentic workflows and LangChain/LangGraph-style architecture.",
+      "source_ids": [
+        "upwork_ai_jobs_page"
+      ],
+      "buyer_pain": "The buyer needs architecture support for agents and workflow orchestration, often before execution code is safe.",
+      "offer_name": "Agent Architecture Review Packet",
+      "local_deliverables": [
+        "architecture review memo",
+        "task/state/gate diagram",
+        "implementation risk register",
+        "local-only evaluation checklist"
+      ],
+      "local_asset_fit": [
+        "money-path-lane-scout-packet-v1-20260618.md",
+        "service-worker-chain-integrity-latest.md"
+      ],
+      "forbidden_claims": [
+        "No claim of deploying live agents without approval",
+        "No model/API calls by default",
+        "No runtime start by default"
+      ],
+      "external_gates": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action",
+        "worker_runtime",
+        "model_api"
+      ]
+    },
+    {
+      "archetype_id": "ai_coaching_or_support_app",
+      "public_signal": "AI Coaching Platform Developer sample and chatbot development demand signal.",
+      "source_ids": [
+        "upwork_ai_jobs_page",
+        "upwork_in_demand_skills_2026"
+      ],
+      "buyer_pain": "The buyer wants an AI assistant or coaching/support app with human-safe boundaries.",
+      "offer_name": "AI Assistant Safety And Scope Blueprint",
+      "local_deliverables": [
+        "user journey map",
+        "assistant boundary policy",
+        "handoff/escalation checklist",
+        "synthetic conversation test plan"
+      ],
+      "local_asset_fit": [
+        "agent skill starter kit local product",
+        "service catalog and gate checklist artifacts"
+      ],
+      "forbidden_claims": [
+        "No medical/legal/financial advice system claim",
+        "No compliance or safety certification claim",
+        "No use of real user data without approval"
+      ],
+      "external_gates": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action",
+        "client_data_privacy",
+        "model_api"
+      ]
+    },
+    {
+      "archetype_id": "workflow_integrations_automation",
+      "public_signal": "AI Automation Specialist sample referenced workflows and integrations such as Sheets, Gmail, Slack, and CRMs.",
+      "source_ids": [
+        "upwork_ai_jobs_page",
+        "upwork_in_demand_skills_2026"
+      ],
+      "buyer_pain": "The buyer wants practical automation across familiar tools without breaking privacy, access, or approvals.",
+      "offer_name": "Workflow Integration Opportunity Map",
+      "local_deliverables": [
+        "integration inventory",
+        "credential-free automation sketch",
+        "ROI hypothesis",
+        "approval and rollback checklist"
+      ],
+      "local_asset_fit": [
+        "ai-workflow-audit-proof-asset-agency-reporting-20260616.md",
+        "upwork-profile-and-proposal-draft-20260616.md"
+      ],
+      "forbidden_claims": [
+        "No access to Gmail/Slack/CRM without contract and approval",
+        "No production automation by default",
+        "No guaranteed time savings for real clients"
+      ],
+      "external_gates": [
+        "account",
+        "proposal",
+        "payment",
+        "public_action",
+        "client_data_privacy",
+        "credential_handling"
+      ]
+    }
+  ],
+  "recommended_first_offer": {
+    "offer_name": "Supervised AI Agent Workflow Audit",
+    "why": "It uses the strongest local proof already built and aligns with public AI-agent/automation demand without needing credentials or platform action.",
+    "draft_scope": [
+      "Map one described workflow from client-provided plain-language notes.",
+      "Identify safe automation candidates and human approval points.",
+      "Produce one synthetic proof packet with no private client data.",
+      "Deliver a next-step blueprint rather than a production build."
+    ],
+    "not_in_scope": [
+      "Upwork profile creation.",
+      "Proposal sending.",
+      "Client contact.",
+      "Contract/payment setup.",
+      "Live integrations.",
+      "Credentials, private data, or public posting."
+    ]
+  },
+  "acceptance_checks": [
+    "Five archetypes are sourced from public job text or category summaries.",
+    "Every offer avoids claims of guaranteed client results.",
+    "No Upwork account, proposal, message, or profile action is performed.",
+    "Each archetype maps to at least one local evidence asset.",
+    "Every external action remains gated."
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "upwork_account_or_login": false,
+    "profile_created_or_edited": false,
+    "proposals_sent": 0,
+    "client_messages_sent": 0,
+    "contract_or_payment_action": false,
+    "real_client_data_used": false,
+    "credentials_requested_or_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create a no-send Upwork approval request packet for the recommended first offer only after human review; keep account, proposal, payment, client data, credentials, public action, worker/runtime, model/MCP, and external side effects blocked."
+}

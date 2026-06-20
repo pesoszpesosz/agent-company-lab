@@ -1,0 +1,13 @@
+﻿from __future__ import annotations
+
+"""Compatibility facade for migration parser module file phase writers."""
+
+from .agent_company_migration_parser_module_fixture_checks import write_agent_company_migration_decision_module_fixture_checks
+from .agent_company_migration_parser_module_file_draft import write_agent_company_migration_decision_parser_module_file_draft
+from .agent_company_migration_parser_static_review import write_agent_company_migration_decision_parser_static_review
+
+__all__ = [
+    "write_agent_company_migration_decision_module_fixture_checks",
+    "write_agent_company_migration_decision_parser_module_file_draft",
+    "write_agent_company_migration_decision_parser_static_review",
+]

@@ -1,0 +1,148 @@
+{
+  "version": "2026-06-14-draft",
+  "purpose": "Money-path taxonomy for assigning specialized agents without duplicating work.",
+  "global_gates": [
+    "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+    "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+    "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+    "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+  ],
+  "lanes": [
+    {
+      "id": "paid_code_bounties",
+      "department": "Cashflow Engineering",
+      "agent_types": ["source_scout", "repo_triager", "patch_worker", "submission_packet_writer"],
+      "examples": ["Algora", "Opire", "BountyHub", "Gibwork", "Gitpay", "GitHub explicit bounty issues"],
+      "promotion_gates": ["clear payout path", "low competition", "no active linked PR", "testable patch under 4 hours"],
+      "side_effects": ["fork", "branch", "PR", "bounty comment"],
+      "service_workers_required": ["github_identity_worker", "reputation_review_worker"]
+    },
+    {
+      "id": "submitted_bounty_payouts",
+      "department": "Revenue Collection",
+      "agent_types": ["payout_monitor", "rules_reader", "response_drafter"],
+      "examples": ["RustChain", "Charles microbounties", "existing merged PRs"],
+      "owner_thread": "other Find profitable edge worker, not this recovered infrastructure thread",
+      "promotion_gates": ["owner selection", "explicit payout instruction", "payment transaction evidence"],
+      "side_effects": ["wallet address comment", "payment detail reply"],
+      "service_workers_required": ["wallet_public_address_worker", "user_approval_worker"]
+    },
+    {
+      "id": "security_bounty_private_reports",
+      "department": "Security Research",
+      "agent_types": ["program_rules_reader", "static_reviewer", "proof_builder", "report_writer"],
+      "examples": ["Google OSS VRP style review", "IssueHunt security programs", "HackerOne/Bugcrowd public programs", "Web3 bounty programs"],
+      "promotion_gates": ["program scope verified", "allowed testing only", "minimal reproducible proof", "private report route clear"],
+      "side_effects": ["security advisory", "private report submission"],
+      "service_workers_required": ["scope_approval_worker", "report_submission_worker"]
+    },
+    {
+      "id": "prediction_market_research",
+      "department": "Markets Research",
+      "agent_types": ["market_scout", "rules_parser", "source_of_truth_monitor", "paper_trader"],
+      "examples": ["Kalshi source latency", "Polymarket data-only", "cross-venue semantic matching", "sports/crypto/weather close-window scans"],
+      "promotion_gates": ["venue eligibility verified", "rules verified", "spread/depth/fees captured", "paper evidence threshold met"],
+      "side_effects": ["paper trade", "real-money trade"],
+      "service_workers_required": ["market_eligibility_worker", "treasury_risk_worker"]
+    },
+    {
+      "id": "web3_airdrops_grants_hackathons",
+      "department": "Venture/Hackathon Desk",
+      "agent_types": ["program_scout", "terms_reader", "prototype_planner", "submission_packet_writer"],
+      "examples": ["Gitcoin", "Arbitrum/HackQuest", "ecosystem grants", "testnet campaigns"],
+      "promotion_gates": ["terms clear", "deadline feasible", "expected value beats code bounties", "account/wallet route approved"],
+      "side_effects": ["registration", "wallet transaction", "deployment", "submission"],
+      "service_workers_required": ["account_registration_worker", "wallet_ops_worker", "legal_terms_worker"]
+    },
+    {
+      "id": "lead_generation_and_sales",
+      "department": "Growth/Sales",
+      "agent_types": ["lead_scout", "offer_builder", "outreach_drafter", "crm_worker"],
+      "examples": ["AI automation service leads", "small-business website fixes", "security hardening offers", "freelance marketplaces"],
+      "promotion_gates": ["legal outreach route", "clear offer", "non-spam targeting", "tracking and opt-out"],
+      "side_effects": ["email", "DM", "proposal submission"],
+      "service_workers_required": ["outreach_policy_worker", "account_identity_worker"]
+    },
+    {
+      "id": "content_and_social_growth",
+      "department": "Audience/Distribution",
+      "agent_types": ["trend_scout", "draft_writer", "reply_selector", "analytics_reviewer"],
+      "examples": ["X account manager", "Grok/Radar scouts", "AI-builder audience"],
+      "promotion_gates": ["human-sounding draft", "topic fit", "no private data", "no spam pattern"],
+      "side_effects": ["post", "reply", "follow", "repost"],
+      "service_workers_required": ["x_action_executor", "brand_review_worker"]
+    },
+    {
+      "id": "youtube_content_channels",
+      "department": "Audience/Distribution",
+      "agent_types": ["youtube_channel_manager", "youtube_script_worker", "youtube_asset_pipeline_worker", "reputation_review_worker"],
+      "examples": ["faceless AI explainers", "tool walkthrough shorts", "agent-company build logs", "AI productivity tutorials", "competition/bounty recaps", "evergreen template demos"],
+      "promotion_gates": ["channel thesis has clear audience and monetization route", "first 10 no-post scripts pass quality review", "asset pipeline is locally reproducible", "account and public-action gates identified", "copyright and attribution risks reviewed"],
+      "side_effects": ["channel creation", "video upload", "comment reply", "thumbnail publication", "public promotion", "ad or sponsor outreach"],
+      "service_workers_required": ["account_registration_worker", "legal_terms_worker", "public_action_worker", "brand_review_worker"]
+    },
+    {
+      "id": "premium_customer_intake",
+      "department": "Customer/Operator Success",
+      "agent_types": ["premium_customer_intake_agent", "human_action_desk_worker", "observability_worker"],
+      "examples": ["new customer requests", "lane-specific source material", "YouTube videos or references", "operator constraints", "human-provided account readiness notes", "new business ideas", "corrections and priority changes"],
+      "promotion_gates": ["newest request captured", "current company context checked", "route chosen or parked with reason", "CEO context capsule written", "knowledge application path assigned", "customer update emitted"],
+      "side_effects": ["local input packet", "local routing ledger entry", "local artifact registration", "local task proposal", "compact CEO update"],
+      "service_workers_required": ["observability_worker", "human_action_desk_worker", "chief_risk_officer"]
+    },
+    {
+      "id": "local_trading_strategy_research",
+      "department": "Quant Research",
+      "agent_types": ["strategy_miner", "backtest_runner", "data_quality_auditor", "risk_reviewer"],
+      "examples": ["existing v2/v3 backtests", "MT5 systems", "OpenClaw trading infra"],
+      "promotion_gates": ["out-of-sample proof", "cost/slippage included", "drawdown acceptable", "no real-money execution without gate"],
+      "side_effects": ["paper deployment", "real-money trade"],
+      "service_workers_required": ["broker_eligibility_worker", "treasury_risk_worker"]
+    },
+    {
+      "id": "money_source_discovery",
+      "department": "Strategic Research",
+      "agent_types": ["source_mapper", "venue_rules_reader", "expected_value_ranker", "lane_launcher"],
+      "examples": ["new bounty sources", "AI competitions", "marketplace opportunities", "grant and affiliate source registries"],
+      "promotion_gates": ["source is current", "payout or monetization path explicit", "account and legal gates identified", "first proof artifact feasible under 2 hours"],
+      "side_effects": ["browser read-only research", "account registration packet", "data/API access review"],
+      "service_workers_required": ["browser_action_worker", "account_registration_worker", "chief_risk_officer"]
+    },
+    {
+      "id": "ai_ml_competitions",
+      "department": "Competition Lab",
+      "agent_types": ["competition_scout", "dataset_reader", "baseline_builder", "submission_packet_writer"],
+      "examples": ["Kaggle", "DrivenData", "ML Contests", "lablab.ai", "ETHGlobal AI tracks"],
+      "promotion_gates": ["rules and prize route clear", "dataset access legal", "deadline feasible", "baseline can be built locally", "submission/account gates approved"],
+      "side_effects": ["account registration", "dataset download", "competition submission"],
+      "service_workers_required": ["account_registration_worker", "data_access_worker", "legal_terms_worker", "public_action_worker"]
+    },
+    {
+      "id": "digital_products_templates_plugins",
+      "department": "Product Studio",
+      "agent_types": ["market_gap_scout", "template_builder", "plugin_packager", "listing_packet_writer"],
+      "examples": ["Gumroad", "Lemon Squeezy", "PromptBase", "Notion Marketplace", "Shopify app/plugin marketplaces"],
+      "promotion_gates": ["buyer problem explicit", "asset can be built locally", "marketplace fees and terms clear", "listing and payment gates approved"],
+      "side_effects": ["marketplace account", "product listing", "payment setup", "public promotion"],
+      "service_workers_required": ["account_registration_worker", "legal_terms_worker", "payment_review_worker", "public_action_worker"]
+    },
+    {
+      "id": "ai_resources_lab",
+      "department": "AI Resources",
+      "agent_types": ["ai_resources_manager", "ai_resource_evaluator", "goal_evolver_agent", "capability_overlap_mapper"],
+      "examples": ["agent frameworks", "research infrastructures", "money-making tools", "GitHub projects", "YouTube production tooling", "Kaggle baselines", "bounty scanners", "market research systems"],
+      "promotion_gates": ["local fixture proof", "clear capability gap", "lower overlap than existing tools", "risk and license reviewed", "time-to-proof under two focused work blocks"],
+      "side_effects": ["local file writes", "local SQLite records", "local fixture runs", "report-only adoption packets"],
+      "service_workers_required": ["observability_worker", "chief_risk_officer"]
+    },
+    {
+      "id": "platform_engineering",
+      "department": "Platform Engineering",
+      "agent_types": ["control_plane_builder", "schema_designer", "observability_integrator", "duplication_guardian"],
+      "examples": ["agent registry", "lane ownership", "task leases", "service request queue", "artifact registry", "trace store"],
+      "promotion_gates": ["prevents duplicate lane ownership", "records service requests", "keeps artifacts traceable", "does not own money execution lanes"],
+      "side_effects": ["local filesystem writes", "local SQLite schema changes", "local scripts"],
+      "service_workers_required": ["observability_worker", "chief_risk_officer"]
+    }
+  ]
+}

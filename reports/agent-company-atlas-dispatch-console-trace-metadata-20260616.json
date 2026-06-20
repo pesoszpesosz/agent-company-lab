@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "dispatch-console-v1",
+  "feature": {
+    "id": "global-dispatch-console",
+    "title": "Global Dispatch Console",
+    "purpose": "Give the Agent Company Atlas a centralized local command outbox where bot instructions can be staged, copied, archived, and traced back to source lanes without sending messages or starting workers."
+  },
+  "research": [
+    {
+      "name": "Command Palette",
+      "url": "https://uxpatterns.dev/patterns/advanced/command-palette",
+      "takeaway": "Command surfaces should help operators find and run actions from one reliable place while preserving state, rules, and recovery paths."
+    },
+    {
+      "name": "Designing Command Palettes",
+      "url": "https://solomon.io/designing-command-palettes/",
+      "takeaway": "Command palettes are action surfaces, not just search surfaces, and are most useful for power users in complex software."
+    },
+    {
+      "name": "Human-in-the-Loop AI Agents",
+      "url": "https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo",
+      "takeaway": "Agent systems should keep human approval and oversight visible before risky or externally side-effecting work."
+    },
+    {
+      "name": "Game Dispatch UI Reference",
+      "url": "https://interfaceingame.com/games/dispatch/",
+      "takeaway": "Dispatch interfaces can make mission assignment feel tangible through cards, status, and staged actions."
+    }
+  ],
+  "implementation": {
+    "snapshotField": "snapshot.dispatchConsole",
+    "schema": "agent-company-dispatch-console.v1",
+    "uiSurface": "Dispatch Console panel",
+    "storage": "localStorage: agent-company-atlas.dispatch-outbox.v1",
+    "safetyBoundary": "Local staging and copying only. The feature does not send messages, mutate the control plane, start workers, or approve gates.",
+    "sourceFiles": [
+      "tools/generate_visual_dashboard_snapshot.py",
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Stage a suggested lane command into a browser-local outbox.",
+      "Persist staged drafts across page reloads.",
+      "Archive staged drafts from the local queue.",
+      "Open the source lane Comms deck from a suggestion or staged command."
+    ]
+  },
+  "validation": {
+    "staticChecks": {
+      "nodeCheck": "passed",
+      "pythonCompile": "passed",
+      "jsonValidation": "passed",
+      "asciiCheck": "passed"
+    },
+    "snapshot": {
+      "regenerated": true,
+      "lanes": 12,
+      "dispatchSuggestions": 12,
+      "visibleSuggestionCards": 8,
+      "counts": {
+        "gate_review": 7,
+        "follow_up": 4,
+        "scout_ping": 1
+      },
+      "topSuggestion": "Review gate before any live action",
+      "topLane": "Digital Products Templates Plugins"
+    },
+    "browserDesktop": {
+      "visibleSuggestions": 8,
+      "initialOutboxCards": 0,
+      "stageActionOutboxCards": 1,
+      "stageActionCountText": "1 staged",
+      "reloadPersistence": "passed",
+      "laneClickThrough": "#lane=digital_products_templates_plugins&view=comms",
+      "consoleErrors": 0,
+      "pageOverflow": false
+    },
+    "browserMobile": {
+      "viewport": "390x840",
+      "dispatchGridColumns": "328px",
+      "suggestionGridColumns": "302px",
+      "visibleSuggestions": 8,
+      "consoleErrors": 0,
+      "pageOverflow": false
+    },
+    "cleanup": {
+      "testStagedDraftRemoved": true,
+      "finalOutboxCountText": "0 staged"
+    }
+  }
+}

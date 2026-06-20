@@ -1,0 +1,275 @@
+{
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+  "expected_target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py",
+  "fixture_assertion_count": 11,
+  "fixture_evidence_id": "agent-company-migration-decision-parser-install-decision-fixture-suite-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-agent-company-migration-decision-parser-install-decision-fixture-suite-20260616",
+  "fixtures": [
+    {
+      "assertion": "accepted decision type maps to the declared report-only output state",
+      "decision": {
+        "decision_id": "fixture-hold-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_state": "accepted_hold",
+      "expected_valid": true,
+      "fixture_id": "positive_hold",
+      "kind": "positive"
+    },
+    {
+      "assertion": "accepted decision type maps to the declared report-only output state",
+      "decision": {
+        "decision_id": "fixture-approve_one_file_write_only-20260616",
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_state": "accepted_one_file_write_only",
+      "expected_valid": true,
+      "fixture_id": "positive_approve_one_file_write_only",
+      "kind": "positive"
+    },
+    {
+      "assertion": "accepted decision type maps to the declared report-only output state",
+      "decision": {
+        "decision_id": "fixture-request_preflight_rework-20260616",
+        "decision_type": "request_preflight_rework",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_state": "accepted_preflight_rework",
+      "expected_valid": true,
+      "fixture_id": "positive_request_preflight_rework",
+      "kind": "positive"
+    },
+    {
+      "assertion": "accepted decision type maps to the declared report-only output state",
+      "decision": {
+        "decision_id": "fixture-reject_parser_install-20260616",
+        "decision_type": "reject_parser_install",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_state": "accepted_install_rejection",
+      "expected_valid": true,
+      "fixture_id": "positive_reject_parser_install",
+      "kind": "positive"
+    },
+    {
+      "assertion": "missing_decision_id is rejected by guard_required_fields_present",
+      "decision": {
+        "decision_id": null,
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_guard": "guard_required_fields_present",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "missing_decision_id",
+      "kind": "negative"
+    },
+    {
+      "assertion": "unknown_decision_type is rejected by guard_known_install_decision_type",
+      "decision": {
+        "decision_id": "fixture-negative-base-20260616",
+        "decision_type": "approve_import_and_live_parse",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_guard": "guard_known_install_decision_type",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "unknown_decision_type",
+      "kind": "negative"
+    },
+    {
+      "assertion": "target_path_changed is rejected by guard_target_path_matches_preflight",
+      "decision": {
+        "decision_id": "fixture-negative-base-20260616",
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\unexpected_parser.py"
+      },
+      "expected_guard": "guard_target_path_matches_preflight",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "target_path_changed",
+      "kind": "negative"
+    },
+    {
+      "assertion": "missing_source_artifact is rejected by guard_source_artifact_matches_preflight",
+      "decision": {
+        "decision_id": "fixture-negative-base-20260616",
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": null,
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_guard": "guard_source_artifact_matches_preflight",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "missing_source_artifact",
+      "kind": "negative"
+    },
+    {
+      "assertion": "expired_decision is rejected by guard_not_expired",
+      "decision": {
+        "decision_id": "fixture-negative-base-20260616",
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-15T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_guard": "guard_not_expired",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "expired_decision",
+      "kind": "negative"
+    },
+    {
+      "assertion": "unsigned_decision is rejected by guard_signed_timestamp_present",
+      "decision": {
+        "decision_id": "fixture-negative-base-20260616",
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "report_only_fixture_no_install_decision_applied",
+        "signed_utc": null,
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_guard": "guard_signed_timestamp_present",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "unsigned_decision",
+      "kind": "negative"
+    },
+    {
+      "assertion": "bundled_live_parse_permission is rejected by guard_no_import_or_live_parse_permission",
+      "decision": {
+        "decision_id": "fixture-negative-base-20260616",
+        "decision_type": "approve_one_file_write_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "fixture_operator",
+        "risk_acknowledgement": "also_allows_import_and_live_parse",
+        "signed_utc": "2026-06-16T00:00:00Z",
+        "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+        "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+      },
+      "expected_guard": "guard_no_import_or_live_parse_permission",
+      "expected_state": "rejected_fixture_input",
+      "expected_valid": false,
+      "fixture_id": "bundled_live_parse_permission",
+      "kind": "negative"
+    }
+  ],
+  "generated_utc": "2026-06-16T12:54:23Z",
+  "install_decision_fixture_suite_count": 11,
+  "lane_evidence_rows_after": 151,
+  "lane_evidence_rows_before": 150,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_install_decision_fixture_suite_ready_for_report_only_runner",
+  "negative_fixture_count": 7,
+  "next_action": "Build a report-only install-decision runner next; do not execute fixtures through an importable parser or apply an install decision.",
+  "output_state_count": 4,
+  "output_states": [
+    "accepted_hold",
+    "accepted_one_file_write_only",
+    "accepted_preflight_rework",
+    "accepted_install_rejection"
+  ],
+  "parser_guard_count": 8,
+  "parser_guards": [
+    "guard_json_object_only",
+    "guard_required_fields_present",
+    "guard_known_install_decision_type",
+    "guard_target_path_matches_preflight",
+    "guard_source_artifact_matches_preflight",
+    "guard_not_expired",
+    "guard_signed_timestamp_present",
+    "guard_no_import_or_live_parse_permission"
+  ],
+  "positive_fixture_count": 4,
+  "recommended_default": "build_report_only_install_decision_runner_next_without_applying_install_decision",
+  "required_field_count": 8,
+  "required_fields": [
+    "decision_id",
+    "operator_name",
+    "decision_type",
+    "target_path",
+    "source_artifact_path",
+    "expires_at",
+    "risk_acknowledgement",
+    "signed_utc"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "fixtures_executed": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_install_decision_fixture_suite.v1",
+  "source_intake_evidence_id": "agent-company-migration-decision-parser-install-decision-intake-contract-20260616",
+  "source_intake_task_id": "task-agent-company-migration-decision-parser-install-decision-intake-contract-20260616",
+  "summary": "Materialized the report-only install-decision fixture suite from the intake contract, covering accepted decisions, rejection cases, and parser guard assertions.",
+  "task_rows_inserted_by_install_decision_fixture_suite": 1,
+  "tasks_table_rows_after": 243,
+  "tasks_table_rows_before": 242
+}

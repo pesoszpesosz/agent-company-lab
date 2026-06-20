@@ -1,0 +1,81 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "client_outreach_or_proposals": 0,
+    "client_private_data_used": false,
+    "dms_follows_quotes_or_tags": 0,
+    "external_side_effects": 0,
+    "fiverr_account_or_login": false,
+    "gig_or_listing_created": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_payout_setup": 0,
+    "public_posts_or_replies": 0,
+    "review_entries_created": 3,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "x_account_or_login": false
+  },
+  "checks": [
+    {
+      "name": "three_review_entries",
+      "passed": true
+    },
+    {
+      "name": "all_entries_no_post_state",
+      "passed": true
+    },
+    {
+      "name": "all_entries_have_sources",
+      "passed": true
+    },
+    {
+      "name": "all_entries_have_tone_checks",
+      "passed": true
+    },
+    {
+      "name": "all_entries_have_forbidden_claims",
+      "passed": true
+    },
+    {
+      "name": "required_decisions_complete",
+      "passed": true
+    },
+    {
+      "name": "no_x_or_fiverr_account",
+      "passed": true
+    },
+    {
+      "name": "no_public_posts_or_replies",
+      "passed": true
+    },
+    {
+      "name": "no_dm_follow_quote_tag",
+      "passed": true
+    },
+    {
+      "name": "no_gig_or_client_outreach",
+      "passed": true
+    },
+    {
+      "name": "no_private_or_payment_action",
+      "passed": true
+    },
+    {
+      "name": "no_service_request_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T08:55:01Z",
+  "schema_version": "content_growth.fiverr_trends_no_post_review_packet.validation.v1",
+  "task_id": "task-fiverr-trends-no-post-review-packet-v1-20260618"
+}

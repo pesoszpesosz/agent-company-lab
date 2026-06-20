@@ -1,0 +1,19 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "task_id": "task-service-worker-signed-decision-apply-preflight-blocker-v1-20260617",
+  "trace_id": "trace-service-worker-signed-decision-apply-preflight-blocker-v1-20260617",
+  "artifact_family": "service-worker-signed-decision-apply-preflight-blocker-v1",
+  "summary": "Generic service-worker signed-decision apply preflight blocker generated report-only evidence that no real signed operator decision exists and no queue mutation, assignment, worker start, browser start, API call, public action, payment, wallet action, or security submission is allowed.",
+  "validation_report": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-apply-preflight-blocker-v1-validation-20260617.json",
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "apply_preflight_status": "blocked_no_real_signed_decision",
+  "accepted_guard_decision_count": 3,
+  "service_template_count": 13,
+  "current_request_count": 14,
+  "report_only": true,
+  "external_side_effects": false,
+  "worker_starts": 0,
+  "service_requests_mutated": 0,
+  "next_action": "Build signed decision apply-command contract/negative fixtures only after a real signed operator decision artifact is supplied and passes this blocker."
+}

@@ -1,0 +1,83 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "api_keys_created_or_used": false,
+    "browser_sessions_started": 0,
+    "episodes_run": 8,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "official_arc_toolkit_installed_or_run": false,
+    "official_or_gated_data_downloaded": false,
+    "paid_compute_or_model_api": false,
+    "papers_or_notebooks_published": 0,
+    "public_actions": 0,
+    "rules_or_terms_accepted": false,
+    "scorecards_opened": 0,
+    "service_requests_mutated": 0,
+    "submissions_made": 0,
+    "synthetic_environments_created": 4,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "four_environments_created",
+      "passed": true
+    },
+    {
+      "name": "eight_episodes_run",
+      "passed": true
+    },
+    {
+      "name": "planner_beats_three_or_more",
+      "passed": true
+    },
+    {
+      "name": "continue_rule_passed",
+      "passed": true
+    },
+    {
+      "name": "every_env_has_comparison",
+      "passed": true
+    },
+    {
+      "name": "planner_observations_present",
+      "passed": true
+    },
+    {
+      "name": "fixture_exists",
+      "passed": true
+    },
+    {
+      "name": "replay_exists",
+      "passed": true
+    },
+    {
+      "name": "no_kaggle_or_official_data",
+      "passed": true
+    },
+    {
+      "name": "no_toolkit_api_or_scorecard",
+      "passed": true
+    },
+    {
+      "name": "no_submission_or_public_action",
+      "passed": true
+    },
+    {
+      "name": "no_service_request_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_or_paid_compute",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T08:36:48Z",
+  "schema_version": "ai_ml_competitions.arc_agi_3_prereq_planner_baseline.validation.v1",
+  "task_id": "task-arc-agi-3-prereq-planner-baseline-v1-20260618"
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "agent_company.durable_adapter_reducer_fixture_set.v1",
+  "fixture_count": 1,
+  "fixtures": [
+    {
+      "fixture_id": "fixture-negative-missing-input-01",
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "expected_output": {
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "terminal": false,
+        "ledger_mutation_allowed": false,
+        "approval_granted": false,
+        "assign_worker": false,
+        "start_worker": false,
+        "emit_followup_event": false,
+        "schedule_activity": false,
+        "call_api": false,
+        "external_side_effects_allowed": false,
+        "resume_requirements": [
+          "human approval packet"
+        ]
+      },
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      }
+    }
+  ],
+  "api_calls": false,
+  "external_side_effects": false
+}

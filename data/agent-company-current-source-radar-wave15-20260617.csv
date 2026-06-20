@@ -1,0 +1,8 @@
+fit_score,stars,pushed_at,category,repo,license,local_decision,gate,html_url
+12,77551,2026-06-17T19:45:27Z,coding_agent_harness,All-Hands-AI/OpenHands,NOASSERTION,treat_as_sandboxed_code_worker_reference_not_runtime_dependency,sandbox_execution_gate_and_github_public_action_gate_required,https://github.com/OpenHands/OpenHands
+12,35051,2026-06-17T20:45:03Z,durable_agent_graph_hitl,langchain-ai/langgraph,MIT,reference_interrupt_checkpoint_human_review_pattern,no_runtime_adoption_until_checkpoint_schema_and_apply_guard,https://github.com/langchain-ai/langgraph
+12,21029,2026-06-17T20:41:36Z,durable_execution_runtime,temporalio/temporal,MIT,keep_as_future_durable_orchestration_candidate,runtime_start_preflight_and_signed_operator_decision_required,https://github.com/temporalio/temporal
+12,4021,2026-06-17T18:08:53Z,durable_agent_runtime,restatedev/restate,NOASSERTION,reference_journaled_tool_and_llm_step_recovery_pattern,no_server_start_no_container_no_cloud_until_runtime_start_preflight,https://github.com/restatedev/restate
+11,53815,2026-06-17T19:01:37Z,multi_agent_orchestration,crewAIInc/crewAI,MIT,study_role_team_patterns_but_keep_shared_state_in_local_db,no_dependency_install_no_worker_start,https://github.com/crewAIInc/crewAI
+11,11428,2026-06-17T20:18:09Z,multi_agent_workflow_hitl,microsoft/agent-framework,MIT,reference_manager_worker_reviewer_escalation_pattern,no_foundry_or_cloud_runtime_without_exact_scope_and_cost_gate,https://github.com/microsoft/agent-framework
+10,20157,2026-06-17T20:40:14Z,agent_app_framework,google/adk-python,Apache-2.0,study_eval_deploy_agent_packaging_patterns,model_api_execution_gate_and_dependency_install_gate_required,https://github.com/google/adk-python

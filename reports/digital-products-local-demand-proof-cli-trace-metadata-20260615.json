@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-cli-test-20260615.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-cli-validation-20260615.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-demand-proof-cli-20260615.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-demand-proof-cli-20260615",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:04:11Z",
+  "proof_lane_id": "digital_products_templates_plugins",
+  "proof_task_id": "task-digital_products_templates_plugins-first-local-proof-20260615",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "1855EA080E6F547A2D34FAA7241D5A3E080272135E50BF888B864BFA8B91CFDA",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

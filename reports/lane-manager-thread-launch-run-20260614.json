@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-06-14T12:30:00Z",
+  "manifest_path": "E:\\agent-company-lab\\reports\\lane-manager-thread-launch-manifest-latest.md",
+  "target_mode": "projectless_codex_threads_with_explicit_agent_company_lab_path",
+  "reason": "create_thread was available, but no saved project id for E:\\agent-company-lab was exposed.",
+  "threads": [
+    {
+      "lane_id": "security_bounty_private_reports",
+      "title": "Agent Company - Security Manager",
+      "thread_id": "019ec612-4cf1-7601-8818-ddd3028a06f4",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-security-manager\\outputs"
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "title": "Agent Company - Prediction Manager",
+      "thread_id": "019ec612-9996-7603-a593-38281608d3dc",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-prediction-manager\\outputs"
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "title": "Agent Company - Paid Code Manager",
+      "thread_id": "019ec612-d317-71f1-b02f-c85f2295e320",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-paid-code-manager\\outputs"
+    },
+    {
+      "lane_id": "content_and_social_growth",
+      "title": "Agent Company - Content Social Manager",
+      "thread_id": "019ec613-1080-7520-80e3-24dc7cfc31ea",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-content-social-manager\\outputs"
+    },
+    {
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "title": "Agent Company - Web3 Manager",
+      "thread_id": "019ec613-54d0-7d13-ada3-d448a4b4cc99",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-web3-manager\\outputs"
+    },
+    {
+      "lane_id": "lead_generation_and_sales",
+      "title": "Agent Company - Lead Gen Manager",
+      "thread_id": "019ec613-9786-7a70-97fd-21143953b39f",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-lead-gen-manager\\outputs"
+    },
+    {
+      "lane_id": "local_trading_strategy_research",
+      "title": "Agent Company - Local Trading Manager",
+      "thread_id": "019ec613-e69b-7ce1-8aed-36383f3136f6",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-local-trading-manager\\outputs"
+    }
+  ]
+}

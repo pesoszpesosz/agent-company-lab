@@ -1,0 +1,122 @@
+{
+  "accepted_response_type_count": 4,
+  "accepted_response_types": [
+    "hold",
+    "approve_one_parser_file_write_only",
+    "request_approval_request_rework",
+    "reject_parser_write_request"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+  "expected_source_request_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-write-approval-request-latest.json",
+  "expected_target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py",
+  "generated_utc": "2026-06-16T13:38:25Z",
+  "intake_evidence_id": "agent-company-migration-decision-parser-write-approval-response-intake-contract-20260616",
+  "intake_lane_id": "platform_engineering",
+  "intake_task_id": "task-agent-company-migration-decision-parser-write-approval-response-intake-contract-20260616",
+  "lane_evidence_rows_after": 159,
+  "lane_evidence_rows_before": 158,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_write_approval_response_intake_contract_ready_for_report_only_fixture_suite",
+  "negative_fixture_count": 9,
+  "negative_fixtures": [
+    "missing_decision_id",
+    "unknown_response_type",
+    "target_path_changed",
+    "source_artifact_path_changed",
+    "source_request_path_changed",
+    "approval_scope_too_broad",
+    "expired_response",
+    "unsigned_response",
+    "bundled_import_or_live_parse_permission"
+  ],
+  "next_action": "Build a report-only parser-write approval response fixture suite next; do not apply approval or write the parser.",
+  "output_state_count": 4,
+  "output_states": [
+    "accepted_hold",
+    "accepted_one_parser_file_write_only",
+    "accepted_approval_request_rework",
+    "accepted_parser_write_request_rejection"
+  ],
+  "parser_write_approval_response_intake_contract_count": 1,
+  "positive_fixture_count": 4,
+  "positive_fixtures": [
+    {
+      "expected_state": "accepted_hold",
+      "fixture": "positive_hold",
+      "response_type": "hold"
+    },
+    {
+      "expected_state": "accepted_one_parser_file_write_only",
+      "fixture": "positive_approve_one_parser_file_write_only",
+      "response_type": "approve_one_parser_file_write_only"
+    },
+    {
+      "expected_state": "accepted_approval_request_rework",
+      "fixture": "positive_request_approval_request_rework",
+      "response_type": "request_approval_request_rework"
+    },
+    {
+      "expected_state": "accepted_parser_write_request_rejection",
+      "fixture": "positive_reject_parser_write_request",
+      "response_type": "reject_parser_write_request"
+    }
+  ],
+  "recommended_default": "build_report_only_parser_write_approval_response_fixture_suite_next_without_applying_approval",
+  "required_field_count": 10,
+  "required_fields": [
+    "decision_id",
+    "operator_name",
+    "response_type",
+    "target_path",
+    "source_artifact_path",
+    "source_request_path",
+    "approval_scope",
+    "risk_acknowledgement",
+    "expires_at",
+    "signed_utc"
+  ],
+  "response_guard_count": 10,
+  "response_guards": [
+    "guard_json_object_only",
+    "guard_required_fields_present",
+    "guard_known_response_type",
+    "guard_target_path_matches_request",
+    "guard_source_artifact_matches_request",
+    "guard_source_request_matches_packet",
+    "guard_approval_scope_one_file_only",
+    "guard_not_expired",
+    "guard_signed_timestamp_present",
+    "guard_no_import_or_live_parse_permission"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_write_approval_response_intake_contract.v1",
+  "source_request_evidence_id": "agent-company-migration-decision-parser-write-approval-request-20260616",
+  "source_request_task_id": "task-agent-company-migration-decision-parser-write-approval-request-20260616",
+  "summary": "Defined the report-only signed parser-write approval response intake contract, including required fields, accepted responses, guards, and fixture expectations.",
+  "task_rows_inserted_by_parser_write_approval_response_intake_contract": 1,
+  "tasks_table_rows_after": 251,
+  "tasks_table_rows_before": 250
+}

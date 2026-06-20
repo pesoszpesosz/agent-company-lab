@@ -1,0 +1,11 @@
+{
+  "intake": {
+    "lane_id": "security_bounty_private_reports",
+    "program_url": "https://bughunters.google.com/open-source-security",
+    "scope_evidence": "E:\\agent-company-lab\\reports\\security-bounty-private-reports\\rules-android-source-scope-packet-20260614.md",
+    "vulnerability_artifact": "E:\\profit-edge-lab\\reports\\bazelbuild-rules-android-aar-resource-zip-slip-private-vrp-draft-20260613-163124.md",
+    "impact_assessment": "Potential AAR resource extraction path traversal / output-tree escape in bazelbuild/rules_android; impact caveats remain and full Bazel/Java/Android toolchain reproduction is not complete.",
+    "safe_harbor_text": "Not yet verified from current rendered rules; must be filled by approved browser-read-only rendered-rules review before any submission.",
+    "submission_route": "Unknown / blocked until rendered Google OSS VRP route is reviewed; no report submission is approved by this packet."
+  }
+}

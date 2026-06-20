@@ -1,0 +1,87 @@
+{
+  "trace_id": "trace-agent-company-atlas-experiment-discovery-lab-v1-20260618",
+  "task_id": "task-agent-company-atlas-experiment-discovery-lab-v1-20260618",
+  "event_id": "trace-atlas_experiment_discovery_lab_added-20260618",
+  "created_at": "2026-06-18T09:28:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "experiment_discovery_lab",
+  "summary": "Added a generated-art Experiment Discovery Lab inside the Mission Feed so tested paths, proof captures, blocker gates, outcomes, traces, and future experiment slots become visible as a reusable company-wide lab board.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0cba0d94e717a6ae016a33b7dfd6b48191ae464d3cd3e1a43c.png",
+    "workspace_path": "web/assets/system/experiment-discovery-lab-20260618.png",
+    "bytes": 2544155,
+    "sha256": "193AB897E22CE5A8AA07C6C2A8CD784EB114F204081792F7C3ECB0E837849CEB",
+    "prompt_summary": "Premium dark sci-fi experiment lab board with test pods, proof vials, route cards, blocker gates, evidence capsules, win tokens, lane rails, teal/green/amber/coral glow accents, no readable text, no logos, no faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/experiment-discovery-lab-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_experiment_discovery_lab.py",
+      "reports/agent-company-atlas-experiment-discovery-lab-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render an Experiment Discovery Lab inside the Mission Feed after the Company Chronicle Spine.",
+      "Use generated experiment-discovery-lab-20260618.png as the reusable lab backdrop.",
+      "Derive lab cards from existing Mission Feed items grouped by lane plus lane counts, without adding snapshot schema.",
+      "Summarize experiments, proof, wins, gates, and active lane coverage from existing feed/lane data.",
+      "Expose PROOF, GATES, and WINS actions through existing Mission Feed filters.",
+      "Allow every lane-bound lab card to drill into the source lane Trail view.",
+      "Render future experiment sockets for hypotheses, proof capture, parked tests, and win rituals.",
+      "Register the lab texture in the Visual Asset Vault system assets.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_experiment_discovery_lab.py -q failed before implementation on missing experimentDiscoveryLab element wiring.",
+      "green": "pytest tests\\test_agent_company_atlas_experiment_discovery_lab.py -q passed after generated asset, renderer, styles, docs, cache token, handlers, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "experiment_discovery_lab_contract_test": "passed",
+      "focused_frontend_contract_tests": "7 passed",
+      "asset_present_bytes": 2544155
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=experiment-discovery-lab-green",
+      "evidence": {
+        "experiment_discovery_lab_present": true,
+        "generated_art_loaded": true,
+        "stat_count": 5,
+        "card_count": 12,
+        "future_slot_count": 3,
+        "lane_linked_cards": 12,
+        "action_count": 3,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "PROOF -> Mission Feed evidence lens with 1 evidence item",
+          "GATES -> Mission Feed service_request lens with 2 service request items",
+          "WINS -> Mission Feed outcome lens with 23 outcome items",
+          "Lab card -> selected lane Trail tab for digital_products_templates_plugins with 18 visible trail records"
+        ],
+        "horizontal_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Experiment Discovery Lab with generated art loaded at 1574x999 natural size, five stats, twelve lab cards, three future slots, three local actions, zero bad rects, zero button text overflow, zero panel overflow, zero page horizontal overflow, and zero console errors."
+    }
+  }
+}

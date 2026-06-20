@@ -1,0 +1,189 @@
+{
+  "adapter_result": {
+    "action": "prepare_local_artifact",
+    "adapter_id": "typed_worker_runtime_local_adapter",
+    "api_calls": false,
+    "artifact_plan": [
+      "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\digital-products-agent-skill-starter-kit-marketplace-readiness\\adapter-result.json"
+    ],
+    "external_side_effects": false,
+    "packet_id": "packet-digital-products-agent-skill-starter-kit-marketplace-readiness",
+    "preserved_blocked_actions": [
+      "browser automation",
+      "marketplace terms verification",
+      "seller signup",
+      "listing creation",
+      "product upload",
+      "payment setup",
+      "tax/KYC/legal commitment",
+      "public promotion",
+      "purchase or sale",
+      "account login or registration",
+      "model/API execution",
+      "real-money action"
+    ],
+    "reason": "real typed worker produced proposal proposal-digital_products_templates_plugins-20260614",
+    "runtime_details": {
+      "lane_id": "digital_products_templates_plugins",
+      "proposal_blocked_actions": [
+        "marketplace account",
+        "product listing",
+        "payment setup",
+        "public promotion",
+        "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+        "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+        "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+        "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+      ],
+      "proposal_evidence_refs": [],
+      "proposal_id": "proposal-digital_products_templates_plugins-20260614",
+      "proposal_mode": "read_only_local_artifact",
+      "proposal_output_artifacts": [
+        "E:\\agent-company-lab\\reports\\worker-runtime\\digital_products_templates_plugins-typed-worker-proposal.json",
+        "E:\\agent-company-lab\\reports\\worker-runtime\\digital_products_templates_plugins-typed-worker-proposal.md"
+      ],
+      "proposal_required_service_requests": [
+        "account_registration_worker",
+        "legal_terms_worker",
+        "payment_review_worker",
+        "public_action_worker"
+      ],
+      "proposal_task_title": "Prepare scoped local artifact proposal for digital_products_templates_plugins",
+      "typed_worker_runtime_called": true
+    },
+    "status": "prepared_local_artifact",
+    "trace_metadata": {
+      "api_calls": false,
+      "packet_id": "packet-digital-products-agent-skill-starter-kit-marketplace-readiness",
+      "runtime": "typed_worker_runtime_local_adapter",
+      "span_kind": "runtime_adapter_eval"
+    }
+  },
+  "evaluation": {
+    "checks": {
+      "artifact_plan_present": true,
+      "blocked_actions_preserved": true,
+      "gated_openai_agents_stopped_before_manifest": true,
+      "gated_pydantic_ai_stopped_before_execution": true,
+      "gated_typed_worker_stopped_before_execution": true,
+      "langgraph_route_correct": true,
+      "langgraph_static_graph_materialized": true,
+      "no_api_calls": true,
+      "no_external_side_effects": true,
+      "openai_agents_manifest_used_when_expected": true,
+      "packet_valid": true,
+      "real_pydantic_ai_used_when_expected": true,
+      "real_typed_worker_used_when_expected": true,
+      "refusal_correct": true,
+      "result_schema_valid": true,
+      "trace_metadata_present": true
+    },
+    "packet_errors": [],
+    "passed": true
+  },
+  "packet": {
+    "allowed_actions": [
+      "read local product bundle files",
+      "read local proof and build reports",
+      "read local service-request packets as blocked-gate context",
+      "write local adapter result files",
+      "emit local trace metadata"
+    ],
+    "approval_requirements": [
+      {
+        "approval_status": "not_required",
+        "decision_owner": "user_or_cro",
+        "gate": "browser_read_only_session",
+        "scope": "Not required for this local packaging packet; required before marketplace terms or current-source verification."
+      },
+      {
+        "approval_status": "not_required",
+        "decision_owner": "user",
+        "gate": "legal_kyc_tax_payment_gate",
+        "scope": "Not required for this local packaging packet; required before seller setup, payout setup, tax/KYC, terms acceptance, listing, or sale."
+      },
+      {
+        "approval_status": "not_required",
+        "decision_owner": "user_or_cro",
+        "gate": "public_action_execution",
+        "scope": "Not required for this local packaging packet; required before any listing, upload, public post, promotion, or submission."
+      }
+    ],
+    "blocked_actions": [
+      "browser automation",
+      "marketplace terms verification",
+      "seller signup",
+      "listing creation",
+      "product upload",
+      "payment setup",
+      "tax/KYC/legal commitment",
+      "public promotion",
+      "purchase or sale",
+      "account login or registration",
+      "model/API execution",
+      "real-money action"
+    ],
+    "context_artifacts": [
+      {
+        "kind": "product_build_report",
+        "path_or_url": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-v0-build-report-20260614.md",
+        "purpose": "Proves the local product bundle exists and passed file-level acceptance checks."
+      },
+      {
+        "kind": "product_proof_packet",
+        "path_or_url": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-proof-packet-20260614.md",
+        "purpose": "Defines product hypothesis, buyer, gated marketplace routes, and local-only acceptance criteria."
+      },
+      {
+        "kind": "local_product_bundle",
+        "path_or_url": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+        "purpose": "Local Markdown product bundle to package for future review."
+      },
+      {
+        "kind": "service_request_packet",
+        "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\packet.md",
+        "purpose": "Blocked marketplace browser-read-only review packet; context only."
+      },
+      {
+        "kind": "service_request_packet",
+        "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\packet.md",
+        "purpose": "Blocked legal/KYC/tax/payment review packet; context only."
+      }
+    ],
+    "created_utc": "2026-06-14T16:20:00Z",
+    "execution_mode": "local_only",
+    "expected_outputs": [
+      {
+        "kind": "lane_adapter_result",
+        "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\digital-products-agent-skill-starter-kit-marketplace-readiness\\adapter-result.json",
+        "required": true
+      }
+    ],
+    "external_side_effects_allowed": false,
+    "lane_id": "digital_products_templates_plugins",
+    "metadata": {
+      "api_calls": false,
+      "money_lane": "digital_products_templates_plugins",
+      "product": "agent-skill-starter-kit-v0",
+      "runtime": "runtime_adapter_harness",
+      "span_kind": "lane_packet_eval"
+    },
+    "objective": "Convert the existing local Agent Skill Starter Kit proof bundle and gated service-request packets into an auditable local readiness packet without browser, account, marketplace, payment, public, or legal/KYC/tax action.",
+    "packet_id": "packet-digital-products-agent-skill-starter-kit-marketplace-readiness",
+    "packet_type": "local_research",
+    "public_action_allowed": false,
+    "real_money_allowed": false,
+    "requester_agent_id": "recovered-profitable-edge-infra",
+    "required_service_requests": [],
+    "schema_version": "work_packet.v1",
+    "success_criteria": [
+      "all adapters prepare or materialize local-only artifact plans without external execution",
+      "result files are written and linked from aggregate reports",
+      "marketplace/legal/browser/public/real-money actions remain blocked",
+      "service request packets remain needs_review and are not started"
+    ],
+    "task_id": "task-digital-products-agent-skill-starter-kit-marketplace-readiness-packet-20260614",
+    "title": "Package Agent Skill Starter Kit marketplace-readiness evidence"
+  },
+  "result_file": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\digital-products-agent-skill-starter-kit-marketplace-readiness\\packet-results\\packet-digital-products-agent-skill-starter-kit-marketplace-readiness--typed_worker_runtime_local_adapter.json"
+}

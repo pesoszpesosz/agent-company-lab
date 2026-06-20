@@ -1,0 +1,129 @@
+{
+  "environment_count": 4,
+  "environments": [
+    {
+      "action_space": [
+        "inspect_room",
+        "pick_coin",
+        "take_key",
+        "open_chest",
+        "open_door",
+        "exit"
+      ],
+      "distractors": [
+        "inspect_room",
+        "pick_coin",
+        "open_chest"
+      ],
+      "env_id": "key_door_with_decoys",
+      "goal": "exit",
+      "max_steps": 6,
+      "prerequisites": [
+        {
+          "after": "open_door",
+          "before": "take_key"
+        },
+        {
+          "after": "exit",
+          "before": "open_door"
+        }
+      ],
+      "title": "Take the key, open the door, then exit while ignoring decoys."
+    },
+    {
+      "action_space": [
+        "wait",
+        "lower_bridge",
+        "wave_flag",
+        "cross_bridge",
+        "collect_shell",
+        "reach_goal"
+      ],
+      "distractors": [
+        "wait",
+        "wave_flag",
+        "collect_shell"
+      ],
+      "env_id": "bridge_toggle_with_waits",
+      "goal": "reach_goal",
+      "max_steps": 6,
+      "prerequisites": [
+        {
+          "after": "cross_bridge",
+          "before": "lower_bridge"
+        },
+        {
+          "after": "reach_goal",
+          "before": "cross_bridge"
+        }
+      ],
+      "title": "Lower the bridge, cross it, then reach the goal while ignoring waits."
+    },
+    {
+      "action_space": [
+        "press_random",
+        "read_clue",
+        "set_green",
+        "set_red",
+        "confirm_lock",
+        "claim_gem"
+      ],
+      "distractors": [
+        "press_random",
+        "set_red"
+      ],
+      "env_id": "color_sequence_lock",
+      "goal": "claim_gem",
+      "max_steps": 6,
+      "prerequisites": [
+        {
+          "after": "set_green",
+          "before": "read_clue"
+        },
+        {
+          "after": "confirm_lock",
+          "before": "set_green"
+        },
+        {
+          "after": "claim_gem",
+          "before": "confirm_lock"
+        }
+      ],
+      "title": "Read clue, set color, confirm lock, then claim gem."
+    },
+    {
+      "action_space": [
+        "look_sky",
+        "gather_tool",
+        "repair_bridge",
+        "cross_bridge",
+        "paint_rock",
+        "signal_finish"
+      ],
+      "distractors": [
+        "look_sky",
+        "paint_rock"
+      ],
+      "env_id": "tool_bridge_repair",
+      "goal": "signal_finish",
+      "max_steps": 6,
+      "prerequisites": [
+        {
+          "after": "repair_bridge",
+          "before": "gather_tool"
+        },
+        {
+          "after": "cross_bridge",
+          "before": "repair_bridge"
+        },
+        {
+          "after": "signal_finish",
+          "before": "cross_bridge"
+        }
+      ],
+      "title": "Gather tool, repair bridge, cross bridge, then signal finish."
+    }
+  ],
+  "schema_version": "ai_ml_competitions.arc_agi_3_prereq_planner_fixture.v1",
+  "source": "synthetic_local_only_no_official_arc_data"
+}

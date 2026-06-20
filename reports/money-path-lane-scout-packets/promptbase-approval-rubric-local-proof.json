@@ -1,0 +1,289 @@
+{
+  "schema_version": "digital_products.promptbase_approval_rubric_local_proof.v1",
+  "generated_utc": "2026-06-18T06:24:22Z",
+  "task_id": "task-lane-scout-promptbase_agent_skill_route-20260618",
+  "lane_id": "digital_products_templates_plugins",
+  "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+  "status": "promptbase_approval_rubric_ready_local_only",
+  "source_packet": "E:\\agent-company-lab\\data\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.json",
+  "source_packet_status": "do_not_run_local_submission_packet_ready",
+  "selected_route_id": "promptbase_agent_skill_route",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "folder": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+    "manifest_path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json",
+    "file_count": 12,
+    "total_bytes": 21670,
+    "package_status": "internal_review_manifest_only",
+    "zip_created": false,
+    "public_listing_ready": false,
+    "realized_usd": 0
+  },
+  "approval_count": 6,
+  "rubric_rows": [
+    {
+      "order": 1,
+      "approval_id": "approval-promptbase-readonly-guideline-review",
+      "gate": "browser_read_only_session",
+      "default_decision": "park",
+      "approve_only_if": [
+        "The operator accepts this exact approval scope.",
+        "Allowed actions are narrow enough to perform without combining unrelated gates.",
+        "Forbidden actions remain explicit and enforceable.",
+        "The required output path and receipt standard are understood."
+      ],
+      "revise_if": [
+        "The allowed actions are too broad.",
+        "The approval mixes browser, account, payment, package build, or public action scopes.",
+        "The receipt does not prove what happened."
+      ],
+      "park_if": [
+        "The operator is not ready to review this gate.",
+        "The gate depends on a prior review that is still missing.",
+        "The action could create public, legal, financial, account, or platform obligations."
+      ],
+      "required_output": "PromptBase guideline mapping report with each package file marked pass, edit-needed, blocked, or not-applicable.",
+      "still_forbidden": [
+        "No account creation or login.",
+        "No form submission, upload, listing creation, marketplace save, checkout, or message.",
+        "No accepting terms, seller onboarding, payout setup, or profile changes."
+      ],
+      "review_questions": [
+        "Are SKILL.md/template bundles currently acceptable on PromptBase?",
+        "Which file formats, examples, screenshots, metadata, and categories are required?",
+        "Which claims, price statements, support promises, or categories are disallowed?"
+      ],
+      "service_request_policy": "If approved later, create one separate exact-scope service request with owner, expiry, permitted URLs/actions, forbidden actions, expected receipt, and validation command.",
+      "recommended_sequence": 1,
+      "rubric_weight": 30,
+      "why_first": "It is read-only and resolves the core route-fit uncertainty before account/payment/public work."
+    },
+    {
+      "order": 3,
+      "approval_id": "approval-ip-license-claims-review",
+      "gate": "ip_license_claims_review",
+      "default_decision": "park",
+      "approve_only_if": [
+        "The operator accepts this exact approval scope.",
+        "Allowed actions are narrow enough to perform without combining unrelated gates.",
+        "Forbidden actions remain explicit and enforceable.",
+        "The required output path and receipt standard are understood."
+      ],
+      "revise_if": [
+        "The allowed actions are too broad.",
+        "The approval mixes browser, account, payment, package build, or public action scopes.",
+        "The receipt does not prove what happened."
+      ],
+      "park_if": [
+        "The operator is not ready to review this gate.",
+        "The gate depends on a prior review that is still missing.",
+        "The action could create public, legal, financial, account, or platform obligations."
+      ],
+      "required_output": "IP/license/claims checklist with required copy edits and final human signoff fields.",
+      "still_forbidden": [
+        "No publication, upload, sale, marketplace submission, or public promotion.",
+        "No legal advice claim or compliance guarantee."
+      ],
+      "review_questions": [
+        "Are all templates and examples original or safely licensed?",
+        "Does the listing avoid platform endorsement, guaranteed sales, compliance, or marketplace approval claims?",
+        "Is the buyer license understandable and appropriate for a template kit?"
+      ],
+      "service_request_policy": "If approved later, create one separate exact-scope service request with owner, expiry, permitted URLs/actions, forbidden actions, expected receipt, and validation command.",
+      "recommended_sequence": 2,
+      "rubric_weight": 22,
+      "why_first": "It can mostly stay local and may reduce later public-listing risk."
+    },
+    {
+      "order": 2,
+      "approval_id": "approval-seller-terms-fees-payout-review",
+      "gate": "legal_kyc_tax_payment",
+      "default_decision": "park",
+      "approve_only_if": [
+        "The operator accepts this exact approval scope.",
+        "Allowed actions are narrow enough to perform without combining unrelated gates.",
+        "Forbidden actions remain explicit and enforceable.",
+        "The required output path and receipt standard are understood."
+      ],
+      "revise_if": [
+        "The allowed actions are too broad.",
+        "The approval mixes browser, account, payment, package build, or public action scopes.",
+        "The receipt does not prove what happened."
+      ],
+      "park_if": [
+        "The operator is not ready to review this gate.",
+        "The gate depends on a prior review that is still missing.",
+        "The action could create public, legal, financial, account, or platform obligations."
+      ],
+      "required_output": "Legal/payment review memo with explicit proceed, revise, or park recommendation.",
+      "still_forbidden": [
+        "No entering legal identity, tax data, payout account, card, bank, wallet, or KYC information.",
+        "No agreeing to terms or creating seller obligations.",
+        "No real-money transaction."
+      ],
+      "review_questions": [
+        "What seller identity, tax, KYC, payout, refund, and dispute obligations exist?",
+        "What fees apply to marketplace sales, referral-link sales, and custom jobs?",
+        "Does the seller agreement permit this product type and license shape?"
+      ],
+      "service_request_policy": "If approved later, create one separate exact-scope service request with owner, expiry, permitted URLs/actions, forbidden actions, expected receipt, and validation command.",
+      "recommended_sequence": 3,
+      "rubric_weight": 20,
+      "why_first": "It should happen before seller account or payout setup."
+    },
+    {
+      "order": 5,
+      "approval_id": "approval-package-build-and-preview-assets",
+      "gate": "package_artifact_publication_review",
+      "default_decision": "park",
+      "approve_only_if": [
+        "The operator accepts this exact approval scope.",
+        "Allowed actions are narrow enough to perform without combining unrelated gates.",
+        "Forbidden actions remain explicit and enforceable.",
+        "The required output path and receipt standard are understood."
+      ],
+      "revise_if": [
+        "The allowed actions are too broad.",
+        "The approval mixes browser, account, payment, package build, or public action scopes.",
+        "The receipt does not prove what happened."
+      ],
+      "park_if": [
+        "The operator is not ready to review this gate.",
+        "The gate depends on a prior review that is still missing.",
+        "The action could create public, legal, financial, account, or platform obligations."
+      ],
+      "required_output": "Package build manifest with zip hash, screenshot paths, and publication readiness result.",
+      "still_forbidden": [
+        "No upload, public link, marketplace draft, external storage, or publication.",
+        "No screenshots from signed-in marketplace pages."
+      ],
+      "review_questions": [
+        "Are all included files meant for buyer delivery?",
+        "Do screenshots reveal only local package content?",
+        "Should any docs be revised before public distribution?"
+      ],
+      "service_request_policy": "If approved later, create one separate exact-scope service request with owner, expiry, permitted URLs/actions, forbidden actions, expected receipt, and validation command.",
+      "recommended_sequence": 4,
+      "rubric_weight": 14,
+      "why_first": "It prepares local artifacts only after route/IP/legal checks are clearer."
+    },
+    {
+      "order": 4,
+      "approval_id": "approval-seller-account-and-payout-setup",
+      "gate": "account_payment_approval",
+      "default_decision": "park",
+      "approve_only_if": [
+        "The operator accepts this exact approval scope.",
+        "Allowed actions are narrow enough to perform without combining unrelated gates.",
+        "Forbidden actions remain explicit and enforceable.",
+        "The required output path and receipt standard are understood."
+      ],
+      "revise_if": [
+        "The allowed actions are too broad.",
+        "The approval mixes browser, account, payment, package build, or public action scopes.",
+        "The receipt does not prove what happened."
+      ],
+      "park_if": [
+        "The operator is not ready to review this gate.",
+        "The gate depends on a prior review that is still missing.",
+        "The action could create public, legal, financial, account, or platform obligations."
+      ],
+      "required_output": "Human account setup checklist or parked decision; no automated account action by default.",
+      "still_forbidden": [
+        "No credentials, OTPs, cookies, tax/KYC data, payout data, or account settings handled by an agent unless a later exact-scope approval says so.",
+        "No accepting agreements without human confirmation."
+      ],
+      "review_questions": [
+        "Who owns seller identity and support obligations?",
+        "Which payout route and tax profile are acceptable?",
+        "Should any step be performed manually instead of by an agent?"
+      ],
+      "service_request_policy": "If approved later, create one separate exact-scope service request with owner, expiry, permitted URLs/actions, forbidden actions, expected receipt, and validation command.",
+      "recommended_sequence": 5,
+      "rubric_weight": 8,
+      "why_first": "It creates account/payment exposure and should wait for legal/payment clarity."
+    },
+    {
+      "order": 6,
+      "approval_id": "approval-public-listing-submission",
+      "gate": "public_action_approval",
+      "default_decision": "park",
+      "approve_only_if": [
+        "The operator accepts this exact approval scope.",
+        "Allowed actions are narrow enough to perform without combining unrelated gates.",
+        "Forbidden actions remain explicit and enforceable.",
+        "The required output path and receipt standard are understood."
+      ],
+      "revise_if": [
+        "The allowed actions are too broad.",
+        "The approval mixes browser, account, payment, package build, or public action scopes.",
+        "The receipt does not prove what happened."
+      ],
+      "park_if": [
+        "The operator is not ready to review this gate.",
+        "The gate depends on a prior review that is still missing.",
+        "The action could create public, legal, financial, account, or platform obligations."
+      ],
+      "required_output": "Public action receipt with URL, timestamp, exact submitted text, asset hashes, and next monitoring step.",
+      "still_forbidden": [
+        "No price, claim, refund term, support promise, promotion, cross-post, message, or follow-up outside the approved text and scope.",
+        "No mutation of other marketplace/account settings."
+      ],
+      "review_questions": [
+        "Is the title, description, category, price, license, refund language, and support promise approved?",
+        "Is publication approved, or only draft creation?",
+        "What exact public URL or record should be captured after action?"
+      ],
+      "service_request_policy": "If approved later, create one separate exact-scope service request with owner, expiry, permitted URLs/actions, forbidden actions, expected receipt, and validation command.",
+      "recommended_sequence": 6,
+      "rubric_weight": 6,
+      "why_first": "It is a public-action gate and should be last."
+    }
+  ],
+  "operator_decision_form": {
+    "decision_schema": "promptbase_approval_rubric.operator_decision.v1",
+    "allowed_decisions": [
+      "approve_exact_scope",
+      "revise_scope",
+      "park"
+    ],
+    "required_fields": [
+      "approval_id",
+      "decision",
+      "operator_name_or_initials",
+      "decision_utc",
+      "exact_scope",
+      "expiry_utc",
+      "forbidden_actions_confirmed",
+      "expected_receipt",
+      "next_validation_command"
+    ],
+    "invalid_decision_examples": [
+      "Approve all marketplace work.",
+      "Go create the account and publish.",
+      "Use whatever browser steps are needed.",
+      "Handle payment/tax setup if it appears."
+    ]
+  },
+  "recommended_next_approval": "approval-promptbase-readonly-guideline-review",
+  "recommended_next_action": "If the operator wants to proceed, review only the read-only guideline approval first and convert it into one exact-scope service request; keep account, payment, package build, listing, upload, submission, worker/runtime, model/MCP, and public actions blocked.",
+  "boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_performed": 0,
+    "terms_accepted": 0,
+    "payment_or_payout_actions": 0,
+    "kyc_tax_actions": 0,
+    "zip_created": false,
+    "public_uploads": 0,
+    "marketplace_drafts_created": 0,
+    "marketplace_submissions": 0,
+    "public_promotions": 0,
+    "service_requests_mutated": 0,
+    "workers_started": 0,
+    "runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_or_mcp_calls": 0,
+    "external_side_effects": 0
+  }
+}

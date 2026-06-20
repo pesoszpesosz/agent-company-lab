@@ -1,0 +1,250 @@
+{
+  "schema_version": "agent_company.optimism_scope_rules_extraction_packet.v1",
+  "generated_utc": "2026-06-17T21:42:00Z",
+  "task_id": "task-optimism-scope-rules-extraction-packet-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "source_program": {
+    "program_id": "optimism",
+    "program_name": "Optimism",
+    "platform": "Immunefi",
+    "information_url": "https://immunefi.com/bug-bounty/optimism/information/",
+    "scope_url": "https://immunefi.com/bug-bounty/optimism/scope/",
+    "resources_url": "https://immunefi.com/bug-bounty/optimism/resources/",
+    "last_updated": "2026-06-16",
+    "live_since": "2022-01-14",
+    "maximum_bounty_usd": 2000042,
+    "triaged_by_immunefi": true,
+    "poc_required": true,
+    "kyc_required": true,
+    "payment_asset": "USDC on Ethereum, denominated in USD"
+  },
+  "reward_surface": [
+    {
+      "category": "Blockchain/DLT",
+      "critical": "Up to $2,000,042",
+      "high": "Max $50,000 Min $15,000",
+      "medium": "Max $15,000 Min $1,000",
+      "primacy": "Primacy of Impact"
+    },
+    {
+      "category": "Smart Contract",
+      "critical": "Up to $2,000,042",
+      "high": "Max $50,000 Min $15,000",
+      "medium": "Max $15,000 Min $1,000",
+      "primacy": "Primacy of Impact"
+    },
+    {
+      "category": "Websites and Applications",
+      "critical": "Max $50,000 Min $5,000",
+      "high": "Flat $5,000",
+      "medium": null,
+      "primacy": "Primacy of Rules"
+    }
+  ],
+  "scope_surface": {
+    "categories": [
+      "Blockchain/DLT",
+      "Smart Contract",
+      "Web & App"
+    ],
+    "asset_count_observed": 33,
+    "impact_count_observed": 27,
+    "asset_examples": [
+      {
+        "name": "op-dispute-mon",
+        "notes": "In scope for impacts listed in the smart contracts section.",
+        "added_on": "2024-05-29"
+      },
+      {
+        "name": "OptimismPortal",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2024-03-11"
+      },
+      {
+        "name": "ProxyAdmin",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2024-03-11"
+      },
+      {
+        "name": "DisputeGameFactory",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2024-05-29"
+      },
+      {
+        "name": "L2OutputOracle",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2024-03-11"
+      },
+      {
+        "name": "OptimismMintableERC20Factory",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2024-03-11"
+      },
+      {
+        "name": "L1CrossDomainMessenger",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2024-03-11"
+      },
+      {
+        "name": "PermissionedDisputeGame",
+        "notes": "Etherscan asset listed on scope page.",
+        "added_on": "2025-10-03"
+      },
+      {
+        "name": "Optimism Specs",
+        "notes": "Scope page lists the specs as an asset.",
+        "added_on": "2025-10-03"
+      }
+    ],
+    "resource_examples": [
+      {
+        "name": "Optimism smart contracts",
+        "source": "Immunefi resources page"
+      },
+      {
+        "name": "Optimism Docs",
+        "source": "Immunefi resources page"
+      },
+      {
+        "name": "Previous Audits / Monorepo",
+        "source": "Immunefi resources page"
+      },
+      {
+        "name": "Dockerized services",
+        "source": "Immunefi information page recommendation for cross-domain transaction exploit testing"
+      },
+      {
+        "name": "Integration tests",
+        "source": "Immunefi information page recommendation for cross-domain transaction exploit testing"
+      }
+    ]
+  },
+  "impact_matrix": [
+    {
+      "category": "Blockchain/DLT or Smart Contract",
+      "severity": "Critical",
+      "impact": "Protocol insolvency, excluding proposer/challenger bonds or fee vaults.",
+      "local_next_step": "Map exact contract/client component and expected invariant; no execution."
+    },
+    {
+      "category": "Blockchain/DLT or Smart Contract",
+      "severity": "Critical",
+      "impact": "Loss of user funds by direct theft, excluding proposer/challenger bonds or fee vaults.",
+      "local_next_step": "Create invariant inventory for bridge/portal/message assets; no transaction replay."
+    },
+    {
+      "category": "Blockchain/DLT or Smart Contract",
+      "severity": "Critical",
+      "impact": "Direct loss or permanent freezing of funds, excluding proposer/challenger bonds or fee vaults.",
+      "local_next_step": "Static review only until a local fork or official integration-test proof plan is approved."
+    },
+    {
+      "category": "Web & App",
+      "severity": "Critical",
+      "impact": "Execute arbitrary system commands or retrieve sensitive running-server data/files.",
+      "local_next_step": "Rules-only mapping; no probing web properties."
+    },
+    {
+      "category": "Web & App",
+      "severity": "Critical",
+      "impact": "Taking/modifying authenticated user actions, subdomain takeover with connected wallet interaction, direct theft of user funds, malicious already-connected wallet interactions, or XSS via metadata.",
+      "local_next_step": "Rules-only mapping; browser and account gates required before any live inspection."
+    },
+    {
+      "category": "Web & App",
+      "severity": "High",
+      "impact": "Subdomain takeover without already-connected wallet interaction.",
+      "local_next_step": "No DNS probing; document only as report-quality criterion."
+    }
+  ],
+  "known_issue_and_duplicate_controls": [
+    "Check Optimism smart-contract known issues dated 2025-06-12 before promoting any finding.",
+    "Check Optimism Blockchain/DLT known issues dated 2025-06-12 before promoting any finding.",
+    "Do not replay publicly disclosed upstream reth or Ethereum Foundation vulnerabilities against Optimism unless disclosed to Optimism at the same time.",
+    "Check devp2p known issues before touching networking claims.",
+    "Exclude listed bridge foot guns, deposit griefing, known delegate proxy collision, and fake ERC20 bridge scenario unless a bypass of documented protections is proven locally and allowed."
+  ],
+  "out_of_scope_controls": [
+    {
+      "area": "Blockchain/DLT",
+      "controls": [
+        "JSON-RPC or Beacon API exposure required by user configuration is out of scope.",
+        "Chain operator best-practice violations are out of scope.",
+        "Alt-DA feature of op-node and op-batcher is out of scope.",
+        "Execution layer clients that reached end-of-service are out of scope.",
+        "Known devp2p issues are out of scope."
+      ]
+    },
+    {
+      "area": "Smart Contracts",
+      "controls": [
+        "Third-party custom token bridge implementation vulnerabilities are out of scope.",
+        "op-challenger bugs resolved by op-dispute-mon detection are out of scope.",
+        "Proof-of-whale based Fault Proof attacks are out of scope.",
+        "Documented bridge foot guns and known griefing conditions are out of scope unless a bypass creates new eligible impact."
+      ]
+    },
+    {
+      "area": "Web & App",
+      "controls": [
+        "explorer.optimism.io and testnet-explorer.optimism.io are out of scope.",
+        "retrofunding.optimism.io, public-grafana.optimism.io, discord.optimism.io, kyc.optimism.io, kyb.optimism.io, raas.optimism.io, contribute.optimism.io, superfest.optimism.io, and welovetheart.optimism.io are out of scope.",
+        "vote.optimism.io and atlas.optimism.io are operated by Agora; report directly to Agora unless the issue creates direct financial impact on OP Stack or Optimism protocol."
+      ]
+    },
+    {
+      "area": "Default Immunefi-style exclusions",
+      "controls": [
+        "No self-exploited damage.",
+        "No leaked-key or leaked-credential reliance.",
+        "No privileged-address-only impact without additional privilege modification.",
+        "No pure best-practice recommendations or feature requests.",
+        "No phishing, social engineering, denial of service, automated traffic, or public disclosure."
+      ]
+    }
+  ],
+  "local_only_allowed_next_work": [
+    {
+      "proof_id": "optimism_asset_scope_table_v1",
+      "description": "Normalize the 33 in-scope assets into local CSV/JSON with category, date added, and primary duplicate-risk note.",
+      "requires_gate": false
+    },
+    {
+      "proof_id": "optimism_known_issue_duplicate_matrix_v1",
+      "description": "Extract known issue links, upstream reth/devp2p exclusions, and bridge-footgun exclusions into a mandatory duplicate checklist.",
+      "requires_gate": false
+    },
+    {
+      "proof_id": "optimism_local_harness_plan_v1",
+      "description": "Design a local-only proof path using official dockerized services and integration tests; do not clone, build, run, or test until a runtime start gate exists.",
+      "requires_gate": true
+    },
+    {
+      "proof_id": "security_report_quality_gate_v1",
+      "description": "Create report-quality checklist for scope, PoC, duplicate, impact, local-only evidence, KYC/payment, and disclosure gates.",
+      "requires_gate": false
+    }
+  ],
+  "blocked_actions": [
+    "No mainnet testing.",
+    "No public testnet testing.",
+    "No live web/app probing.",
+    "No DNS/subdomain probing.",
+    "No node, Docker, integration-test, or runtime start.",
+    "No account login, KYC, W-9/W-8, payout, wallet, or payment action.",
+    "No Immunefi submission.",
+    "No public disclosure.",
+    "No transaction, bridge, oracle, third-party, or automated traffic testing."
+  ],
+  "required_service_gates": [
+    "browser_read_only_session",
+    "runtime_start_signed_decision_guard",
+    "security_report_submission_gate",
+    "legal_kyc_tax_payment_gate",
+    "wallet_public_address_or_payment_reply",
+    "public_action_execution"
+  ],
+  "decision": "Optimism remains the top Immunefi candidate, but only rules extraction and duplicate/quality gates are ready. Target-specific local proof work is not ready until asset table and known-issue matrix are complete.",
+  "submission_ready": false,
+  "next_action": "Build optimism_asset_scope_table_v1 and security_report_quality_gate_v1; keep runtime/testing/submission blocked."
+}

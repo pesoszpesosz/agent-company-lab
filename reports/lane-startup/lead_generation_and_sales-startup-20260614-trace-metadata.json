@@ -1,0 +1,20 @@
+{
+  "span_kind": "agent_decision",
+  "runtime": "codex_desktop_local",
+  "api_calls": false,
+  "public_actions": false,
+  "lane": "lead_generation_and_sales",
+  "gates": [
+    "no_outreach",
+    "no_account_action",
+    "no_crm_upload",
+    "no_paid_api",
+    "no_scraping_against_site_rules",
+    "no_submitted_bounty_payout_lane"
+  ],
+  "official_refs": [
+    "FTC CAN-SPAM",
+    "FCC TCPA/telemarketing",
+    "California CCPA"
+  ]
+}

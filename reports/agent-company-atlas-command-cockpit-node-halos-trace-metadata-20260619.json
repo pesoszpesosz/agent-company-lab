@@ -1,0 +1,35 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-node-halos-v1-20260619",
+  "title": "Command Cockpit Node Halos",
+  "created_at": "2026-06-19T21:05:20Z",
+  "kind": "ui_unlock",
+  "summary": "Quest board cells now carry compact proof, gate, crew, trail, score, and next-move medals.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/assets/system/command-cockpit-node-halos-20260619.png",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "lane.counts",
+      "lane.agentTypes",
+      "lane.quest.checkpoints",
+      "questCockpitData",
+      "questFieldCells"
+    ],
+    "outputs": [
+      "questNodeHalos",
+      "quest-node-halos",
+      "quest-node-halo",
+      "system-command-cockpit-node-halos"
+    ]
+  },
+  "verification": {
+    "intent": "Make current proof, blockers, progress, and next moves visible on path nodes without adding another scroll row.",
+    "layout": "The medals are absolutely positioned inside each Quest field cell and compressed on mobile.",
+    "motion": "Each medal uses a small transform-only sweep over a generated local texture."
+  }
+}

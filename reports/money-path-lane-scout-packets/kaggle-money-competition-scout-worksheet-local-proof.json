@@ -1,0 +1,227 @@
+{
+  "acceptance_checks": [
+    "Worksheet records the 401 unauthenticated API result instead of pretending active listings were captured.",
+    "Worksheet separates listing, data-access, local-baseline, and submission gates.",
+    "At least fifteen fields are defined for future candidate rows.",
+    "At least four candidate classes are defined.",
+    "At least eight hard kill reasons are defined.",
+    "No Kaggle login, token, data download, rules acceptance, notebook run, submission, public comment, or payment action occurred."
+  ],
+  "boundary": {
+    "api_token_or_credentials_created": false,
+    "competition_data_downloaded": 0,
+    "competition_rules_accepted": false,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "public_notebooks_or_comments": 0,
+    "submissions_made": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "candidate_classes": [
+    {
+      "class_id": "featured_cash_prize",
+      "first_local_action": "record slug/title/prize/deadline/rules URL only",
+      "promotion_gate": "specific competition rules and eligibility reviewed",
+      "route": "Kaggle featured category sorted by prize"
+    },
+    {
+      "class_id": "research_cash_prize",
+      "first_local_action": "screen for data ethics, external data rules, and compute scale",
+      "promotion_gate": "data provenance and publication/IP terms reviewed",
+      "route": "Kaggle research category sorted by prize"
+    },
+    {
+      "class_id": "playground_practice",
+      "first_local_action": "use as baseline rehearsal only",
+      "promotion_gate": "do not count as money path unless cash prize exists",
+      "route": "Kaggle playground category"
+    },
+    {
+      "class_id": "code_competition",
+      "first_local_action": "read kernel/submission constraints and design local harness",
+      "promotion_gate": "no Kaggle notebook run or submit without account/compute approval",
+      "route": "competition docs/files indicate notebook or code submission"
+    }
+  ],
+  "cli_refresh_plan": [
+    {
+      "allowed_now": false,
+      "command_shape": "Human/browser read of https://www.kaggle.com/competitions sorted by prizes/deadlines",
+      "gate": "browser_read_only_service_request",
+      "stage": "manual_read_only_listing"
+    },
+    {
+      "allowed_now": false,
+      "command_shape": "kaggle competitions list --group general --category featured --sort-by prize -v",
+      "gate": "kaggle_account_and_api_token_approval",
+      "stage": "credentialed_cli_listing"
+    },
+    {
+      "allowed_now": false,
+      "command_shape": "kaggle competitions files <slug> --page-size=20 -v -q",
+      "gate": "rules_and_data_access_review",
+      "stage": "competition_files_probe"
+    },
+    {
+      "allowed_now": true,
+      "command_shape": "Use public/open fixtures or synthetic fixture locally; no Kaggle download or submission",
+      "gate": "local_only_no_external_action",
+      "stage": "local_baseline_only"
+    }
+  ],
+  "decision": "worksheet_only_no_account_no_data_download_no_submission_no_runtime",
+  "generated_at": "2026-06-18T07:02:31Z",
+  "hard_kill_reasons": [
+    "no_cash_prize_or_unclear_prize",
+    "deadline_too_close_for_first_local_baseline",
+    "rules_or_eligibility_unreadable_without_account",
+    "requires_accepting_terms_or_downloading_data_before_review",
+    "medical_biometric_child_or_sensitive_data_provenance_unclear",
+    "external_data_policy_unclear",
+    "requires_paid_compute_or_large_gpu_without budget approval",
+    "requires_team_or_organization_commitment",
+    "requires_public_notebook_or_writeup_before approval",
+    "tax_payment_or_country_eligibility_unclear",
+    "cannot_reproduce_baseline_locally"
+  ],
+  "lane_id": "ai_ml_competitions",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "recommended_next_local_proof": "Create a no-login Kaggle competition row fixture from manually saved public listing/rules snippets, then run the worksheet scorer and prove all rows either have a next local baseline action or a kill reason. Keep Kaggle account, API token, rules acceptance, data download, notebook execution, submission, payment, public action, worker/runtime, and model/MCP calls blocked.",
+  "schema_version": "kaggle_money_competition_scout_worksheet_local_proof.v1",
+  "scoring_rubric": [
+    {
+      "factor": "prize",
+      "good": "cash prize explicit and nonzero",
+      "points": 20
+    },
+    {
+      "factor": "deadline",
+      "good": "at least 14 days to first useful local baseline",
+      "points": 15
+    },
+    {
+      "factor": "data_access",
+      "good": "data can be inspected after approved rules review; no private/medical ambiguity",
+      "points": 15
+    },
+    {
+      "factor": "baseline_feasibility",
+      "good": "simple local baseline or public tutorial can be reproduced without paid compute",
+      "points": 15
+    },
+    {
+      "factor": "competition_density",
+      "good": "low/moderate team count or niche expertise advantage",
+      "points": 10
+    },
+    {
+      "factor": "rules_clarity",
+      "good": "external data, team, code, and IP rules are unambiguous",
+      "points": 10
+    },
+    {
+      "factor": "skill_fit",
+      "good": "tabular/NLP/vision/agentic task matches available local skills",
+      "points": 10
+    },
+    {
+      "factor": "payout_route",
+      "good": "eligibility and tax/payment route can be reviewed before submission",
+      "points": 5
+    }
+  ],
+  "sources": [
+    {
+      "observations": [
+        "Official competition listing exists but is JavaScript-heavy in text fetches.",
+        "Use it as a human/browser review source only after an approved read-only browser request."
+      ],
+      "type": "official_listing_page",
+      "url": "https://www.kaggle.com/competitions"
+    },
+    {
+      "observations": [
+        "Read-only unauthenticated probe returned HTTP 401 Unauthorized.",
+        "Automated current listing refresh requires an approved Kaggle credential/API-token route."
+      ],
+      "type": "public_api_probe",
+      "url": "https://www.kaggle.com/api/v1/competitions/list?category=featured&page=1"
+    },
+    {
+      "observations": [
+        "The official Kaggle CLI can list competitions, download competition data, and submit to competitions.",
+        "These capabilities must be split into separate scout, data-access, and submission gates."
+      ],
+      "type": "official_cli_readme",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/README.md"
+    },
+    {
+      "observations": [
+        "Kaggle CLI authentication requires a Kaggle account and token or OAuth flow.",
+        "Any credential generation, account login, or API-token storage is gated."
+      ],
+      "type": "official_cli_docs",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/README.md"
+    },
+    {
+      "observations": [
+        "The CLI supports competition list filters by group, category, prize sort, deadlines, teams, and created date.",
+        "It also supports files, download, submit, submissions, leaderboard, and discussion topics commands."
+      ],
+      "type": "official_cli_competitions_docs",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competitions.md"
+    },
+    {
+      "observations": [
+        "Kaggle competitions can be paid or unpaid.",
+        "Submission, leaderboard, and prize/IP conditions vary by competition and must be read in the specific rules."
+      ],
+      "type": "secondary_overview",
+      "url": "https://en.wikipedia.org/wiki/Kaggle"
+    },
+    {
+      "observations": [
+        "Recent Kaggle ecosystem research frames the platform as a broad competition, notebook, model, dataset, and discussion ecosystem.",
+        "Use discussions and prior writeups as learning signals, not as permission to submit."
+      ],
+      "type": "research_overview",
+      "url": "https://arxiv.org/abs/2511.06304"
+    },
+    {
+      "observations": [
+        "Prior competition lane work kept account, official data, submission, paid compute, and public action blocked.",
+        "Reuse that gate posture for Kaggle prize scouting."
+      ],
+      "type": "local_prior_packet",
+      "url": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-prize-2026-baseline-local-proof.md"
+    }
+  ],
+  "status": "kaggle_money_competition_scout_worksheet_ready_local_only",
+  "summary": "Kaggle is a valid money-competition lane, but current automated active-listing capture is gated by Kaggle authentication and competition-specific rules. This packet creates the scout worksheet, source route plan, scoring rubric, kill reasons, and exact gates for a later approved listing refresh.",
+  "task_id": "task-lane-scout-kaggle_money_competitions-20260618",
+  "worksheet_fields": [
+    "competition_url_or_slug",
+    "observed_utc",
+    "source_route",
+    "competition_group",
+    "category",
+    "title",
+    "prize_usd_or_text",
+    "deadline_utc",
+    "teams_count",
+    "submission_type",
+    "data_access_requires_rules_acceptance",
+    "code_competition",
+    "external_data_policy",
+    "license_or_ip_terms_summary",
+    "eligibility_flags",
+    "compute_requirements",
+    "baseline_available_locally",
+    "expected_hours_to_first_submission",
+    "expected_value_score",
+    "kill_reasons",
+    "next_local_action"
+  ]
+}

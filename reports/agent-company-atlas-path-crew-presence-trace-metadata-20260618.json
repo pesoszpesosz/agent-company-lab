@@ -1,0 +1,99 @@
+{
+  "traceId": "trace-agent-company-atlas-path-crew-presence-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-crew-presence-v1-20260618",
+  "eventId": "trace-atlas_path_crew_presence_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-crew-presence-trace-metadata-20260618",
+  "title": "Path Crew Presence",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "ownerAgentId": "recovered-profitable-edge-infra",
+  "problem": "The Path cockpit showed mission state and route progress, but the first view still did not make bot ownership visible enough. The command center needs to show who is driving each lane before the operator opens deeper Comms or Crew Bridge panels.",
+  "implementation": [
+    "Added pathMissionCrewTokens to reuse the existing lane-to-agent party records.",
+    "Added renderPathMissionCrewPresence to surface compact bot portraits, callsigns, readiness bars, and gated/ready/staged state directly under the Mission Glance run meter.",
+    "Styled the strip as a dense, game-like crew presence layer that does not add another large panel.",
+    "Updated docs, cache tags, reduced-motion coverage, and regression tests."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_crew_presence.py"
+  ],
+  "browserEvidence": {
+    "desktop": {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "crewVisible": true,
+      "boardVisible": true,
+      "panelBottomWithinViewport": true,
+      "overflowX": 0,
+      "tokenCount": 1,
+      "crewRect": {
+        "x": 123,
+        "y": 277,
+        "width": 340,
+        "height": 30,
+        "bottom": 307
+      },
+      "boardRect": {
+        "x": 35,
+        "y": 173,
+        "width": 1195,
+        "height": 437,
+        "bottom": 610
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "crewVisible": true,
+      "boardStartsInViewport": true,
+      "panelStartsInViewport": true,
+      "overflowX": 0,
+      "tokenCount": 1,
+      "crewRect": {
+        "x": 113,
+        "y": 350,
+        "width": 134,
+        "height": 30,
+        "bottom": 380
+      },
+      "boardRect": {
+        "x": 27,
+        "y": 207,
+        "width": 306,
+        "height": 562,
+        "bottom": 769
+      }
+    }
+  },
+  "verification": [
+    {
+      "type": "red-test",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_crew_presence.py -q",
+      "result": "failed before implementation because pathMissionCrewTokens and crew presence markup did not exist"
+    },
+    {
+      "type": "focused-tests",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_crew_presence.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_run_meter.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_cockpit_chrome.py -q",
+      "result": "3 passed"
+    },
+    {
+      "type": "syntax",
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "passed"
+    },
+    {
+      "type": "full-atlas-suite",
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "51 passed, 55 deselected"
+    }
+  ],
+  "nextAction": "Continue improving bot communication, avatar richness, and first-viewport density so paths feel more like premium game levels and less like long dashboard pages."
+}

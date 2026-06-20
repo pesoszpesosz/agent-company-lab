@@ -1,0 +1,35 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-event-pulse-v1-20260619",
+  "title": "Command Cockpit Event Pulse",
+  "created_at": "2026-06-19T21:20:20Z",
+  "kind": "ui_unlock",
+  "summary": "Quest level maps now animate recent trail events as compact route packets inside the existing board.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/assets/system/command-cockpit-event-pulse-20260619.png",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "chronicleTrail(lane)",
+      "questCockpitData",
+      "focusedCell",
+      "lane.level",
+      "lane.gateMap"
+    ],
+    "outputs": [
+      "questEventPulsePackets",
+      "quest-event-pulse",
+      "quest-event-packet",
+      "system-command-cockpit-event-pulse"
+    ]
+  },
+  "verification": {
+    "intent": "Make the selected path feel active by showing live recent-event motion without adding another scroll row.",
+    "layout": "The pulse texture and packets are absolutely positioned inside the Quest field and compressed on mobile.",
+    "motion": "Packets use transform, opacity, and margin-based micro-drift over a project-local procedural route texture."
+  }
+}

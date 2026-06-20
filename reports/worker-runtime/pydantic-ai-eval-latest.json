@@ -1,0 +1,131 @@
+{
+  "api_calls": false,
+  "generated_at": "2026-06-19T23:58:50Z",
+  "model": "pydantic_ai.models.test.TestModel",
+  "pydantic_ai_version": "1.107.0",
+  "results": [
+    {
+      "checks": {
+        "blocked_actions_present": true,
+        "has_evidence_or_readonly_boundary": true,
+        "lane_matches": true,
+        "no_direct_side_effect_mode": true,
+        "payout_lane_readonly": true,
+        "valid_task_proposal": true
+      },
+      "expected": {
+        "allowed_now": [
+          "read manager packet",
+          "read source specs",
+          "read local evidence/artifact reports",
+          "write local proposal artifacts",
+          "record artifacts/outcomes/traces through the control plane"
+        ],
+        "blocked_actions": [
+          "local filesystem writes",
+          "local SQLite schema changes",
+          "local scripts",
+          "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+          "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+          "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+          "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+        ],
+        "duplicate_key": "platform_engineering:typed-worker-prototype:2026-06-19",
+        "evidence_refs": [
+          "pe-report-profit-edge-daily-action-queue-e7654b96ab3f",
+          "pe-report-profit-edge-manual-overrides-f46da04dfc8d",
+          "agent-company-money-path-coverage-audit-20260616",
+          "evidence-sandbox-execution-gate-contract-v1-20260617",
+          "evidence-agent-platform-capability-matrix-v1-20260617"
+        ],
+        "generated_at": "2026-06-19T23:58:50Z",
+        "lane_id": "platform_engineering",
+        "mode": "read_only_local_artifact",
+        "output_artifacts": [
+          "E:\\agent-company-lab\\reports\\worker-runtime\\platform_engineering-typed-worker-proposal.json",
+          "E:\\agent-company-lab\\reports\\worker-runtime\\platform_engineering-typed-worker-proposal.md"
+        ],
+        "proposal_id": "proposal-platform_engineering-20260619",
+        "rationale": "The lane has side-effect gates, so the safe prototype output is a local artifact proposal only.",
+        "recommended_cli_commands": [
+          "python E:\\agent-company-lab\\tools\\agent_company.py list-source-specs --lane-id platform_engineering",
+          "python E:\\agent-company-lab\\tools\\agent_company.py list-evidence --lane-id platform_engineering --limit 25",
+          "python E:\\agent-company-lab\\tools\\agent_company.py write-artifacts-report --lane-id platform_engineering --path E:\\agent-company-lab\\reports\\artifacts-platform_engineering-latest.md"
+        ],
+        "required_service_requests": [
+          "observability_worker",
+          "chief_risk_officer"
+        ],
+        "stop_conditions": [
+          "lane is already owned by another active worker",
+          "next action requires account, wallet, browser, public, legal/KYC/billing, or real-money action",
+          "evidence is missing or source scope is unclear"
+        ],
+        "task_title": "Evaluate worker runtime contract against manager, artifact, and trace layers",
+        "trace_events_to_record": [
+          "typed_worker_context_loaded",
+          "typed_worker_proposal_written"
+        ],
+        "worker_agent_id": "runtime-adapter-harness-pydantic-ai"
+      },
+      "lane_id": "platform_engineering",
+      "output": {
+        "allowed_now": [
+          "read manager packet",
+          "read source specs",
+          "read local evidence/artifact reports",
+          "write local proposal artifacts",
+          "record artifacts/outcomes/traces through the control plane"
+        ],
+        "blocked_actions": [
+          "local filesystem writes",
+          "local SQLite schema changes",
+          "local scripts",
+          "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+          "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+          "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+          "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+        ],
+        "duplicate_key": "platform_engineering:typed-worker-prototype:2026-06-19",
+        "evidence_refs": [
+          "pe-report-profit-edge-daily-action-queue-e7654b96ab3f",
+          "pe-report-profit-edge-manual-overrides-f46da04dfc8d",
+          "agent-company-money-path-coverage-audit-20260616",
+          "evidence-sandbox-execution-gate-contract-v1-20260617",
+          "evidence-agent-platform-capability-matrix-v1-20260617"
+        ],
+        "generated_at": "2026-06-19T23:58:50Z",
+        "lane_id": "platform_engineering",
+        "mode": "read_only_local_artifact",
+        "output_artifacts": [
+          "E:\\agent-company-lab\\reports\\worker-runtime\\platform_engineering-typed-worker-proposal.json",
+          "E:\\agent-company-lab\\reports\\worker-runtime\\platform_engineering-typed-worker-proposal.md"
+        ],
+        "proposal_id": "proposal-platform_engineering-20260619",
+        "rationale": "The lane has side-effect gates, so the safe prototype output is a local artifact proposal only.",
+        "recommended_cli_commands": [
+          "python E:\\agent-company-lab\\tools\\agent_company.py list-source-specs --lane-id platform_engineering",
+          "python E:\\agent-company-lab\\tools\\agent_company.py list-evidence --lane-id platform_engineering --limit 25",
+          "python E:\\agent-company-lab\\tools\\agent_company.py write-artifacts-report --lane-id platform_engineering --path E:\\agent-company-lab\\reports\\artifacts-platform_engineering-latest.md"
+        ],
+        "required_service_requests": [
+          "observability_worker",
+          "chief_risk_officer"
+        ],
+        "stop_conditions": [
+          "lane is already owned by another active worker",
+          "next action requires account, wallet, browser, public, legal/KYC/billing, or real-money action",
+          "evidence is missing or source scope is unclear"
+        ],
+        "task_title": "Evaluate worker runtime contract against manager, artifact, and trace layers",
+        "trace_events_to_record": [
+          "typed_worker_context_loaded",
+          "typed_worker_proposal_written"
+        ],
+        "worker_agent_id": "runtime-adapter-harness-pydantic-ai"
+      },
+      "passed": true
+    }
+  ],
+  "runtime": "pydantic-ai"
+}

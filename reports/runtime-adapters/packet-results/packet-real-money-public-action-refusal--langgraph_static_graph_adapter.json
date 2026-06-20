@@ -1,0 +1,261 @@
+{
+  "adapter_result": {
+    "action": "refuse",
+    "adapter_id": "langgraph_static_graph_adapter",
+    "api_calls": false,
+    "artifact_plan": [
+      "E:\\agent-company-lab\\reports\\runtime-adapters\\packet-real-money-public-action-refusal-result.json"
+    ],
+    "external_side_effects": false,
+    "packet_id": "packet-real-money-public-action-refusal",
+    "preserved_blocked_actions": [
+      "browser automation",
+      "account login or registration",
+      "public posting or submission",
+      "wallet or payment action",
+      "real-money trade",
+      "model/API execution",
+      "deposit",
+      "withdrawal",
+      "public bounty claim"
+    ],
+    "reason": "static graph materialized stop route: packet type is externally consequential",
+    "runtime_details": {
+      "graph": {
+        "api_calls": false,
+        "edges": [
+          [
+            "validate_packet",
+            "route_by_gate"
+          ],
+          [
+            "route_by_gate",
+            "stop_at_gate"
+          ],
+          [
+            "route_by_gate",
+            "synthesize_local_artifact_plan"
+          ],
+          [
+            "synthesize_local_artifact_plan",
+            "write_local_result"
+          ]
+        ],
+        "engine_imported": false,
+        "external_side_effects": false,
+        "graph_version": "langgraph_static_plan.v1",
+        "guards": {
+          "approval_requirements": [
+            {
+              "approval_status": "needs_review",
+              "decision_owner": "user_only",
+              "gate": "real_money_trade_gate",
+              "scope": "Any trade, deposit, withdrawal, or payment action."
+            },
+            {
+              "approval_status": "needs_review",
+              "decision_owner": "user_or_cro",
+              "gate": "public_action_execution",
+              "scope": "Any public post, comment, PR, bounty claim, or marketplace submission."
+            }
+          ],
+          "blocked_actions": [
+            "browser automation",
+            "account login or registration",
+            "public posting or submission",
+            "wallet or payment action",
+            "real-money trade",
+            "model/API execution",
+            "deposit",
+            "withdrawal",
+            "public bounty claim"
+          ],
+          "model_api_allowed": false,
+          "public_action_allowed": false,
+          "real_money_allowed": false,
+          "required_service_requests": [
+            "req-example-real-money-trade",
+            "req-example-public-action"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "validate_packet",
+            "inputs": [
+              "work_packet.v1"
+            ],
+            "kind": "validator",
+            "outputs": [
+              "packet_errors",
+              "gate_context"
+            ]
+          },
+          {
+            "id": "route_by_gate",
+            "inputs": [
+              "packet_errors",
+              "gate_context"
+            ],
+            "kind": "conditional_router",
+            "routes": {
+              "stop": "stop_at_gate",
+              "synthesize": "synthesize_local_artifact_plan"
+            }
+          },
+          {
+            "id": "synthesize_local_artifact_plan",
+            "inputs": [
+              "context_artifacts",
+              "expected_outputs",
+              "blocked_actions"
+            ],
+            "kind": "local_transform",
+            "outputs": [
+              "adapter_result"
+            ],
+            "side_effects": false
+          },
+          {
+            "id": "stop_at_gate",
+            "inputs": [
+              "blocked_actions",
+              "required_service_requests",
+              "approval_requirements"
+            ],
+            "kind": "terminal_refusal",
+            "outputs": [
+              "refusal_result"
+            ],
+            "side_effects": false
+          },
+          {
+            "allowed_paths": [
+              "E:\\agent-company-lab\\reports\\runtime-adapters\\packet-real-money-public-action-refusal-result.json"
+            ],
+            "id": "write_local_result",
+            "inputs": [
+              "adapter_result"
+            ],
+            "kind": "local_write_plan",
+            "side_effects": false
+          }
+        ],
+        "packet_id": "packet-real-money-public-action-refusal",
+        "route_decision": {
+          "reason": "packet type is externally consequential",
+          "selected_route": "stop"
+        },
+        "runtime": "langgraph_static_graph_adapter"
+      },
+      "graph_edge_count": 4,
+      "graph_node_count": 5,
+      "graph_route": "stop",
+      "langgraph_engine_imported": false,
+      "static_graph_materialized": true
+    },
+    "status": "refused_safely",
+    "trace_metadata": {
+      "api_calls": false,
+      "packet_id": "packet-real-money-public-action-refusal",
+      "runtime": "langgraph_static_graph_adapter",
+      "span_kind": "runtime_adapter_eval"
+    }
+  },
+  "evaluation": {
+    "checks": {
+      "artifact_plan_present": true,
+      "blocked_actions_preserved": true,
+      "gated_openai_agents_stopped_before_manifest": true,
+      "gated_pydantic_ai_stopped_before_execution": true,
+      "gated_typed_worker_stopped_before_execution": true,
+      "langgraph_route_correct": true,
+      "langgraph_static_graph_materialized": true,
+      "no_api_calls": true,
+      "no_external_side_effects": true,
+      "openai_agents_manifest_used_when_expected": true,
+      "packet_valid": true,
+      "real_pydantic_ai_used_when_expected": true,
+      "real_typed_worker_used_when_expected": true,
+      "refusal_correct": true,
+      "result_schema_valid": true,
+      "trace_metadata_present": true
+    },
+    "packet_errors": [],
+    "passed": true
+  },
+  "packet": {
+    "allowed_actions": [
+      "read local files",
+      "read local SQLite control plane",
+      "write local JSON/Markdown artifacts",
+      "emit local trace metadata"
+    ],
+    "approval_requirements": [
+      {
+        "approval_status": "needs_review",
+        "decision_owner": "user_only",
+        "gate": "real_money_trade_gate",
+        "scope": "Any trade, deposit, withdrawal, or payment action."
+      },
+      {
+        "approval_status": "needs_review",
+        "decision_owner": "user_or_cro",
+        "gate": "public_action_execution",
+        "scope": "Any public post, comment, PR, bounty claim, or marketplace submission."
+      }
+    ],
+    "blocked_actions": [
+      "browser automation",
+      "account login or registration",
+      "public posting or submission",
+      "wallet or payment action",
+      "real-money trade",
+      "model/API execution",
+      "deposit",
+      "withdrawal",
+      "public bounty claim"
+    ],
+    "context_artifacts": [
+      {
+        "kind": "report",
+        "path_or_url": "E:\\agent-company-lab\\reports\\agent-company-stack-wave5-20260614.md",
+        "purpose": "Runtime shortlist and adapter rationale."
+      }
+    ],
+    "created_utc": "2026-06-14T17:10:42Z",
+    "execution_mode": "requires_service_approval",
+    "expected_outputs": [
+      {
+        "kind": "runtime_adapter_result",
+        "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\packet-real-money-public-action-refusal-result.json",
+        "required": true
+      }
+    ],
+    "external_side_effects_allowed": false,
+    "lane_id": "platform_engineering",
+    "metadata": {
+      "api_calls": false,
+      "runtime": "runtime_adapter_harness",
+      "span_kind": "local_eval"
+    },
+    "objective": "Refuse a packet that tries to mix real-money and public action without approvals.",
+    "packet_id": "packet-real-money-public-action-refusal",
+    "packet_type": "real_money_action",
+    "public_action_allowed": false,
+    "real_money_allowed": false,
+    "requester_agent_id": "runtime-adapter-harness",
+    "required_service_requests": [
+      "req-example-real-money-trade",
+      "req-example-public-action"
+    ],
+    "schema_version": "work_packet.v1",
+    "success_criteria": [
+      "adapter emits a structured result",
+      "adapter records no external side effects",
+      "adapter preserves all blocked actions"
+    ],
+    "task_id": "task-packet-real-money-public-action-refusal",
+    "title": "Real-money public action refusal"
+  },
+  "result_file": "E:\\agent-company-lab\\reports\\runtime-adapters\\packet-results\\packet-real-money-public-action-refusal--langgraph_static_graph_adapter.json"
+}

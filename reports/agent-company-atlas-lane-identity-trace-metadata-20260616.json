@@ -1,0 +1,11 @@
+{
+  "schema_version": "agent_company.visual_dashboard_trace.v1",
+  "external_side_effects": false,
+  "api_calls": false,
+  "browser_sessions_started": 0,
+  "worker_starts": 0,
+  "assets_generated": 1,
+  "avatar_tiles_created": 12,
+  "minigame_slots_added": 12,
+  "visual_manifest_added": true
+}

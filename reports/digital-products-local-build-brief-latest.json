@@ -1,0 +1,178 @@
+{
+  "acceptance_criteria": [
+    "Every asset can be drafted locally without marketplace browsing, seller accounts, protected data, payment setup, or public posting.",
+    "The pack names one buyer and one practical job-to-be-done instead of a broad passive-income category.",
+    "The first template is specific enough that an AI builder could fill it out in under thirty minutes.",
+    "The brief preserves all four live-validation gates from the demand memo.",
+    "The next action is a local asset outline, not a listing, account setup, payout setup, public submission, or live sale."
+  ],
+  "acceptance_criterion_count": 5,
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "brief_evidence_id": "digital-products-local-build-brief-20260616",
+  "brief_lane_id": "digital_products_templates_plugins",
+  "brief_task_id": "task-digital-products-local-build-brief-20260616",
+  "build_section_count": 7,
+  "build_sections": [
+    {
+      "section_id": "buyer",
+      "summary": "Solo AI builders and operators preparing small launches; they need practical launch-control assets rather than broad strategy."
+    },
+    {
+      "section_id": "problem",
+      "summary": "Launch prep spreads across positioning, checklist, screenshots, QA, and follow-up; the first product should reduce missed steps."
+    },
+    {
+      "section_id": "offer",
+      "summary": "A compact AI builder launch checklist pack with templates for positioning, launch QA, screenshot planning, and post-launch review."
+    },
+    {
+      "section_id": "asset-plan",
+      "summary": "Draft the assets locally as markdown/spreadsheet-ready templates before any marketplace, account, listing, or payment action."
+    },
+    {
+      "section_id": "quality-bar",
+      "summary": "The pack must be concrete enough to screenshot and use in one sitting; avoid generic motivation or unverifiable income claims."
+    },
+    {
+      "section_id": "gates",
+      "summary": "Marketplace demand checks, seller terms, public listing, seller account setup, and payout configuration remain gated."
+    },
+    {
+      "section_id": "next-step",
+      "summary": "Create a local asset outline and sample first template; request browser/legal gates only for live demand and seller-term validation."
+    }
+  ],
+  "deliverable_count": 6,
+  "deliverables": [
+    {
+      "deliverable_id": "positioning-template",
+      "description": "One-page buyer, pain, promise, proof, and scope template for an AI-builder launch.",
+      "format": "markdown"
+    },
+    {
+      "deliverable_id": "launch-checklist",
+      "description": "Checklist of pre-launch, launch-day, and post-launch tasks with owner/status columns.",
+      "format": "spreadsheet-ready table"
+    },
+    {
+      "deliverable_id": "screenshot-shotlist",
+      "description": "Shot list that maps product states to image needs, captions, and reuse notes.",
+      "format": "markdown/table"
+    },
+    {
+      "deliverable_id": "qa-pass-template",
+      "description": "Basic QA pass template for links, copy, onboarding, pricing page consistency, and release notes.",
+      "format": "markdown/table"
+    },
+    {
+      "deliverable_id": "post-launch-review",
+      "description": "Simple review template for traffic, replies, conversion signals, support load, and next iteration.",
+      "format": "markdown"
+    },
+    {
+      "deliverable_id": "readme-boundary-note",
+      "description": "Boundary note that avoids revenue promises and says live marketplace validation is not yet performed.",
+      "format": "markdown"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not browse marketplace pages, create seller accounts, accept terms, publish listings, configure payouts, or set prices from this build brief.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this build brief."
+  ],
+  "generated_utc": "2026-06-15T21:13:53Z",
+  "lane_evidence_rows_after": 79,
+  "lane_evidence_rows_before": 78,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "draft_assets_locally_no_listing_or_marketplace_action",
+  "next_action": "Draft the local asset outline and first template for the AI builder launch checklist pack; request live marketplace/legal gates only after the local draft exists.",
+  "parked_service_request_count": 3,
+  "parked_service_requests": [
+    {
+      "decision_note": null,
+      "request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "request_type": "legal_kyc_tax_payment",
+      "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+      "service_id": "legal_kyc_tax_payment_gate",
+      "status": "needs_review"
+    },
+    {
+      "decision_note": null,
+      "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "status": "needs_review"
+    },
+    {
+      "decision_note": null,
+      "request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "request_type": "browser_research",
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "service_id": "browser_read_only_session",
+      "status": "needs_review"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_build_brief.v1",
+  "selected_candidate": {
+    "buyer": "Solo AI builders and operators preparing small launches.",
+    "candidate_id": "ai-builder-launch-checklist-pack",
+    "local_reason": "Matches the lane evidence around reusable digital assets without requiring platform-specific integrations.",
+    "needs_live_validation": "Marketplace demand, price bands, saturation, and buyer wording remain behind browser read-only approval.",
+    "product_shape": "Template pack",
+    "promise": "Reduce launch setup friction with reusable checklist, positioning, and QA templates."
+  },
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_memo_evidence_id": "digital-products-local-demand-memo-20260615",
+  "source_memo_task_id": "task-digital-products-local-demand-memo-20260615",
+  "source_memo_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-demand-memo-validation-latest.json",
+  "summary": "Converted the strongest local digital-products memo candidate into a build brief for an AI builder launch checklist pack. The brief defines local draft assets, acceptance criteria, and preserved gates without browsing, listing, selling, or payment setup.",
+  "task_rows_inserted_by_brief": 1,
+  "tasks_table_rows_after": 155,
+  "tasks_table_rows_before": 154
+}

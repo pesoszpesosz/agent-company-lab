@@ -1,0 +1,185 @@
+{
+  "explicit_runtime_approval_present": false,
+  "external_runtime_implementation_allowed_now": false,
+  "forbidden_runtime_imports": [],
+  "generated_utc": "2026-06-15T16:02:24Z",
+  "lane_id": "platform_engineering",
+  "local_report_only_implementation_allowed_now": true,
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "negative_fixture_summary": {
+    "accepted_fixture_count": 0,
+    "all_negative_fixtures_rejected": true,
+    "negative_fixture_count": 8,
+    "rejected_fixture_count": 8
+  },
+  "next_action": "Create local-only adapter implementation preflight fixtures for permitted report-only scaffolding, still without Temporal/Inngest imports or runtime starts.",
+  "passed_preflight_check_count": 9,
+  "preflight_check_count": 9,
+  "preflight_checks": [
+    {
+      "actual": [
+        {
+          "all_checks_passed": true,
+          "failure_count": 0,
+          "id": "service_worker_refresh_integration",
+          "loaded": true,
+          "passed": true,
+          "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-validation-latest.json",
+          "schema_matches": true
+        },
+        {
+          "all_checks_passed": true,
+          "failure_count": 0,
+          "id": "runtime_readiness",
+          "loaded": true,
+          "passed": true,
+          "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-validation-20260615.json",
+          "schema_matches": true
+        },
+        {
+          "all_checks_passed": true,
+          "failure_count": 0,
+          "id": "runtime_interface_contract",
+          "loaded": true,
+          "passed": true,
+          "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-contract-validation-latest.json",
+          "schema_matches": true
+        },
+        {
+          "all_checks_passed": true,
+          "failure_count": 0,
+          "id": "runtime_interface_negative_fixtures",
+          "loaded": true,
+          "passed": true,
+          "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-negative-fixtures-validation-latest.json",
+          "schema_matches": true
+        }
+      ],
+      "check_id": "upstream_validations_loaded_and_passing",
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check_id": "runtime_readiness_blocks_external_runtime",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check_id": "runtime_readiness_allows_report_only_scaffolding",
+      "passed": true
+    },
+    {
+      "actual": {
+        "accepted_fixture_count": 0,
+        "all_negative_fixtures_rejected": true,
+        "negative_fixture_count": 8,
+        "rejected_fixture_count": 8
+      },
+      "check_id": "negative_fixtures_reject_all_runtime_candidates",
+      "passed": true
+    },
+    {
+      "actual": {
+        "contract_forbidden_import_count": 0,
+        "source_forbidden_import_count": 0
+      },
+      "check_id": "runtime_contract_import_scan_clean",
+      "passed": true
+    },
+    {
+      "actual": {
+        "assigned_agent_id": null,
+        "completed_at": null,
+        "decision_note": null,
+        "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+        "started_at": null,
+        "status": "needs_review"
+      },
+      "check_id": "model_api_gate_still_parked",
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check_id": "model_api_pool_absent",
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check_id": "no_explicit_runtime_approval_present",
+      "passed": true
+    },
+    {
+      "actual": {
+        "runtime_code_write_allowed": false,
+        "runtime_implementation_allowed": false
+      },
+      "check_id": "runtime_implementation_remains_blocked",
+      "passed": true
+    }
+  ],
+  "purpose": "Promote runtime interface contracts and negative fixtures into a single implementation preflight before any Temporal/Inngest runtime adapter code is written.",
+  "report_only_scaffolding_allowed": true,
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_version": "temporal_inngest_adapter_runtime_implementation_preflight.v1",
+  "upstream_validations": [
+    {
+      "all_checks_passed": true,
+      "failure_count": 0,
+      "id": "service_worker_refresh_integration",
+      "loaded": true,
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-validation-latest.json",
+      "schema_matches": true
+    },
+    {
+      "all_checks_passed": true,
+      "failure_count": 0,
+      "id": "runtime_readiness",
+      "loaded": true,
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-validation-20260615.json",
+      "schema_matches": true
+    },
+    {
+      "all_checks_passed": true,
+      "failure_count": 0,
+      "id": "runtime_interface_contract",
+      "loaded": true,
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-contract-validation-latest.json",
+      "schema_matches": true
+    },
+    {
+      "all_checks_passed": true,
+      "failure_count": 0,
+      "id": "runtime_interface_negative_fixtures",
+      "loaded": true,
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-negative-fixtures-validation-latest.json",
+      "schema_matches": true
+    }
+  ]
+}

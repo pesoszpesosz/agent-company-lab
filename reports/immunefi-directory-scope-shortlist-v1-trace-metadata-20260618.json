@@ -1,0 +1,40 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "generated_utc": "2026-06-17T21:31:00Z",
+  "trace_id": "trace-immunefi-directory-scope-shortlist-v1-20260618",
+  "task_id": "task-immunefi-directory-scope-shortlist-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "agent_id": "recovered-profitable-edge-infra",
+  "operation": "immunefi_directory_scope_shortlist",
+  "input_artifacts": [
+    "E:\\agent-company-lab\\reports\\security-program-rules-scope-ranker-v1-20260618.json",
+    "https://immunefi.com/bug-bounty/",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/ens/information/",
+    "https://immunefi.com/bug-bounty/lido/information/",
+    "https://immunefi.com/bug-bounty/immutable/information/",
+    "https://immunefi.com/bug-bounty/listadao/scope/",
+    "https://immunefi.com/bug-bounty/sei/scope/",
+    "https://immunefi.com/bug-bounty/drips/information/",
+    "https://immunefi.com/bug-bounty/immunefi/information/",
+    "https://immunefi.com/bug-bounty/obyte/information/"
+  ],
+  "output_artifacts": [
+    "E:\\agent-company-lab\\data\\immunefi-directory-scope-shortlist-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\immunefi-directory-scope-shortlist-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\immunefi-directory-scope-shortlist-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\immunefi-directory-scope-shortlist-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\immunefi-directory-scope-shortlist-v1-20260618.md"
+  ],
+  "boundary": {
+    "report_only": true,
+    "security_tests": false,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

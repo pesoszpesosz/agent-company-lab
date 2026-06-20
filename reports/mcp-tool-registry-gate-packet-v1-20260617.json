@@ -1,0 +1,201 @@
+{
+  "schema_version": "agent_company.mcp_tool_registry_gate_packet.v1",
+  "generated_utc": "2026-06-17T19:11:11Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-mcp-tool-registry-gate-packet-v1-20260617",
+  "purpose": "Define the local registry gate required before any future agent-company worker can call an MCP server or MCP tool.",
+  "default_policy": "all_mcp_servers_and_tools_disabled_until_registered_scoped_reviewed_and_tied_to_identity_plus_egress_evidence",
+  "source_artifacts": {
+    "egress_ledger_packet": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-packet-v1-20260617.json",
+    "identity_envelope_matrix": "E:\\agent-company-lab\\reports\\agent-identity-envelope-matrix-v1-20260617.json",
+    "gateway_matrix": "E:\\agent-company-lab\\reports\\agent-company-gateway-candidate-matrix-v1-20260617.json",
+    "service_worker_chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  },
+  "registry_entry_required_fields": [
+    "mcp_registry_entry_id",
+    "server_id",
+    "server_name",
+    "server_source_type",
+    "source_url",
+    "package_or_endpoint",
+    "publisher",
+    "publisher_verification",
+    "version",
+    "digest_or_commit",
+    "license",
+    "risk_tier",
+    "default_status",
+    "allowed_lanes",
+    "allowed_agent_ids",
+    "allowed_worker_pool_ids",
+    "allowed_identity_envelope_ids",
+    "allowed_tools",
+    "blocked_tools",
+    "credential_requirements",
+    "oauth_or_auth_mode",
+    "network_scope",
+    "data_sensitivity_ceiling",
+    "write_action_capable",
+    "public_action_capable",
+    "payment_or_wallet_capable",
+    "file_system_capable",
+    "browser_capable",
+    "rate_limit_scope",
+    "budget_scope",
+    "logging_required",
+    "recording_required",
+    "redaction_required",
+    "review_artifact_path",
+    "approval_artifact_path",
+    "egress_event_required",
+    "created_utc",
+    "expires_utc",
+    "revocation_status"
+  ],
+  "tool_entry_required_fields": [
+    "tool_id",
+    "server_id",
+    "tool_name",
+    "tool_description",
+    "tool_input_schema_artifact_path",
+    "tool_output_schema_artifact_path",
+    "tool_side_effect_class",
+    "allowed_input_artifact_types",
+    "required_output_artifact_type",
+    "requires_operator_decision",
+    "requires_identity_envelope",
+    "requires_egress_event",
+    "requires_post_execution_evidence",
+    "default_policy_verdict",
+    "risk_reasons"
+  ],
+  "allowed_registry_statuses": [
+    "disabled",
+    "under_review",
+    "approved_report_only",
+    "approved_preflight_only",
+    "approved_live_read_only",
+    "blocked",
+    "revoked"
+  ],
+  "tool_side_effect_classes": [
+    "read_only",
+    "local_mutation",
+    "external_read",
+    "external_write",
+    "public_action",
+    "payment_wallet",
+    "credential_access"
+  ],
+  "negative_fixtures": [
+    "unknown_server",
+    "unknown_tool",
+    "disabled_server_call",
+    "revoked_server_call",
+    "implicit_credentials",
+    "missing_identity_envelope",
+    "identity_scope_mismatch",
+    "missing_egress_event",
+    "missing_operator_decision",
+    "write_tool_as_read_only",
+    "public_action_without_cro",
+    "wallet_payment_tool_non_deny",
+    "missing_schema_artifacts",
+    "missing_output_artifact",
+    "unbounded_rate_or_budget"
+  ],
+  "candidate_first_registry_entries": [
+    {
+      "candidate": "local-report-only-fixture-mcp",
+      "proposed_status": "approved_report_only",
+      "rationale": "Safe local fixture for validating registry schema with no server start.",
+      "required_blocker": "contract_validator_required"
+    },
+    {
+      "candidate": "github-mcp-server-read-only-subset",
+      "proposed_status": "under_review",
+      "rationale": "High utility for paid-code and bounty work but write/public tools are dangerous.",
+      "required_blocker": "explicit_tool_allowlist_and_public_action_block"
+    },
+    {
+      "candidate": "browser-automation-mcp-read-only",
+      "proposed_status": "under_review",
+      "rationale": "Useful for research workers but browser session boundaries must be explicit.",
+      "required_blocker": "browser_scope_recording_teardown_policy"
+    },
+    {
+      "candidate": "unknown-public-registry-server",
+      "proposed_status": "disabled",
+      "rationale": "Default posture for discovered but unreviewed server.",
+      "required_blocker": "manual_review_required"
+    }
+  ],
+  "github_metadata": [
+    {
+      "full_name": "modelcontextprotocol/servers",
+      "stars": 87382,
+      "forks": 11020,
+      "language": "TypeScript",
+      "pushed_at": "2026-06-17T01:40:52Z"
+    },
+    {
+      "full_name": "BerriAI/litellm",
+      "stars": 50717,
+      "forks": 8961,
+      "language": "Python",
+      "pushed_at": "2026-06-17T19:07:52Z"
+    },
+    {
+      "full_name": "Kong/kong",
+      "stars": 43604,
+      "forks": 5151,
+      "language": "Lua",
+      "pushed_at": "2026-06-17T08:27:14Z"
+    },
+    {
+      "full_name": "github/github-mcp-server",
+      "stars": 30768,
+      "forks": 4406,
+      "language": "Go",
+      "pushed_at": "2026-06-17T16:51:35Z"
+    },
+    {
+      "full_name": "modelcontextprotocol/registry",
+      "stars": 6936,
+      "forks": 869,
+      "language": "Go",
+      "pushed_at": "2026-06-10T23:33:38Z"
+    },
+    {
+      "full_name": "stacklok/toolhive",
+      "stars": 1888,
+      "forks": 229,
+      "language": "Go",
+      "pushed_at": "2026-06-17T18:54:17Z"
+    },
+    {
+      "full_name": "agentic-community/mcp-gateway-registry",
+      "stars": 711,
+      "forks": 192,
+      "language": "Python",
+      "pushed_at": "2026-06-17T13:06:48Z"
+    }
+  ],
+  "runtime_boundary": {
+    "report_only": true,
+    "mcp_servers_started": 0,
+    "mcp_servers_installed": 0,
+    "mcp_servers_enabled": 0,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "registry_publications": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "recommended_next_build": "mcp_tool_registry_gate_contract_v1_schema_fixture_set_validator_design"
+}

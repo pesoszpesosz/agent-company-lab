@@ -1,0 +1,2369 @@
+{
+  "by_risk_gate": {
+    "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "source_service_request_id": "req-grok-research-worker-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-grok-research-worker-20260614"
+      }
+    ],
+    "catalog_required_approval_no_external_action": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "paid_code_bounties",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "security_bounty_private_reports",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-security-google-oss-vrp-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+        "lane_id": "content_and_social_growth",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-test-browser-readonly-complete-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "ai_ml_competitions",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-ai-ml-competitions-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-digital-products-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "money_source_discovery",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-money-source-discovery-browser-readonly-20260614"
+      }
+    ],
+    "legal_kyc_tax_payment_requires_user_decision_no_commitment": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614"
+      }
+    ],
+    "model_api_call_requires_provider_model_cost_lane_and_artifact_scope": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-pydantic-ai-model-backed-adapter-20260614"
+      }
+    ],
+    "security_report_submission_requires_user_and_cro_approval_no_submission": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+        "lane_id": "security_bounty_private_reports",
+        "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+        "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-security-report-route-review-20260614"
+      }
+    ],
+    "test_no_external_action": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_no_external_action",
+        "source_service_request_id": "req-test-lifecycle-approve-20260614",
+        "status": "complete",
+        "worker_request_id": "swr-test-lifecycle-approve-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_no_external_action",
+        "source_service_request_id": "req-test-lifecycle-reject-20260614",
+        "status": "rejected",
+        "worker_request_id": "swr-test-lifecycle-reject-20260614"
+      }
+    ],
+    "test_validator_no_external_action": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_validator_no_external_action",
+        "source_service_request_id": "req-test-service-intake-valid-20260614",
+        "status": "rejected",
+        "worker_request_id": "swr-test-service-intake-valid-20260614"
+      }
+    ]
+  },
+  "by_status": {
+    "complete": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_no_external_action",
+        "source_service_request_id": "req-test-lifecycle-approve-20260614",
+        "status": "complete",
+        "worker_request_id": "swr-test-lifecycle-approve-20260614"
+      }
+    ],
+    "needs_review": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "source_service_request_id": "req-grok-research-worker-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-grok-research-worker-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "paid_code_bounties",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "security_bounty_private_reports",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-security-google-oss-vrp-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+        "lane_id": "security_bounty_private_reports",
+        "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+        "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-security-report-route-review-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-pydantic-ai-model-backed-adapter-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+        "lane_id": "content_and_social_growth",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-test-browser-readonly-complete-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "ai_ml_competitions",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-ai-ml-competitions-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-digital-products-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "money_source_discovery",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-money-source-discovery-browser-readonly-20260614"
+      }
+    ],
+    "rejected": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_no_external_action",
+        "source_service_request_id": "req-test-lifecycle-reject-20260614",
+        "status": "rejected",
+        "worker_request_id": "swr-test-lifecycle-reject-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_validator_no_external_action",
+        "source_service_request_id": "req-test-service-intake-valid-20260614",
+        "status": "rejected",
+        "worker_request_id": "swr-test-service-intake-valid-20260614"
+      }
+    ]
+  },
+  "by_worker_type": {
+    "browser_read_only": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "paid_code_bounties",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "security_bounty_private_reports",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-security-google-oss-vrp-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+        "lane_id": "content_and_social_growth",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-test-browser-readonly-complete-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "ai_ml_competitions",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-ai-ml-competitions-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-digital-products-browser-readonly-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json",
+        "lane_id": "money_source_discovery",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-wave4-money-source-discovery-browser-readonly-20260614"
+      }
+    ],
+    "browser_signed_in_read_only": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "source_service_request_id": "req-grok-research-worker-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-grok-research-worker-20260614"
+      }
+    ],
+    "legal_kyc_tax_payment_review": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+        "lane_id": "digital_products_templates_plugins",
+        "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614"
+      }
+    ],
+    "local_runtime_adapter": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_no_external_action",
+        "source_service_request_id": "req-test-lifecycle-approve-20260614",
+        "status": "complete",
+        "worker_request_id": "swr-test-lifecycle-approve-20260614"
+      },
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_no_external_action",
+        "source_service_request_id": "req-test-lifecycle-reject-20260614",
+        "status": "rejected",
+        "worker_request_id": "swr-test-lifecycle-reject-20260614"
+      }
+    ],
+    "model_api_execution": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-pydantic-ai-model-backed-adapter-20260614"
+      }
+    ],
+    "other_gated_worker": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+        "lane_id": "platform_engineering",
+        "risk_gate": "test_validator_no_external_action",
+        "source_service_request_id": "req-test-service-intake-valid-20260614",
+        "status": "rejected",
+        "worker_request_id": "swr-test-service-intake-valid-20260614"
+      }
+    ],
+    "public_submission": [
+      {
+        "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+        "lane_id": "security_bounty_private_reports",
+        "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+        "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+        "status": "needs_review",
+        "worker_request_id": "swr-next-wave-security-report-route-review-20260614"
+      }
+    ]
+  },
+  "execution_notice": "No service request was approved, assigned, started, or executed by this backfill. All external side-effect flags remain false.",
+  "generated_utc": "2026-06-14T21:59:06Z",
+  "next_action": "Add a service-worker queue report command or DB table, then back it with durable queue adapter candidates DBOS/Hatchet.",
+  "request_count": 14,
+  "schema_version": "service_worker_request_queue.v1",
+  "source": "service_requests table plus service_worker_request.v1 artifacts",
+  "worker_requests": [
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "Signed-in read-only research would require separate explicit approval; this backfill row grants none.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "after explicit approval, inspect approved signed-in research surface in read-only mode",
+          "capture local notes and source references",
+          "avoid likes, follows, replies, posts, settings, messages, and account changes"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "x.com",
+            "grok.com",
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "approved_signed_in_research_surface_required_before_execution"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\notes\\research-log-20260614.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "signed_in_readonly_research_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-grok-research-worker-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\notes\\research-log-20260614.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a signed-in read-only research enrichment worker for req-grok-research-worker-20260614; capture research notes and perform no public X/Grok action, account setting change, or message/post/reply.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-grok-research-worker-20260614:browser_signed_in_read_only:browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "platform_engineering",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-grok-research-worker-20260614-result-placeholder.md",
+        "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_signed_in_read_only",
+        "source_service_request_id": "req-grok-research-worker-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-grok-research-worker-20260614",
+        "worker_type": "browser_signed_in_read_only"
+      },
+      "sha256": "b997eaa936e9583f408a9522901f71a8a0b01f3f4925e757345f1936f161d976"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "prepare local review notes",
+          "identify required legal, tax, KYC, payment, seller, and contractual decisions",
+          "produce questions for the user/CRO"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": []
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "legal_payment_review_packet",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-digital-legal-payment-review-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "Review legal, KYC, tax, payment, and seller-account requirements for req-next-wave-digital-legal-payment-review-20260614 as a local decision packet only; make no commitments and enter no private data.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-next-wave-digital-legal-payment-review-20260614:legal_kyc_tax_payment_review:legal_kyc_tax_payment_requires_user_decision_no_commitment",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "digital_products_templates_plugins",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-digital-legal-payment-review-20260614-result-placeholder.md",
+        "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "legal_kyc_tax_payment_gate",
+        "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+        ],
+        "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614",
+        "worker_type": "legal_kyc_tax_payment_review"
+      },
+      "sha256": "89af985ab321f65c9746d0ef528a189cea7a00555a707682f14e769797390d97"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No signed-in pages, registration, settings, seller onboarding, or terms acceptance.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "Open public pages on allowed hosts after approval",
+          "Follow public help, documentation, pricing, fees, terms, refund, payout, seller, and prohibited-content links on allowed hosts",
+          "Record source URLs and page titles",
+          "Summarize factual marketplace requirements with short compliant excerpts only",
+          "Capture local Markdown notes and optional screenshots"
+        ],
+        "approval_scope": "No approval granted. This worker request is a local conversion artifact only; execution requires separate approval and assignment.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:55:07Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, personal/private data, private files, secrets, or payment details may be entered or stored.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "public marketing page text",
+            "public help/documentation page text",
+            "public page title",
+            "public URL",
+            "local screenshot if approval permits browser capture"
+          ],
+          "allowed_hosts": [
+            "gumroad.com",
+            "www.lemonsqueezy.com",
+            "lemonsqueezy.com",
+            "promptbase.com"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "private files",
+            "wallet data",
+            "signed-in account data",
+            "non-public page content"
+          ],
+          "starting_urls": [
+            "https://gumroad.com/",
+            "https://www.lemonsqueezy.com/ecommerce/digital-products",
+            "https://promptbase.com/sell"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\execution-plan-v1.json",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md",
+            "required": true
+          },
+          {
+            "kind": "route_comparison_json",
+            "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-route-comparison-20260614.json",
+            "required": true
+          },
+          {
+            "kind": "blocker_note",
+            "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-blocker-note-20260614.md",
+            "required": false
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "service_request_packet",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\packet.md",
+            "required": true
+          },
+          {
+            "kind": "execution_plan",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\execution-plan-v1.json",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "browser_opened": false,
+          "converted_from": "service_request_execution_plan.v1",
+          "created_by": "recovered-profitable-edge-infra",
+          "current_request_status": "needs_review",
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No real-money, payment-method, wallet, purchase, or transaction action.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, read public Gumroad, Lemon Squeezy, and PromptBase marketplace pages for terms, fees, payouts, listing requirements, refund constraints, prohibited content, and seller requirements relevant to Agent Skill Starter Kit.",
+        "prohibited_actions": [
+          "login",
+          "signup",
+          "seller onboarding",
+          "terms acceptance",
+          "listing creation",
+          "product upload",
+          "payment setup",
+          "tax form entry",
+          "KYC form entry",
+          "purchase",
+          "public promotion",
+          "comments or messages",
+          "saving settings",
+          "submitting forms",
+          "entering credentials, OTPs, payment details, personal data, private files, or wallet information",
+          "using signed-in pages",
+          "bypassing paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public posts, comments, messages, listings, uploads, PR/issue actions, or submissions.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-next-wave-digital-marketplace-browser-readonly-20260614:browser_read_only:public_pages_only_no_signed_in_session",
+          "replay_requires_new_approval_when": [
+            "service request status is not approved or assigned",
+            "allowed hosts, starting URLs, prohibited actions, or risk gate change",
+            "worker would use signed-in state, submit a form, accept terms, create an account, upload/list a product, or touch payment/tax/KYC/wallet data",
+            "more than one weekly source freshness window has elapsed since approval"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "recovered-profitable-edge-infra",
+        "requesting_lane_id": "digital_products_templates_plugins",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "The source service request is not approved and assigned",
+          "Any page asks for login, signup, account creation, seller onboarding, consent acceptance, payment, tax, KYC, private data, credentials, OTP, wallet action, or file upload",
+          "A required page is not public or requires a signed-in state",
+          "A link leaves the allowed hosts",
+          "The browser worker cannot distinguish public guidance from contractual acceptance",
+          "The task would require a public action, marketplace listing, or real-money/payment action"
+        ],
+        "worker_request_id": "swr-next-wave-digital-marketplace-browser-readonly-20260615",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "bae358ff59eaff032ba5888a26ed4aa13cd4c450c7d696cf5cc825097a717e5f"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "read public allowed pages after approval",
+          "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+          "stop at login, account, payment, public action, or private-data boundaries"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "scope_defined_in_source_packet"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a public read-only browser research worker for req-next-wave-paid-code-algora-archestra-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614:browser_read_only:catalog_required_approval_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "paid_code_bounties",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614-result-placeholder.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "9e02b9dd92c3f927183b08f5e92aa578c85da3a7a84fc14165a83f3dd212ef19"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "read public allowed pages after approval",
+          "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+          "stop at login, account, payment, public action, or private-data boundaries"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "scope_defined_in_source_packet"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a public read-only browser research worker for req-next-wave-security-google-oss-vrp-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614:browser_read_only:catalog_required_approval_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "security_bounty_private_reports",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614-result-placeholder.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "3b81fc0bccbc82cad40c93a6cf89dd3cfc20c6084fb7ff2783d94e7f29334ade"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "prepare local submission route review",
+          "check required approvals and private/public route constraints",
+          "draft next approval questions only"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": []
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "submission_route_review_packet",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-report-route-review-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "Prepare or review a private/public submission route for req-next-wave-security-report-route-review-20260614 as a local packet only; do not submit, comment, message, publish, or contact anyone.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-next-wave-security-report-route-review-20260614:public_submission:security_report_submission_requires_user_and_cro_approval_no_submission",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "security_bounty_private_reports",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-security-report-route-review-20260614-result-placeholder.md",
+        "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "security_report_submission_gate",
+        "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+        ],
+        "worker_request_id": "swr-next-wave-security-report-route-review-20260614",
+        "worker_type": "public_submission"
+      },
+      "sha256": "e1f1dd9979a97d828fcc686de8927c1c2b1c768ef0f33707a01569c9524215fe"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "prepare local cost/scope review",
+          "identify provider, model, max cost, input/output artifact scope, and data sensitivity",
+          "wait for explicit approval before any API call"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": []
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "model_api_scope_review_packet",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-pydantic-ai-model-backed-adapter-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "Review a cost-bearing model/API execution request for req-pydantic-ai-model-backed-adapter-20260614; do not call external providers until provider, model, max cost, and artifact scope are explicitly approved.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-pydantic-ai-model-backed-adapter-20260614:model_api_execution:model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "platform_engineering",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-pydantic-ai-model-backed-adapter-20260614-result-placeholder.md",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "model_api_execution",
+        "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "provider, model, max cost, data scope, or output artifact path is not approved"
+        ],
+        "worker_request_id": "swr-pydantic-ai-model-backed-adapter-20260614",
+        "worker_type": "model_api_execution"
+      },
+      "sha256": "32de442f66ae7c1da404d8b273428297469c515f930e6b3d3d532cf1901967d5"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "read public allowed pages after approval",
+          "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+          "stop at login, account, payment, public action, or private-data boundaries"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "scope_defined_in_source_packet"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-browser-readonly-complete-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a public read-only browser research worker for req-test-browser-readonly-complete-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-test-browser-readonly-complete-20260614:browser_read_only:catalog_required_approval_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "content_and_social_growth",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-browser-readonly-complete-20260614-result-placeholder.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-test-browser-readonly-complete-20260614",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "9af65682823bd059bf6d691712c816755459b37de4b463780fbb66f25179fbba"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "retain local audit record",
+          "do not execute or reopen without a new service request"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "complete",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": []
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\reports\\source-research-refresh-20260614.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "lifecycle_audit_note",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-lifecycle-approve-20260614-result-placeholder.md",
+            "required": false
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\reports\\source-research-refresh-20260614.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": "recovered-profitable-edge-infra",
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": "Completed lifecycle verification; unapproved start was blocked, approval path completed, rejection path recorded.",
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "Represent lifecycle/local-runtime test request req-test-lifecycle-approve-20260614; no external service worker action is needed.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-test-lifecycle-approve-20260614:local_runtime_adapter:test_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "recovered-profitable-edge-infra",
+        "requesting_lane_id": "platform_engineering",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-lifecycle-approve-20260614-result-placeholder.md",
+        "risk_gate": "test_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "local_runtime_adapter",
+        "source_service_request_id": "req-test-lifecycle-approve-20260614",
+        "status": "complete",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous"
+        ],
+        "worker_request_id": "swr-test-lifecycle-approve-20260614",
+        "worker_type": "local_runtime_adapter"
+      },
+      "sha256": "aba335388021774b338dee8835913103820df3506938658918fb2ad510d69d6b"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "retain local audit record",
+          "do not execute or reopen without a new service request"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "rejected",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": []
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "lifecycle_audit_note",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-lifecycle-reject-20260614-result-placeholder.md",
+            "required": false
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\packet.md",
+            "required": false
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": "Lifecycle rejection-path test. No external action required or allowed.",
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "Represent lifecycle/local-runtime test request req-test-lifecycle-reject-20260614; no external service worker action is needed.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-test-lifecycle-reject-20260614:local_runtime_adapter:test_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "platform_engineering",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-lifecycle-reject-20260614-result-placeholder.md",
+        "risk_gate": "test_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "local_runtime_adapter",
+        "source_service_request_id": "req-test-lifecycle-reject-20260614",
+        "status": "rejected",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous"
+        ],
+        "worker_request_id": "swr-test-lifecycle-reject-20260614",
+        "worker_type": "local_runtime_adapter"
+      },
+      "sha256": "5c2d0b1498cab10402875bab5ce9d86991822d0cb0073e1b68d0cd2d9723f527"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "retain local audit record",
+          "do not execute or reopen without a new service request"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "rejected",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": []
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\reports\\service-catalog-latest.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "service_worker_result_placeholder",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-service-intake-valid-20260614-result-placeholder.md",
+            "required": false
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\reports\\service-catalog-latest.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": "Validator positive-path test completed; no external action required or allowed.",
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "Represent gated service request req-test-service-intake-valid-20260614 as a local service-worker queue row only; do not execute external side effects.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-test-service-intake-valid-20260614:other_gated_worker:test_validator_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "platform_engineering",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-test-service-intake-valid-20260614-result-placeholder.md",
+        "risk_gate": "test_validator_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "real_money_trade_gate",
+        "source_service_request_id": "req-test-service-intake-valid-20260614",
+        "status": "rejected",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous"
+        ],
+        "worker_request_id": "swr-test-service-intake-valid-20260614",
+        "worker_type": "other_gated_worker"
+      },
+      "sha256": "c1d0e33e4d1e45bf719e98cb1157d5e0512c2aac3d35d3f2d680a825497ac9fc"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "read public allowed pages after approval",
+          "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+          "stop at login, account, payment, public action, or private-data boundaries"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "scope_defined_in_source_packet"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a public read-only browser research worker for req-wave4-ai-ml-competitions-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-wave4-ai-ml-competitions-browser-readonly-20260614:browser_read_only:catalog_required_approval_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "ai_ml_competitions",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614-result-placeholder.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-wave4-ai-ml-competitions-browser-readonly-20260614",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "a579a58b25c2c462082b5d5e85f3c16734b249218f2923d2bbf65fa644473f2c"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "read public allowed pages after approval",
+          "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+          "stop at login, account, payment, public action, or private-data boundaries"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "scope_defined_in_source_packet"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-digital-products-browser-readonly-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a public read-only browser research worker for req-wave4-digital-products-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-wave4-digital-products-browser-readonly-20260614:browser_read_only:catalog_required_approval_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "digital_products_templates_plugins",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-digital-products-browser-readonly-20260614-result-placeholder.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-wave4-digital-products-browser-readonly-20260614",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "45a1a57def4ec7ff4951be6aa937784214cbf474ae3ade6ef9b7696db20ba8ca"
+    },
+    {
+      "json_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json",
+      "md_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.md",
+      "request": {
+        "account_boundary": {
+          "login_allowed": false,
+          "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+          "settings_change_allowed": false,
+          "signup_allowed": false,
+          "terms_acceptance_allowed": false
+        },
+        "account_or_identity_action_allowed": false,
+        "allowed_actions": [
+          "read public allowed pages after approval",
+          "capture source URLs, page titles, short compliant excerpts, summaries, and local evidence artifacts",
+          "stop at login, account, payment, public action, or private-data boundaries"
+        ],
+        "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+        "approval_status_snapshot": "needs_review",
+        "created_utc": "2026-06-14T21:59:06Z",
+        "credential_boundary": {
+          "credentials_allowed": false,
+          "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+          "otp_allowed": false,
+          "private_data_allowed": false
+        },
+        "data_boundary": {
+          "allowed_data_types": [
+            "local artifact references",
+            "public source URLs",
+            "page titles",
+            "short factual excerpts within copyright limits",
+            "local notes",
+            "approval and risk metadata"
+          ],
+          "allowed_hosts": [
+            "scope_defined_in_source_packet"
+          ],
+          "disallowed_data_types": [
+            "credentials",
+            "OTP",
+            "payment details",
+            "tax/KYC data",
+            "wallet data",
+            "private files",
+            "non-public account data",
+            "unapproved signed-in content"
+          ],
+          "starting_urls": [
+            "scope_defined_in_source_packet"
+          ]
+        },
+        "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+        "expected_output_artifacts": [
+          {
+            "kind": "browser_readonly_capture",
+            "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-money-source-discovery-browser-readonly-20260614-result-placeholder.md",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "input_artifacts": [
+          {
+            "kind": "source_service_request_artifact",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+            "required": true
+          }
+        ],
+        "max_cost_usd": 0,
+        "metadata": {
+          "api_calls": false,
+          "approval_granted_by_this_artifact": false,
+          "assigned_agent_id": null,
+          "backfilled_from_service_requests_table": true,
+          "browser_opened": false,
+          "decision_note": null,
+          "external_side_effects": false
+        },
+        "model_or_api_cost_allowed": false,
+        "money_boundary": {
+          "deposit_allowed": false,
+          "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+          "payment_method_allowed": false,
+          "purchase_allowed": false,
+          "trade_allowed": false,
+          "wallet_signature_allowed": false,
+          "withdrawal_allowed": false
+        },
+        "objective": "After explicit approval only, run a public read-only browser research worker for req-wave4-money-source-discovery-browser-readonly-20260614; capture evidence and stop before any login, form submission, account, public, payment, wallet, or real-money action.",
+        "prohibited_actions": [
+          "execute without explicit approval",
+          "login unless explicitly approved",
+          "signup or account creation",
+          "accept terms or legal agreements",
+          "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+          "submit forms",
+          "publish, post, reply, comment, message, list, upload, or contact external parties",
+          "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+          "change account settings",
+          "bypass paywalls, rate limits, access controls, or platform rules"
+        ],
+        "public_action_allowed": false,
+        "public_action_boundary": {
+          "comment_allowed": false,
+          "issue_or_pr_allowed": false,
+          "marketplace_listing_allowed": false,
+          "message_allowed": false,
+          "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+          "post_allowed": false,
+          "submission_allowed": false
+        },
+        "real_money_allowed": false,
+        "replay_policy": {
+          "idempotency_key": "req-wave4-money-source-discovery-browser-readonly-20260614:browser_read_only:catalog_required_approval_no_external_action",
+          "replay_requires_new_approval_when": [
+            "any execution would occur",
+            "status is not approved or assigned",
+            "scope, risk gate, target, or worker type changes",
+            "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+          ],
+          "safe_to_replay_without_reapproval": false
+        },
+        "requesting_agent_id": "unassigned_requester_or_lane_manager",
+        "requesting_lane_id": "money_source_discovery",
+        "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-wave4-money-source-discovery-browser-readonly-20260614-result-placeholder.md",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "schema_version": "service_worker_request.v1",
+        "service_id": "browser_read_only_session",
+        "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "status": "needs_review",
+        "stop_conditions": [
+          "service request status is not approved or assigned",
+          "requested action exceeds approval scope",
+          "required artifact/source is missing or ambiguous",
+          "page requires unapproved login, signup, consent, payment, private data, credentials, OTP, wallet action, file upload, or public submission",
+          "worker would need to leave allowed host/scope"
+        ],
+        "worker_request_id": "swr-wave4-money-source-discovery-browser-readonly-20260614",
+        "worker_type": "browser_read_only"
+      },
+      "sha256": "779c1ca0a1745318721a7be7c9f585197f7e113e2cf6835399dd229cbeeb23ec"
+    }
+  ]
+}

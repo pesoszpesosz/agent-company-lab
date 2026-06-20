@@ -1,0 +1,132 @@
+{
+  "account_boundary": {
+    "login_allowed": false,
+    "notes": "No login, signup, account setting change, seller onboarding, or terms acceptance is allowed by this queue row.",
+    "settings_change_allowed": false,
+    "signup_allowed": false,
+    "terms_acceptance_allowed": false
+  },
+  "account_or_identity_action_allowed": false,
+  "allowed_actions": [
+    "prepare local review notes",
+    "identify required legal, tax, KYC, payment, seller, and contractual decisions",
+    "produce questions for the user/CRO"
+  ],
+  "approval_scope": "Backfill only. This row mirrors the existing service request status and grants no new approval or execution authority.",
+  "approval_status_snapshot": "needs_review",
+  "created_utc": "2026-06-14T21:59:06Z",
+  "credential_boundary": {
+    "credentials_allowed": false,
+    "notes": "No credentials, OTPs, private files, secrets, payment details, tax/KYC data, wallet data, or personal/private data may be entered.",
+    "otp_allowed": false,
+    "private_data_allowed": false
+  },
+  "data_boundary": {
+    "allowed_data_types": [
+      "local artifact references",
+      "public source URLs",
+      "page titles",
+      "short factual excerpts within copyright limits",
+      "local notes",
+      "approval and risk metadata"
+    ],
+    "allowed_hosts": [],
+    "disallowed_data_types": [
+      "credentials",
+      "OTP",
+      "payment details",
+      "tax/KYC data",
+      "wallet data",
+      "private files",
+      "non-public account data",
+      "unapproved signed-in content"
+    ],
+    "starting_urls": []
+  },
+  "execution_plan_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\packet.md",
+  "expected_output_artifacts": [
+    {
+      "kind": "legal_payment_review_packet",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-digital-legal-payment-review-20260614-result-placeholder.md",
+      "required": true
+    }
+  ],
+  "external_side_effects_allowed": false,
+  "input_artifacts": [
+    {
+      "kind": "source_service_request_artifact",
+      "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\packet.md",
+      "required": true
+    }
+  ],
+  "max_cost_usd": 0,
+  "metadata": {
+    "api_calls": false,
+    "approval_granted_by_this_artifact": false,
+    "assigned_agent_id": null,
+    "backfilled_from_service_requests_table": true,
+    "browser_opened": false,
+    "decision_note": null,
+    "external_side_effects": false
+  },
+  "model_or_api_cost_allowed": false,
+  "money_boundary": {
+    "deposit_allowed": false,
+    "notes": "No payment, trading, deposit, withdrawal, wallet signature, purchase, or real-money action is allowed by this queue row.",
+    "payment_method_allowed": false,
+    "purchase_allowed": false,
+    "trade_allowed": false,
+    "wallet_signature_allowed": false,
+    "withdrawal_allowed": false
+  },
+  "objective": "Review legal, KYC, tax, payment, and seller-account requirements for req-next-wave-digital-legal-payment-review-20260614 as a local decision packet only; make no commitments and enter no private data.",
+  "prohibited_actions": [
+    "execute without explicit approval",
+    "login unless explicitly approved",
+    "signup or account creation",
+    "accept terms or legal agreements",
+    "enter credentials, OTPs, personal data, private files, payment details, tax/KYC data, or wallet information",
+    "submit forms",
+    "publish, post, reply, comment, message, list, upload, or contact external parties",
+    "purchase, deposit, withdraw, trade, connect wallet, sign wallet messages, or perform real-money actions",
+    "change account settings",
+    "bypass paywalls, rate limits, access controls, or platform rules"
+  ],
+  "public_action_allowed": false,
+  "public_action_boundary": {
+    "comment_allowed": false,
+    "issue_or_pr_allowed": false,
+    "marketplace_listing_allowed": false,
+    "message_allowed": false,
+    "notes": "No public action, external message, marketplace listing, upload, issue/PR action, or submission is allowed by this queue row.",
+    "post_allowed": false,
+    "submission_allowed": false
+  },
+  "real_money_allowed": false,
+  "replay_policy": {
+    "idempotency_key": "req-next-wave-digital-legal-payment-review-20260614:legal_kyc_tax_payment_review:legal_kyc_tax_payment_requires_user_decision_no_commitment",
+    "replay_requires_new_approval_when": [
+      "any execution would occur",
+      "status is not approved or assigned",
+      "scope, risk gate, target, or worker type changes",
+      "credentials, private data, account, public action, payment, wallet, legal commitment, model/API cost, or real-money activity would be needed"
+    ],
+    "safe_to_replay_without_reapproval": false
+  },
+  "requesting_agent_id": "unassigned_requester_or_lane_manager",
+  "requesting_lane_id": "digital_products_templates_plugins",
+  "result_artifact_path": "E:\\agent-company-lab\\reports\\service-worker-requests\\req-next-wave-digital-legal-payment-review-20260614-result-placeholder.md",
+  "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+  "schema_version": "service_worker_request.v1",
+  "service_id": "legal_kyc_tax_payment_gate",
+  "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+  "status": "needs_review",
+  "stop_conditions": [
+    "service request status is not approved or assigned",
+    "requested action exceeds approval scope",
+    "required artifact/source is missing or ambiguous",
+    "work would create a commitment, public action, account action, payment setup, report submission, or contact"
+  ],
+  "worker_request_id": "swr-next-wave-digital-legal-payment-review-20260614",
+  "worker_type": "legal_kyc_tax_payment_review"
+}

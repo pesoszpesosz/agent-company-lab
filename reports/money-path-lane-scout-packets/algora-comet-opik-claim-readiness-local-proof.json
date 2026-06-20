@@ -1,0 +1,201 @@
+{
+  "schema_version": "paid_code.algora_comet_opik_claim_readiness_local_proof.v1",
+  "generated_utc": "2026-06-18T06:27:07Z",
+  "task_id": "task-lane-scout-algora_comet_opik-20260618",
+  "lane_id": "paid_code_bounties",
+  "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+  "status": "algora_comet_opik_claim_readiness_ready_but_parked_program_paused",
+  "route_id": "algora_comet_opik",
+  "source_observations": [
+    {
+      "source_id": "comet_opik_bounty_docs",
+      "url": "https://www.comet.com/docs/opik/contributing/developer-programs/bounties",
+      "observed_utc": "2026-06-18T06:27:07Z",
+      "local_summary": "The Opik bounty page says the bounty program is currently paused until further notice, while preserving reference instructions for CLA, contribution guide, Algora board, claim-if-applicable, PR submission, and reward flow.",
+      "claim_readiness_effect": "Route is not externally actionable until the pause is lifted and a fresh read-only validation confirms an open bounty."
+    },
+    {
+      "source_id": "algora_home",
+      "url": "https://algora.io/",
+      "observed_utc": "2026-06-18T06:27:07Z",
+      "local_summary": "Algora public site presents open-source recruiting and bounty surfaces with sign-in and public bounty examples.",
+      "claim_readiness_effect": "Algora/account/payment/public action remains gated; public pages can inform local fixture shape only."
+    },
+    {
+      "source_id": "local_algora_fixture_checker",
+      "url": "E:/agent-company-lab/reports/paid-code-bounties/algora-candidate-refresh-fixture-check-20260616.md",
+      "observed_utc": "2026-06-18T06:27:07Z",
+      "local_summary": "No-network fixture checker validated six candidate rows with six passes and zero failures.",
+      "claim_readiness_effect": "Local parser/checklist machinery is ready for read-only refresh, but not for claim/comment/PR/payout."
+    },
+    {
+      "source_id": "local_duplicate_check_worksheet",
+      "url": "E:/agent-company-lab/reports/paid-code-duplicate-check-worksheet-latest.md",
+      "observed_utc": "2026-06-18T06:27:07Z",
+      "local_summary": "Existing worksheet separates six local duplicate/payout/effort checks from browser, legal/payment, public-action, and security gates.",
+      "claim_readiness_effect": "New route should reuse these local-only checks and forbid live actions until approvals exist."
+    }
+  ],
+  "candidate_count": 6,
+  "candidate_decision_summary": {
+    "reference_only": 1,
+    "watchlist_only": 2,
+    "reject": 2,
+    "local_triage_only": 1
+  },
+  "candidate_rows": [
+    {
+      "fixture_id": "algora_org_examples_reference_only",
+      "algora_url": "https://algora.io",
+      "github_issue_url": null,
+      "amount_usd": null,
+      "state": "unclear",
+      "claim_count": null,
+      "local_testability": "blocked",
+      "fixture_decision": "reference_only",
+      "local_readiness": "reference_only",
+      "rejection_reasons": [
+        "missing_explicit_amount",
+        "no_specific_open_issue"
+      ],
+      "gate": "No candidate issue; use only to verify parser shape."
+    },
+    {
+      "fixture_id": "golemcloud_zero_open_watchlist",
+      "algora_url": "https://algora.io/golemcloud/home",
+      "github_issue_url": null,
+      "amount_usd": null,
+      "state": "none_open",
+      "claim_count": null,
+      "local_testability": "blocked",
+      "fixture_decision": "watchlist",
+      "local_readiness": "watchlist_only",
+      "rejection_reasons": [
+        "no_open_bounty"
+      ],
+      "gate": "Wait for an explicit open bounty before local triage."
+    },
+    {
+      "fixture_id": "capsoftware_low_amount_crowded_reject",
+      "algora_url": "https://algora.io/CapSoftware/bounties",
+      "github_issue_url": "https://github.com/CapSoftware/Cap/issues/example",
+      "amount_usd": 50,
+      "state": "open",
+      "claim_count": 5,
+      "local_testability": "clear",
+      "fixture_decision": "reject",
+      "local_readiness": "reject",
+      "rejection_reasons": [
+        "tiny_and_crowded"
+      ],
+      "gate": "Do not spend sprint time on low-value crowded bounty."
+    },
+    {
+      "fixture_id": "turso_unclear_amount_watchlist",
+      "algora_url": "https://algora.io/tursodatabase/bounties",
+      "github_issue_url": "https://github.com/tursodatabase/turso/issues/example",
+      "amount_usd": null,
+      "state": "unclear",
+      "claim_count": null,
+      "local_testability": "unclear",
+      "fixture_decision": "watchlist",
+      "local_readiness": "watchlist_only",
+      "rejection_reasons": [
+        "missing_explicit_amount",
+        "state_unclear"
+      ],
+      "gate": "Read-only refresh required for explicit amount and acceptance state."
+    },
+    {
+      "fixture_id": "prettier_clear_local_triage_candidate",
+      "algora_url": "https://algora.io/prettier/bounties",
+      "github_issue_url": "https://github.com/prettier/prettier/issues/example",
+      "amount_usd": 250,
+      "state": "open",
+      "claim_count": 1,
+      "local_testability": "clear",
+      "fixture_decision": "promote_local_triage",
+      "local_readiness": "local_triage_only",
+      "rejection_reasons": [],
+      "gate": "Local triage only; no claim, comment, PR, or payout details without GitHub/public-action approval."
+    },
+    {
+      "fixture_id": "tsperf_subjective_acceptance_reject",
+      "algora_url": "https://algora.io/tsperf/bounties",
+      "github_issue_url": "https://github.com/microsoft/TypeScript/issues/example",
+      "amount_usd": 300,
+      "state": "open",
+      "claim_count": 0,
+      "local_testability": "unclear",
+      "fixture_decision": "reject",
+      "local_readiness": "reject",
+      "rejection_reasons": [
+        "subjective_acceptance"
+      ],
+      "gate": "Reject until measurable acceptance target exists."
+    }
+  ],
+  "readiness_gates": [
+    {
+      "gate": "program_open_check",
+      "status": "blocked_by_pause",
+      "required_evidence": "Fresh read-only source confirms Opik bounty program is no longer paused and the target bounty is open."
+    },
+    {
+      "gate": "cla_and_contribution_review",
+      "status": "approval_required",
+      "required_evidence": "CLA/contribution guide reviewed locally; no agreement accepted without explicit approval."
+    },
+    {
+      "gate": "duplicate_and_claim_check",
+      "status": "approval_required_for_live_refresh",
+      "required_evidence": "Read-only issue/PR/comment/claim scan shows low duplicate risk and clear reservation rules."
+    },
+    {
+      "gate": "local_reproduction",
+      "status": "local_only_allowed",
+      "required_evidence": "Repro steps and tests run on local fixture or cloned public repo only after repo access is approved/safe."
+    },
+    {
+      "gate": "public_claim_or_pr",
+      "status": "blocked",
+      "required_evidence": "Exact public-action approval for a specific issue, claim/comment text, branch/PR body, and receipt."
+    },
+    {
+      "gate": "payout_terms",
+      "status": "blocked",
+      "required_evidence": "Legal/KYC/tax/payment review of bounty terms and payout route."
+    }
+  ],
+  "claim_readiness_checklist": [
+    "Confirm program is active, not paused.",
+    "Confirm explicit bounty amount before work starts.",
+    "Confirm issue is open, unsolved, and still accepting work.",
+    "Confirm claim/reservation rules and competing claims.",
+    "Confirm CLA/contribution requirements without accepting anything.",
+    "Confirm local reproduction and deterministic acceptance target.",
+    "Reject tiny/crowded, subjective, credential-requiring, or unclear acceptance tasks.",
+    "Draft public claim/PR text only after exact public-action approval.",
+    "Keep payout/tax/KYC/account setup behind legal/payment approval."
+  ],
+  "decision": {
+    "go_no_go": "no_go_external_claim",
+    "reason": "Comet/Opik bounty program is currently paused in the public docs; local fixtures remain useful for parser/checklist readiness, but no claim/comment/PR/payout path is clean.",
+    "local_next_step": "Keep the Algora parser fixture and duplicate worksheet as the readiness base; if the program reopens, run one approved read-only refresh before any local triage sprint."
+  },
+  "boundary": {
+    "live_algora_fetch": false,
+    "live_github_fetch": false,
+    "accounts_or_logins": 0,
+    "cla_or_terms_accepted": false,
+    "github_comments_claims_or_prs": 0,
+    "forks_created": 0,
+    "payout_or_payment_actions": 0,
+    "security_testing": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Park external Algora/Comet claim work until the Opik bounty program is verified active by an approved read-only refresh; then re-run duplicate/claim/payout checks before any public claim, comment, PR, account, CLA, or payout action."
+}

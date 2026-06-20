@@ -1,0 +1,17 @@
+{
+  "source_count": 11,
+  "candidate_count": 7,
+  "github_repo_metadata_count": 5,
+  "recommended_next_build": "agent_egress_event_ledger_v1_report_only_schema_fixture_packet",
+  "runtime_boundary": {
+    "gateway_started": false,
+    "gateway_installed": false,
+    "api_keys_created": false,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

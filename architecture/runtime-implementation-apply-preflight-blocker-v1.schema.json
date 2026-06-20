@@ -1,0 +1,69 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/runtime-implementation-apply-preflight-blocker-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Runtime Implementation Apply Preflight Blocker v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_implementation_apply_preflight_blocker.v1"
+    },
+    "source_guard_report_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_guard_validation_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "real_signed_decision_path": {
+      "type": "string"
+    },
+    "apply_preflight_status": {
+      "const": "blocked_no_real_signed_decision"
+    },
+    "fixture_decisions_apply_blocked": {
+      "const": true
+    },
+    "real_decision_required": {
+      "const": true
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "runtime_implementation_allowed": {
+      "const": false
+    },
+    "runtime_code_write_allowed": {
+      "const": false
+    },
+    "preflight_checks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "required": [
+    "schema_version",
+    "source_guard_report_path",
+    "source_guard_validation_path",
+    "real_signed_decision_path",
+    "apply_preflight_status",
+    "fixture_decisions_apply_blocked",
+    "real_decision_required",
+    "apply_allowed",
+    "runtime_implementation_allowed",
+    "runtime_code_write_allowed",
+    "preflight_checks",
+    "runtime_boundary",
+    "next_action"
+  ]
+}

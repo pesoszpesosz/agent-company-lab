@@ -1,0 +1,320 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/mcp-tool-registry-gate-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company MCP Tool Registry Gate v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "mcp_registry_entry_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "server_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "server_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "server_source_type": {
+      "enum": [
+        "local_fixture",
+        "github_repo",
+        "package",
+        "remote_endpoint",
+        "unknown"
+      ]
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "package_or_endpoint": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "publisher_verification": {
+      "enum": [
+        "local_fixture",
+        "verified",
+        "unverified",
+        "unknown"
+      ]
+    },
+    "version": {
+      "type": "string"
+    },
+    "digest_or_commit": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "risk_tier": {
+      "enum": [
+        "local_report_only",
+        "low",
+        "medium",
+        "high",
+        "blocked"
+      ]
+    },
+    "default_status": {
+      "enum": [
+        "disabled",
+        "approved_report_only",
+        "approved_preflight_only",
+        "approved_live_read_only",
+        "under_review",
+        "blocked",
+        "revoked"
+      ]
+    },
+    "allowed_lanes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_agent_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_worker_pool_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_identity_envelope_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "credential_requirements": {
+      "const": "none"
+    },
+    "oauth_or_auth_mode": {
+      "const": "none"
+    },
+    "network_scope": {
+      "const": "none"
+    },
+    "data_sensitivity_ceiling": {
+      "enum": [
+        "local_report_only",
+        "public"
+      ]
+    },
+    "write_action_capable": {
+      "const": false
+    },
+    "public_action_capable": {
+      "const": false
+    },
+    "payment_or_wallet_capable": {
+      "const": false
+    },
+    "file_system_capable": {
+      "const": false
+    },
+    "browser_capable": {
+      "const": false
+    },
+    "rate_limit_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "budget_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "logging_required": {
+      "const": true
+    },
+    "recording_required": {
+      "const": true
+    },
+    "redaction_required": {
+      "const": true
+    },
+    "review_artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_artifact_path": {
+      "type": "string"
+    },
+    "egress_event_required": {
+      "const": true
+    },
+    "created_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "expires_utc": {
+      "type": "string",
+      "minLength": 10
+    },
+    "revocation_status": {
+      "enum": [
+        "active",
+        "revoked"
+      ]
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "server_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool_description": {
+          "type": "string"
+        },
+        "tool_input_schema_artifact_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool_output_schema_artifact_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool_side_effect_class": {
+          "enum": [
+            "read_only",
+            "local_mutation",
+            "external_read",
+            "external_write",
+            "public_action",
+            "payment_wallet",
+            "credential_access"
+          ]
+        },
+        "allowed_input_artifact_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required_output_artifact_type": {
+          "type": "string"
+        },
+        "requires_operator_decision": {
+          "const": true
+        },
+        "requires_identity_envelope": {
+          "const": true
+        },
+        "requires_egress_event": {
+          "const": true
+        },
+        "requires_post_execution_evidence": {
+          "const": true
+        },
+        "default_policy_verdict": {
+          "enum": [
+            "deny",
+            "allow_report_only_preflight"
+          ]
+        },
+        "risk_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "tool_id",
+        "server_id",
+        "tool_name",
+        "tool_description",
+        "tool_input_schema_artifact_path",
+        "tool_output_schema_artifact_path",
+        "tool_side_effect_class",
+        "allowed_input_artifact_types",
+        "required_output_artifact_type",
+        "requires_operator_decision",
+        "requires_identity_envelope",
+        "requires_egress_event",
+        "requires_post_execution_evidence",
+        "default_policy_verdict",
+        "risk_reasons"
+      ]
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "mcp_registry_entry_id",
+    "server_id",
+    "server_name",
+    "server_source_type",
+    "source_url",
+    "package_or_endpoint",
+    "publisher",
+    "publisher_verification",
+    "version",
+    "digest_or_commit",
+    "license",
+    "risk_tier",
+    "default_status",
+    "allowed_lanes",
+    "allowed_agent_ids",
+    "allowed_worker_pool_ids",
+    "allowed_identity_envelope_ids",
+    "allowed_tools",
+    "blocked_tools",
+    "credential_requirements",
+    "oauth_or_auth_mode",
+    "network_scope",
+    "data_sensitivity_ceiling",
+    "write_action_capable",
+    "public_action_capable",
+    "payment_or_wallet_capable",
+    "file_system_capable",
+    "browser_capable",
+    "rate_limit_scope",
+    "budget_scope",
+    "logging_required",
+    "recording_required",
+    "redaction_required",
+    "review_artifact_path",
+    "approval_artifact_path",
+    "egress_event_required",
+    "created_utc",
+    "expires_utc",
+    "revocation_status",
+    "tool",
+    "runtime_boundary"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-command-strip-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-command-strip-v1-20260618",
+  "event_type": "atlas_path_command_strip_added",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Added a compact Path Command Strip between Mission Scan and the route rail so each money path reads more like a playable command board with next move, gate, proof, owner, notes, and fast jumps.",
+  "changes": [
+    "Added renderPathCommandStrip and pathCommandStripCells to expose route command state directly inside Path Map.",
+    "Added local jump buttons for route, proof cache, chapter archive, staging queue, and command deck.",
+    "Compressed the mobile Path Map with horizontal mission and command chips so the route rail appears on the first phone viewport.",
+    "Added a snapshot JSON guard to prevent the visual dashboard data file from being overwritten with a markdown report again.",
+    "Updated the Path Map docs and cache key for the new command-strip surface."
+  ],
+  "verification": {
+    "node_check": "node --check web/app.js",
+    "pytest": "30 passed, 55 deselected with python -m pytest tests -q -k agent_company_atlas",
+    "browser": {
+      "mobile": {
+        "viewport": "390x820",
+        "body_overflow_x": 0,
+        "command_strip_height_px": 175,
+        "route_visible_in_first_screen": true,
+        "route_first_screen_margin_px": 40
+      },
+      "tablet": {
+        "viewport": "820x900",
+        "body_overflow_x": 0,
+        "command_strip_height_px": 145,
+        "route_visible_in_first_screen": true,
+        "route_first_screen_margin_px": 281
+      },
+      "desktop": {
+        "viewport": "1280x820",
+        "body_overflow_x": 0,
+        "command_strip_height_px": 160,
+        "route_visible_in_first_screen": true,
+        "route_first_screen_margin_px": 275
+      }
+    }
+  },
+  "next_visual_targets": [
+    "Reduce the Chapter Archive into collapsible/virtualized level clusters so deep history stops creating massive page height.",
+    "Add richer sprite/avatar motion for bots inside each lane without increasing scroll length.",
+    "Turn each future lane module into a swappable mini-game shell with its own texture, soundless motion style, and proof trail rules."
+  ]
+}

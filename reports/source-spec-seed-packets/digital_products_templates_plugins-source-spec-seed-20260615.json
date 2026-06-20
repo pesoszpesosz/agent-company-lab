@@ -1,0 +1,35 @@
+{
+  "forbidden_actions": [
+    "Do not insert this packet into source_specs without a separate explicit task.",
+    "Do not browse, register accounts, accept terms, download gated datasets, publish listings, submit work, touch wallets/payments, or send outreach from this packet.",
+    "Do not mutate service requests or assign workers from this packet."
+  ],
+  "generated_utc": "2026-06-15T17:00:55Z",
+  "lane_id": "digital_products_templates_plugins",
+  "next_action": "Review and, if accepted, convert into a source-spec registry row in a separate local-only task.",
+  "proposed_source_spec": {
+    "cadence": "lane_owner_on_demand_or_weekly",
+    "id": "digital_products_marketplace_demand_source_seed",
+    "lane_id": "digital_products_templates_plugins",
+    "name": "Digital Product Marketplace Demand Source Seed",
+    "notes": "Use to identify sellable template/plugin ideas and marketplace blockers. Publishing/listing/payment setup requires explicit service requests.",
+    "outputs": [
+      "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-demand-refresh-YYYYMMDD.md",
+      "lane_evidence",
+      "legal_kyc_tax_payment_gate_candidates"
+    ],
+    "refresh_command": "Prepare a read-only demand and fee scan only after lane manager claim; no listing, account, checkout, or payment action.",
+    "risk_gate": "read_only_market_research_no_listing_account_payment_or_public_submission",
+    "source_paths": [
+      "Gumroad public marketplace/search pages",
+      "Lemon Squeezy storefront examples",
+      "Etsy digital product public category pages",
+      "GitHub trending/template/plugin repositories",
+      "Codex/OpenAI plugin and skill local product notes"
+    ],
+    "source_type": "public_marketplace_research"
+  },
+  "registry_insert_allowed": false,
+  "report_only": true,
+  "schema_version": "agent_company.source_spec_seed_packet.v1"
+}

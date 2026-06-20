@@ -1,0 +1,261 @@
+{
+  "schema_version": "money_source_proof_queue.v1",
+  "generated_date": "2026-06-14",
+  "lane_id": "money_source_discovery",
+  "task_id": "task-money-source-proof-queue-schema-20260614",
+  "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+  "derived_from": "E:/agent-company-lab/reports/money-source-discovery/weekly-delta-local-dry-run-20260614.md",
+  "boundary": {
+    "realized_usd": 0,
+    "browser_actions": false,
+    "api_calls": false,
+    "account_actions": false,
+    "public_actions": false,
+    "payment_or_wallet_actions": false,
+    "current_source_verification": false,
+    "submitted_bounty_payouts_work": false
+  },
+  "required_fields": [
+    "candidate_id",
+    "source_urls",
+    "owner_lane",
+    "gate_class",
+    "planned_proof_artifact_path",
+    "current_source_status",
+    "blocked_until"
+  ],
+  "queue": [
+    {
+      "candidate_id": "MSD-001",
+      "source_urls": [
+        "E:/agent-company-lab/reports"
+      ],
+      "owner_lane": "money_source_discovery",
+      "additional_owner_lanes": [],
+      "gate_class": "Local file read only",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/weekly-delta-local-dry-run-20260614.md",
+      "current_source_status": "local_seed_verified_local_file",
+      "blocked_until": "not_blocked_for_local_file_use",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-002",
+      "source_urls": [
+        "https://github.com/search",
+        "https://github.com/topics/bounty"
+      ],
+      "owner_lane": "paid_code_bounties",
+      "additional_owner_lanes": [
+        "security_bounty_private_reports"
+      ],
+      "gate_class": "Approved browser-read-only first; later GitHub public-action/security gates",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/github-bounty-source-capture-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved with exact public-read scope",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-003",
+      "source_urls": [
+        "https://www.kaggle.com/competitions?prestigeFilter=money"
+      ],
+      "owner_lane": "ai_ml_competitions",
+      "additional_owner_lanes": [],
+      "gate_class": "Account, rules, dataset license, compute/API spend, submission",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/kaggle-prize-scout-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later account/data/compute/submission gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-004",
+      "source_urls": [
+        "https://www.drivendata.org/competitions/"
+      ],
+      "owner_lane": "ai_ml_competitions",
+      "additional_owner_lanes": [],
+      "gate_class": "Account, rules, data license, final submission",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/drivendata-prize-scout-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later account/data/submission gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-005",
+      "source_urls": [
+        "https://mlcontests.com/"
+      ],
+      "owner_lane": "ai_ml_competitions",
+      "additional_owner_lanes": [],
+      "gate_class": "Browser-read-only approval before current listings; account/submission gates later",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/mlcontests-aggregator-scout-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved with exact public-read scope",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-006",
+      "source_urls": [
+        "https://lablab.ai/ai-hackathons"
+      ],
+      "owner_lane": "ai_ml_competitions",
+      "additional_owner_lanes": [],
+      "gate_class": "Registration, team eligibility, rules, public submission, possible API/compute cost",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/lablab-ai-hackathon-scout-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later registration/API/submission gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-007",
+      "source_urls": [
+        "https://ethglobal.com/"
+      ],
+      "owner_lane": "web3_airdrops_grants_hackathons",
+      "additional_owner_lanes": [
+        "ai_ml_competitions"
+      ],
+      "gate_class": "Registration, wallet, deployment, team, public submission, legal/terms",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/ethglobal-hackathon-gate-scout-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later account/wallet/deployment/submission gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-008",
+      "source_urls": [
+        "https://gumroad.com/"
+      ],
+      "owner_lane": "digital_products_templates_plugins",
+      "additional_owner_lanes": [],
+      "gate_class": "Seller account, payment/tax setup, listing, public promotion, IP review",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/gumroad-product-route-packet-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later seller/payment/listing gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-009",
+      "source_urls": [
+        "https://www.lemonsqueezy.com/ecommerce/digital-products"
+      ],
+      "owner_lane": "digital_products_templates_plugins",
+      "additional_owner_lanes": [],
+      "gate_class": "Seller account, payment/tax, terms, product listing, support obligations",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/lemon-squeezy-route-packet-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later seller/payment/listing gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-010",
+      "source_urls": [
+        "https://promptbase.com/sell"
+      ],
+      "owner_lane": "digital_products_templates_plugins",
+      "additional_owner_lanes": [],
+      "gate_class": "Marketplace account, payout setup, listing review, IP/copyright, public claims",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/promptbase-skill-marketplace-packet-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later account/payout/listing gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-011",
+      "source_urls": [
+        "https://www.notion.com/templates"
+      ],
+      "owner_lane": "digital_products_templates_plugins",
+      "additional_owner_lanes": [],
+      "gate_class": "Creator account, marketplace terms, listing, payment/tax where applicable",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/notion-template-route-packet-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later account/listing/payment gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-012",
+      "source_urls": [
+        "https://shopify.dev/docs/apps/launch/distribution/revenue-share",
+        "https://www.shopify.com/partners"
+      ],
+      "owner_lane": "digital_products_templates_plugins",
+      "additional_owner_lanes": [
+        "productized_services_marketplaces"
+      ],
+      "gate_class": "Partner account, app review, revenue share, payment/tax, public listing/support",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/shopify-app-theme-route-packet-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later partner/payment/app-review/listing gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-013",
+      "source_urls": [
+        "https://www.upwork.com/",
+        "https://www.fiverr.com/"
+      ],
+      "owner_lane": "productized_services_marketplaces",
+      "additional_owner_lanes": [
+        "lead_generation_and_sales"
+      ],
+      "gate_class": "Marketplace account, KYC/tax/payment, proposals, outreach, reputation/public-action",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/service-marketplace-offer-packets-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later account/KYC/payment/outreach/public-action gates still required",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-014",
+      "source_urls": [
+        "https://www.utest.com/",
+        "https://www.usertesting.com/get-paid-to-test",
+        "https://test.io/company/become-a-tester",
+        "https://www.applause.com/blog/work-from-home-with-utest/"
+      ],
+      "owner_lane": "qa_usability_testing_gigs",
+      "additional_owner_lanes": [],
+      "gate_class": "Human-only work, real device/user feedback, account, KYC/tax/payment",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/qa-usability-human-gig-eligibility-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "human-only decision and approved browser/account/legal gates; agents may prepare local packets only",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-015",
+      "source_urls": [
+        "https://www.dataannotation.tech/",
+        "https://outlier.ai/",
+        "https://toloka.ai/",
+        "https://www.telusinternational.ai/",
+        "https://www.prolific.com/participants"
+      ],
+      "owner_lane": "ai_training_eval_gigs",
+      "additional_owner_lanes": [],
+      "gate_class": "Human-only paid work, identity/account, KYC/tax/payment, privacy, no automation",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/ai-training-human-only-risk-packet-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "human-only decision and approved browser/account/legal gates; agents must not perform tasks or submit answers",
+      "external_action_allowed": false
+    },
+    {
+      "candidate_id": "MSD-016",
+      "source_urls": [
+        "https://partnerstack.com/partners-and-publishers",
+        "https://market.partnerstack.com/",
+        "https://impact.com/partners/affiliate-partners/",
+        "https://www.rewardful.com/affiliate-program",
+        "https://firstpromoter.com/affiliate-program"
+      ],
+      "owner_lane": "affiliate_partner_programs",
+      "additional_owner_lanes": [
+        "content_and_social_growth"
+      ],
+      "gate_class": "Program application, disclosure compliance, public content/link placement, outreach, payout setup",
+      "planned_proof_artifact_path": "E:/agent-company-lab/reports/money-source-discovery/proof-queue/affiliate-program-scout-table-20260614.md",
+      "current_source_status": "local_seed_unverified",
+      "blocked_until": "req-wave4-money-source-discovery-browser-readonly-20260614 approved for public read; later application/disclosure/content/payment gates still required",
+      "external_action_allowed": false
+    }
+  ]
+}

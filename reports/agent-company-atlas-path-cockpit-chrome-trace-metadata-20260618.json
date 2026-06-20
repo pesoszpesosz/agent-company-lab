@@ -1,0 +1,51 @@
+{
+  "traceId": "trace-agent-company-atlas-path-cockpit-chrome-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-cockpit-chrome-v1-20260618",
+  "eventId": "trace-atlas_path_cockpit_chrome_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-cockpit-chrome-trace-metadata-20260618",
+  "title": "Path Cockpit Chrome",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "problem": "The Path view still felt like a long dashboard because the selected-lane header and stat chrome repeated information that Mission Glance already carries.",
+  "implementation": [
+    "Hid the redundant detail header only while the Path tab is active.",
+    "Tightened the Path detail tabs so Overview, Chronicle, Trail, Game, Comms, and Path navigation remain available without taking over the first viewport.",
+    "Reduced Path viewport top padding so the stage begins higher and reads more like a game cockpit.",
+    "Updated cache keys and documentation for the cockpit chrome slice."
+  ],
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_cockpit_chrome.py",
+    "tests/test_agent_company_atlas_path_viewport_stage.py"
+  ],
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-cockpit-chrome-20260618#lane=platform_engineering&view=path&deck=command",
+    "activeTabText": "path",
+    "detailTopDisplay": "none",
+    "tabCount": 6,
+    "stageHeight": 437,
+    "stageBottom": 427,
+    "panelBottom": 440,
+    "panelBottomWithinViewport": true,
+    "overflowX": 0,
+    "note": "The route focus intentionally scrolls the selected Path stage high in the viewport; the redundant lane header is removed and horizontal overflow remains zero."
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_cockpit_chrome.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_shell.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_path_chrome.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_split_stage.py -q",
+      "result": "4 passed in 0.07s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "exit code 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "46 passed, 55 deselected in 0.18s"
+    }
+  ],
+  "nextAction": "Continue replacing scroll-heavy Path content with compact, game-like cockpit surfaces that surface blockers, bot activity, and lane progress inside the first viewport."
+}

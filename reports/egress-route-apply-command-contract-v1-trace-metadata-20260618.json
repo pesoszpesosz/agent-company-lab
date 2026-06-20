@@ -1,0 +1,86 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-egress-route-apply-command-contract-v1-20260618",
+  "task_id": "task-egress-route-apply-command-contract-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:30:41Z",
+  "summary": "Created a report-only apply-command contract for the browser_read_only_gateway egress route. The validator accepts only deny/no-op and report-only command-contract fixtures and rejects live browser egress, gateway start, service request mutation, browser session start, worker start, model/API, MCP, public action, and external side effects.",
+  "source_apply_preflight_blocker": "E:\\agent-company-lab\\reports\\egress-route-apply-preflight-blocker-v1-validation-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\egress-route-apply-command-contract-v1.schema.json",
+      "sha256": "370b7cbbe7dd604d771bdb190971aeeeb809e0ef695ac76eb1fd630513fb7b39"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_egress_route_apply_command_contract.py",
+      "sha256": "9d931917de6e7b95779f9b57a240abe14b221918f35df83111215f0388b3d577"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_egress_route_apply_command_contract.py",
+      "sha256": "84a55a117beff9ade444b29937a0d0efc8d723bc8e413071d7e47cdcb0f7d28b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-apply-command-contract-v1-20260618.json",
+      "sha256": "9516aa0d7b0d1517bf25683973633a97ccafc4b8da65efd2e2f4975f0dacb01c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-apply-command-contract-v1-validation-20260618.json",
+      "sha256": "78d44c4e4b475f6a241ca2f01920bf19039b7f2c54fd9a96bb8fd92d4d342446"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-apply-command-contract-v1-20260618.md",
+      "sha256": "318131dc87412d1b62a239131fd079ad5df49b6a3b3277ad856d851fc1997348"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_egress_route_apply_command_contract.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+    "full_test_result": "31 tests passed",
+    "target_route_id": "browser_read_only_gateway",
+    "fixture_count": 39,
+    "accepted_count": 2,
+    "rejected_count": 37,
+    "fixture_expectation_mismatch_count": 0,
+    "apply_command_allowed": false,
+    "apply_allowed": false,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "dependency_installs": 0,
+    "worker_registrations": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build egress route apply-command guard v1 only after a real signed operator decision and executable command preview exist; until then, keep browser egress blocked."
+}

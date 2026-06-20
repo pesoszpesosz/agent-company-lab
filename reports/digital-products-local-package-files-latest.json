@@ -1,0 +1,229 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "drafted_file_count": 4,
+  "drafted_files": [
+    {
+      "file_id": "README.md",
+      "section_count": 7,
+      "status": "drafted_locally"
+    },
+    {
+      "file_id": "screenshot-shotlist.md",
+      "row_count": 6,
+      "status": "drafted_locally"
+    },
+    {
+      "file_id": "qa-pass.md",
+      "row_count": 7,
+      "status": "drafted_locally"
+    },
+    {
+      "file_id": "post-launch-review.md",
+      "prompt_count": 6,
+      "status": "drafted_locally"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "files_evidence_id": "digital-products-local-package-files-20260616",
+  "files_lane_id": "digital_products_templates_plugins",
+  "files_task_id": "task-digital-products-local-package-files-20260616",
+  "forbidden_actions": [
+    "Do not distribute, publish, browse marketplaces, create seller accounts, accept terms, configure payouts, set prices, or claim live demand from these package files.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from these package files."
+  ],
+  "generated_utc": "2026-06-15T21:39:48Z",
+  "lane_evidence_rows_after": 84,
+  "lane_evidence_rows_before": 83,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "local_package_files_drafted_no_distribution_or_payment_action",
+  "next_action": "Run a local package completeness check across all six manifest files; do not distribute, list, price, browse marketplaces, create accounts, or configure payouts.",
+  "qa_row_count": 7,
+  "qa_rows": [
+    {
+      "area": "links",
+      "check": "All internal references point to files present in the local manifest.",
+      "status": "local_check"
+    },
+    {
+      "area": "copy",
+      "check": "No revenue, conversion, payout, buyer-count, or live-demand claim is present.",
+      "status": "local_check"
+    },
+    {
+      "area": "scope",
+      "check": "README says the pack is a planning aid, not legal/tax/payment/marketplace advice.",
+      "status": "local_check"
+    },
+    {
+      "area": "screenshots",
+      "check": "Every promised screenshot has a shot-list row before packaging.",
+      "status": "local_check"
+    },
+    {
+      "area": "checklist",
+      "check": "Launch checklist contains owner, status, due, and evidence columns before packaging.",
+      "status": "local_check"
+    },
+    {
+      "area": "gates",
+      "check": "Marketplace browsing, seller terms, public listing, and payout setup are visibly gated.",
+      "status": "local_check"
+    },
+    {
+      "area": "distribution",
+      "check": "No distribution, listing, upload, price, or payment action has been performed.",
+      "status": "local_check"
+    }
+  ],
+  "readme_section_count": 7,
+  "readme_sections": [
+    {
+      "content": "A local draft pack for solo AI builders organizing launch positioning, screenshots, QA, and review.",
+      "section_id": "what-this-is"
+    },
+    {
+      "content": "Solo AI builders and operators preparing a small product launch without a launch manager or agency.",
+      "section_id": "who-it-is-for"
+    },
+    {
+      "content": "README, positioning template, launch checklist, screenshot shot list, QA pass, and post-launch review worksheet.",
+      "section_id": "included-files"
+    },
+    {
+      "content": "Fill the positioning template, complete the checklist, prepare screenshots, run the QA pass, and save review notes.",
+      "section_id": "how-to-use"
+    },
+    {
+      "content": "This is not legal, tax, payment, marketplace, pricing, launch agency, or revenue guidance.",
+      "section_id": "boundaries"
+    },
+    {
+      "content": "No revenue, conversion, buyer-count, demand, payout, or marketplace-validation claim is made.",
+      "section_id": "non-claims"
+    },
+    {
+      "content": "Live marketplace research, seller terms, public listings, accounts, payouts, and payment setup require explicit approval gates.",
+      "section_id": "gates-before-public-use"
+    }
+  ],
+  "review_prompt_count": 6,
+  "review_prompts": [
+    {
+      "prompt": "What traffic or attention source was used after an approved launch?",
+      "prompt_id": "traffic"
+    },
+    {
+      "prompt": "What replies, objections, questions, or support requests appeared?",
+      "prompt_id": "replies"
+    },
+    {
+      "prompt": "What non-sensitive conversion signal can be recorded without exposing private data?",
+      "prompt_id": "conversion"
+    },
+    {
+      "prompt": "What support burden did the pack create?",
+      "prompt_id": "support-load"
+    },
+    {
+      "prompt": "What exact buyer language should shape the next revision?",
+      "prompt_id": "buyer-language"
+    },
+    {
+      "prompt": "What should be changed, killed, or validated next?",
+      "prompt_id": "next-iteration"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_package_files.v1",
+  "screenshot_row_count": 6,
+  "screenshot_rows": [
+    {
+      "caption": "Show what the builder is launching in one glance.",
+      "shot_id": "homepage-or-product-core",
+      "state": "Core product or landing surface",
+      "status": "draft_prompt_only"
+    },
+    {
+      "caption": "Show how a new user reaches value without confusion.",
+      "shot_id": "setup-flow",
+      "state": "First-use or setup flow",
+      "status": "draft_prompt_only"
+    },
+    {
+      "caption": "Show the practical difference the product creates.",
+      "shot_id": "before-after",
+      "state": "Before/after or input/output example",
+      "status": "draft_prompt_only"
+    },
+    {
+      "caption": "Only draft locally; real pricing and public listing are gated.",
+      "shot_id": "pricing-or-boundary",
+      "state": "Pricing/scope placeholder",
+      "status": "blocked_until_public_gate"
+    },
+    {
+      "caption": "Use local sample proof, not buyer-count or revenue claims.",
+      "shot_id": "proof-or-demo",
+      "state": "Demo artifact or sample result",
+      "status": "draft_prompt_only"
+    },
+    {
+      "caption": "Pre-answer common setup and misuse questions.",
+      "shot_id": "support-or-faq",
+      "state": "Support/FAQ section",
+      "status": "draft_prompt_only"
+    }
+  ],
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_manifest_evidence_id": "digital-products-local-packaging-manifest-20260616",
+  "source_manifest_task_id": "task-digital-products-local-packaging-manifest-20260616",
+  "source_manifest_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-packaging-manifest-validation-latest.json",
+  "summary": "Drafted four remaining local package files for the AI builder launch checklist pack: README, screenshot shot list, QA pass, and post-launch review. The draft remains private and local, with marketplace validation, distribution, accounts, pricing, and payouts gated.",
+  "task_rows_inserted_by_files": 1,
+  "tasks_table_rows_after": 165,
+  "tasks_table_rows_before": 164
+}

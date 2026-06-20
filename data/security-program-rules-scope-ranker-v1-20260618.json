@@ -1,0 +1,245 @@
+{
+  "schema_version": "agent_company.security_program_rules_scope_ranker.v1",
+  "generated_utc": "2026-06-17T21:50:00Z",
+  "task_id": "task-security-program-rules-scope-ranker-v1-20260618",
+  "source_money_path_wave": "E:\\agent-company-lab\\reports\\money-path-expansion-radar-wave17-20260618.json",
+  "purpose": "Rank security bounty and vulnerability-disclosure routes by local rules/scope research value before any testing, account registration, public action, wallet/payment action, or report submission.",
+  "programs": [
+    {
+      "program_id": "immunefi_global_directory",
+      "program_name": "Immunefi bug bounty directory",
+      "source_url": "https://immunefi.com/bug-bounty/",
+      "platform_type": "web3_bug_bounty_directory",
+      "evidence_summary": "Directory page advertises current web3 bug bounties, daily-updated metrics with delayed confidentiality-safe reporting, bounty/audit competition filters, and current update timestamp.",
+      "local_scope_research_value": 10,
+      "reward_signal": "broad_program_directory",
+      "rules_complexity": "high",
+      "account_gate": true,
+      "wallet_or_payment_gate": true,
+      "submission_gate": true,
+      "allowed_local_work": [
+        "rules/scope reading",
+        "public repository inventory",
+        "local static reasoning against public code only",
+        "impact taxonomy comparison"
+      ],
+      "blocked_work": [
+        "live target testing",
+        "private report submission",
+        "wallet/payment detail posting",
+        "account registration"
+      ],
+      "recommended_next_proof": "immunefi_directory_scope_shortlist_v1",
+      "rank": 1,
+      "verdict": "promote_for_rules_shortlist"
+    },
+    {
+      "program_id": "immunefi_lido",
+      "program_name": "Lido on Immunefi",
+      "source_url": "https://immunefi.com/bug-bounty/lido/information/",
+      "platform_type": "web3_protocol_bug_bounty",
+      "evidence_summary": "Search-visible program terms show high smart-contract rewards, including critical ranges up to $2,000,000 and high ranges up to $250,000, but scope and impact requirements are strict.",
+      "local_scope_research_value": 9,
+      "reward_signal": "very_high_max_reward",
+      "rules_complexity": "very_high",
+      "account_gate": true,
+      "wallet_or_payment_gate": true,
+      "submission_gate": true,
+      "allowed_local_work": [
+        "scope/rules extraction",
+        "public code and docs inventory",
+        "known attack class mapping",
+        "local-only hypothesis quality checklist"
+      ],
+      "blocked_work": [
+        "mainnet/protocol interaction",
+        "exploit execution",
+        "private report submission",
+        "wallet/payment action"
+      ],
+      "recommended_next_proof": "lido_scope_rules_extraction_packet_v1",
+      "rank": 2,
+      "verdict": "watch_high_reward_rules_first"
+    },
+    {
+      "program_id": "immunefi_optimism",
+      "program_name": "Optimism on Immunefi",
+      "source_url": "https://immunefi.com/bug-bounty/optimism/information/",
+      "platform_type": "web3_protocol_bug_bounty",
+      "evidence_summary": "Search-visible terms show the program updated on 2026-06-16 with critical blockchain/DLT and smart-contract rewards up to $2,000,042, plus high and medium reward bands.",
+      "local_scope_research_value": 9,
+      "reward_signal": "very_high_recently_updated_reward",
+      "rules_complexity": "very_high",
+      "account_gate": true,
+      "wallet_or_payment_gate": true,
+      "submission_gate": true,
+      "allowed_local_work": [
+        "rules and in-scope asset extraction",
+        "impact taxonomy mapping",
+        "public repo inventory",
+        "local static-review candidate filtering"
+      ],
+      "blocked_work": [
+        "chain interaction",
+        "live testing",
+        "report submission",
+        "wallet/payment action"
+      ],
+      "recommended_next_proof": "optimism_scope_rules_extraction_packet_v1",
+      "rank": 3,
+      "verdict": "watch_high_reward_recent_update"
+    },
+    {
+      "program_id": "immunefi_immutable",
+      "program_name": "Immutable on Immunefi",
+      "source_url": "https://immunefi.com/bug-bounty/immutable/information/",
+      "platform_type": "web3_protocol_bug_bounty",
+      "evidence_summary": "Search-visible terms show a $1,000,000 maximum bounty, live since 2025-06-09, with 10% funds-at-risk critical reward calculation and $50,000 minimum critical incentive.",
+      "local_scope_research_value": 8,
+      "reward_signal": "high_max_reward",
+      "rules_complexity": "high",
+      "account_gate": true,
+      "wallet_or_payment_gate": true,
+      "submission_gate": true,
+      "allowed_local_work": [
+        "rules extraction",
+        "public asset inventory",
+        "static-only hypothesis triage"
+      ],
+      "blocked_work": [
+        "live target interaction",
+        "submission",
+        "wallet/payment action"
+      ],
+      "recommended_next_proof": "immutable_scope_rules_extraction_packet_v1",
+      "rank": 4,
+      "verdict": "watch_after_top_two"
+    },
+    {
+      "program_id": "disclose_platform_directory",
+      "program_name": "Disclose bug bounty platform directory",
+      "source_url": "https://github.com/disclose/bug-bounty-platforms",
+      "platform_type": "vdp_and_bounty_platform_directory",
+      "evidence_summary": "Community-powered collection of known bug bounty, vulnerability disclosure, and crowdsourced security platforms; useful for finding platform-specific account and safe-harbor routes.",
+      "local_scope_research_value": 8,
+      "reward_signal": "source_discovery_not_direct_reward",
+      "rules_complexity": "medium",
+      "account_gate": false,
+      "wallet_or_payment_gate": false,
+      "submission_gate": false,
+      "allowed_local_work": [
+        "platform catalog mining",
+        "safe harbor route discovery",
+        "country/platform specialization tagging"
+      ],
+      "blocked_work": [
+        "platform account creation",
+        "program contact",
+        "testing"
+      ],
+      "recommended_next_proof": "vdp_platform_catalog_router_v1",
+      "rank": 5,
+      "verdict": "promote_for_source_discovery"
+    },
+    {
+      "program_id": "bugbounty_companion_tooling",
+      "program_name": "bugbounty-companion tooling",
+      "source_url": "https://github.com/tintinweb/bugbounty-companion",
+      "platform_type": "research_tooling_reference",
+      "evidence_summary": "Tooling repo advertises checkout of high-reward bug bounty codebases from Immunefi and Code4rena, useful as a pattern for local source acquisition and filtering.",
+      "local_scope_research_value": 7,
+      "reward_signal": "tooling_for_high_reward_targets",
+      "rules_complexity": "medium",
+      "account_gate": false,
+      "wallet_or_payment_gate": false,
+      "submission_gate": false,
+      "allowed_local_work": [
+        "study source acquisition pattern",
+        "design local no-clone-needed manifest",
+        "extract candidate filtering fields"
+      ],
+      "blocked_work": [
+        "bulk cloning without scope decision",
+        "running scanners against live targets",
+        "submitting findings"
+      ],
+      "recommended_next_proof": "bug_bounty_source_manifest_fields_v1",
+      "rank": 6,
+      "verdict": "study_tooling_pattern_only"
+    },
+    {
+      "program_id": "oss_ai_slop_quality_risk",
+      "program_name": "Open-source bounty AI-slop risk",
+      "source_url": "https://www.itpro.com/software/open-source/curl-open-source-bug-bounty-program-scrapped",
+      "platform_type": "quality_risk_signal",
+      "evidence_summary": "Current reporting says curl ended its paid bounty program after a surge of low-quality AI-generated reports, and broader industry actors are tightening against AI-slop reports.",
+      "local_scope_research_value": 10,
+      "reward_signal": "negative_quality_gate",
+      "rules_complexity": "high",
+      "account_gate": false,
+      "wallet_or_payment_gate": false,
+      "submission_gate": true,
+      "allowed_local_work": [
+        "quality bar definition",
+        "proof completeness checklist",
+        "false-positive kill criteria",
+        "maintainer-burden risk scoring"
+      ],
+      "blocked_work": [
+        "AI-generated speculative reports",
+        "submissions without repro",
+        "submissions without rules match",
+        "mass-reporting"
+      ],
+      "recommended_next_proof": "security_report_quality_gate_v1",
+      "rank": 7,
+      "verdict": "mandatory_quality_gate_for_all_security_paths"
+    }
+  ],
+  "quality_gate": {
+    "minimum_before_submission": [
+      "program scope and safe-harbor terms captured",
+      "in-scope asset and impact row identified",
+      "local reproduction or static proof artifact exists",
+      "false-positive and duplicate checks complete",
+      "report explains exact impact and affected version/asset",
+      "CRO/user approval explicitly grants submission route"
+    ],
+    "automatic_kill_conditions": [
+      "impact is out of scope",
+      "proof depends on live testing without approval",
+      "claim is AI-generated without local verification",
+      "finding is only best-practice hardening with no eligible impact",
+      "program prohibits the test or report route",
+      "payout route requires wallet/payment details not approved by user"
+    ]
+  },
+  "summary": {
+    "program_count": 7,
+    "promote_count": 2,
+    "watch_count": 3,
+    "tooling_or_quality_gate_count": 2,
+    "submission_ready_count": 0,
+    "security_tests_run": false,
+    "highest_priority_next_proofs": [
+      "immunefi_directory_scope_shortlist_v1",
+      "security_report_quality_gate_v1",
+      "lido_scope_rules_extraction_packet_v1"
+    ]
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

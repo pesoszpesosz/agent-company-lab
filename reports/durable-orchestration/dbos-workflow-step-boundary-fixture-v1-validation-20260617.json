@@ -1,0 +1,120 @@
+{
+  "cases_checked": 6,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:04:45Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-20260617.md",
+  "next_local_test": "pydantic_durable_adapter_manifest_fixture_without_model_api_calls",
+  "passed_count": 6,
+  "rows": [
+    {
+      "actual_failures": [],
+      "case_id": "case-valid-browser-readonly-needs-review-parked",
+      "expected_failures": [],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "matches_expected": true,
+      "service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [],
+      "case_id": "case-valid-model-api-request-needs-review-parked",
+      "expected_failures": [],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "matches_expected": true,
+      "service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [],
+      "case_id": "case-terminal-complete-no-workflow-replay",
+      "expected_failures": [],
+      "expected_state": "terminal.completed_from_ledger_snapshot",
+      "expected_terminal": true,
+      "matches_expected": true,
+      "service_request_id": "req-test-lifecycle-approve-20260614",
+      "status_snapshot": "complete"
+    },
+    {
+      "actual_failures": [],
+      "case_id": "case-terminal-rejected-no-revive",
+      "expected_failures": [],
+      "expected_state": "terminal.rejected_from_ledger_snapshot",
+      "expected_terminal": true,
+      "matches_expected": true,
+      "service_request_id": "req-test-lifecycle-reject-20260614",
+      "status_snapshot": "rejected"
+    },
+    {
+      "actual_failures": [
+        "forbidden_step_kind:call_external_api",
+        "step_external_side_effect:call_algora_live_api"
+      ],
+      "case_id": "case-invalid-step-kind-external-api",
+      "expected_failures": [
+        "forbidden_step_kind:call_external_api",
+        "step_external_side_effect:call_algora_live_api"
+      ],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "matches_expected": true,
+      "service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [
+        "deduplication_id_missing_service_request",
+        "forbidden_runtime_edge:database_provision_requested",
+        "forbidden_runtime_edge:launch_requested",
+        "forbidden_runtime_edge:queue_registration_requested",
+        "forbidden_runtime_edge:workflow_enqueue_requested",
+        "forbidden_runtime_edge:workflow_start_requested",
+        "forbidden_step_kind:mutate_service_request",
+        "planned_step_executes_now:mutate_request_status",
+        "step_mutates_service_request:mutate_request_status"
+      ],
+      "case_id": "case-invalid-db-runtime-start-and-enqueue",
+      "expected_failures": [
+        "deduplication_id_missing_service_request",
+        "forbidden_runtime_edge:database_provision_requested",
+        "forbidden_runtime_edge:launch_requested",
+        "forbidden_runtime_edge:queue_registration_requested",
+        "forbidden_runtime_edge:workflow_enqueue_requested",
+        "forbidden_runtime_edge:workflow_start_requested",
+        "forbidden_step_kind:mutate_service_request",
+        "planned_step_executes_now:mutate_request_status",
+        "step_mutates_service_request:mutate_request_status"
+      ],
+      "expected_state": "parked.awaiting_human_review",
+      "expected_terminal": false,
+      "matches_expected": true,
+      "service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "status_snapshot": "needs_review"
+    }
+  ],
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "database_connections": 0,
+    "database_provisioning": false,
+    "dbos_launch_called": false,
+    "dbos_package_imported": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "queues_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "steps_executed": 0,
+    "worker_starts": 0,
+    "workflows_enqueued": 0,
+    "workflows_started": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\dbos-workflow-step-boundary-fixture-v1.schema.json",
+  "schema_version": "agent_company.dbos_workflow_step_boundary_fixture_validation.v1",
+  "top_level_failures": []
+}

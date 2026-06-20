@@ -1,0 +1,138 @@
+{
+  "accepted_write_decision_type_count": 4,
+  "accepted_write_decision_types": [
+    "hold",
+    "approve_one_parser_file_write_only",
+    "request_runner_review_rework",
+    "reject_parser_write"
+  ],
+  "evidence_link_count": 4,
+  "evidence_links": [
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-latest.md",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-latest.md",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-preflight-latest.md"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+  "expected_source_review_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-latest.json",
+  "expected_target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py",
+  "generated_utc": "2026-06-19T21:06:39Z",
+  "intake_evidence_id": "agent-company-migration-decision-parser-write-decision-intake-contract-20260616",
+  "intake_lane_id": "platform_engineering",
+  "intake_task_id": "task-agent-company-migration-decision-parser-write-decision-intake-contract-20260616",
+  "lane_evidence_rows_after": 154,
+  "lane_evidence_rows_before": 153,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_write_decision_intake_contract_ready_for_report_only_fixture_suite",
+  "negative_fixture_count": 8,
+  "negative_fixtures": [
+    "missing_decision_id",
+    "unknown_decision_type",
+    "target_path_changed",
+    "source_artifact_path_changed",
+    "source_review_path_changed",
+    "expired_decision",
+    "unsigned_decision",
+    "bundled_import_or_live_parse_permission"
+  ],
+  "next_action": "Build a report-only parser-write decision fixture suite next; do not write or import the parser.",
+  "output_state_count": 4,
+  "output_states": [
+    "accepted_hold",
+    "accepted_one_parser_file_write_only",
+    "accepted_runner_review_rework",
+    "accepted_parser_write_rejection"
+  ],
+  "parser_guard_count": 9,
+  "parser_guards": [
+    "guard_json_object_only",
+    "guard_required_fields_present",
+    "guard_known_parser_write_decision_type",
+    "guard_target_path_matches_preflight",
+    "guard_source_artifact_matches_preflight",
+    "guard_source_review_matches_runner_review",
+    "guard_not_expired",
+    "guard_signed_timestamp_present",
+    "guard_no_import_or_live_parse_permission"
+  ],
+  "parser_write_decision_intake_contract_count": 1,
+  "positive_fixture_count": 4,
+  "positive_fixtures": [
+    {
+      "decision_type": "hold",
+      "expected_state": "accepted_hold",
+      "fixture": "positive_hold",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "source_review_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    },
+    {
+      "decision_type": "approve_one_parser_file_write_only",
+      "expected_state": "accepted_one_parser_file_write_only",
+      "fixture": "positive_approve_one_parser_file_write_only",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "source_review_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    },
+    {
+      "decision_type": "request_runner_review_rework",
+      "expected_state": "accepted_runner_review_rework",
+      "fixture": "positive_request_runner_review_rework",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "source_review_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    },
+    {
+      "decision_type": "reject_parser_write",
+      "expected_state": "accepted_parser_write_rejection",
+      "fixture": "positive_reject_parser_write",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "source_review_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-decision-runner-review-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    }
+  ],
+  "recommended_default": "build_report_only_parser_write_decision_fixture_suite_next_without_writing_parser",
+  "required_field_count": 9,
+  "required_fields": [
+    "decision_id",
+    "operator_name",
+    "decision_type",
+    "target_path",
+    "source_artifact_path",
+    "source_review_path",
+    "expires_at",
+    "risk_acknowledgement",
+    "signed_utc"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_write_decision_intake_contract.v1",
+  "source_review_evidence_id": "agent-company-migration-decision-parser-install-decision-runner-review-20260616",
+  "source_review_task_id": "task-agent-company-migration-decision-parser-install-decision-runner-review-20260616",
+  "summary": "Defined the report-only parser-write decision intake contract for a future signed one-file parser write approval, with hold as the default and no parser state changes.",
+  "task_rows_inserted_by_parser_write_decision_intake_contract": 1,
+  "tasks_table_rows_after": 246,
+  "tasks_table_rows_before": 245
+}

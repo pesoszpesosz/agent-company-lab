@@ -1,0 +1,101 @@
+{
+  "approval_state": {
+    "assignment_approved": false,
+    "browser_open_approved": false,
+    "cla_or_terms_approved": false,
+    "execution_approved": false,
+    "github_public_action_approved": false,
+    "payment_or_payout_approved": false
+  },
+  "boundary": {
+    "accounts_or_logins": 0,
+    "browser_sessions_started": 0,
+    "cla_or_terms_accepted": false,
+    "external_side_effects": 0,
+    "github_comments_claims_prs_or_forks": 0,
+    "live_algora_fetch": false,
+    "live_github_fetch": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payout_or_payment_actions": 0,
+    "security_testing": 0,
+    "service_requests_approved": 0,
+    "service_requests_assigned": 0,
+    "service_requests_completed": 0,
+    "service_requests_created": 1,
+    "service_requests_started": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "decision": "create_needs_review_service_request_only_no_browser_or_public_action",
+  "generated_at": "2026-06-18T08:11:48Z",
+  "intake": {
+    "allowed_read_scope": "Public pages only. Check whether the Opik bounty program is still paused, whether any public Algora/Comet bounty board shows open Opik issues, and whether linked GitHub issues/PRs/comments show duplicate, assigned, claimed, solved, or unclear status. Capture URLs, titles, timestamps, short paraphrased status notes, explicit amount/claim-state evidence, and a park/proceed-local-triage recommendation.",
+    "evidence_needed": "Algora/Comet Opik read-only refresh report with program-open status, bounty amount/state, duplicate/claim/PR risk, CLA/payment gates, and decision: still parked, local triage only, or request later public-action/legal-payment approval.",
+    "forbidden_actions": "No login, signup, CLA acceptance, Algora claim, GitHub comment, fork, branch, PR, issue edit, reaction, maintainer contact, assignment request, bounty reservation, payout/payment/KYC/tax setup, target testing, repository mutation, model/MCP calls, worker/runtime starts, or browser actions beyond approved public reading.",
+    "lane_id": "paid_code_bounties",
+    "session_sensitivity": "public_pages_only_no_signed_in_session",
+    "target_url": "https://www.comet.com/docs/opik/contributing/developer-programs/bounties ; https://algora.io/ ; https://github.com/comet-ml/opik"
+  },
+  "lane_id": "paid_code_bounties",
+  "next_action": "Leave this request in needs_review. Do not assign, start, approve, or execute it until a later exact signed decision permits a public read-only Opik/Algora refresh.",
+  "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+  "request": {
+    "approval_scope": null,
+    "lane_id": "paid_code_bounties",
+    "request_id": "req-algora-opik-readonly-refresh-20260618",
+    "request_type": "browser_research",
+    "requested_action": "Read public Comet/Opik, Algora, and GitHub status for Opik bounty reopening; no claim, PR, account, CLA, payout, or public action.",
+    "requester_agent_id": "lane-manager-paid_code_bounties-019ec612",
+    "risk_gate": "catalog_required_approval_no_external_action",
+    "service_id": "browser_read_only_session",
+    "status": "needs_review"
+  },
+  "required_before_execution": [
+    "Human/operator review of this exact request.",
+    "Chief risk officer approval for public read-only scope.",
+    "A signed decision packet that permits assignment preflight only.",
+    "Post-action local receipt and chain-integrity refresh if later executed."
+  ],
+  "schema_version": "paid_code.algora_opik_readonly_service_request.v1",
+  "source_decision": {
+    "go_no_go": "no_go_external_claim",
+    "local_next_step": "Keep the Algora parser fixture and duplicate worksheet as the readiness base; if the program reopens, run one approved read-only refresh before any local triage sprint.",
+    "reason": "Comet/Opik bounty program is currently paused in the public docs; local fixtures remain useful for parser/checklist readiness, but no claim/comment/PR/payout path is clean."
+  },
+  "source_packet": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\algora-comet-opik-claim-readiness-local-proof.json",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_readiness_gates": [
+    {
+      "gate": "program_open_check",
+      "required_evidence": "Fresh read-only source confirms Opik bounty program is no longer paused and the target bounty is open.",
+      "status": "blocked_by_pause"
+    },
+    {
+      "gate": "cla_and_contribution_review",
+      "required_evidence": "CLA/contribution guide reviewed locally; no agreement accepted without explicit approval.",
+      "status": "approval_required"
+    },
+    {
+      "gate": "duplicate_and_claim_check",
+      "required_evidence": "Read-only issue/PR/comment/claim scan shows low duplicate risk and clear reservation rules.",
+      "status": "approval_required_for_live_refresh"
+    },
+    {
+      "gate": "local_reproduction",
+      "required_evidence": "Repro steps and tests run on local fixture or cloned public repo only after repo access is approved/safe.",
+      "status": "local_only_allowed"
+    },
+    {
+      "gate": "public_claim_or_pr",
+      "required_evidence": "Exact public-action approval for a specific issue, claim/comment text, branch/PR body, and receipt.",
+      "status": "blocked"
+    },
+    {
+      "gate": "payout_terms",
+      "required_evidence": "Legal/KYC/tax/payment review of bounty terms and payout route.",
+      "status": "blocked"
+    }
+  ],
+  "source_scout_task_id": "task-lane-scout-algora_comet_opik-20260618",
+  "status": "algora_opik_readonly_refresh_request_ready_needs_review",
+  "task_id": "task-algora-opik-readonly-refresh-service-request-20260618"
+}

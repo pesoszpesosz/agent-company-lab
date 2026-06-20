@@ -1,0 +1,62 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-assignment-preflight-v1-20260617",
+  "task_id": "task-browser-read-only-assignment-preflight-v1-20260617",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "work_type": "local_tdd_validator",
+  "generated_utc": "2026-06-17T20:15:03Z",
+  "summary": "Implemented browser read-only assignment preflight that inventories current browser_read_only_session requests and blocks assignment/start without signed operator approval.",
+  "artifacts": [
+    {
+      "kind": "architecture_schema",
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-assignment-preflight-v1.schema.json"
+    },
+    {
+      "kind": "validator_runner",
+      "path": "E:\\agent-company-lab\\tools\\validate_browser_read_only_assignment_preflight.py"
+    },
+    {
+      "kind": "unittest",
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_assignment_preflight_validator.py"
+    },
+    {
+      "kind": "validator_report_json",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-20260617.json"
+    },
+    {
+      "kind": "validation_report",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json"
+    },
+    {
+      "kind": "validation_markdown",
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-20260617.md"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python E:\\agent-company-lab\\tests\\test_browser_read_only_assignment_preflight_validator.py",
+      "status": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+      "status": "passed",
+      "tests_run": 9
+    }
+  ],
+  "validation_summary": {
+    "all_checks_passed": true,
+    "failure_count": 0,
+    "candidate_request_count": 7,
+    "assignment_allowed_count": 0,
+    "blocked_no_signed_approval_count": 7,
+    "operator_signed_approval_present": false,
+    "preflight_verdict": "candidates_valid_assignment_blocked_no_signed_approval",
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build a signed operator approval packet/parser for browser_read_only_session before assignment or start can occur."
+}

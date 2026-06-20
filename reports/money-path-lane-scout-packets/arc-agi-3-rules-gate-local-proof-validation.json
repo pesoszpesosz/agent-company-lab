@@ -1,0 +1,59 @@
+{
+  "schema_version": "ai_ml_competitions.arc_agi_3_rules_gate_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:44:08Z",
+  "task_id": "task-lane-scout-arc_agi_3-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-agi-3-rules-gate-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-agi-3-rules-gate-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "source_count_at_least_six",
+      "passed": true
+    },
+    {
+      "check": "gate_matrix_at_least_six",
+      "passed": true
+    },
+    {
+      "check": "one_allowed_now_gate",
+      "passed": true
+    },
+    {
+      "check": "all_external_routes_need_approval",
+      "passed": true
+    },
+    {
+      "check": "next_local_proof_has_outputs_and_success_criteria",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "acceptance_checks_present",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "public_sources_read": 7,
+    "browser_sessions_started": 0,
+    "arc_or_kaggle_account_or_login": false,
+    "api_key_created_or_used": false,
+    "env_or_secret_file_written": false,
+    "dependencies_installed": 0,
+    "official_toolkit_or_games_run": false,
+    "official_or_gated_data_downloaded": false,
+    "scorecards_opened": 0,
+    "submissions_made": 0,
+    "notebooks_or_papers_published": 0,
+    "paid_compute_or_model_api": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "external_side_effects": 0
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "agent_company.money_source_discovery.ai_training_sample_pack.v1",
+  "generated_utc": "2026-06-16T20:53:00Z",
+  "task_id": "task-ai-training-sample-pack-20260616",
+  "lane_id": "money_source_discovery",
+  "samples": [
+    {
+      "sample_id": "math_reasoning_train_speed",
+      "readiness_score": 4,
+      "proof": "step-by-step algebra solution plus evaluator rubric"
+    },
+    {
+      "sample_id": "code_qa_average_empty_input",
+      "readiness_score": 5,
+      "proof": "bug explanation, safe fix, and tests"
+    },
+    {
+      "sample_id": "rlhf_safety_medical_uncertainty",
+      "readiness_score": 4,
+      "proof": "synthetic prompt policy-quality rubric"
+    },
+    {
+      "sample_id": "image_evaluation_dashboard_quality",
+      "readiness_score": 3,
+      "proof": "clear/partly-obstructed/unusable classification rubric"
+    },
+    {
+      "sample_id": "multilingual_qa_stub",
+      "readiness_score": 1,
+      "proof": "parked rubric shell pending verified language pair"
+    }
+  ],
+  "next_action": "Create ai-training-profile-packet-draft-20260616.md with do-not-submit status.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

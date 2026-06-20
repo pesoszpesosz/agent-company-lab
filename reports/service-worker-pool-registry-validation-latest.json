@@ -1,0 +1,27 @@
+{
+  "all_pools_have_capabilities": true,
+  "all_pools_have_role_ids": true,
+  "all_registry_rows_no_assignment": true,
+  "api_calls": false,
+  "approval_granted_by_registry": false,
+  "current_assignment_request_count": 14,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T14:17:59Z",
+  "missing_pool_count": 7,
+  "pool_count": 7,
+  "pool_registry_path": "E:\\agent-company-lab\\reports\\service-worker-pool-registry-latest.json",
+  "role_counts": {
+    "browser_action_worker": 2,
+    "chief_risk_officer": 1,
+    "evidence_builder": 1,
+    "observability_worker": 2,
+    "reputation_review_worker": 1
+  },
+  "schema_version": "service_worker_pool_registry_validation.v1",
+  "service_requests_assigned_by_registry": 0,
+  "service_requests_updated_by_registry": 0,
+  "status_counts": {
+    "missing_service_worker_pool": 7
+  },
+  "worker_starts": 0
+}

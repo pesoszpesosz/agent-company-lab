@@ -1,0 +1,20 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-path-depth-stack-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-path-depth-stack-v1-20260619",
+  "traceId": "trace-atlas_command_cockpit_path_depth_stack_added-20260619",
+  "title": "Command Cockpit Path Depth Stack",
+  "createdAt": "2026-06-19T18:35:20Z",
+  "summary": "Added compact expandable-feeling path strata inside the Command Cockpit Quest level map without adding another scroll row.",
+  "changes": [
+    "Derives latest event, level depth, gate pressure, and next move layers from reusable lane data.",
+    "Renders the layers inside the existing Quest field so clicked paths feel deeper without increasing page height.",
+    "Adds desktop and mobile styling so the strata stay compact, animated, and readable inside the first cockpit view."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py"
+  ]
+}

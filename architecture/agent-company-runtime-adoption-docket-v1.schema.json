@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.runtime_adoption_docket.v1",
+  "title": "Agent Company Runtime Adoption Docket v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_radar_dataset_path",
+    "source_candidate_count",
+    "docket_item_count",
+    "adoption_allowed",
+    "dependency_installs",
+    "runtime_starts",
+    "worker_starts",
+    "browser_sessions_started",
+    "service_requests_assigned",
+    "model_api_calls",
+    "mcp_tool_calls",
+    "external_side_effects"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_adoption_docket.v1"
+    },
+    "source_radar_dataset_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "source_candidate_count": {
+      "type": "integer",
+      "minimum": 20
+    },
+    "docket_item_count": {
+      "type": "integer",
+      "minimum": 20
+    },
+    "adoption_allowed": {
+      "const": false
+    },
+    "dependency_installs": {
+      "const": 0
+    },
+    "runtime_starts": {
+      "const": 0
+    },
+    "worker_starts": {
+      "const": 0
+    },
+    "browser_sessions_started": {
+      "const": 0
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "mcp_tool_calls": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  }
+}

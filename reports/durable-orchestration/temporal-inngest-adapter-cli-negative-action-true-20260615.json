@@ -1,0 +1,39 @@
+{
+  "schema_version": "agent_company.durable_adapter_reducer_fixture_set.v1",
+  "fixture_count": 1,
+  "fixtures": [
+    {
+      "fixture_id": "fixture-negative-action-true-01",
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "input": {
+        "status_snapshot": "needs_review",
+        "event_name": "agent_company/service_request.needs_review",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "worker_type": "model_api_execution",
+        "idempotency_key": "negative-test:action-true:20260615",
+        "source_event_id": "negative-test-action-true-20260615"
+      },
+      "expected_output": {
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "terminal": false,
+        "ledger_mutation_allowed": false,
+        "approval_granted": false,
+        "assign_worker": false,
+        "start_worker": false,
+        "emit_followup_event": false,
+        "schedule_activity": false,
+        "call_api": true,
+        "external_side_effects_allowed": false,
+        "resume_requirements": []
+      },
+      "expected_exit": {
+        "exit_code": 1,
+        "stderr_allowed": true,
+        "stdout_schema": "agent_company.durable_adapter_cli_dry_run_result_set.v1"
+      }
+    }
+  ],
+  "api_calls": false,
+  "external_side_effects": false
+}

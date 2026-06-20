@@ -1,0 +1,56 @@
+{
+  "schema_version": "lead_generation.upwork_ai_offer_matrix_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:21:52Z",
+  "task_id": "task-lane-scout-upwork_ai_freelance_work-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-offer-matrix-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-offer-matrix-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "five_archetypes_present",
+      "passed": true
+    },
+    {
+      "check": "all_archetypes_source_backed",
+      "passed": true
+    },
+    {
+      "check": "all_archetypes_have_local_asset_fit",
+      "passed": true
+    },
+    {
+      "check": "all_archetypes_have_external_gates",
+      "passed": true
+    },
+    {
+      "check": "recommended_first_offer_present",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "acceptance_checks_present",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "upwork_account_or_login": false,
+    "profile_created_or_edited": false,
+    "proposals_sent": 0,
+    "client_messages_sent": 0,
+    "contract_or_payment_action": false,
+    "real_client_data_used": false,
+    "credentials_requested_or_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  }
+}

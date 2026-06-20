@@ -1,0 +1,26 @@
+{
+  "all_input_preconditions_passed": true,
+  "all_no_execution": true,
+  "api_calls": false,
+  "approval_granted_by_simulation": false,
+  "branch_count": 22,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T11:06:36Z",
+  "pools_registered_by_simulation": 0,
+  "rejection_granted_by_simulation": false,
+  "schema_version": "service_worker_post_decision_simulation_validation.v1",
+  "service_requests_assigned_by_simulation": 0,
+  "service_requests_updated_by_simulation": 0,
+  "simulation_count": 11,
+  "simulation_path": "E:\\agent-company-lab\\reports\\service-worker-post-decision-simulation-latest.json",
+  "source_state": {
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_generated_utc": "2026-06-15T10:56:57Z",
+    "chain_integrity_validation_loaded": true,
+    "human_decision_packets_generated_utc": "2026-06-15T10:51:18Z",
+    "human_decision_packets_loaded": true
+  },
+  "worker_starts": 0
+}

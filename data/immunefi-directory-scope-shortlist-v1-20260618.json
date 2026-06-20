@@ -1,0 +1,366 @@
+{
+  "schema_version": "agent_company.immunefi_directory_scope_shortlist.v1",
+  "generated_utc": "2026-06-17T21:31:00Z",
+  "source_directory": {
+    "name": "Immunefi bug bounty directory",
+    "url": "https://immunefi.com/bug-bounty/",
+    "observed_update": "Metrics updated daily; directory page showed last updated on Jun 17th 2026 at 16:00 UTC.",
+    "use_in_lab": "read_only_discovery_surface"
+  },
+  "lane_id": "security_bounty_private_reports",
+  "task_id": "task-immunefi-directory-scope-shortlist-v1-20260618",
+  "status": "rules_shortlist_only_no_testing",
+  "shortlist_count": 9,
+  "submission_ready_count": 0,
+  "programs": [
+    {
+      "rank": 1,
+      "program_id": "optimism",
+      "program_name": "Optimism",
+      "source_url": "https://immunefi.com/bug-bounty/optimism/information/",
+      "maximum_bounty_usd": 2000042,
+      "last_updated": "2026-06-16",
+      "reward_summary": "Up to $2,000,042 for Blockchain/DLT and Smart Contract critical impacts; website/app critical max $50,000.",
+      "scope_surface": [
+        "Blockchain/DLT",
+        "Smart Contract",
+        "Websites and Applications",
+        "OP Stack / L2 infrastructure"
+      ],
+      "rule_signals": [
+        "Triaged by Immunefi",
+        "PoC required",
+        "KYC required",
+        "Primacy of Impact for major chain and contract classes"
+      ],
+      "local_next_work": "optimism_scope_rules_extraction_packet_v1: extract in-scope assets, repos, PoC standards, known exclusions, local-fork-only rules, and duplicate-risk checks.",
+      "blocked_actions": [
+        "no mainnet or public testnet testing",
+        "no bounty submission",
+        "no account login or KYC",
+        "no automated traffic",
+        "no public disclosure"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "legal_kyc_tax_payment_gate",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "shortlist_score": 91,
+      "verdict": "promote_rules_extraction_first"
+    },
+    {
+      "rank": 2,
+      "program_id": "ens",
+      "program_name": "ENS",
+      "source_url": "https://immunefi.com/bug-bounty/ens/information/",
+      "maximum_bounty_usd": 250000,
+      "last_updated": "2026-06-17",
+      "reward_summary": "Smart Contract critical max $250,000; high max $100,000; vault program visible; KYC not required on page.",
+      "scope_surface": [
+        "Smart Contract",
+        "Infrastructure",
+        "Services",
+        "NextJS",
+        "ENS web/app and contract routes"
+      ],
+      "rule_signals": [
+        "Triaged by Immunefi",
+        "PoC required",
+        "Vault program",
+        "KYC not required",
+        "Known issues published",
+        "Testing limited to local forks"
+      ],
+      "local_next_work": "ens_scope_known_issues_matrix_v1: map known issues, local-fork-only requirements, in-scope repos, and web/app exclusions before any analysis.",
+      "blocked_actions": [
+        "no mainnet or public testnet testing",
+        "no third-party/browser-extension testing",
+        "no report submission",
+        "no public disclosure"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "shortlist_score": 88,
+      "verdict": "promote_known_issue_safe_rules_packet"
+    },
+    {
+      "rank": 3,
+      "program_id": "lido",
+      "program_name": "Lido",
+      "source_url": "https://immunefi.com/bug-bounty/lido/information/",
+      "maximum_bounty_usd": 2000000,
+      "last_updated": "2026-03-26",
+      "reward_summary": "Smart Contract critical max $2,000,000 and web/app critical max $100,000; high smart-contract max $250,000.",
+      "scope_surface": [
+        "Smart Contract",
+        "Websites and Applications",
+        "Liquid staking",
+        "Solidity",
+        "Vyper"
+      ],
+      "rule_signals": [
+        "Triaged by Immunefi",
+        "PoC required",
+        "Primacy of Rules",
+        "Large reward but broad and mature target"
+      ],
+      "local_next_work": "lido_scope_rules_extraction_packet_v1: extract assets, audit references, known reports, local-only PoC boundaries, and maturity/duplicate risk.",
+      "blocked_actions": [
+        "no protocol interaction",
+        "no production testing",
+        "no report submission",
+        "no account or payout workflow"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "shortlist_score": 84,
+      "verdict": "promote_rules_extraction_but_high_duplicate_risk"
+    },
+    {
+      "rank": 4,
+      "program_id": "immutable",
+      "program_name": "Immutable",
+      "source_url": "https://immunefi.com/bug-bounty/immutable/information/",
+      "maximum_bounty_usd": 1000000,
+      "last_updated": "2026-01-29",
+      "reward_summary": "Smart Contract critical max $1,000,000 with $50,000 minimum; high max $20,000.",
+      "scope_surface": [
+        "Smart Contract",
+        "Web3 gaming",
+        "NFT ownership infrastructure",
+        "contracts/audits repository route"
+      ],
+      "rule_signals": [
+        "Triaged by Immunefi",
+        "PoC required",
+        "KYC required",
+        "Primacy of Impact for critical/high smart-contract impacts",
+        "Testing limited to local forks"
+      ],
+      "local_next_work": "immutable_contract_audit_gap_matrix_v1: map audits, assets in scope, local-fork-only proof path, and previously covered findings.",
+      "blocked_actions": [
+        "no mainnet or public testnet testing",
+        "no pricing oracle or third-party testing",
+        "no automated traffic",
+        "no report submission"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "legal_kyc_tax_payment_gate",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "shortlist_score": 81,
+      "verdict": "promote_audit_gap_matrix_after_optimism_ens_lido"
+    },
+    {
+      "rank": 5,
+      "program_id": "lista_dao",
+      "program_name": "Lista DAO",
+      "source_url": "https://immunefi.com/bug-bounty/listadao/scope/",
+      "maximum_bounty_usd": 1000000,
+      "last_updated": "2026-05-29",
+      "reward_summary": "Maximum bounty $1,000,000; DeFi lending/stablecoin/yield aggregator on BSC; PoC required.",
+      "scope_surface": [
+        "Smart Contract",
+        "DeFi lending",
+        "Stablecoin",
+        "Yield aggregator",
+        "BSC"
+      ],
+      "rule_signals": [
+        "PoC required",
+        "Large DeFi payout",
+        "Scope page needs deeper extraction before ranking as target"
+      ],
+      "local_next_work": "lista_dao_scope_page_extraction_v1: read information/scope/resources pages and normalize KYC, assets, exclusions, and local PoC rules.",
+      "blocked_actions": [
+        "no protocol interaction",
+        "no report submission",
+        "no account or payout workflow"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "shortlist_score": 76,
+      "verdict": "watch_and_extract_scope_before_any_target_work"
+    },
+    {
+      "rank": 6,
+      "program_id": "sei",
+      "program_name": "Sei",
+      "source_url": "https://immunefi.com/bug-bounty/sei/scope/",
+      "maximum_bounty_usd": 500000,
+      "last_updated": "2026-06-16",
+      "reward_summary": "Maximum bounty $500,000; L1/blockchain/bridge/staking program; Rust and Go surfaces; KYC required; arbitration enabled.",
+      "scope_surface": [
+        "Blockchain/DLT",
+        "Bridge",
+        "L1",
+        "Staking",
+        "Go",
+        "Rust"
+      ],
+      "rule_signals": [
+        "Triaged by Immunefi",
+        "PoC required",
+        "KYC required",
+        "Arbitration enabled",
+        "Recent update"
+      ],
+      "local_next_work": "sei_chain_scope_rules_packet_v1: normalize chain/client repos, bridge rules, local test harness requirements, and excluded availability classes.",
+      "blocked_actions": [
+        "no node or network testing",
+        "no mainnet/testnet testing",
+        "no report submission",
+        "no KYC/account flow"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "shortlist_score": 74,
+      "verdict": "promote_after_contract_first_candidates"
+    },
+    {
+      "rank": 7,
+      "program_id": "drips",
+      "program_name": "Drips",
+      "source_url": "https://immunefi.com/bug-bounty/drips/information/",
+      "maximum_bounty_usd": 100000,
+      "last_updated": "2024-11-18",
+      "reward_summary": "Smart Contract critical max $100,000 with $50,000 minimum; high flat $40,000; KYC not required.",
+      "scope_surface": [
+        "Smart Contract",
+        "Web/App",
+        "FOSS funding protocol",
+        "Solidity"
+      ],
+      "rule_signals": [
+        "PoC required",
+        "KYC not required",
+        "Primacy of Rules",
+        "Known issue and audit references published",
+        "Finding must exist both deployed and in GitHub file"
+      ],
+      "local_next_work": "drips_audit_known_issue_diff_packet_v1: compare audits, acknowledged issues, in-scope GitHub files, and local-fork-only proof requirements.",
+      "blocked_actions": [
+        "no mainnet or public testnet testing",
+        "no oracle or third-party testing",
+        "no report submission",
+        "no public disclosure"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "wallet_public_address_or_payment_reply"
+      ],
+      "shortlist_score": 71,
+      "verdict": "good_low_kyc_rules_training_target"
+    },
+    {
+      "rank": 8,
+      "program_id": "immunefi",
+      "program_name": "Immunefi",
+      "source_url": "https://immunefi.com/bug-bounty/immunefi/information/",
+      "maximum_bounty_usd": 50000,
+      "last_updated": "2025-11-17",
+      "reward_summary": "Smart Contract critical max $50,000; website/app critical max $10,000; KYC required; vault program.",
+      "scope_surface": [
+        "Smart Contract",
+        "Web/App",
+        "Vault system",
+        "Bug bounty platform"
+      ],
+      "rule_signals": [
+        "Triaged by Immunefi",
+        "PoC required",
+        "Vault program",
+        "KYC required",
+        "Arbitration enabled",
+        "Transparent responsible publication category"
+      ],
+      "local_next_work": "immunefi_platform_scope_training_packet_v1: use as rules-quality training surface, not primary payout target, because payout is lower and KYC is required.",
+      "blocked_actions": [
+        "no account probing",
+        "no dashboard testing",
+        "no report submission",
+        "no KYC/account flow"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate",
+        "legal_kyc_tax_payment_gate"
+      ],
+      "shortlist_score": 64,
+      "verdict": "use_as_rules_training_not_primary_cashflow"
+    },
+    {
+      "rank": 9,
+      "program_id": "obyte",
+      "program_name": "Obyte",
+      "source_url": "https://immunefi.com/bug-bounty/obyte/information/",
+      "maximum_bounty_usd": 50000,
+      "last_updated": "2026-06-15",
+      "reward_summary": "Blockchain/DLT critical max $50,000; smart contract and web/app critical flat $2,500; KYC not required.",
+      "scope_surface": [
+        "Blockchain/DLT",
+        "Wallet",
+        "L1",
+        "JavaScript",
+        "Autonomous agents"
+      ],
+      "rule_signals": [
+        "PoC required",
+        "KYC not required",
+        "Primacy of Rules",
+        "Critical chain reward requires total network shutdown or unauthorized transactions"
+      ],
+      "local_next_work": "obyte_impact_threshold_packet_v1: extract high bar for critical chain impacts and decide whether local static review has enough EV.",
+      "blocked_actions": [
+        "no network testing",
+        "no wallet testing",
+        "no denial-of-service",
+        "no report submission"
+      ],
+      "required_service_gates": [
+        "browser_read_only_session",
+        "security_report_submission_gate"
+      ],
+      "shortlist_score": 58,
+      "verdict": "park_low_ev_until_specific_static_signal_exists"
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_recommended_local_proofs": [
+    "optimism_scope_rules_extraction_packet_v1",
+    "ens_scope_known_issues_matrix_v1",
+    "lido_scope_rules_extraction_packet_v1",
+    "security_report_quality_gate_v1"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "trophy-room-v1",
+  "generatedAt": "2026-06-17T14:50:04Z",
+  "feature": {
+    "id": "agent-company-atlas-trophy-room-v1",
+    "title": "Outcome Trophy Room",
+    "purpose": "Turn completed outcomes into a reusable achievement wall so operators can see what has been unlocked and jump from a trophy into the source lane trail."
+  },
+  "research": [
+    {
+      "title": "UI Patterns: Collectible Achievements",
+      "url": "https://ui-patterns.com/patterns/CollectibleAchievements",
+      "takeaway": "Achievement systems benefit from attractive trophy-like visual objects that users can browse and display."
+    },
+    {
+      "title": "Trophy: Designing Achievements for Optimal User Engagement",
+      "url": "https://trophy.so/blog/designing-achievements-for-optimal-user-engagement",
+      "takeaway": "Strong achievement systems guide progression and recognize meaningful milestones rather than random activity."
+    },
+    {
+      "title": "GetStream: Activity Feed Ideas",
+      "url": "https://getstream.io/blog/activity-feed-ideas/",
+      "takeaway": "Activity feeds can increase engagement when they organize ongoing events into clear, return-worthy surfaces."
+    },
+    {
+      "title": "Grid Sage Games: Achievements UI Design and Implementation",
+      "url": "https://www.gridsagegames.com/blog/2018/05/achievements-ui-design-implementation/",
+      "takeaway": "A standalone game-like system needs its own achievement interface for browsing and interaction."
+    }
+  ],
+  "implementation": {
+    "sourceFiles": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Trophy Room reads completed outcome events from snapshot.missionFeed.items.",
+      "Each trophy uses lane art, lane colors, tier, reward text, summary, date, and click-through data.",
+      "Lane Trophy Tracks rank the most outcome-rich lanes using snapshot.lanes[].counts.outcomes.",
+      "Clicking a trophy opens the source lane Trail view.",
+      "The implementation is static, data-driven, and portable to other agent-company repos."
+    ],
+    "derivedFields": [
+      "trophy tier",
+      "reward xp",
+      "lane outcome progress",
+      "recent outcome cards"
+    ]
+  },
+  "validation": {
+    "staticChecks": [
+      {
+        "command": "node --check web\\app.js",
+        "status": "passed"
+      },
+      {
+        "command": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+        "status": "passed"
+      },
+      {
+        "command": "python -m json.tool web\\data\\snapshot.json",
+        "status": "passed"
+      },
+      {
+        "command": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md",
+        "status": "passed",
+        "result": "no non-ASCII matches"
+      }
+    ],
+    "browserDesktop": {
+      "url": "http://localhost:5177/?verify=achievement-wall-wide2#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "checks": {
+        "trophyCardCount": 10,
+        "trackCount": 6,
+        "wallGrid": "857px 320px",
+        "showcaseGrid": "422.5px 422.5px",
+        "firstTitle": "Local Platform Contract",
+        "firstCardWidth": 423,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserMobile": {
+      "url": "http://localhost:5177/?verify=achievement-wall-mobile#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 390,
+        "height": 840
+      },
+      "checks": {
+        "trophyCardCount": 10,
+        "trackCount": 6,
+        "wallGrid": "317px",
+        "showcaseGrid": "317px",
+        "firstTitle": "Local Platform Contract",
+        "firstImage": "./assets/lanes/platform_engineering.png",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserInteraction": {
+      "url": "http://localhost:5177/?verify=achievement-wall-click#lane=platform_engineering&view=overview",
+      "checks": {
+        "clickedUniqueTrophy": "Atlas Mission Feed Visual Upgrade",
+        "resultHash": "#lane=platform_engineering&view=trail",
+        "detailActiveTab": "trail",
+        "detailHeading": "Platform Engineering",
+        "trailItems": 18,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserFinalSmoke": {
+      "url": "http://localhost:5177/?verify=trophy-room-final#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "checks": {
+        "countText": "214 unlocks",
+        "trophyCardCount": 10,
+        "trackCount": 6,
+        "firstTitle": "Atlas Trophy Room Visual Upgrade",
+        "firstTier": "mythic",
+        "firstReward": "+166 xp",
+        "firstImage": "./assets/lanes/platform_engineering.png",
+        "includesTrophyRoomOutcome": true,
+        "wallGrid": "857px 320px",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    }
+  },
+  "nextIdeas": [
+    "Add filters for trophy tier and lane realm.",
+    "Generate dedicated trophy icon sheets for outcome categories.",
+    "Add unlock animation when new outcomes appear after snapshot refresh.",
+    "Let each lane define its own trophy track milestones."
+  ]
+}

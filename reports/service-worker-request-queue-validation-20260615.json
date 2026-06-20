@@ -1,0 +1,36 @@
+{
+  "all_jsonschema_valid": true,
+  "generated_utc": "2026-06-14T21:59:54Z",
+  "queue_path": "E:\\agent-company-lab\\reports\\service-worker-request-queue-20260615.json",
+  "queue_request_count": 14,
+  "schema_path": "E:\\agent-company-lab\\architecture\\service-worker-request-v1.schema.json",
+  "service_requests_approved_by_this_backfill": 0,
+  "service_requests_started_by_this_backfill": 0,
+  "side_effect_flags_all_false": true,
+  "validated_count": 14,
+  "validated_paths": [
+    "E:\\agent-company-lab\\requests\\service-requests\\req-grok-research-worker-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-pydantic-ai-model-backed-adapter-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-approve-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-test-lifecycle-reject-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-test-service-intake-valid-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\service-worker-request-v1.json",
+    "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\service-worker-request-v1.json"
+  ],
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

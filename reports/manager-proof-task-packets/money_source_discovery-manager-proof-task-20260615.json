@@ -1,0 +1,33 @@
+{
+  "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-money_source_discovery-first-local-proof-20260615 --lane-id money_source_discovery --title \"Prepare first local money-source venue registry proof packet\" --priority 86 --owner-agent-id lane-manager-money_source_discovery-019ec699 --duplicate-key money_source_discovery-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\money_source_discovery-manager-proof-task-20260615.md --next-action \"Use local discovery source specs to draft a venue registry proof packet with source-quality criteria, repeatable scan fields, and no-account boundary.\"",
+  "department": "Strategic Research",
+  "evidence_count": 1,
+  "evidence_id": "first-local-evidence-money_source_discovery-20260615",
+  "forbidden_actions": [
+    "Do not execute the command preview without explicit human approval.",
+    "Do not browse, use accounts, register, accept terms, upload data, publish, submit, contact anyone, trade, touch wallets/payments, or call model/API services from this packet.",
+    "Do not mutate service requests, assign service workers, start workers, perform security testing, or create external side effects from this packet."
+  ],
+  "generated_utc": "2026-06-15T17:21:52Z",
+  "lane_id": "money_source_discovery",
+  "live_task_created": false,
+  "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+  "parked_request_count": 1,
+  "parked_request_ids": [
+    "req-wave4-money-source-discovery-browser-readonly-20260614"
+  ],
+  "proposed_task": {
+    "duplicate_key": "money_source_discovery-first-local-proof-20260615",
+    "evidence_required": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\money_source_discovery-manager-proof-task-20260615.md",
+    "lane_id": "money_source_discovery",
+    "next_action": "Use local discovery source specs to draft a venue registry proof packet with source-quality criteria, repeatable scan fields, and no-account boundary.",
+    "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+    "priority": 86,
+    "task_id": "task-money_source_discovery-first-local-proof-20260615",
+    "title": "Prepare first local money-source venue registry proof packet"
+  },
+  "report_only": true,
+  "schema_version": "agent_company.manager_proof_task_packet.v1",
+  "source_spec_count": 1,
+  "source_spec_id": "money_source_discovery_public_venue_source_seed"
+}

@@ -1,0 +1,75 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-handoff-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Path Map Route Handoff card that surfaces the lane owner, thread, gate/note/urgency context, and stages the lane's top browser-local dispatch draft from the route board.",
+  "design_research": {
+    "queries": [
+      "2026 operations dashboard handoff panel command center UX best practices",
+      "incident command dashboard handoff notes action owner UX patterns",
+      "dashboard design action cards owner next action notes best practices 2026"
+    ],
+    "source_urls": [
+      "https://www.activu.com/the-command-center-design-guide-building-for-operational-intelligence-in-2026/",
+      "https://fuselabcreative.com/manufacturing-dashboard-ux-design/",
+      "https://www.domo.com/learn/article/dashboard-design-examples-best-practices",
+      "https://incident.io/changelog/2023-05-03"
+    ],
+    "pattern_notes": [
+      "Command surfaces should expose ownership, active pressure, and the next action close to the operator's current context.",
+      "Operational dashboards need handoff continuity, especially where blockers, notes, and decisions can otherwise scatter across views.",
+      "Action controls should be local, explicit, and reversible when the system is not allowed to contact agents or external services by itself."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-path-handoff-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].ownerAgentId",
+      "snapshot.lanes[].ownerThreadId",
+      "snapshot.agents",
+      "snapshot.dispatchConsole.suggestions",
+      "snapshot.lanes[].gateMap",
+      "browser localStorage key agent-company-atlas.dispatch-outbox.v1",
+      "browser localStorage key agent-company-atlas.dispatch-history.v1"
+    ],
+    "ui_contract": [
+      "Render a Path Map Route Handoff card next to blocker and note context.",
+      "Show the owner bot or lane manager, linked thread, gate count, local note count, and dispatch urgency.",
+      "Use the existing best lane dispatch suggestion when available, falling back to laneDispatchSuggestion.",
+      "Stage only a browser-local dispatch draft through the existing outbox and history keys.",
+      "Re-render Path Map after staging so the handoff card shows the OK/staged state."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-handoff-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation the Path Map had no .path-handoff-panel, no data-path-handoff-stage control, and the dispatch outbox remained empty."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-handoff-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Clicking Q from Route Handoff wrote one browser-local gate_review draft for digital_products_templates_plugins, added one history event, flipped the panel to staged/OK, and produced no console errors, failed requests, or overflow."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x844",
+        "820x1180",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered the Route Handoff panel, staged one local draft, and reported no horizontal overflow or bad rectangles."
+    },
+    "static": {
+      "node_check_app_js": "passed"
+    }
+  }
+}

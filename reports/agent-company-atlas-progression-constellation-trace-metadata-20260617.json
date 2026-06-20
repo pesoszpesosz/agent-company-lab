@@ -1,0 +1,82 @@
+{
+  "trace_id": "trace-agent-company-atlas-progression-constellation-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "company_level_progression_constellation",
+  "summary": "Added a company-level Progression Constellation that turns every money-path lane into a clickable level card with derived gate, reward, scout, and active progress signals.",
+  "design_research": {
+    "queries": [
+      "game UI progression map levels unlocks dashboard design pattern",
+      "skill tree progression map UX unlock levels dashboard pattern",
+      "gamification progress dashboard levels achievements user interface design pattern"
+    ],
+    "source_urls": [
+      "https://ixdf.org/literature/topics/gamification",
+      "https://uxdesign.cc/gamification-aguide-for-designers-to-a-misunderstood-concept-4de5bef0c5d9",
+      "https://forums.unrealengine.com/t/dynamic-skill-tree-system/42956"
+    ],
+    "pattern_notes": [
+      "Progress feedback should make current state, goal distance, and rewards visible without turning the product into a toy.",
+      "Skill-tree and progression systems scale better when unlock state is data-driven instead of hand-maintained.",
+      "The Atlas version uses existing snapshot fields and lane art so future lanes inherit the same ladder automatically."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "data_inputs": [
+      "lane.level",
+      "lane.progress",
+      "lane.score",
+      "lane.state",
+      "lane.counts.blockers",
+      "lane.counts.pendingRequests",
+      "lane.counts.completedTasks",
+      "lane.counts.outcomes",
+      "lane.counts.traces",
+      "lane.visual.avatar",
+      "lane.visual.realm",
+      "lane.visual.minigame.id"
+    ],
+    "ui_contract": [
+      "Every lane renders as a clickable progression card.",
+      "Tier state is derived from blockers, pending requests, level, outcomes, progress, evidence, and traces.",
+      "Company stats show total levels, custom games, gated lanes, and average lane charge.",
+      "Selecting a progression card syncs URL hash, lane list, detail panel, and active progression highlight.",
+      "Mobile uses a bounded scroll rail so more lanes can be added without an unbounded first-screen wall."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "lane_visuals_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=progression-constellation&cache=20260617-progression-constellation",
+      "checks": [
+        {
+          "viewport": "390x920",
+          "result": "Progression panel visible, 12 lane cards rendered, 4 stat cells rendered, no horizontal document overflow, no console errors, and mobile lane rail bounded at 720px with internal scroll."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Progression panel visible, 12 lane cards rendered in a six-column grid, no horizontal document overflow, and no console errors."
+        },
+        {
+          "viewport": "1600x900",
+          "result": "Progression panel visible, 12 lane cards rendered in a six-column grid, no horizontal document overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Clicking the paid_code_bounties progression card updated the hash to #lane=paid_code_bounties&view=overview, activated the matching progression card and lane-list row, and loaded the lane detail panel."
+        }
+      ]
+    }
+  }
+}

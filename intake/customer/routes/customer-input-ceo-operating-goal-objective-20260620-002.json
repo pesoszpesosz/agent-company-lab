@@ -1,0 +1,229 @@
+{
+  "ceo_context_capsule": {
+    "application_path": "raw_input_preserved_compact_capsule_route_packet_ledger_customer_update_db_trace",
+    "ceo_attention_needed": true,
+    "human_action_needed": true,
+    "next_artifact": "route packet `customer-input-ceo-operating-goal-objective-20260620-002` and lane-specific follow-up by `ai_resources_lab`",
+    "short_summary": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+    "status": "routed",
+    "why_this_route": "Primary route `ai_resources_lab` selected from deterministic local lane/surface matching plus current DB context."
+  },
+  "company_context_check": {
+    "artifacts_total": 2469,
+    "checked_utc": "2026-06-20T18:06:19Z",
+    "lanes_total": 15,
+    "outcomes_total": 424,
+    "service_request_status_counts": [
+      {
+        "count": 1,
+        "status": "complete"
+      },
+      {
+        "count": 13,
+        "status": "needs_review"
+      },
+      {
+        "count": 2,
+        "status": "rejected"
+      }
+    ],
+    "service_requests_total": 16,
+    "target_lanes": [
+      {
+        "known": true,
+        "lane": {
+          "department": "Audience/Distribution",
+          "lane_id": "youtube_content_channels",
+          "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+          "status": "active"
+        },
+        "lane_id": "youtube_content_channels",
+        "recent_open_tasks": [],
+        "task_status_counts": [
+          {
+            "count": 1,
+            "status": "complete"
+          }
+        ]
+      },
+      {
+        "known": true,
+        "lane": {
+          "department": "Cashflow Engineering",
+          "lane_id": "paid_code_bounties",
+          "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+          "status": "active"
+        },
+        "lane_id": "paid_code_bounties",
+        "recent_open_tasks": [],
+        "task_status_counts": [
+          {
+            "count": 14,
+            "status": "complete"
+          }
+        ]
+      },
+      {
+        "known": true,
+        "lane": {
+          "department": "Markets Research",
+          "lane_id": "prediction_market_research",
+          "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+          "status": "active"
+        },
+        "lane_id": "prediction_market_research",
+        "recent_open_tasks": [],
+        "task_status_counts": [
+          {
+            "count": 8,
+            "status": "complete"
+          }
+        ]
+      },
+      {
+        "known": true,
+        "lane": {
+          "department": "Competition Lab",
+          "lane_id": "ai_ml_competitions",
+          "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+          "status": "active"
+        },
+        "lane_id": "ai_ml_competitions",
+        "recent_open_tasks": [],
+        "task_status_counts": [
+          {
+            "count": 17,
+            "status": "complete"
+          }
+        ]
+      },
+      {
+        "known": true,
+        "lane": {
+          "department": "AI Resources",
+          "lane_id": "ai_resources_lab",
+          "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+          "status": "active"
+        },
+        "lane_id": "ai_resources_lab",
+        "recent_open_tasks": [],
+        "task_status_counts": [
+          {
+            "count": 2,
+            "status": "complete"
+          }
+        ]
+      },
+      {
+        "known": true,
+        "lane": {
+          "department": "Strategic Research",
+          "lane_id": "money_source_discovery",
+          "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+          "status": "active"
+        },
+        "lane_id": "money_source_discovery",
+        "recent_open_tasks": [],
+        "task_status_counts": [
+          {
+            "count": 15,
+            "status": "complete"
+          }
+        ]
+      }
+    ],
+    "tasks_total": 585,
+    "trace_events_total": 516
+  },
+  "customer_intent": "Okay, so listen to the task now. Now that you learned the system, your goal is to become the CEO of that company. Like, you're gonna play the CEO brain of the company. Now, what does that mean? That means that, as you can see, we have a lot of departments, workers, agents, everything like that. What you have to do is look very extensively through the structu...",
+  "input_class": "new_request",
+  "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+  "knowledge_application": {
+    "current_application": "routed_to_lane_packet_and_customer_ledger",
+    "revisit_condition": "If target lane has no owner or no follow-up artifact after next CEO packet, escalate to AI Resources or CEO decision batch.",
+    "rule": "Useful knowledge must be routed, applied, blocked by a named gate, or parked with a revisit condition."
+  },
+  "next_artifact": "ai_resources_lab_followup_packet_or_task",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "raw_material_paths": {
+    "bytes": 5577,
+    "preserved_raw_path": "E:\\agent-company-lab\\intake\\customer\\dropbox\\customer-input-ceo-operating-goal-objective-20260620-002.md",
+    "sha256": "b06dca9a1d43d729d85661b78154f0b01afdc9d6ac8da4f693d4fad7bd7ce91d",
+    "source_path": "C:\\Users\\matth\\.codex\\attachments\\515e7fa9-60a2-41c0-8a4b-ba1ecbeb9a3f\\goal-objective.md"
+  },
+  "received_utc": "2026-06-20T18:06:19Z",
+  "routes": [
+    {
+      "lane_or_surface": "premium_customer_intake",
+      "reason": "Owns customer input capture, routing, compact updates, and raw-context separation.",
+      "status": "applied"
+    },
+    {
+      "lane_or_surface": "youtube_content_channels",
+      "reason": "Matches YouTube/content-channel material or production work.",
+      "status": "routed"
+    },
+    {
+      "lane_or_surface": "paid_code_bounties",
+      "reason": "Matches paid coding bounty, GitHub, repo, or PR work.",
+      "status": "routed"
+    },
+    {
+      "lane_or_surface": "prediction_market_research",
+      "reason": "Matches prediction-market research or settlement work.",
+      "status": "routed"
+    },
+    {
+      "lane_or_surface": "ai_ml_competitions",
+      "reason": "Matches AI/ML competition or benchmark opportunities.",
+      "status": "routed"
+    },
+    {
+      "lane_or_surface": "ai_resources_lab",
+      "reason": "Matches AI Resources evaluation or worker-capability infrastructure.",
+      "status": "routed"
+    },
+    {
+      "lane_or_surface": "money_source_discovery",
+      "reason": "Matches broad money-source discovery when no narrower lane owns it.",
+      "status": "routed"
+    },
+    {
+      "lane_or_surface": "human_action_desk",
+      "reason": "Requires or describes rare human-only action.",
+      "status": "referenced"
+    },
+    {
+      "lane_or_surface": "goal_evolver_review",
+      "reason": "May affect the CEO operating goal or goal-evolver queue.",
+      "status": "referenced"
+    },
+    {
+      "lane_or_surface": "ceo_state_packet",
+      "reason": "CEO should receive only the compact context capsule.",
+      "status": "referenced"
+    }
+  ],
+  "schema_version": "customer_input_route_packet.v2",
+  "secondary_classes": [],
+  "status": "routed",
+  "target_lane_ids": [
+    "youtube_content_channels",
+    "paid_code_bounties",
+    "prediction_market_research",
+    "ai_ml_competitions",
+    "ai_resources_lab",
+    "money_source_discovery"
+  ],
+  "urls": [],
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

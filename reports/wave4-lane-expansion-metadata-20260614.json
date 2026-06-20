@@ -1,0 +1,17 @@
+{
+  "span_kind": "internal",
+  "runtime": "local_cli",
+  "api_calls": false,
+  "external_side_effects": false,
+  "lanes_added": [
+    "money_source_discovery",
+    "ai_ml_competitions",
+    "digital_products_templates_plugins"
+  ],
+  "starter_service_requests": [
+    "req-wave4-money-source-discovery-browser-readonly-20260614",
+    "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+    "req-wave4-digital-products-browser-readonly-20260614"
+  ],
+  "request_status": "needs_review"
+}

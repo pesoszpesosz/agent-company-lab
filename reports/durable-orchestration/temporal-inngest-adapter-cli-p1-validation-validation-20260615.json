@@ -1,0 +1,64 @@
+{
+  "schema_version": "temporal_inngest_adapter_cli_p1_validation_validation.v1",
+  "generated_local": "2026-06-15T18:12:34.1859485+03:00",
+  "generated_utc_approx": "2026-06-15T15:12:34Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-cli-p1-validation-20260615",
+  "source_code_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_code_sha256_before": "2F9DFB3957FDC0653C58D37445C42A478C1CA41150D23D7107A57C592F4CA117",
+  "source_code_sha256_after": "618855E17387D3B01A266A53F3C907D40CA5E05C5340CF3EE735C6F26B5C547A",
+  "test_report_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-p1-validation-test-20260615.json",
+  "implemented_p1_items": [
+    "required fixture field validation",
+    "required input field non-empty string validation",
+    "expected action booleans explicitly false",
+    "allowed output_state enum validation",
+    "duplicate fixture_id, request_id, and idempotency_key rejection",
+    "resume_requirements list-of-non-empty-strings validation",
+    "expected_exit.exit_code validation for positive fixture packets",
+    "negative fixture packets for missing input, duplicates, output shape, and action true"
+  ],
+  "checks": {
+    "syntax_ok": true,
+    "positive_fixture_still_passes": true,
+    "positive_result_count": 14,
+    "negative_fixture_count": 4,
+    "negative_rejections": 4,
+    "negative_result_files_created": 0,
+    "service_request_mutation_count": 0
+  },
+  "service_requests_by_status_after": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "model_api_request_after": {
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "status": "needs_review",
+    "assigned_agent_id": null,
+    "started_at": null,
+    "completed_at": null,
+    "decision_note": null
+  },
+  "runtime_boundary": {
+    "python_files_modified": 1,
+    "cli_commands_added_to_runner": 0,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Implement P2 cleanup for the unused default result constant and document resume_requirements ordering policy."
+}

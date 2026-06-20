@@ -1,0 +1,27 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-micro-chronicle-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-micro-chronicle-v1-20260619",
+  "eventId": "trace-atlas_active_lane_micro_chronicle_added-20260619",
+  "title": "Active Lane Micro Chronicle",
+  "createdUtc": "2026-06-19T02:16:20Z",
+  "summary": "Added compact Latest, Gate, and Next cards inside the active lane HUD so clicked paths show recent progress, blockers, and next action before deeper scrolling.",
+  "layoutEvidence": {
+    "intent": "Make clicked money paths explain what happened and what is blocked immediately in the first HUD surface.",
+    "surface": "active-lane-micro-chronicle",
+    "cards": [
+      "latest lane event",
+      "active gate or clear state",
+      "operator next move"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-service-worker-approval-authority-coverage-v1-20260617",
+  "task_id": "task-service-worker-approval-authority-coverage-v1-20260617",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "work_type": "local_tdd_validator",
+  "generated_utc": "2026-06-17T20:26:19Z",
+  "summary": "Implemented catalog-wide service-worker approval authority coverage validator covering all service catalog rows and current service requests without granting approval, rejection, assignment, worker start, browser start, API calls, or external side effects.",
+  "artifacts": [
+    {
+      "kind": "architecture_schema",
+      "path": "E:\\agent-company-lab\\architecture\\service-worker-approval-authority-coverage-v1.schema.json"
+    },
+    {
+      "kind": "validator_runner",
+      "path": "E:\\agent-company-lab\\tools\\validate_service_worker_approval_authority_coverage.py"
+    },
+    {
+      "kind": "unittest",
+      "path": "E:\\agent-company-lab\\tests\\test_service_worker_approval_authority_coverage.py"
+    },
+    {
+      "kind": "validator_report_json",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json"
+    },
+    {
+      "kind": "validation_report",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-validation-20260617.json"
+    },
+    {
+      "kind": "validation_markdown",
+      "path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.md"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python E:\\agent-company-lab\\tests\\test_service_worker_approval_authority_coverage.py",
+      "status": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s E:\\agent-company-lab\\tests",
+      "status": "passed",
+      "tests_run": 12
+    }
+  ],
+  "validation_summary": {
+    "all_checks_passed": true,
+    "failure_count": 0,
+    "coverage_status": "report_only_no_authority_granted",
+    "service_count": 13,
+    "service_rows_covered": 13,
+    "current_request_count": 14,
+    "current_requests_covered": 14,
+    "missing_role_count": 0,
+    "services_requiring_user_count": 12,
+    "services_requiring_cro_count": 12,
+    "gated_default_count": 3,
+    "approval_granted_by_coverage": false,
+    "decision_authority_granted_by_coverage": false,
+    "rejection_granted_by_coverage": false,
+    "authority_commands_run": 0,
+    "approval_rows_written": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": false,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Use this catalog-wide coverage before generating service-specific signed decision intake contracts."
+}

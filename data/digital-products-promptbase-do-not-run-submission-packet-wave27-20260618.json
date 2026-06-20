@@ -1,0 +1,305 @@
+{
+  "schema_version": "digital_products.promptbase_do_not_run_submission_packet.v1",
+  "generated_utc": "2026-06-18T06:13:28Z",
+  "lane_id": "digital_products_templates_plugins",
+  "task_id": "task-digital-products-promptbase-do-not-run-submission-packet-wave27-20260618",
+  "selected_route_id": "promptbase_agent_skill_route",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "folder": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+    "manifest_path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json",
+    "file_count": 12,
+    "total_bytes": 21670,
+    "package_status": "internal_review_manifest_only",
+    "zip_created": false,
+    "public_listing_ready": false,
+    "realized_usd": 0
+  },
+  "status": "do_not_run_local_submission_packet_ready",
+  "sources": {
+    "local_reports": [
+      "E:\\agent-company-lab\\reports\\digital-products-marketplace-route-eligibility-wave24-20260618.md",
+      "E:\\agent-company-lab\\reports\\digital-products-promptbase-route-readiness-wave25-20260618.md",
+      "E:\\agent-company-lab\\reports\\digital-products-promptbase-use-case-repro-checklist-wave26-20260618.md"
+    ],
+    "product_files": [
+      "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\README.md",
+      "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\docs\\buyer-guide.md",
+      "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\docs\\listing-draft.md",
+      "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\docs\\license-and-ip-note.md"
+    ],
+    "manifest": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json"
+  },
+  "submission_inventory": {
+    "status": "non_final_local_inventory_only",
+    "working_title": "Agent Skill Starter Kit: Templates For Safer Reusable AI-Agent Workflows",
+    "short_description": "A compact Markdown kit for turning repeatable AI-agent workflows into reusable skills with stop gates, artifact contracts, service-request checklists, examples, and acceptance reviews.",
+    "product_type_candidate": "agent skill / SKILL.md template bundle",
+    "buyer_segments": [
+      "indie AI builders",
+      "technical operators",
+      "small internal teams"
+    ],
+    "price_hypothesis_usd": {
+      "min": 9,
+      "max": 29,
+      "status": "planning_only_not_public_price"
+    },
+    "delivery_files": [
+      {
+        "path": "docs/buyer-guide.md",
+        "bytes": 1554,
+        "sha256": "d680cdd927d0f67b0b29069b0a7148808ef965e15727ce2a9246eb65b68ad3c2"
+      },
+      {
+        "path": "docs/license-and-ip-note.md",
+        "bytes": 1477,
+        "sha256": "06d1915faf9c6dc489bb1c8015cf3e0c2bfa129cb6e6d0c8eb6434d816e89c8d"
+      },
+      {
+        "path": "docs/listing-draft.md",
+        "bytes": 1737,
+        "sha256": "5d716f468e916d7ccb32ae56b22d4d3ba15770a52f043cb24128cae7da10ee35"
+      },
+      {
+        "path": "docs/screenshot-plan.md",
+        "bytes": 1111,
+        "sha256": "1f4d00b660a6e7cbb8df5b6d22c4233e04b0b300935f47287caab4c5cd045ab3"
+      },
+      {
+        "path": "examples/local-research-skill/sample-output.md",
+        "bytes": 1021,
+        "sha256": "ffef4ee635ac60f2459f7104621396dab2ff638cd205bf618d09e490544e9d98"
+      },
+      {
+        "path": "examples/local-research-skill/SKILL.md",
+        "bytes": 2153,
+        "sha256": "77cc8f92edbd1baab88814e22c76f3356fff1269589615a74284e079005df0d0"
+      },
+      {
+        "path": "README.md",
+        "bytes": 3544,
+        "sha256": "d1a37031fd3bdb8be274bb831598e8d45108469fc46bdd8b11276fa119c3aae2"
+      },
+      {
+        "path": "templates/acceptance-review.template.md",
+        "bytes": 1300,
+        "sha256": "c743b49bb1cd0611da4f5af7cbd59560f8cef6d327323d0fbd793f26f305a65d"
+      },
+      {
+        "path": "templates/artifact-contract.template.md",
+        "bytes": 1168,
+        "sha256": "36c20fbd97cc2ea15a176994ceb7d50c1c301dae690a678abfdecabbc9f89293"
+      },
+      {
+        "path": "templates/gate-checklist.template.md",
+        "bytes": 2029,
+        "sha256": "85fa022701091518a524447c6a24e099298dd9569b5ac04d6dac224afd8c2888"
+      },
+      {
+        "path": "templates/service-request-checklist.template.md",
+        "bytes": 1589,
+        "sha256": "772719198037441534a47c8a6427b70accebc75db787fa08282e6f0a9fe8011e"
+      },
+      {
+        "path": "templates/SKILL.template.md",
+        "bytes": 2987,
+        "sha256": "bc8f1b5c7832c788f4fd5b95e794e9215c393e09e8ac77388572254ba65ad99f"
+      }
+    ],
+    "claims_allowed_locally": [
+      "Reusable local skill scaffolding.",
+      "Stop-gate and artifact-contract templates.",
+      "Fictional/local example workflow.",
+      "Acceptance review support."
+    ],
+    "claims_forbidden_until_review": [
+      "Guaranteed revenue or sales.",
+      "Guaranteed marketplace acceptance.",
+      "Legal, tax, KYC, payment, security, or compliance advice.",
+      "Platform endorsement or official compatibility.",
+      "Automated account, browser, wallet, public posting, or seller setup."
+    ]
+  },
+  "approval_packets": [
+    {
+      "approval_id": "approval-promptbase-readonly-guideline-review",
+      "gate": "browser_read_only_session",
+      "purpose": "Compare current PromptBase public seller, support, prompt-guideline, terms, and homepage pages against the local package.",
+      "allowed_after_approval": [
+        "Open public PromptBase URLs in a read-only browser session.",
+        "Capture page titles, URLs, timestamps, and short paraphrased rule notes.",
+        "Write a local guideline-to-file mapping report."
+      ],
+      "forbidden_even_after_this_approval": [
+        "No account creation or login.",
+        "No form submission, upload, listing creation, marketplace save, checkout, or message.",
+        "No accepting terms, seller onboarding, payout setup, or profile changes."
+      ],
+      "required_output": "PromptBase guideline mapping report with each package file marked pass, edit-needed, blocked, or not-applicable.",
+      "review_questions": [
+        "Are SKILL.md/template bundles currently acceptable on PromptBase?",
+        "Which file formats, examples, screenshots, metadata, and categories are required?",
+        "Which claims, price statements, support promises, or categories are disallowed?"
+      ]
+    },
+    {
+      "approval_id": "approval-seller-terms-fees-payout-review",
+      "gate": "legal_kyc_tax_payment",
+      "purpose": "Review seller obligations before any account, listing, payment, payout, tax, or refund commitment.",
+      "allowed_after_approval": [
+        "Summarize fees, payout timing, seller obligations, refund/dispute duties, tax/KYC/payment requirements, and marketplace agency language.",
+        "Write a local yes/no risk memo for whether to proceed."
+      ],
+      "forbidden_even_after_this_approval": [
+        "No entering legal identity, tax data, payout account, card, bank, wallet, or KYC information.",
+        "No agreeing to terms or creating seller obligations.",
+        "No real-money transaction."
+      ],
+      "required_output": "Legal/payment review memo with explicit proceed, revise, or park recommendation.",
+      "review_questions": [
+        "What seller identity, tax, KYC, payout, refund, and dispute obligations exist?",
+        "What fees apply to marketplace sales, referral-link sales, and custom jobs?",
+        "Does the seller agreement permit this product type and license shape?"
+      ]
+    },
+    {
+      "approval_id": "approval-ip-license-claims-review",
+      "gate": "ip_license_claims_review",
+      "purpose": "Verify the product contains only permitted original local text and safe claims.",
+      "allowed_after_approval": [
+        "Review all 12 local files for copied text, third-party assets, trademarks, logos, endorsement implications, and unsupported promises.",
+        "Mark required edits before public listing."
+      ],
+      "forbidden_even_after_this_approval": [
+        "No publication, upload, sale, marketplace submission, or public promotion.",
+        "No legal advice claim or compliance guarantee."
+      ],
+      "required_output": "IP/license/claims checklist with required copy edits and final human signoff fields.",
+      "review_questions": [
+        "Are all templates and examples original or safely licensed?",
+        "Does the listing avoid platform endorsement, guaranteed sales, compliance, or marketplace approval claims?",
+        "Is the buyer license understandable and appropriate for a template kit?"
+      ]
+    },
+    {
+      "approval_id": "approval-seller-account-and-payout-setup",
+      "gate": "account_payment_approval",
+      "purpose": "Only after legal/payment approval, decide whether a seller account or payout setup should be performed by a human or service worker.",
+      "allowed_after_approval": [
+        "Prepare an exact step-by-step setup checklist for a human operator.",
+        "If separately approved, route a service request with exact scope and expiry."
+      ],
+      "forbidden_even_after_this_approval": [
+        "No credentials, OTPs, cookies, tax/KYC data, payout data, or account settings handled by an agent unless a later exact-scope approval says so.",
+        "No accepting agreements without human confirmation."
+      ],
+      "required_output": "Human account setup checklist or parked decision; no automated account action by default.",
+      "review_questions": [
+        "Who owns seller identity and support obligations?",
+        "Which payout route and tax profile are acceptable?",
+        "Should any step be performed manually instead of by an agent?"
+      ]
+    },
+    {
+      "approval_id": "approval-package-build-and-preview-assets",
+      "gate": "package_artifact_publication_review",
+      "purpose": "Decide whether to build a public-ready zip and screenshots from local files.",
+      "allowed_after_approval": [
+        "Create a deterministic local zip for review only.",
+        "Create local screenshots or preview images from the package files only.",
+        "Write hashes and a publication readiness manifest."
+      ],
+      "forbidden_even_after_this_approval": [
+        "No upload, public link, marketplace draft, external storage, or publication.",
+        "No screenshots from signed-in marketplace pages."
+      ],
+      "required_output": "Package build manifest with zip hash, screenshot paths, and publication readiness result.",
+      "review_questions": [
+        "Are all included files meant for buyer delivery?",
+        "Do screenshots reveal only local package content?",
+        "Should any docs be revised before public distribution?"
+      ]
+    },
+    {
+      "approval_id": "approval-public-listing-submission",
+      "gate": "public_action_approval",
+      "purpose": "Only after all previous reviews, authorize final listing creation or submission.",
+      "allowed_after_approval": [
+        "Create or update a marketplace listing draft within the exact approved route.",
+        "Upload only approved files/assets.",
+        "Submit or publish only if exact approval says publish."
+      ],
+      "forbidden_even_after_this_approval": [
+        "No price, claim, refund term, support promise, promotion, cross-post, message, or follow-up outside the approved text and scope.",
+        "No mutation of other marketplace/account settings."
+      ],
+      "required_output": "Public action receipt with URL, timestamp, exact submitted text, asset hashes, and next monitoring step.",
+      "review_questions": [
+        "Is the title, description, category, price, license, refund language, and support promise approved?",
+        "Is publication approved, or only draft creation?",
+        "What exact public URL or record should be captured after action?"
+      ]
+    }
+  ],
+  "command_free_review_steps": [
+    "Read the local product README, buyer guide, listing draft, license/IP note, and Wave 24-26 reports.",
+    "Confirm whether the route remains PromptBase-first or should fall back to Gumroad direct download.",
+    "Review each approval packet and mark approve, revise, or park without opening a browser or account.",
+    "If any packet is approved later, create a separate exact-scope service request with expiry, owner, permitted URLs/actions, and forbidden actions.",
+    "Do not combine browser, legal/payment, account, package build, and public submission approvals into one broad approval.",
+    "After every approved action, write a local receipt and re-run chain-integrity validation before continuing."
+  ],
+  "blocker_map": [
+    {
+      "blocker": "Current PromptBase submission rules not mapped file-by-file",
+      "gate": "browser_read_only_session",
+      "next_safe_step": "Approve or revise read-only guideline review packet."
+    },
+    {
+      "blocker": "Seller terms, fees, payout, tax/KYC, and refund duties not reviewed",
+      "gate": "legal_kyc_tax_payment",
+      "next_safe_step": "Approve or revise seller terms/fees/payout review packet."
+    },
+    {
+      "blocker": "IP/license/public claims not reviewed for publication",
+      "gate": "ip_license_claims_review",
+      "next_safe_step": "Review all 12 files and listing claims locally."
+    },
+    {
+      "blocker": "Seller account and payout setup not approved",
+      "gate": "account_payment_approval",
+      "next_safe_step": "Prepare human setup checklist only after legal/payment review."
+    },
+    {
+      "blocker": "Public-ready zip and screenshots not approved",
+      "gate": "package_artifact_publication_review",
+      "next_safe_step": "Build deterministic local review zip only after package-build approval."
+    },
+    {
+      "blocker": "Listing/upload/submission/publication not approved",
+      "gate": "public_action_approval",
+      "next_safe_step": "Create exact-scope public action approval only after all prior gates pass."
+    }
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_performed": 0,
+    "terms_accepted": 0,
+    "payment_or_payout_actions": 0,
+    "kyc_tax_actions": 0,
+    "zip_created": false,
+    "public_uploads": 0,
+    "marketplace_drafts_created": 0,
+    "marketplace_submissions": 0,
+    "public_promotions": 0,
+    "service_requests_mutated": 0,
+    "workers_started": 0,
+    "runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_or_mcp_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Ask the operator to review the six exact approval packets; if approved later, create one narrow service request at a time, beginning with read-only PromptBase guideline review. Keep browser, account, legal/payment, zip, upload, submission, worker, runtime, model/MCP, and public actions blocked until exact approval exists."
+}

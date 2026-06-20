@@ -1,0 +1,43 @@
+{
+  "budget_or_use_of_funds": [
+    {
+      "amount_usd": 1200,
+      "category": "documentation_and_sanitization",
+      "rationale": "Convert local infrastructure into public-safe docs and examples."
+    },
+    {
+      "amount_usd": 900,
+      "category": "fixture_and_test_packaging",
+      "rationale": "Prepare reproducible local-only examples and test harnesses."
+    },
+    {
+      "amount_usd": 600,
+      "category": "maintenance_and_review",
+      "rationale": "Keep gate templates and docs current for one round cycle."
+    }
+  ],
+  "deliverables": [
+    "Open a read-only architecture report describing the lane/agent/task/artifact/outcome/trace/service-request model.",
+    "Publish local-only safety-gate templates for account, KYC, wallet, marketplace, bounty, and trading workflows after explicit approval.",
+    "Package reproducible fixture/checker examples for prediction markets, bounty programs, grants, and digital products using synthetic or saved public rows.",
+    "Document integrity checks for service-worker chain, egress chain, coverage, and artifact traceability."
+  ],
+  "impact_metrics": [
+    "number_of_public_gate_templates",
+    "number_of_reproducible_fixture_checkers",
+    "number_of_integrity_checks",
+    "number_of_adoptable_agent_company_schema_docs",
+    "downstream_builder_feedback_after_public_release"
+  ],
+  "problem_statement": "Small builders need safe, auditable agent-company infrastructure for discovering online revenue paths without accidental account, payment, wallet, public-post, or security-testing side effects.",
+  "project_name": "Agent Company Public-Good Infrastructure Lab",
+  "project_owner": "local_operator_review_required",
+  "public_promotion_plan_local_only": "Draft only; no public campaign, contribution solicitation, donor coordination, or quid pro quo.",
+  "roadmap": [
+    "Week 1: extract sanitized architecture docs and fixture schemas from the local lab.",
+    "Week 2: prepare grant-safe public repo/docs with no private credentials, no paid opportunity targets, and no platform-sensitive data.",
+    "Week 3: add examples and acceptance tests for local-only gates.",
+    "Week 4: publish impact report and maintenance plan if approved."
+  ],
+  "target_domain_fit": "developer_tooling_and_infrastructure"
+}

@@ -1,0 +1,22 @@
+section,key,value,source_url,local_action
+program,last_updated,2026-06-16,https://immunefi.com/bug-bounty/optimism/information/,refresh before any later target-specific work
+program,maximum_bounty_usd,2000042,https://immunefi.com/bug-bounty/optimism/information/,use as reward signal only
+program,poc_required,true,https://immunefi.com/bug-bounty/optimism/information/,quality gate must require local PoC plan
+program,kyc_required,true,https://immunefi.com/bug-bounty/optimism/information/,legal_kyc_tax_payment_gate required before payout workflow
+reward,blockchain_dlt_critical,"Up to $2,000,042",https://immunefi.com/bug-bounty/optimism/information/,map only to in-scope impacts
+reward,smart_contract_critical,"Up to $2,000,042",https://immunefi.com/bug-bounty/optimism/information/,map only to in-scope impacts
+reward,web_app_critical,"Max $50,000 Min $5,000",https://immunefi.com/bug-bounty/optimism/information/,no live web probing
+scope,asset_count,33,https://immunefi.com/bug-bounty/optimism/scope/,build optimism_asset_scope_table_v1
+scope,impact_count,27,https://immunefi.com/bug-bounty/optimism/scope/,build impact-to-proof matrix
+scope,example_asset,OptimismPortal,https://immunefi.com/bug-bounty/optimism/scope/,map asset date/category
+scope,example_asset,DisputeGameFactory,https://immunefi.com/bug-bounty/optimism/scope/,map asset date/category
+scope,example_asset,L1CrossDomainMessenger,https://immunefi.com/bug-bounty/optimism/scope/,map bridge duplicate risks
+scope,example_asset,PermissionedDisputeGame,https://immunefi.com/bug-bounty/optimism/scope/,map fault proof duplicate risks
+scope,resource,Optimism smart contracts,https://immunefi.com/bug-bounty/optimism/resources/,source for future local-only code review
+scope,resource,Optimism Docs,https://immunefi.com/bug-bounty/optimism/resources/,source for rules context
+scope,resource,Previous Audits Monorepo,https://immunefi.com/bug-bounty/optimism/resources/,duplicate-risk control
+out_of_scope,blockchain_dlt,Alt-DA feature of op-node and op-batcher,https://immunefi.com/bug-bounty/optimism/scope/,exclude
+out_of_scope,smart_contracts,third-party custom token bridges,https://immunefi.com/bug-bounty/optimism/scope/,exclude
+out_of_scope,web_app,listed Optimism domains and Agora-operated vote/atlas domains,https://immunefi.com/bug-bounty/optimism/scope/,no live probing
+next_proof,optimism_asset_scope_table_v1,ready_local_only,E:\agent-company-lab\data\optimism-scope-rules-extraction-packet-v1-20260618.json,build next
+next_proof,security_report_quality_gate_v1,ready_local_only,E:\agent-company-lab\data\optimism-scope-rules-extraction-packet-v1-20260618.json,build next

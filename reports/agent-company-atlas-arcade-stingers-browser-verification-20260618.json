@@ -1,0 +1,207 @@
+{
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_asset_filter_changed": 0,
+    "browser_local_hash_changes": 0,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_has_12_wrappers_and_36_stingers",
+      "passed": true
+    },
+    {
+      "name": "desktop_has_six_data_driven_motion_personalities",
+      "passed": true
+    },
+    {
+      "name": "desktop_has_nine_animation_keyframes",
+      "passed": true
+    },
+    {
+      "name": "desktop_has_reduced_motion_coverage",
+      "passed": true
+    },
+    {
+      "name": "desktop_animation_uses_transform_opacity_signal",
+      "passed": true
+    },
+    {
+      "name": "desktop_stingers_are_aria_hidden",
+      "passed": true
+    },
+    {
+      "name": "desktop_loaded_textures_badges_and_grid",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_single_column_stingers_present",
+      "passed": true
+    },
+    {
+      "name": "mobile_loaded_textures_no_overflow_or_errors",
+      "passed": true
+    },
+    {
+      "name": "wide_five_column_stingers_present",
+      "passed": true
+    },
+    {
+      "name": "wide_loaded_textures_no_overflow_or_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "animated_stinger_counts_motion_personalities_reduced_motion_and_responsive_checks_passed",
+  "desktop": {
+    "animated_name_count": 9,
+    "animated_names": [
+      "arcadeStingerBeacon",
+      "arcadeStingerDrift",
+      "arcadeStingerDriftWide",
+      "arcadeStingerGrid",
+      "arcadeStingerPulse",
+      "arcadeStingerPulseWide",
+      "arcadeStingerRoute",
+      "arcadeStingerScan",
+      "arcadeStingerSweep"
+    ],
+    "badge_count": 12,
+    "cards": 12,
+    "console_error_count": 0,
+    "distinct_types": [
+      "drift",
+      "grid",
+      "map",
+      "pulse",
+      "route",
+      "scan"
+    ],
+    "grid_columns": 4,
+    "has_reduced_motion_rule": true,
+    "horizontal_overflow": false,
+    "keyframe_count": 9,
+    "loaded_textures": 24,
+    "stingers": 36,
+    "transform_opacity_only_signal": true,
+    "type_counts": {
+      "drift": 2,
+      "grid": 2,
+      "map": 2,
+      "pulse": 2,
+      "route": 2,
+      "scan": 2
+    },
+    "url": "http://127.0.0.1:8771/index.html?verify=arcade-stingers-fresh-20260618#lane=platform_engineering&view=overview",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "wrapper_aria_hidden_count": 12,
+    "wrappers": 12
+  },
+  "generated_at": "2026-06-18T10:04:54Z",
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "badge_count": 12,
+    "cards": 12,
+    "console_error_count": 0,
+    "distinct_types": [
+      "drift",
+      "grid",
+      "map",
+      "pulse",
+      "route",
+      "scan"
+    ],
+    "grid_columns": 1,
+    "horizontal_overflow": false,
+    "loaded_textures": 24,
+    "stingers": 36,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "wrapper_aria_hidden_count": 12,
+    "wrappers": 12
+  },
+  "next_action": "Continue closing Atlas platform tasks, starting with Motion Forge animation-audit verification.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_arcade_stingers_browser_verification.v1",
+  "source_files": {
+    "app": {
+      "path": "E:\\agent-company-lab\\web\\app.js",
+      "sha256": "f4336517ee43a8a1503d43a29eab66e1d51fe39cd478193933b68fc781ec1f70",
+      "size_bytes": 458453
+    },
+    "index": {
+      "path": "E:\\agent-company-lab\\web\\index.html",
+      "sha256": "3a8fee2fe528b4aea399d4c625a696a1c0a31bd835febd03dd415a4b30e2c2b7",
+      "size_bytes": 15465
+    },
+    "prior_trace_metadata": {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-atlas-arcade-stingers-trace-metadata-20260618.json",
+      "sha256": "455e4014babf46fc2fd2465146edc2f7d4a9f00e293d672d0fc1f25df7b85137",
+      "size_bytes": 4696
+    },
+    "readme": {
+      "path": "E:\\agent-company-lab\\web\\README.md",
+      "sha256": "459cd6f9f3fd61436a1f4e0ef172d64f4fb02876731b15faaae54b64df64c912",
+      "size_bytes": 37432
+    },
+    "snapshot": {
+      "path": "E:\\agent-company-lab\\web\\data\\snapshot.json",
+      "sha256": "b529aeea7daa1e20f3f6c347d1a1d5b04ea93691cd4e55b4ba48f942f0a7cd0b",
+      "size_bytes": 1012190
+    },
+    "styles": {
+      "path": "E:\\agent-company-lab\\web\\styles.css",
+      "sha256": "03f3fdd6d892c21cdeb5109d20b347020cc2de6a83e1d736a03fa68f2f3aad02",
+      "size_bytes": 476554
+    }
+  },
+  "status": "arcade_stingers_browser_verified",
+  "task_id": "task-agent-company-atlas-arcade-stingers-v1-20260618",
+  "wide": {
+    "badge_count": 12,
+    "cards": 12,
+    "console_error_count": 0,
+    "distinct_types": [
+      "drift",
+      "grid",
+      "map",
+      "pulse",
+      "route",
+      "scan"
+    ],
+    "grid_columns": 5,
+    "horizontal_overflow": false,
+    "loaded_textures": 24,
+    "stingers": 36,
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "wrapper_aria_hidden_count": 12,
+    "wrappers": 12
+  }
+}

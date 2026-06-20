@@ -1,0 +1,16 @@
+{
+  "schema_version": "agent_company.visual_dashboard_trace.v1",
+  "external_side_effects": false,
+  "api_calls": false,
+  "browser_sessions_started": 0,
+  "worker_starts": 0,
+  "trail_records_max_per_lane": 180,
+  "quest_checkpoints_per_lane": 5,
+  "detail_views_added": ["overview", "trail", "game"],
+  "browser_verification": {
+    "platform_trail_visible_before_expand": 18,
+    "platform_trail_visible_after_expand": 36,
+    "game_checkpoint_count": 5,
+    "current_checkpoint_marker_count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-post-polish-readiness-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-post-polish-readiness-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-post-polish-readiness-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-post-polish-readiness-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-post-polish-readiness-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-post-polish-readiness-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-post-polish-readiness-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T22:31:42Z",
+  "readiness_lane_id": "digital_products_templates_plugins",
+  "readiness_task_id": "task-digital-products-local-post-polish-readiness-20260616",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "3DEFEC05B1BA8E1A3E512EE6EC821DAC774AA8E042F26BF719BB0377616C6815",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

@@ -1,0 +1,53 @@
+{
+  "aggregate_kill_reasons": [
+    "account_or_jurisdiction_eligibility_unverified",
+    "block_trade_activity_not_executable_depth",
+    "fees_unverified",
+    "inactive_or_finalized_market",
+    "low_liquidity_or_missing_liquidity",
+    "max_loss_not_defined",
+    "official_settlement_source_unverified",
+    "orderbook_depth_unverified",
+    "pre_close_without_result",
+    "real_money_gate_absent",
+    "terminal_quotes_no_edge"
+  ],
+  "boundary": {
+    "api_key_created_or_used": false,
+    "browser_sessions_started": 0,
+    "deposits_or_withdrawals": 0,
+    "external_side_effects": 0,
+    "fixture_rows_created": 4,
+    "kalshi_account_or_login": false,
+    "market_data_api_calls": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "orderbook_api_calls": 0,
+    "orders_or_trades": 0,
+    "paper_rows_emitted": 4,
+    "payments_or_wallets": 0,
+    "promotable_candidates": 0,
+    "public_actions": 0,
+    "real_money_actions": 0,
+    "service_requests_mutated": 0,
+    "signed_api_requests": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "decision": "zero_promotable_candidates_paper_only_no_trade_no_account",
+  "fixture_path": "E:\\agent-company-lab\\reports\\prediction-market-research\\kalshi-public-data-paper-signal-checker-v1-fixture-20260618.json",
+  "generated_at": "2026-06-18T08:39:46Z",
+  "lane_id": "prediction_market_research",
+  "next_local_action": "Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked.",
+  "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+  "results_path": "E:\\agent-company-lab\\reports\\prediction-market-research\\kalshi-public-data-paper-signal-checker-v1-results-20260618.json",
+  "schema_version": "prediction_market_research.kalshi_public_data_paper_signal_checker.v1",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-kalshi_public_market_data-20260618",
+  "status": "kalshi_public_data_paper_signal_checker_complete_local_only",
+  "summary": {
+    "aggregate_kill_reason_count": 11,
+    "killed_count": 4,
+    "promotable_count": 0,
+    "row_count": 4
+  },
+  "task_id": "task-kalshi-public-data-paper-signal-checker-v1-20260618"
+}

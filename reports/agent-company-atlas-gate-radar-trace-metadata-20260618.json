@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "trace_id": "trace-agent-company-atlas-gate-radar-v1-20260618",
+  "task_id": "task-agent-company-atlas-gate-radar-v1-20260618",
+  "outcome_id": "outcome-agent-company-atlas-gate-radar-v1-20260618",
+  "event_id": "trace-atlas_gate_radar_added-20260618",
+  "duplicate_key": "atlas-gate-radar-v1",
+  "event_type": "atlas_gate_radar_added",
+  "outcome_type": "atlas_gate_radar_added",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "created_at": "2026-06-18",
+  "created_utc": "2026-06-17T22:55:45.0279365Z",
+  "summary": "Added a lane-local Gate Radar panel that visualizes blockers, service requests, and promotion gates as radar pings with pressure stats, gate cards, and local COM/Q/PATH controls.",
+  "research": {
+    "sources": [
+      "https://www.projectmanager.com/blog/risk-assessment-matrix-for-qualitative-analysis",
+      "https://www.atlassian.com/blog/project-management/most-common-project-blockers",
+      "https://appfire.com/resources/blog/project-risk-assessment-examples",
+      "https://plane.so/blog/project-blockers-definition-examples-and-how-to-overcome-them",
+      "https://www.atlassian.com/agile/project-management/risk-analysis",
+      "https://monday.com/blog/project-management/risk-tracking/",
+      "https://dribbble.com/search/quest-game-ui"
+    ],
+    "pattern_notes": [
+      "Risk matrices and heat maps help prioritize high-impact risks quickly.",
+      "Blocker management UI should distinguish issues that stop progress from softer impediments.",
+      "Project risk dashboards benefit from clear action routing so operators know where to resolve the blocker.",
+      "A game-like radar view can preserve urgency and atmosphere while still exposing the actual blocker text and next action."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "data_contract": [
+      "gateRadarItems(lane) derives pings from lane.gateMap, lane.serviceRequests, and fallback promotion gates.",
+      "gateRadarStats(lane, items) derives gates, review, requests, and pressure without adding schema.",
+      "renderGateRadar(lane) appears in Overview after Minigame Forge and before the legacy World Module.",
+      "COM and PATH are local detail navigation; Q only stages a browser-local blocker-review draft."
+    ],
+    "ui_notes": [
+      "The radar scope uses concentric rings, pings, and a central pressure readout.",
+      "Gate cards keep blocker body and next action visible beside the visual scope.",
+      "Mobile layout stacks the radar and console while keeping stats and actions in two-column/touch-friendly grids."
+    ]
+  },
+  "verification": {
+    "red": {
+      "route": "http://localhost:5177/?verify=gate-radar-red&cache=20260618-minigame-forge-final#lane=money_source_discovery&view=overview",
+      "result": "Expected failure before implementation: panel false, pings 0, stats 0, cards 0, actions []"
+    },
+    "green": {
+      "route": "http://localhost:5177/?verify=gate-radar-green&cache=20260618-gate-radar#lane=money_source_discovery&view=overview",
+      "result": "ok true; panel true; pings 1; stats 4; cards 1; actions [comms,path,queue]; Q changed label to OK and stagedCount to 1 staged; PATH opened Path Map; COM opened Comms; no clipped text or console errors."
+    },
+    "responsive": [
+      "phone 390: ok true, panel true, pings 1, cards 1, actions 3, boardColumns 1, statColumns 2, pageOverflow false, clipped []",
+      "tablet 820: ok true, panel true, pings 1, cards 1, actions 3, boardColumns 1, statColumns 2, pageOverflow false, clipped []",
+      "desktop 1280: ok true, panel true, pings 1, cards 1, actions 3, boardColumns 2, statColumns 4, pageOverflow false, clipped []",
+      "wide 1600: ok true, panel true, pings 1, cards 1, actions 3, boardColumns 2, statColumns 4, pageOverflow false, clipped []"
+    ],
+    "static": [
+      "node --check web\\app.js -> exit 0",
+      "Invoke-WebRequest http://localhost:5177/?verify=gate-radar-static-final&cache=20260618-gate-radar#lane=money_source_discovery&view=overview -> StatusCode=200 Length=13641",
+      "python -m json.tool web\\data\\snapshot.json -> exit 0",
+      "ASCII verified for web/index.html, web/app.js, web/styles.css, web/README.md"
+    ]
+  },
+  "source_hashes": {
+    "web/index.html": "BAD5F3F276E703599B10DB0571D3CC58D9024757C003BB2E164C4FD2A8418005",
+    "web/app.js": "F1081856313D0A82B4864578725FCA694DA5D788080AA171381BD07057E67DC6",
+    "web/styles.css": "70C79136915C73A99D929B3FB67E79D0ABE00E85C9BF65EEAE18D5799DAF6087",
+    "web/README.md": "D8A80685A3224825BEC30F8928BC0536611853A1AE3A92C5EEF149F67237AC47"
+  },
+  "next_actions": [
+    "Add a gate severity filter for local-only, browser, account, public, payment, or real-money gate categories.",
+    "Generate realm-specific radar skins so different minigame lanes visualize blockers with different atmosphere.",
+    "Add optional local notes to staged gate-review drafts without mutating snapshot data."
+  ]
+}

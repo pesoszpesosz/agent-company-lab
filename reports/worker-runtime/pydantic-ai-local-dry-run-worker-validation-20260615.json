@@ -1,0 +1,21 @@
+{
+  "all_no_execution": true,
+  "api_calls": false,
+  "approvals_granted": 0,
+  "chain_integrity_passed_before_manifest": true,
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "executable_rows": 0,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-15T12:30:00Z",
+  "manifest_count": 11,
+  "manifest_path": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-worker-manifest-20260615.json",
+  "model_api_calls": 0,
+  "schema_version": "pydantic_ai_local_dry_run_worker_manifest_validation.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_chain_failure_count": 0,
+  "worker_starts": 0
+}

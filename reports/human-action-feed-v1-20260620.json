@@ -1,0 +1,72 @@
+{
+  "schema_version": "human_action_feed.v1",
+  "generated_utc": "2026-06-20T16:52:00Z",
+  "owner_agent_id": "human-action-desk-worker-20260620",
+  "feed_status": "no_immediate_human_action_required_for_local_only_work",
+  "service_request_status_counts": {
+    "needs_review": 13,
+    "rejected": 2,
+    "complete": 1
+  },
+  "required_now": [],
+  "optional_gate_queue": [
+    {
+      "priority": 1,
+      "request_id": "req-promptbase-guideline-readonly-review-20260618",
+      "exact_human_decision": "Approve or reject read-only PromptBase guideline review.",
+      "why_ai_cannot_do_it_alone": "Existing service request is in needs_review; browser/source scope must be explicit.",
+      "expected_upside": "Sharper marketplace eligibility for the Agent Skill Starter Kit route.",
+      "decline_branch": "Continue with local marketplace draft from existing notes."
+    },
+    {
+      "priority": 2,
+      "request_id": "req-algora-opik-readonly-refresh-20260618",
+      "exact_human_decision": "Approve or reject read-only Algora/Opik refresh.",
+      "why_ai_cannot_do_it_alone": "Live route review could touch browser/service gates.",
+      "expected_upside": "Sharper claim-readiness and duplicate-risk checks for paid-code work.",
+      "decline_branch": "Continue hardening local duplicate-check worksheet."
+    },
+    {
+      "priority": 3,
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "exact_human_decision": "Approve or reject a scoped model/API execution plan.",
+      "why_ai_cannot_do_it_alone": "External model/API calls need provider, model, data, cost, and artifact scope.",
+      "expected_upside": "Unlock real model-backed evals after local fixtures pass.",
+      "decline_branch": "Keep using fixture-only local adapters."
+    },
+    {
+      "priority": 4,
+      "request_id": "req-grok-research-worker-20260614",
+      "exact_human_decision": "Approve or reject signed-in Grok/X read-only research.",
+      "why_ai_cannot_do_it_alone": "Signed-in browser state and social-platform scope need exact approval.",
+      "expected_upside": "Faster live social/content trend scouting.",
+      "decline_branch": "Use non-browser local reports and public-source notes only."
+    },
+    {
+      "priority": 5,
+      "request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "exact_human_decision": "Decide whether to prepare legal/KYC/tax/payment review for the digital product route.",
+      "why_ai_cannot_do_it_alone": "Legal/payment/marketplace obligations are human-risk decisions.",
+      "expected_upside": "Clarifies whether product listing routes are worth preparing.",
+      "decline_branch": "Keep product local and unlisted."
+    }
+  ],
+  "human_ask_required_fields": [
+    "exact_action",
+    "source_evidence",
+    "expected_upside",
+    "deadline",
+    "gate_category",
+    "why_ai_cannot_safely_do_it",
+    "decline_branch"
+  ],
+  "zero_side_effect_boundary": {
+    "user_credentials_requested_in_chat": 0,
+    "accounts_created": 0,
+    "browser_sessions_started": 0,
+    "public_actions_taken": 0,
+    "payments_trades_wallets_kyc_actions": 0,
+    "service_requests_approved_rejected_assigned_or_started_by_feed": 0,
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "cases_checked": 7,
+  "external_side_effects": false,
+  "failed_count": 0,
+  "runtime_boundary": {
+    "agent_runs": 0,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "durable_backend_imports": 0,
+    "external_side_effects": false,
+    "function_model_runs": 0,
+    "mcp_servers_started": 0,
+    "model_api_calls": false,
+    "model_requests_allowed": false,
+    "pydantic_ai_imports": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "test_model_runs": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.trace_metadata.pydantic_durable_adapter_manifest_fixture.v1",
+  "source_urls": [
+    "https://pydantic.dev/docs/ai/integrations/durable_execution/overview/",
+    "https://pydantic.dev/docs/ai/guides/testing/",
+    "https://pydantic.dev/docs/ai/core-concepts/capabilities/",
+    "https://pydantic.dev/docs/ai/api/pydantic-ai/toolsets/"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "file_count": 12,
+  "files": [
+    {
+      "relative_path": "docs/buyer-guide.md",
+      "sha256": "d680cdd927d0f67b0b29069b0a7148808ef965e15727ce2a9246eb65b68ad3c2",
+      "size_bytes": 1554
+    },
+    {
+      "relative_path": "docs/license-and-ip-note.md",
+      "sha256": "06d1915faf9c6dc489bb1c8015cf3e0c2bfa129cb6e6d0c8eb6434d816e89c8d",
+      "size_bytes": 1477
+    },
+    {
+      "relative_path": "docs/listing-draft.md",
+      "sha256": "5d716f468e916d7ccb32ae56b22d4d3ba15770a52f043cb24128cae7da10ee35",
+      "size_bytes": 1737
+    },
+    {
+      "relative_path": "docs/screenshot-plan.md",
+      "sha256": "1f4d00b660a6e7cbb8df5b6d22c4233e04b0b300935f47287caab4c5cd045ab3",
+      "size_bytes": 1111
+    },
+    {
+      "relative_path": "examples/local-research-skill/sample-output.md",
+      "sha256": "ffef4ee635ac60f2459f7104621396dab2ff638cd205bf618d09e490544e9d98",
+      "size_bytes": 1021
+    },
+    {
+      "relative_path": "examples/local-research-skill/SKILL.md",
+      "sha256": "77cc8f92edbd1baab88814e22c76f3356fff1269589615a74284e079005df0d0",
+      "size_bytes": 2153
+    },
+    {
+      "relative_path": "README.md",
+      "sha256": "d1a37031fd3bdb8be274bb831598e8d45108469fc46bdd8b11276fa119c3aae2",
+      "size_bytes": 3544
+    },
+    {
+      "relative_path": "templates/acceptance-review.template.md",
+      "sha256": "c743b49bb1cd0611da4f5af7cbd59560f8cef6d327323d0fbd793f26f305a65d",
+      "size_bytes": 1300
+    },
+    {
+      "relative_path": "templates/artifact-contract.template.md",
+      "sha256": "36c20fbd97cc2ea15a176994ceb7d50c1c301dae690a678abfdecabbc9f89293",
+      "size_bytes": 1168
+    },
+    {
+      "relative_path": "templates/gate-checklist.template.md",
+      "sha256": "85fa022701091518a524447c6a24e099298dd9569b5ac04d6dac224afd8c2888",
+      "size_bytes": 2029
+    },
+    {
+      "relative_path": "templates/service-request-checklist.template.md",
+      "sha256": "772719198037441534a47c8a6427b70accebc75db787fa08282e6f0a9fe8011e",
+      "size_bytes": 1589
+    },
+    {
+      "relative_path": "templates/SKILL.template.md",
+      "sha256": "bc8f1b5c7832c788f4fd5b95e794e9215c393e09e8ac77388572254ba65ad99f",
+      "size_bytes": 2987
+    }
+  ],
+  "product_dir": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+  "zip_checksum_plan": "After explicit human approval, create a deterministic zip from exactly these relative paths, record SHA-256, and review it before any Lemon Squeezy upload. This packet does not create or upload a zip."
+}

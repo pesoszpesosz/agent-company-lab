@@ -1,0 +1,262 @@
+{
+  "schema_version": "ceo_operating_goal.v1",
+  "status": "active_operating_objective",
+  "created_utc": "2026-06-20T00:00:00Z",
+  "project_root": "E:\\agent-company-lab",
+  "primary_owner_role": "ceo_orchestrator",
+  "risk_partner_role": "chief_risk_officer",
+  "operating_goal": "Run Agent Company as a parallel, evidence-driven, locally controlled agent business that discovers, tests, promotes, and retires online money paths while preserving explicit approval for accounts, KYC, legal commitments, public actions, payments, trading, wallets, live security testing, model/API spend, and external side effects.",
+  "north_star_metrics": [
+    "verified_realized_usd",
+    "promotable_opportunities_with_source_evidence",
+    "time_to_first_local_proof_artifact",
+    "weak_lane_fast_kill_rate",
+    "rare_exact_human_action_ratio",
+    "agent_tool_reuse_rate",
+    "control_plane_operation_capacity"
+  ],
+  "hard_boundaries": {
+    "allowed_without_extra_approval": [
+      "local_file_writes",
+      "local_task_records",
+      "local_artifact_records",
+      "local_outcome_records",
+      "local_trace_records",
+      "report_only_planning_packets",
+      "read_only_database_inspection"
+    ],
+    "requires_explicit_scoped_approval": [
+      "account_creation_or_login",
+      "terms_kyc_tax_billing_or_legal_commitment",
+      "public_submission_or_outreach",
+      "payment_purchase_wallet_or_trading_action",
+      "live_security_testing_beyond_read_only_public_code_review",
+      "paid_or_external_model_api_call",
+      "mcp_or_tool_egress",
+      "runtime_worker_browser_or_queue_start",
+      "credential_cookie_otp_private_key_seed_phrase_or_private_account_state_use"
+    ]
+  },
+  "ceo_loop": [
+    "load_latest_company_state",
+    "select_small_high_value_decision_batch",
+    "deduplicate_ownership_before_creating_agents_or_tools",
+    "dispatch_local_tasks_with_artifact_and_fast_fail_rules",
+    "keep_details_in_worker_files_reports_traces_and_outcomes",
+    "record_artifacts_traces_outcomes_blockers_and_next_actions",
+    "promote_lanes_with evidence_route_risk_and_ev",
+    "kill_or_pause_weak_lanes_fast",
+    "emit_rare_exact_human_action_requests",
+    "feed_lessons_to_goal_roles_lanes_catalog_and_dashboard"
+  ],
+  "departments": [
+    {
+      "department_id": "ai_resources",
+      "name": "AI Resources",
+      "manager_role_id": "ai_resources_manager",
+      "primary_lane_id": "ai_resources_lab",
+      "purpose": "Find, evaluate, compare, evolve, and retire agents, tools, repos, research infrastructures, company structures, and money-making systems while preventing AI sprawl.",
+      "core_outputs": [
+        "candidate_registry",
+        "capability_overlap_map",
+        "local_eval_harness",
+        "adoption_packet",
+        "retirement_packet",
+        "fast_test_recipe"
+      ],
+      "fast_fail_rule": "If a candidate cannot produce a useful local proof within two focused work blocks, report the blocker and kill, watch, or request the exact missing input."
+    },
+    {
+      "department_id": "human_action_desk",
+      "name": "Human Action Desk",
+      "manager_role_id": "human_action_desk_worker",
+      "purpose": "Maintain a rare, exact local feed of user-only actions such as KYC, legal terms, account ownership choices, billing, wallet custody, public submission approval, and final send decisions.",
+      "default_boundary": "report_only_until_operator_approval"
+    },
+    {
+      "department_id": "customer_operator_success",
+      "name": "Customer/Operator Success",
+      "manager_role_id": "premium_customer_intake_agent",
+      "primary_lane_id": "premium_customer_intake",
+      "purpose": "Receive the premium customer's newest requests and materials, check current company context, route work to the right lanes, preserve raw input outside the CEO context, and emit compact updates.",
+      "default_boundary": "local_routing_only_no_external_actions",
+      "not_a_rejection_engine_rule": "If an item cannot be used immediately, park it with a reason, propose the smallest next action, route it to watch/evaluation, or provide a safer alternative."
+    }
+  ],
+  "roles_to_materialize": [
+    "ai_resources_manager",
+    "ai_resource_evaluator",
+    "goal_evolver_agent",
+    "human_action_desk_worker",
+    "premium_customer_intake_agent"
+  ],
+  "lane_additions": [
+    {
+      "lane_id": "ai_resources_lab",
+      "department": "AI Resources",
+      "side_effects": [
+        "local_filesystem_writes",
+        "local_sqlite_records",
+        "local_dependency_fixture_review"
+      ],
+      "blocked_side_effects": [
+        "dependency_install_without_approval",
+        "account_action",
+        "browser_session",
+        "public_action",
+        "paid_api_call",
+        "runtime_worker_start"
+      ]
+    },
+    {
+      "lane_id": "premium_customer_intake",
+      "department": "Customer/Operator Success",
+      "side_effects": [
+        "local_input_packets",
+        "local_routing_ledger_entries",
+        "local_artifact_registration",
+        "local_task_proposals",
+        "compact_ceo_updates"
+      ],
+      "blocked_side_effects": [
+        "account_action",
+        "browser_session",
+        "public_action",
+        "paid_api_call",
+        "payment_wallet_trading_action",
+        "security_testing",
+        "runtime_worker_start"
+      ]
+    }
+  ],
+  "money_path_priorities": [
+    "digital_products_templates_plugins",
+    "paid_code_bounties",
+    "lead_generation_and_sales",
+    "youtube_content_channels",
+    "ai_ml_competitions_kaggle_arc",
+    "prediction_market_research",
+    "security_bounty_private_reports",
+    "web3_airdrops_grants_hackathons"
+  ],
+  "human_action_feed_required_fields": [
+    "exact_action_requested",
+    "why_ai_cannot_safely_do_it",
+    "business_reason",
+    "expected_upside",
+    "deadline_or_expiration",
+    "gate_category",
+    "source_evidence_path",
+    "decline_or_ignore_branch"
+  ],
+  "premium_customer_intake_policy": {
+    "role_id": "premium_customer_intake_agent",
+    "lane_id": "premium_customer_intake",
+    "mission": "Receive the user's newest requests and materials, inspect company context, route each item to the right lane, preserve raw input outside the CEO context, and provide compact user updates.",
+    "context_hygiene": "Raw materials stay in intake/material packets. CEO receives only context capsules and applied-knowledge deltas.",
+    "not_a_rejection_engine": true,
+    "allowed_default_statuses": [
+      "captured",
+      "routed",
+      "needs_synthesis",
+      "parked_with_revisit_condition",
+      "blocked_by_gate",
+      "applied",
+      "updated_customer"
+    ],
+    "knowledge_application_paths": [
+      "money_lane_packet",
+      "service_lane_packet",
+      "ai_resources_evaluation",
+      "human_action_feed",
+      "goal_evolver_review",
+      "ceo_state_packet",
+      "prompt_or_task_update",
+      "source_registry_update",
+      "dashboard_update",
+      "watch_list_with_revisit_condition"
+    ]
+  },
+  "browser_account_service_worker_policy": {
+    "read_only_public_research": "explicit_scoped_service_request_required",
+    "signed_in_read_only_research": "named_site_account_read_scope_forbidden_actions_and_stop_conditions_required",
+    "non_kyc_account_creation": "registration_packet_first_then_user_cro_approval",
+    "kyc_legal_tax_billing_payment_identity": "human_only_by_default",
+    "stop_conditions": [
+      "credentials",
+      "otp",
+      "terms",
+      "payment",
+      "wallet",
+      "settings",
+      "submission",
+      "private_data"
+    ]
+  },
+  "context_hygiene": {
+    "ceo_thread_policy": "keep_detail_out_of_thread",
+    "required_state_packet_fields": [
+      "current_decision_batch",
+      "active_blockers_and_gates",
+      "top_promoted_lanes",
+      "killed_lanes_and_reasons",
+      "human_action_feed",
+      "ai_resources_candidate_shortlist",
+      "next_dispatch_queue",
+      "metrics_since_last_packet"
+    ]
+  },
+  "scaling_capacity_policy": {
+    "source_of_truth": "state/agent_company.sqlite",
+    "benchmark_targets": [
+      1000,
+      10000,
+      100000
+    ],
+    "adapter_posture": "external_workflow_engines_are_future_adapters_until_report_only_decision_matrices_dry_runs_runtime_approval_and_service_worker_readiness_exist",
+    "candidate_adapters": [
+      "Temporal",
+      "DBOS",
+      "Hatchet",
+      "Trigger.dev",
+      "LangGraph",
+      "Prefect",
+      "Dagster",
+      "Restate"
+    ]
+  },
+  "goal_evolver": {
+    "role_id": "goal_evolver_agent",
+    "mission": "Improve the CEO operating goal over time by proposing evidence-backed diffs to wording, metrics, roles, boundaries, and department structure.",
+    "forbidden": [
+      "silently_expand_authority_boundaries",
+      "approve_external_actions",
+      "mutate_service_requests",
+      "start_workers_or_runtimes",
+      "change_public_or_account_state"
+    ],
+    "output": "goal_evolver_review_v1"
+  },
+  "goal_evolution_comment": "Evolve this goal from broad ambition into a sharper operating contract. Delete vague ambition, add promotion and kill rules, clarify human gates, and move repeated work from the CEO thread into reusable managers, AI Resources evaluations, service catalog entries, schemas, or dashboards.",
+  "immediate_backlog": [
+    "materialize_ai_resources_lab_and_candidate_registry",
+    "create_human_action_feed_v1",
+    "create_ceo_state_packet_v1",
+    "create_goal_evolver_review_v1",
+    "create_youtube_lane_scout_packet",
+    "create_control_plane_capacity_benchmark_packet",
+    "create_browser_account_service_worker_roadmap_packet",
+    "convert_next_blocker_triage_into_manager_dispatch_batch"
+  ],
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "wallet_payment_trading_actions": 0,
+    "security_testing_actions": 0,
+    "worker_runtime_starts": 0,
+    "model_api_mcp_calls": 0,
+    "service_requests_approved_or_assigned": 0,
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "all_checks_passed": true,
+  "assigns_service_requests": false,
+  "calls_apis": false,
+  "commands_executed": 0,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-17T18:52:16Z",
+  "high_priority_count": 2,
+  "json_path": "E:\\agent-company-lab\\reports\\worker-pool-registration-review-v1-20260617.json",
+  "manual_hold_count": 2,
+  "manual_register_later_count": 5,
+  "markdown_path": "E:\\agent-company-lab\\reports\\worker-pool-registration-review-v1-20260617.md",
+  "packet_count": 7,
+  "packet_dir": "E:\\agent-company-lab\\reports\\worker-pool-registration-review-packets",
+  "registers_pools": false,
+  "schema_path": "E:\\agent-company-lab\\architecture\\worker-pool-registration-review-v1.schema.json",
+  "schema_version": "agent_company.worker_pool_registration_review_validation.v1",
+  "starts_workers": false,
+  "updates_service_requests": false
+}

@@ -1,0 +1,38 @@
+{
+  "external_side_effects": false,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\agent-company-central-outbox-history-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:52:08Z",
+  "json_path": "E:\\agent-company-lab\\reports\\agent-company-central-outbox-history-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\agent-company-central-outbox-history-v1-20260617.md",
+  "messages_checked": 3,
+  "passed_count": 3,
+  "rows": [
+    {
+      "approval_posture": "local_only",
+      "failures": [],
+      "lane_id": "platform_engineering",
+      "message_id": "msg-wave10-central-outbox-build-20260617",
+      "message_type": "artifact_notice",
+      "replay_status": "queued"
+    },
+    {
+      "approval_posture": "needs_human_review",
+      "failures": [],
+      "lane_id": "paid_code_bounties",
+      "message_id": "msg-paid-code-parser-followup-20260617",
+      "message_type": "gate_request",
+      "replay_status": "queued"
+    },
+    {
+      "approval_posture": "local_only",
+      "failures": [],
+      "lane_id": "ai_ml_competitions",
+      "message_id": "msg-ai-competition-arc-followup-20260617",
+      "message_type": "dispatch",
+      "replay_status": "queued"
+    }
+  ],
+  "schema_path": "E:\\agent-company-lab\\architecture\\central-outbox-history-v1.schema.json",
+  "schema_version": "agent_company.central_outbox_history_validation.v1"
+}

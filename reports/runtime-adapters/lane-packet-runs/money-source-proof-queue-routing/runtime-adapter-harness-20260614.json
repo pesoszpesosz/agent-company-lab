@@ -1,0 +1,906 @@
+{
+  "api_calls": false,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-14T17:19:03Z",
+  "results": [
+    {
+      "adapter_result": {
+        "action": "prepare_local_artifact",
+        "adapter_id": "typed_worker_runtime_local_adapter",
+        "api_calls": false,
+        "artifact_plan": [
+          "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json"
+        ],
+        "external_side_effects": false,
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "preserved_blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "reason": "real typed worker produced proposal proposal-money_source_discovery-20260614",
+        "runtime_details": {
+          "lane_id": "money_source_discovery",
+          "proposal_blocked_actions": [
+            "browser read-only research",
+            "account registration packet",
+            "data/API access review",
+            "No legal/KYC/tax/billing/account-contract commitments without explicit user confirmation.",
+            "No real-money trades, deposits, withdrawals, or seed/private-key storage by autonomous agents.",
+            "No public claims/comments/submissions unless lane owner and route are explicitly assigned.",
+            "Every lane must record source, hypothesis, proof artifact, blocker, risk, and next action."
+          ],
+          "proposal_evidence_refs": [],
+          "proposal_id": "proposal-money_source_discovery-20260614",
+          "proposal_mode": "read_only_local_artifact",
+          "proposal_output_artifacts": [
+            "E:\\agent-company-lab\\reports\\worker-runtime\\money_source_discovery-typed-worker-proposal.json",
+            "E:\\agent-company-lab\\reports\\worker-runtime\\money_source_discovery-typed-worker-proposal.md"
+          ],
+          "proposal_required_service_requests": [
+            "browser_action_worker",
+            "account_registration_worker",
+            "chief_risk_officer"
+          ],
+          "proposal_task_title": "Prepare scoped local artifact proposal for money_source_discovery",
+          "typed_worker_runtime_called": true
+        },
+        "status": "prepared_local_artifact",
+        "trace_metadata": {
+          "api_calls": false,
+          "packet_id": "packet-money-source-proof-queue-routing",
+          "runtime": "typed_worker_runtime_local_adapter",
+          "span_kind": "runtime_adapter_eval"
+        }
+      },
+      "evaluation": {
+        "checks": {
+          "artifact_plan_present": true,
+          "blocked_actions_preserved": true,
+          "gated_openai_agents_stopped_before_manifest": true,
+          "gated_pydantic_ai_stopped_before_execution": true,
+          "gated_typed_worker_stopped_before_execution": true,
+          "langgraph_route_correct": true,
+          "langgraph_static_graph_materialized": true,
+          "no_api_calls": true,
+          "no_external_side_effects": true,
+          "openai_agents_manifest_used_when_expected": true,
+          "packet_valid": true,
+          "real_pydantic_ai_used_when_expected": true,
+          "real_typed_worker_used_when_expected": true,
+          "refusal_correct": true,
+          "result_schema_valid": true,
+          "trace_metadata_present": true
+        },
+        "packet_errors": [],
+        "passed": true
+      },
+      "packet": {
+        "allowed_actions": [
+          "read local proof queue JSON",
+          "read local weekly delta report",
+          "read local service-request packet as blocked-gate context",
+          "write local adapter result files",
+          "emit local trace metadata"
+        ],
+        "approval_requirements": [
+          {
+            "approval_status": "not_required",
+            "decision_owner": "requesting_manager_and_chief_risk_officer",
+            "gate": "browser_read_only_session",
+            "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user_or_cro",
+            "gate": "public_action_execution",
+            "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user",
+            "gate": "legal_kyc_tax_payment_gate",
+            "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+          }
+        ],
+        "blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "context_artifacts": [
+          {
+            "kind": "machine_readable_proof_queue",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\money-source-proof-queue-20260614.json",
+            "purpose": "16-row queue of candidate money-source routes, owner lanes, gates, planned proof paths, and blocked-until states."
+          },
+          {
+            "kind": "weekly_delta_local_dry_run",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\weekly-delta-local-dry-run-20260614.md",
+            "purpose": "Human-readable local dry-run explaining source routing and gate classes."
+          },
+          {
+            "kind": "service_request_packet",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+            "purpose": "Blocked browser-read-only review packet; context only."
+          }
+        ],
+        "created_utc": "2026-06-14T16:35:00Z",
+        "execution_mode": "local_only",
+        "expected_outputs": [
+          {
+            "kind": "lane_adapter_result",
+            "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "lane_id": "money_source_discovery",
+        "metadata": {
+          "api_calls": false,
+          "money_lane": "money_source_discovery",
+          "runtime": "runtime_adapter_harness",
+          "source_queue_candidates": 16,
+          "span_kind": "lane_packet_eval"
+        },
+        "objective": "Convert the existing 16-row local money-source proof queue and blocked browser-read-only service request into an auditable local routing packet without browser, account, API, public, wallet, payment, current-source verification, or real-money action.",
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "packet_type": "local_research",
+        "public_action_allowed": false,
+        "real_money_allowed": false,
+        "requester_agent_id": "recovered-profitable-edge-infra",
+        "required_service_requests": [],
+        "schema_version": "work_packet.v1",
+        "success_criteria": [
+          "all adapters prepare or materialize local-only artifact plans without external execution",
+          "result files are written and linked from aggregate reports",
+          "browser/current-source verification remains blocked",
+          "money-source browser-read-only service request remains needs_review",
+          "submitted_bounty_payouts remains excluded"
+        ],
+        "task_id": "task-money-source-proof-queue-routing-packet-20260614",
+        "title": "Package money-source proof queue routing evidence"
+      },
+      "result_file": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\packet-results\\packet-money-source-proof-queue-routing--typed_worker_runtime_local_adapter.json"
+    },
+    {
+      "adapter_result": {
+        "action": "prepare_local_artifact",
+        "adapter_id": "pydantic_ai_testmodel_local_adapter",
+        "api_calls": false,
+        "artifact_plan": [
+          "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json"
+        ],
+        "external_side_effects": false,
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "preserved_blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "reason": "Pydantic AI TestModel eval passed for money_source_discovery",
+        "runtime_details": {
+          "eval_json_path": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.json",
+          "eval_lanes": [
+            "money_source_discovery"
+          ],
+          "eval_markdown_path": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.md",
+          "eval_ok": true,
+          "eval_script": "E:\\agent-company-lab\\tools\\pydantic_ai_worker_eval.py",
+          "pydantic_ai_testmodel_called": true,
+          "pydantic_ai_version": "1.107.0",
+          "venv_python": "E:\\agent-company-lab\\.venv-runtime\\Scripts\\python.exe"
+        },
+        "status": "prepared_local_artifact",
+        "trace_metadata": {
+          "api_calls": false,
+          "packet_id": "packet-money-source-proof-queue-routing",
+          "runtime": "pydantic_ai_testmodel_local_adapter",
+          "span_kind": "runtime_adapter_eval"
+        }
+      },
+      "evaluation": {
+        "checks": {
+          "artifact_plan_present": true,
+          "blocked_actions_preserved": true,
+          "gated_openai_agents_stopped_before_manifest": true,
+          "gated_pydantic_ai_stopped_before_execution": true,
+          "gated_typed_worker_stopped_before_execution": true,
+          "langgraph_route_correct": true,
+          "langgraph_static_graph_materialized": true,
+          "no_api_calls": true,
+          "no_external_side_effects": true,
+          "openai_agents_manifest_used_when_expected": true,
+          "packet_valid": true,
+          "real_pydantic_ai_used_when_expected": true,
+          "real_typed_worker_used_when_expected": true,
+          "refusal_correct": true,
+          "result_schema_valid": true,
+          "trace_metadata_present": true
+        },
+        "packet_errors": [],
+        "passed": true
+      },
+      "packet": {
+        "allowed_actions": [
+          "read local proof queue JSON",
+          "read local weekly delta report",
+          "read local service-request packet as blocked-gate context",
+          "write local adapter result files",
+          "emit local trace metadata"
+        ],
+        "approval_requirements": [
+          {
+            "approval_status": "not_required",
+            "decision_owner": "requesting_manager_and_chief_risk_officer",
+            "gate": "browser_read_only_session",
+            "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user_or_cro",
+            "gate": "public_action_execution",
+            "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user",
+            "gate": "legal_kyc_tax_payment_gate",
+            "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+          }
+        ],
+        "blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "context_artifacts": [
+          {
+            "kind": "machine_readable_proof_queue",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\money-source-proof-queue-20260614.json",
+            "purpose": "16-row queue of candidate money-source routes, owner lanes, gates, planned proof paths, and blocked-until states."
+          },
+          {
+            "kind": "weekly_delta_local_dry_run",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\weekly-delta-local-dry-run-20260614.md",
+            "purpose": "Human-readable local dry-run explaining source routing and gate classes."
+          },
+          {
+            "kind": "service_request_packet",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+            "purpose": "Blocked browser-read-only review packet; context only."
+          }
+        ],
+        "created_utc": "2026-06-14T16:35:00Z",
+        "execution_mode": "local_only",
+        "expected_outputs": [
+          {
+            "kind": "lane_adapter_result",
+            "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "lane_id": "money_source_discovery",
+        "metadata": {
+          "api_calls": false,
+          "money_lane": "money_source_discovery",
+          "runtime": "runtime_adapter_harness",
+          "source_queue_candidates": 16,
+          "span_kind": "lane_packet_eval"
+        },
+        "objective": "Convert the existing 16-row local money-source proof queue and blocked browser-read-only service request into an auditable local routing packet without browser, account, API, public, wallet, payment, current-source verification, or real-money action.",
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "packet_type": "local_research",
+        "public_action_allowed": false,
+        "real_money_allowed": false,
+        "requester_agent_id": "recovered-profitable-edge-infra",
+        "required_service_requests": [],
+        "schema_version": "work_packet.v1",
+        "success_criteria": [
+          "all adapters prepare or materialize local-only artifact plans without external execution",
+          "result files are written and linked from aggregate reports",
+          "browser/current-source verification remains blocked",
+          "money-source browser-read-only service request remains needs_review",
+          "submitted_bounty_payouts remains excluded"
+        ],
+        "task_id": "task-money-source-proof-queue-routing-packet-20260614",
+        "title": "Package money-source proof queue routing evidence"
+      },
+      "result_file": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\packet-results\\packet-money-source-proof-queue-routing--pydantic_ai_testmodel_local_adapter.json"
+    },
+    {
+      "adapter_result": {
+        "action": "prepare_local_artifact",
+        "adapter_id": "openai_agents_sandbox_manifest_adapter",
+        "api_calls": false,
+        "artifact_plan": [
+          "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json"
+        ],
+        "external_side_effects": false,
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "preserved_blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "reason": "local OpenAI Agents sandbox manifest constructed with model execution disabled",
+        "runtime_details": {
+          "manifest": {
+            "agent": {
+              "handoffs": [],
+              "instructions": [
+                "Use only local context artifacts supplied in the work packet.",
+                "Do not call external models, APIs, tools, browsers, accounts, wallets, or payment systems.",
+                "Emit a structured local artifact plan and stop at any approval gate."
+              ],
+              "model_execution": "disabled_until_model_api_execution_service_approval",
+              "name": "agent-company-money_source_discovery-sandbox",
+              "tools": [
+                {
+                  "allowed_paths": [
+                    "E:\\agent-company-lab\\reports\\money-source-discovery\\money-source-proof-queue-20260614.json",
+                    "E:\\agent-company-lab\\reports\\money-source-discovery\\weekly-delta-local-dry-run-20260614.md",
+                    "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md"
+                  ],
+                  "mode": "local_read_only",
+                  "name": "read_local_context_artifacts"
+                },
+                {
+                  "allowed_paths": [
+                    "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json"
+                  ],
+                  "mode": "local_write_only",
+                  "name": "write_local_runtime_adapter_result"
+                }
+              ]
+            },
+            "expected_output_schema": "AdapterResult",
+            "guardrails": {
+              "api_calls": false,
+              "approval_requirements": [
+                {
+                  "approval_status": "not_required",
+                  "decision_owner": "requesting_manager_and_chief_risk_officer",
+                  "gate": "browser_read_only_session",
+                  "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+                },
+                {
+                  "approval_status": "not_required",
+                  "decision_owner": "user_or_cro",
+                  "gate": "public_action_execution",
+                  "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+                },
+                {
+                  "approval_status": "not_required",
+                  "decision_owner": "user",
+                  "gate": "legal_kyc_tax_payment_gate",
+                  "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+                }
+              ],
+              "blocked_actions": [
+                "browser automation",
+                "current-source verification",
+                "external URL checking",
+                "account login or registration",
+                "public action",
+                "bounty claim",
+                "competition signup",
+                "marketplace listing",
+                "wallet or payment action",
+                "legal/KYC/tax commitment",
+                "model/API execution",
+                "real-money action",
+                "submitted_bounty_payouts work"
+              ],
+              "external_side_effects": false,
+              "public_action_allowed": false,
+              "real_money_allowed": false,
+              "required_service_requests": []
+            },
+            "manifest_version": "openai_agents_sandbox_manifest.v1",
+            "packet_id": "packet-money-source-proof-queue-routing",
+            "trace_metadata": {
+              "api_calls": false,
+              "packet_id": "packet-money-source-proof-queue-routing",
+              "runtime": "openai_agents_sandbox_manifest_adapter",
+              "span_kind": "runtime_adapter_eval"
+            }
+          },
+          "manifest_guardrail_count": 13,
+          "manifest_tools_count": 2,
+          "model_execution": "disabled_until_model_api_execution_service_approval",
+          "openai_agents_sdk_called": false,
+          "sandbox_manifest_constructed": true
+        },
+        "status": "prepared_local_artifact",
+        "trace_metadata": {
+          "api_calls": false,
+          "packet_id": "packet-money-source-proof-queue-routing",
+          "runtime": "openai_agents_sandbox_manifest_adapter",
+          "span_kind": "runtime_adapter_eval"
+        }
+      },
+      "evaluation": {
+        "checks": {
+          "artifact_plan_present": true,
+          "blocked_actions_preserved": true,
+          "gated_openai_agents_stopped_before_manifest": true,
+          "gated_pydantic_ai_stopped_before_execution": true,
+          "gated_typed_worker_stopped_before_execution": true,
+          "langgraph_route_correct": true,
+          "langgraph_static_graph_materialized": true,
+          "no_api_calls": true,
+          "no_external_side_effects": true,
+          "openai_agents_manifest_used_when_expected": true,
+          "packet_valid": true,
+          "real_pydantic_ai_used_when_expected": true,
+          "real_typed_worker_used_when_expected": true,
+          "refusal_correct": true,
+          "result_schema_valid": true,
+          "trace_metadata_present": true
+        },
+        "packet_errors": [],
+        "passed": true
+      },
+      "packet": {
+        "allowed_actions": [
+          "read local proof queue JSON",
+          "read local weekly delta report",
+          "read local service-request packet as blocked-gate context",
+          "write local adapter result files",
+          "emit local trace metadata"
+        ],
+        "approval_requirements": [
+          {
+            "approval_status": "not_required",
+            "decision_owner": "requesting_manager_and_chief_risk_officer",
+            "gate": "browser_read_only_session",
+            "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user_or_cro",
+            "gate": "public_action_execution",
+            "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user",
+            "gate": "legal_kyc_tax_payment_gate",
+            "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+          }
+        ],
+        "blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "context_artifacts": [
+          {
+            "kind": "machine_readable_proof_queue",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\money-source-proof-queue-20260614.json",
+            "purpose": "16-row queue of candidate money-source routes, owner lanes, gates, planned proof paths, and blocked-until states."
+          },
+          {
+            "kind": "weekly_delta_local_dry_run",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\weekly-delta-local-dry-run-20260614.md",
+            "purpose": "Human-readable local dry-run explaining source routing and gate classes."
+          },
+          {
+            "kind": "service_request_packet",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+            "purpose": "Blocked browser-read-only review packet; context only."
+          }
+        ],
+        "created_utc": "2026-06-14T16:35:00Z",
+        "execution_mode": "local_only",
+        "expected_outputs": [
+          {
+            "kind": "lane_adapter_result",
+            "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "lane_id": "money_source_discovery",
+        "metadata": {
+          "api_calls": false,
+          "money_lane": "money_source_discovery",
+          "runtime": "runtime_adapter_harness",
+          "source_queue_candidates": 16,
+          "span_kind": "lane_packet_eval"
+        },
+        "objective": "Convert the existing 16-row local money-source proof queue and blocked browser-read-only service request into an auditable local routing packet without browser, account, API, public, wallet, payment, current-source verification, or real-money action.",
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "packet_type": "local_research",
+        "public_action_allowed": false,
+        "real_money_allowed": false,
+        "requester_agent_id": "recovered-profitable-edge-infra",
+        "required_service_requests": [],
+        "schema_version": "work_packet.v1",
+        "success_criteria": [
+          "all adapters prepare or materialize local-only artifact plans without external execution",
+          "result files are written and linked from aggregate reports",
+          "browser/current-source verification remains blocked",
+          "money-source browser-read-only service request remains needs_review",
+          "submitted_bounty_payouts remains excluded"
+        ],
+        "task_id": "task-money-source-proof-queue-routing-packet-20260614",
+        "title": "Package money-source proof queue routing evidence"
+      },
+      "result_file": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\packet-results\\packet-money-source-proof-queue-routing--openai_agents_sandbox_manifest_adapter.json"
+    },
+    {
+      "adapter_result": {
+        "action": "prepare_local_artifact",
+        "adapter_id": "langgraph_static_graph_adapter",
+        "api_calls": false,
+        "artifact_plan": [
+          "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json"
+        ],
+        "external_side_effects": false,
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "preserved_blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "reason": "static graph materialized route: validate -> synthesize -> write",
+        "runtime_details": {
+          "graph": {
+            "api_calls": false,
+            "edges": [
+              [
+                "validate_packet",
+                "route_by_gate"
+              ],
+              [
+                "route_by_gate",
+                "stop_at_gate"
+              ],
+              [
+                "route_by_gate",
+                "synthesize_local_artifact_plan"
+              ],
+              [
+                "synthesize_local_artifact_plan",
+                "write_local_result"
+              ]
+            ],
+            "engine_imported": false,
+            "external_side_effects": false,
+            "graph_version": "langgraph_static_plan.v1",
+            "guards": {
+              "approval_requirements": [
+                {
+                  "approval_status": "not_required",
+                  "decision_owner": "requesting_manager_and_chief_risk_officer",
+                  "gate": "browser_read_only_session",
+                  "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+                },
+                {
+                  "approval_status": "not_required",
+                  "decision_owner": "user_or_cro",
+                  "gate": "public_action_execution",
+                  "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+                },
+                {
+                  "approval_status": "not_required",
+                  "decision_owner": "user",
+                  "gate": "legal_kyc_tax_payment_gate",
+                  "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+                }
+              ],
+              "blocked_actions": [
+                "browser automation",
+                "current-source verification",
+                "external URL checking",
+                "account login or registration",
+                "public action",
+                "bounty claim",
+                "competition signup",
+                "marketplace listing",
+                "wallet or payment action",
+                "legal/KYC/tax commitment",
+                "model/API execution",
+                "real-money action",
+                "submitted_bounty_payouts work"
+              ],
+              "model_api_allowed": false,
+              "public_action_allowed": false,
+              "real_money_allowed": false,
+              "required_service_requests": []
+            },
+            "nodes": [
+              {
+                "id": "validate_packet",
+                "inputs": [
+                  "work_packet.v1"
+                ],
+                "kind": "validator",
+                "outputs": [
+                  "packet_errors",
+                  "gate_context"
+                ]
+              },
+              {
+                "id": "route_by_gate",
+                "inputs": [
+                  "packet_errors",
+                  "gate_context"
+                ],
+                "kind": "conditional_router",
+                "routes": {
+                  "stop": "stop_at_gate",
+                  "synthesize": "synthesize_local_artifact_plan"
+                }
+              },
+              {
+                "id": "synthesize_local_artifact_plan",
+                "inputs": [
+                  "context_artifacts",
+                  "expected_outputs",
+                  "blocked_actions"
+                ],
+                "kind": "local_transform",
+                "outputs": [
+                  "adapter_result"
+                ],
+                "side_effects": false
+              },
+              {
+                "id": "stop_at_gate",
+                "inputs": [
+                  "blocked_actions",
+                  "required_service_requests",
+                  "approval_requirements"
+                ],
+                "kind": "terminal_refusal",
+                "outputs": [
+                  "refusal_result"
+                ],
+                "side_effects": false
+              },
+              {
+                "allowed_paths": [
+                  "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json"
+                ],
+                "id": "write_local_result",
+                "inputs": [
+                  "adapter_result"
+                ],
+                "kind": "local_write_plan",
+                "side_effects": false
+              }
+            ],
+            "packet_id": "packet-money-source-proof-queue-routing",
+            "route_decision": {
+              "reason": "packet is local-only and requires no approved service",
+              "selected_route": "synthesize"
+            },
+            "runtime": "langgraph_static_graph_adapter"
+          },
+          "graph_edge_count": 4,
+          "graph_node_count": 5,
+          "graph_route": "synthesize",
+          "langgraph_engine_imported": false,
+          "static_graph_materialized": true
+        },
+        "status": "prepared_local_artifact",
+        "trace_metadata": {
+          "api_calls": false,
+          "packet_id": "packet-money-source-proof-queue-routing",
+          "runtime": "langgraph_static_graph_adapter",
+          "span_kind": "runtime_adapter_eval"
+        }
+      },
+      "evaluation": {
+        "checks": {
+          "artifact_plan_present": true,
+          "blocked_actions_preserved": true,
+          "gated_openai_agents_stopped_before_manifest": true,
+          "gated_pydantic_ai_stopped_before_execution": true,
+          "gated_typed_worker_stopped_before_execution": true,
+          "langgraph_route_correct": true,
+          "langgraph_static_graph_materialized": true,
+          "no_api_calls": true,
+          "no_external_side_effects": true,
+          "openai_agents_manifest_used_when_expected": true,
+          "packet_valid": true,
+          "real_pydantic_ai_used_when_expected": true,
+          "real_typed_worker_used_when_expected": true,
+          "refusal_correct": true,
+          "result_schema_valid": true,
+          "trace_metadata_present": true
+        },
+        "packet_errors": [],
+        "passed": true
+      },
+      "packet": {
+        "allowed_actions": [
+          "read local proof queue JSON",
+          "read local weekly delta report",
+          "read local service-request packet as blocked-gate context",
+          "write local adapter result files",
+          "emit local trace metadata"
+        ],
+        "approval_requirements": [
+          {
+            "approval_status": "not_required",
+            "decision_owner": "requesting_manager_and_chief_risk_officer",
+            "gate": "browser_read_only_session",
+            "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user_or_cro",
+            "gate": "public_action_execution",
+            "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+          },
+          {
+            "approval_status": "not_required",
+            "decision_owner": "user",
+            "gate": "legal_kyc_tax_payment_gate",
+            "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+          }
+        ],
+        "blocked_actions": [
+          "browser automation",
+          "current-source verification",
+          "external URL checking",
+          "account login or registration",
+          "public action",
+          "bounty claim",
+          "competition signup",
+          "marketplace listing",
+          "wallet or payment action",
+          "legal/KYC/tax commitment",
+          "model/API execution",
+          "real-money action",
+          "submitted_bounty_payouts work"
+        ],
+        "context_artifacts": [
+          {
+            "kind": "machine_readable_proof_queue",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\money-source-proof-queue-20260614.json",
+            "purpose": "16-row queue of candidate money-source routes, owner lanes, gates, planned proof paths, and blocked-until states."
+          },
+          {
+            "kind": "weekly_delta_local_dry_run",
+            "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\weekly-delta-local-dry-run-20260614.md",
+            "purpose": "Human-readable local dry-run explaining source routing and gate classes."
+          },
+          {
+            "kind": "service_request_packet",
+            "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+            "purpose": "Blocked browser-read-only review packet; context only."
+          }
+        ],
+        "created_utc": "2026-06-14T16:35:00Z",
+        "execution_mode": "local_only",
+        "expected_outputs": [
+          {
+            "kind": "lane_adapter_result",
+            "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json",
+            "required": true
+          }
+        ],
+        "external_side_effects_allowed": false,
+        "lane_id": "money_source_discovery",
+        "metadata": {
+          "api_calls": false,
+          "money_lane": "money_source_discovery",
+          "runtime": "runtime_adapter_harness",
+          "source_queue_candidates": 16,
+          "span_kind": "lane_packet_eval"
+        },
+        "objective": "Convert the existing 16-row local money-source proof queue and blocked browser-read-only service request into an auditable local routing packet without browser, account, API, public, wallet, payment, current-source verification, or real-money action.",
+        "packet_id": "packet-money-source-proof-queue-routing",
+        "packet_type": "local_research",
+        "public_action_allowed": false,
+        "real_money_allowed": false,
+        "requester_agent_id": "recovered-profitable-edge-infra",
+        "required_service_requests": [],
+        "schema_version": "work_packet.v1",
+        "success_criteria": [
+          "all adapters prepare or materialize local-only artifact plans without external execution",
+          "result files are written and linked from aggregate reports",
+          "browser/current-source verification remains blocked",
+          "money-source browser-read-only service request remains needs_review",
+          "submitted_bounty_payouts remains excluded"
+        ],
+        "task_id": "task-money-source-proof-queue-routing-packet-20260614",
+        "title": "Package money-source proof queue routing evidence"
+      },
+      "result_file": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\packet-results\\packet-money-source-proof-queue-routing--langgraph_static_graph_adapter.json"
+    }
+  ],
+  "schema_path": "E:\\agent-company-lab\\architecture\\work-packet-v1.schema.json",
+  "summary": {
+    "adapters": [
+      "typed_worker_runtime_local_adapter",
+      "pydantic_ai_testmodel_local_adapter",
+      "openai_agents_sandbox_manifest_adapter",
+      "langgraph_static_graph_adapter"
+    ],
+    "failed": 0,
+    "packets": [
+      "packet-money-source-proof-queue-routing"
+    ],
+    "passed": 4,
+    "result_files_dir": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\packet-results",
+    "result_files_written": 4,
+    "total": 4
+  }
+}

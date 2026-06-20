@@ -1,0 +1,228 @@
+{
+  "schema_version": "agent_company.durable_runtime_comparison_decision_packet.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-durable-runtime-comparison-decision-packet-v1-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_validation_paths": [
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-service-worker-reducer-fixture-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\inngest-event-flow-control-fixture-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\prefect-flow-manifest-source-refresh-fixture-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\durable-orchestration\\restate-agent-service-boundary-fixture-v1-validation-20260617.json"
+  ],
+  "decision_summary": {
+    "decision_id": "durable-runtime-comparison-decision-20260617",
+    "status": "local_decision_packet_ready_no_runtime_approval",
+    "primary_recommendation": "Implement the next executable layer as a local SQLite/outbox service-worker queue runner, not as Temporal, Inngest, DBOS, Pydantic durable execution, Prefect, or Restate.",
+    "why": [
+      "SQLite is already the CEO source of truth and is the only runtime marked safe_now in the validated matrix.",
+      "All external durable runtimes remain dependency/runtime/account/server/cloud/API/model gated.",
+      "The validated fixture chain shows the semantics we need first: park gate requests, preserve central outbox history, reject silent skips, reject public/model/browser/API/tool execution, and avoid service-request mutation without human decisions.",
+      "The money-lane company needs reliable local dequeue, idempotency, and audit replay before it needs a distributed runtime."
+    ],
+    "approved_now": [
+      "local_report_only_decision_packet",
+      "local_sqlite_queue_runner_design",
+      "local_outbox_acknowledgement_preview",
+      "local_service_worker_request_state_machine_preview"
+    ],
+    "not_approved_now": [
+      "dependency_install",
+      "runtime_start",
+      "temporal_worker_or_server",
+      "inngest_client_or_server",
+      "dbos_launch_or_database_provisioning",
+      "pydantic_real_model_provider",
+      "prefect_deployment_schedule_worker_or_cloud",
+      "restate_server_or_service_invocation",
+      "browser_session",
+      "service_request_assignment_or_start",
+      "public_action",
+      "payment_wallet_or_real_money_action"
+    ]
+  },
+  "runtime_recommendations": [
+    {
+      "runtime_id": "sqlite_control_plane",
+      "rank": 1,
+      "decision": "promote_now_local_only",
+      "score": 94,
+      "implementation_role": "Build local executable queue runner and idempotent outbox acknowledgement previews inside the existing CEO ledger.",
+      "required_gates_before_execution": [],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-validation-20260617.json",
+        "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+      ]
+    },
+    {
+      "runtime_id": "temporal_python",
+      "rank": 2,
+      "decision": "hold_for_human_runtime_approval_after_local_runner",
+      "score": 83,
+      "implementation_role": "Best future fit for long-running approval workflows and human review signals once local runner semantics are proven.",
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "runtime_server_worker_approval",
+        "service_worker_pool_registration_approval",
+        "determinism_review",
+        "human_signal_authority_packet"
+      ],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-validation-20260617.json"
+      ]
+    },
+    {
+      "runtime_id": "inngest",
+      "rank": 3,
+      "decision": "hold_for_event_adapter_approval_after_local_outbox_ack",
+      "score": 78,
+      "implementation_role": "Future event-driven adapter for outbox dispatch, idempotency, concurrency, throttling, and rate-limit semantics.",
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "network_or_cloud_boundary_review",
+        "event_endpoint_approval",
+        "trace_export_contract_approval"
+      ],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\inngest-event-flow-control-fixture-v1-validation-20260617.json"
+      ]
+    },
+    {
+      "runtime_id": "dbos_python",
+      "rank": 4,
+      "decision": "hold_for_database_provisioning_review",
+      "score": 76,
+      "implementation_role": "Future database-backed workflow adapter if the company outgrows the SQLite runner and needs Postgres-backed durable steps.",
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "database_provisioning_review",
+        "secrets_credentials_handling_gate",
+        "state_migration_review"
+      ],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\dbos-workflow-step-boundary-fixture-v1-validation-20260617.json"
+      ]
+    },
+    {
+      "runtime_id": "pydantic_ai_durable_execution",
+      "rank": 5,
+      "decision": "reference_only_until_model_api_gate",
+      "score": 75,
+      "implementation_role": "Use as a typed agent contract reference with TestModel/FunctionModel only; real provider execution remains separate.",
+      "required_gates_before_execution": [
+        "model_api_execution_gate",
+        "provider_model_cost_scope_approval",
+        "credential_route_approval",
+        "output_artifact_scope_approval"
+      ],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-validation-20260617.json"
+      ]
+    },
+    {
+      "runtime_id": "restate",
+      "rank": 6,
+      "decision": "watchlist_after_local_outbox_service_boundaries",
+      "score": 70,
+      "implementation_role": "Future durable agent/service runtime once the central outbox service boundary is proven and server/runtime approval exists.",
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "server_runtime_review",
+        "service_invocation_approval",
+        "llm_tool_execution_gate",
+        "state_retention_review"
+      ],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\restate-agent-service-boundary-fixture-v1-validation-20260617.json"
+      ]
+    },
+    {
+      "runtime_id": "prefect",
+      "rank": 7,
+      "decision": "watchlist_for_source_refresh_after_local_runner",
+      "score": 66,
+      "implementation_role": "Future source-refresh workflow adapter for local/idempotent scans only after local runner and source gates are stable.",
+      "required_gates_before_execution": [
+        "dependency_install_approval",
+        "server_or_cloud_boundary_review_if_used",
+        "source_refresh_service_request_approval",
+        "retry_idempotency_review"
+      ],
+      "evidence_paths": [
+        "E:\\agent-company-lab\\reports\\durable-orchestration\\prefect-flow-manifest-source-refresh-fixture-v1-validation-20260617.json"
+      ]
+    }
+  ],
+  "implementation_sequence": [
+    {
+      "sequence": 1,
+      "build_id": "sqlite_outbox_acknowledgement_runner_v1",
+      "status": "recommended_next_local_build",
+      "scope": "Read central_outbox_history.v1 and service_worker_request queue snapshots, compute idempotent acknowledgement previews, and write local reports only.",
+      "must_preserve": [
+        "no service_request mutation",
+        "no worker start",
+        "no browser/API/model/public/account/wallet/payment/security/real-money action",
+        "all gate_request messages park awaiting human review",
+        "central outbox remains replayable"
+      ]
+    },
+    {
+      "sequence": 2,
+      "build_id": "local_service_worker_request_state_machine_runner_v1",
+      "status": "recommended_after_ack_preview",
+      "scope": "Add a local state-machine preview over service-worker requests, with terminal-state and approval-scope checks.",
+      "must_preserve": [
+        "approved requests can only preview assignment/start commands",
+        "needs_review requests remain parked",
+        "rejected and complete requests never revive"
+      ]
+    },
+    {
+      "sequence": 3,
+      "build_id": "runtime_implementation_human_approval_packet_v2",
+      "status": "recommended_before_any_external_runtime",
+      "scope": "Ask human/CRO to approve or reject a specific runtime implementation with dependency, server/cloud, data, cost, and credential boundaries.",
+      "must_preserve": [
+        "no implicit approval from this decision packet",
+        "one runtime candidate per approval packet",
+        "explicit rollback and stop conditions"
+      ]
+    }
+  ],
+  "approval_gates": [
+    "dependency_install_approval",
+    "runtime_server_or_cloud_approval",
+    "database_provisioning_review",
+    "secrets_credentials_handling_gate",
+    "model_api_execution_gate",
+    "browser_read_only_session_approval",
+    "public_action_execution_approval",
+    "wallet_payment_real_money_gate",
+    "security_report_or_testing_scope_approval",
+    "service_worker_pool_registration_approval"
+  ],
+  "runtime_boundary": {
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "runtime_starts": 0,
+    "queue_enqueues": 0,
+    "workflow_starts": 0,
+    "event_sends": 0,
+    "server_starts": 0,
+    "database_provisioning": false,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "model_api_calls": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_local_test": "sqlite_outbox_acknowledgement_runner_v1_without_service_request_mutation"
+}

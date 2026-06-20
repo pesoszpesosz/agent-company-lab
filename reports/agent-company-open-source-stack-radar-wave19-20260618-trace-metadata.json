@@ -1,0 +1,54 @@
+{
+  "agent_id": "recovered-profitable-edge-infra",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\data\\agent-company-open-source-stack-radar-wave19-20260618.json",
+      "sha256": "6f16c0863a69a340c629c975ee2af508a635791e5d321be9944e714ca118d359"
+    },
+    {
+      "path": "E:\\agent-company-lab\\data\\agent-company-open-source-stack-radar-wave19-20260618.csv",
+      "sha256": "15ec9b5ce3aead6653751002418723947244c017018bd2139a647bf5029eb993"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-open-source-stack-radar-wave19-20260618.json",
+      "sha256": "46139c66c1269b08d02a7bd11fc2498149321f1325a17d66a698ca877b31f42f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-open-source-stack-radar-wave19-20260618.md",
+      "sha256": "e7a7176806f2a6ccfd7ae6115cf72beb30be57eaa1bcc3cb04ef0264532e8660"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-open-source-stack-radar-wave19-20260618-validation.json",
+      "sha256": "bf9272c7ebbf947fe7e90a7ef96a5d21d0c41bac5de9d8b1695bcc3c069728d9"
+    }
+  ],
+  "boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "runtime_starts": 0,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "generated_utc": "2026-06-17T22:52:55Z",
+  "lane_id": "platform_engineering",
+  "next_action": "Create agent_company_runtime_adoption_docket_v1 to convert this radar into reference/adapter/blocked dependency decisions for the agent company.",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "summary": "Read-only current GitHub metadata radar for open-source agent-company infrastructure candidates across orchestration, durable execution, browser workers, MCP/gateway, observability, and workflow automation.",
+  "task_id": "task-agent-company-open-source-stack-radar-wave19-20260618",
+  "trace_id": "trace-agent-company-open-source-stack-radar-wave19-20260618",
+  "verification": {
+    "all_checks_passed": true,
+    "candidate_count": 27,
+    "failed_fetch_count": 0,
+    "github_metadata_reads": 27
+  }
+}

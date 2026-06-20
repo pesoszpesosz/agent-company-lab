@@ -1,0 +1,30 @@
+{
+  "brief_all_checks_passed": true,
+  "brief_failure_count": 0,
+  "brief_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-build-brief-validation-latest.json",
+  "brief_validation_schema": "agent_company.digital_products_local_build_brief_validation.v1",
+  "browser_sessions_started": 0,
+  "chain_checked_report_count": 40,
+  "chain_failure_count": 0,
+  "db_counts_before_closeout": {
+    "artifacts_total": 599,
+    "digital_evidence_total": 4,
+    "lane_evidence_total": 79,
+    "outcomes_total": 154,
+    "service_request_status_counts": {
+      "complete": 1,
+      "needs_review": 11,
+      "rejected": 2
+    },
+    "tasks_complete": 155,
+    "tasks_total": 155,
+    "trace_events_total": 165
+  },
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:15:07Z",
+  "schema_version": "agent_company.digital_products_local_build_brief_cli_test.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "E6E84D8861E8B81C447005ADE2BA3701580FF50DDD194CE42A125AEEA183601E",
+  "worker_starts": 0
+}

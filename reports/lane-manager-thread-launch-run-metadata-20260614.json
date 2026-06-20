@@ -1,0 +1,10 @@
+{
+  "api_calls": false,
+  "created_thread_count": 7,
+  "held_lanes": [
+    "platform_engineering",
+    "submitted_bounty_payouts"
+  ],
+  "runtime": "codex_app.create_thread_projectless",
+  "span_kind": "WORKFLOW"
+}

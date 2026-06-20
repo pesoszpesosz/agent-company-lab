@@ -1,0 +1,23 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "all_candidates_have_source_urls": true,
+    "browser_sessions_started": 0,
+    "candidate_count": 13,
+    "candidate_count_at_least_10": true,
+    "external_side_effects": false,
+    "github_api_error_count": 0,
+    "github_api_success_count": 13,
+    "has_adapter_candidates": true,
+    "has_foundation_recommendation": true,
+    "installs_started": 0,
+    "mcp_servers_started": 0,
+    "submission_ready_count": 0,
+    "workers_started": 0
+  },
+  "failure_count": 0,
+  "generated_utc": "2026-06-17T22:16:25Z",
+  "lane_id": "platform_engineering",
+  "schema_version": "agent_company.browser_worker_stack_radar_wave18_validation.v1",
+  "task_id": "task-browser-worker-stack-radar-wave18-20260618"
+}

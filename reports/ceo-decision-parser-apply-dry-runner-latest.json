@@ -1,0 +1,67 @@
+{
+  "accepted_apply_preview_count": 1,
+  "apply_dry_run_execution_count": 1,
+  "approval_request_count": 0,
+  "dry_run_result": {
+    "accepted_apply_preview": true,
+    "preview_state": "would_update_single_service_request_approval_scope",
+    "preview_update": {
+      "applied": false,
+      "approval_scope_before": null,
+      "decision_note_before": null,
+      "field_updates": {
+        "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+      },
+      "request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "status_after": "needs_review",
+      "status_before": "needs_review",
+      "would_update_count": 1
+    },
+    "rule_id": null,
+    "target_service_request_ids": [
+      "req-wave4-digital-products-browser-readonly-20260614"
+    ]
+  },
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_preview_match_count": 1,
+  "generated_utc": "2026-06-16T00:02:51Z",
+  "lane_evidence_rows_after": 113,
+  "lane_evidence_rows_before": 112,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_dry_runner_passed_preview_only",
+  "mutation_applied_count": 0,
+  "next_action": "Keep real apply disabled; next create an apply-readiness packet that names the exact DB update, rollback check, and operator approval needed before any service request mutation.",
+  "positive_apply_fixture_count": 1,
+  "preview_update_count": 1,
+  "queue_mutation_count": 0,
+  "recommended_default": "require_operator_apply_approval_before_real_update",
+  "runner_evidence_id": "ceo-decision-parser-apply-dry-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-ceo-decision-parser-apply-dry-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_dry_runner.v1",
+  "source_positive_fixture_evidence_id": "ceo-decision-parser-apply-positive-fixture-20260616",
+  "source_positive_fixture_task_id": "task-ceo-decision-parser-apply-positive-fixture-20260616",
+  "source_positive_fixture_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-positive-fixture-validation-latest.json",
+  "summary": "Ran a local report-only apply dry-run against the positive apply fixture. The runner accepted the preview, matched the single expected service-request field update, and applied nothing.",
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_runner": 1,
+  "tasks_table_rows_after": 205,
+  "tasks_table_rows_before": 204
+}

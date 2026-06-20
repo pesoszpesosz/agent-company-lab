@@ -1,0 +1,58 @@
+{
+  "traceId": "trace-agent-company-atlas-command-mobile-stage-stack-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-mobile-stage-stack-v1-20260619",
+  "eventId": "trace-atlas_command_mobile_stage_stack_added-20260619",
+  "createdUtc": "2026-06-18T22:56:18Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "title": "Command Mobile Stage Stack",
+  "summary": "Bounded the phone-sized Command workspace so the active lane detail, lane selector, and atlas map behave like compact game layers instead of one tall forced-scroll pile.",
+  "changeType": "mobile_scroll_compression",
+  "stageModel": {
+    "mobileBehavior": "The active lane detail remains first, the lane rail becomes a shorter internal selector, and the atlas map becomes a compact 220px tactical layer.",
+    "desktopBehavior": "The desktop Command stage remains unchanged with the wide detail stage, compact rail, and supporting map all aligned at 640px.",
+    "motionBehavior": "Existing stage scan, rail pips, and map motion stay intact while the smaller viewport makes them feel like focused HUD layers."
+  },
+  "browserEvidence": {
+    "mobileCommandChronicle": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "previousWorkspaceHeight": 1677,
+      "workspaceHeight": 905,
+      "detailHeight": 385,
+      "lanePanelHeight": 280,
+      "laneListHeight": 202,
+      "mapStageHeight": 220,
+      "detailOverflow": 0,
+      "dockOverflowX": "auto",
+      "activeLaneFirst": "platform_engineering"
+    },
+    "desktopCommandChronicle": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "workspaceY": 116,
+      "workspaceHeight": 640,
+      "detailWidth": 800,
+      "mapHeight": 640,
+      "detailOverflow": 0,
+      "activeLaneFirst": "platform_engineering"
+    }
+  },
+  "verification": [
+    "python -m pytest tests/test_agent_company_atlas_command_workspace_first.py -q",
+    "node --check web/app.js",
+    "In-app browser QA on command deck Chronicle route at 390x844 and 1440x900"
+  ],
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "reports/agent-company-atlas-command-mobile-stage-stack-trace-metadata-20260619.json",
+    "web/data/snapshot.json"
+  ]
+}

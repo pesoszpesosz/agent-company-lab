@@ -1,0 +1,79 @@
+{
+  "baseline_summary": {
+    "continue_rule_passed": true,
+    "environment_count": 4,
+    "episode_count": 8,
+    "planner_beats_count": 4,
+    "policy_count": 2
+  },
+  "boundary": {
+    "api_keys_created_or_used": false,
+    "browser_sessions_started": 0,
+    "episodes_run": 8,
+    "external_side_effects": 0,
+    "kaggle_account_or_login": false,
+    "official_arc_toolkit_installed_or_run": false,
+    "official_or_gated_data_downloaded": false,
+    "paid_compute_or_model_api": false,
+    "papers_or_notebooks_published": 0,
+    "public_actions": 0,
+    "rules_or_terms_accepted": false,
+    "scorecards_opened": 0,
+    "service_requests_mutated": 0,
+    "submissions_made": 0,
+    "synthetic_environments_created": 4,
+    "workers_or_runtimes_started": 0
+  },
+  "comparison": [
+    {
+      "distractor_sweep_actions": 6,
+      "distractor_sweep_success": false,
+      "env_id": "key_door_with_decoys",
+      "planner_actions": 3,
+      "planner_beats_distractor_sweep": true,
+      "planner_success": true
+    },
+    {
+      "distractor_sweep_actions": 6,
+      "distractor_sweep_success": false,
+      "env_id": "bridge_toggle_with_waits",
+      "planner_actions": 3,
+      "planner_beats_distractor_sweep": true,
+      "planner_success": true
+    },
+    {
+      "distractor_sweep_actions": 6,
+      "distractor_sweep_success": false,
+      "env_id": "color_sequence_lock",
+      "planner_actions": 4,
+      "planner_beats_distractor_sweep": true,
+      "planner_success": true
+    },
+    {
+      "distractor_sweep_actions": 6,
+      "distractor_sweep_success": false,
+      "env_id": "tool_bridge_repair",
+      "planner_actions": 4,
+      "planner_beats_distractor_sweep": true,
+      "planner_success": true
+    }
+  ],
+  "decision": "continue_local_arc_agi_3_prerequisite_planner_no_external_competition_action",
+  "fixture_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-agi-3-prereq-planner-baseline-v1-fixture-20260618.json",
+  "generated_at": "2026-06-18T08:36:48Z",
+  "lane_id": "ai_ml_competitions",
+  "next_local_action": "Add hidden-prerequisite environments where the planner must infer edges from blocked actions and failed attempts, then compare learned-edge planning against the visible-edge planner. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked.",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "planner_observations": [
+    "Prerequisite graph planning beats distractor sweep when observations expose action ordering constraints.",
+    "The local planner remains brittle because it assumes prerequisite edges are visible in observations.",
+    "Next useful local work is hidden-edge discovery from failed attempts rather than official ARC/Kaggle action."
+  ],
+  "replay_jsonl_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-agi-3-prereq-planner-baseline-v1-replays-20260618.jsonl",
+  "schema_version": "ai_ml_competitions.arc_agi_3_prereq_planner_baseline.v1",
+  "source_previous_baseline_task_id": "task-arc-agi-3-micro-env-replay-baseline-v1-20260618",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-arc_agi_3-20260618",
+  "status": "arc_agi_3_prereq_planner_baseline_complete_local_only",
+  "task_id": "task-arc-agi-3-prereq-planner-baseline-v1-20260618"
+}

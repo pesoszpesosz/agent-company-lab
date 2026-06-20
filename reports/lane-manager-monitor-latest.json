@@ -1,0 +1,574 @@
+{
+  "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "generated_utc": "2026-06-14T15:18:14Z",
+  "lanes": [
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:16:18Z",
+          "lease_owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+          "next_action": "Prepare the rules_android source-only reachability/scope packet from local/public allowed source evidence; no live testing, account action, exploit attempt, report submission, or payout chasing.",
+          "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+          "status": "in_progress",
+          "task_id": "task-security-rules-android-scope-packet-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\security_bounty_private_reports-startup-20260614.md"
+      ],
+      "lane_id": "security_bounty_private_reports",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "owner_thread_id": "019ec612-4cf1-7601-8818-ddd3028a06f4",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-security-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T12:22:39Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\security_bounty_private_reports-startup-20260614.md",
+          "next_action": "Create one narrow local-only rules_android reachability/scope proof task, or use CT-Go impact-routing as lower-gate fallback.",
+          "outcome_id": "outcome-security_bounty_private_reports-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "ranked_sources_local_only",
+          "task_id": "task-security_bounty_private_reports-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\security_bounty_private_reports-startup-20260614.md",
+          "event_id": "trace-lane_manager_started-d020be38fe6a",
+          "event_time": "2026-06-14T12:22:45Z",
+          "event_type": "lane_manager_started",
+          "summary": "Security lane manager started, claimed lane, ranked imported private-report/static-review sources, and wrote local-only startup memo.",
+          "task_id": "task-security_bounty_private_reports-startup-20260614",
+          "trace_id": "trace-security_bounty_private_reports-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec612-4cf1-7601-8818-ddd3028a06f4",
+      "title": "Agent Company - Security Manager"
+    },
+    {
+      "active_task_count": 0,
+      "active_tasks": [],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\prediction_market_research-startup-20260614.md"
+      ],
+      "lane_id": "prediction_market_research",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "owner_thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-prediction-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T15:17:21Z",
+          "evidence": "E:\\agent-company-lab\\reports\\prediction-market-research\\kalshi-crypto-settlement-lag-paper-replay-20260614.md",
+          "next_action": "Keep data/paper-only; optionally implement reusable local parser/checker against archived packets; no accounts, credentials, orders, trading APIs, deposits, withdrawals, or real-money trades.",
+          "outcome_id": "outcome-prediction-kalshi-crypto-settlement-lag-replay-20260614",
+          "outcome_type": "paper_replay",
+          "realized_usd": 0.0,
+          "status": "no_trade_no_candidate",
+          "task_id": "task-prediction-kalshi-crypto-settlement-lag-replay-20260614"
+        },
+        {
+          "created_at": "2026-06-14T13:02:15Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\prediction_market_research-startup-20260614.md",
+          "next_action": "Create one paper-only Kalshi crypto settlement-lag replay task; keep default no-trade gate.",
+          "outcome_id": "outcome-prediction_market_research-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "planned_next_proof",
+          "task_id": "task-prediction_market_research-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\prediction-market-research\\kalshi-crypto-settlement-lag-paper-replay-20260614.md",
+          "event_id": "trace-event-prediction-kalshi-crypto-settlement-lag-replay-20260614",
+          "event_time": "2026-06-14T15:17:21Z",
+          "event_type": "paper_replay_completed",
+          "summary": "Completed paper-only Kalshi crypto settlement-lag replay from imported packets; parsed 32 packet rows, kept 0 candidates, realized_usd=0, no-trade.",
+          "task_id": "task-prediction-kalshi-crypto-settlement-lag-replay-20260614",
+          "trace_id": "trace-prediction-kalshi-crypto-settlement-lag-replay-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\prediction_market_research-startup-20260614.md",
+          "event_id": "trace-event-prediction_market_research-manager-startup-relaunch-20260614",
+          "event_time": "2026-06-14T13:02:15Z",
+          "event_type": "lane_manager_started",
+          "summary": "Relaunch prediction market lane manager claimed unowned lane, wrote data/paper-only startup memo, and selected Kalshi crypto settlement-lag replay as first proof task.",
+          "task_id": "task-prediction_market_research-startup-20260614",
+          "trace_id": "trace-prediction_market_research-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec612-9996-7603-a593-38281608d3dc",
+      "title": "Agent Company - Prediction Manager"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:16:23Z",
+          "lease_owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+          "next_action": "Run a read-only local scout using the scan design and write a ranked candidate packet; no GitHub comments, PRs, bounty claims, maintainer contact, or payout monitoring.",
+          "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+          "status": "in_progress",
+          "task_id": "task-paid-code-explicit-payout-local-scout-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\paid_code_bounties-startup-20260614.md"
+      ],
+      "lane_id": "paid_code_bounties",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "owner_thread_id": "019ec612-d317-71f1-b02f-c85f2295e320",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-paid-code-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T12:23:35Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\paid_code_bounties-startup-20260614.md",
+          "next_action": "Run the read-only explicit-payout scout design locally, write a ranked candidate packet, and request approval before any public action.",
+          "outcome_id": "outcome-paid_code_bounties-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "scan_design_ready_no_public_action",
+          "task_id": "task-paid_code_bounties-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\paid-code-bounties\\explicit-payout-source-scan-design-20260614.md",
+          "event_id": "trace-event-paid_code_bounties-scan-design-20260614",
+          "event_time": "2026-06-14T12:26:06Z",
+          "event_type": "source_scan_design_recorded",
+          "summary": "Recorded explicit-payout source scan design using imported negative samples and duplicate checks; scout/rank only, no public action.",
+          "task_id": "task-paid_code_bounties-startup-20260614",
+          "trace_id": "trace-paid_code_bounties-manager-startup-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\paid_code_bounties-startup-20260614.md",
+          "event_id": "trace-lane_manager_started-a7070cfc78a2",
+          "event_time": "2026-06-14T12:23:41Z",
+          "event_type": "lane_manager_started",
+          "summary": "Paid-code lane manager started, claimed the lane, wrote startup memo, and produced explicit-payout scan design with duplicate checks; no public action performed.",
+          "task_id": "task-paid_code_bounties-startup-20260614",
+          "trace_id": "trace-paid_code_bounties-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec612-d317-71f1-b02f-c85f2295e320",
+      "title": "Agent Company - Paid Code Manager"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:16:10Z",
+          "lease_owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+          "next_action": "Create the capture template and local fixture examples only; no X/Grok/Radar browser use, likes, follows, replies, posts, DMs, profile changes, or signed-in actions without approved service request.",
+          "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+          "status": "in_progress",
+          "task_id": "task-content-social-readonly-capture-template-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\content_and_social_growth-startup-20260614.md"
+      ],
+      "lane_id": "content_and_social_growth",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "owner_thread_id": "019ec613-1080-7520-80e3-24dc7cfc31ea",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-content-social-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T12:23:16Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\content_and_social_growth-startup-20260614.md",
+          "next_action": "Create a local read-only trend candidate template from non-account public sources; keep X/Grok/Radar awaiting exact service-request approval.",
+          "outcome_id": "outcome-content_and_social_growth-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "planned_next_proof",
+          "task_id": "task-content_and_social_growth-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\packet.md",
+          "event_id": "trace-event-req-test-browser-readonly-complete-20260614-scaffolded",
+          "event_time": "2026-06-14T14:32:16Z",
+          "event_type": "service_request_packet_scaffolded",
+          "summary": "Scaffolded service request packet req-test-browser-readonly-complete-20260614 for browser_read_only_session; validation_ok=True; db_created=True.",
+          "task_id": "task-service-request-packet-factory-implementation-20260614",
+          "trace_id": "trace-req-test-browser-readonly-complete-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-missing-20260614\\packet.md",
+          "event_id": "trace-event-req-test-browser-readonly-missing-20260614-scaffolded",
+          "event_time": "2026-06-14T14:31:37Z",
+          "event_type": "service_request_packet_scaffolded",
+          "summary": "Scaffolded service request packet req-test-browser-readonly-missing-20260614 for browser_read_only_session; validation_ok=False; db_created=False.",
+          "task_id": "task-service-request-packet-factory-implementation-20260614",
+          "trace_id": "trace-req-test-browser-readonly-missing-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\content_and_social_growth-startup-20260614.md",
+          "event_id": "trace-lane_manager_started-b7cdf4ad11e8",
+          "event_time": "2026-06-14T12:23:37Z",
+          "event_type": "lane_manager_started",
+          "summary": "Content/social lane manager started from delegated launch prompt and wrote a local read-only trend source plan with X/Grok/Radar gated pending exact approval.",
+          "task_id": "task-content_and_social_growth-startup-20260614",
+          "trace_id": "trace-content_and_social_growth-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec613-1080-7520-80e3-24dc7cfc31ea",
+      "title": "Agent Company - Content Social Manager"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:16:13Z",
+          "lease_owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+          "next_action": "Draft one local grant proposal packet for an approved target from the startup memo; no wallet, registration, deployment, social quest, form submission, public project, or transaction.",
+          "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+          "status": "in_progress",
+          "task_id": "task-web3-grant-proposal-local-packet-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\web3_airdrops_grants_hackathons-startup-20260614.md"
+      ],
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "owner_thread_id": "019ec613-54d0-7d13-ada3-d448a4b4cc99",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-web3-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T12:26:29Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\web3_airdrops_grants_hackathons-startup-20260614.md",
+          "next_action": "Create one local-only proof task to draft an EF ESP Glamsterdam or Neutral DeFi Risk Intelligence grant proposal packet; no submission without approved service request.",
+          "outcome_id": "outcome-web3_airdrops_grants_hackathons-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "scouted_terms_deadlines_gates",
+          "task_id": "task-web3_airdrops_grants_hackathons-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\web3_airdrops_grants_hackathons-startup-20260614.md",
+          "event_id": "trace-lane_manager_started-4f6827ada508",
+          "event_time": "2026-06-14T12:26:59Z",
+          "event_type": "lane_manager_started",
+          "summary": "Lane manager started, claimed only the web3 lane, and wrote read-only source scout for grants, hackathons, contests, and quest gates.",
+          "task_id": "task-web3_airdrops_grants_hackathons-startup-20260614",
+          "trace_id": "trace-web3_airdrops_grants_hackathons-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec613-54d0-7d13-ada3-d448a4b4cc99",
+      "title": "Agent Company - Web3 Manager"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:15:48Z",
+          "lease_owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+          "next_action": "Draft the local proof artifact only using fictional data; do not identify real leads, scrape prospects, send outreach, submit proposals, DM, email, or use accounts.",
+          "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+          "status": "in_progress",
+          "task_id": "task-leadgen-fictional-audit-rubric-packet-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\lead_generation_and_sales-startup-20260614.md"
+      ],
+      "lane_id": "lead_generation_and_sales",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "owner_thread_id": "019ec613-9786-7a70-97fd-21143953b39f",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-lead-gen-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T12:23:30Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\lead_generation_and_sales-startup-20260614.md",
+          "next_action": "Create local-only proof artifact: website intake audit rubric and fictional sample packet; do not identify or contact real leads.",
+          "outcome_id": "outcome-lead_generation_and_sales-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "planned_next_proof",
+          "task_id": "task-lead_generation_and_sales-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\lead_generation_and_sales-startup-20260614.md",
+          "event_id": "trace-lane_manager_started-ba3f88d6d66a",
+          "event_time": "2026-06-14T12:24:20Z",
+          "event_type": "lane_manager_started",
+          "summary": "Lead generation lane manager started from launch manifest and wrote local startup memo with non-spam offer rules, targeting filters, proof artifact requirements, privacy/compliance gates, and read-only lead-source plan.",
+          "task_id": "task-lead_generation_and_sales-startup-20260614",
+          "trace_id": "trace-lead_generation_and_sales-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec613-9786-7a70-97fd-21143953b39f",
+      "title": "Agent Company - Lead Gen Manager"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:16:01Z",
+          "lease_owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+          "next_action": "Create the XAU paper-evidence intake report from local artifacts only; no broker connection, trading API, live signal ingestion, order, deposit, withdrawal, or real-money action.",
+          "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+          "status": "in_progress",
+          "task_id": "task-local-trading-xau-paper-evidence-intake-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\local_trading_strategy_research-startup-20260614.md"
+      ],
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "owner_thread_id": "019ec613-e69b-7ce1-8aed-36383f3136f6",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-local-trading-manager\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T12:25:08Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\local_trading_strategy_research-startup-20260614.md",
+          "next_action": "Create one local XAU paper-evidence intake task; no broker/API/order/live-signal action.",
+          "outcome_id": "outcome-local_trading_strategy_research-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "planned_next_proof",
+          "task_id": "task-local_trading_strategy_research-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\local_trading_strategy_research-startup-20260614.md",
+          "event_id": "trace-lane_manager_started-33c26ef034c2",
+          "event_time": "2026-06-14T12:25:13Z",
+          "event_type": "lane_manager_started",
+          "summary": "Local trading lane manager started, inventoried local backtest and paper artifacts, and wrote paper-only evidence standard.",
+          "task_id": "task-local_trading_strategy_research-startup-20260614",
+          "trace_id": "trace-local_trading_strategy_research-manager-startup-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec613-e69b-7ce1-8aed-36383f3136f6",
+      "title": "Agent Company - Local Trading Manager"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:15:32Z",
+          "lease_owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+          "next_action": "Use only existing local Wave-4 reports and JSON to normalize candidate sources; no browser/current-source verification without approved browser_read_only_session request.",
+          "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+          "status": "in_progress",
+          "task_id": "task-money-source-weekly-delta-local-dry-run-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\money_source_discovery-startup-20260614.md"
+      ],
+      "lane_id": "money_source_discovery",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "owner_thread_id": "019ec699-e02b-7ce1-a7a6-32afc857c254",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-money-source-discovery\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T14:51:38Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\money_source_discovery-startup-20260614.md",
+          "next_action": "Run money_source_weekly_delta_local_dry_run from local Wave-4 files only, or wait for approved browser-read-only scope before external source capture.",
+          "outcome_id": "outcome-money_source_discovery-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "complete",
+          "task_id": "task-money_source_discovery-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\money_source_discovery-startup-20260614.md",
+          "event_id": "trace-event-money_source_discovery-manager-startup-20260614",
+          "event_time": "2026-06-14T14:52:48Z",
+          "event_type": "lane_manager_started",
+          "summary": "Money source discovery lane manager claimed the lane, wrote a local-only source registry seed with first proof task and stop gates, and left browser-read-only work blocked because the service request remains needs_review.",
+          "task_id": "task-money_source_discovery-startup-20260614",
+          "trace_id": "trace-money_source_discovery-manager-startup-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+          "event_id": "trace-event-req-wave4-money-source-discovery-browser-readonly-20260614-scaffolded",
+          "event_time": "2026-06-14T14:37:52Z",
+          "event_type": "service_request_packet_scaffolded",
+          "summary": "Scaffolded service request packet req-wave4-money-source-discovery-browser-readonly-20260614 for browser_read_only_session; validation_ok=True; db_created=True.",
+          "task_id": "task-wave4-lane-expansion-20260614",
+          "trace_id": "trace-req-wave4-money-source-discovery-browser-readonly-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec699-e02b-7ce1-a7a6-32afc857c254",
+      "title": "Wave4 Manager - Money Source Discovery"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:16:07Z",
+          "lease_owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+          "next_action": "Refine the saved scout rubric, prepare a blank top-five shortlist table, and define baseline notebook templates locally; no Kaggle/DrivenData/lablab/ETHGlobal browser action, signup, data download, rule acceptance, API spend, or submission.",
+          "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+          "status": "in_progress",
+          "task_id": "task-ai-ml-competition-local-shortlist-template-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\ai_ml_competitions-startup-20260614.md"
+      ],
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "owner_thread_id": "019ec69a-3c39-7de3-849b-f2d19a2d03da",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-ai-ml-competitions\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T14:52:26Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\ai_ml_competitions-startup-20260614.md",
+          "next_action": "Approve req-wave4-ai-ml-competitions-browser-readonly-20260614 before any browser-read-only shortlist; use scout rubric once approved.",
+          "outcome_id": "outcome-ai_ml_competitions-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "blocked_on_service_request_approval",
+          "task_id": "task-ai_ml_competitions-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\ai_ml_competitions-startup-20260614.md",
+          "event_id": "trace-event-ai_ml_competitions-manager-startup-20260614",
+          "event_time": "2026-06-14T14:52:59Z",
+          "event_type": "lane_manager_started",
+          "summary": "AI/ML competitions lane manager claimed lane, wrote startup memo and scout rubric, and stopped at needs_review browser-read-only service-request gate.",
+          "task_id": "task-ai_ml_competitions-startup-20260614",
+          "trace_id": "trace-ai_ml_competitions-manager-startup-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\packet.md",
+          "event_id": "trace-event-req-wave4-ai-ml-competitions-browser-readonly-20260614-scaffolded",
+          "event_time": "2026-06-14T14:37:52Z",
+          "event_type": "service_request_packet_scaffolded",
+          "summary": "Scaffolded service request packet req-wave4-ai-ml-competitions-browser-readonly-20260614 for browser_read_only_session; validation_ok=True; db_created=True.",
+          "task_id": "task-wave4-lane-expansion-20260614",
+          "trace_id": "trace-req-wave4-ai-ml-competitions-browser-readonly-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec69a-3c39-7de3-849b-f2d19a2d03da",
+      "title": "Wave4 Manager - AI ML Competitions"
+    },
+    {
+      "active_task_count": 1,
+      "active_tasks": [
+        {
+          "lease_expires_at": "2026-06-14T19:15:52Z",
+          "lease_owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+          "next_action": "Build the v0 bundle locally and run a file-level acceptance check; no browsing, marketplace listing, upload, seller signup, payment setup, promotion, or sales claim.",
+          "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+          "status": "in_progress",
+          "task_id": "task-digital-products-agent-skill-starter-kit-v0-20260614"
+        }
+      ],
+      "completed_startup_task_count": 1,
+      "existing_startup_paths": [
+        "E:\\agent-company-lab\\reports\\lane-startup\\digital_products_templates_plugins-startup-20260614.md"
+      ],
+      "lane_id": "digital_products_templates_plugins",
+      "next_action": "Review startup memo for first proof task; do not duplicate lane work.",
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "owner_thread_id": "019ec69a-9fe3-7530-b83e-ae404554bca7",
+      "projectless_output_directory": "C:\\Users\\matth\\Documents\\Codex\\2026-06-14\\agent-company-digital-products-templates-plugins\\outputs",
+      "readiness": "startup_complete",
+      "recent_outcomes": [
+        {
+          "created_at": "2026-06-14T14:52:29Z",
+          "evidence": "E:\\agent-company-lab\\reports\\lane-startup\\digital_products_templates_plugins-startup-20260614.md",
+          "next_action": "Create local v0 product bundle for Agent Skill Starter Kit; no browser, listing, upload, sale, account, payment, or promotion action.",
+          "outcome_id": "outcome-digital_products_templates_plugins-startup-20260614",
+          "outcome_type": "lane_startup",
+          "realized_usd": 0.0,
+          "status": "planned_next_proof",
+          "task_id": "task-digital_products_templates_plugins-startup-20260614"
+        }
+      ],
+      "recent_traces": [
+        {
+          "artifact_path": "E:\\agent-company-lab\\reports\\lane-startup\\digital_products_templates_plugins-startup-20260614.md",
+          "event_id": "trace-event-digital_products_templates_plugins-manager-startup-20260614",
+          "event_time": "2026-06-14T14:52:58Z",
+          "event_type": "lane_manager_started",
+          "summary": "Digital-products lane manager claimed lane, respected unapproved browser gate, wrote startup memo and first local proof packet for Agent Skill Starter Kit.",
+          "task_id": "task-digital_products_templates_plugins-startup-20260614",
+          "trace_id": "trace-digital_products_templates_plugins-manager-startup-20260614"
+        },
+        {
+          "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\packet.md",
+          "event_id": "trace-event-req-wave4-digital-products-browser-readonly-20260614-scaffolded",
+          "event_time": "2026-06-14T14:37:52Z",
+          "event_type": "service_request_packet_scaffolded",
+          "summary": "Scaffolded service request packet req-wave4-digital-products-browser-readonly-20260614 for browser_read_only_session; validation_ok=True; db_created=True.",
+          "task_id": "task-wave4-lane-expansion-20260614",
+          "trace_id": "trace-req-wave4-digital-products-browser-readonly-20260614"
+        }
+      ],
+      "startup_artifact_count": 1,
+      "thread_id": "019ec69a-9fe3-7530-b83e-ae404554bca7",
+      "title": "Wave4 Manager - Digital Products"
+    }
+  ],
+  "launch_run_path": "E:\\agent-company-lab\\reports\\lane-manager-thread-launch-run-20260614.json, E:\\agent-company-lab\\reports\\wave4-manager-thread-launch-run-20260614.json",
+  "launch_run_paths": [
+    "E:\\agent-company-lab\\reports\\lane-manager-thread-launch-run-20260614.json",
+    "E:\\agent-company-lab\\reports\\wave4-manager-thread-launch-run-20260614.json"
+  ],
+  "summary": {
+    "counts_by_readiness": {
+      "startup_complete": 10
+    },
+    "in_progress": [],
+    "needs_completion_check": [],
+    "needs_nudge": [],
+    "total_lanes": 10
+  }
+}

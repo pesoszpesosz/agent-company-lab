@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "agent-company-agent-visuals.v1",
+  "sourceSheet": "./assets/agents/agent-avatar-sheet-20260616.png",
+  "agents": {
+    "lane-manager-ai_ml_competitions-019ec69a": {
+      "avatar": "./assets/agents/lane-manager-ai_ml_competitions-019ec69a.png",
+      "callsign": "Prize Scout",
+      "specialty": "Competition scouting and benchmark packets",
+      "accent": "#44d7c9",
+      "sheetCell": 1
+    },
+    "lane-manager-content_and_social_growth-019ec613": {
+      "avatar": "./assets/agents/lane-manager-content_and_social_growth-019ec613.png",
+      "callsign": "Signal Gardener",
+      "specialty": "Audience signals, reply windows, and growth loops",
+      "accent": "#f4ba55",
+      "sheetCell": 2
+    },
+    "lane-manager-digital_products_templates_plugins-019ec69a": {
+      "avatar": "./assets/agents/lane-manager-digital_products_templates_plugins-019ec69a.png",
+      "callsign": "Foundry Lead",
+      "specialty": "Template packs, plugin bundles, and quality gates",
+      "accent": "#8be06e",
+      "sheetCell": 3
+    },
+    "lane-manager-lead_generation_and_sales-019ec613": {
+      "avatar": "./assets/agents/lane-manager-lead_generation_and_sales-019ec613.png",
+      "callsign": "Deal Router",
+      "specialty": "Offer matching, qualification, and outreach boundaries",
+      "accent": "#ff6f61",
+      "sheetCell": 4
+    },
+    "lane-manager-local_trading_strategy_research-019ec613": {
+      "avatar": "./assets/agents/lane-manager-local_trading_strategy_research-019ec613.png",
+      "callsign": "Paper Quant",
+      "specialty": "Paper-only simulations, risk bands, and backtests",
+      "accent": "#6aa8ff",
+      "sheetCell": 5
+    },
+    "lane-manager-money_source_discovery-019ec699": {
+      "avatar": "./assets/agents/lane-manager-money_source_discovery-019ec699.png",
+      "callsign": "Source Cartographer",
+      "specialty": "Venue mapping and opportunity discovery",
+      "accent": "#8be06e",
+      "sheetCell": 6
+    },
+    "lane-manager-paid_code_bounties-019ec612": {
+      "avatar": "./assets/agents/lane-manager-paid_code_bounties-019ec612.png",
+      "callsign": "Claim Scout",
+      "specialty": "Bounty triage, duplicate checks, and local patch proof",
+      "accent": "#f4ba55",
+      "sheetCell": 7
+    },
+    "lane-manager-prediction_market_research-relaunch-20260614": {
+      "avatar": "./assets/agents/lane-manager-prediction_market_research-relaunch-20260614.png",
+      "callsign": "Market Observer",
+      "specialty": "Rules-safe market research and settlement replays",
+      "accent": "#9a89ff",
+      "sheetCell": 8
+    },
+    "lane-manager-security_bounty_private_reports-019ec612": {
+      "avatar": "./assets/agents/lane-manager-security_bounty_private_reports-019ec612.png",
+      "callsign": "Scope Sentinel",
+      "specialty": "Private report scope, safe proof, and duplicate risk",
+      "accent": "#44d7c9",
+      "sheetCell": 9
+    },
+    "lane-manager-web3_airdrops_grants_hackathons-019ec613": {
+      "avatar": "./assets/agents/lane-manager-web3_airdrops_grants_hackathons-019ec613.png",
+      "callsign": "Grant Explorer",
+      "specialty": "Grant routes, prototype packets, and wallet boundaries",
+      "accent": "#9a89ff",
+      "sheetCell": 10
+    },
+    "recovered-profitable-edge-infra": {
+      "avatar": "./assets/agents/recovered-profitable-edge-infra.png",
+      "callsign": "Atlas Engineer",
+      "specialty": "Control plane, dashboards, traces, and safety rails",
+      "accent": "#44d7c9",
+      "sheetCell": 11
+    }
+  },
+  "spare": {
+    "avatar": "./assets/agents/spare-agent-operator-20260616.png",
+    "sheetCell": 12,
+    "purpose": "Reserved expansion portrait for the next registered agent."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-apply-preflight-blocker-adapter-contract-integration-v1-20260618",
+  "task_id": "task-browser-read-only-apply-preflight-blocker-adapter-contract-integration-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T22:40:00Z",
+  "summary": "Integrated the adapter-bound signed approval guard into the browser read-only apply preflight blocker. The apply blocker now requires the signed guard to expose adapter_contract_gate=present_valid_start_blocked before it can report a healthy blocker state, while still denying apply, assignment, browser start, and worker start.",
+  "source_signed_guard_validation": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json",
+  "source_assignment_preflight_validation": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json",
+  "source_adapter_contract_validation": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-apply-preflight-blocker-v1.schema.json",
+      "sha256": "6d0135742f1292e145dfeb4f5dfac122c733884332a1af626a872f3a2ef7e896"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_browser_read_only_apply_preflight_blocker.py",
+      "sha256": "db53b21300b5e279880e1e333a00c6a3fe6ae35c1d3f412c89e5fcdd49f3bcd8"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_apply_preflight_blocker.py",
+      "sha256": "b0ed549d682d6dfe0bd89dc82aceafa6558f29fd75324ebb414fcb2f4aa1bb88"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-20260617.json",
+      "sha256": "cf97f2868f9c15d38604a6039dc162c693cc94a57760e977a70782fee31e16ac"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-validation-20260617.json",
+      "sha256": "1532c3816346cfee764ef52d0067cf537cbfce0121e4bb5eeff4c75842a04d41"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-apply-preflight-blocker-v1-20260617.md",
+      "sha256": "32ba84fcb6fcf613a74c7ea996f69c192524afd58ff535204381e8c6af523b67"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_browser_read_only_apply_preflight_blocker.py",
+    "focused_test_result": "passed",
+    "apply_preflight_status": "blocked_no_real_signed_decision",
+    "guard_adapter_contract_gate": "present_valid_start_blocked",
+    "accepted_guard_decision_count": 2,
+    "rejected_guard_decision_count": 26,
+    "candidate_request_count": 7,
+    "apply_allowed": false,
+    "assignment_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "approval_rows_written": 0,
+    "decisions_applied": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "If a real signed operator browser-read-only decision artifact is later supplied, run it through the signed approval guard and this adapter-bound apply blocker before designing any apply command."
+}

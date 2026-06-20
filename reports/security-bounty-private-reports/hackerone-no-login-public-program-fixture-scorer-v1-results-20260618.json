@@ -1,0 +1,292 @@
+{
+  "aggregate_kill_reasons": [
+    "duplicate_or_publicly_known_issue_likely",
+    "local_static_or_fixture_proof_cannot_be_produced",
+    "payment_tax_identity_country_or_sanctions_eligibility_unclear",
+    "private_program_invite_nda_or_clear_membership_required",
+    "program_or_asset_not_accepting_submissions",
+    "requires_login_credentials_pii_social_engineering_dos_spam_or_phishing",
+    "safe_harbor_or_authorization_unclear",
+    "scope_or_bounty_eligibility_unclear",
+    "vdp_only_or_no_cash_bounty_for_cash_lane"
+  ],
+  "kill_or_wait_count": 3,
+  "report_submission_ready_count": 0,
+  "row_count": 4,
+  "rows": [
+    {
+      "asset_eligibility_for_bounty": true,
+      "asset_eligibility_for_submission": true,
+      "asset_types": [
+        "source_code_repository",
+        "web"
+      ],
+      "average_bounty": 450,
+      "bounty_available": true,
+      "candidate_class": "static_public_code_review_candidate",
+      "country_or_sanctions_eligibility": "unknown_requires_human_review",
+      "credential_policy": "no_credentials_allowed_for_local_fixture",
+      "disclosure_policy": "private_report_only_after_approval",
+      "duplicate_policy": "must_check_public_hacktivity_before_submission",
+      "forbidden_testing": [
+        "live_scanning",
+        "credential_stuffing",
+        "dos",
+        "social_engineering",
+        "pii_access"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "kill_reasons": [
+        "duplicate_or_publicly_known_issue_likely",
+        "payment_tax_identity_country_or_sanctions_eligibility_unclear"
+      ],
+      "local_candidate_source": "public_source_code_review_only",
+      "managed_by_hackerone": true,
+      "maximum_bounty": 5000,
+      "minimum_bounty": 100,
+      "minimum_severity": "medium",
+      "next_local_action": "Create a local-only static review checklist for the public repository; do not test live targets.",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [
+        "production_accounts",
+        "customer_data",
+        "social_engineering"
+      ],
+      "payment_tax_identity_requirements": "unknown_requires_human_review",
+      "privacy_data_policy": "do_not_access_customer_or_private_data",
+      "program_name": "Example OSS BBP saved public row",
+      "program_policy_url": "https://hackerone.com/example-oss-bbp/policy",
+      "program_status": "active",
+      "program_type": "bug_bounty_program",
+      "program_url": "https://hackerone.com/example-oss-bbp",
+      "proof_of_concept_expectations": "local_static_analysis_notes_only",
+      "public_activity_signal": "some_disclosed_reports",
+      "rate_limits": "unread_specific_policy_limits",
+      "report_submission_ready": false,
+      "report_template_fields": [
+        "title",
+        "asset",
+        "weakness",
+        "impact",
+        "steps",
+        "poc",
+        "remediation"
+      ],
+      "response_standards": "public_card_shows_response_metrics",
+      "safe_harbor_present": true,
+      "safe_harbor_variant": "standard_good_faith",
+      "scope_assets": [
+        "https://github.com/example/example-oss"
+      ],
+      "score": 85,
+      "security_testing_allowed": false,
+      "static_candidate_draft": {
+        "allowed_evidence": [
+          "local source excerpt",
+          "unit test or static reasoning",
+          "impact note",
+          "remediation suggestion"
+        ],
+        "draft_type": "local_static_public_code_review_candidate",
+        "forbidden_evidence": [
+          "live target proof",
+          "credentials",
+          "customer data",
+          "scanner output",
+          "private platform data"
+        ],
+        "scope_asset": "https://github.com/example/example-oss",
+        "submission_state": "not_submittable_without_duplicate_review_scope_review_and_operator_approval",
+        "title_template": "Potential source-code issue from public repository review"
+      },
+      "testing_permissions": "public_source_review_only_in_this_fixture"
+    },
+    {
+      "asset_eligibility_for_bounty": false,
+      "asset_eligibility_for_submission": true,
+      "asset_types": [
+        "web"
+      ],
+      "average_bounty": 0,
+      "bounty_available": false,
+      "candidate_class": "kill_or_wait",
+      "country_or_sanctions_eligibility": "unknown",
+      "credential_policy": "unknown",
+      "disclosure_policy": "coordinated_disclosure",
+      "duplicate_policy": "unknown",
+      "forbidden_testing": [
+        "active_testing_without_approval"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "kill_reasons": [
+        "duplicate_or_publicly_known_issue_likely",
+        "local_static_or_fixture_proof_cannot_be_produced",
+        "payment_tax_identity_country_or_sanctions_eligibility_unclear",
+        "requires_login_credentials_pii_social_engineering_dos_spam_or_phishing",
+        "vdp_only_or_no_cash_bounty_for_cash_lane"
+      ],
+      "local_candidate_source": "practice_only_no_cash",
+      "managed_by_hackerone": false,
+      "maximum_bounty": 0,
+      "minimum_bounty": 0,
+      "minimum_severity": "unknown",
+      "next_local_action": "",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [
+        "all_non_listed_assets"
+      ],
+      "payment_tax_identity_requirements": "not_applicable_no_bounty",
+      "privacy_data_policy": "unknown",
+      "program_name": "Example VDP saved public row",
+      "program_policy_url": "https://hackerone.com/example-vdp/policy",
+      "program_status": "active",
+      "program_type": "vulnerability_disclosure_program",
+      "program_url": "https://hackerone.com/example-vdp",
+      "proof_of_concept_expectations": "unknown",
+      "public_activity_signal": "low",
+      "rate_limits": "unknown",
+      "report_submission_ready": false,
+      "report_template_fields": [
+        "description",
+        "impact"
+      ],
+      "response_standards": "best_effort",
+      "safe_harbor_present": true,
+      "safe_harbor_variant": "vdp_safe_harbor",
+      "scope_assets": [
+        "https://example-vdp.invalid"
+      ],
+      "score": 30,
+      "security_testing_allowed": false,
+      "static_candidate_draft": null,
+      "testing_permissions": "read_policy_only"
+    },
+    {
+      "asset_eligibility_for_bounty": false,
+      "asset_eligibility_for_submission": false,
+      "asset_types": [
+        "api",
+        "web"
+      ],
+      "average_bounty": 800,
+      "bounty_available": true,
+      "candidate_class": "kill_or_wait",
+      "country_or_sanctions_eligibility": "unknown_requires_human_review",
+      "credential_policy": "private",
+      "disclosure_policy": "private",
+      "duplicate_policy": "private",
+      "forbidden_testing": [
+        "all_testing_without_membership"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "kill_reasons": [
+        "duplicate_or_publicly_known_issue_likely",
+        "local_static_or_fixture_proof_cannot_be_produced",
+        "payment_tax_identity_country_or_sanctions_eligibility_unclear",
+        "private_program_invite_nda_or_clear_membership_required",
+        "program_or_asset_not_accepting_submissions",
+        "requires_login_credentials_pii_social_engineering_dos_spam_or_phishing",
+        "safe_harbor_or_authorization_unclear",
+        "scope_or_bounty_eligibility_unclear",
+        "vdp_only_or_no_cash_bounty_for_cash_lane"
+      ],
+      "local_candidate_source": "none_private_membership_required",
+      "managed_by_hackerone": true,
+      "maximum_bounty": 10000,
+      "minimum_bounty": 250,
+      "minimum_severity": "private",
+      "next_local_action": "",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [],
+      "payment_tax_identity_requirements": "unknown_requires_human_review",
+      "privacy_data_policy": "private",
+      "program_name": "Example private invite row",
+      "program_policy_url": "",
+      "program_status": "invite_only",
+      "program_type": "private_program",
+      "program_url": "https://hackerone.com/example-private",
+      "proof_of_concept_expectations": "private",
+      "public_activity_signal": "hidden",
+      "rate_limits": "private",
+      "report_submission_ready": false,
+      "report_template_fields": [],
+      "response_standards": "private_only",
+      "safe_harbor_present": false,
+      "safe_harbor_variant": "not_public",
+      "scope_assets": [],
+      "score": 0,
+      "security_testing_allowed": false,
+      "static_candidate_draft": null,
+      "testing_permissions": "membership_required"
+    },
+    {
+      "asset_eligibility_for_bounty": true,
+      "asset_eligibility_for_submission": true,
+      "asset_types": [
+        "web"
+      ],
+      "average_bounty": 120,
+      "bounty_available": true,
+      "candidate_class": "kill_or_wait",
+      "country_or_sanctions_eligibility": "unknown_requires_human_review",
+      "credential_policy": "no_test_credentials_available",
+      "disclosure_policy": "private_report_only",
+      "duplicate_policy": "unknown",
+      "forbidden_testing": [
+        "scanning",
+        "credential_attacks",
+        "dos",
+        "pii"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "kill_reasons": [
+        "duplicate_or_publicly_known_issue_likely",
+        "local_static_or_fixture_proof_cannot_be_produced",
+        "payment_tax_identity_country_or_sanctions_eligibility_unclear"
+      ],
+      "local_candidate_source": "no_public_source_static_path",
+      "managed_by_hackerone": true,
+      "maximum_bounty": 1500,
+      "minimum_bounty": 50,
+      "minimum_severity": "medium",
+      "next_local_action": "",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [
+        "automated_scanning",
+        "rate_limit_testing",
+        "customer_data"
+      ],
+      "payment_tax_identity_requirements": "unknown_requires_human_review",
+      "privacy_data_policy": "avoid_private_data",
+      "program_name": "Example cash web program with unclear static path",
+      "program_policy_url": "https://hackerone.com/example-cash-web/policy",
+      "program_status": "active",
+      "program_type": "bug_bounty_program",
+      "program_url": "https://hackerone.com/example-cash-web",
+      "proof_of_concept_expectations": "live_repro_expected_but_not_allowed_here",
+      "public_activity_signal": "active",
+      "rate_limits": "unknown",
+      "report_submission_ready": false,
+      "report_template_fields": [
+        "title",
+        "asset",
+        "impact",
+        "steps"
+      ],
+      "response_standards": "public_card_shows_slow_response",
+      "safe_harbor_present": true,
+      "safe_harbor_variant": "policy_specific",
+      "scope_assets": [
+        "https://example-cash-web.invalid"
+      ],
+      "score": 70,
+      "security_testing_allowed": false,
+      "static_candidate_draft": null,
+      "testing_permissions": "policy_must_be_read_before_testing"
+    }
+  ],
+  "schema_version": "security_bounty.hackerone_no_login_public_program_scores.v1",
+  "security_testing_allowed_count": 0,
+  "source": "manually_saved_public_program_directory_and_policy_snippets_no_hackerone_login_no_testing",
+  "static_candidate_draft_count": 1
+}

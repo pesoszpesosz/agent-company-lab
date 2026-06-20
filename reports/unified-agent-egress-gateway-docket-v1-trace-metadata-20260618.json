@@ -1,0 +1,76 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-unified-agent-egress-gateway-docket-v1-20260618",
+  "task_id": "task-unified-agent-egress-gateway-docket-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:07:42Z",
+  "summary": "Created a report-only unified agent egress gateway docket. The docket maps 10 worker capability classes into 8 external-egress route families with 24 required gates and preserves zero gateway registration, gateway start, live egress, worker start, runtime start, browser session, model/API, MCP, payment, wallet, account, public action, or external side effects.",
+  "source_capability_registry": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\unified-agent-egress-gateway-docket-v1.schema.json",
+      "sha256": "17df8a894df648802985885479a1eecdde6d2661685355c1299e5df3067f352f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_unified_agent_egress_gateway_docket.py",
+      "sha256": "92a87a7dd92bbb6beebc9b6239075cecab795e8b68989d28c1b49fabf31169a3"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_unified_agent_egress_gateway_docket.py",
+      "sha256": "1255c73ee5d4790d98bd69a42405f158470bdacd233830498aa08fea2f50a166"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
+      "sha256": "e0f6189c604848b6f76f6b1781138ff9b8a2436e5b36aa340366af6de312fc4c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+      "sha256": "4d46b5fa11fa81ad6bc6a321f1afc43e3052b935e8438fffbe7ec9b2b62a04e4"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.md",
+      "sha256": "a2ec59e2fa07ab0c4ef8a16c990b86002f50be0a3601bf72d5ac514d787d58a5"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_unified_agent_egress_gateway_docket.py",
+    "focused_test_result": "passed",
+    "source_capability_class_count": 10,
+    "route_count": 8,
+    "required_gate_count": 24,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "worker_registration_allowed": false,
+    "worker_start_allowed": false,
+    "runtime_start_allowed": false,
+    "browser_session_start_allowed": false,
+    "service_requests_assigned": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build signed operator decision intake for one exact egress route before any gateway registration, gateway start, or live egress."
+}

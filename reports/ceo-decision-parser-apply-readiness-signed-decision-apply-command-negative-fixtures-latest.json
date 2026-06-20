@@ -1,0 +1,160 @@
+{
+  "apply_command_enabled": false,
+  "apply_command_execution_count": 0,
+  "apply_command_negative_fixture_count": 6,
+  "apply_execution_allowed": false,
+  "approval_granted_by_fixtures": false,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_count": 6,
+  "explicit_operator_apply_approval_present": false,
+  "fixture_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-apply-command-negative-fixtures-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_results": [
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_operator_signature",
+      "execution_attempted": false,
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_operator_signature",
+      "fixture_id": "apply-command-reject-missing-operator-signature",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_expired_approval",
+      "execution_attempted": false,
+      "expected_accepted": false,
+      "expected_rule_id": "reject_expired_approval",
+      "fixture_id": "apply-command-reject-expired-approval",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_stale_target_snapshot",
+      "execution_attempted": false,
+      "expected_accepted": false,
+      "expected_rule_id": "reject_stale_target_snapshot",
+      "fixture_id": "apply-command-reject-stale-target-snapshot",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_wrong_target_request_id",
+      "execution_attempted": false,
+      "expected_accepted": false,
+      "expected_rule_id": "reject_wrong_target_request_id",
+      "fixture_id": "apply-command-reject-wrong-target-request-id",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_unapproved_field_set",
+      "execution_attempted": false,
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unapproved_field_set",
+      "fixture_id": "apply-command-reject-unapproved-field-set",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_explicit_execution_flag",
+      "execution_attempted": false,
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_explicit_execution_flag",
+      "fixture_id": "apply-command-reject-missing-explicit-execution-flag",
+      "matched_expected": true
+    }
+  ],
+  "fixture_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-apply-command-negative-fixtures-20260616",
+  "generated_utc": "2026-06-19T22:10:26Z",
+  "lane_evidence_rows_after": 129,
+  "lane_evidence_rows_before": 128,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_signed_decision_apply_command_negative_fixtures_ready_no_mutation",
+  "mutation_applied_count": 0,
+  "negative_fixtures": [
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_operator_signature",
+      "fixture_id": "apply-command-reject-missing-operator-signature",
+      "input_overrides": {
+        "operator_signature": null
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_expired_approval",
+      "fixture_id": "apply-command-reject-expired-approval",
+      "input_overrides": {
+        "approval_expires_utc": "2026-01-01T00:00:00Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_stale_target_snapshot",
+      "fixture_id": "apply-command-reject-stale-target-snapshot",
+      "input_overrides": {
+        "rollback_snapshot_updated_at": "2000-01-01T00:00:00Z"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_wrong_target_request_id",
+      "fixture_id": "apply-command-reject-wrong-target-request-id",
+      "input_overrides": {
+        "target_request_id": "req-not-the-browser-readonly-target"
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unapproved_field_set",
+      "fixture_id": "apply-command-reject-unapproved-field-set",
+      "input_overrides": {
+        "target_update_fields": [
+          "approval_scope",
+          "decision_note",
+          "assigned_agent_id"
+        ]
+      }
+    },
+    {
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_explicit_execution_flag",
+      "fixture_id": "apply-command-reject-missing-explicit-execution-flag",
+      "input_overrides": {
+        "explicit_apply_execution_flag": false
+      }
+    }
+  ],
+  "next_action": "Build a report-only guard runner for these negative fixtures before implementing or enabling any apply command execution path.",
+  "queue_mutation_count": 0,
+  "recommended_default": "reject_apply_command_inputs_until_explicit_operator_apply_approval_is_validated",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_signed_decision_apply_command_negative_fixtures.v1",
+  "source_contract_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-apply-command-contract-20260616",
+  "source_contract_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-apply-command-contract-20260616",
+  "source_contract_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-signed-decision-apply-command-contract-validation-latest.json",
+  "summary": "Created six local negative fixtures for the signed-decision apply command contract. Each fixture must be rejected before any future apply executor can mutate the target service request.",
+  "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_fixture": 1,
+  "tasks_table_rows_after": 221,
+  "tasks_table_rows_before": 220,
+  "unique_rejection_rule_count": 6
+}

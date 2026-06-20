@@ -1,0 +1,25 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-bot-character-frame-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-bot-character-frame-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_bot_character_frame_added-20260619",
+  "title": "Command Cockpit Bot Character Frame",
+  "timestamp": "2026-06-19T15:43:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Turned the selected-lane owner bot portrait into a compact animated character socket so the cockpit feels more game-like without adding another scroll layer.",
+  "changes": [
+    "Added a reusable agentCharacterFrame helper driven by existing bot callsign, specialty, accent, and sprite-sheet cell metadata.",
+    "Replaced the selected-lane HUD owner avatar with an animated character frame while leaving existing bot roster and party avatars compatible.",
+    "Added bounded aura, scan-line, and sigil styling with mobile cockpit containment so the character identity stays premium inside the same HUD footprint."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

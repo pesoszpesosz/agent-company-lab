@@ -1,0 +1,92 @@
+{
+  "approval_request_count": 0,
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "brief_evidence_id": "digital-products-local-operator-approval-brief-20260616",
+  "brief_lane_id": "digital_products_templates_plugins",
+  "brief_task_id": "task-digital-products-local-operator-approval-brief-20260616",
+  "decision_item_count": 2,
+  "decision_items": [
+    {
+      "approval_required": true,
+      "approval_text_draft": "Approve one read-only browser validation pass for public marketplace/category pages only, with no login, posting, listing, messaging, checkout, account settings, personal data entry, or saved changes.",
+      "decision_id": "approve-read-only-browser-validation",
+      "default_without_approval": "Do not open marketplace/category pages or collect live browser evidence.",
+      "gate_required": "browser_read_only_session",
+      "operator_review_note": "Use this only to validate demand, price bands, saturation, and buyer language for the polished AI builder launch checklist pack.",
+      "source_draft_id": "read-only-browser-validation"
+    },
+    {
+      "approval_required": true,
+      "approval_text_draft": "Approve local legal/payment review of platform terms, fees, refund exposure, KYC/tax obligations, and payout constraints in a non-accepting read-only mode.",
+      "decision_id": "approve-legal-payment-review",
+      "default_without_approval": "Do not accept terms, create seller accounts, configure payouts, list products, or provide KYC/tax/payment data.",
+      "gate_required": "legal_kyc_tax_payment",
+      "operator_review_note": "This is not permission to register, sell, connect payment methods, or accept agreements.",
+      "source_draft_id": "legal-payment-review"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "explicit_approval_required_count": 2,
+  "generated_utc": "2026-06-15T22:43:00Z",
+  "lane_evidence_rows_after": 95,
+  "lane_evidence_rows_before": 94,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "operator_approval_brief_ready_not_requested",
+  "next_action": "User/operator must explicitly approve one or both decision items before any browser validation or legal/payment review; otherwise hold the lane locally.",
+  "recommended_default": "hold_until_explicit_user_approval",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_operator_approval_brief.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_draft_packet_count": 2,
+  "source_drafts_evidence_id": "digital-products-local-approval-request-drafts-20260616",
+  "source_drafts_task_id": "task-digital-products-local-approval-request-drafts-20260616",
+  "source_drafts_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-approval-request-drafts-validation-latest.json",
+  "summary": "Prepared a local operator approval brief that converts the two draft packets into exact approval decisions for read-only browser validation and legal/payment review. No approval was requested or executed.",
+  "task_rows_inserted_by_brief": 1,
+  "tasks_table_rows_after": 187,
+  "tasks_table_rows_before": 186
+}

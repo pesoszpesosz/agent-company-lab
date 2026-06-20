@@ -1,0 +1,88 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-local-a2a-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-local-a2a-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T00:15:24Z",
+  "summary": "Created a report-only signed-decision guard for the local_agent_to_agent_report_only egress route. The guard accepts only deny or exact local agent-to-agent route preflight-only decisions with the agent egress event ledger and local runtime adapter pool identity envelope gates present; it rejects gateway registration/start, live egress, agent message sends, worker starts, service-request mutation, browser/model/API/MCP use, public actions, and external side effects.",
+  "source_gateway_docket": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\local-a2a-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "0c8e8a75117cd722b4d34d3dca3f2bb38957b728198d2ef63fd26de2c679653c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_local_a2a_egress_signed_decision_guard.py",
+      "sha256": "f4f3561c18957d1bb237dbad666142b8942277a91c914e4f812e7a2cf879539a"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_local_a2a_egress_signed_decision_guard.py",
+      "sha256": "cb22bfd45c34844de49e75e03726a5c4751189de80caf85fe96b2318112ec95d"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\local-a2a-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "894c9947d68db6110854f0bc415f0ffdf226cb0939ca27829a93a8da8d5e69dc"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\local-a2a-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "298c3c3d402ab2f4fd6cad49912d72f956e26b30c688370a424fbff7688fe3aa"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\local-a2a-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "b510a834aabfb466a92479966322b125654870b243708a401694650f32c51b46"
+    }
+  ],
+  "verification": {
+    "red_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_local_a2a_egress_signed_decision_guard.py",
+    "red_test_result": "failed before implementation because validate_local_a2a_egress_signed_decision_guard.py did not exist",
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_local_a2a_egress_signed_decision_guard.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "36 tests passed",
+    "target_route_id": "local_agent_to_agent_report_only",
+    "target_egress_type": "agent_to_agent",
+    "fixture_count": 44,
+    "accepted_count": 2,
+    "rejected_count": 42,
+    "gateway_registrations": 0,
+    "gateway_starts": 0,
+    "live_egress_events": 0,
+    "agent_message_send_allowed": false,
+    "agent_messages_sent": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "decisions_applied": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "agent_message_send_allowed": false,
+    "agent_messages_sent": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build local A2A egress apply preflight blocker for the accepted local_agent_to_agent_report_only decision before any gateway registration, agent message send, service-request mutation, worker start, or live egress."
+}

@@ -1,0 +1,268 @@
+{
+  "acceptance_checks": [
+    "At least six current/public or local sources are recorded.",
+    "Packet separates Reward programs from VDP, charity, private, invite, and non-cash rows.",
+    "At least twenty brief fields are defined.",
+    "At least five triage stages are defined.",
+    "At least eight hard kill reasons are defined.",
+    "At least one local-only stage is allowed and no live testing stage is allowed.",
+    "Boundary proves no Bugcrowd account, browser session, program follow, support contact, target test, report, payment, public action, worker/runtime, model/MCP call, or external side effect occurred."
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "bugcrowd_account_or_login": false,
+    "credentials_or_private_assets_used": 0,
+    "crowdstream_actions": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "programs_followed_or_feedback_sent": 0,
+    "programs_joined_or_invites_accepted": 0,
+    "public_comments_or_disclosures": 0,
+    "reports_submitted_or_drafts_saved": 0,
+    "security_testing_performed": 0,
+    "service_requests_mutated": 0,
+    "support_tickets_or_contacts": 0,
+    "targets_tested": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "brief_fields": [
+    "program_url",
+    "observed_utc",
+    "program_name",
+    "program_type",
+    "program_status",
+    "public_or_private",
+    "requires_invitation",
+    "identity_or_2fa_requirement",
+    "reward_program",
+    "cash_reward_range",
+    "kudos_or_points_only",
+    "managed_by_bugcrowd",
+    "safe_harbor_status",
+    "disclose_io_status",
+    "official_communication_channels",
+    "disclosure_policy",
+    "brief_last_updated",
+    "target_groups",
+    "in_scope_targets",
+    "out_of_scope_targets",
+    "target_technology",
+    "reward_range_by_target",
+    "vrt_priority_mapping",
+    "program_rules",
+    "forbidden_testing",
+    "credential_or_test_account_policy",
+    "rate_limit_or_automation_policy",
+    "known_issues_available",
+    "duplicate_risk_signal",
+    "submission_limit_or_throttle",
+    "report_required_fields",
+    "proof_of_concept_expectations",
+    "payment_method_or_tax_gate",
+    "local_static_candidate_source",
+    "score",
+    "kill_reasons",
+    "next_local_action"
+  ],
+  "decision": "rules_first_triage_only_no_account_no_testing_no_submission_no_payment_no_public_action",
+  "generated_at": "2026-06-18T07:19:52Z",
+  "hard_kill_reasons": [
+    "vdp_charity_points_only_or_no_cash_reward_for_cash_lane",
+    "program_private_invite_or_membership_required",
+    "brief_unreadable_without_account_or_terms_acceptance",
+    "scope_or_reward_range_unclear",
+    "safe_harbor_or_disclosure_terms_missing_or_partial_without_clarity",
+    "requires_testing_out_of_scope_targets",
+    "requires_live_security_testing_without_explicit_approval",
+    "requires_credentials_pii_social_engineering_dos_spam_or_phishing",
+    "known_issue_duplicate_or_first_reporter_status_unlikely",
+    "vrt_priority_too_low_or_non_exploitable_for_cash_effort",
+    "submission_limit_or_platform_privilege_risk_unclear",
+    "cannot_produce_local_static_or_fixture_based_proof"
+  ],
+  "lane_id": "security_bounty_private_reports",
+  "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+  "recommended_next_local_proof": "Create a no-login Bugcrowd public-program fixture from manually saved program-list and bounty-brief snippets; run the first-triage scorer; emit only local/static candidate drafts with VRT, scope, safe harbor, reward, and known-issue gates. Keep account, browser login, program following, support tickets, target testing, report draft saving/submission, payment/tax forms, CrowdStream, public disclosure, worker/runtime, and model/MCP calls blocked.",
+  "reward_route_disambiguation": "Bugcrowd discovery mixes Reward programs, VDP programs, private invite-only engagements, pentests, charity programs, and community-curated listings. This lane is cash-first: VDP rows, charity rows, private invite rows, and non-cash recognition rows are not promoted as cash candidates unless a specific bounty brief exposes reward ranges for the in-scope target.",
+  "schema_version": "bugcrowd_rules_first_triage_local_proof.v1",
+  "scoring_rubric": [
+    {
+      "factor": "reward_clarity",
+      "good": "brief shows reward ranges for the specific in-scope target",
+      "points": 20
+    },
+    {
+      "factor": "scope_clarity",
+      "good": "in-scope and out-of-scope target groups are explicit",
+      "points": 15
+    },
+    {
+      "factor": "safe_harbor_clarity",
+      "good": "full safe harbor or clear disclose.io terms are visible",
+      "points": 15
+    },
+    {
+      "factor": "vrt_fit",
+      "good": "candidate weakness maps cleanly to VRT P1-P3 with realistic impact",
+      "points": 10
+    },
+    {
+      "factor": "local_static_proofability",
+      "good": "candidate can be proven from source, docs, fixtures, or local reproduction",
+      "points": 15
+    },
+    {
+      "factor": "duplicate_known_issue_risk",
+      "good": "known issues or public examples do not already cover the path",
+      "points": 10
+    },
+    {
+      "factor": "low_harm_profile",
+      "good": "no out-of-scope, DoS, spam, PII, social engineering, or credential-heavy testing needed",
+      "points": 10
+    },
+    {
+      "factor": "payment_gate_clarity",
+      "good": "reward payout method/tax steps are known and remain post-award gates",
+      "points": 5
+    }
+  ],
+  "sources": [
+    {
+      "observations": [
+        "Bugcrowd describes the public list as a comprehensive list of bug bounty and vulnerability disclosure programs curated by the hacker community.",
+        "The list is discovery-only; individual program briefs still control scope, rules, rewards, and disclosure."
+      ],
+      "type": "official_public_program_list",
+      "url": "https://www.bugcrowd.com/bug-bounty-list/"
+    },
+    {
+      "observations": [
+        "Bugcrowd positions the hacker route as a way to report vulnerabilities ethically and earn rewards.",
+        "The page advertises public engagements, triage, standardized VRT, program variety, and payments to hackers.",
+        "This supports a rules-first bounty lane but not account setup, testing, submission, or payment setup."
+      ],
+      "type": "official_hacker_page",
+      "url": "https://www.bugcrowd.com/hackers/"
+    },
+    {
+      "observations": [
+        "Public programs are open to researchers, while private programs require invitations and may have geographic, identity, trust, or skill restrictions.",
+        "The docs say each program brief includes specific disclosure policy and rules that researchers must follow.",
+        "Preset filters separate Reward, Vulnerability Disclosure, Charity, participating, invite, and hidden program categories."
+      ],
+      "type": "official_program_discovery_docs",
+      "url": "https://docs.bugcrowd.com/researchers/participating-in-program/finding-program/"
+    },
+    {
+      "observations": [
+        "Bugcrowd says the bounty brief contains targets, goals, scope, out-of-scope areas, additional rules, rewards, and expected review timing.",
+        "It says to review the complete brief before beginning testing.",
+        "It states out-of-scope testing can lead to out-of-scope results, point penalties, platform escalation, or bans.",
+        "It notes VDP programs no longer offer point rewards, which reinforces reward-route separation."
+      ],
+      "type": "official_bounty_brief_docs",
+      "url": "https://docs.bugcrowd.com/researchers/participating-in-program/reviewing-bounty-briefs/"
+    },
+    {
+      "observations": [
+        "Bugcrowd describes disclose.io as a vendor-agnostic framework for safe harbor in bug bounty and vulnerability disclosure programs.",
+        "Program owners should provide in-scope properties, rewards, official communication channels, and disclosure policy.",
+        "Bugcrowd distinguishes full safe harbor from partial safe harbor, so the triage packet must capture the safe harbor status."
+      ],
+      "type": "official_safe_harbor_docs",
+      "url": "https://docs.bugcrowd.com/researchers/disclosure/disclose-io-and-safe-harbor/"
+    },
+    {
+      "observations": [
+        "Bugcrowd says vulnerability reports should explain where the bug was found, who it affects, reproduction, affected parameters, and proof-of-concept support.",
+        "Required report fields include summary title, target, technical severity/VRT, vulnerability details, and attachments.",
+        "Submissions cannot be edited after being reported, making the submit action an explicit approval gate."
+      ],
+      "type": "official_reporting_docs",
+      "url": "https://docs.bugcrowd.com/researchers/reporting-managing-submissions/reporting-a-bug/"
+    },
+    {
+      "observations": [
+        "Cash rewards require a program that offers cash, an in-scope valid bug, reproducibility by triage or the program owner, and first-reporter status.",
+        "Reward amount is set by the program owner with Bugcrowd input and varies by program, priority, and business impact.",
+        "Duplicate and known issues can block cash reward eligibility."
+      ],
+      "type": "official_reward_docs",
+      "url": "https://docs.bugcrowd.com/researchers/receiving-rewards/getting-rewarded/"
+    },
+    {
+      "observations": [
+        "Bugcrowd VRT is the baseline priority-rating resource for common vulnerabilities.",
+        "The public page exposes a downloadable JSON VRT 1.18 and a GitHub conversation route for taxonomy changes.",
+        "VRT priority is necessary but not sufficient for cash: program scope, impact, duplicates, and owner decision still matter."
+      ],
+      "type": "official_vrt_source",
+      "url": "https://bugcrowd.com/vulnerability-rating-taxonomy/"
+    },
+    {
+      "observations": [
+        "The prior security scan recommended rules-first security bounty work and static review before any target activity.",
+        "It ranked Bugcrowd-like program rule review as high-upside only after scope and authorization are clear."
+      ],
+      "type": "local_prior_security_scan",
+      "url": "E:\\profit-edge-lab\\reports\\security-bounty-source-scan-latest.md"
+    },
+    {
+      "observations": [
+        "The HackerOne packet established the reusable security-bounty pattern: classify reward route, scope, safe harbor, duplicate risk, reporting route, and payment gates before any testing.",
+        "Bugcrowd uses a distinct vocabulary around bounty briefs, VRT, CrowdStream, and safe harbor icons, so it gets its own packet."
+      ],
+      "type": "local_prior_rules_packet",
+      "url": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\hackerone-rules-route-readiness-local-proof.md"
+    }
+  ],
+  "status": "bugcrowd_rules_first_triage_ready_local_only",
+  "summary": "Bugcrowd is a viable security-bounty lane only when a candidate is classified from the bounty brief first: program type, reward route, in-scope target group, out-of-scope target group, VRT mapping, safe harbor, disclosure terms, known issue/duplicate risk, and payment gates. This packet creates the local triage worksheet and scorer; it does not create an account, open a browser session, follow a program, test any target, save or submit a report, contact support, configure payment/tax, or disclose anything.",
+  "task_id": "task-lane-scout-bugcrowd_program_rules-20260618",
+  "triage_stages": [
+    {
+      "allowed_now": true,
+      "description": "Capture public program-list rows or manually saved brief snippets into a local fixture.",
+      "gate": "local_or_approved_read_only_browser",
+      "stage": "public_program_list_fixture"
+    },
+    {
+      "allowed_now": true,
+      "description": "Extract program type, reward range, scope, out-of-scope targets, rules, safe harbor, disclosure policy, and known issue gates.",
+      "gate": "public_read_only_no_login_no_testing",
+      "stage": "bounty_brief_extraction"
+    },
+    {
+      "allowed_now": true,
+      "description": "Map the candidate weakness to VRT priority and reject known issue or likely duplicate patterns from local/public evidence.",
+      "gate": "local_only_or_public_read_only",
+      "stage": "vrt_and_duplicate_triage"
+    },
+    {
+      "allowed_now": true,
+      "description": "Prepare only source-code, documentation, or fixture-based hypotheses without probing live targets.",
+      "gate": "local_source_review_only",
+      "stage": "local_static_candidate_prep"
+    },
+    {
+      "allowed_now": false,
+      "description": "Any live target access, scanner, account workflow, credential use, exploit attempt, API call, or target validation.",
+      "gate": "explicit_security_testing_approval_required",
+      "stage": "security_testing_gate"
+    },
+    {
+      "allowed_now": true,
+      "description": "Write a local draft with title, target, VRT classification, reproduction, impact, evidence, and caveats.",
+      "gate": "local_draft_only",
+      "stage": "submission_draft"
+    },
+    {
+      "allowed_now": false,
+      "description": "Submit report, save platform draft, contact support, follow a program, configure payment/tax, disclose publicly, or interact with CrowdStream.",
+      "gate": "explicit_operator_approval_required",
+      "stage": "submission_payment_disclosure_gate"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "schema_version": "agent_company.prefect_flow_manifest_source_refresh_fixture.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-prefect-flow-manifest-source-refresh-fixture-v1-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_urls": [
+    "https://docs.prefect.io/v3/how-to-guides/workflows/write-and-run",
+    "https://docs.prefect.io/v3/concepts/flows",
+    "https://docs.prefect.io/v3/concepts/tasks",
+    "https://docs.prefect.io/v3/concepts/deployments",
+    "https://docs.prefect.io/v3/concepts/work-pools",
+    "https://docs.prefect.io/v3/concepts/workers",
+    "https://docs.prefect.io/v3/how-to-guides/workflows/test-workflows",
+    "https://docs.prefect.io/v3/api-ref/cli/deployment",
+    "https://docs.prefect.io/v3/how-to-guides/deployments/prefect-yaml"
+  ],
+  "source_pydantic_manifest_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\pydantic-durable-adapter-manifest-fixture-v1-validation-20260617.json",
+  "source_freshness_scheduler_plan_path": "E:\\agent-company-lab\\reports\\source-freshness-scheduler-plan-20260615.json",
+  "source_specs_path": "E:\\agent-company-lab\\architecture\\source-specs-draft.json",
+  "flow_policy": {
+    "manifest_only": true,
+    "prefect_package_imported": false,
+    "flows_decorated": false,
+    "tasks_decorated": false,
+    "flows_run": 0,
+    "tasks_run": 0,
+    "deployments_created": 0,
+    "schedules_created": 0,
+    "work_pools_created": 0,
+    "workers_started": 0,
+    "prefect_test_harness_started": false,
+    "prefect_server_started": false,
+    "prefect_cloud_used": false,
+    "allowed_modes": [
+      "local_file_read",
+      "local_planning_only",
+      "read_only_github_metadata"
+    ],
+    "blocked_modes": [
+      "service_request_only",
+      "browser_research",
+      "signed_in_account_use",
+      "public_action",
+      "security_testing",
+      "payment_or_wallet",
+      "real_money_action",
+      "model_api_call"
+    ],
+    "retries_allowed_only_for_idempotent_local_reads": true,
+    "cache_policy_must_not_hide_stale_external_data": true
+  },
+  "flow_cases": [
+    {
+      "case_id": "case-valid-profit-edge-local-queue-planning",
+      "source_id": "profit_edge_daily_queue_snapshot",
+      "lane_id": "platform_engineering",
+      "allowed_mode": "local_planning_only",
+      "flow_name": "agent_company_source_refresh_profit_edge_daily_queue_snapshot",
+      "task_names": [
+        "read_local_queue_snapshot",
+        "render_import_plan"
+      ],
+      "prefect_edges": {
+        "package_imported": false,
+        "flow_decorated": false,
+        "task_decorated": false,
+        "flow_run_requested": false,
+        "task_run_requested": false,
+        "deployment_created": false,
+        "schedule_created": false,
+        "work_pool_created": false,
+        "worker_started": false,
+        "test_harness_started": false,
+        "server_or_cloud_used": false
+      },
+      "side_effects": {
+        "browser_session": false,
+        "api_call": false,
+        "service_request_mutation": false,
+        "external_side_effect": false
+      },
+      "expected_decision": "valid_manifest_only_local_planning",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-valid-prediction-local-file-read",
+      "source_id": "prediction_market_data_sources",
+      "lane_id": "prediction_market_research",
+      "allowed_mode": "local_file_read",
+      "flow_name": "agent_company_source_refresh_prediction_market_data_sources",
+      "task_names": [
+        "read_local_prediction_reports",
+        "render_paper_data_note"
+      ],
+      "prefect_edges": {
+        "package_imported": false,
+        "flow_decorated": false,
+        "task_decorated": false,
+        "flow_run_requested": false,
+        "task_run_requested": false,
+        "deployment_created": false,
+        "schedule_created": false,
+        "work_pool_created": false,
+        "worker_started": false,
+        "test_harness_started": false,
+        "server_or_cloud_used": false
+      },
+      "side_effects": {
+        "browser_session": false,
+        "api_call": false,
+        "service_request_mutation": false,
+        "external_side_effect": false
+      },
+      "expected_decision": "valid_manifest_only_local_file_read",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-valid-platform-github-metadata-preview",
+      "source_id": "platform_infra_repo_metadata",
+      "lane_id": "platform_engineering",
+      "allowed_mode": "read_only_github_metadata",
+      "flow_name": "agent_company_source_refresh_platform_infra_repo_metadata",
+      "task_names": [
+        "preview_readonly_repo_metadata_command",
+        "render_metadata_output_paths"
+      ],
+      "prefect_edges": {
+        "package_imported": false,
+        "flow_decorated": false,
+        "task_decorated": false,
+        "flow_run_requested": false,
+        "task_run_requested": false,
+        "deployment_created": false,
+        "schedule_created": false,
+        "work_pool_created": false,
+        "worker_started": false,
+        "test_harness_started": false,
+        "server_or_cloud_used": false
+      },
+      "side_effects": {
+        "browser_session": false,
+        "api_call": false,
+        "service_request_mutation": false,
+        "external_side_effect": false
+      },
+      "expected_decision": "valid_manifest_only_github_metadata_preview",
+      "expected_failures": []
+    },
+    {
+      "case_id": "case-invalid-browser-service-request-source",
+      "source_id": "digital_marketplace_terms",
+      "lane_id": "digital_products_templates_plugins",
+      "allowed_mode": "service_request_only",
+      "flow_name": "agent_company_source_refresh_digital_marketplace_terms",
+      "task_names": [
+        "open_marketplace_browser",
+        "capture_terms"
+      ],
+      "prefect_edges": {
+        "package_imported": false,
+        "flow_decorated": false,
+        "task_decorated": false,
+        "flow_run_requested": false,
+        "task_run_requested": false,
+        "deployment_created": false,
+        "schedule_created": false,
+        "work_pool_created": false,
+        "worker_started": false,
+        "test_harness_started": false,
+        "server_or_cloud_used": false
+      },
+      "side_effects": {
+        "browser_session": true,
+        "api_call": false,
+        "service_request_mutation": false,
+        "external_side_effect": true
+      },
+      "expected_decision": "reject_service_request_only_browser_refresh",
+      "expected_failures": [
+        "allowed_mode_requires_service_request",
+        "browser_session_requested",
+        "external_side_effect_requested"
+      ]
+    },
+    {
+      "case_id": "case-invalid-prefect-deployment-and-worker",
+      "source_id": "paid_code_readonly_bounty_sources",
+      "lane_id": "paid_code_bounties",
+      "allowed_mode": "service_request_only",
+      "flow_name": "agent_company_source_refresh_paid_code_readonly_bounty_sources",
+      "task_names": [
+        "query_live_bounty_source",
+        "render_candidate_refresh"
+      ],
+      "prefect_edges": {
+        "package_imported": true,
+        "flow_decorated": true,
+        "task_decorated": true,
+        "flow_run_requested": true,
+        "task_run_requested": true,
+        "deployment_created": true,
+        "schedule_created": true,
+        "work_pool_created": true,
+        "worker_started": true,
+        "test_harness_started": false,
+        "server_or_cloud_used": true
+      },
+      "side_effects": {
+        "browser_session": false,
+        "api_call": true,
+        "service_request_mutation": false,
+        "external_side_effect": true
+      },
+      "expected_decision": "reject_prefect_runtime_and_live_source_refresh",
+      "expected_failures": [
+        "allowed_mode_requires_service_request",
+        "api_call_requested",
+        "external_side_effect_requested",
+        "prefect_runtime_edge:deployment_created",
+        "prefect_runtime_edge:flow_decorated",
+        "prefect_runtime_edge:flow_run_requested",
+        "prefect_runtime_edge:package_imported",
+        "prefect_runtime_edge:schedule_created",
+        "prefect_runtime_edge:server_or_cloud_used",
+        "prefect_runtime_edge:task_decorated",
+        "prefect_runtime_edge:task_run_requested",
+        "prefect_runtime_edge:work_pool_created",
+        "prefect_runtime_edge:worker_started"
+      ]
+    },
+    {
+      "case_id": "case-invalid-test-harness-and-service-mutation",
+      "source_id": "security_scope_rules",
+      "lane_id": "security_bounty_private_reports",
+      "allowed_mode": "service_request_only",
+      "flow_name": "agent_company_source_refresh_security_scope_rules",
+      "task_names": [
+        "prefect_test_harness_scope_check",
+        "approve_security_browser_request"
+      ],
+      "prefect_edges": {
+        "package_imported": true,
+        "flow_decorated": false,
+        "task_decorated": false,
+        "flow_run_requested": false,
+        "task_run_requested": false,
+        "deployment_created": false,
+        "schedule_created": false,
+        "work_pool_created": false,
+        "worker_started": false,
+        "test_harness_started": true,
+        "server_or_cloud_used": false
+      },
+      "side_effects": {
+        "browser_session": false,
+        "api_call": false,
+        "service_request_mutation": true,
+        "external_side_effect": false
+      },
+      "expected_decision": "reject_test_harness_and_service_mutation",
+      "expected_failures": [
+        "allowed_mode_requires_service_request",
+        "prefect_runtime_edge:package_imported",
+        "prefect_runtime_edge:test_harness_started",
+        "service_request_mutation_requested"
+      ]
+    }
+  ],
+  "runtime_boundary": {
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "prefect_imports": 0,
+    "flows_decorated": 0,
+    "tasks_decorated": 0,
+    "flow_runs": 0,
+    "task_runs": 0,
+    "deployments_created": 0,
+    "schedules_created": 0,
+    "work_pools_created": 0,
+    "workers_started": 0,
+    "prefect_test_harness_starts": 0,
+    "prefect_server_starts": 0,
+    "prefect_cloud_calls": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_local_test": "restate_agent_service_boundary_fixture_against_central_outbox_history_v1"
+}

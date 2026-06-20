@@ -1,0 +1,29 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:18:57Z",
+  "trace_id": "trace-money-path-lane-scout-packet-v1-20260618",
+  "task_id": "task-money-path-lane-scout-packet-v1-20260618",
+  "lane_id": "money_source_discovery",
+  "event_type": "money_path_lane_scout_packet_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\data\\money-path-lane-scout-packet-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packet-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packet-v1-validation-20260618.json"
+  ],
+  "route_count": 18,
+  "side_effects": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_created_or_logged_in": 0,
+    "wallets_created_or_used": 0,
+    "payments_or_payouts_touched": 0,
+    "trades_or_orders_placed": 0,
+    "submissions_proposals_messages_or_public_posts": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Have lane managers execute the highest-priority local proof tasks one at a time, starting with Upwork AI offer matrix, PromptBase approval rubric, Algora claim-readiness checklist, and ARC baseline packet. Keep every account, browser, wallet, payment, proposal, submission, trade, public action, worker/runtime, model/MCP, and external action behind exact approval."
+}

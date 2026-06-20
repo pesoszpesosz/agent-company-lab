@@ -1,0 +1,72 @@
+{
+  "trace_id": "trace-agent-company-atlas-creator-kit-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "creator_kit_standalone_repo_path",
+  "summary": "Added a visual Creator Kit panel that turns the standalone repo extension path into five build gates for adding lanes, visuals, minigames, bot ownership, and publishable template shape.",
+  "design_research": {
+    "queries": [
+      "developer onboarding checklist empty state product UI best practices",
+      "GitHub template repository onboarding checklist documentation best practices",
+      "progressive disclosure onboarding dashboard setup checklist UX"
+    ],
+    "source_urls": [
+      "https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository",
+      "https://docs.github.com/en/get-started/onboarding",
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards",
+      "https://uxuiprinciples.com/en/principles/progressive-disclosure",
+      "https://mobbin.com/glossary/empty-state"
+    ],
+    "pattern_notes": [
+      "Template repositories should preserve a reusable directory and file shape that others can start from.",
+      "Onboarding should show the next useful action rather than leaving new users in a blank or documentation-only state.",
+      "Progressive disclosure supports complex setup flows by turning broad instructions into staged gates.",
+      "Dashboard setup panels should expose actionable hierarchy and live progress rather than only explanatory copy."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-creator-kit-trace-metadata-20260617.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[]",
+      "snapshot.agents[]",
+      "lane.visual.avatar",
+      "lane.visual.minigame.texture",
+      "MINIGAME_REGISTRY",
+      "visualAssetRecords()"
+    ],
+    "ui_contract": [
+      "Render Creator Kit below Expansion Forge.",
+      "Show five setup gates: seed a lane, forge visual identity, wire a minigame, bind the bot, and ship the template.",
+      "Each gate lists the core files or folders a forked repo owner should touch.",
+      "Each gate includes a progress charge, unlock description, and related Atlas action.",
+      "FORGE scrolls to Expansion Forge, ART opens the Visual Asset Vault, PATH opens selected lane Path Map, COM opens selected lane command deck, and FEED scrolls to Mission Feed.",
+      "The panel is static and local-only; it does not create lanes, send commands, or mutate data."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=creator-kit&cache=20260617-creator-kit#lane=platform_engineering&view=overview",
+      "engine": "Playwright against local Chrome",
+      "checks": [
+        "390x920 viewport: Creator Kit rendered 5 cards in 1 column with no horizontal overflow, no console errors, and no failed responses.",
+        "1280x800 viewport: Creator Kit rendered 5 cards in 5 columns, 5 action buttons, file chips, and a 99% setup score with no horizontal overflow.",
+        "1280x800 interaction: PATH changed the hash to #lane=platform_engineering&view=path and rendered Path Map.",
+        "1280x800 interaction: COM changed the hash to #lane=platform_engineering&view=comms and rendered the command deck.",
+        "1280x800 interaction: ART opened the Visual Asset Vault with 41 assets visible.",
+        "1280x800 interaction: FEED set Mission Feed to all and scrolled to the feed with 90 events visible.",
+        "1600x900 viewport: Creator Kit rendered 5 cards in 5 columns with no horizontal overflow, no console errors, and no failed responses."
+      ]
+    }
+  }
+}

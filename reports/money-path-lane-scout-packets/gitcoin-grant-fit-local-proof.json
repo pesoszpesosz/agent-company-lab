@@ -1,0 +1,286 @@
+{
+  "acceptance_checks": [
+    "At least eight current/public or local sources are recorded.",
+    "Gitcoin grants, Grants Stack, Allo, Passport, KYC, and anti-Sybil surfaces are separated.",
+    "At least twenty grant fields are defined.",
+    "At least six route stages are defined.",
+    "At least eight fit rubric factors are defined.",
+    "At least ten hard kill reasons are defined.",
+    "Boundary proves no account, GitHub OAuth, KYC, Passport, wallet, transaction, donation, application, public action, worker/runtime, model/MCP call, or external side effect occurred."
+  ],
+  "boundary": {
+    "allo_profile_or_pool_created": false,
+    "browser_sessions_started": 0,
+    "donations_checkouts_matching_claims_or_payouts": 0,
+    "external_side_effects": 0,
+    "gitcoin_account_or_login": false,
+    "github_oauth_or_credentials_used": false,
+    "grant_applications_submitted": 0,
+    "kyc_or_identity_verification_started": false,
+    "model_mcp_or_external_api_calls": 0,
+    "passport_or_stamps_connected": false,
+    "public_posts_or_contribution_solicitation": 0,
+    "service_requests_mutated": 0,
+    "tag_requests_or_round_applications": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "decision": "grant_fit_only_no_account_no_wallet_no_payment_no_submission_no_public_action",
+  "fit_rubric": [
+    {
+      "factor": "round_domain_fit",
+      "good": "project clearly maps to an open Gitcoin domain such as developer tooling or public goods",
+      "points": 20
+    },
+    {
+      "factor": "public_good_credibility",
+      "good": "work is open, non-extractive, and useful to a broader ecosystem",
+      "points": 15
+    },
+    {
+      "factor": "deliverable_clarity",
+      "good": "milestones, artifacts, and acceptance evidence are concrete",
+      "points": 15
+    },
+    {
+      "factor": "impact_metrics",
+      "good": "usage, adoption, developer impact, or maintenance metrics are measurable",
+      "points": 10
+    },
+    {
+      "factor": "budget_reasonableness",
+      "good": "use of funds is specific and proportional",
+      "points": 10
+    },
+    {
+      "factor": "approval_readiness",
+      "good": "rules, tags, and review requirements are addressed before submission",
+      "points": 10
+    },
+    {
+      "factor": "identity_gate_clarity",
+      "good": "KYC, GitHub, Passport, and anti-Sybil gates are known and not bypassed",
+      "points": 10
+    },
+    {
+      "factor": "no_collusion_risk",
+      "good": "no quid pro quo, fake contributors, donation incentives, or coordinated Sybil behavior",
+      "points": 10
+    }
+  ],
+  "generated_at": "2026-06-18T07:37:06Z",
+  "grant_fields": [
+    "round_url",
+    "observed_utc",
+    "round_name",
+    "round_status",
+    "domain_or_collection",
+    "grant_program_type",
+    "application_open",
+    "donations_open",
+    "application_deadline",
+    "approval_timeline",
+    "project_name",
+    "project_owner",
+    "project_public_good_fit",
+    "target_domain_fit",
+    "problem_statement",
+    "deliverables",
+    "roadmap",
+    "impact_metrics",
+    "budget_or_use_of_funds",
+    "matching_mechanism",
+    "eligibility_requirements",
+    "grant_rules",
+    "anti_sybil_requirements",
+    "passport_or_identity_requirements",
+    "kyc_requirements",
+    "wallet_or_transaction_requirements",
+    "github_or_account_requirements",
+    "application_fields",
+    "tag_request_requirements",
+    "approval_or_review_body",
+    "collusion_or_quo_policy_risk",
+    "public_promotion_plan_local_only",
+    "duplicate_or_prior_funding_signal",
+    "evidence_links",
+    "score",
+    "kill_reasons",
+    "next_local_action"
+  ],
+  "grant_route_disambiguation": "Gitcoin can mean a current Grants round, Grants Stack tooling, Allo protocol allocation infrastructure, Passport/Human anti-Sybil identity, or legacy cGrants. This lane is grant-fit only: it can produce a local project fit memo and application checklist, but GitHub login, grant creation, KYC, Passport/stamps, wallet connection, onchain profile creation, donations, matching claims, public promotion, and payment/payout activity are all separate approval gates.",
+  "hard_kill_reasons": [
+    "round_not_open_or_domain_mismatch",
+    "project_not_a_public_good_or_value_claim_unclear",
+    "grant_rules_or_participation_policy_unreviewed",
+    "requires_gitcoin_or_github_login_without_approval",
+    "requires_kyc_passport_identity_or_personhood_verification_without_approval",
+    "requires_wallet_connection_transaction_signature_or_onchain_profile",
+    "requires_payment_donation_checkout_matching_claim_or_payout",
+    "requires_public_submission_upload_or_tag_request_without_approval",
+    "requires_public_campaign_contribution_solicitation_or_quid_pro_quo",
+    "collusion_sybil_or_fake_contributor_risk",
+    "budget_deliverables_or_impact_metrics_too_vague",
+    "duplicate_prior_funding_or_eligibility_conflict_unresolved",
+    "local_draft_cannot_produce_required_evidence"
+  ],
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+  "recommended_next_local_proof": "Create a Gitcoin grant-fit memo for one candidate local product or open-source artifact, likely developer tooling or agent-company public-good infrastructure. Include round/domain fit, deliverables, budget/use of funds, impact metrics, prior work evidence, duplicate/funding sweep, rules checklist, KYC/Passport/GitHub/wallet gates, and an explicit no-submit approval packet. Keep account/login, GitHub OAuth, KYC, Passport/stamps, wallet/transaction, Allo profile/pool, donation/checkout/payout, grant submission/tag request, public campaign, worker/runtime, and model/MCP calls blocked.",
+  "route_stages": [
+    {
+      "allowed_now": true,
+      "description": "Record public round/domain text, deadlines, domains, and apply/info links into a local fixture.",
+      "gate": "public_read_only",
+      "stage": "public_round_discovery"
+    },
+    {
+      "allowed_now": true,
+      "description": "Map one local project or product idea to public-good fit, domain fit, deliverables, budget, impact metrics, and evidence.",
+      "gate": "local_only",
+      "stage": "grant_fit_memo"
+    },
+    {
+      "allowed_now": true,
+      "description": "Create a private draft of fields likely needed for a grant application, without logging in or submitting.",
+      "gate": "local_draft_only",
+      "stage": "application_draft"
+    },
+    {
+      "allowed_now": false,
+      "description": "GitHub login, Gitcoin account, KYC, Passport score/stamps, identity verification, or anti-Sybil proof.",
+      "gate": "explicit_account_identity_approval_required",
+      "stage": "account_github_kyc_passport_gate"
+    },
+    {
+      "allowed_now": false,
+      "description": "Wallet connection, onchain profile creation, pool interaction, donation, checkout, matching claim, payout, or transaction signing.",
+      "gate": "explicit_wallet_payment_approval_required",
+      "stage": "wallet_allo_transaction_gate"
+    },
+    {
+      "allowed_now": false,
+      "description": "Create grant, tag project for a round, submit application, upload public profile, or request approval.",
+      "gate": "explicit_submission_approval_required",
+      "stage": "submission_gate"
+    },
+    {
+      "allowed_now": false,
+      "description": "Post, solicit contributions, coordinate donors, offer quid pro quo, or publish campaign materials.",
+      "gate": "explicit_public_action_approval_required",
+      "stage": "public_promotion_gate"
+    }
+  ],
+  "schema_version": "gitcoin_grant_fit_local_proof.v1",
+  "sources": [
+    {
+      "observations": [
+        "The current Gitcoin grants page is titled Gitcoin Grants 24: Fund What Matters.",
+        "It says applications and donations are open and describes domains such as Developer Tooling and Infrastructure.",
+        "The page exposes apply/info routes, but this packet does not click through, log in, connect wallets, or submit anything."
+      ],
+      "type": "official_current_grants_round_page",
+      "url": "https://grants.gitcoin.co/"
+    },
+    {
+      "observations": [
+        "Gitcoin support exposes a machine-readable markdown index with grants, Grants Stack, KYC, rules, and policy pages.",
+        "Use this as the current source map for later read-only grant documentation refreshes."
+      ],
+      "type": "official_support_index",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/llms.txt"
+    },
+    {
+      "observations": [
+        "Gitcoin Grants is a quarterly program using quadratic funding to support web3 and digital public goods.",
+        "The program routes funding through community contributions and matching mechanisms, so proof of public-good fit matters."
+      ],
+      "type": "official_grants_program_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants/what-is-a-grant.md"
+    },
+    {
+      "observations": [
+        "Gitcoin advises grantees to upload early, ideally 15 days before the round starts, so approval and tag review have time.",
+        "It recommends a clear TLDR, spending plan, justification, relevance to the round, impact metrics, roadmap, and public credibility."
+      ],
+      "type": "official_grant_success_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants/tips-for-grant-success.md"
+    },
+    {
+      "observations": [
+        "Round rules discuss contribution matching, unique contributor identity, anti-Sybil assumptions, and collusion constraints.",
+        "Grant promotion or contribution farming can create compliance risk; this packet creates no public campaign or contribution request."
+      ],
+      "type": "official_round_rules_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants/general-questions/are-there-any-grant-rules-i-need-to-follow.md"
+    },
+    {
+      "observations": [
+        "Gitcoin says KYC means Know Your Customer and is used to verify identity, prevent fraud, and satisfy matching partner concerns.",
+        "Grantees may need KYC, so identity, legal, tax, and payout review remain explicit human gates."
+      ],
+      "type": "official_kyc_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants/gitcoins-kyc.md"
+    },
+    {
+      "observations": [
+        "Gitcoin says a logged-in user using GitHub credentials can create a new grant, but it is not active in a round or eligible for matching until reviewed.",
+        "The Anti-Fraud and Collusion workstream reviews grants for approval or denial.",
+        "This makes application submission and approval a platform/account gate, not an automatic money path."
+      ],
+      "type": "official_grant_approval_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/about-gitcoin/policy/grant-participation-policy/the-grant-approval-process.md"
+    },
+    {
+      "observations": [
+        "Gitcoin documents anti-Sybil controls such as aged GitHub accounts, SMS verification, BrightID, undisclosed vectors, and DID-style signals.",
+        "Any grant route must avoid collusion, fake contributors, sybil behavior, and contribution incentives."
+      ],
+      "type": "official_anti_sybil_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants/general-questions/how-do-you-prevent-sybil-attacks.md"
+    },
+    {
+      "observations": [
+        "Gitcoin Grants Stack connects grants program managers, project owners, and community members.",
+        "It covers program setup, application management, funds allocation, checkout, discovery, and application workflows."
+      ],
+      "type": "official_grants_stack_docs",
+      "url": "https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants-program/what-is-gitcoin-grants-stack.md"
+    },
+    {
+      "observations": [
+        "Allo is the smart-contract allocation protocol behind pools, strategies, roles, fees, and flow of funds.",
+        "Creating/funding pools or interacting with allocation contracts is not needed for a local grant-fit proof and remains wallet/transaction gated."
+      ],
+      "type": "official_allo_docs",
+      "url": "https://docs-gitcoino.vercel.app/allo"
+    },
+    {
+      "observations": [
+        "Allo project registry profile creation is an onchain-style contract interface involving owner and member addresses.",
+        "Profile creation is a wallet/transaction route and is blocked here."
+      ],
+      "type": "official_allo_project_registry_docs",
+      "url": "https://docs-gitcoino.vercel.app/project-registry/create-profile"
+    },
+    {
+      "observations": [
+        "Human Passport documents score calculation and proof-of-humanity surfaces.",
+        "Passport scoring can affect eligibility and anti-Sybil posture, but connecting wallets, stamps, or identity proofs is gated."
+      ],
+      "type": "official_passport_score_docs",
+      "url": "https://support.passport.human.tech/common-questions/how-score-calculated"
+    },
+    {
+      "observations": [
+        "Prior EF ESP grant work used a local-only fit memo, deliverable mapping, and submission gates.",
+        "Reuse the same local proposal-fit posture for Gitcoin: source-backed fit first, no public submission."
+      ],
+      "type": "local_prior_grant_fit_packet",
+      "url": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\ef-esp-fit-memo-20260616.md"
+    }
+  ],
+  "status": "gitcoin_grant_fit_ready_local_only",
+  "summary": "Gitcoin is a plausible Web3 grant lane for public-good developer tooling, but only after the project, round domain, grant rules, approval flow, KYC, anti-Sybil, Passport, wallet, and public-promotion gates are separated. This packet creates a local grant-fit worksheet and scorer; it does not log in, connect a wallet, submit an application, start KYC, solicit contributions, create Allo profiles/pools, transact, or publish anything.",
+  "task_id": "task-lane-scout-gitcoin_grants-20260618"
+}

@@ -1,0 +1,28 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-depth-field-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-depth-field-v1-20260619",
+  "eventId": "trace-atlas_active_lane_depth_field_added-20260619",
+  "title": "Active Lane Depth Field",
+  "createdUtc": "2026-06-19T01:41:10Z",
+  "summary": "Added deterministic lane-colored spark and parallax-grid motion behind the active HUD so selected paths feel more premium and alive without increasing scroll height.",
+  "layoutEvidence": {
+    "intent": "Raise animation quality inside the first selected-lane surface while keeping the path compact and reusable for future lanes.",
+    "surface": "active-lane-hud-depth-field",
+    "motionSignals": [
+      "lane-colored sparks",
+      "gate-aware warning tone",
+      "parallax grid drift",
+      "state-derived deterministic placement"
+    ]
+  },
+  "filesChanged": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

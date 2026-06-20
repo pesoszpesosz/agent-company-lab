@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-asset-outline-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-asset-outline-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:20:11Z",
+  "outline_lane_id": "digital_products_templates_plugins",
+  "outline_task_id": "task-digital-products-local-asset-outline-20260616",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "7972C156E7DEA826F3022331A878E548B74A6BB6B4987766374495B33F1C93BA",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

@@ -1,0 +1,20 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-node-signal-packets-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-node-signal-packets-v1-20260619",
+  "traceId": "trace-atlas_command_cockpit_node_signal_packets_added-20260619",
+  "title": "Command Cockpit Node Signal Packets",
+  "createdAt": "2026-06-19T19:20:20Z",
+  "summary": "Added compact role-aware telemetry packets to selected Command Cockpit Quest nodes without increasing cockpit scroll.",
+  "changes": [
+    "Derives World, Level, Checkpoint, Gate, and Next packet sets from reusable lane data.",
+    "Renders three tiny signal chips inside the Quest focus lens so clicked nodes expose status, pressure, and next-action context.",
+    "Compresses packet styling for desktop cockpit and mobile cockpit views so the board stays first-screen friendly."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ]
+}

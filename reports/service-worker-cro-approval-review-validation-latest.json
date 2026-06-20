@@ -1,0 +1,42 @@
+{
+  "all_command_previews_require_manual_review": true,
+  "all_reviews_no_approval": true,
+  "api_calls": false,
+  "approval_granted_by_review": false,
+  "approval_review_path": "E:\\agent-company-lab\\reports\\service-worker-cro-approval-review-latest.json",
+  "approve_command_preview_count": 11,
+  "decision_counts": {
+    "do_not_approve_terminal_request": 3,
+    "human_cro_review_required": 11
+  },
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T10:21:32Z",
+  "reject_command_preview_count": 11,
+  "review_candidate_count": 11,
+  "reviewed_count": 14,
+  "route_counts": {
+    "ready_for_human_cro_review": 7,
+    "ready_for_human_cro_review_high_risk": 4,
+    "terminal_complete_do_not_review_for_approval": 1,
+    "terminal_rejected_do_not_review_for_approval": 2
+  },
+  "schema_version": "service_worker_cro_approval_review_validation.v1",
+  "service_requests_approved_by_report": 0,
+  "service_requests_started_by_report": 0,
+  "service_requests_updated_by_report": 0,
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "worker_starts": 0,
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

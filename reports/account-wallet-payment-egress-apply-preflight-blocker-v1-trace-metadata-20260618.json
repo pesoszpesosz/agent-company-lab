@@ -1,0 +1,71 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-account-wallet-payment-egress-apply-preflight-blocker-v1-20260618",
+  "task_id": "task-account-wallet-payment-egress-apply-preflight-blocker-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T02:02:30Z",
+  "summary": "Implemented report-only account_wallet_payment_gateway apply-preflight blocker and advanced the egress route-chain recommendation to apply_command_contract while preserving zero account, wallet, payment, real-money, worker, browser, MCP/model, live-egress, and external side effects.",
+  "red_green_evidence": {
+    "red_command": "python -m unittest tests.test_account_wallet_payment_egress_apply_preflight_blocker tests.test_egress_route_chain_integrity_audit",
+    "red_result": "failed before implementation because write_account_wallet_payment_egress_apply_preflight_blocker.py was missing and route-chain still recommended apply_preflight_blocker",
+    "green_command": "python -m unittest tests.test_account_wallet_payment_egress_apply_preflight_blocker tests.test_egress_route_chain_integrity_audit",
+    "green_result": "Ran 2 tests in 0.181s OK"
+  },
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\account-wallet-payment-egress-apply-preflight-blocker-v1.schema.json",
+      "sha256": "505cb9ac2a4afe101f8625dfb799fcef148735409ca323735e3ebcd27f0f7870"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_account_wallet_payment_egress_apply_preflight_blocker.py",
+      "sha256": "c55451698652f68b97103d1934e6eac6629616a8592773293fc39614dccf26da"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_account_wallet_payment_egress_apply_preflight_blocker.py",
+      "sha256": "e75d2fe2dcc73e90296f9f0f35a6f5fe214f4b5928224d4bf6060b7b43c2284f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-apply-preflight-blocker-v1-20260618.json",
+      "sha256": "ef3c0e8a0be3ad8293da4fe26e80fd32bb52949e043f78c101fa42c7d8f865c6"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-apply-preflight-blocker-v1-validation-20260618.json",
+      "sha256": "ea924b0fac162909cd753d128b84a9722ac6a71f5086d58f1052b51107b84d3f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\account-wallet-payment-egress-apply-preflight-blocker-v1-20260618.md",
+      "sha256": "5ca41a0395f44d207ee41e0b67e1be955838485a3a8536d67daa3fb5f4862a0b"
+    }
+  ],
+  "route_chain_effect": {
+    "route_id": "account_wallet_payment_gateway",
+    "present_layers_after": [
+      "unified_gateway_docket",
+      "signed_decision_intake_contract",
+      "signed_decision_guard",
+      "apply_preflight_blocker"
+    ],
+    "recommended_next_layer_after": "apply_command_contract",
+    "full_chain_route_count": 6,
+    "partial_chain_route_count": 2
+  },
+  "blocked_actions": [
+    "account_creation",
+    "terms_acceptance",
+    "wallet_creation",
+    "private_key_custody",
+    "seed_phrase_custody",
+    "fund_transfer",
+    "payment_method_change",
+    "kyc_tax_legal_action",
+    "public_payment_address_publication",
+    "service_request_mutation",
+    "worker_start",
+    "browser_start",
+    "model_api_call",
+    "mcp_tool_call",
+    "live_egress",
+    "external_side_effect"
+  ]
+}

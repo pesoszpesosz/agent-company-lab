@@ -1,0 +1,15 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-mounted-stage-frame-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-mounted-stage-frame-v1-20260619",
+  "eventId": "trace-atlas_active_lane_mounted_stage_frame_added-20260619",
+  "title": "Active Lane Mounted Stage Frame",
+  "createdUtc": "2026-06-19T03:02:20Z",
+  "summary": "Wrapped the selected lane body in a bounded animated mounted-stage frame so Overview, Path, Chronicle, Trail, Game, and Comms depth scrolls inside the cockpit instead of stretching the whole command surface.",
+  "goalFit": "Moves the Atlas away from a tall report page and toward a premium game cockpit where lane depth expands inside a controlled surface.",
+  "uiSurface": "Selected lane mounted view body",
+  "proof": [
+    "web/app.js wraps renderDetailBody(lane) in active-lane-mounted-stage",
+    "web/styles.css bounds the mounted stage with internal scrolling and a scan animation",
+    "web/data/snapshot.json records the unlock in the platform engineering lane after regeneration"
+  ]
+}

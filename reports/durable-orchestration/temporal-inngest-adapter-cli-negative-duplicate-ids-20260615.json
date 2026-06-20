@@ -1,0 +1,74 @@
+{
+  "schema_version": "agent_company.durable_adapter_reducer_fixture_set.v1",
+  "fixture_count": 2,
+  "fixtures": [
+    {
+      "fixture_id": "fixture-negative-duplicate-ids",
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "input": {
+        "status_snapshot": "needs_review",
+        "event_name": "agent_company/service_request.needs_review",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "worker_type": "model_api_execution",
+        "idempotency_key": "negative-test:duplicate-idempotency:20260615",
+        "source_event_id": "negative-test-duplicate-ids-20260615-a"
+      },
+      "expected_output": {
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "terminal": false,
+        "ledger_mutation_allowed": false,
+        "approval_granted": false,
+        "assign_worker": false,
+        "start_worker": false,
+        "emit_followup_event": false,
+        "schedule_activity": false,
+        "call_api": false,
+        "external_side_effects_allowed": false,
+        "resume_requirements": [
+          "human approval packet"
+        ]
+      },
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      }
+    },
+    {
+      "fixture_id": "fixture-negative-duplicate-ids",
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "input": {
+        "status_snapshot": "needs_review",
+        "event_name": "agent_company/service_request.needs_review",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "worker_type": "model_api_execution",
+        "idempotency_key": "negative-test:duplicate-idempotency:20260615",
+        "source_event_id": "negative-test-duplicate-ids-20260615-b"
+      },
+      "expected_output": {
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "terminal": false,
+        "ledger_mutation_allowed": false,
+        "approval_granted": false,
+        "assign_worker": false,
+        "start_worker": false,
+        "emit_followup_event": false,
+        "schedule_activity": false,
+        "call_api": false,
+        "external_side_effects_allowed": false,
+        "resume_requirements": [
+          "human approval packet"
+        ]
+      },
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      }
+    }
+  ],
+  "api_calls": false,
+  "external_side_effects": false
+}

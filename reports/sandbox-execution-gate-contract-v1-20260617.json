@@ -1,0 +1,204 @@
+{
+  "allowed_after_approval": {
+    "artifact_capture": "required_local_paths",
+    "commands": "exact_allowlist_only",
+    "cost_limit_usd": "required_zero_or_positive_cap",
+    "dependencies": "deny_by_default_exact_package_version_only",
+    "file_roots": "exact_allowlist_only",
+    "network": "deny_by_default_allow_explicit_hosts_only",
+    "sandbox_provider": "exact_provider_only",
+    "secrets": "deny_by_default_named_secret_route_only",
+    "teardown": "required_before_complete",
+    "time_limit_seconds": "required_positive_integer",
+    "workspace_root": "exact_local_or_approved_remote_workspace_only"
+  },
+  "candidate_patterns": [
+    {
+      "category": "coding_agent_harness",
+      "full_name": "OpenHands/OpenHands",
+      "html_url": "https://github.com/OpenHands/OpenHands",
+      "official_url": "https://www.all-hands.dev/",
+      "reason": "High-adoption autonomous coding agent harness; relevant for future code-worker lanes, but only inside strict workspace/sandbox and public-action gates.",
+      "risk_gate": "report_only_no_code_execution_no_pr_public_action"
+    },
+    {
+      "category": "sandbox_execution",
+      "full_name": "e2b-dev/E2B",
+      "html_url": "https://github.com/e2b-dev/E2B",
+      "official_url": "https://e2b.dev/",
+      "reason": "Agent sandboxing is a likely missing department primitive for untrusted code, generated tools, and reproducible worker runs.",
+      "risk_gate": "report_only_no_cloud_sandbox_no_api_key_no_cost"
+    }
+  ],
+  "default_policy": {
+    "approval_required": true,
+    "artifact_capture_required": true,
+    "cloud_cost_policy": "deny",
+    "dependency_policy": "deny_install_and_import",
+    "file_write_policy": "deny_outside_named_workspace",
+    "network_policy": "deny",
+    "process_policy": "deny",
+    "public_action_policy": "deny",
+    "sandbox_provider": "none",
+    "secret_policy": "deny_all",
+    "teardown_required": true,
+    "workspace_root": "none"
+  },
+  "generated_utc": "2026-06-17T18:20:06Z",
+  "hard_denies": [
+    "unbounded_network_access",
+    "wildcard_filesystem_write",
+    "ambient_secrets_or_environment_dump",
+    "unbounded_dependency_install",
+    "public_pr_issue_comment_or_submission",
+    "browser_or_account_action",
+    "wallet_payment_real_money_action",
+    "live_security_testing_or_exploitation",
+    "service_request_mutation_without_separate_approval",
+    "cloud_sandbox_start_without_cost_cap"
+  ],
+  "lane_id": "platform_engineering",
+  "negative_probes": [
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "network_policy": "allow_all"
+      },
+      "probe_id": "network_any",
+      "required_rejection_reason": "unbounded_network_access"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "allowed_file_roots": [
+          "*"
+        ]
+      },
+      "probe_id": "workspace_any_write",
+      "required_rejection_reason": "wildcard_filesystem_write"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "secret_policy": "allow_environment"
+      },
+      "probe_id": "ambient_secrets",
+      "required_rejection_reason": "ambient_secrets_or_environment_dump"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "dependency_policy": "pip install latest"
+      },
+      "probe_id": "pip_latest",
+      "required_rejection_reason": "unbounded_dependency_install"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "allowed_commands": [
+          "gh pr create"
+        ]
+      },
+      "probe_id": "public_pr",
+      "required_rejection_reason": "public_pr_issue_comment_or_submission"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "allowed_commands": [
+          "open browser and login"
+        ]
+      },
+      "probe_id": "browser_login",
+      "required_rejection_reason": "browser_or_account_action"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "allowed_commands": [
+          "send wallet transaction"
+        ]
+      },
+      "probe_id": "wallet_action",
+      "required_rejection_reason": "wallet_payment_real_money_action"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "allowed_commands": [
+          "scan live target"
+        ]
+      },
+      "probe_id": "security_scan_live",
+      "required_rejection_reason": "live_security_testing_or_exploitation"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "service_request_mutation": "start req-*"
+      },
+      "probe_id": "service_mutation",
+      "required_rejection_reason": "service_request_mutation_without_separate_approval"
+    },
+    {
+      "expected_disposition": "reject",
+      "input": {
+        "cost_limit_usd": null,
+        "sandbox_provider": "e2b"
+      },
+      "probe_id": "cloud_no_cost_cap",
+      "required_rejection_reason": "cloud_sandbox_start_without_cost_cap"
+    }
+  ],
+  "next_action": "Build a sandbox execution approval packet and fixture runner before any sandbox provider, command execution, dependency install, network access, secret route, or service-worker start.",
+  "purpose": "Define the minimum approval contract before any OpenHands/E2B/Daytona-style code worker, cloud sandbox, or generated-tool execution can start.",
+  "required_approval_fields": [
+    "decision_id",
+    "approver",
+    "signed_utc",
+    "expires_utc",
+    "lane_id",
+    "task_id",
+    "sandbox_provider",
+    "workspace_root",
+    "allowed_commands",
+    "allowed_file_roots",
+    "network_policy",
+    "secret_policy",
+    "dependency_policy",
+    "time_limit_seconds",
+    "cost_limit_usd",
+    "artifact_capture_paths",
+    "teardown_plan",
+    "rollback_plan"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_keys_used": false,
+    "browser_sessions_started": 0,
+    "cloud_sandbox_started": false,
+    "commands_executed": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "files_written_outside_workspace": 0,
+    "model_api_calls": false,
+    "network_enabled": false,
+    "payment_actions": false,
+    "processes_started": 0,
+    "public_actions": false,
+    "real_money_actions": false,
+    "runtime_starts": 0,
+    "sandbox_sessions_started": 0,
+    "secrets_read": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.sandbox_execution_gate_contract.v1",
+  "source_matrix_path": "E:\\agent-company-lab\\reports\\agent-platform-capability-matrix-v1-20260617.json",
+  "task_id": "task-sandbox-execution-gate-contract-v1-20260617"
+}

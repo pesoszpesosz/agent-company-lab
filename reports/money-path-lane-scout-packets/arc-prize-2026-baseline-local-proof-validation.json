@@ -1,0 +1,55 @@
+{
+  "schema_version": "ai_ml_competitions.arc_prize_2026_baseline_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:38:12Z",
+  "task_id": "task-lane-scout-arc_prize_2026-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-prize-2026-baseline-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\arc-prize-2026-baseline-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "official_sources_present",
+      "passed": true
+    },
+    {
+      "check": "baseline_tracks_at_least_three",
+      "passed": true
+    },
+    {
+      "check": "recommended_track_present",
+      "passed": true
+    },
+    {
+      "check": "next_local_sprint_has_success_criteria",
+      "passed": true
+    },
+    {
+      "check": "all_tracks_have_gates_and_deliverables",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "acceptance_checks_present",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "kaggle_account_or_login": false,
+    "rules_or_terms_accepted": false,
+    "official_or_gated_data_downloaded": false,
+    "submissions_made": 0,
+    "papers_or_notebooks_published": 0,
+    "paid_compute_or_api": false,
+    "api_keys_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "external_side_effects": 0
+  }
+}

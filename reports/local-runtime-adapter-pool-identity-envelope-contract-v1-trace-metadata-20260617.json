@@ -1,0 +1,21 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "trace_id": "trace-local-runtime-adapter-pool-identity-envelope-contract-v1-20260617",
+  "span_kind": "report_only_contract_design",
+  "lane_id": "platform_engineering",
+  "task_id": "task-local-runtime-adapter-pool-identity-envelope-contract-v1-20260617",
+  "agent_id": "recovered-profitable-edge-infra",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-contract-v1-20260617.md",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-contract-v1-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-contract-v1-20260617.csv"
+  ],
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "model_api_calls": false,
+  "mcp_tool_calls": false,
+  "worker_starts": 0,
+  "service_requests_assigned": 0,
+  "worker_pools_registered": 0,
+  "summary": "Report-only identity envelope contract design for the local runtime adapter worker pool activation path."
+}

@@ -1,0 +1,251 @@
+{
+  "approval_gate_count": 6,
+  "approval_gates": [
+    "registration_or_login",
+    "wallet_or_payment_method",
+    "real_money_trade_or_spend",
+    "public_submission_or_marketplace_post",
+    "security_testing_beyond_read_only",
+    "personal_data_or_sensitive_browser_submission"
+  ],
+  "department_architecture_packet_count": 1,
+  "department_count": 7,
+  "departments": [
+    {
+      "default_stack": [
+        "Temporal",
+        "LangGraph"
+      ],
+      "department_id": "ceo_office",
+      "manager_role": "ceo_agent",
+      "purpose": "Portfolio policy, approval, capital allocation, kill/promote decisions."
+    },
+    {
+      "default_stack": [
+        "Temporal",
+        "OpenAI Agents SDK"
+      ],
+      "department_id": "platform_engineering",
+      "manager_role": "platform_manager",
+      "purpose": "Schemas, orchestration, worker pools, evidence integrity, observability."
+    },
+    {
+      "default_stack": [
+        "LangGraph",
+        "OpenAI Agents SDK"
+      ],
+      "department_id": "opportunity_research",
+      "manager_role": "research_manager",
+      "purpose": "Find and normalize new online money paths and source-backed leads."
+    },
+    {
+      "default_stack": [
+        "LangGraph",
+        "CrewAI"
+      ],
+      "department_id": "bounty_and_security",
+      "manager_role": "bounty_manager",
+      "purpose": "Paid code bounties, public code review, report drafting, security scope control."
+    },
+    {
+      "default_stack": [
+        "Temporal",
+        "LangGraph"
+      ],
+      "department_id": "markets_and_capital",
+      "manager_role": "market_manager",
+      "purpose": "Prediction markets, paper trades, capital gates, risk ledgers."
+    },
+    {
+      "default_stack": [
+        "CrewAI",
+        "OpenAI Agents SDK"
+      ],
+      "department_id": "digital_products",
+      "manager_role": "product_manager",
+      "purpose": "Demand research, asset creation, quality, packaging, marketplace readiness."
+    },
+    {
+      "default_stack": [
+        "Temporal",
+        "guardrails"
+      ],
+      "department_id": "compliance_and_approvals",
+      "manager_role": "compliance_manager",
+      "purpose": "Registration, wallets, public actions, real-money, policy, and rollback approvals."
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T11:10:37Z",
+  "lane_evidence_rows_after": 135,
+  "lane_evidence_rows_before": 134,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_department_architecture_packet_ready_for_schema_plan",
+  "next_action": "Materialize a schema plan for these tables and request types next, without starting workers or taking external actions.",
+  "packet_evidence_id": "agent-company-department-architecture-packet-20260616",
+  "packet_lane_id": "platform_engineering",
+  "packet_task_id": "task-agent-company-department-architecture-packet-20260616",
+  "recommended_default": "materialize_schema_plan_next_without_starting_workers_or_external_actions",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.department_architecture_packet.v1",
+  "service_request_type_count": 12,
+  "service_request_types": [
+    "research_money_path",
+    "normalize_opportunity_lead",
+    "draft_bounty_patch",
+    "draft_security_report",
+    "paper_trade_market",
+    "build_digital_asset",
+    "quality_review_artifact",
+    "request_registration_worker",
+    "request_wallet_worker",
+    "request_public_submission",
+    "request_real_money_action",
+    "request_security_scope_review"
+  ],
+  "source_radar_evidence_id": "agent-company-infrastructure-radar-20260616",
+  "source_radar_task_id": "task-agent-company-infrastructure-radar-20260616",
+  "source_radar_validation_path": "E:\\agent-company-lab\\reports\\agent-company-infrastructure-radar-validation-latest.json",
+  "summary": "Converted the infrastructure radar into a concrete department architecture packet: departments, table blueprints, service request types, thread templates, worker pool interfaces, and approval gates.",
+  "table_blueprint_count": 10,
+  "table_blueprints": [
+    {
+      "purpose": "One row per IDE/chat agent thread with lane, role, state, owner, and handoff status.",
+      "table": "agent_threads"
+    },
+    {
+      "purpose": "Department definitions, manager role, active lanes, and escalation policy.",
+      "table": "departments"
+    },
+    {
+      "purpose": "Canonical online money path taxonomy with legality, payout, proofability, and gates.",
+      "table": "money_paths"
+    },
+    {
+      "purpose": "Normalized leads from seekers, including source, payout, account needs, next action.",
+      "table": "opportunity_leads"
+    },
+    {
+      "purpose": "Local worker capabilities, allowed inputs, forbidden actions, and approval requirements.",
+      "table": "worker_pool_interfaces"
+    },
+    {
+      "purpose": "Durable gate records for login, wallet, payment, public action, security testing, and personal data.",
+      "table": "approval_gates"
+    },
+    {
+      "purpose": "Structured proof artifacts, source backing, confidence, and reviewer notes.",
+      "table": "evidence_packets"
+    },
+    {
+      "purpose": "Agent-to-agent handoffs, requested worker type, response artifact, and status.",
+      "table": "task_handoffs"
+    },
+    {
+      "purpose": "Paper-trade, scanner, local build, and research experiment metrics.",
+      "table": "experiment_runs"
+    },
+    {
+      "purpose": "Expected value, time spent, realized revenue, costs, and killed-lane reasons.",
+      "table": "roi_ledger"
+    }
+  ],
+  "task_rows_inserted_by_packet": 1,
+  "tasks_table_rows_after": 227,
+  "tasks_table_rows_before": 226,
+  "thread_template_count": 8,
+  "thread_templates": [
+    {
+      "role": "CEO",
+      "starts_with": "portfolio status, blockers, promote/kill recommendations",
+      "template_id": "ceo_review_thread"
+    },
+    {
+      "role": "Manager",
+      "starts_with": "lane queue, evidence gaps, worker requests",
+      "template_id": "department_manager_thread"
+    },
+    {
+      "role": "Seeker",
+      "starts_with": "source scan, lead normalization, next proof artifact",
+      "template_id": "money_path_seeker_thread"
+    },
+    {
+      "role": "Worker",
+      "starts_with": "repo scope, issue proof, patch/report draft",
+      "template_id": "bounty_worker_thread"
+    },
+    {
+      "role": "Worker",
+      "starts_with": "market hypothesis, paper-trade record, risk memo",
+      "template_id": "market_worker_thread"
+    },
+    {
+      "role": "Worker",
+      "starts_with": "demand proof, asset draft, packaging checklist",
+      "template_id": "product_worker_thread"
+    },
+    {
+      "role": "Gatekeeper",
+      "starts_with": "exact requested gated action, scope, rollback, expiration",
+      "template_id": "approval_worker_thread"
+    },
+    {
+      "role": "Auditor",
+      "starts_with": "chain integrity, stale evidence, ROI drift",
+      "template_id": "observability_thread"
+    }
+  ],
+  "worker_pool_interface_count": 7,
+  "worker_pool_interfaces": [
+    {
+      "allowed": "public-source research and local summaries",
+      "forbidden": "login, outreach, purchase",
+      "pool_id": "research_scout_pool"
+    },
+    {
+      "allowed": "local code review, patch drafts, tests",
+      "forbidden": "PR submission without approval",
+      "pool_id": "code_patch_pool"
+    },
+    {
+      "allowed": "read-only public code review",
+      "forbidden": "probing live systems without scope",
+      "pool_id": "security_review_pool"
+    },
+    {
+      "allowed": "paper trading and local market notes",
+      "forbidden": "real-money orders",
+      "pool_id": "market_analysis_pool"
+    },
+    {
+      "allowed": "local product drafts and packaging",
+      "forbidden": "marketplace posting",
+      "pool_id": "asset_build_pool"
+    },
+    {
+      "allowed": "approval packet drafting",
+      "forbidden": "registration/login without approval",
+      "pool_id": "account_gate_pool"
+    },
+    {
+      "allowed": "local chain audits and report refresh",
+      "forbidden": "state mutation outside approved commands",
+      "pool_id": "observability_pool"
+    }
+  ]
+}

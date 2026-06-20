@@ -1,0 +1,48 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/runtime-start-apply-preflight-blocker-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Runtime Start Apply Preflight Blocker v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.runtime_start_apply_preflight_blocker.v1"
+    },
+    "apply_preflight_status": {
+      "enum": [
+        "blocked_no_real_signed_decision",
+        "blocked_guard_not_passing",
+        "blocked_fixture_decision_not_real",
+        "ready_for_apply_command_preflight"
+      ]
+    },
+    "real_signed_decision_path": {
+      "type": "string"
+    },
+    "real_signed_decision_present": {
+      "type": "boolean"
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "apply_preflight_status",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "apply_allowed",
+    "runtime_start_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "all_no_execution": true,
+  "api_calls": false,
+  "approvals_granted": 0,
+  "default_decision": "park",
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "form_id": "form-model-api-gate-human-review-req-pydantic-ai-model-backed-adapter-20260614",
+  "generated_utc": "2026-06-15T13:12:00Z",
+  "rejections_granted": 0,
+  "schema_version": "model_api_gate_human_review_form_validation.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+  "worker_starts": 0
+}

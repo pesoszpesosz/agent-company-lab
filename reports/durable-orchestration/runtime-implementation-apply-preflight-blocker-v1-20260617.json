@@ -1,0 +1,95 @@
+{
+  "accepted_guard_decision_count": 2,
+  "all_checks_passed": true,
+  "apply_allowed": false,
+  "apply_preflight_status": "blocked_no_real_signed_decision",
+  "failure_count": 0,
+  "failures": [],
+  "fixture_decisions_apply_blocked": true,
+  "generated_utc": "2026-06-17T18:03:23Z",
+  "next_action": "Provide a real signed human runtime decision artifact, then run the signed-decision guard and a separate apply preflight before any runtime code, dependency install, worker/server start, service_request mutation, browser/API/public/account/wallet/payment/security/real-money action, or external side effect.",
+  "preflight_checks": [
+    {
+      "check_id": "guard_validation_clean",
+      "detail": "Signed-decision guard validation must be clean before apply preflight can even inspect decisions.",
+      "passed": true
+    },
+    {
+      "check_id": "guard_report_clean",
+      "detail": "Signed-decision guard report must have no fixture expectation failures.",
+      "passed": true
+    },
+    {
+      "check_id": "guard_applied_no_decisions",
+      "detail": "The upstream guard must not have applied any decision.",
+      "passed": true
+    },
+    {
+      "check_id": "accepted_guard_decisions_are_fixtures_only",
+      "detail": "Current accepted decisions are fixture decisions only and must not be applied.",
+      "fixture_apply_blockers": [
+        {
+          "apply_blocked": true,
+          "decision_id": "decision-positive-deny-all",
+          "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-implementation-signed-decision-guard-v1-fixtures\\positive_deny_all.json",
+          "reason": "accepted guard fixture is not a real human operator decision",
+          "source_kind": "fixture"
+        },
+        {
+          "apply_blocked": true,
+          "decision_id": "decision-positive-sqlite-report-only",
+          "path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-implementation-signed-decision-guard-v1-fixtures\\positive_sqlite_control_plane_report_only.json",
+          "reason": "accepted guard fixture is not a real human operator decision",
+          "source_kind": "fixture"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "check_id": "real_signed_decision_absent",
+      "detail": "No real signed human runtime decision artifact was supplied to this report-only preflight.",
+      "passed": true
+    },
+    {
+      "check_id": "apply_must_remain_blocked",
+      "detail": "Apply readiness remains false until a real signed decision artifact passes the guard and a later apply preflight.",
+      "passed": true
+    }
+  ],
+  "real_decision_required": true,
+  "real_signed_decision_path": "",
+  "rejected_guard_decision_count": 17,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_commands_executed": 0,
+    "apply_commands_written": 0,
+    "approval_rows_written": 0,
+    "browser_sessions_started": 0,
+    "database_provisioning": false,
+    "decisions_applied": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "runtime_starts": 0,
+    "security_testing_actions": false,
+    "server_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_started": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "runtime_code_write_allowed": false,
+  "runtime_implementation_allowed": false,
+  "schema_path": "E:\\agent-company-lab\\architecture\\runtime-implementation-apply-preflight-blocker-v1.schema.json",
+  "schema_version": "agent_company.runtime_implementation_apply_preflight_blocker.v1",
+  "source_guard_report_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-implementation-signed-decision-guard-v1-20260617.json",
+  "source_guard_report_sha256": "589530c6f957a3ea5a35715a5409976d558b56f870d3739be6114761febc412b",
+  "source_guard_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-implementation-signed-decision-guard-v1-validation-20260617.json",
+  "source_guard_validation_sha256": "d95a6e094cf043aa5e337d3ae255af2ceba03e7391120760b0d9fb1f84aa8c3e"
+}

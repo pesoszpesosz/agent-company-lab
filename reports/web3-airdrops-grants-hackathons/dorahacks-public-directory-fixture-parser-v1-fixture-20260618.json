@@ -1,0 +1,309 @@
+{
+  "hard_kill_reasons": [
+    "closed_or_deadline_too_close",
+    "no_clear_prize_grant_or_funding_route",
+    "domain_theme_mismatch",
+    "eligibility_or_judging_rules_unclear",
+    "requires_account_profile_buidl_creation_or_team_join_before_review",
+    "requires_wallet_connection_vote_donation_or_transaction",
+    "requires_payment_tax_kyc_or_prize_acceptance_before_local_fit",
+    "requires_public_post_message_demo_or_campaign_before_approval",
+    "requires_worker_runtime_hosted_bot_or_buidl_ai_use_without_approval",
+    "requires_nonlocal_assets_private_data_or_third_party_credentials",
+    "duplicate_or_crowded_project_space",
+    "local_repo_demo_or_writeup_cannot_be_prepared",
+    "legal_terms_privacy_or_country_risk_unreviewed"
+  ],
+  "opportunity_fields": [
+    "opportunity_url",
+    "observed_utc",
+    "opportunity_type",
+    "name",
+    "status",
+    "ecosystem_or_chain",
+    "region_or_location",
+    "virtual_or_irl",
+    "tags",
+    "submission_start",
+    "submission_end",
+    "voting_start",
+    "voting_end",
+    "funding_or_prize_pool",
+    "currency_or_token",
+    "voting_method",
+    "eligibility_rules",
+    "required_deliverables",
+    "judging_criteria",
+    "team_requirements",
+    "project_fit",
+    "repo_or_demo_requirement",
+    "license_or_open_source_requirement",
+    "wallet_requirement",
+    "account_or_profile_requirement",
+    "kyc_or_tax_or_payment_requirement",
+    "public_promotion_requirement",
+    "submission_route",
+    "duplicate_or_prior_project_signal",
+    "local_artifact_to_prepare",
+    "score",
+    "kill_reasons",
+    "next_local_action"
+  ],
+  "opportunity_rows": [
+    {
+      "account_or_profile_requirement": "dorahacks_account_and_buidl_profile_required_before_registration",
+      "currency_or_token": "USD_equivalent",
+      "duplicate_or_prior_project_signal": "no_duplicate_seen_in_saved_row_but_live_sweep_required",
+      "ecosystem_or_chain": "multi_chain_public_goods",
+      "eligibility_rules": "Public saved text says open builders; exact rules require review before registration.",
+      "funding_or_prize_pool": "25000 USD equivalent prize pool",
+      "judging_criteria": [
+        "utility",
+        "technical_quality",
+        "public_good_impact"
+      ],
+      "kyc_or_tax_or_payment_requirement": "prize_claim_payment_tax_unknown_requires_human_review",
+      "license_or_open_source_requirement": "open_source_expected_requires_final_review",
+      "local_artifact_to_prepare": "sanitized_project_fit_writeup_and_repo_demo_outline",
+      "name": "Example AI Agent Public Goods Hackathon saved row",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "hackathon",
+      "opportunity_url": "https://dorahacks.io/hackathon/example-ai-agent-public-goods",
+      "project_fit": "agent_company_public_good_infrastructure",
+      "public_promotion_requirement": "not_required_before_local_proof",
+      "region_or_location": "virtual",
+      "repo_or_demo_requirement": "local_repo_outline_and_demo_plan_can_be_prepared",
+      "required_deliverables": [
+        "repository",
+        "demo_video_or_screenshots",
+        "short_writeup"
+      ],
+      "status": "ongoing",
+      "submission_end": "2026-07-21",
+      "submission_route": "register_or_submit_on_dorahacks_after_approval_only",
+      "submission_start": "2026-06-10",
+      "tags": [
+        "AI",
+        "Developer Tooling",
+        "Public Goods",
+        "Infrastructure"
+      ],
+      "team_requirements": "solo_or_team_allowed_saved_text",
+      "virtual_or_irl": "virtual",
+      "voting_end": "2026-07-29",
+      "voting_method": "judges_and_optional_community_vote_requires_review",
+      "voting_start": "2026-07-22",
+      "wallet_requirement": "not_required_before_local_proof"
+    },
+    {
+      "account_or_profile_requirement": "profile_or_buidl_required_before_application",
+      "currency_or_token": "chain_token_unknown",
+      "duplicate_or_prior_project_signal": "funding_sweep_required",
+      "ecosystem_or_chain": "public_goods_chain",
+      "eligibility_rules": "requires project profile, round rules, and likely anti-sybil review",
+      "funding_or_prize_pool": "matching pool visible but token/currency requires review",
+      "judging_criteria": [
+        "community_support",
+        "public_good_impact"
+      ],
+      "kyc_or_tax_or_payment_requirement": "matching_claim_payment_tax_unknown",
+      "license_or_open_source_requirement": "unclear",
+      "local_artifact_to_prepare": "grant_fit_note_and_gates_list_only",
+      "name": "Example quadratic funding grant round saved row",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "grant",
+      "opportunity_url": "https://dorahacks.io/grant/example-quadratic-funding-round",
+      "project_fit": "possible_public_good_fit_but_wallet_vote_gate",
+      "public_promotion_requirement": "community_donation_campaign_likely",
+      "region_or_location": "global",
+      "repo_or_demo_requirement": "writeup_can_be_prepared_locally",
+      "required_deliverables": [
+        "project_profile",
+        "impact_statement",
+        "milestones"
+      ],
+      "status": "ongoing",
+      "submission_end": "2026-07-05",
+      "submission_route": "grant_round_application_after_approval_only",
+      "submission_start": "2026-06-01",
+      "tags": [
+        "Grant",
+        "Quadratic Funding",
+        "Public Goods"
+      ],
+      "team_requirements": "project_owner_required",
+      "virtual_or_irl": "virtual",
+      "voting_end": "2026-07-20",
+      "voting_method": "quadratic_funding_wallet_vote",
+      "voting_start": "2026-07-06",
+      "wallet_requirement": "wallet_required_for_voting_or_donation_flow"
+    },
+    {
+      "account_or_profile_requirement": "profile_and_buidl_creation_required",
+      "currency_or_token": "",
+      "duplicate_or_prior_project_signal": "crowded_showcase_space",
+      "ecosystem_or_chain": "multi_chain",
+      "eligibility_rules": "requires profile/project creation",
+      "funding_or_prize_pool": "no direct prize route in saved row",
+      "judging_criteria": [],
+      "kyc_or_tax_or_payment_requirement": "unknown",
+      "license_or_open_source_requirement": "unclear",
+      "local_artifact_to_prepare": "do_not_prepare_until_cash_route_exists",
+      "name": "Example BUIDL showcase page saved row",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "buidl",
+      "opportunity_url": "https://dorahacks.io/buidl/example-agent-infra",
+      "project_fit": "developer_tooling_possible_but_no_cash_route",
+      "public_promotion_requirement": "public_project_page_required",
+      "region_or_location": "global",
+      "repo_or_demo_requirement": "project links required",
+      "required_deliverables": [
+        "buidl_profile",
+        "project_page",
+        "links"
+      ],
+      "status": "open_ended",
+      "submission_end": "",
+      "submission_route": "create_buidl_after_approval_only",
+      "submission_start": "",
+      "tags": [
+        "BUIDL",
+        "Showcase",
+        "Developer Tooling"
+      ],
+      "team_requirements": "team_or_project_owner_profile",
+      "virtual_or_irl": "virtual",
+      "voting_end": "",
+      "voting_method": "likes_or_campaign_specific_unknown",
+      "voting_start": "",
+      "wallet_requirement": "unknown"
+    },
+    {
+      "account_or_profile_requirement": "bounty_submission_account_would_be_required_if_open",
+      "currency_or_token": "USD",
+      "duplicate_or_prior_project_signal": "outdated_closed_surface",
+      "ecosystem_or_chain": "dorahacks",
+      "eligibility_rules": "closed",
+      "funding_or_prize_pool": "outdated bounty amount in saved row",
+      "judging_criteria": [
+        "severity"
+      ],
+      "kyc_or_tax_or_payment_requirement": "payment_tax_unknown",
+      "license_or_open_source_requirement": "not_applicable",
+      "local_artifact_to_prepare": "none_closed",
+      "name": "Example closed bounty saved row",
+      "observed_utc": "2026-06-18T07:44:12Z",
+      "opportunity_type": "bug_bounty",
+      "opportunity_url": "https://dorahacks.io/bugbounty/example-closed-bounty",
+      "project_fit": "security_bounty_not_grant_hackathon",
+      "public_promotion_requirement": "none",
+      "region_or_location": "global",
+      "repo_or_demo_requirement": "not_applicable",
+      "required_deliverables": [
+        "security_report"
+      ],
+      "status": "closed",
+      "submission_end": "2025-03-01",
+      "submission_route": "closed_no_action",
+      "submission_start": "2025-01-01",
+      "tags": [
+        "Bug Bounty",
+        "Closed"
+      ],
+      "team_requirements": "n/a",
+      "virtual_or_irl": "virtual",
+      "voting_end": "",
+      "voting_method": "",
+      "voting_start": "",
+      "wallet_requirement": "not_applicable"
+    }
+  ],
+  "schema_version": "web3.dorahacks_public_directory_fixture.v1",
+  "scoring_rubric": [
+    {
+      "factor": "status_and_deadline",
+      "good": "opportunity is ongoing/upcoming with enough time for local deliverable prep",
+      "points": 15
+    },
+    {
+      "factor": "domain_fit",
+      "good": "AI, infra, Web3, public-good, or developer-tooling theme matches local assets",
+      "points": 15
+    },
+    {
+      "factor": "prize_or_funding_clarity",
+      "good": "funding/prize pool and currency/token route are explicit",
+      "points": 10
+    },
+    {
+      "factor": "deliverable_feasibility",
+      "good": "repo/demo/writeup can be produced locally without account or wallet",
+      "points": 15
+    },
+    {
+      "factor": "rules_clarity",
+      "good": "eligibility, judging, team, and open-source requirements are visible",
+      "points": 10
+    },
+    {
+      "factor": "wallet_payment_risk",
+      "good": "no wallet/payment/prize gate is needed before local proof",
+      "points": 10
+    },
+    {
+      "factor": "duplicate_or_crowding_risk",
+      "good": "prior BUIDLs do not already saturate the idea",
+      "points": 10
+    },
+    {
+      "factor": "promotion_burden",
+      "good": "does not require immediate public campaign or donor coordination",
+      "points": 5
+    },
+    {
+      "factor": "reuse_value",
+      "good": "local artifact can be reused for Gitcoin, EF ESP, or DoraHacks even if not submitted",
+      "points": 10
+    }
+  ],
+  "source": "manually_saved_public_dorahacks_directory_rows_no_login_no_wallet_no_submission",
+  "source_gate_notes": [
+    "At least eight public/current or local sources are recorded.",
+    "BUIDL, hackathon, grant, bounty, wallet, payment, public action, and runtime surfaces are separated.",
+    "At least twenty opportunity fields are defined.",
+    "At least six route stages are defined.",
+    "At least eight scoring factors are defined.",
+    "At least ten hard kill reasons are defined.",
+    "Boundary proves no account, wallet, profile, BUIDL, registration, submission, vote, donation, payment, public action, worker/runtime, model/MCP call, or external side effect occurred.",
+    "DoraHacks positions itself as an open-source incentive and hackathon community platform.",
+    "The page references hackathon organizer tooling, BUIDL AI, BUIDLs, grants, premium organizer tooling, and wallet/login surfaces.",
+    "The hackathon page says participants can learn, team up, build, participate in hackathons, or create hackathons.",
+    "It exposes filters for ongoing/upcoming/closed status, virtual/IRL location, region, and tags such as AI, Quantum, Crypto/PQC, Biohack, and Student.",
+    "Creating or participating in a hackathon is not performed by this packet.",
+    "The grant page presents quadratic funding and MACI/aMACI style grant rounds.",
+    "It reports public aggregate stats on total rounds, votes, and funded amount, and exposes filters for ongoing/upcoming/closed rounds, ecosystem, and voting method.",
+    "Voting, donating, grant participation, or wallet actions are blocked here.",
+    "The BUIDL page describes DoraHacks as a home for BUIDLs and says users can create projects and accelerate ventures.",
+    "It exposes technology/category/chain filters and public aggregate counts for BUIDLs, funded amount, and active builders.",
+    "Creating a BUIDL, updating milestones, or joining a campaign is gated.",
+    "The sitemap was reachable and fresh with 2026-06-17 timestamps.",
+    "It lists routes for BUIDL, grant, bounty, faucet, search, message, BUIDL AI, hackathon, bug bounty, legal terms, cookie policy, and chain-specific BUIDL pages.",
+    "Use sitemap routes as a public discovery map, not as permission to interact.",
+    "Terms of Use were reachable and last updated 5 May 2026.",
+    "Terms identify Hackerlink Limited and affiliated companies, create a legally binding agreement, and mention arbitration and dispute provisions.",
+    "Account, organizer, submission, legal, payment, or prize participation requires human review.",
+    "Privacy Policy was reachable and last updated 26 November 2025.",
+    "It covers personal data, usage data, cookies, transfers, rights, retention, and jurisdiction-specific notices.",
+    "Any account, profile, KYC-like, contact, or project submission route must treat personal-data processing as gated.",
+    "Bug bounty page was reachable, but public text showed no ongoing bounties and seven outdated bounties at capture time.",
+    "Bug bounty work should not be conflated with grants/hackathons and should remain monitor-only unless a live scoped program appears.",
+    "The public GitHub organization is reachable and can support read-only source discovery or duplicate checks.",
+    "GitHub issues, PRs, comments, forks, and public actions remain gated.",
+    "The Gitcoin packet established grant-lane controls around fit, rules, identity, wallet, submission, public action, and payout gates.",
+    "Reuse the same no-submit local-fit posture for DoraHacks.",
+    "Prior Web3 lane refresh already separated grant, hackathon, bounty, wallet, and submission surfaces.",
+    "DoraHacks should enter the queue as a scout template before any project creation or submission."
+  ],
+  "source_proof_path": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\dorahacks-scout-template-local-proof.json",
+  "source_scout_task_id": "task-lane-scout-dorahacks_hackathons_grants-20260618"
+}

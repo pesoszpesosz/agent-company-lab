@@ -1,0 +1,13 @@
+﻿from __future__ import annotations
+
+"""Compatibility facade for CEO decision apply-readiness approval phase writers."""
+
+from .ceo_decision_apply_readiness_operator_approval import write_ceo_decision_parser_apply_readiness_operator_approval_packet
+from .ceo_decision_apply_readiness_no_approval import write_ceo_decision_parser_apply_readiness_no_approval_blocker
+from .ceo_decision_apply_readiness_decision_intake import write_ceo_decision_parser_apply_readiness_decision_intake_packet
+
+__all__ = [
+    "write_ceo_decision_parser_apply_readiness_operator_approval_packet",
+    "write_ceo_decision_parser_apply_readiness_no_approval_blocker",
+    "write_ceo_decision_parser_apply_readiness_decision_intake_packet",
+]

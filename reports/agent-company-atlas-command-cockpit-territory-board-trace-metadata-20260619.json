@@ -1,0 +1,27 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-territory-board-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-territory-board-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_territory_board_added-20260619",
+  "title": "Command Cockpit Territory Board",
+  "timestamp": "2026-06-19T16:44:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Turned the Command Cockpit lane rail into a compact two-column territory board so expanding money paths scan more like map nodes and less like a long report list.",
+  "changes": [
+    "Added active-lane index and lane-count CSS variables to the rendered lane rail.",
+    "Added a cockpit-only territory route layer with route line, animated runner, and per-lane nodes.",
+    "Reshaped desktop cockpit lane cards into a dense two-column territory board while preserving existing lane data and controls.",
+    "Kept the mobile cockpit lane picker as a compact horizontal strip so the phone layout stays fast and low-scroll.",
+    "Recorded the territory board as the latest platform UI unlock in the generated snapshot history."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_lane_rail_signal_pips.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

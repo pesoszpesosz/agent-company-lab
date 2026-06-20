@@ -1,0 +1,151 @@
+{
+  "approval_request_count": 0,
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "boundary_phrase_count": 7,
+  "copy_change_count": 9,
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T22:25:08Z",
+  "lane_evidence_rows_after": 92,
+  "lane_evidence_rows_before": 91,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "copy_polish_complete_no_gate_exercised",
+  "next_action": "Run a local post-polish readiness check and decide whether to continue locally or draft separate future approval-request packets; do not exercise any gate.",
+  "polish_evidence_id": "digital-products-local-copy-polish-20260616",
+  "polish_lane_id": "digital_products_templates_plugins",
+  "polish_task_id": "task-digital-products-local-copy-polish-20260616",
+  "polished_file_count": 6,
+  "polished_files": [
+    {
+      "copy_changes": [
+        "Lead with the buyer and local job-to-be-done.",
+        "Remove vague launch language and name the no-external-validation boundary."
+      ],
+      "file_id": "readme",
+      "filename": "README.md",
+      "polished_copy": [
+        "AI Builder Launch Checklist Pack helps a solo AI builder review a small tool, template, or prompt workflow before asking for live validation.",
+        "Use it to decide whether the buyer, promise, file set, and private-review notes are clear enough for another local pass.",
+        "Keep gated: marketplace browsing, seller accounts, legal review, tax/KYC review, payout setup, public listing, publishing, wallets, payments, APIs, and external validation all require explicit approval."
+      ]
+    },
+    {
+      "copy_changes": [
+        "Turn checklist lines into direct action verbs."
+      ],
+      "file_id": "checklist",
+      "filename": "launch-checklist.md",
+      "polished_copy": [
+        "Write the buyer in one sentence.",
+        "Write the promise without revenue, payout, buyer-count, or live-demand claims.",
+        "Confirm the six local files agree with each other.",
+        "Stop before any browser, account, legal, payment, or public action unless approval is explicit."
+      ]
+    },
+    {
+      "copy_changes": [
+        "Make the sample concrete while keeping it hypothetical.",
+        "Clarify the safe next action."
+      ],
+      "file_id": "filled-example",
+      "filename": "filled-example.md",
+      "polished_copy": [
+        "Hypothetical buyer: a solo AI builder packaging a prompt workflow for founder interview notes.",
+        "Hypothetical promise: a local checklist and scorecard for deciding whether the workflow is coherent enough to request validation later.",
+        "Safe next action: polish copy locally, then decide whether to request a separate read-only browser gate."
+      ]
+    },
+    {
+      "copy_changes": [
+        "Group safety checks by claim, file coverage, and gates.",
+        "Repeat the key gated actions in plain language."
+      ],
+      "file_id": "qa-checklist",
+      "filename": "qa-checklist.md",
+      "polished_copy": [
+        "Claim check: no sales, revenue, payout, buyer-count, or live-demand claims.",
+        "Coverage check: README, checklist, filled example, QA checklist, private listing draft, and scorecard are present.",
+        "Gate check: marketplace, account, legal, tax, KYC, payout, publishing, wallet, payment, API, and public-action gates remain explicit."
+      ]
+    },
+    {
+      "copy_changes": [
+        "Make the draft sound like a private review note instead of a public listing."
+      ],
+      "file_id": "private-listing-draft",
+      "filename": "private-listing-draft.md",
+      "polished_copy": [
+        "Private review title: AI Builder Launch Checklist Pack.",
+        "Private review summary: a local-only package for checking whether a small AI-builder asset is coherent before marketplace, seller, or payment work.",
+        "Keep gated: marketplace browsing, seller accounts, legal review, tax/KYC review, payout setup, public listing, publishing, wallets, payments, APIs, and external validation all require explicit approval."
+      ]
+    },
+    {
+      "copy_changes": [
+        "Make scoring criteria compact and repeatable."
+      ],
+      "file_id": "review-scorecard",
+      "filename": "private-review-scorecard.md",
+      "polished_copy": [
+        "Usefulness: can the buyer complete one local pre-launch review without extra explanation?",
+        "Clarity: are buyer, promise, file set, and next action obvious?",
+        "Boundary safety: are browser, marketplace, public listing, account, legal, tax, KYC, payout, wallet, payment, and API gates preserved?",
+        "Next step: choose one local fix or draft a separate approval-request packet."
+      ]
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_copy_polish.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "selected_option_id": "continue-local",
+  "source_choice_evidence_id": "digital-products-local-gate-choice-20260616",
+  "source_choice_task_id": "task-digital-products-local-gate-choice-20260616",
+  "source_choice_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-gate-choice-validation-latest.json",
+  "summary": "Completed a local copy-polish pass for the revised AI builder launch checklist pack. The pass tightens six local file drafts, records nine copy changes, and keeps all gate language intact.",
+  "task_rows_inserted_by_polish": 1,
+  "tasks_table_rows_after": 181,
+  "tasks_table_rows_before": 180
+}

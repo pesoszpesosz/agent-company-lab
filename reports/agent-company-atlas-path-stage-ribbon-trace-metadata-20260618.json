@@ -1,0 +1,45 @@
+{
+  "id": "trace-agent-company-atlas-path-stage-ribbon-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-stage-ribbon-v1-20260618",
+  "event_id": "trace-atlas_path_stage_ribbon_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-stage-ribbon-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Stage Ribbon",
+  "summary": "Added a compact interactive stage ribbon under Mission Glance so route levels, gates, unlocks, the focused node, and future expansion slots are visible before opening the deeper Route module.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_stage_ribbon.py"
+  ],
+  "browser_verification": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-stage-ribbon-compact-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "body_deck": "command",
+    "overflow_x": 0,
+    "detail_panel_y": 229,
+    "detail_panel_height": 640,
+    "path_mission_glance_y": 497,
+    "path_mission_glance_height": 139,
+    "path_stage_ribbon_y": 646,
+    "path_stage_ribbon_height": 74,
+    "path_stage_ribbon_bottom": 720,
+    "stage_node_count": 9,
+    "stage_button_count": 8,
+    "focused_stage_count": 1,
+    "path_core_deck_y": 730
+  },
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py -q failed before implementation because renderPathStageRibbon was missing.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py -q failed again after runtime inspection until the ribbon and node heights were fixed.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser runtime: direct Command/Path route exposed the interactive Path Stage Ribbon after Mission Glance with one focused stage, nine total stage cards, eight focus buttons, bottom at 720px, and overflow 0."
+  ]
+}

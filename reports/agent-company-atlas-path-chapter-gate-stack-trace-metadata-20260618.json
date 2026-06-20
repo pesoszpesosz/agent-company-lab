@@ -1,0 +1,85 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-gate-stack-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-gate-stack-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_gate_stack_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Gate Stack inside the selected Path Map Chapter Archive record deck so each chapter shows active blocker signals, review gates, service-request gates, local Gate Radar notes, and blocker-review actions beside chapter history.",
+  "design_research": {
+    "queries": [
+      "dashboard UX blockers risk register compact issue board pattern",
+      "risk register dashboard design blockers status board UX",
+      "kanban blockers dashboard incident risk board compact UX"
+    ],
+    "source_urls": [
+      "https://www.atlassian.com/agile/kanban/boards",
+      "https://uxpatterns.dev/patterns/data-display/kanban-board",
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards",
+      "https://riskonnect.com/solutions/enterprise-risk-management-dashboard/"
+    ],
+    "pattern_notes": [
+      "Blocker boards should make bottlenecks visible at a glance while keeping the recovery path close.",
+      "Risk dashboards are useful when they combine current status, pressure metrics, and the most important items rather than showing every possible record.",
+      "Kanban-inspired risk views should expose state and priority without hiding rules or next actions."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_gate_stack.py",
+      "reports/agent-company-atlas-path-chapter-gate-stack-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "gateRadarItems(lane)",
+      "gateRadarNoteForItem(lane, item)",
+      "pathChapterArchiveItems(trail).counts",
+      "pathEventGlyphType(item)",
+      "browser-local state.stagedDispatches"
+    ],
+    "ui_contract": [
+      "Render Chapter Gate Stack inside the selected Chapter Archive record deck.",
+      "Derive active blocker/review signals from the existing Gate Radar item pipeline.",
+      "Show chapter gate/service counts, blocker count, review count, and peak pressure.",
+      "Include local Gate Radar notes when present.",
+      "Expose GATE, Q, and COM actions without sending messages or starting workers.",
+      "Provide a clear fallback state for lanes without active gates so future repos remain usable."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_gate_stack.py -q failed before frontend wiring on missing function pathChapterGateStackItems.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_gate_stack.py -q passed after implementation."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-gate-stack-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Gate Stack with three blocker signals, account/browser categories, 92 pressure, GATE/OK/COM actions, and no horizontal overflow."
+    },
+    "local_queue_action": {
+      "status": "passed",
+      "evidence": "The gate-stack Q/OK button resolved to exactly one element and clicked successfully through the browser-local lane staging handler. It kept the panel in OK state and produced no console errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one Gate Stack with three cards, GATE/OK/COM actions, no horizontal overflow, no bad rectangles, no clipped gate text, and no console errors."
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "check_evidence_id": "digital-products-local-completeness-check-20260616",
+  "check_lane_id": "digital_products_templates_plugins",
+  "check_task_id": "task-digital-products-local-completeness-check-20260616",
+  "completeness_check_count": 9,
+  "completeness_checks": [
+    {
+      "check_id": "readme-present",
+      "finding": "README sections cover scope, buyer, included files, use, boundaries, non-claims, and gates.",
+      "status": "pass"
+    },
+    {
+      "check_id": "positioning-present",
+      "finding": "Positioning template was drafted earlier with ten filled answers.",
+      "status": "pass"
+    },
+    {
+      "check_id": "checklist-present",
+      "finding": "Launch checklist was drafted earlier with pre-launch, gated, and post-launch rows.",
+      "status": "pass"
+    },
+    {
+      "check_id": "screenshot-shotlist-present",
+      "finding": "Screenshot shot list has six local rows including a gated pricing/boundary row.",
+      "status": "pass"
+    },
+    {
+      "check_id": "qa-pass-present",
+      "finding": "QA pass has seven local checks for links, copy, scope, screenshots, checklist, gates, and distribution.",
+      "status": "pass"
+    },
+    {
+      "check_id": "post-launch-review-present",
+      "finding": "Post-launch review has six prompts for future approved launch review.",
+      "status": "pass"
+    },
+    {
+      "check_id": "non-claims-visible",
+      "finding": "The package repeatedly avoids revenue, conversion, buyer-count, payout, and live-demand claims.",
+      "status": "pass"
+    },
+    {
+      "check_id": "gate-safety-visible",
+      "finding": "Marketplace, seller terms, public listing, and payout/account setup remain explicitly gated.",
+      "status": "pass"
+    },
+    {
+      "check_id": "private-review-ready",
+      "finding": "The local draft is complete enough for private review before any browser/legal/payment gate is requested.",
+      "status": "pass"
+    }
+  ],
+  "drafted_file_count": 4,
+  "drafted_files": [
+    {
+      "file_id": "README.md",
+      "section_count": 7,
+      "status": "drafted_locally"
+    },
+    {
+      "file_id": "screenshot-shotlist.md",
+      "row_count": 6,
+      "status": "drafted_locally"
+    },
+    {
+      "file_id": "qa-pass.md",
+      "row_count": 7,
+      "status": "drafted_locally"
+    },
+    {
+      "file_id": "post-launch-review.md",
+      "prompt_count": 6,
+      "status": "drafted_locally"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not distribute, publish, browse marketplaces, create seller accounts, accept terms, configure payouts, set prices, or claim live demand from this completeness check.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this completeness check."
+  ],
+  "generated_utc": "2026-06-15T21:44:48Z",
+  "lane_evidence_rows_after": 85,
+  "lane_evidence_rows_before": 84,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "local_package_complete_enough_for_private_review_no_public_action",
+  "manifest_file_count": 6,
+  "manifest_files": [
+    {
+      "path": "README.md",
+      "purpose": "Explain scope, usage, boundaries, non-claims, and gated validation requirements.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "positioning-template.md",
+      "purpose": "Reusable AI-builder launch positioning worksheet with sample filled answers.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "launch-checklist.md",
+      "purpose": "Pre-launch, gated-validation, and post-launch checklist with owner/status/evidence columns.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "screenshot-shotlist.md",
+      "purpose": "List required screenshots, captions, reuse notes, and missing-asset flags.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "qa-pass.md",
+      "purpose": "Local QA table for links, copy, onboarding, screenshots, release notes, and boundary claims.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "post-launch-review.md",
+      "purpose": "Future review worksheet for traffic, replies, conversion signals, support load, and next iteration after approved launch.",
+      "status": "local_manifest_only"
+    }
+  ],
+  "missing_file_stub_count": 2,
+  "missing_file_stubs": [
+    {
+      "file_id": "positioning-template.md",
+      "next_action": "Materialize from `digital-products-local-asset-draft-latest.md` if a local package directory is created.",
+      "reason": "Content exists in the asset-draft layer, but not yet materialized as a standalone file."
+    },
+    {
+      "file_id": "launch-checklist.md",
+      "next_action": "Materialize from `digital-products-local-asset-draft-latest.md` if a local package directory is created.",
+      "reason": "Content exists in the asset-draft layer, but not yet materialized as a standalone file."
+    }
+  ],
+  "next_action": "Prepare a private-review packet that points to all local package artifacts; do not distribute, list, price, browse marketplaces, create accounts, or configure payouts.",
+  "passed_check_count": 9,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_completeness_check.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_files_evidence_id": "digital-products-local-package-files-20260616",
+  "source_files_task_id": "task-digital-products-local-package-files-20260616",
+  "source_files_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-package-files-validation-latest.json",
+  "summary": "Ran a local completeness check across the six-file AI builder launch checklist pack. The package is complete enough for private review, with two file stubs still represented by earlier draft layers and all public/distribution/payment work gated.",
+  "task_rows_inserted_by_check": 1,
+  "tasks_table_rows_after": 167,
+  "tasks_table_rows_before": 166
+}

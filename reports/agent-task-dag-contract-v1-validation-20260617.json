@@ -1,0 +1,31 @@
+{
+  "all_checks_passed": true,
+  "approves_actions": false,
+  "calls_apis": false,
+  "edge_count": 12,
+  "evidence_requirement_count": 3,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "gate_count": 3,
+  "generated_utc": "2026-06-17T18:37:28Z",
+  "json_path": "E:\\agent-company-lab\\reports\\agent-task-dag-contract-v1-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\agent-task-dag-contract-v1-20260617.md",
+  "node_count": 10,
+  "schema_path": "E:\\agent-company-lab\\architecture\\agent-task-dag-contract-v1.schema.json",
+  "schema_version": "agent_company.agent_task_dag_contract_validation.v1",
+  "starts_workers": false,
+  "topological_order": [
+    "node-ceo-intake",
+    "node-source-radar",
+    "node-dag-contract",
+    "node-money-lane-refresh",
+    "node-paid-code-proof",
+    "node-security-proof",
+    "node-digital-product-proof",
+    "node-browser-service-request",
+    "node-worker-pool-preflight",
+    "node-ceo-synthesis"
+  ],
+  "updates_service_requests": false
+}

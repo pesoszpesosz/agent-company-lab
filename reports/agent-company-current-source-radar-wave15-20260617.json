@@ -1,0 +1,216 @@
+{
+  "all_checks_passed": true,
+  "architecture_decisions": [
+    {
+      "decision_id": "keep_local_sqlite_control_plane_as_brain",
+      "next_build": "checkpoint_interrupt_contract_v1 for lane manager handoffs and service-worker decisions.",
+      "reason": "Every source points toward durable state, checkpoints, and explicit human review. Our current DB already stores tasks, artifacts, outcomes, service requests, and trace events."
+    },
+    {
+      "decision_id": "separate_human_review_from_apply",
+      "next_build": "signed_decision_apply_command_contract only after a real signed decision artifact exists.",
+      "reason": "LangChain HITL, LangGraph interrupts, Microsoft HITL workflow, and our service-worker guards all converge on pause/review/resume rather than instant execution."
+    },
+    {
+      "decision_id": "treat_frameworks_as_patterns_before_dependencies",
+      "next_build": "adapter_candidate_scorecard_v1 covering LangGraph, Temporal, Restate, ADK, Microsoft Agent Framework, CrewAI, and OpenHands.",
+      "reason": "High-star frameworks are active, but adopting them now would add runtime, credentials, and model/API gates before our local company loop is complete."
+    }
+  ],
+  "browser_sessions_started": 0,
+  "capture_utc": "2026-06-17T20:46:01Z",
+  "dataset_csv": "E:\\agent-company-lab\\data\\agent-company-current-source-radar-wave15-20260617.csv",
+  "dataset_json": "E:\\agent-company-lab\\data\\agent-company-current-source-radar-wave15-20260617.json",
+  "dependency_installs": 0,
+  "doc_source_count": 10,
+  "doc_sources": [
+    {
+      "local_mapping": "Use its checkpoint/interrupt concept as a reference for CEO/CRO decision pauses, while keeping local SQLite as the authority.",
+      "source_id": "langgraph_overview",
+      "takeaway": "LangGraph positions durable execution, streaming, and human-in-the-loop as core orchestration primitives.",
+      "title": "LangGraph overview",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview"
+    },
+    {
+      "local_mapping": "Matches service-worker signed decision guard plus apply-preflight blocker.",
+      "source_id": "langchain_hitl",
+      "takeaway": "Tool calls can be paused by policy and resumed after a human decision.",
+      "title": "LangChain Human-in-the-loop",
+      "url": "https://docs.langchain.com/oss/python/langchain/human-in-the-loop"
+    },
+    {
+      "local_mapping": "Keep our trace_events/outcomes/artifacts as the lightweight history before any Temporal adoption.",
+      "source_id": "temporal_durable_execution",
+      "takeaway": "Durable execution treats long-running work as crash-proof execution with persisted history.",
+      "title": "Temporal durable execution guide",
+      "url": "https://temporal.io/blog/what-is-durable-execution"
+    },
+    {
+      "local_mapping": "Use this to split lane manager tasks, service requests, and worker starts in our schema.",
+      "source_id": "temporal_workflows",
+      "takeaway": "Workflow definitions, executions, schedules, and handlers are separate concepts.",
+      "title": "Temporal Workflow documentation",
+      "url": "https://docs.temporal.io/workflows"
+    },
+    {
+      "local_mapping": "Promote tool/LLM calls to first-class trace events before runtime execution is allowed.",
+      "source_id": "restate_durable_agents",
+      "takeaway": "Agent steps such as LLM calls, tool executions, and routing decisions can be durably persisted.",
+      "title": "Restate durable agents",
+      "url": "https://docs.restate.dev/ai/patterns/durable-agents"
+    },
+    {
+      "local_mapping": "Add idle/lease/resume fields before local worker pool activation.",
+      "source_id": "restate_ai_agents",
+      "takeaway": "The runtime emphasizes retries, persisted progress, and suspension of idle long-running agents.",
+      "title": "Restate AI agents use case",
+      "url": "https://docs.restate.dev/use-cases/ai-agents"
+    },
+    {
+      "local_mapping": "Map to seeker, lane manager, CRO/CEO, and service-worker roles.",
+      "source_id": "microsoft_hitl_sample",
+      "takeaway": "A worker/reviewer/manager escalation flow is an explicit sample shape.",
+      "title": "Microsoft Agent Framework human-in-the-loop workflow sample",
+      "url": "https://github.com/microsoft/agent-framework/blob/main/python/samples/03-workflows/agents/workflow_as_agent_human_in_the_loop.py"
+    },
+    {
+      "local_mapping": "Useful later for eval packaging; blocked until model/API/provider/cost gates are explicit.",
+      "source_id": "google_adk_repo",
+      "takeaway": "ADK is code-first and includes build/evaluate/deploy framing.",
+      "title": "Google ADK Python repository",
+      "url": "https://github.com/google/adk-python"
+    },
+    {
+      "local_mapping": "Reinforces that our task DAG and dispatch docket should support dynamic dependencies.",
+      "source_id": "crewai_dynamic_graph_issue",
+      "takeaway": "Static orchestration is called out as breaking down at scale.",
+      "title": "CrewAI dynamic agent dependency graph issue",
+      "url": "https://github.com/crewAIInc/crewAI/issues/6118"
+    },
+    {
+      "local_mapping": "Keep code workers behind sandbox execution and GitHub public-action gates.",
+      "source_id": "openhands_repo",
+      "takeaway": "Coding-agent harnesses need repo, issue, token, and public-action boundaries.",
+      "title": "OpenHands repository",
+      "url": "https://github.com/OpenHands/OpenHands"
+    }
+  ],
+  "execution_api_calls": false,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "generated_utc": "2026-06-20T21:07:28Z",
+  "model_api_calls": false,
+  "next_action": "Build checkpoint_interrupt_contract_v1 or adapter_candidate_scorecard_v1 before adopting any external agent/runtime framework.",
+  "payment_actions": false,
+  "public_actions": false,
+  "public_github_metadata_reads": 7,
+  "ranked_repos": [
+    {
+      "category": "coding_agent_harness",
+      "description": "OpenHands: AI-Driven Development",
+      "fit_score": 12,
+      "forks": 9855,
+      "gate": "sandbox_execution_gate_and_github_public_action_gate_required",
+      "html_url": "https://github.com/OpenHands/OpenHands",
+      "license": "NOASSERTION",
+      "local_decision": "treat_as_sandboxed_code_worker_reference_not_runtime_dependency",
+      "open_issues": 332,
+      "pushed_at": "2026-06-17T19:45:27Z",
+      "repo": "All-Hands-AI/OpenHands",
+      "stars": 77551
+    },
+    {
+      "category": "durable_agent_graph_hitl",
+      "description": "Build resilient agents.",
+      "fit_score": 12,
+      "forks": 5867,
+      "gate": "no_runtime_adoption_until_checkpoint_schema_and_apply_guard",
+      "html_url": "https://github.com/langchain-ai/langgraph",
+      "license": "MIT",
+      "local_decision": "reference_interrupt_checkpoint_human_review_pattern",
+      "open_issues": 590,
+      "pushed_at": "2026-06-17T20:45:03Z",
+      "repo": "langchain-ai/langgraph",
+      "stars": 35051
+    },
+    {
+      "category": "durable_execution_runtime",
+      "description": "Temporal service.",
+      "fit_score": 12,
+      "forks": 1666,
+      "gate": "runtime_start_preflight_and_signed_operator_decision_required",
+      "html_url": "https://github.com/temporalio/temporal",
+      "license": "MIT",
+      "local_decision": "keep_as_future_durable_orchestration_candidate",
+      "open_issues": 770,
+      "pushed_at": "2026-06-17T20:41:36Z",
+      "repo": "temporalio/temporal",
+      "stars": 21029
+    },
+    {
+      "category": "durable_agent_runtime",
+      "description": "Platform for building resilient applications that tolerate infrastructure faults.",
+      "fit_score": 12,
+      "forks": 170,
+      "gate": "no_server_start_no_container_no_cloud_until_runtime_start_preflight",
+      "html_url": "https://github.com/restatedev/restate",
+      "license": "NOASSERTION",
+      "local_decision": "reference_journaled_tool_and_llm_step_recovery_pattern",
+      "open_issues": 372,
+      "pushed_at": "2026-06-17T18:08:53Z",
+      "repo": "restatedev/restate",
+      "stars": 4021
+    },
+    {
+      "category": "multi_agent_orchestration",
+      "description": "Framework for orchestrating role-playing, autonomous AI agents.",
+      "fit_score": 11,
+      "forks": 7527,
+      "gate": "no_dependency_install_no_worker_start",
+      "html_url": "https://github.com/crewAIInc/crewAI",
+      "license": "MIT",
+      "local_decision": "study_role_team_patterns_but_keep_shared_state_in_local_db",
+      "open_issues": 475,
+      "pushed_at": "2026-06-17T19:01:37Z",
+      "repo": "crewAIInc/crewAI",
+      "stars": 53815
+    },
+    {
+      "category": "multi_agent_workflow_hitl",
+      "description": "Framework for building, orchestrating and deploying AI agents and multi-agent workflows.",
+      "fit_score": 11,
+      "forks": 1919,
+      "gate": "no_foundry_or_cloud_runtime_without_exact_scope_and_cost_gate",
+      "html_url": "https://github.com/microsoft/agent-framework",
+      "license": "MIT",
+      "local_decision": "reference_manager_worker_reviewer_escalation_pattern",
+      "open_issues": 670,
+      "pushed_at": "2026-06-17T20:18:09Z",
+      "repo": "microsoft/agent-framework",
+      "stars": 11428
+    },
+    {
+      "category": "agent_app_framework",
+      "description": "Code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents.",
+      "fit_score": 10,
+      "forks": 3581,
+      "gate": "model_api_execution_gate_and_dependency_install_gate_required",
+      "html_url": "https://github.com/google/adk-python",
+      "license": "Apache-2.0",
+      "local_decision": "study_eval_deploy_agent_packaging_patterns",
+      "open_issues": 797,
+      "pushed_at": "2026-06-17T20:40:14Z",
+      "repo": "google/adk-python",
+      "stars": 20157
+    }
+  ],
+  "repo_count": 7,
+  "runtime_starts": 0,
+  "schema_version": "agent_company.current_source_radar_wave15.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "task_id": "task-agent-company-current-source-radar-wave15-20260617",
+  "wallet_actions": false,
+  "worker_starts": 0
+}

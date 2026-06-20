@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.browser_read_only_assignment_preflight.v1",
+  "title": "Agent Company Browser Read-Only Assignment Preflight v1",
+  "type": "object",
+  "required": [
+    "preflight_id",
+    "service_id",
+    "request_type",
+    "policy_validation_path",
+    "adapter_contract_validation_path",
+    "operator_signed_approval_present",
+    "preflight_verdict",
+    "candidate_requests",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "preflight_id": {
+      "type": "string",
+      "pattern": "^browser-read-only-assignment-preflight-[a-z0-9][a-z0-9-]{4,120}$"
+    },
+    "service_id": {
+      "const": "browser_read_only_session"
+    },
+    "request_type": {
+      "const": "browser_research"
+    },
+    "policy_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "adapter_contract_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "operator_signed_approval_present": {
+      "const": false
+    },
+    "preflight_verdict": {
+      "enum": [
+        "blocked_missing_policy_validation",
+        "blocked_policy_validation_failed",
+        "blocked_missing_adapter_contract_validation",
+        "blocked_adapter_contract_validation_failed",
+        "blocked_no_candidate_requests",
+        "candidates_valid_assignment_blocked_no_signed_approval",
+        "approved_ready_for_assignment"
+      ]
+    },
+    "candidate_requests": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

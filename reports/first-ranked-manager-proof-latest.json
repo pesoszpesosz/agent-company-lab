@@ -1,0 +1,158 @@
+{
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not browse, use accounts, register, accept terms, claim bounties, submit PRs, comment publicly, or contact maintainers from this proof.",
+    "Do not perform security testing, touch wallets/payments, call APIs, assign service workers, or mutate service requests from this proof."
+  ],
+  "generated_utc": "2026-06-15T20:39:31Z",
+  "input_evidence": [
+    {
+      "evidence_id": "pe-ledger-fuzoe-pd-hunter-18-org-list-expansion-4db3aa286661",
+      "next_action": "Do not work #18 unless owner reopens to new contributors with clean payout terms.",
+      "ownership_note": "Read-only ledger import for future lane managers.",
+      "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+      "source_url": "https://github.com/FuZoe/PD-Hunter/issues/18",
+      "status": "park_existing_submission_amount_false_positive_owner_hold",
+      "summary": "Live triage found #18 has owner hold, active PR #25 for same scope, and scanner amount false-positive from historical aggregate bounty wording.",
+      "title": "FuZoe/PD-Hunter #18 org-list expansion",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-ledger-onlybugs05-angular-1-opire-security-bug-bounty-6526df15cd3c",
+      "next_action": "Do not claim, comment, fork, open a GitHub security advisory, or submit a PR for onlybugs05/angular#1 unless payout escrow and clean specific scope are independently verified and existing work is rejected.",
+      "ownership_note": "Read-only ledger import for future lane managers.",
+      "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+      "source_url": "https://github.com/onlybugs05/angular/issues/1",
+      "status": "reject_low_trust_crowded_active_pr",
+      "summary": "Read-only live triage rejected the high-nominal Opire row: fresh Angular fork, broad security-advisory bug-hunting scope, 85 issue comments, existing GHSA claim, and open competing PR #5.",
+      "title": "onlybugs05/angular#1 Opire security bug bounty",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-ledger-relayhop-sn-monetization-runtime-radar-sn-open-bou-1e3f46935568",
+      "next_action": "Ignore relayhop/sn-monetization-runtime radar rows unless the upstream Stacker News bounty source is separately verified with clear payout and acceptance terms.",
+      "ownership_note": "Read-only ledger import for future lane managers.",
+      "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+      "source_url": "https://github.com/relayhop/sn-monetization-runtime/issues/90",
+      "status": "park_lead_only_aggregator_noise",
+      "summary": "Read-only triage found issue #90 is a bot-authored SN OPEN_BOUNTY data row in an aggregator repo with no direct payout route and crowded automated PR history.",
+      "title": "relayhop/sn-monetization-runtime [radar] SN open bounty cluster",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-ledger-unitoneai-securityskills-2423-signed-build-manifes-362aaadf1098",
+      "next_action": "Do not build #2423 unless a maintainer explicitly requests alternate implementations and attribution is clean for the user.",
+      "ownership_note": "Read-only ledger import for future lane managers.",
+      "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+      "source_url": "https://github.com/UnitOneAI/SecuritySkills/issues/2423",
+      "status": "park_other_contributor_payment_attribution_gate",
+      "summary": "Live triage found #2423 is a JeremyZeng77-authored proposal with Jeremy payment details, no maintainer approval, and selected Intermediate $350 rather than scanner-implied $500.",
+      "title": "UnitOneAI/SecuritySkills #2423 signed-build-manifest-review",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-ledger-unsafelabs-bounty-hunters-515-cobol-fingerprint-bo-1c9aef579537",
+      "next_action": "Do not implement or claim #515. Continue to cleaner paid-code/security lanes without public session/system-prompt disclosure requirements.",
+      "ownership_note": "Read-only ledger import for future lane managers.",
+      "source_path": "E:\\profit-edge-lab\\opportunities\\opportunity-ledger.jsonl",
+      "source_url": "https://github.com/UnsafeLabs/Bounty-Hunters/issues/515",
+      "status": "reject_unclean_public_artifact_requirement_rewarded_duplicate",
+      "summary": "Live triage confirmed #515 remains a visible $700 bounty but has multiple rewarded solutions including same-day PR #6728 and requires public system/session initialization artifacts.",
+      "title": "UnsafeLabs/Bounty-Hunters #515 COBOL fingerprint bounty",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-report-algora-bounty-scan-de35b904e742",
+      "next_action": "next: Manually inspect issue, repo health, and claim history before work.",
+      "ownership_note": "Read-only evidence for future paid-code workers; this thread is not submitting PRs.",
+      "source_path": "E:\\profit-edge-lab\\reports\\algora-bounty-scan-latest.md",
+      "source_url": null,
+      "status": "parked_or_gated",
+      "summary": "- score=43 amount=150 claims=3 gate=manual_review type=needs_manual_triage org=archestra-ai flags=low_claims | - score=43 amount=600 claims=25 gate=manual_review type=bug_fix org=UnsafeLabs flags=high_amount,crowded,agent_fit | UnsafeLabs/Bounty-Hunters#918 [ Crypto ] Fix first-depositor price manipulation in LiquidityPool | https://github.com/UnsafeLabs/Bounty-Hunters/issues/918 | - score=40 amount=550 claims=16 gate=manual_review type=bug_fix org=UnsafeLabs flags=high_amount,crowded,agent_fit",
+      "title": "Algora Bounty Scan",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-report-boss-bounty-scan-a7d282ac1bcd",
+      "next_action": "next: Do not duplicate unless existing PR/comment work is rejected and maintainer asks for alternatives.",
+      "ownership_note": "Read-only evidence for future paid-code workers; this thread is not submitting PRs.",
+      "source_path": "E:\\profit-edge-lab\\reports\\boss-bounty-scan-latest.md",
+      "source_url": null,
+      "status": "rejected",
+      "summary": "- score=30 amount=1050 gate=park_existing_submission blockers=existing_submission_or_pr prs=1 comments=29 lang=TypeScript | - score=4 amount=125 gate=park_closed_or_not_open blockers=issue_not_open prs=1 comments=60 lang=JavaScript | next: Do not pursue until this gate changes. | - score=-2 amount=1000 gate=park_existing_submission blockers=existing_submission_or_pr prs=1 comments=21 lang=Rust | - score=-7 amount=500 gate=park_existing_submission blockers=existing_submission_or_pr prs=1 comments=24 lang=TypeScript",
+      "title": "BOSS Bounty Scan",
+      "updated_at": "2026-06-14T11:04:33Z"
+    },
+    {
+      "evidence_id": "pe-report-bountyhub-bounty-scan-9f4b55320f4b",
+      "next_action": "next: Park unless existing PRs are rejected and bounty creator asks for a fresh implementation.",
+      "ownership_note": "Read-only evidence for future paid-code workers; this thread is not submitting PRs.",
+      "source_path": "E:\\profit-edge-lab\\reports\\bountyhub-bounty-scan-latest.md",
+      "source_url": null,
+      "status": "rejected",
+      "summary": "- https://api.bountyhub.dev/api/bounties?page=1&limit=50&filters=%7B%22language%22%3A%22%22%2C%22repositoryFullName%22%3A%22%22%2C%22solved%22%3Afalse%7D&sort=%5B%7B%22orderBy%22%3A%22totalAmount%22%2C%22order%22%3A%22desc%22%7D%2C%7B%22ord | - score=36 amount=$14999 gate=crowded_existing_prs payment=PAID type=test_or_ci lang=Java flags=high_amount,prepaid_or_paid,specialist_heavy,open_prs_present,many_comments,claim_or_submission_present github=open comments=550 open_prs=6 pr_h | microg/GmsCore#2994 [BOUNTY] RCS Support [14999$] | bountyhub: https://www.bountyhub.dev/bounty/view/521afa31-6c6f-4d2c-becc-c6b14318d2b4 | next: Park unless existing PRs are rejected and bounty creator asks for a fresh implementation.",
+      "title": "BountyHub Bounty Scan",
+      "updated_at": "2026-06-14T11:04:33Z"
+    }
+  ],
+  "input_evidence_count": 8,
+  "lane_evidence_rows_after": 74,
+  "lane_evidence_rows_before": 73,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_checks": [
+    "Confirm the target is still represented only by imported local evidence before any browser refresh.",
+    "Draft duplicate-check questions: issue already solved, bounty still open, claim rules, repo build/test effort, payout gate.",
+    "Separate local proof work from public claim, PR, account, payout, and browser actions."
+  ],
+  "proof_artifact_count": 2,
+  "proof_evidence_id": "first-ranked-local-proof-paid_code_bounties-20260615",
+  "proof_lane_id": "paid_code_bounties",
+  "proof_next_action": "Have the paid-code lane manager use this proof to draft a local duplicate-check worksheet for the ranked bounty target; request browser or public claim work only through the parked service request gate.",
+  "proof_summary": "Prepared the first local paid-code bounty duplicate-check proof from existing imported evidence. The proof narrows the next manager action to local repo/readiness checks and keeps browser, claim, account, payout, and public actions gated.",
+  "proof_task_id": "task-paid_code_bounties-first-local-proof-20260615",
+  "proof_title": "Prepare first local paid-code bounty duplicate-check proof packet",
+  "queue_first_recommended_lane_id": "paid_code_bounties",
+  "queue_first_recommended_task_id": "task-paid_code_bounties-first-local-proof-20260615",
+  "queue_path": "E:\\agent-company-lab\\reports\\manager-proof-task-promotion-queue-latest.json",
+  "ranked_queue_entry": {
+    "blockers": [],
+    "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-paid_code_bounties-first-local-proof-20260615 --lane-id paid_code_bounties --title \"Prepare first local paid-code bounty duplicate-check proof packet\" --priority 86 --owner-agent-id lane-manager-paid_code_bounties-019ec612 --duplicate-key paid_code_bounties-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\paid_code_bounties-manager-proof-task-20260615.md --next-action \"Use imported paid-code evidence to draft a duplicate-check proof packet with repo-readiness checks, payout-gate notes, and no-claim boundary.\"",
+    "lane_id": "paid_code_bounties",
+    "live_task_created": false,
+    "next_decision": "Promote this candidate only with an explicit create-task command; do not start gated service workers from the queue.",
+    "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+    "parked_request_count": 1,
+    "rank": 1,
+    "ready_for_manual_promotion": true,
+    "report_only": true,
+    "score": 97,
+    "score_rationale": "Highest immediate cashflow fit; local duplicate-check proof can reduce claim risk without browser or submission.",
+    "task_id": "task-paid_code_bounties-first-local-proof-20260615"
+  },
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.first_ranked_manager_proof.v1",
+  "source_spec": {
+    "name": "Paid Code Scan Import",
+    "notes": "Imported rows are mostly negative samples. Do not submit PRs from platform_engineering.",
+    "risk_gate": "read_only_until_claim_rules_duplicate_checks_and_public_action_approval",
+    "source_type": "local_reports",
+    "spec_id": "paid_code_profit_edge_scan_import"
+  },
+  "task_rows_inserted_by_proof": 1,
+  "tasks_table_rows_after": 144,
+  "tasks_table_rows_before": 143
+}

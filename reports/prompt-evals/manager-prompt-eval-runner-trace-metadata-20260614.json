@@ -1,0 +1,8 @@
+{
+  "api_calls": false,
+  "dataset_id": "manager-prompt-safety-cases-20260614",
+  "prompt_version_id": "lane-manager-startup-v2-20260614",
+  "runtime": "local_static_text_coverage",
+  "score": 1.0,
+  "span_kind": "EVALUATOR"
+}

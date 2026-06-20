@@ -1,0 +1,26 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-mission-console-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-mission-console-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-mission-console-v1-20260619",
+  "title": "Command Cockpit Mission Console",
+  "createdAt": "2026-06-19T11:38:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Reshaped the default Command Cockpit Quest module into a compact mission console by removing duplicate module chrome, collapsing pre-module rails, arranging current run, signals, next move, gate, and quick commands into a two-column control surface, and restoring a single-column Command Cockpit shell on narrow screens.",
+  "proof": [
+    "Added a Command Cockpit-only marker and README unlock entry.",
+    "Scoped overview Quest CSS to hide the duplicate lane-button-top, pre-module floor rails, and event chain only inside the bounded cockpit.",
+    "Mapped hero, signals, command cards, and quick actions into explicit console grid areas.",
+    "Recorded a regression test for the compact mission console behavior.",
+    "Added a scoped responsive override so the Command Cockpit workspace, lane list, and detail panel stop holding the desktop two-column shell below the tablet breakpoint."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py",
+    "reports/agent-company-atlas-command-cockpit-mission-console-trace-metadata-20260619.json"
+  ]
+}

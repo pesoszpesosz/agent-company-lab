@@ -1,0 +1,10 @@
+[
+  "account_registration",
+  "wallet_action",
+  "browser_public_action",
+  "legal_kyc_tax_billing",
+  "security_testing_or_submission",
+  "real_money_trade",
+  "public_pr_comment_or_bounty_submission",
+  "submitted_bounty_payout_lane"
+]

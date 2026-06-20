@@ -1,0 +1,39 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:13:28Z",
+  "trace_id": "trace-digital-products-promptbase-do-not-run-submission-packet-wave27-20260618",
+  "task_id": "task-digital-products-promptbase-do-not-run-submission-packet-wave27-20260618",
+  "lane_id": "digital_products_templates_plugins",
+  "event_type": "digital_products_promptbase_do_not_run_submission_packet_captured",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\data\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.json",
+    "E:\\agent-company-lab\\reports\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.md",
+    "E:\\agent-company-lab\\reports\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618-validation.json"
+  ],
+  "input_sources": [
+    "E:\\agent-company-lab\\reports\\digital-products-marketplace-route-eligibility-wave24-20260618.md",
+    "E:\\agent-company-lab\\reports\\digital-products-promptbase-route-readiness-wave25-20260618.md",
+    "E:\\agent-company-lab\\reports\\digital-products-promptbase-use-case-repro-checklist-wave26-20260618.md",
+    "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json"
+  ],
+  "side_effects": {
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_performed": 0,
+    "terms_accepted": 0,
+    "payment_or_payout_actions": 0,
+    "kyc_tax_actions": 0,
+    "zip_created": false,
+    "public_uploads": 0,
+    "marketplace_drafts_created": 0,
+    "marketplace_submissions": 0,
+    "public_promotions": 0,
+    "service_requests_mutated": 0,
+    "workers_started": 0,
+    "runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_or_mcp_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Ask the operator to review the six exact approval packets; if approved later, create one narrow service request at a time, beginning with read-only PromptBase guideline review. Keep browser, account, legal/payment, zip, upload, submission, worker, runtime, model/MCP, and public actions blocked until exact approval exists."
+}

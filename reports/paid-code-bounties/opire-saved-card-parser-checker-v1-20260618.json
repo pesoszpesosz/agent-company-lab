@@ -1,0 +1,55 @@
+{
+  "aggregate_gate_flags": [
+    "duplicate_pr_scan_required",
+    "local_build_test_feasibility_required",
+    "maintainer_activity_check_required",
+    "no_try_claim_without_public_action_approval",
+    "public_issue_url_required"
+  ],
+  "aggregate_risk_flags": [
+    "amount_below_first_pass_threshold",
+    "captcha_abuse_bypass_spam_or_policy_evasion",
+    "command_unavailable_or_unknown",
+    "crowded_solver_count",
+    "funding_or_donation_shape_unclear",
+    "language_or_stack_mismatch",
+    "missing_public_issue_url",
+    "security_or_crash_scope_requires_extra_review"
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "candidate_rows": 0,
+    "external_side_effects": 0,
+    "fixture_rows_created": 10,
+    "github_comments_or_prs": 0,
+    "hard_reject_rows": 1,
+    "model_mcp_or_external_api_calls": 0,
+    "opire_account_or_login": false,
+    "parsed_rows_emitted": 10,
+    "payments": 0,
+    "proposals_or_submissions": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "try_claim_reward_commands": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "decision": "local_parser_only_no_claim_no_public_action",
+  "fixture_path": "E:\\agent-company-lab\\reports\\paid-code-bounties\\opire-saved-card-parser-checker-v1-fixture-20260618.json",
+  "generated_at": "2026-06-18T08:49:08Z",
+  "lane_id": "paid_code_bounties",
+  "next_local_action": "Promote only candidate_needs_readonly_refresh rows into exact read-only refresh packets. Do not run /try, /claim, GitHub comments, PRs, account login, Stripe, payout, workers, model/API calls, or public actions.",
+  "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+  "results_path": "E:\\agent-company-lab\\reports\\paid-code-bounties\\opire-saved-card-parser-checker-v1-results-20260618.json",
+  "schema_version": "paid_code.opire_saved_card_parser_checker.v1",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-opire_paid_oss-20260618",
+  "status": "opire_saved_card_parser_checker_complete_local_only",
+  "summary": {
+    "candidate_count": 0,
+    "hard_reject_count": 1,
+    "parked_count": 9,
+    "rejected_or_deprioritized_count": 0,
+    "row_count": 10
+  },
+  "task_id": "task-opire-saved-card-parser-checker-v1-20260618"
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "agent_company.durable_runtime_service_worker_reducer_fixture.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-durable-runtime-service-worker-reducer-fixture-v1-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_matrix_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-20260617.json",
+  "source_service_worker_queue_path": "E:\\agent-company-lab\\reports\\service-worker-request-queue-latest.json",
+  "source_reducer_result_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-dry-run-result-20260615.json",
+  "queue_snapshot": {
+    "service_request_count": 14,
+    "status_counts": {
+      "complete": 1,
+      "needs_review": 11,
+      "rejected": 2
+    },
+    "needs_review_count": 11,
+    "complete_count": 1,
+    "rejected_count": 2
+  },
+  "runtime_profiles": [
+    {
+      "runtime_id": "sqlite_control_plane",
+      "matrix_decision": "keep_as_source_of_truth_now",
+      "safe_now": true,
+      "allowed_reducer_mode": "local_sqlite_dry_run_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "already active as local source of truth; still may only dry-run reducer transitions without approval"
+    },
+    {
+      "runtime_id": "temporal_python",
+      "matrix_decision": "hold_for_local_reducer_fixture_then_human_runtime_approval",
+      "safe_now": false,
+      "allowed_reducer_mode": "runtime_contract_preview_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "human runtime implementation approval plus dependency and worker-pool gates"
+    },
+    {
+      "runtime_id": "inngest",
+      "matrix_decision": "candidate_after_local_outbox_event_contract",
+      "safe_now": false,
+      "allowed_reducer_mode": "runtime_contract_preview_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "local outbox event contract plus dependency and network boundary review"
+    },
+    {
+      "runtime_id": "dbos_python",
+      "matrix_decision": "candidate_after_sqlite_to_postgres_state_boundary_review",
+      "safe_now": false,
+      "allowed_reducer_mode": "runtime_contract_preview_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "SQLite to Postgres state boundary review plus dependency and credential gates"
+    },
+    {
+      "runtime_id": "pydantic_ai_durable_execution",
+      "matrix_decision": "use_as_reference_only_until_model_api_gate_is_approved",
+      "safe_now": false,
+      "allowed_reducer_mode": "runtime_contract_preview_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "model/API execution gate plus one chosen durable backend approval"
+    },
+    {
+      "runtime_id": "prefect",
+      "matrix_decision": "watchlist_for_source_refresh_and_eval_flows",
+      "safe_now": false,
+      "allowed_reducer_mode": "runtime_contract_preview_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "source-refresh-only pilot approval plus dependency and cloud/server boundary review"
+    },
+    {
+      "runtime_id": "restate",
+      "matrix_decision": "watchlist_after_outbox_and_browser_safety_contracts",
+      "safe_now": false,
+      "allowed_reducer_mode": "runtime_contract_preview_only",
+      "dependency_installs": false,
+      "dependency_imports": false,
+      "runtime_starts": 0,
+      "queue_enqueues": 0,
+      "api_calls": false,
+      "external_side_effects": false,
+      "promotion_gate": "central outbox/history, browser safety, dependency, server-runtime, and worker-pool approvals"
+    }
+  ],
+  "service_status_cases": [
+    {
+      "status_snapshot": "needs_review",
+      "event_name": "agent_company/service_request.needs_review",
+      "expected_output_state": "parked.awaiting_human_review",
+      "parked": true,
+      "terminal": false,
+      "resume_requirements": [
+        "human approval packet",
+        "CRO/CEO approval if risk gate requires it",
+        "exact request scope match",
+        "eligible worker pool registered",
+        "artifact output path approved"
+      ]
+    },
+    {
+      "status_snapshot": "complete",
+      "event_name": "agent_company/service_request.completed",
+      "expected_output_state": "terminal.completed_from_ledger_snapshot",
+      "parked": false,
+      "terminal": true,
+      "resume_requirements": [
+        "new explicit task or service request; do not replay-start terminal rows",
+        "explicit approval for any new risk gate"
+      ]
+    },
+    {
+      "status_snapshot": "rejected",
+      "event_name": "agent_company/service_request.rejected",
+      "expected_output_state": "terminal.rejected_from_ledger_snapshot",
+      "parked": false,
+      "terminal": true,
+      "resume_requirements": [
+        "new explicit request; do not revive rejected rows by replay",
+        "explicit approval for any new risk gate"
+      ]
+    }
+  ],
+  "expected_action_flags": {
+    "ledger_mutation_allowed": false,
+    "approval_granted": false,
+    "assign_worker": false,
+    "start_worker": false,
+    "emit_followup_event": false,
+    "schedule_activity": false,
+    "call_api": false,
+    "browser_session_started": false,
+    "model_api_call": false,
+    "queue_enqueue": false,
+    "external_side_effects_allowed": false
+  },
+  "boundary": [
+    "No dependency install was performed.",
+    "No durable runtime package was imported.",
+    "No runtime was started.",
+    "No queue event was enqueued.",
+    "No service request was approved, assigned, started, completed, rejected, or otherwise mutated.",
+    "No browser session was opened.",
+    "No model/API call was made.",
+    "No external side effect was performed."
+  ],
+  "next_local_test": "temporal_signal_shape_fixture_against_service_worker_request_v1"
+}

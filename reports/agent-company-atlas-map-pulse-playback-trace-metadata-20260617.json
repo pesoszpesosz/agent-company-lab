@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "map-pulse-playback-v1",
+  "generatedAt": "2026-06-16T21:24:12Z",
+  "feature": {
+    "id": "agent-company-atlas-map-pulse-playback-v1",
+    "title": "Mission Feed playback map pulse overlay",
+    "purpose": "Make replayed mission-feed events visible on the Atlas map so operators can see which lane is currently being reviewed, what kind of event it is, and where to drill into the source trail."
+  },
+  "research": [
+    {
+      "title": "CARTO Academy: Build an animated visualization with time series",
+      "url": "https://academy.carto.com/building-interactive-maps/data-visualization/build-an-animated-visualization-with-time-series",
+      "takeaway": "Animated time-series maps can make temporal changes feel like a story rather than a static table."
+    },
+    {
+      "title": "Esri ArcGIS Pro: Animate through time",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/animation/animate-through-time.html",
+      "takeaway": "Time-based map animation advances through keyframes and time spans, which maps well to replaying mission events."
+    },
+    {
+      "title": "UI Patterns: Dashboard",
+      "url": "https://ui-patterns.com/patterns/dashboard",
+      "takeaway": "Dashboards should communicate status visually at a glance and minimize confusion."
+    },
+    {
+      "title": "Steve Young Creative: Pulse Chart",
+      "url": "https://www.steveyoungcreative.com/blog/time-graph-tells-a-story-power-bi-pulse-chart",
+      "takeaway": "Pulse-style timeline animation helps reveal important events and patterns as a sequence is replayed."
+    }
+  ],
+  "implementation": {
+    "sourceFiles": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Mission Feed playback selects the current filtered feed item and pushes that signal into the Atlas map.",
+      "The map HUD names the active source lane and shows the event kind plus title.",
+      "The active lane node receives a pulsing ring and a compact kind chip.",
+      "The active lane route receives a brighter playback route treatment.",
+      "Prev, play, next, and feed lens changes keep the map pulse synchronized with the current replay card.",
+      "Clicking the replay card still opens the source lane trail."
+    ],
+    "storage": [
+      "agent-company-atlas.feed-filter.v1",
+      "agent-company-atlas.feed-saved-views.v1"
+    ]
+  },
+  "validation": {
+    "staticChecks": [
+      {
+        "command": "node --check web\\app.js",
+        "status": "passed"
+      },
+      {
+        "command": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+        "status": "passed"
+      },
+      {
+        "command": "python tools\\generate_visual_dashboard_snapshot.py",
+        "status": "passed",
+        "result": {
+          "snapshot": "web/data/snapshot.json",
+          "lanes": 12,
+          "generatedUtc": "2026-06-16T21:24:12Z"
+        }
+      },
+      {
+        "command": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md reports\\agent-company-atlas-map-pulse-playback-trace-metadata-20260617.json",
+        "status": "passed",
+        "result": "no non-ASCII matches"
+      },
+      {
+        "command": "python -m json.tool web\\data\\snapshot.json",
+        "status": "passed"
+      }
+    ],
+    "browserDesktop": {
+      "url": "http://localhost:5177/?verify=map-pulse#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "checks": {
+        "hotNodeCount": 1,
+        "hotNodeLane": "Platform Engineering",
+        "routeCount": 1,
+        "pulseCount": 1,
+        "chip": "task",
+        "hudTitle": "Platform Engineering",
+        "hudSubtitle": "task - Implement durable runtime adapter matrix v2",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserPlaybackNext": {
+      "checks": {
+        "nextButtonCount": 1,
+        "hotNodeCount": 1,
+        "hotNodeLane": "Platform Engineering",
+        "routeCount": 1,
+        "pulseCount": 1,
+        "chip": "task",
+        "hudTitle": "Platform Engineering",
+        "hudSubtitle": "task - Create money-path coverage audit and next-lane dispatch order",
+        "playbackCardTitle": "Create money-path coverage audit and next-lane dispatch order",
+        "consoleErrors": 0
+      }
+    },
+    "browserProofLens": {
+      "checks": {
+        "proofButtonCount": 1,
+        "hotNodeCount": 1,
+        "hotNodeLane": "Platform Engineering",
+        "routeCount": 1,
+        "pulseCount": 1,
+        "chip": "evidence",
+        "hudTitle": "Platform Engineering",
+        "hudSubtitle": "evidence - Agent company money-path coverage audit",
+        "playbackCardTitle": "Agent company money-path coverage audit",
+        "consoleErrors": 0
+      }
+    },
+    "browserMobile": {
+      "url": "http://localhost:5177/?verify=map-pulse-mobile-visible#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 390,
+        "height": 840
+      },
+      "checks": {
+        "hotNodeCount": 1,
+        "hotNodeLane": "Platform Engineering",
+        "routeCount": 1,
+        "pulseCount": 1,
+        "chip": "evidence",
+        "hudTitle": "Platform Engineering",
+        "hudSubtitle": "evidence - Agent company money-path coverage audit",
+        "hudInViewport": true,
+        "stageInViewport": true,
+        "hudBounds": {
+          "left": 27,
+          "right": 363,
+          "top": 302,
+          "bottom": 389,
+          "width": 336
+        },
+        "toolbarBounds": {
+          "left": 217,
+          "right": 359,
+          "top": 250,
+          "bottom": 292
+        },
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserFinalSmoke": {
+      "url": "http://localhost:5177/?verify=map-pulse-final#lane=platform_engineering&view=overview",
+      "checks": {
+        "hotNodeCount": 1,
+        "hotNodeLane": "Platform Engineering",
+        "routeCount": 1,
+        "pulseCount": 1,
+        "chip": "outcome",
+        "hudTitle": "Platform Engineering",
+        "hudSubtitle": "outcome - Atlas Map Playback Visual Upgrade",
+        "playbackCardTitle": "Atlas Map Playback Visual Upgrade",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    }
+  },
+  "nextIdeas": [
+    "Add image-backed event scene thumbnails for playback cards.",
+    "Create lane-specific replay presets that feel like small minigames.",
+    "Introduce animated route particles for cross-lane dependencies.",
+    "Generate bot avatar sprites for each manager and lane assistant."
+  ]
+}

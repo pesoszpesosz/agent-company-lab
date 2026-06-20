@@ -1,0 +1,214 @@
+{
+  "schema_version": "digital_products.fiverr_ai_service_bundles_local_proof.v1",
+  "generated_utc": "2026-06-18T06:32:55Z",
+  "task_id": "task-lane-scout-fiverr_ai_services-20260618",
+  "lane_id": "digital_products_templates_plugins",
+  "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+  "status": "fiverr_ai_service_bundles_ready_local_only",
+  "source_observations": [
+    {
+      "source_id": "fiverr_ai_services_category",
+      "url": "https://www.fiverr.com/categories/ai-services",
+      "observed_utc": "2026-06-18T06:32:55Z",
+      "local_summary": "Fiverr public navigation exposes AI Websites & Software, AI Mobile Apps, AI Agents, Data Model Training, AI Technology Consulting, Generative Engine Optimization, AI Integrations, Automations & Agents, APIs & Integrations, AI Consulting, and AI-powered marketing categories.",
+      "route_effect": "Bundle shape should be practical AI consulting / agent workflow / automation design, not an unsupported revenue or fully autonomous implementation promise."
+    },
+    {
+      "source_id": "local_agent_skill_starter_kit",
+      "url": "E:/agent-company-lab/products/agent-skill-starter-kit-v0/README.md",
+      "observed_utc": "2026-06-18T06:32:55Z",
+      "local_summary": "Local kit provides SKILL.md template, gate checklist, artifact contract, service-request checklist, acceptance review, buyer guide, and fictional example.",
+      "route_effect": "Can support a Fiverr-style service for packaging one agent workflow into a reusable local skill packet."
+    },
+    {
+      "source_id": "local_upwork_offer_matrix",
+      "url": "E:/agent-company-lab/reports/money-path-lane-scout-packets/upwork-ai-offer-matrix-local-proof.md",
+      "observed_utc": "2026-06-18T06:32:55Z",
+      "local_summary": "Local offer matrix maps current AI-agent, AI-product, agent architecture, assistant safety, and workflow-integration demand into no-contact services.",
+      "route_effect": "Can be repackaged as service bundles while preserving no-account/no-proposal/no-public-action gates."
+    },
+    {
+      "source_id": "local_ai_builder_launch_brief",
+      "url": "E:/agent-company-lab/reports/digital-products-local-build-brief-latest.md",
+      "observed_utc": "2026-06-18T06:32:55Z",
+      "local_summary": "Existing build brief defines an AI builder launch checklist pack with positioning, launch checklist, screenshot shotlist, QA pass, and post-launch review templates.",
+      "route_effect": "Can support a launch-readiness bundle for AI builders without creating a marketplace listing."
+    }
+  ],
+  "bundle_count": 3,
+  "bundles": [
+    {
+      "bundle_id": "agent_workflow_skill_packaging",
+      "category_fit": [
+        "AI Agents",
+        "AI Technology Consulting",
+        "Automations & Agents"
+      ],
+      "service_name_local": "Package one AI-agent workflow into a reusable skill packet",
+      "buyer": "AI builders or operators with a repeatable workflow they want to make safer and reusable.",
+      "scope": [
+        "Map one workflow from plain-language notes or local sample material.",
+        "Draft a SKILL.md-style workflow packet.",
+        "Add allowed/forbidden actions, stop gates, artifact contract, and acceptance checks.",
+        "Deliver local Markdown templates only."
+      ],
+      "deliverables": [
+        "Filled workflow summary.",
+        "Draft SKILL.md packet.",
+        "Gate checklist.",
+        "Artifact/output contract.",
+        "Acceptance review checklist."
+      ],
+      "turnaround_hypothesis": "2-4 business days after receiving non-sensitive workflow notes.",
+      "local_evidence_assets": [
+        "products/agent-skill-starter-kit-v0/README.md",
+        "products/agent-skill-starter-kit-v0/templates/SKILL.template.md",
+        "reports/digital-products-promptbase-use-case-repro-checklist-wave26-20260618.md"
+      ],
+      "not_in_scope": [
+        "No marketplace/account setup.",
+        "No live browser automation.",
+        "No credentials, APIs, client private data, or public posting.",
+        "No revenue, compliance, or platform-approval guarantee."
+      ],
+      "gates": [
+        "account",
+        "payment",
+        "public_action",
+        "client_data_privacy",
+        "model_api",
+        "browser"
+      ],
+      "pricing_hypothesis_usd": {
+        "basic": 95,
+        "standard": 175,
+        "premium": 325,
+        "status": "internal planning only"
+      }
+    },
+    {
+      "bundle_id": "ai_workflow_audit_blueprint",
+      "category_fit": [
+        "AI Integrations",
+        "AI Automation",
+        "APIs & Integrations",
+        "AI Consulting"
+      ],
+      "service_name_local": "Audit one business workflow for safe AI automation opportunities",
+      "buyer": "Small teams with repetitive reporting, support, content, or operations workflows.",
+      "scope": [
+        "Map the current manual workflow.",
+        "Identify automation candidates and human review points.",
+        "Prioritize low-risk implementation steps.",
+        "Use synthetic/sample data only unless a later contract/data approval exists."
+      ],
+      "deliverables": [
+        "Current-state workflow map.",
+        "Automation opportunity matrix.",
+        "Risk and approval checklist.",
+        "Synthetic proof outline.",
+        "Next-step implementation roadmap."
+      ],
+      "turnaround_hypothesis": "3-5 business days for one documented workflow.",
+      "local_evidence_assets": [
+        "reports/lead-generation-and-sales/upwork-ai-workflow-audit-offer-20260616.md",
+        "reports/lead-generation-and-sales/ai-workflow-audit-proof-asset-agency-reporting-20260616.md",
+        "reports/money-path-lane-scout-packets/upwork-ai-offer-matrix-local-proof.md"
+      ],
+      "not_in_scope": [
+        "No production integration by default.",
+        "No access to Gmail, Slack, CRM, ad accounts, or private systems.",
+        "No guaranteed time savings or revenue lift.",
+        "No contract/payment/public marketplace action from this packet."
+      ],
+      "gates": [
+        "account",
+        "payment",
+        "public_action",
+        "client_data_privacy",
+        "credential_handling",
+        "runtime_start"
+      ],
+      "pricing_hypothesis_usd": {
+        "basic": 125,
+        "standard": 275,
+        "premium": 550,
+        "status": "internal planning only"
+      }
+    },
+    {
+      "bundle_id": "ai_builder_launch_readiness_pack",
+      "category_fit": [
+        "AI Websites & Software",
+        "AI Technology Consulting",
+        "Generative Engine Optimization",
+        "AI Consulting"
+      ],
+      "service_name_local": "Prepare an AI-builder launch readiness pack",
+      "buyer": "Solo AI builders preparing a small product, template, or service launch.",
+      "scope": [
+        "Draft a positioning template for one offer.",
+        "Create a launch checklist and screenshot shotlist.",
+        "Create a QA pass checklist and post-launch review template.",
+        "Keep all assets local until marketplace/public approval exists."
+      ],
+      "deliverables": [
+        "Positioning template.",
+        "Launch checklist.",
+        "Screenshot shotlist.",
+        "QA pass template.",
+        "Post-launch review template."
+      ],
+      "turnaround_hypothesis": "2-3 business days after receiving product notes and local screenshots or descriptions.",
+      "local_evidence_assets": [
+        "reports/digital-products-local-build-brief-latest.md",
+        "reports/digital-products-local-asset-outline-latest.md",
+        "reports/digital-products-local-quality-pass-latest.md"
+      ],
+      "not_in_scope": [
+        "No Fiverr gig or marketplace listing creation.",
+        "No live demand validation unless separately approved.",
+        "No seller terms, payout, tax, KYC, or account setup.",
+        "No guaranteed sales, rankings, conversion, or launch outcome."
+      ],
+      "gates": [
+        "browser",
+        "account",
+        "payment",
+        "public_action",
+        "ip_license_claims_review"
+      ],
+      "pricing_hypothesis_usd": {
+        "basic": 75,
+        "standard": 150,
+        "premium": 300,
+        "status": "internal planning only"
+      }
+    }
+  ],
+  "recommended_first_bundle": "agent_workflow_skill_packaging",
+  "why_first": "It reuses the strongest existing digital product asset, has clear local deliverables, and avoids live integrations, client credentials, or production system access.",
+  "acceptance_checks": [
+    "Three service bundles have scope, deliverables, turnaround hypotheses, and stop gates.",
+    "Each bundle maps to current public Fiverr AI category signals.",
+    "Each bundle maps to existing local evidence assets.",
+    "No Fiverr account, gig, seller profile, listing, upload, message, payment, or public action occurs.",
+    "No guaranteed revenue, ranking, conversion, compliance, or platform approval claim is made."
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "fiverr_account_or_login": false,
+    "seller_profile_created_or_edited": false,
+    "gigs_created_or_edited": 0,
+    "messages_sent": 0,
+    "orders_or_payments": 0,
+    "terms_or_payout_setup": false,
+    "client_private_data_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create a no-publish Fiverr approval request packet for the recommended first bundle only after human review; keep Fiverr account, gig/listing, seller terms, payout, client data, credentials, public action, worker/runtime, model/MCP, and external side effects blocked."
+}

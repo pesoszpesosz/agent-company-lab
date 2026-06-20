@@ -1,0 +1,8 @@
+{
+  "lane_id": "money_source_discovery",
+  "target_url": "https://github.com/topics/bounty",
+  "allowed_read_scope": "Public pages only. Identify monetizable source registries, bounty directories, competition directories, grant listings, and marketplace opportunity indexes. Capture URLs and rules links only.",
+  "forbidden_actions": "No login, signup, account creation, application, claim, comment, message, payment, API key, scraping against rules, or public action.",
+  "evidence_needed": "A local source-discovery capture note with candidate URLs, monetization path, account gates, and first proof task per candidate.",
+  "session_sensitivity": "public_read_only"
+}

@@ -1,0 +1,123 @@
+{
+  "accepted_install_decision_type_count": 4,
+  "accepted_install_decision_types": [
+    "hold",
+    "approve_one_file_write_only",
+    "request_preflight_rework",
+    "reject_parser_install"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+  "expected_target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py",
+  "generated_utc": "2026-06-16T12:48:34Z",
+  "install_decision_intake_contract_count": 1,
+  "intake_evidence_id": "agent-company-migration-decision-parser-install-decision-intake-contract-20260616",
+  "intake_lane_id": "platform_engineering",
+  "intake_task_id": "task-agent-company-migration-decision-parser-install-decision-intake-contract-20260616",
+  "lane_evidence_rows_after": 150,
+  "lane_evidence_rows_before": 149,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_install_decision_intake_contract_ready_for_report_only_fixture_suite",
+  "negative_fixture_count": 7,
+  "negative_fixtures": [
+    "missing_decision_id",
+    "unknown_decision_type",
+    "target_path_changed",
+    "missing_source_artifact",
+    "expired_decision",
+    "unsigned_decision",
+    "bundled_live_parse_permission"
+  ],
+  "next_action": "Build a report-only install-decision fixture suite next; do not apply an install decision or write/import a parser module.",
+  "output_state_count": 4,
+  "output_states": [
+    "accepted_hold",
+    "accepted_one_file_write_only",
+    "accepted_preflight_rework",
+    "accepted_install_rejection"
+  ],
+  "parser_guard_count": 8,
+  "parser_guards": [
+    "guard_json_object_only",
+    "guard_required_fields_present",
+    "guard_known_install_decision_type",
+    "guard_target_path_matches_preflight",
+    "guard_source_artifact_matches_preflight",
+    "guard_not_expired",
+    "guard_signed_timestamp_present",
+    "guard_no_import_or_live_parse_permission"
+  ],
+  "positive_fixture_count": 4,
+  "positive_fixtures": [
+    {
+      "decision_type": "hold",
+      "expected_state": "accepted_hold",
+      "fixture": "positive_hold",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    },
+    {
+      "decision_type": "approve_one_file_write_only",
+      "expected_state": "accepted_one_file_write_only",
+      "fixture": "positive_approve_one_file_write_only",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    },
+    {
+      "decision_type": "request_preflight_rework",
+      "expected_state": "accepted_preflight_rework",
+      "fixture": "positive_request_preflight_rework",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    },
+    {
+      "decision_type": "reject_parser_install",
+      "expected_state": "accepted_install_rejection",
+      "fixture": "positive_reject_parser_install",
+      "source_artifact_path": "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.json",
+      "target_path": "E:\\agent-company-lab\\tools\\migration_decision_parser.py"
+    }
+  ],
+  "recommended_default": "build_report_only_install_decision_fixture_suite_next_without_applying_install_decision",
+  "required_field_count": 8,
+  "required_fields": [
+    "decision_id",
+    "operator_name",
+    "decision_type",
+    "target_path",
+    "source_artifact_path",
+    "expires_at",
+    "risk_acknowledgement",
+    "signed_utc"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_install_decision_intake_contract.v1",
+  "source_review_evidence_id": "agent-company-migration-decision-parser-install-review-20260616",
+  "source_review_task_id": "task-agent-company-migration-decision-parser-install-review-20260616",
+  "summary": "Defined the report-only signed install-decision intake contract for the parser install review, including required fields, fixtures, parser guards, and output states.",
+  "task_rows_inserted_by_install_decision_intake_contract": 1,
+  "tasks_table_rows_after": 242,
+  "tasks_table_rows_before": 241
+}

@@ -1,0 +1,38 @@
+{
+  "artifact": "security-program-rules-scope-ranker-v1",
+  "created_utc": "2026-06-17T21:50:00Z",
+  "task_id": "task-security-program-rules-scope-ranker-v1-20260618",
+  "trace_id": "trace-security-program-rules-scope-ranker-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "agent_id": "recovered-profitable-edge-infra",
+  "dataset_json": "E:\\agent-company-lab\\data\\security-program-rules-scope-ranker-v1-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\security-program-rules-scope-ranker-v1-20260618.csv",
+  "report_json": "E:\\agent-company-lab\\reports\\security-program-rules-scope-ranker-v1-20260618.json",
+  "report_md": "E:\\agent-company-lab\\reports\\security-program-rules-scope-ranker-v1-20260618.md",
+  "validation_path": "E:\\agent-company-lab\\reports\\security-program-rules-scope-ranker-v1-validation-20260618.json",
+  "summary": {
+    "program_count": 7,
+    "promote_count": 2,
+    "watch_count": 3,
+    "tooling_or_quality_gate_count": 2,
+    "submission_ready_count": 0,
+    "all_checks_passed": true,
+    "failure_count": 0
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build immunefi_directory_scope_shortlist_v1 and security_report_quality_gate_v1 before any target-specific testing or report drafting."
+}

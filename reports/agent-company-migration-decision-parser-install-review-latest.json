@@ -1,0 +1,103 @@
+{
+  "approval_condition_count": 7,
+  "approval_conditions": [
+    "signed operator decision id is present",
+    "decision names approve_one_file_write_only",
+    "target path exactly matches the preflight target path",
+    "source artifact exactly matches the parser module file draft artifact",
+    "permission is limited to one local file write",
+    "permission does not allow import or live parsing",
+    "post-write static review and fixture runner remain required"
+  ],
+  "decision_option_count": 4,
+  "decision_options": [
+    {
+      "default": true,
+      "effect": "Do not write or install the parser module.",
+      "option": "hold"
+    },
+    {
+      "default": false,
+      "effect": "Permit one local file write to the declared target path only.",
+      "option": "approve_one_file_write_only"
+    },
+    {
+      "default": false,
+      "effect": "Return the install preflight for path, gate, or rollback edits.",
+      "option": "request_preflight_rework"
+    },
+    {
+      "default": false,
+      "effect": "Close this parser install path and keep report-only artifacts only.",
+      "option": "reject_parser_install"
+    }
+  ],
+  "evidence_link_count": 4,
+  "evidence_links": [
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-preflight-latest.md",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-install-preflight-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-module-file-draft-latest.md",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-decision-parser-static-review-validation-latest.json"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T12:40:56Z",
+  "install_review_count": 1,
+  "lane_evidence_rows_after": 149,
+  "lane_evidence_rows_before": 148,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_parser_install_review_ready_for_signed_install_decision_or_hold",
+  "next_action": "Wait for a signed operator install decision or draft a report-only install-decision intake contract.",
+  "operator_instruction_count": 6,
+  "operator_instructions": [
+    "Default to hold unless the one-file write is genuinely needed.",
+    "Do not approve import or live decision parsing from this packet.",
+    "If approving, include the exact target path and source artifact.",
+    "Limit approval to one attempt and one local file.",
+    "Require post-write static review before any import ask.",
+    "Reject if any external or service-request side effect is included."
+  ],
+  "recommended_default": "hold_without_signed_operator_file_write_approval",
+  "refusal_condition_count": 7,
+  "refusal_conditions": [
+    "missing signed decision id",
+    "decision includes import or live parsing permission",
+    "decision changes target path",
+    "decision bundles migration SQL or service request mutation",
+    "decision bundles browser account wallet payment public or security actions",
+    "source preflight validation is stale or failing",
+    "rollback and post-write review are not accepted"
+  ],
+  "review_evidence_id": "agent-company-migration-decision-parser-install-review-20260616",
+  "review_lane_id": "platform_engineering",
+  "review_task_id": "task-agent-company-migration-decision-parser-install-review-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "operator_install_decision_applied": false,
+    "parser_module_file_written": false,
+    "parser_module_imported": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_parser_install_review.v1",
+  "source_preflight_evidence_id": "agent-company-migration-decision-parser-install-preflight-20260616",
+  "source_preflight_task_id": "task-agent-company-migration-decision-parser-install-preflight-20260616",
+  "summary": "Prepared a report-only operator review packet for the parser module install preflight, with hold as the default and one-file-write approval boundaries.",
+  "task_rows_inserted_by_install_review": 1,
+  "tasks_table_rows_after": 241,
+  "tasks_table_rows_before": 240
+}

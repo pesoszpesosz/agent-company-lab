@@ -1,0 +1,94 @@
+{
+  "accepted_apply_count": 0,
+  "apply_guard_execution_count": 6,
+  "apply_guard_results": [
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_explicit_mutation_approval",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_explicit_mutation_approval",
+      "fixture_id": "missing-explicit-mutation-approval",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_readonly_scope_not_mutation_approval",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_readonly_scope_not_mutation_approval",
+      "fixture_id": "readonly-approval-not-mutation-approval",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_target_service_request_ids",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_target_service_request_ids",
+      "fixture_id": "missing-target-service-request-ids",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_unbounded_or_excessive_update_count",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unbounded_or_excessive_update_count",
+      "fixture_id": "unbounded-update-count",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_forbidden_action_requested",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_forbidden_action_requested",
+      "fixture_id": "forbidden-action-requested",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_service_request_status_snapshot",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_service_request_status_snapshot",
+      "fixture_id": "missing-status-snapshot",
+      "matched_expected": true
+    }
+  ],
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_match_count": 6,
+  "generated_utc": "2026-06-15T23:55:20Z",
+  "lane_evidence_rows_after": 111,
+  "lane_evidence_rows_before": 110,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_guard_runner_passed_no_mutations",
+  "mutation_applied_count": 0,
+  "negative_apply_fixture_count": 6,
+  "next_action": "Keep the apply path disabled; next create a positive apply dry-run fixture that previews the exact single service-request update without applying it.",
+  "queue_mutation_count": 0,
+  "recommended_default": "keep_apply_path_disabled_until_explicit_mutation_approval",
+  "rejected_apply_count": 6,
+  "runner_evidence_id": "ceo-decision-parser-apply-guard-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-ceo-decision-parser-apply-guard-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_guard_runner.v1",
+  "source_fixtures_evidence_id": "ceo-decision-parser-apply-negative-fixtures-20260616",
+  "source_fixtures_task_id": "task-ceo-decision-parser-apply-negative-fixtures-20260616",
+  "source_fixtures_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-negative-fixtures-validation-latest.json",
+  "summary": "Ran a local report-only apply guard against six negative apply fixtures. The guard rejected every unauthorized or underspecified apply request and performed no service request mutation.",
+  "task_rows_inserted_by_runner": 1,
+  "tasks_table_rows_after": 203,
+  "tasks_table_rows_before": 202
+}

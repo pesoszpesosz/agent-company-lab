@@ -1,0 +1,94 @@
+{
+  "id": "agent-company-atlas-scope-run-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "security_bounty_private_reports",
+  "module": "Scope Run",
+  "purpose": "Promote the private security bounty report lane from a generic checkpoint game into a lane-specific defensive scope-run module with generated scope-citadel texture, five evidence-derived guard stations, and explicit approval gates.",
+  "research": {
+    "queries": [
+      "HackerOne program scope bounty report submission private disclosure dashboard",
+      "Bugcrowd vulnerability disclosure report workflow scope triage UI",
+      "security bounty platform report submission scope duplicate triage dashboard"
+    ],
+    "reference_urls": [
+      "https://www.hackerone.com/",
+      "https://www.bugcrowd.com/",
+      "https://owasp.org/www-community/vulnerabilities/"
+    ],
+    "design_takeaways": [
+      "Scope, rules, and program eligibility are the first visual gate for private security bounty work.",
+      "Duplicate, stale, rejected, and triage signals should be visible before any private report route is considered.",
+      "Testing, browser research, public submission, private disclosure, accounts, and payout-sensitive actions should remain locked until explicit approval."
+    ]
+  },
+  "image_generation": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_03e9bb14426b80a9016a32da857b188191ae57d5f7ef7400fd.png",
+    "workspace_path": "web/assets/games/scope-run-bg-20260617.png",
+    "prompt_summary": "Premium dark defensive security command chamber with luminous scope walls, private-report vault doors, duplicate sentry checkpoints, static proof tablets, safe review corridors, and sealed testing/submission gates; no people, text, logos, code snippets, exploit payloads, or offensive visuals."
+  },
+  "implementation": {
+    "files_changed": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/README.md"
+    ],
+    "assets_added": [
+      "web/assets/games/scope-run-bg-20260617.png"
+    ],
+    "frontend_features": [
+      "Added scope-run dispatch and step-count support.",
+      "Added five data-derived guard stations: Scope Wall, Duplicate Sweep, Static Proof, Private Route, and Approval Gate.",
+      "Added a lane-specific board with shield walls, sentinels, approval locks, station cards, and responsive desktop/mobile layouts.",
+      "Added versioned cache keys and README documentation for standalone reuse."
+    ],
+    "safety_boundaries": [
+      "The module reads local trail/snapshot data only.",
+      "It does not perform security testing, exploit reproduction, live browsing, account work, report submission, public disclosure, or payout chasing.",
+      "The approval station visualizes those boundaries as locked."
+    ]
+  },
+  "validation": {
+    "static": {
+      "node_check_web_app_js": "passed",
+      "lane_visuals_json": "passed",
+      "asset_exists": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=scope-run&cache=20260617-scope-run#lane=security_bounty_private_reports&view=game",
+      "mobile_390x920": {
+        "texture_loaded": true,
+        "stations": 5,
+        "sentinels": 5,
+        "initial_focus": "Scope Wall",
+        "next_focus": "Duplicate Sweep",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      },
+      "desktop_docked_1600x900": {
+        "texture_loaded": true,
+        "stations": 5,
+        "sentinels": 5,
+        "hero_columns": "78px 193px",
+        "station_columns": "309px",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      },
+      "desktop_stacked_1280x800": {
+        "texture_loaded": true,
+        "stations": 5,
+        "sentinels": 5,
+        "hero_columns": "78px 885px 132px",
+        "station_columns": "221px 221px 221px 221px 221px",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      }
+    }
+  }
+}

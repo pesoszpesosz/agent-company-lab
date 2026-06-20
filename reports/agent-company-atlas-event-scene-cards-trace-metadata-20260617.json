@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "event-scene-cards-v1",
+  "generatedAt": "2026-06-16T21:32:12Z",
+  "feature": {
+    "id": "agent-company-atlas-event-scene-cards-v1",
+    "title": "Mission Feed event scene cards",
+    "purpose": "Make the company-wide mission feed feel like a game board of unlocked events by turning task, proof, outcome, gate, and trace records into compact visual scene cards."
+  },
+  "research": [
+    {
+      "title": "Grid Sage Games: Achievements UI Design and Implementation",
+      "url": "https://www.gridsagegames.com/blog/2018/05/achievements-ui-design-implementation/",
+      "takeaway": "Achievement systems need their own attractive interface for notification, browsing, and interaction rather than relying only on raw platform records."
+    },
+    {
+      "title": "Dribbble: Game progress map inspiration",
+      "url": "https://dribbble.com/search/game-progress-map",
+      "takeaway": "Progress-map inspiration commonly emphasizes clear paths, distinct level nodes, and instantly recognizable advancement states."
+    },
+    {
+      "title": "PixelTree: Gamification in UI Design",
+      "url": "https://pixeltreemedia.co.uk/5-examples-of-gamification-in-ui-design/",
+      "takeaway": "Progress meters and gamified feedback make steps toward completion easier to understand at a glance."
+    },
+    {
+      "title": "UI Patterns: Collectible Achievements",
+      "url": "https://ui-patterns.com/patterns/CollectibleAchievements",
+      "takeaway": "Collectible achievements benefit from attractive trophy-like visual objects, which maps well to lane-art scene cards."
+    }
+  ],
+  "implementation": {
+    "sourceFiles": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Mission Feed cards now render as data-derived scene cards with lane art, accent colors, realm text, rarity, status, and XP-style reward copy.",
+      "Playback cards use the same scene-card renderer so replay feels like a highlighted event object rather than a separate flat card.",
+      "Scene-card clicks preserve source lane Trail drilldown.",
+      "Scene cards continue to synchronize with the map playback pulse and route highlight.",
+      "The implementation uses existing snapshot fields and does not require a new build step or external service."
+    ],
+    "derivedFields": [
+      "rarity",
+      "xp",
+      "scene status",
+      "lane image",
+      "lane accent",
+      "lane realm"
+    ],
+    "portableContract": "Any future agent-company repo can provide lane visuals plus missionFeed.items and receive the same scene-card treatment."
+  },
+  "validation": {
+    "staticChecks": [
+      {
+        "command": "node --check web\\app.js",
+        "status": "passed"
+      },
+      {
+        "command": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+        "status": "passed"
+      },
+      {
+        "command": "python -m json.tool web\\data\\snapshot.json",
+        "status": "passed"
+      },
+      {
+        "command": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md",
+        "status": "passed",
+        "result": "no non-ASCII matches"
+      }
+    ],
+    "browserDesktop": {
+      "url": "http://localhost:5177/?verify=event-scenes#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "checks": {
+        "sceneCardCount": 18,
+        "playbackHasScene": true,
+        "firstCardImage": "./assets/lanes/platform_engineering.png",
+        "firstCardReward": "epic +130 xp cleared",
+        "hotNodeCount": 1,
+        "routeCount": 1,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserMobile": {
+      "url": "http://localhost:5177/?verify=event-scenes-mobile#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 390,
+        "height": 840
+      },
+      "checks": {
+        "sceneCardCount": 18,
+        "playbackHasScene": true,
+        "firstGrid": "86px 204px",
+        "firstImage": "./assets/lanes/platform_engineering.png",
+        "firstReward": "epic +130 xp cleared",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserInteraction": {
+      "url": "http://localhost:5177/?verify=event-scenes-click#lane=platform_engineering&view=overview",
+      "checks": {
+        "clickedUniqueSceneCard": true,
+        "resultHash": "#lane=platform_engineering&view=trail",
+        "detailActiveTab": "trail",
+        "detailHeading": "Platform Engineering",
+        "trailItems": 18,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserFinalSmoke": {
+      "url": "http://localhost:5177/?verify=event-scenes-current#lane=platform_engineering&view=overview",
+      "checks": {
+        "sceneCardCount": 18,
+        "playbackTitle": "Create money-path coverage audit and next-lane dispatch order",
+        "playbackReward": "epic +130 xp cleared",
+        "playbackImage": "./assets/lanes/platform_engineering.png",
+        "firstTitle": "Create money-path coverage audit and next-lane dispatch order",
+        "firstReward": "epic +130 xp cleared",
+        "firstImage": "./assets/lanes/platform_engineering.png",
+        "includesEventScenesTask": true,
+        "hotNodeCount": 1,
+        "routeCount": 1,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    }
+  },
+  "nextIdeas": [
+    "Generate dedicated event-scene thumbnails for each event kind.",
+    "Add animated route particles between the feed scene and active map lane.",
+    "Create lane-specific replay presets that unlock different minigame views.",
+    "Introduce a collectible achievement wall sourced from completed outcomes."
+  ]
+}

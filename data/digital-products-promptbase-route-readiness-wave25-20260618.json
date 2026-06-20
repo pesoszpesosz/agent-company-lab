@@ -1,0 +1,172 @@
+{
+  "schema_version": "agent_company.digital_products_promptbase_route_readiness_wave25.v1",
+  "generated_utc": "2026-06-18T03:31:00Z",
+  "lane_id": "digital_products_templates_plugins",
+  "task_id": "task-digital-products-promptbase-route-readiness-wave25-20260618",
+  "source_route_packet": "E:\\agent-company-lab\\data\\digital-products-marketplace-route-eligibility-wave24-20260618.json",
+  "source_package_manifest": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json",
+  "source_hold_register": "E:\\agent-company-lab\\reports\\digital-products-local-gated-hold-register-latest.json",
+  "selected_route_id": "promptbase_agent_skill_route",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "package_status": "internal_review_manifest_only",
+    "file_count": 12,
+    "total_bytes": 21670,
+    "zip_created": false,
+    "public_listing_ready": false,
+    "realized_usd": 0
+  },
+  "promptbase_public_sources": [
+    {
+      "source_id": "promptbase_sell",
+      "url": "https://promptbase.com/sell",
+      "source_type": "official_public_page",
+      "observed_signal": "PromptBase invites sellers to sell AI prompts or agent skills, including SKILL.md files.",
+      "local_implication": "The route remains semantically strong for a Codex skill/template product, but any submission requires marketplace and account gates."
+    },
+    {
+      "source_id": "promptbase_support_payouts",
+      "url": "https://promptbase.com/support",
+      "source_type": "official_public_page",
+      "observed_signal": "PromptBase support describes 20% marketplace fees, 0% referral-link prompt sales, 10% custom-job fees, and no extra hidden transaction fees in its examples.",
+      "local_implication": "The local packet should model fee scenarios, but live payout route review remains blocked behind legal/payment/account approval."
+    },
+    {
+      "source_id": "promptbase_guidelines",
+      "url": "https://promptbase.com/prompt-guidelines",
+      "source_type": "official_public_page",
+      "observed_signal": "PromptBase guidelines emphasize buyer value/use case and output consistency; prompts may be declined for lacking enough use case or being unstable/inconsistent.",
+      "local_implication": "The local product needs proof that the skill kit has a clear buyer use case and reproducible local outputs before any submission."
+    },
+    {
+      "source_id": "promptbase_terms",
+      "url": "https://promptbase.com/tandcs",
+      "source_type": "official_public_page",
+      "observed_signal": "PromptBase terms describe PromptBase acting as limited payment collection agent for sellers for marketplace payments.",
+      "local_implication": "Legal/payment review must inspect seller obligations, payment collection, payout timing, and user responsibility before account or listing work."
+    },
+    {
+      "source_id": "promptbase_marketplace_home",
+      "url": "https://promptbase.com/",
+      "source_type": "official_public_page",
+      "observed_signal": "PromptBase advertises a prompt marketplace with agent skills, free prompts, AI apps, custom creator hiring, and prompt stores.",
+      "local_implication": "The listing route should be positioned as an agent-skill/template product, not as a guaranteed revenue product or unsupported marketplace claim."
+    }
+  ],
+  "readiness_scores": {
+    "route_fit_score": 90,
+    "local_asset_score": 82,
+    "buyer_use_case_score": 76,
+    "reproducibility_evidence_score": 64,
+    "submission_rule_readiness_score": 41,
+    "payout_legal_readiness_score": 25,
+    "overall_local_readiness_score": 63
+  },
+  "ready_evidence": [
+    {
+      "evidence_id": "product_manifest_ready",
+      "status": "ready_local",
+      "detail": "The product manifest records 12 local Markdown/template files with SHA-256 hashes and no public listing readiness."
+    },
+    {
+      "evidence_id": "buyer_facing_draft_exists",
+      "status": "ready_local",
+      "detail": "Existing package contains README, buyer guide, listing draft, screenshot plan, license/IP note, and templates."
+    },
+    {
+      "evidence_id": "route_semantic_fit",
+      "status": "ready_local",
+      "detail": "PromptBase explicitly mentions selling agent skills/SKILL.md files; the product is a skill/template kit."
+    },
+    {
+      "evidence_id": "gates_explicit",
+      "status": "ready_local",
+      "detail": "The digital-products hold register preserves marketplace demand, terms/fees, public listing, and account/payment setup holds."
+    }
+  ],
+  "blocking_gaps": [
+    {
+      "gap_id": "submission_guideline_mapping_missing",
+      "blocked_by": "browser_read_only_session",
+      "reason": "PromptBase submission guidelines need a route-specific mapping against the exact Agent Skill Starter Kit files after explicit read-only approval."
+    },
+    {
+      "gap_id": "reproducibility_examples_need_review",
+      "blocked_by": "local_review_then_browser_read_only_session",
+      "reason": "The route should prove clear use case and reproducible outputs locally before any marketplace-facing examples."
+    },
+    {
+      "gap_id": "payout_fee_terms_unreviewed",
+      "blocked_by": "legal_kyc_tax_payment",
+      "reason": "Fee, payout, payment collection, tax, KYC, refund, and seller obligations need human/legal/payment review."
+    },
+    {
+      "gap_id": "seller_account_not_approved",
+      "blocked_by": "account_payment_approval",
+      "reason": "No seller account, login, payout route, or agreement acceptance is approved."
+    },
+    {
+      "gap_id": "public_listing_not_approved",
+      "blocked_by": "public_action_approval",
+      "reason": "No public listing, upload, price, product claim, or promotional action is approved."
+    }
+  ],
+  "local_checklist": [
+    {
+      "item_id": "use_case_statement",
+      "status": "local_next",
+      "instruction": "Write a one-paragraph local use-case statement for AI builders who need reusable Codex skill scaffolding, without revenue or marketplace approval claims."
+    },
+    {
+      "item_id": "reproducible_example_matrix",
+      "status": "local_next",
+      "instruction": "Map the sample SKILL.md and templates to reproducible local outcomes and expected files."
+    },
+    {
+      "item_id": "guideline_mapping_table",
+      "status": "blocked_until_browser_approval",
+      "instruction": "After read-only approval, compare current PromptBase submission guidelines to each product file and note required edits."
+    },
+    {
+      "item_id": "fee_payout_question_list",
+      "status": "blocked_until_legal_payment_review",
+      "instruction": "Prepare questions for marketplace fee, payout method, tax/KYC, refund, and seller-obligation review."
+    },
+    {
+      "item_id": "submission_do_not_run_packet",
+      "status": "local_next",
+      "instruction": "Prepare a do-not-run submission packet that lists every later action requiring explicit approval."
+    }
+  ],
+  "active_holds_preserved": [
+    "hold-live-marketplace-demand",
+    "hold-live-terms-and-fees",
+    "hold-public-listing-action",
+    "hold-account-or-payment-setup"
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "web_docs_reads": 5,
+    "browser_sessions_started": 0,
+    "marketplace_pages_opened_by_lab_browser": 0,
+    "accounts_created": 0,
+    "logins_attempted": 0,
+    "seller_terms_accepted": 0,
+    "kyc_tax_payment_data_entered": 0,
+    "payouts_configured": 0,
+    "listings_created": 0,
+    "listings_published": 0,
+    "files_uploaded": 0,
+    "zip_created": false,
+    "public_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "dependency_installs": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Create a local PromptBase use-case and reproducibility checklist from existing package files only; do not write final listing copy, browse marketplace pages in a lab browser, create accounts, accept terms, configure payouts, upload files, publish listings, mutate service requests, start workers, call model/MCP tools, or perform external actions."
+}

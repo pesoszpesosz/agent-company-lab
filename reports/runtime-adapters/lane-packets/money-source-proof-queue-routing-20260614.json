@@ -1,0 +1,96 @@
+{
+  "schema_version": "work_packet.v1",
+  "packet_id": "packet-money-source-proof-queue-routing",
+  "lane_id": "money_source_discovery",
+  "task_id": "task-money-source-proof-queue-routing-packet-20260614",
+  "requester_agent_id": "recovered-profitable-edge-infra",
+  "created_utc": "2026-06-14T16:35:00Z",
+  "title": "Package money-source proof queue routing evidence",
+  "objective": "Convert the existing 16-row local money-source proof queue and blocked browser-read-only service request into an auditable local routing packet without browser, account, API, public, wallet, payment, current-source verification, or real-money action.",
+  "packet_type": "local_research",
+  "execution_mode": "local_only",
+  "allowed_actions": [
+    "read local proof queue JSON",
+    "read local weekly delta report",
+    "read local service-request packet as blocked-gate context",
+    "write local adapter result files",
+    "emit local trace metadata"
+  ],
+  "blocked_actions": [
+    "browser automation",
+    "current-source verification",
+    "external URL checking",
+    "account login or registration",
+    "public action",
+    "bounty claim",
+    "competition signup",
+    "marketplace listing",
+    "wallet or payment action",
+    "legal/KYC/tax commitment",
+    "model/API execution",
+    "real-money action",
+    "submitted_bounty_payouts work"
+  ],
+  "required_service_requests": [],
+  "approval_requirements": [
+    {
+      "gate": "browser_read_only_session",
+      "decision_owner": "requesting_manager_and_chief_risk_officer",
+      "approval_status": "not_required",
+      "scope": "Not required for this local packaging packet; required before reading public opportunity directories or current-verifying URLs."
+    },
+    {
+      "gate": "public_action_execution",
+      "decision_owner": "user_or_cro",
+      "approval_status": "not_required",
+      "scope": "Not required for this local packaging packet; required before comments, claims, applications, submissions, listings, outreach, or public posts."
+    },
+    {
+      "gate": "legal_kyc_tax_payment_gate",
+      "decision_owner": "user",
+      "approval_status": "not_required",
+      "scope": "Not required for this local packaging packet; required before accounts, payouts, tax/KYC, seller setup, or paid work commitments."
+    }
+  ],
+  "context_artifacts": [
+    {
+      "kind": "machine_readable_proof_queue",
+      "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\money-source-proof-queue-20260614.json",
+      "purpose": "16-row queue of candidate money-source routes, owner lanes, gates, planned proof paths, and blocked-until states."
+    },
+    {
+      "kind": "weekly_delta_local_dry_run",
+      "path_or_url": "E:\\agent-company-lab\\reports\\money-source-discovery\\weekly-delta-local-dry-run-20260614.md",
+      "purpose": "Human-readable local dry-run explaining source routing and gate classes."
+    },
+    {
+      "kind": "service_request_packet",
+      "path_or_url": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+      "purpose": "Blocked browser-read-only review packet; context only."
+    }
+  ],
+  "expected_outputs": [
+    {
+      "kind": "lane_adapter_result",
+      "path": "E:\\agent-company-lab\\reports\\runtime-adapters\\lane-packet-runs\\money-source-proof-queue-routing\\adapter-result.json",
+      "required": true
+    }
+  ],
+  "success_criteria": [
+    "all adapters prepare or materialize local-only artifact plans without external execution",
+    "result files are written and linked from aggregate reports",
+    "browser/current-source verification remains blocked",
+    "money-source browser-read-only service request remains needs_review",
+    "submitted_bounty_payouts remains excluded"
+  ],
+  "external_side_effects_allowed": false,
+  "real_money_allowed": false,
+  "public_action_allowed": false,
+  "metadata": {
+    "span_kind": "lane_packet_eval",
+    "runtime": "runtime_adapter_harness",
+    "api_calls": false,
+    "money_lane": "money_source_discovery",
+    "source_queue_candidates": 16
+  }
+}

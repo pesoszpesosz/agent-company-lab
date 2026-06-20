@@ -1,0 +1,940 @@
+{
+  "accepted_count": 12,
+  "account_actions": false,
+  "all_checks_passed": true,
+  "approval_granted_by_event": false,
+  "approval_rows_written": 0,
+  "browser_sessions_started": 0,
+  "contract_status": "report_only_event_surface_ready",
+  "decisions_applied": 0,
+  "dependency_installs": 0,
+  "event_transport_enabled": false,
+  "event_transports_started": 0,
+  "event_type_count": 12,
+  "event_type_ids": [
+    "ceo_review_snapshot",
+    "manager_status_update",
+    "worker_capability_signal",
+    "service_request_gate_ping",
+    "tool_auth_request_proposed",
+    "approval_decision_needed",
+    "route_blocker_changed",
+    "artifact_evidence_attached",
+    "outcome_realization_recorded",
+    "trace_replay_pointer",
+    "human_operator_note",
+    "dispatch_next_action"
+  ],
+  "expected_accepted_count": 12,
+  "expected_rejected_count": 37,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 49,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:30Z",
+  "mcp_tool_calls": false,
+  "model_api_calls": false,
+  "next_action": "Use this report-only event surface to design local CEO/manager inbox packets; do not enable SSE, WebSockets, browser sessions, worker starts, service-request mutation, model/MCP calls, public actions, or external side effects.",
+  "operator_events_emitted": 0,
+  "operator_events_persisted": 0,
+  "payment_actions": false,
+  "public_actions": false,
+  "rejected_count": 37,
+  "report_only": true,
+  "results": [
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "accepted",
+      "name": "positive_ceo_review_snapshot",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_ceo_review_snapshot.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "bee3b0ead3c0b4509a5dbcf79a7d3383dc12bc58c86b73c915490ea06052f680"
+    },
+    {
+      "event_type": "manager_status_update",
+      "expected": "accepted",
+      "name": "positive_manager_status_update",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_manager_status_update.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "dba7cd94f7c9434a93215006a6b22a24f927c6b1619008ec05048676ad84f9e4"
+    },
+    {
+      "event_type": "worker_capability_signal",
+      "expected": "accepted",
+      "name": "positive_worker_capability_signal",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_worker_capability_signal.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "7ec81d2e4b2df8bb8c1e711eb4d2f86324cbc0571b368e52d3651675e9ed7cab"
+    },
+    {
+      "event_type": "service_request_gate_ping",
+      "expected": "accepted",
+      "name": "positive_service_request_gate_ping",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_service_request_gate_ping.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "8714594429f74264e930a4c6410f39826197ada161b889047151ddf85604e51c"
+    },
+    {
+      "event_type": "tool_auth_request_proposed",
+      "expected": "accepted",
+      "name": "positive_tool_auth_request_proposed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_tool_auth_request_proposed.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "fe68808599711242c76af337beb611e2ada7dad8d97df2904c196ea5a3a9d665"
+    },
+    {
+      "event_type": "approval_decision_needed",
+      "expected": "accepted",
+      "name": "positive_approval_decision_needed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_approval_decision_needed.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "b98b5a5d42c49d5556e08fa681908c3b72b400a1980937e03fe713d27ee04744"
+    },
+    {
+      "event_type": "route_blocker_changed",
+      "expected": "accepted",
+      "name": "positive_route_blocker_changed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_route_blocker_changed.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "5b384c441764747b463b489fb86e665d2688c463c8a9fb1021b62eefe9e42b80"
+    },
+    {
+      "event_type": "artifact_evidence_attached",
+      "expected": "accepted",
+      "name": "positive_artifact_evidence_attached",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_artifact_evidence_attached.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "987725b18db51bca70ccc4724586db9fd3ee7a2aa8ecda9b72f2112167d99c26"
+    },
+    {
+      "event_type": "outcome_realization_recorded",
+      "expected": "accepted",
+      "name": "positive_outcome_realization_recorded",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_outcome_realization_recorded.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "37551782e899f8d4a12e114e8e8d775cfcad34143fb8a4878102892c0662a38d"
+    },
+    {
+      "event_type": "trace_replay_pointer",
+      "expected": "accepted",
+      "name": "positive_trace_replay_pointer",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_trace_replay_pointer.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "5b3ebc4cf72598b5a1ebc990f9066db730c78c0376065d9f2b8776a0c13c6479"
+    },
+    {
+      "event_type": "human_operator_note",
+      "expected": "accepted",
+      "name": "positive_human_operator_note",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_human_operator_note.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "2497ac668dbb275ca7383fdf55b7ebe60c3a0eab54d63cdbdbcf25294840bb75"
+    },
+    {
+      "event_type": "dispatch_next_action",
+      "expected": "accepted",
+      "name": "positive_dispatch_next_action",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\positive_dispatch_next_action.json",
+      "result": {
+        "accepted_for_contract_only": true,
+        "approval_granted_by_event": false,
+        "errors": [],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": false
+      },
+      "sha256": "90f79a7d46ce602d14abe34cc73d569a31afcfc0aee64c8e72fdd8a6bdfb9668"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_event_surface_status",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_event_surface_status.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "event_surface_status_must_be_report_only_contract"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "b17f6d5b7739baa7b9d532ba1c92b5528efd648de869093dd9dacb1538fd7cb2"
+    },
+    {
+      "event_type": "unknown_event_type",
+      "expected": "rejected",
+      "name": "negative_event_type",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_event_type.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "event_type_not_in_contract"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "42a9ed757abc77fc3daeafc31961e09b29b1cb0196b28dcdbe69827ffec06977"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_producer_role",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_producer_role.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "producer_role_missing"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "6c3d3d8297abfe9f35ac1916aac8fccb2f38529c516f283601d6560948365f23"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_consumer_role",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_consumer_role.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "consumer_role_missing"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "7a18cf60cfd3025f3ec90711b7673a4f1fb114e54d7b519debc304533723a3f2"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_approval_granted_by_event",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_approval_granted_by_event.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "approval_granted_by_event_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "e4a1a93be9b6de9d4813f740e8541688739735f9eb48f04ef466580cda143c45"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_event_transport_enabled",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_event_transport_enabled.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "event_transport_enabled_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "bc065b94311a14067d5ba77a93d9c27f02940beaa184b57f0e5c2e548422707e"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_sse_enabled",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_sse_enabled.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "sse_enabled_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "89e52456e48868e06c34d6ab34ead3ebdce0bcb533dd192b2724fb43d421fe4d"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_websocket_enabled",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_websocket_enabled.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "websocket_enabled_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "2ca54b20396a7a4c80e1a7453dbcdab43cbe13eadd2ecbfbb9c357a121179886"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_worker_start_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_worker_start_allowed.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "worker_start_allowed_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "75c8289498ff2348738872e5e7bffaf55d790bc13fc84f4f4e22d6038f50d962"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_service_request_mutation_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_service_request_mutation_allowed.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "service_request_mutation_allowed_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "7157a14db277c43540351d1ff95108c43576eb2fc2d9f485c6617556f8ac95d7"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_model_api_call_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_model_api_call_allowed.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "model_api_call_allowed_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "42f58f67faa40425eca008eede57959422475a637bf9e9d6a44c99815064bf90"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_mcp_tool_call_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_mcp_tool_call_allowed.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "mcp_tool_call_allowed_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "9809adf5c2d30636905c0c716eb98ba0a4633d83a6c1743f59e06b8e2a20c54a"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_public_action_allowed",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_public_action_allowed.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "public_action_allowed_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "efa5331059dcf68d78103d03786497200be749f360296e1bd5ae12edf1e20817"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_external_side_effects",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_external_side_effects.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "external_side_effects_must_be_false"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "1750784ea718245c83798f42498e0094d3b9bd4f1776b7b9c003404199cf8c07"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_missing_source_paths",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_missing_source_paths.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "source_artifact_paths_must_include_current_operator_sources"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "dac1ee04c12ef3346fd37c7d0cf4ed84e72286ea6f3169de579a68d03b5741bb"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_outside_source_path",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_outside_source_path.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "source_artifact_paths_must_include_current_operator_sources",
+          "source_artifact_path_must_stay_inside_lab"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "fcc3ecb3d0fd51679fcdd80dfe8ee893d847c003660bf301ac7920fdd275b16a"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_missing_payload_required_field",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_missing_payload_required_field.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "payload_required_field_missing:event_type",
+          "payload_required_field_missing:lane_id",
+          "payload_required_field_missing:task_id",
+          "payload_required_field_missing:agent_id",
+          "payload_required_field_missing:summary",
+          "payload_required_field_missing:source_artifact_path",
+          "payload_required_field_missing:created_utc"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "cab5aea0408e7586a933fde5e0731bd963dd57dba9a3095d2622a589117bea96"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_missing_gate",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_missing_gate.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "required_gate_missing:agent_egress_event_ledger_v1",
+          "required_gate_missing:service_worker_chain_integrity_v1",
+          "required_gate_missing:unified_agent_egress_gateway_docket_v1"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "21e29dbcb86958a280004bfb09dd07b870f44cdf68e51a4c02188243bec93a18"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_event_transports_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_event_transports_started.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_event_transports_started_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "a4dae78dafde9fd15e0a64e7b09cc6662aa0e302b5024c9d1864b3e5a92b74c8"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_operator_events_emitted",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_operator_events_emitted.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_operator_events_emitted_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "d6da0e729123aef55b262606f8e8c330ba2e177d5e91a3d6bc1bc8e95ddec749"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_operator_events_persisted",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_operator_events_persisted.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_operator_events_persisted_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "8f72c0bb935848d5a9ab153f6d1bb270d4aa09b62bd67bb33c0f62589a8c250b"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_approval_rows_written",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_approval_rows_written.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_approval_rows_written_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "283acb20b8026bd7cd448b6b3b18386072df93f3f190e143fe03e1a5a0266cf6"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_decisions_applied",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_decisions_applied.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_decisions_applied_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "62938d96dd14d37752049b2e06b26dab445946513c0eabf56db53edab093c137"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_tasks_created",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_tasks_created.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_tasks_created_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "722b07fac43e3feb05977817ac59654d25ea29bd8931c31b26e6a8ebaded0584"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_tasks_updated",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_tasks_updated.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_tasks_updated_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "403e6072614ec4fc4c1fd9c659b950620a18f23cb5630249117a04e135a7ee93"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_service_requests_assigned",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_service_requests_assigned.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "c09da6f72e07d514d80e0b9218b51e14b33d58db07c1dec113b76ec0727ac7fa"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_service_requests_updated",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_service_requests_updated.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_service_requests_updated_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "d8721ceae91b298eb6883554a222e6a7271f25e1b4a0f27cd4231621f75c8224"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_worker_starts",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_worker_starts.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_worker_starts_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "089955e7c768d724cf222aa5b056f2969ed0837871405df1e9a81113bacc0b7c"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_browser_sessions_started",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_browser_sessions_started.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_browser_sessions_started_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "691b35ea6f3e3d99aef6775299ee7c1b75289446e42d0245e6bb36f6b8978188"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_runtime_starts",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_runtime_starts.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_runtime_starts_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "7783b77dbd0c3a877cf57d320aeb1002d13937135749f722c8ce0bc793ef36bd"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_dependency_installs",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_dependency_installs.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_dependency_installs_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "4049e1b918d747c59fd410fd75797970b6e5bd4afcca80c080a93afbe6e9e1ee"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_sse_connections_opened",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_sse_connections_opened.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_sse_connections_opened_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "c02c3b44b8c713de0342bfce24f0c6f3d31ef9268985769819e14fb1579dccd2"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_websocket_connections_opened",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_websocket_connections_opened.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_websocket_connections_opened_must_equal_0"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "b1bd410a2270bdcf5801b8dbe559ba9018292c7a07c9a810835057102d062fac"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_mcp_tool_calls",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_mcp_tool_calls.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_mcp_tool_calls_must_equal_False"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "71a7d28543f8b941e6d43f1fff21c2796234b1bf450f26a4f00ab7c55f4c73fd"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_model_api_calls",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_model_api_calls.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_model_api_calls_must_equal_False"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "8100100dfc80535bdb60b7e2bb6ee6cca6c5712e2bfbb4f85814fd2a42a1f1a6"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_public_actions",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_public_actions.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_public_actions_must_equal_False"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "3cab52b364ce347c497e2849f5bd76314df6bf0b09bd97fa28f51c3631cab06d"
+    },
+    {
+      "event_type": "ceo_review_snapshot",
+      "expected": "rejected",
+      "name": "negative_boundary_external_side_effects",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\ceo-operator-event-surface-contract-v1-fixtures\\negative_boundary_external_side_effects.json",
+      "result": {
+        "accepted_for_contract_only": false,
+        "approval_granted_by_event": false,
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "event_transport_enabled": false,
+        "external_side_effects": false,
+        "rejected": true
+      },
+      "sha256": "74243a06cf0a4959ed2080041d00f336a7c1a0ebe095d1199952d803d3cf62f0"
+    }
+  ],
+  "runtime_starts": 0,
+  "schema_path": "E:\\agent-company-lab\\architecture\\ceo-operator-event-surface-contract-v1.schema.json",
+  "schema_version": "agent_company.ceo_operator_event_surface_contract_report.v1",
+  "security_testing_actions": false,
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_summary": {
+    "route_chain_all_checks_passed": true,
+    "route_chain_full_count": 8,
+    "route_chain_validation_path": "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-validation-20260618.json",
+    "service_worker_chain_all_checks_passed": true,
+    "service_worker_chain_validation_path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "service_worker_checked_report_count": 138,
+    "wave20_all_checks_passed": true,
+    "wave20_next_build": "ceo_operator_event_surface_contract_v1",
+    "wave20_report_path": "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618.json",
+    "wave20_validation_path": "E:\\agent-company-lab\\reports\\agent-company-operator-interface-radar-wave20-20260618-validation.json"
+  },
+  "sse_connections_opened": 0,
+  "sse_enabled": false,
+  "tasks_created": 0,
+  "tasks_updated": 0,
+  "wallet_actions": false,
+  "websocket_connections_opened": 0,
+  "websocket_enabled": false,
+  "worker_starts": 0
+}

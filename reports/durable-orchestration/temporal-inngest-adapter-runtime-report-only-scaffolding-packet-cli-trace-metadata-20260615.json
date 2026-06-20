@@ -1,0 +1,17 @@
+{
+    "packet_component_count":  5,
+    "source_report_only_fixture_count":  5,
+    "source_accepted_report_only_fixture_count":  5,
+    "runtime_component_count":  0,
+    "runtime_side_effect_component_count":  0,
+    "executable_code_component_count":  0,
+    "chain_integrity_checked_report_count":  23,
+    "chain_integrity_failure_count":  0,
+    "runtime_implementation_allowed":  false,
+    "runtime_code_write_allowed":  false,
+    "report_only_scaffolding_allowed":  true,
+    "forbidden_runtime_import_count":  0,
+    "model_api_gate_remains_parked":  true,
+    "model_api_pool_registered":  false,
+    "external_side_effects":  false
+}

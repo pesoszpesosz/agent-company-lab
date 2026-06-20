@@ -1,0 +1,40 @@
+{
+  "schema_version": "agent_company.optimism_asset_scope_table_validation.v1",
+  "generated_utc": "2026-06-17T21:53:00Z",
+  "task_id": "task-optimism-asset-scope-table-v1-20260618",
+  "checked_files": [
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-asset-scope-table-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-asset-scope-table-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\optimism-asset-scope-table-v1-trace-metadata-20260618.json"
+  ],
+  "asset_count": 33,
+  "expected_asset_count": 33,
+  "category_counts": {
+    "Blockchain/DLT": 4,
+    "Smart Contract": 19,
+    "Web & App": 10
+  },
+  "row_count_matches_program_total": true,
+  "submission_ready": false,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "boundary": {
+    "report_only": true,
+    "public_read_only_headless_page_extraction_sessions": 1,
+    "service_worker_browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

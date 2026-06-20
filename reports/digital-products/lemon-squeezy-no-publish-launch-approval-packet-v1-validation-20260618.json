@@ -1,0 +1,107 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "api_keys_created_or_used": 0,
+    "browser_sessions_started": 0,
+    "checkout_or_payment_links_created": 0,
+    "customer_data_processed": 0,
+    "email_capture_or_marketing": 0,
+    "external_side_effects": 0,
+    "files_uploaded": 0,
+    "lemon_squeezy_account_or_login": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_payout_setup": 0,
+    "product_or_storefront_created": false,
+    "public_listing_or_promotion": 0,
+    "service_requests_mutated": 0,
+    "terms_or_payout_accepted": false,
+    "workers_or_runtimes_started": 0,
+    "zip_created_or_uploaded": false
+  },
+  "checks": [
+    {
+      "name": "selected_route_present",
+      "passed": true
+    },
+    {
+      "name": "manifest_has_expected_files",
+      "passed": true
+    },
+    {
+      "name": "manifest_has_checksums",
+      "passed": true
+    },
+    {
+      "name": "pricing_margin_scenarios_present",
+      "passed": true
+    },
+    {
+      "name": "pricing_fee_estimates_positive",
+      "passed": true
+    },
+    {
+      "name": "required_decisions_complete",
+      "passed": true
+    },
+    {
+      "name": "forbidden_claims_complete",
+      "passed": true
+    },
+    {
+      "name": "refund_support_terms_present",
+      "passed": true
+    },
+    {
+      "name": "evidence_assets_present",
+      "passed": true
+    },
+    {
+      "name": "source_launch_gates_present",
+      "passed": true
+    },
+    {
+      "name": "source_kill_reasons_present",
+      "passed": true
+    },
+    {
+      "name": "login_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "terms_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "storefront_product_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "upload_checkout_api_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "customer_email_public_not_allowed",
+      "passed": true
+    },
+    {
+      "name": "no_lemon_squeezy_side_effects",
+      "passed": true
+    },
+    {
+      "name": "no_customer_public_or_zip_action",
+      "passed": true
+    },
+    {
+      "name": "no_service_runtime_model_mutation",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T09:06:37Z",
+  "schema_version": "digital_products.lemon_squeezy_no_publish_launch_approval_packet.validation.v1",
+  "task_id": "task-lemon-squeezy-no-publish-launch-approval-packet-v1-20260618"
+}

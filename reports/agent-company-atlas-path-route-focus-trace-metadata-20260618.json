@@ -1,0 +1,61 @@
+{
+  "traceId": "trace-agent-company-atlas-path-route-focus-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-route-focus-v1-20260618",
+  "eventId": "trace-atlas_path_route_focus_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-route-focus-trace-metadata-20260618",
+  "title": "Path Route Focus",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "problem": "Direct Path links were forcing the Path board to the top of the viewport, cutting off the compact tabs and making the page feel jumpier and more scroll-heavy.",
+  "implementation": [
+    "Changed focusPathBoardFromRoute from block:start to block:nearest so an already-visible cockpit is preserved.",
+    "Added a focused route-focus contract test to prevent the aggressive top snap from returning.",
+    "Updated cache keys and documentation for the route-focus behavior."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_route_focus.py"
+  ],
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-route-focus-20260618#lane=platform_engineering&view=path&deck=command",
+    "scrollY": 0,
+    "tabsVisible": true,
+    "boardVisible": true,
+    "panelBottomWithinViewport": true,
+    "overflowX": 0,
+    "tokenCount": 3,
+    "tokens": [
+      "4 Gate",
+      "2,537 Proof",
+      "2 Work"
+    ],
+    "tabsRect": {
+      "y": 135,
+      "height": 28,
+      "bottom": 163
+    },
+    "boardRect": {
+      "y": 173,
+      "height": 437,
+      "bottom": 610
+    }
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_route_focus.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_live_tokens.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_cockpit_chrome.py -q",
+      "result": "3 passed in 1.55s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "exit code 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "48 passed, 55 deselected in 0.17s"
+    }
+  ],
+  "nextAction": "Continue making direct Path routes calmer and more cockpit-like by keeping first-viewport controls readable and pushing deep history behind deliberate depth switches."
+}

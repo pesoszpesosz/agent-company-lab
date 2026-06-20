@@ -1,0 +1,64 @@
+{
+  "schema_version": "youtube_production_manifest.v1",
+  "generated_utc": "2026-06-20T17:18:00Z",
+  "lane_id": "youtube_content_channels",
+  "status": "local_production_manifest",
+  "production_units": {
+    "script_briefs": {
+      "count": 10,
+      "status": "drafted"
+    },
+    "title_variants": {
+      "count": 30,
+      "status": "drafted"
+    },
+    "thumbnail_briefs": {
+      "count": 10,
+      "status": "drafted"
+    },
+    "b_roll_source_plan": {
+      "count": 1,
+      "status": "drafted"
+    },
+    "voiceover_editor_options": {
+      "count": 4,
+      "status": "drafted"
+    },
+    "copyright_reputation_checklist": {
+      "count": 1,
+      "status": "drafted"
+    },
+    "public_upload_approvals": {
+      "count": 0,
+      "status": "not_requested"
+    }
+  },
+  "workflow": [
+    "select_one_brief",
+    "expand_into_full_script_locally",
+    "create_storyboard_from_generated_or_self_created_visual_ideas",
+    "run_copyright_reputation_checklist",
+    "prepare_public_action_packet_only_if_artifact_is_strong",
+    "stop_before_account_upload_comment_monetization_or_public_action_gates"
+  ],
+  "file_links": {
+    "batch": "E:\\agent-company-lab\\reports\\youtube-no-post-content-batch-v1-20260620.md",
+    "checklist": "E:\\agent-company-lab\\reports\\youtube-reputation-copyright-checklist-v1-20260620.md",
+    "material_route_template": "E:\\agent-company-lab\\reports\\youtube-material-route-template-v1-20260620.md"
+  },
+  "metrics_to_track": [
+    "minutes_to_expand_one_brief_into_full_script",
+    "reusable_visual_motifs",
+    "claims_requiring_source_verification",
+    "public_action_gates_triggered",
+    "supports_product_service_audience_or_learning_outcome"
+  ],
+  "zero_side_effect_boundary": {
+    "upload_authorized": false,
+    "channel_creation_authorized": false,
+    "browser_use_authorized": false,
+    "paid_tools_authorized": false,
+    "public_posts_authorized": false,
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.account_wallet_payment_egress_apply_preflight_blocker.v1",
+  "title": "Account Wallet Payment Egress Apply Preflight Blocker v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "target_route_id",
+    "target_egress_type",
+    "apply_preflight_status",
+    "blocker_reason",
+    "real_signed_decision_present",
+    "exact_account_wallet_payment_approval_present",
+    "apply_command_contract_present",
+    "apply_allowed",
+    "account_creation_allowed",
+    "terms_acceptance_allowed",
+    "wallet_creation_allowed",
+    "private_key_custody_allowed",
+    "funds_transfer_allowed",
+    "payment_action_allowed",
+    "legal_kyc_tax_action_allowed",
+    "public_payment_address_allowed",
+    "real_money_action_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.account_wallet_payment_egress_apply_preflight_blocker.v1"
+    },
+    "target_route_id": {
+      "const": "account_wallet_payment_gateway"
+    },
+    "target_egress_type": {
+      "const": "account_wallet_payment"
+    },
+    "apply_preflight_status": {
+      "type": "string",
+      "enum": [
+        "blocked_no_real_signed_decision",
+        "blocked_guard_not_passing",
+        "blocked_no_exact_account_wallet_payment_approval",
+        "blocked_no_apply_command_contract",
+        "blocked_fixture_decision_not_real"
+      ]
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "account_creation_allowed": {
+      "const": false
+    },
+    "terms_acceptance_allowed": {
+      "const": false
+    },
+    "wallet_creation_allowed": {
+      "const": false
+    },
+    "private_key_custody_allowed": {
+      "const": false
+    },
+    "funds_transfer_allowed": {
+      "const": false
+    },
+    "payment_action_allowed": {
+      "const": false
+    },
+    "legal_kyc_tax_action_allowed": {
+      "const": false
+    },
+    "public_payment_address_allowed": {
+      "const": false
+    },
+    "real_money_action_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

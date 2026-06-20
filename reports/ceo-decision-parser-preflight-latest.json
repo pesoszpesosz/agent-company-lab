@@ -1,0 +1,82 @@
+{
+  "accepted_decision_count": 0,
+  "approval_request_count": 0,
+  "blocking_check_count": 7,
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-15T23:21:30Z",
+  "lane_evidence_rows_after": 103,
+  "lane_evidence_rows_before": 102,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_preflight_ready_parser_not_implemented",
+  "next_action": "Implement a dry-run parser only after these preflight checks are encoded; until then no decision text can be parsed or applied.",
+  "parser_implementation_status": "not_implemented",
+  "preflight_check_count": 7,
+  "preflight_checks": [
+    {
+      "blocking": true,
+      "check_id": "load_guard_contract",
+      "requirement": "Parser must load the current CEO decision intake guard schema and known packet/option IDs."
+    },
+    {
+      "blocking": true,
+      "check_id": "validate_required_fields",
+      "requirement": "Parser must require all eight intake fields before considering a decision."
+    },
+    {
+      "blocking": true,
+      "check_id": "reject_all_negative_fixtures",
+      "requirement": "Parser must reject all six negative fixtures with the expected rule ids."
+    },
+    {
+      "blocking": true,
+      "check_id": "scope_to_known_blockers",
+      "requirement": "Parser must accept only known blocker ids from the selected decision packet."
+    },
+    {
+      "blocking": true,
+      "check_id": "enforce_forbidden_actions",
+      "requirement": "Parser must reject any scope that permits forbidden public, account, payment, wallet, submission, or security-testing actions."
+    },
+    {
+      "blocking": true,
+      "check_id": "require_expiration_or_review",
+      "requirement": "Parser must require an expiration or review time before any bounded approval can be considered."
+    },
+    {
+      "blocking": true,
+      "check_id": "dry_run_before_mutation",
+      "requirement": "Parser must produce a dry-run mutation preview before changing service_requests or starting workers."
+    }
+  ],
+  "preflight_evidence_id": "ceo-decision-parser-preflight-20260616",
+  "preflight_lane_id": "platform_engineering",
+  "preflight_task_id": "task-ceo-decision-parser-preflight-20260616",
+  "recommended_default": "do_not_parse_or_apply_decisions_until_preflight_is_implemented",
+  "runnable_without_approval_count": 0,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_preflight.v1",
+  "source_accepted_fixture_count": 0,
+  "source_expected_rejection_count": 6,
+  "source_fixtures_evidence_id": "ceo-decision-intake-negative-fixtures-20260616",
+  "source_fixtures_task_id": "task-ceo-decision-intake-negative-fixtures-20260616",
+  "source_fixtures_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-intake-negative-fixtures-validation-latest.json",
+  "source_negative_fixture_count": 6,
+  "summary": "Created a local CEO decision parser preflight defining seven blocking checks required before any future parser can mutate service requests.",
+  "task_rows_inserted_by_preflight": 1,
+  "tasks_table_rows_after": 195,
+  "tasks_table_rows_before": 194
+}

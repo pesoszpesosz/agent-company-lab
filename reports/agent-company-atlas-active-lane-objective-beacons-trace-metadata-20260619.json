@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-objective-beacons-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-objective-beacons-v1-20260619",
+  "eventId": "event-agent-company-atlas-active-lane-objective-beacons-v1-20260619",
+  "title": "Active Lane Objective Beacons",
+  "createdAt": "2026-06-19T04:38:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Added compact objective beacons inside every mounted lane stage so the active objective, progress, gate pressure, and next choice remain visible while browsing the lane cockpit.",
+  "proof": [
+    "Rendered objective, progress, gates, and next choice from existing lane state.",
+    "Kept the beacons sticky and compact inside the mounted stage, with horizontal mobile behavior instead of stacked scroll.",
+    "Updated README, cache markers, snapshot generation, and regression floors so the standalone dashboard records the unlock."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

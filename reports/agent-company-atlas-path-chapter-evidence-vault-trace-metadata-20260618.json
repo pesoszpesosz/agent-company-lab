@@ -1,0 +1,87 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-evidence-vault-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-evidence-vault-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_evidence_vault_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Evidence Vault inside the selected Path Map Chapter Archive record deck so each chapter surfaces deduped artifact previews, proof records, and outcome packets as direct Event Proof focus cards.",
+  "design_research": {
+    "queries": [
+      "evidence dashboard UX proof artifact cards audit trail design pattern",
+      "document evidence vault dashboard UI artifact preview cards UX",
+      "audit evidence management dashboard proof cards UX pattern"
+    ],
+    "source_urls": [
+      "https://medium.com/%40dnied/designing-the-audit-trail-how-systems-remember-5c833814deec",
+      "https://baymard.com/blog/cards-dashboard-layout",
+      "https://www.telerik.com/design-system/docs/ui-templates/building-blocks/dashboard/dashboard-card/",
+      "https://www.securebydesignhandbook.com/docs/resources/policy-and-evidence/audit-evidence-pack"
+    ],
+    "pattern_notes": [
+      "Audit trails become more useful when events are filtered into role-specific queues and dashboard surfaces.",
+      "Dashboard cards should be concise, predictable, and styled consistently with surrounding controls.",
+      "Evidence packs work best as structured collections of records, documents, and technical artifacts rather than raw file dumps."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_evidence_vault.py",
+      "reports/agent-company-atlas-path-chapter-evidence-vault-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "pathChapterArchiveItems(trail).items",
+      "pathEventGlyphType(item)",
+      "pathEventKey(item)",
+      "pathProofItems(lane)",
+      "item.artifact",
+      "item.artifactPreview.lines",
+      "renderPathArtifactPreview(preview)"
+    ],
+    "ui_contract": [
+      "Render Chapter Evidence Vault inside the selected Chapter Archive record deck.",
+      "Prefer proof-like, artifact-backed, and outcome records from the selected chapter, then fill from lane-level artifact previews.",
+      "Deduplicate cards by pathEventKey(item).",
+      "Show preview, artifact, and proof counts.",
+      "Expose each card as a direct data-path-event-focus control for the existing Event Proof lens.",
+      "Expose TRL and LOG actions without starting workers, sending messages, or mutating the snapshot."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_evidence_vault.py -q failed before frontend wiring on missing function pathChapterEvidenceItems.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_evidence_vault.py -q passed after implementation."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-evidence-vault-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Chapter Evidence Vault with four proof cards, two compact artifact previews capped at two lines each, 2 previews, 2 artifacts, 2 proofs, TRL/LOG actions, cache-busted CSS/JS, no horizontal overflow, and zero console errors."
+    },
+    "event_focus_action": {
+      "status": "passed",
+      "evidence": "The first vault card resolved to exactly one data-path-event-focus target, clicked successfully, marked the matching chapter record active, and updated the existing Event Proof lens with no console errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one Evidence Vault with four cards, two action buttons, two compact two-line artifact previews, no horizontal overflow, no bad rectangles, no clipped evidence text, and no console errors."
+    }
+  }
+}

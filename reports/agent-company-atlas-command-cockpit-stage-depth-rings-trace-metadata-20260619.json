@@ -1,0 +1,25 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-stage-depth-rings-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-stage-depth-rings-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_stage_depth_rings_added-20260619",
+  "title": "Command Cockpit Stage Depth Rings",
+  "timestamp": "2026-06-19T14:49:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Added bounded parallax depth rings to the Command Cockpit Overview stage so selected money paths feel more like animated game arenas without introducing more scroll or crowding the phone layout.",
+  "changes": [
+    "Rendered three lane-colored depth rings inside the mounted stage atmosphere.",
+    "Scoped the visible rings to the Command Cockpit Overview stage while keeping the base component hidden elsewhere.",
+    "Tied ring rotation and pulse animation to lane progress and reduced mobile intensity to avoid covering the mission board.",
+    "Suppressed the heavier holo floor on narrow cockpit screens so the quest module, stage animation, and footer rail do not collide."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

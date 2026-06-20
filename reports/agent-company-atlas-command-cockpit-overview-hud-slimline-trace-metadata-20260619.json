@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-overview-hud-slimline-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-overview-hud-slimline-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-overview-hud-slimline-v1-20260619",
+  "title": "Command Cockpit Overview HUD Slimline",
+  "createdAt": "2026-06-19T13:18:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Trimmed the desktop Command Cockpit Overview lane header into a slimmer launch strip so the playable stage gets more first-screen space.",
+  "proof": [
+    "Scoped the slimline to Command Cockpit Overview via the body detail-view state.",
+    "Hid duplicate bot event copy and the nested command matrix while preserving lane identity, stats, avatar, and route pulse.",
+    "Verified the live 1440x900 cockpit after the footer pin: no horizontal overflow and the stage footer rail remains inside the mounted stage."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-overview-hud-slimline-trace-metadata-20260619.json"
+  ]
+}

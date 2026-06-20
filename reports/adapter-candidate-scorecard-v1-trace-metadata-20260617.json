@@ -1,0 +1,20 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "task_id": "task-adapter-candidate-scorecard-v1-20260617",
+  "trace_id": "trace-adapter-candidate-scorecard-v1-20260617",
+  "artifact_family": "adapter-candidate-scorecard-v1",
+  "summary": "Built a report-only scorecard for seven external agent/runtime candidates from Wave 15, ranking LangGraph, Restate, Temporal, OpenHands, Microsoft Agent Framework, CrewAI, and Google ADK while selecting zero candidates for runtime adoption.",
+  "validation_report": "E:\\agent-company-lab\\reports\\adapter-candidate-scorecard-v1-validation-20260617.json",
+  "candidate_count": 7,
+  "selected_for_runtime_adoption_count": 0,
+  "recommended_next_candidate": "langchain-ai/langgraph",
+  "recommended_next_local_build": "checkpoint_interrupt_bridge_fixture",
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "dependency_installs": 0,
+  "runtime_starts": 0,
+  "worker_starts": 0,
+  "service_requests_updated": 0,
+  "external_side_effects": false,
+  "next_action": "Build checkpoint_interrupt_bridge_fixture as local report-only scaffolding before any LangGraph dependency install or runtime adoption."
+}

@@ -1,0 +1,38 @@
+{
+  "artifact": "agent-company-gateway-readiness-matrix-v1",
+  "created_utc": "2026-06-17T21:24:00Z",
+  "task_id": "task-agent-company-gateway-readiness-matrix-v1-20260618",
+  "trace_id": "trace-agent-company-gateway-readiness-matrix-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "matrix_path": "E:\\agent-company-lab\\reports\\agent-company-gateway-readiness-matrix-v1-20260618.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\agent-company-gateway-readiness-matrix-v1-20260618.md",
+  "validation_path": "E:\\agent-company-lab\\reports\\agent-company-gateway-readiness-matrix-v1-validation-20260618.json",
+  "source_wave": "E:\\agent-company-lab\\reports\\agent-company-operational-infra-radar-wave16-20260618.json",
+  "summary": {
+    "domain_count": 7,
+    "ready_local_only_count": 3,
+    "blocked_requires_signed_decision_count": 2,
+    "not_ready_count": 2,
+    "highest_priority_next_build": "checkpoint_resume_ui_packet_design_v1",
+    "all_checks_passed": true,
+    "failure_count": 0
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "gateway_process_starts": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "payment_actions": false,
+    "wallet_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build checkpoint_resume_ui_packet_design_v1 as a local report-only packet set before gateway, browser, MCP, model, or cloud activation."
+}

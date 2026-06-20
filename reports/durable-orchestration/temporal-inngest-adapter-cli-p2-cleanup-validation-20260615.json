@@ -1,0 +1,55 @@
+{
+  "schema_version": "temporal_inngest_adapter_cli_p2_cleanup_validation.v1",
+  "generated_local": "2026-06-15T18:17:15.1233370+03:00",
+  "generated_utc_approx": "2026-06-15T15:17:15Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-cli-p2-cleanup-20260615",
+  "source_code_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_code_sha256_before": "618855E17387D3B01A266A53F3C907D40CA5E05C5340CF3EE735C6F26B5C547A",
+  "source_code_sha256_after": "572696D6766B4548F9B29692110C9F630F991A74E9AD7613BAE001F96013B081",
+  "test_report_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-p2-cleanup-test-20260615.json",
+  "checks": {
+    "unused_default_constant_removed": true,
+    "resume_requirements_order_policy_documented_in_payload": true,
+    "positive_fixture_still_passes": true,
+    "positive_result_count": 14,
+    "negative_regression_count": 2,
+    "negative_regressions_rejected": 2,
+    "negative_result_files_created": 0,
+    "service_request_mutation_count": 0
+  },
+  "service_requests_by_status_after": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "model_api_request_after": {
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "status": "needs_review",
+    "assigned_agent_id": null,
+    "started_at": null,
+    "completed_at": null,
+    "decision_note": null
+  },
+  "runtime_boundary": {
+    "python_files_modified": 1,
+    "cli_commands_added_to_runner": 0,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Create the next local-only durable orchestration integration report that maps the hardened reducer contract to service-worker decision packet refresh commands without starting external runtimes."
+}

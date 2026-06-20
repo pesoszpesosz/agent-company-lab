@@ -1,0 +1,65 @@
+{
+  "event_type": "atlas_path_mission_scan_added",
+  "task_id": "task-agent-company-atlas-path-mission-scan-v1-20260618",
+  "trace_id": "trace-agent-company-atlas-path-mission-scan-v1-20260618",
+  "event_id": "trace-atlas_path_mission_scan_added-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Added a compact animated Mission Scan to the Path Map so clicked lanes open with route, gate, proof, task, unlock, and future state.",
+  "date": "2026-06-18",
+  "changes": [
+    "Replaced the plain Path Map stat strip with renderPathMissionScan.",
+    "Derived six mission stages from existing lane trail, gate, proof, task, outcome, and route-node data.",
+    "Added a desktop orbit core, route runner, scan sweep, compact stats, and mission stage rail.",
+    "Compressed mobile and tablet views into internal horizontal stats/stage rails with the orbit core hidden.",
+    "Added reduced-motion coverage for the new scan sweep and runner.",
+    "Updated README and added a focused contract test."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_mission_scan.py",
+    "tests/test_agent_company_atlas_worlds_launch.py"
+  ],
+  "verification": {
+    "static": [
+      "node --check E:\\agent-company-lab\\web\\app.js",
+      "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas"
+    ],
+    "browser": {
+      "desktop": {
+        "viewport": "1280x720",
+        "mission_scan_visible": true,
+        "stage_count": 6,
+        "runner_animation": "pathMissionRunner",
+        "core_display": "block",
+        "scan_height": 219,
+        "horizontal_overflow": false
+      },
+      "tablet": {
+        "viewport": "820x900",
+        "stage_count": 6,
+        "core_display": "none",
+        "scan_height": 260,
+        "horizontal_overflow": false
+      },
+      "mobile": {
+        "viewport": "390x844",
+        "stage_count": 6,
+        "core_display": "none",
+        "scan_height": 282,
+        "horizontal_overflow": false,
+        "internal_stage_scroll": true,
+        "internal_stat_scroll": true
+      },
+      "new_console_errors": 0
+    }
+  },
+  "next_iteration": [
+    "Improve the Path Map route node board itself with better animated connections.",
+    "Compact the Command deck first screen further.",
+    "Continue adding premium generated textures and bot/avatar motion surfaces."
+  ]
+}

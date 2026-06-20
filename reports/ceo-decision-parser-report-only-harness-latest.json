@@ -1,0 +1,78 @@
+{
+  "accepted_decision_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "fixture_suite_count": 7,
+  "generated_utc": "2026-06-15T23:40:18Z",
+  "harness_case_count": 5,
+  "harness_cases": [
+    {
+      "case_id": "reject-negative-fixtures",
+      "fixture_count": 6,
+      "required_result": "all_negative_fixtures_rejected",
+      "source": "negative-fixtures"
+    },
+    {
+      "case_id": "positive-dry-run-preview",
+      "expected_preview_state": "would_create_bounded_service_request_update",
+      "fixture_count": 1,
+      "required_result": "exactly_one_dry_run_preview",
+      "source": "positive-fixture"
+    },
+    {
+      "case_id": "no-queue-mutations",
+      "fixture_count": 7,
+      "required_result": "service_requests_and_tasks_not_mutated_by_parser",
+      "source": "runtime-boundary"
+    },
+    {
+      "case_id": "no-approval-escalation",
+      "fixture_count": 7,
+      "required_result": "approval_request_count_stays_zero",
+      "source": "runtime-boundary"
+    },
+    {
+      "case_id": "no-external-side-effects",
+      "fixture_count": 7,
+      "required_result": "browser_api_public_account_wallet_payment_and_real_money_actions_stay_zero",
+      "source": "runtime-boundary"
+    }
+  ],
+  "harness_evidence_id": "ceo-decision-parser-report-only-harness-20260616",
+  "harness_lane_id": "platform_engineering",
+  "harness_task_id": "task-ceo-decision-parser-report-only-harness-20260616",
+  "lane_evidence_rows_after": 107,
+  "lane_evidence_rows_before": 106,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_report_only_harness_ready_parser_not_run",
+  "negative_fixture_count": 6,
+  "next_action": "Implement the first report-only parser runner against this harness; keep it read-only and emit previews only until the harness passes and explicit mutation approval exists.",
+  "parser_execution_count": 0,
+  "positive_fixture_count": 1,
+  "queue_mutation_count": 0,
+  "recommended_default": "implement_report_only_parser_against_harness_before_mutations",
+  "required_pass_count": 5,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_report_only_harness.v1",
+  "source_suite_evidence_id": "ceo-decision-parser-fixture-suite-20260616",
+  "source_suite_task_id": "task-ceo-decision-parser-fixture-suite-20260616",
+  "source_suite_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-fixture-suite-validation-latest.json",
+  "summary": "Defined a local report-only acceptance harness for the future CEO decision parser. The harness requires all seven parser fixtures to pass while queue mutation, approval escalation, browser/API use, and external side effects remain disabled.",
+  "task_rows_inserted_by_harness": 1,
+  "tasks_table_rows_after": 199,
+  "tasks_table_rows_before": 198
+}

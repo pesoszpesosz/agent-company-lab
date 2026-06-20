@@ -1,0 +1,44 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-route-spine-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-route-spine-v1-20260618",
+  "event_type": "atlas_path_route_spine_added",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Converted the Path Map route into a compact connected level rail with a shared route spine, animated runner, focused-node socket, direct Path deep-link landing, and responsive overflow checks.",
+  "changes": [
+    "Added path-route-spine and path-route-runner markup to Path Map route rendering.",
+    "Converted the route from a wrapping card grid into a horizontal scroll-snap level rail to reduce vertical scrolling.",
+    "Moved the connected route above the Chapter Archive so the level map appears before deep records.",
+    "Added focusPathBoardFromRoute so direct Path Map URLs land on the active board instead of the top of the long app.",
+    "Added reduced-motion handling for route runner and focused-node pulse."
+  ],
+  "verification": {
+    "node_check": "node --check web/app.js",
+    "pytest": "27 passed, 55 deselected with python -m pytest tests -q -k agent_company_atlas",
+    "browser": {
+      "desktop": {
+        "viewport": "1280x820",
+        "body_overflow_x": 0,
+        "route_visible_in_first_screen": true,
+        "route_height_px": 209,
+        "runner_animation": "pathRouteRunner"
+      },
+      "tablet": {
+        "viewport": "820x900",
+        "body_overflow_x": 0,
+        "route_visible_in_first_screen": true,
+        "route_height_px": 209
+      },
+      "mobile": {
+        "viewport": "390x820",
+        "body_overflow_x": 0,
+        "route_visible_in_first_screen": true,
+        "route_height_px": 209
+      }
+    }
+  },
+  "sources": [
+    "Gamification design references visible progress and feedback as useful game elements.",
+    "Dashboard references favor at-a-glance views with drilldown over overloaded long pages."
+  ]
+}

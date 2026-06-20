@@ -1,0 +1,160 @@
+{
+  "check_case_count": 12,
+  "check_cases": [
+    {
+      "expected": "accept",
+      "fixture_id": "positive_hold",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "fixture_id": "positive_approve_sandbox_dry_run_only",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "fixture_id": "positive_request_rework",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "accept",
+      "fixture_id": "positive_reject_migration_path",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "missing_decision_id",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "unknown_decision_type",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "live_apply_scope",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "missing_artifact_paths",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "expired_decision",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "unsigned_decision",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "gated_action_bundle",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    },
+    {
+      "expected": "reject",
+      "fixture_id": "service_request_mutation",
+      "module_has_coverage": true,
+      "module_has_parse_entry": true,
+      "module_has_result_builder": true,
+      "module_has_scope_guard": true,
+      "passed": true
+    }
+  ],
+  "checks_evidence_id": "agent-company-migration-decision-module-fixture-checks-20260616",
+  "checks_lane_id": "platform_engineering",
+  "checks_task_id": "task-agent-company-migration-decision-module-fixture-checks-20260616",
+  "evidence_rows_inserted_or_updated": 1,
+  "failed_check_count": 0,
+  "fixture_coverage_count": 12,
+  "function_block_count": 9,
+  "generated_utc": "2026-06-16T12:18:39Z",
+  "guard_function_count": 9,
+  "lane_evidence_rows_after": 145,
+  "lane_evidence_rows_before": 144,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_module_fixture_checks_ready_for_report_only_parser_module_file_draft",
+  "module_fixture_checks_count": 1,
+  "module_section_count": 8,
+  "next_action": "Draft the report-only parser module file next; do not install it or parse live decisions.",
+  "passed_check_count": 12,
+  "recommended_default": "draft_report_only_parser_module_file_next_without_installing_or_live_parsing",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "live_decisions_parsed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "parser_module_file_written": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "report_only_module_checks_executed": true,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_module_fixture_checks.v1",
+  "source_module_evidence_id": "agent-company-migration-decision-parser-module-draft-20260616",
+  "source_module_task_id": "task-agent-company-migration-decision-parser-module-draft-20260616",
+  "summary": "Checked the report-only parser module draft against all 12 migration decision fixtures; every fixture has coverage, parser entry, scope guard, and result builder support.",
+  "task_rows_inserted_by_module_fixture_checks": 1,
+  "tasks_table_rows_after": 237,
+  "tasks_table_rows_before": 236
+}

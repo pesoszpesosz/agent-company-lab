@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.central_outbox_history.v1",
+  "title": "Agent Company Central Outbox History v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "messages"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.central_outbox_history.v1"
+    },
+    "generated_utc": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "messages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/message"
+      }
+    }
+  },
+  "$defs": {
+    "message": {
+      "type": "object",
+      "required": [
+        "message_id",
+        "created_utc",
+        "sender_agent_id",
+        "recipient_type",
+        "recipient_id",
+        "lane_id",
+        "message_type",
+        "priority",
+        "subject",
+        "body",
+        "context_refs",
+        "approval_posture",
+        "prohibited_actions",
+        "requested_local_action",
+        "replay_status",
+        "external_side_effects"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "type": "string",
+          "pattern": "^msg-[a-z0-9][a-z0-9-]{8,120}$"
+        },
+        "created_utc": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+        },
+        "sender_agent_id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "recipient_type": {
+          "enum": [
+            "agent",
+            "lane",
+            "service_worker_pool",
+            "ceo",
+            "human_review"
+          ]
+        },
+        "recipient_id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "lane_id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "service_request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "message_type": {
+          "enum": [
+            "dispatch",
+            "status_update",
+            "gate_request",
+            "review_request",
+            "artifact_notice",
+            "decision_needed",
+            "blocked_notice"
+          ]
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 180
+        },
+        "body": {
+          "type": "string",
+          "minLength": 10
+        },
+        "context_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "kind",
+              "ref"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "artifact",
+                  "evidence",
+                  "task",
+                  "service_request",
+                  "source",
+                  "report",
+                  "trace"
+                ]
+              },
+              "ref": {
+                "type": "string",
+                "minLength": 3
+              }
+            }
+          }
+        },
+        "approval_posture": {
+          "enum": [
+            "local_only",
+            "needs_human_review",
+            "needs_cro_review",
+            "approved_scope_required",
+            "terminal_no_action"
+          ]
+        },
+        "prohibited_actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "browser_session",
+              "account_action",
+              "wallet_action",
+              "payment_action",
+              "public_action",
+              "security_testing",
+              "model_api_call",
+              "runtime_start",
+              "dependency_install",
+              "service_request_mutation",
+              "real_money_action"
+            ]
+          }
+        },
+        "requested_local_action": {
+          "type": "string",
+          "minLength": 5
+        },
+        "replay_status": {
+          "enum": [
+            "queued",
+            "delivered",
+            "acknowledged",
+            "superseded",
+            "cancelled"
+          ]
+        },
+        "external_side_effects": {
+          "const": false
+        }
+      }
+    }
+  }
+}

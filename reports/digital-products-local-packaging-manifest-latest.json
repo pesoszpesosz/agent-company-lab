@@ -1,0 +1,163 @@
+{
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "forbidden_actions": [
+    "Do not distribute, publish, browse marketplaces, create seller accounts, accept terms, configure payouts, set prices, or claim live demand from this manifest.",
+    "Do not mutate service requests, assign/start workers, call APIs, touch wallets/payments, trade, submit, post, or create external side effects from this manifest."
+  ],
+  "generated_utc": "2026-06-19T21:49:00Z",
+  "lane_evidence_rows_after": 83,
+  "lane_evidence_rows_before": 82,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "local_packaging_manifest_complete_no_distribution_or_payment_action",
+  "manifest_evidence_id": "digital-products-local-packaging-manifest-20260616",
+  "manifest_lane_id": "digital_products_templates_plugins",
+  "manifest_task_id": "task-digital-products-local-packaging-manifest-20260616",
+  "next_action": "Draft the remaining local package files from the manifest; do not distribute, list, price, browse marketplaces, create accounts, or configure payouts.",
+  "package_file_count": 6,
+  "package_files": [
+    {
+      "path": "README.md",
+      "purpose": "Explain scope, usage, boundaries, non-claims, and gated validation requirements.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "positioning-template.md",
+      "purpose": "Reusable AI-builder launch positioning worksheet with sample filled answers.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "launch-checklist.md",
+      "purpose": "Pre-launch, gated-validation, and post-launch checklist with owner/status/evidence columns.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "screenshot-shotlist.md",
+      "purpose": "List required screenshots, captions, reuse notes, and missing-asset flags.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "qa-pass.md",
+      "purpose": "Local QA table for links, copy, onboarding, screenshots, release notes, and boundary claims.",
+      "status": "local_manifest_only"
+    },
+    {
+      "path": "post-launch-review.md",
+      "purpose": "Future review worksheet for traffic, replies, conversion signals, support load, and next iteration after approved launch.",
+      "status": "local_manifest_only"
+    }
+  ],
+  "readme_section_count": 7,
+  "readme_sections": [
+    {
+      "content": "A local draft pack for solo AI builders organizing launch positioning, screenshots, QA, and review.",
+      "section_id": "what-this-is"
+    },
+    {
+      "content": "Solo AI builders and operators preparing a small product launch without a launch manager or agency.",
+      "section_id": "who-it-is-for"
+    },
+    {
+      "content": "README, positioning template, launch checklist, screenshot shot list, QA pass, and post-launch review worksheet.",
+      "section_id": "included-files"
+    },
+    {
+      "content": "Fill the positioning template, complete the checklist, prepare screenshots, run the QA pass, and save review notes.",
+      "section_id": "how-to-use"
+    },
+    {
+      "content": "This is not legal, tax, payment, marketplace, pricing, launch agency, or revenue guidance.",
+      "section_id": "boundaries"
+    },
+    {
+      "content": "No revenue, conversion, buyer-count, demand, payout, or marketplace-validation claim is made.",
+      "section_id": "non-claims"
+    },
+    {
+      "content": "Live marketplace research, seller terms, public listings, accounts, payouts, and payment setup require explicit approval gates.",
+      "section_id": "gates-before-public-use"
+    }
+  ],
+  "revision_applied_count": 5,
+  "revision_items_applied": [
+    {
+      "instruction": "Turn the boundary notes into a README section with scope, non-claims, gates, and how to use the pack.",
+      "priority": "high",
+      "revision_id": "add-readme-structure"
+    },
+    {
+      "instruction": "Add owner, status, due, and evidence columns to the launch checklist before packaging.",
+      "priority": "medium",
+      "revision_id": "split-checklist-columns"
+    },
+    {
+      "instruction": "Draft the screenshot shot list named in the pack so the asset set matches the promise.",
+      "priority": "medium",
+      "revision_id": "add-screenshot-shotlist"
+    },
+    {
+      "instruction": "Draft the QA pass table for links, copy, onboarding, screenshots, release notes, and boundary claims.",
+      "priority": "medium",
+      "revision_id": "add-qa-pass-table"
+    },
+    {
+      "instruction": "Create a local manifest of files that would be included if later approved for marketplace packaging.",
+      "priority": "low",
+      "revision_id": "add-local-packaging-manifest"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_packaging_manifest.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "source_quality_evidence_id": "digital-products-local-quality-pass-20260616",
+  "source_quality_task_id": "task-digital-products-local-quality-pass-20260616",
+  "source_quality_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-quality-pass-validation-latest.json",
+  "summary": "Created a local packaging manifest and README revision structure for the AI builder launch checklist pack. It defines six draft files and seven README sections while keeping distribution, listing, marketplace validation, accounts, and payments gated.",
+  "task_rows_inserted_by_manifest": 1,
+  "tasks_table_rows_after": 163,
+  "tasks_table_rows_before": 162
+}

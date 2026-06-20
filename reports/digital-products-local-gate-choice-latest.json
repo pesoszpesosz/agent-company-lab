@@ -1,0 +1,94 @@
+{
+  "approval_request_count": 0,
+  "blocked_by_gate_count": 4,
+  "blocked_by_gate_questions": [
+    {
+      "answer": null,
+      "gate_required": "browser_read_only_session",
+      "mode": "blocked_by_gate",
+      "question": "Read public marketplace/category pages to compare demand signals, saturation, price bands, and buyer language.",
+      "question_id": "live-marketplace-demand"
+    },
+    {
+      "answer": null,
+      "gate_required": "legal_kyc_tax_payment",
+      "mode": "blocked_by_gate",
+      "question": "Review seller terms, tax/KYC/payment setup, refund obligations, and platform fees.",
+      "question_id": "live-terms-and-fees"
+    },
+    {
+      "answer": null,
+      "gate_required": "public_action_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create, publish, update, or promote a marketplace listing or public product page.",
+      "question_id": "public-listing-action"
+    },
+    {
+      "answer": null,
+      "gate_required": "account_payment_approval",
+      "mode": "blocked_by_gate",
+      "question": "Create seller accounts, connect payouts, accept agreements, or configure payment settings.",
+      "question_id": "account-or-payment-setup"
+    }
+  ],
+  "choice_evidence_id": "digital-products-local-gate-choice-20260616",
+  "choice_lane_id": "digital_products_templates_plugins",
+  "choice_task_id": "task-digital-products-local-gate-choice-20260616",
+  "evidence_rows_inserted_or_updated": 1,
+  "followup_item_count": 3,
+  "followup_items": [
+    {
+      "action": "Create one local copy-polish pass over README, checklist, filled example, QA checklist, private listing draft, and scorecard.",
+      "followup_id": "tighten-local-copy",
+      "reason": "Continue-local is the cheapest next move while live marketplace and seller constraints remain gated."
+    },
+    {
+      "action": "Draft a separate read-only browser approval request packet, but do not open marketplaces or public pages.",
+      "followup_id": "prepare-future-browser-request",
+      "reason": "Keeps the possible demand-validation path explicit without exercising the browser gate."
+    },
+    {
+      "action": "Draft a separate legal/payment review request packet, but do not accept terms, create accounts, or configure payouts.",
+      "followup_id": "prepare-future-legal-payment-request",
+      "reason": "Keeps seller-term and payout risk visible without exercising legal or payment gates."
+    }
+  ],
+  "generated_utc": "2026-06-15T22:19:17Z",
+  "lane_evidence_rows_after": 91,
+  "lane_evidence_rows_before": 90,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "continue_local_no_gate_exercised",
+  "next_action": "Run a local copy-polish pass on the revised package and optionally draft separate future approval-request packets without exercising any gate.",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.digital_products_local_gate_choice.v1",
+  "selected_candidate_id": "ai-builder-launch-checklist-pack",
+  "selected_option": {
+    "allowed_next_action": "Draft another local refinement or prepare a future approval request packet without browsing or submitting.",
+    "gate_required": null,
+    "option_id": "continue-local",
+    "rationale": "Best immediate path because revised local completeness is clean, but live demand, seller terms, and payment constraints remain unverified.",
+    "requires_approval": false
+  },
+  "selected_option_id": "continue-local",
+  "source_packet_evidence_id": "digital-products-local-gate-decision-packet-20260616",
+  "source_packet_task_id": "task-digital-products-local-gate-decision-packet-20260616",
+  "source_packet_validation_path": "E:\\agent-company-lab\\reports\\digital-products-local-gate-decision-packet-validation-latest.json",
+  "summary": "Recorded the local gate choice for the revised AI builder launch checklist pack. The lane selects continue-local, creates no approval request, and keeps browser, marketplace, legal, payment, account, wallet, API, and public actions gated.",
+  "task_rows_inserted_by_choice": 1,
+  "tasks_table_rows_after": 179,
+  "tasks_table_rows_before": 178
+}

@@ -1,0 +1,15 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-control-matrix-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-control-matrix-v1-20260619",
+  "eventId": "trace-atlas_active_lane_control_matrix_added-20260619",
+  "title": "Active Lane Control Matrix",
+  "createdUtc": "2026-06-19T03:18:20Z",
+  "summary": "Compacted the selected-lane HUD controls into one bounded command matrix, grouping the micro chronicle, view portals, transition meter, and lane switch chips into a tighter game-control deck.",
+  "goalFit": "Moves the selected lane away from stacked rows and toward a premium game cockpit where status, navigation, and lane switching feel like one control surface.",
+  "uiSurface": "Selected lane active HUD controls",
+  "proof": [
+    "web/app.js wraps the micro chronicle, view portals, transition meter, and switch deck in active-lane-control-matrix",
+    "web/styles.css lays out the matrix as a compact two-column command deck with mobile fallback",
+    "web/data/snapshot.json records the unlock in the platform engineering lane after regeneration"
+  ]
+}

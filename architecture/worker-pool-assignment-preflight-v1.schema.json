@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.worker_pool_assignment_preflight.v1",
+  "title": "Worker Pool Assignment Preflight v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "preflight_id",
+    "generated_utc",
+    "source_dispatch_id",
+    "source_reports",
+    "summary",
+    "blocking_findings",
+    "recommended_next_actions",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.worker_pool_assignment_preflight.v1"
+    },
+    "preflight_id": {
+      "type": "string",
+      "pattern": "^worker-pool-preflight-[a-z0-9-]+$"
+    },
+    "generated_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_dispatch_id": {
+      "type": "string"
+    },
+    "source_reports": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assignment_plan_count",
+        "assignable_now_count",
+        "pool_count",
+        "missing_pool_count",
+        "readiness_request_count",
+        "ready_to_start_count",
+        "human_cro_gate_count",
+        "terminal_no_execution_count"
+      ],
+      "properties": {
+        "assignment_plan_count": {
+          "type": "integer"
+        },
+        "assignable_now_count": {
+          "type": "integer"
+        },
+        "pool_count": {
+          "type": "integer"
+        },
+        "missing_pool_count": {
+          "type": "integer"
+        },
+        "readiness_request_count": {
+          "type": "integer"
+        },
+        "ready_to_start_count": {
+          "type": "integer"
+        },
+        "human_cro_gate_count": {
+          "type": "integer"
+        },
+        "terminal_no_execution_count": {
+          "type": "integer"
+        }
+      }
+    },
+    "blocking_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "finding_id",
+          "severity",
+          "finding",
+          "evidence",
+          "required_before_worker_start"
+        ],
+        "properties": {
+          "finding_id": {
+            "type": "string",
+            "pattern": "^finding-[a-z0-9-]+$"
+          },
+          "severity": {
+            "enum": [
+              "blocker",
+              "warning",
+              "info"
+            ]
+          },
+          "finding": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "required_before_worker_start": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "recommended_next_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action_id",
+          "action_type",
+          "description",
+          "allowed_now"
+        ],
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "pattern": "^action-[a-z0-9-]+$"
+          },
+          "action_type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "allowed_now": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "runtime_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_only",
+        "registers_pools",
+        "assigns_service_requests",
+        "starts_workers",
+        "updates_service_requests",
+        "calls_apis",
+        "external_side_effects"
+      ],
+      "properties": {
+        "report_only": {
+          "const": true
+        },
+        "registers_pools": {
+          "const": false
+        },
+        "assigns_service_requests": {
+          "const": false
+        },
+        "starts_workers": {
+          "const": false
+        },
+        "updates_service_requests": {
+          "const": false
+        },
+        "calls_apis": {
+          "const": false
+        },
+        "external_side_effects": {
+          "const": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "span_kind": "coordination.manager_recovery",
+  "runtime": "codex_thread_coordination",
+  "api_calls": false,
+  "browser_actions": "none",
+  "target_lane": "prediction_market_research",
+  "target_thread_id": "019ec612-9996-7603-a593-38281608d3dc",
+  "observed_thread_status": "notLoaded",
+  "observed_turn_status": "interrupted",
+  "startup_records_before_recovery": {
+    "tasks": 0,
+    "artifacts": 0,
+    "outcomes": 0,
+    "trace_events": 0
+  },
+  "recovery_prompt_sent": true,
+  "side_effects": "thread_message_only_no_market_action"
+}

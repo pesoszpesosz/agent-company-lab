@@ -1,0 +1,127 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/inngest-event-flow-control-fixture-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Inngest Event Flow-Control Fixture v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.inngest_event_flow_control_fixture.v1"
+    },
+    "generated_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "const": "task-inngest-event-flow-control-fixture-v1-20260617"
+    },
+    "lane_id": {
+      "const": "platform_engineering"
+    },
+    "owner_agent_id": {
+      "const": "recovered-profitable-edge-infra"
+    },
+    "source_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "source_outbox_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_temporal_signal_fixture_path": {
+      "type": "string",
+      "minLength": 10
+    },
+    "event_namespace": {
+      "const": "agent_company"
+    },
+    "allowed_event_names": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "flow_control_policy": {
+      "type": "object"
+    },
+    "events": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "source_message_id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "event_name": {
+            "type": "string",
+            "minLength": 10
+          },
+          "data": {
+            "type": "object"
+          },
+          "user": {
+            "type": "object"
+          },
+          "flow_control": {
+            "type": "object"
+          },
+          "expected_decision": {
+            "type": "string",
+            "minLength": 3
+          },
+          "expected_failures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "event_id",
+          "source_message_id",
+          "event_name",
+          "data",
+          "user",
+          "flow_control",
+          "expected_decision",
+          "expected_failures"
+        ]
+      }
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_local_test": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "task_id",
+    "lane_id",
+    "owner_agent_id",
+    "source_urls",
+    "source_outbox_path",
+    "source_temporal_signal_fixture_path",
+    "event_namespace",
+    "allowed_event_names",
+    "flow_control_policy",
+    "events",
+    "runtime_boundary",
+    "next_local_test"
+  ]
+}

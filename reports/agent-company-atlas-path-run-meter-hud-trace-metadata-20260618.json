@@ -1,0 +1,79 @@
+{
+  "traceId": "trace-agent-company-atlas-path-run-meter-hud-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-run-meter-hud-v1-20260618",
+  "eventId": "trace-atlas_path_run_meter_hud_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-run-meter-hud-trace-metadata-20260618",
+  "title": "Path Run Meter HUD",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "problem": "The Mission Glance run meter had useful structure, but needed a richer reusable bitmap surface so the first Path viewport felt more premium and less like plain UI chrome.",
+  "implementation": [
+    "Added a deterministic procedural generator for path-run-meter-hud-20260618.png.",
+    "Generated a five-socket neon HUD texture for route, gate, proof, task, and note state.",
+    "Applied the texture behind the Path Run Meter without changing the meter's size or adding scroll.",
+    "Registered the texture in the Visual Asset Vault and documented it for standalone forks."
+  ],
+  "filesChanged": [
+    "tools/generate_path_run_meter_hud.py",
+    "web/assets/system/path-run-meter-hud-20260618.png",
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_run_meter_hud.py"
+  ],
+  "asset": {
+    "path": "web/assets/system/path-run-meter-hud-20260618.png",
+    "bytes": 648496,
+    "kind": "system",
+    "vaultId": "system-path-run-meter-hud"
+  },
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-run-meter-hud-20260618#lane=platform_engineering&view=path&deck=command",
+    "usesHudTexture": true,
+    "backgroundSize": "auto, cover, auto, auto",
+    "stepCount": 5,
+    "steps": [
+      "1 level",
+      "2 gate",
+      "3 proof",
+      "4 tasks",
+      "5 notes"
+    ],
+    "stepsOverflowMeter": false,
+    "boardVisible": true,
+    "panelBottomWithinViewport": true,
+    "overflowX": 0,
+    "meterRect": {
+      "x": 123,
+      "y": 241,
+      "width": 340,
+      "height": 31,
+      "bottom": 272
+    }
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_run_meter_hud.py -q",
+      "result": "RED failed before implementation because path-run-meter-hud-20260618.png did not exist"
+    },
+    {
+      "command": "python E:\\agent-company-lab\\tools\\generate_path_run_meter_hud.py",
+      "result": "Generated web/assets/system/path-run-meter-hud-20260618.png at 648496 bytes"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_run_meter_hud.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_run_meter.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_hud_strip.py -q",
+      "result": "3 passed in 0.12s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "exit code 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "50 passed, 55 deselected in 0.18s"
+    }
+  ],
+  "nextAction": "Continue increasing premium visual texture inside compact first-viewport HUD surfaces, then move to bot/avatar richness without increasing scroll."
+}

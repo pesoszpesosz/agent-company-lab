@@ -1,0 +1,86 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-task-board-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-task-board-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_task_board_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added a Chapter Task Board inside the selected Path Map Chapter Archive record deck so each chapter shows chapter task records, lane recent tasks, owner, priority, status, and next action beside gates, command log, crew, spoils, and runway.",
+  "design_research": {
+    "queries": [
+      "task board dashboard UX compact status cards progress owner next action",
+      "project dashboard task status owner next action UX pattern compact",
+      "task management dashboard UX best practices kanban cards owner priority status"
+    ],
+    "source_urls": [
+      "https://www.atlassian.com/agile/project-management/task-management-dashboard",
+      "https://www.atlassian.com/agile/kanban/boards",
+      "https://www.wrike.com/kanban-guide/kanban-cards/",
+      "https://www.telerik.com/design-system/docs/ui-templates/building-blocks/dashboard/dashboard-card/"
+    ],
+    "pattern_notes": [
+      "Task dashboards should centralize status, ownership, and next action for real-time visibility.",
+      "Compact task cards work best when they show title, assignee/owner, priority, and only enough next-action context to act.",
+      "Kanban-inspired task surfaces should reveal flow and bottlenecks without turning every card into a full specification."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_task_board.py",
+      "reports/agent-company-atlas-path-chapter-task-board-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "pathChapterArchiveItems(trail).items",
+      "pathEventGlyphType(item) === \"task\"",
+      "snapshot.lanes[].recentTasks",
+      "snapshot.lanes[].ownerAgentId",
+      "snapshot.agents[]",
+      "browser-local state.stagedDispatches"
+    ],
+    "ui_contract": [
+      "Render Chapter Task Board inside the selected Chapter Archive record deck.",
+      "Prefer task records from the selected chapter, then fill from lane recentTasks.",
+      "Show task status, priority, owner, next action, and source.",
+      "Summarize active, gated, and complete task counts.",
+      "Expose TRL, Q, and COM actions without sending messages or starting workers.",
+      "Provide a clear fallback card for future repos or lanes without task records."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_task_board.py -q failed before frontend wiring on missing function pathChapterTaskBoardItems.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_task_board.py -q passed after implementation."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-task-board-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Task Board with five task cards, Foundry Lead owner signal, 0 active, 0 gated, 5 done, TRL/OK/COM actions, and no horizontal overflow."
+    },
+    "local_queue_action": {
+      "status": "passed",
+      "evidence": "The task-board Q/OK button resolved to exactly one element and clicked successfully through the browser-local lane staging handler. It stayed in OK state and produced no console errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports rendered one Task Board with five cards, TRL/OK/COM actions, no horizontal overflow, no bad rectangles, no clipped task text, and no console errors."
+    }
+  }
+}

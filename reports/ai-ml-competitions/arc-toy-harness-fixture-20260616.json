@@ -1,0 +1,196 @@
+{
+  "artifact_id": "arc-toy-harness-fixture-20260616",
+  "generated_utc": "2026-06-16T21:12:00Z",
+  "task_id": "task-arc-toy-harness-fixture-20260616",
+  "lane_id": "ai_ml_competitions",
+  "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+  "source_packet": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-local-toy-harness-plan-20260616.md",
+  "mode": "synthetic_local_only",
+  "official_arc_data_used": false,
+  "kaggle_or_gated_data_used": false,
+  "external_side_effects": false,
+  "dsl_operations": [
+    "crop_nonzero",
+    "translate(dx, dy)",
+    "recolor(src, dst)",
+    "mirror(axis)",
+    "tile(nx, ny)",
+    "fill_bbox(color)",
+    "compose(a, b)"
+  ],
+  "program_search_policy": {
+    "max_depth": 3,
+    "score": "exact_train_match_count",
+    "tie_breaker": "shortest_program_then_lexicographic",
+    "failure_output": "no_solution"
+  },
+  "tasks": [
+    {
+      "task_id": "synthetic_translate_right_1",
+      "family": "translation",
+      "train": [
+        {
+          "input": [
+            [0, 0, 0, 0],
+            [0, 2, 2, 0],
+            [0, 0, 2, 0],
+            [0, 0, 0, 0]
+          ],
+          "output": [
+            [0, 0, 0, 0],
+            [0, 0, 2, 2],
+            [0, 0, 0, 2],
+            [0, 0, 0, 0]
+          ]
+        }
+      ],
+      "test_input": [
+        [0, 0, 0, 0, 0],
+        [0, 3, 0, 0, 0],
+        [0, 3, 3, 0, 0],
+        [0, 0, 0, 0, 0]
+      ],
+      "expected_test_output": [
+        [0, 0, 0, 0, 0],
+        [0, 0, 3, 0, 0],
+        [0, 0, 3, 3, 0],
+        [0, 0, 0, 0, 0]
+      ],
+      "expected_program": "translate(1, 0)",
+      "acceptance": "exact_grid_match"
+    },
+    {
+      "task_id": "synthetic_recolor_2_to_5",
+      "family": "recolor",
+      "train": [
+        {
+          "input": [
+            [0, 2, 0],
+            [2, 2, 0],
+            [0, 0, 0]
+          ],
+          "output": [
+            [0, 5, 0],
+            [5, 5, 0],
+            [0, 0, 0]
+          ]
+        }
+      ],
+      "test_input": [
+        [2, 0, 2],
+        [0, 2, 0],
+        [0, 0, 0]
+      ],
+      "expected_test_output": [
+        [5, 0, 5],
+        [0, 5, 0],
+        [0, 0, 0]
+      ],
+      "expected_program": "recolor(2, 5)",
+      "acceptance": "exact_grid_match"
+    },
+    {
+      "task_id": "synthetic_mirror_horizontal",
+      "family": "mirror",
+      "train": [
+        {
+          "input": [
+            [0, 4, 0, 0],
+            [0, 4, 4, 0],
+            [0, 0, 0, 0]
+          ],
+          "output": [
+            [0, 0, 4, 0],
+            [0, 4, 4, 0],
+            [0, 0, 0, 0]
+          ]
+        }
+      ],
+      "test_input": [
+        [7, 0, 0],
+        [7, 7, 0],
+        [0, 0, 0]
+      ],
+      "expected_test_output": [
+        [0, 0, 7],
+        [0, 7, 7],
+        [0, 0, 0]
+      ],
+      "expected_program": "mirror(x)",
+      "acceptance": "exact_grid_match"
+    },
+    {
+      "task_id": "synthetic_crop_then_tile_2x1",
+      "family": "crop_and_tile",
+      "train": [
+        {
+          "input": [
+            [0, 0, 0, 0],
+            [0, 6, 0, 0],
+            [0, 6, 6, 0],
+            [0, 0, 0, 0]
+          ],
+          "output": [
+            [6, 0, 6, 0],
+            [6, 6, 6, 6]
+          ]
+        }
+      ],
+      "test_input": [
+        [0, 0, 0, 0, 0],
+        [0, 0, 8, 0, 0],
+        [0, 0, 8, 8, 0],
+        [0, 0, 0, 0, 0]
+      ],
+      "expected_test_output": [
+        [8, 0, 8, 0],
+        [8, 8, 8, 8]
+      ],
+      "expected_program": "compose(crop_nonzero, tile(2, 1))",
+      "acceptance": "exact_grid_match"
+    },
+    {
+      "task_id": "synthetic_unknown_diagonal_growth",
+      "family": "failure_case",
+      "train": [
+        {
+          "input": [
+            [1, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
+          ],
+          "output": [
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1]
+          ]
+        }
+      ],
+      "test_input": [
+        [0, 9, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ],
+      "expected_test_output": null,
+      "expected_program": "no_solution",
+      "acceptance": "explicit_failure_with_inspected_candidates"
+    }
+  ],
+  "acceptance_tests": [
+    "translation_family_exact_match",
+    "recolor_family_exact_match",
+    "mirror_family_exact_match",
+    "crop_tile_family_exact_match",
+    "unknown_family_returns_no_solution",
+    "no_official_arc_or_kaggle_data"
+  ],
+  "next_action": "Write a Python-standard-library harness only if this fixture remains useful after local parser review.",
+  "prohibited_actions": [
+    "kaggle_login",
+    "official_arc_download",
+    "paid_compute",
+    "api_call",
+    "submission",
+    "public_action"
+  ]
+}

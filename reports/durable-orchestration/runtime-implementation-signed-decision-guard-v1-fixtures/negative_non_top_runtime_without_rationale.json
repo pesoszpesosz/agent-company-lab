@@ -1,0 +1,35 @@
+{
+  "allowed_database_or_cloud_resources": [],
+  "allowed_dependency_names": [],
+  "allowed_runtime_processes": [],
+  "approved_question_ids": [
+    "approve_runtime_candidate"
+  ],
+  "approver": "human-operator",
+  "artifact_output_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-implementation-local-sqlite-control-plane-preflight-YYYYMMDD.json",
+  "decision": "approve_one_runtime_candidate",
+  "decision_id": "decision-negative-non_top_runtime_without_rationale",
+  "denied_question_ids": [
+    "approve_dependency_install_scope",
+    "approve_runtime_import_scope",
+    "approve_runtime_start_scope",
+    "approve_database_or_cloud_scope",
+    "approve_service_request_mutation_scope",
+    "approve_worker_pool_registration_scope",
+    "approve_model_api_scope",
+    "approve_trace_export_scope",
+    "approve_browser_or_public_action_scope",
+    "approve_wallet_payment_real_money_scope",
+    "approve_security_testing_scope"
+  ],
+  "expires_utc": "2099-01-01T00:00:00Z",
+  "human_notes": "",
+  "provider_model_and_cost_cap": "none",
+  "rollback_plan": "Delete generated local preflight artifacts only; no service state, dependency, server, worker, API, browser, public, wallet, payment, or real-money state may be changed.",
+  "schema_version": "agent_company.runtime_implementation_signed_decision_guard.v1",
+  "selected_runtime_id": "temporal_python",
+  "service_request_mutation_scope": "none",
+  "signature_attestation": "I understand this signed decision is accepted for later preflight only and does not apply itself.",
+  "signed_utc": "2026-06-17T18:00:00Z",
+  "source_approval_packet_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\runtime-implementation-human-approval-packet-v2-20260617.json"
+}

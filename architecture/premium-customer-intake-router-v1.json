@@ -1,0 +1,113 @@
+{
+  "schema_version": "premium_customer_intake_router.v1",
+  "status": "active_local_routing_contract",
+  "created_utc": "2026-06-20T00:00:00Z",
+  "role_id": "premium_customer_intake_agent",
+  "lane_id": "premium_customer_intake",
+  "department": "Customer/Operator Success",
+  "mission": "Receive the premium customer's newest requests, corrections, constraints, and materials; check current company context; route each item to the right lane or worker; and update the customer without polluting the CEO context window.",
+  "intake_classes": [
+    "new_request",
+    "lane_material",
+    "human_capability_update",
+    "constraint_or_preference",
+    "correction",
+    "opportunity_lead",
+    "status_request"
+  ],
+  "routing_loop": [
+    "capture_newest_input_as_local_intake_packet",
+    "classify_input_type_and_destination_lanes",
+    "check_current_ceo_state_lane_ownership_open_tasks_blockers_service_requests_and_artifacts",
+    "preserve_raw_material_paths_outside_ceo_context",
+    "write_compact_context_capsule",
+    "choose_route",
+    "create_or_update_smallest_local_task_or_artifact",
+    "update_customer"
+  ],
+  "context_capsule_fields": [
+    "input_id",
+    "received_utc",
+    "customer_intent",
+    "input_class",
+    "target_lane_ids",
+    "raw_material_paths",
+    "short_summary",
+    "why_this_route",
+    "application_path",
+    "status",
+    "next_artifact",
+    "human_action_needed",
+    "ceo_attention_needed"
+  ],
+  "allowed_default_statuses": [
+    "captured",
+    "routed",
+    "needs_synthesis",
+    "parked_with_revisit_condition",
+    "blocked_by_gate",
+    "applied",
+    "updated_customer"
+  ],
+  "rejection_policy": {
+    "not_a_rejection_engine": true,
+    "reject_only_when": [
+      "unsafe",
+      "illegal",
+      "impossible",
+      "spammy",
+      "duplicate_without_new_information",
+      "outside_company_scope"
+    ],
+    "must_include_when_rejected": [
+      "reason",
+      "safer_alternative_or_revisit_condition_when_available"
+    ]
+  },
+  "knowledge_application_rule": {
+    "unapplied_knowledge_is_bug_unless_parked_with_reason": true,
+    "valid_application_paths": [
+      "lane_packet_update",
+      "source_registry_update",
+      "task_update",
+      "prompt_update",
+      "product_artifact_update",
+      "script_batch_update",
+      "eval_update",
+      "gate_packet_update",
+      "dashboard_update",
+      "ai_resources_evaluation",
+      "human_action_feed_item",
+      "goal_evolver_suggestion",
+      "ceo_decision_batch_item",
+      "watch_list_with_revisit_condition"
+    ]
+  },
+  "allowed_without_extra_approval": [
+    "local_intake_packets",
+    "local_routing_ledger_entries",
+    "local_artifact_registration",
+    "local_task_proposals",
+    "compact_ceo_customer_updates",
+    "lane_specific_summaries_of_user_provided_material"
+  ],
+  "requires_explicit_scoped_approval": [
+    "browser_sessions",
+    "account_creation_login_settings_terms_kyc_tax_billing_or_legal_commitments",
+    "uploads_posts_comments_replies_proposals_prs_submissions_outreach_or_public_actions",
+    "payments_purchases_wallets_trading_deposits_withdrawals_or_monetization_setup",
+    "model_api_mcp_tool_egress",
+    "runtime_worker_or_queue_starts",
+    "live_security_testing"
+  ],
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "wallet_payment_trading_actions": 0,
+    "model_api_mcp_calls": 0,
+    "worker_runtime_queue_starts": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

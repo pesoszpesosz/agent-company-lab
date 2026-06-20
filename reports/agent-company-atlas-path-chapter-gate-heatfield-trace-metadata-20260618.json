@@ -1,0 +1,82 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-gate-heatfield-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-gate-heatfield-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_gate_heatfield_added-20260618",
+  "created_at": "2026-06-18T06:42:54Z",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added generated-art Chapter Gate Heatfield to the selected Path Map chapter's Chapter Gate Stack so blockers, review gates, and local Gate Radar notes read as a tactical scan instead of only a list.",
+  "design_research": {
+    "queries": [
+      "UX design risk heatmap dashboard blockers visualization patterns",
+      "game UI radar mission control dashboard visual design references",
+      "visualizing project blockers milestones dashboard UX game-like"
+    ],
+    "source_urls": [
+      "https://dashboarddesignpatterns.github.io/patterns.html",
+      "https://www.nngroup.com/articles/timelines-ux/",
+      "https://dribbble.com/search/game-ui-radar"
+    ],
+    "pattern_notes": [
+      "Operational dashboards should keep a glanceable overview near the detailed records so users can move from state to evidence quickly.",
+      "Milestone and timeline UX patterns support detail-on-demand when long-running work keeps expanding.",
+      "Radar and mission-map game UI references work best here when the pings are data-derived and backed by explicit labels."
+    ]
+  },
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0fcd85c20f9a3c27016a3391fea9148191b3cae08ce88c7861.png",
+    "workspace_path": "web/assets/system/path-chapter-gate-heatfield-20260618.png",
+    "bytes": 2234631,
+    "sha256": "073D85BAFF1D5D012C41DD678EFDEA2F3ED60A5298809CD3D8A19A9542EC10DD",
+    "prompt_summary": "Premium dark sci-fi blocker radar heatfield dashboard texture with teal scan rings, amber/coral pressure pings, no text, no logos, and no characters."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/path-chapter-gate-heatfield-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_gate_stack.py",
+      "reports/agent-company-atlas-path-chapter-gate-heatfield-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a path-chapter-gate-heatfield panel inside Chapter Gate Stack.",
+      "Use generated path-chapter-gate-heatfield-20260618.png as the scan backdrop.",
+      "Compute heatfield pings from pathChapterGateStackItems so future lanes inherit the same blocker visualization.",
+      "Expose explicit ping labels, severity, and pressure values in the heat key.",
+      "Keep Q, COM, and Gate Radar actions browser-local and unchanged.",
+      "Register the generated texture in the Visual Asset Vault system assets."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_gate_stack.py -q failed before implementation on missing function pathChapterGateHeatfieldItems.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_gate_stack.py -q passed after generated asset, component, styles, docs, cache token, and Asset Vault wiring."
+    },
+    "static": {
+      "gate_stack_contract_test": "passed",
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "asset_present_bytes": 2234631
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-gate-heatfield-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Gate Heatfield with generated backdrop path-chapter-gate-heatfield-20260618.png, 3 data pings, 3 heat-key cells, active gateHeatfieldSweep animation, Chapter Gate Stack cards/actions, Asset Vault registration, zero bad rectangles, zero horizontal overflow, and zero console errors. Clicking the Gate Stack Q control changed the local staged command button to OK while keeping the heatfield rendered."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "Browser sweep at 390x820, 820x900, 1280x900, and 1600x1000 kept the heatfield visible with 3 pings, 3 heat-key cells, zero clipped rectangles, zero text-cell overflow, zero horizontal overflow, and zero console errors."
+    }
+  }
+}

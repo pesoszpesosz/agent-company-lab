@@ -1,0 +1,10 @@
+{
+  "span_kind": "internal",
+  "runtime": "local_cli",
+  "api_calls": false,
+  "external_side_effects": false,
+  "service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+  "service_request_status": "needs_review",
+  "realized_usd": 0,
+  "proof_packet": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-proof-packet-20260614.md"
+}

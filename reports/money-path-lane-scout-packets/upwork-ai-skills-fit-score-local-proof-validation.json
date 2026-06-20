@@ -1,0 +1,55 @@
+{
+  "schema_version": "lead_generation.upwork_ai_skills_fit_score_local_proof_validation.v1",
+  "generated_utc": "2026-06-18T06:35:30Z",
+  "task_id": "task-lane-scout-upwork_2026_ai_skills_demand-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-skills-fit-score-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\upwork-ai-skills-fit-score-local-proof.json"
+  ],
+  "checks": [
+    {
+      "check": "candidate_count_at_least_five",
+      "passed": true
+    },
+    {
+      "check": "recommended_offer_present",
+      "passed": true
+    },
+    {
+      "check": "recommended_offer_top_score",
+      "passed": true
+    },
+    {
+      "check": "all_candidates_have_local_assets",
+      "passed": true
+    },
+    {
+      "check": "all_candidates_have_deliverables_and_gates",
+      "passed": true
+    },
+    {
+      "check": "boundary_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "acceptance_checks_present",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "upwork_account_or_login": false,
+    "profile_created_or_edited": false,
+    "proposals_sent": 0,
+    "messages_sent": 0,
+    "contracts_or_payments": 0,
+    "client_private_data_used": false,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  }
+}

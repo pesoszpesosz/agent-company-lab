@@ -1,0 +1,103 @@
+{
+  "schema_version": "temporal_inngest_adapter_runtime_readiness.v1",
+  "generated_local": "2026-06-15T18:35:56.4330476+03:00",
+  "generated_utc_approx": "2026-06-15T15:35:56Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-runtime-readiness-20260615",
+  "purpose": "Use the generated durable adapter service-worker integration preflight to decide the next safe implementation boundary for future Temporal/Inngest adapter work.",
+  "source_artifacts": {
+    "dated_preflight_json": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-preflight-20260615.json",
+    "dated_preflight_validation": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-preflight-validation-20260615.json",
+    "latest_chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "latest_generated_integration_validation": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-service-worker-refresh-integration-validation-latest.json"
+  },
+  "preflight_summary": {
+    "preflight_command": "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-service-worker-integration --path E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-preflight-20260615.md --json-path E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-preflight-20260615.json --validation-path E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-readiness-preflight-validation-20260615.json",
+    "preflight_exit_ok": true,
+    "reducer_result_count": 14,
+    "preflight_failure_count": 0,
+    "parked_rows": 11,
+    "terminal_rows": 3,
+    "chain_integrity_checked_report_count": 18,
+    "chain_integrity_failure_count": 0
+  },
+  "runtime_readiness_decision": {
+    "temporal_runtime_ready_to_start": false,
+    "inngest_runtime_ready_to_start": false,
+    "external_runtime_implementation_allowed_now": false,
+    "local_report_only_implementation_allowed_now": true,
+    "local_code_allowed_scope": [
+      "pure data mappers from reducer result rows to adapter command previews",
+      "static interface contracts for future Temporal workflow IDs and Inngest event names",
+      "deterministic validation functions over local JSON artifacts",
+      "unit tests and negative fixtures that do not import Temporal or Inngest packages"
+    ],
+    "blocked_until_explicit_approval": [
+      "install Temporal or Inngest dependencies",
+      "import Temporal or Inngest runtime clients in production path",
+      "start a Temporal server or worker",
+      "register Inngest functions",
+      "emit Inngest events",
+      "schedule Temporal activities",
+      "start Temporal workflows",
+      "assign service requests",
+      "start service-worker processes",
+      "call model APIs",
+      "perform browser/account/payment/wallet/security actions"
+    ]
+  },
+  "required_future_approvals": [
+    {
+      "gate": "runtime_dependency_install",
+      "required_before": "adding temporalio, inngest, or runtime client packages",
+      "current_status": "not_requested"
+    },
+    {
+      "gate": "runtime_process_start",
+      "required_before": "starting Temporal server, Temporal worker, Inngest dev server, or background service",
+      "current_status": "not_requested"
+    },
+    {
+      "gate": "runtime_event_emission",
+      "required_before": "emitting any event or starting/scheduling any workflow/activity",
+      "current_status": "not_requested"
+    },
+    {
+      "gate": "model_api_execution",
+      "required_before": "processing req-pydantic-ai-model-backed-adapter-20260614 through a model/API worker",
+      "current_status": "parked_needs_review"
+    }
+  ],
+  "next_safe_local_slice": {
+    "title": "Write durable adapter runtime interface contract without importing external runtimes",
+    "deliverables": [
+      "JSON interface contract for workflow_id, event_name, idempotency_key, reducer_state, and service-worker refresh disposition",
+      "negative readiness checks for runtime imports, event emission, and workflow starts",
+      "report-only validation artifact eligible for chain-integrity inclusion"
+    ],
+    "must_not_do": [
+      "install dependencies",
+      "import temporalio or inngest",
+      "start workers",
+      "emit events",
+      "mutate service_requests"
+    ]
+  },
+  "runtime_boundary": {
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_functions_registered": 0,
+    "inngest_events_emitted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "approvals_granted": 0,
+    "worker_starts": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Implement the local-only durable adapter runtime interface contract and validation, with explicit negative checks that no Temporal/Inngest imports, starts, events, activities, or service-request mutations occur."
+}

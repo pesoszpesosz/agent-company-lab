@@ -1,0 +1,18 @@
+{
+  "source_count": 11,
+  "github_repo_count": 16,
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "service_requests_updated": 0,
+    "external_side_effects": false,
+    "api_calls": false,
+    "credentials_used": false
+  },
+  "recommended_next_builds": [
+    "worker_pool_operator_decision_contract_v1",
+    "agent_identity_envelope_v1",
+    "agent_egress_event_ledger_v1",
+    "gateway_candidate_matrix_v1"
+  ]
+}

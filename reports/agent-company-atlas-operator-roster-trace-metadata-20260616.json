@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "operator-roster-v1",
+  "feature": {
+    "id": "global-operator-roster",
+    "title": "Global Operator Roster",
+    "purpose": "Make all active bots visible at the company level with generated portraits, callsigns, lane assignment, status, level, and next-action preview."
+  },
+  "implementation": {
+    "snapshotField": "snapshot.agents[].lane",
+    "uiSurface": "Operator Roster panel",
+    "clickThrough": "Agent cards with lane ownership open the lane Comms deck.",
+    "standalone": true
+  },
+  "validation": {
+    "nodeCheck": "passed",
+    "pythonCompile": "passed",
+    "jsonValidation": "passed",
+    "snapshotRegenerated": true,
+    "dataCoverage": {
+      "agents": 11,
+      "withVisual": 11,
+      "withLane": 11,
+      "unassigned": 0
+    },
+    "desktopRoster": {
+      "cards": 11,
+      "linkedCards": 11,
+      "imagesLoaded": 11,
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    },
+    "clickThrough": {
+      "from": "paid_code_bounties operator card",
+      "selectedLane": "Paid Code Bounties",
+      "activeTab": "comms",
+      "callsign": "Claim Scout"
+    },
+    "mobileRoster": {
+      "viewport": "390x840",
+      "cards": 11,
+      "imagesLoaded": 11,
+      "layout": "single column",
+      "horizontalOverflow": false,
+      "clippedText": 0,
+      "consoleErrors": 0
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "trace_id": "trace-agent-company-atlas-company-chronicle-spine-v1-20260618",
+  "task_id": "task-agent-company-atlas-company-chronicle-spine-v1-20260618",
+  "event_id": "trace-atlas_company_chronicle_spine_added-20260618",
+  "created_at": "2026-06-18T08:18:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "mission_feed",
+  "summary": "Added a generated-art Company Chronicle Spine inside the Mission Feed so cross-lane tasks, traces, proof, gates, and outcomes group into visible global history chapters.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0d8d7e614f01b2b9016a33a97a076c8191a462df92293dd397.png",
+    "workspace_path": "web/assets/system/company-chronicle-spine-20260618.png",
+    "bytes": 2186718,
+    "sha256": "3731818FEEEDE856C0EA9A24694F3AC27A9E32758E76622B7BC1F0AAE9662EA5",
+    "prompt_summary": "Premium dark sci-fi global timeline command table with chapter rails, event nodes, proof caches, blocker gates, expandable future slots, teal/amber/green/violet glows, no text, no logos, no faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/company-chronicle-spine-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_company_chronicle_spine.py",
+      "reports/agent-company-atlas-company-chronicle-spine-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a Company Chronicle Spine inside the Mission Feed before playback and feed cards.",
+      "Use generated company-chronicle-spine-20260618.png as the reusable global timeline backdrop.",
+      "Group the active feed lens into chapter cards without adding snapshot schema.",
+      "Summarize event, chapter, lane, proof, and win counts from existing missionFeed items.",
+      "Expose LATEST, PROOF, and GATES actions through existing Mission Feed filters.",
+      "Allow each chapter card to drill into the source lane Trail.",
+      "Register the chronicle texture in the Visual Asset Vault system assets.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_company_chronicle_spine.py -q failed before implementation on missing companyChronicleSpine selector.",
+      "green": "pytest tests\\test_agent_company_atlas_company_chronicle_spine.py -q passed after generated asset, renderer, styles, docs, cache token, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "company_chronicle_spine_contract_test": "passed",
+      "asset_present_bytes": 2186718
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=company-chronicle-spine-green",
+      "evidence": {
+        "company_chronicle_spine_present": true,
+        "generated_backdrop_loaded": true,
+        "stat_count": 5,
+        "chapter_count": 5,
+        "lane_linked_chapters": 5,
+        "action_count": 3,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "LATEST -> Mission Feed all filter",
+          "PROOF -> Mission Feed evidence filter",
+          "GATES -> Mission Feed service_request filter",
+          "Chapter card -> selected lane Trail"
+        ],
+        "horizontal_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Company Chronicle Spine with generated backdrop, five stats, five chapter cards, three local actions, zero bad rects, zero button text overflow, zero page horizontal overflow, and zero console errors."
+    }
+  }
+}

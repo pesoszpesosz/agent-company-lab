@@ -1,0 +1,688 @@
+{
+  "all_input_preconditions_passed": true,
+  "all_no_execution": true,
+  "all_packets_current": true,
+  "api_calls": false,
+  "approval_granted_by_drift_guard": false,
+  "approval_record_count": 0,
+  "assigned_count": 0,
+  "completed_count": 0,
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "drift_check_count": 11,
+  "drift_rows": [
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T15:26:51Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T15:26:51Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "paid_code_bounties",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T15:26:51Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "security_bounty_private_reports",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T14:32:16Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "content_and_social_growth",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-test-browser-readonly-complete-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T14:37:52Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "ai_ml_competitions",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T14:37:52Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T14:37:52Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "money_source_discovery",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "catalog_required_approval_no_external_action",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T10:48:04Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "platform_engineering",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-grok-research-worker-20260614",
+      "worker_starts": 0,
+      "worker_type": "browser_signed_in_read_only",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T15:26:51Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "digital_products_templates_plugins",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-next-wave-digital-legal-payment-review-20260614",
+      "worker_starts": 0,
+      "worker_type": "legal_kyc_tax_payment_review",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T15:26:51Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "security_bounty_private_reports",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-next-wave-security-report-route-review-20260614",
+      "worker_starts": 0,
+      "worker_type": "public_submission",
+      "would_execute_recovery_commands_by_report": false
+    },
+    {
+      "api_calls": false,
+      "approval_granted_by_drift_guard": false,
+      "chain_integrity_all_checks_passed": true,
+      "current_assigned_agent_id": null,
+      "current_completed_at": null,
+      "current_service_status": "needs_review",
+      "current_started_at": null,
+      "current_updated_at": "2026-06-14T11:40:39Z",
+      "drift_reasons": [],
+      "external_side_effects": false,
+      "generated_utc": "2026-06-15T11:28:28Z",
+      "lane_id": "platform_engineering",
+      "latest_approval_created_at": null,
+      "latest_approval_id": null,
+      "latest_approval_status": null,
+      "packet_generated_utc": "2026-06-15T10:51:18Z",
+      "packet_service_status": "needs_review",
+      "packet_stale": false,
+      "pools_registered_by_drift_guard": 0,
+      "recommended_recovery_command_previews": [
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-gate-map"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-human-decision-packets"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-simulation"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-post-decision-refresh-plan"
+        ],
+        [
+          "python",
+          "E:\\agent-company-lab\\tools\\agent_company.py",
+          "write-service-worker-chain-integrity"
+        ]
+      ],
+      "recovery_commands_run_by_drift_guard": 0,
+      "refresh_plan_preconditions_passed": true,
+      "rejection_granted_by_drift_guard": false,
+      "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+      "schema_version": "service_worker_decision_drift_guard_row.v1",
+      "service_requests_assigned_by_drift_guard": 0,
+      "service_requests_updated_by_drift_guard": 0,
+      "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "worker_starts": 0,
+      "worker_type": "model_api_execution",
+      "would_execute_recovery_commands_by_report": false
+    }
+  ],
+  "execution_notice": "Decision drift guard only. It does not run recovery commands, approve or reject requests, register pools, assign requests, update requests, start workers, call APIs, or perform external actions.",
+  "external_side_effects": false,
+  "failures": [],
+  "generated_utc": "2026-06-15T11:28:28Z",
+  "pools_registered_by_drift_guard": 0,
+  "recovery_command_preview_count": 55,
+  "recovery_commands_run_by_drift_guard": 0,
+  "rejection_granted_by_drift_guard": false,
+  "schema_version": "service_worker_decision_drift_guard.v1",
+  "service_requests_assigned_by_drift_guard": 0,
+  "service_requests_updated_by_drift_guard": 0,
+  "source_state": {
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_generated_utc": "2026-06-15T11:24:47Z",
+    "chain_integrity_validation_loaded": true,
+    "human_decision_packets_generated_utc": "2026-06-15T10:51:18Z",
+    "human_decision_packets_loaded": true,
+    "post_decision_refresh_plan_failure_count": 0,
+    "post_decision_refresh_plan_validation_loaded": true
+  },
+  "stale_packet_count": 0,
+  "started_count": 0,
+  "status_changed_count": 0,
+  "updated_after_packet_count": 0,
+  "worker_starts": 0
+}

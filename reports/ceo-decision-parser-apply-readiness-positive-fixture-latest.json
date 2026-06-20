@@ -1,0 +1,96 @@
+{
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "fixture_evidence_id": "ceo-decision-parser-apply-readiness-positive-fixture-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-ceo-decision-parser-apply-readiness-positive-fixture-20260616",
+  "generated_utc": "2026-06-16T09:17:00Z",
+  "lane_evidence_rows_after": 117,
+  "lane_evidence_rows_before": 116,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_positive_fixture_ready_preview_only",
+  "mutation_applied_count": 0,
+  "next_action": "Use this positive fixture with a report-only readiness positive runner; keep real apply disabled until that runner passes and a separate operator apply approval exists.",
+  "planned_field_update_count": 2,
+  "positive_readiness_fixture": {
+    "expected_accepted": true,
+    "expected_preview_state": "readiness_packet_valid_apply_still_disabled",
+    "expected_real_mutation": false,
+    "fixture_id": "valid-single-request-apply-readiness-packet",
+    "submitted_readiness": {
+      "apply_boundary": {
+        "apply_allowed_now": false,
+        "external_side_effects": false,
+        "requires_explicit_operator_apply_approval": true,
+        "service_requests_updated": 0,
+        "worker_starts": 0
+      },
+      "planned_field_updates": {
+        "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+        "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+      },
+      "planned_update_sql_shape": {
+        "max_rows": 1,
+        "set_fields": [
+          "approval_scope",
+          "decision_note"
+        ],
+        "table": "service_requests",
+        "where": "request_id = :target_request_id AND status = 'needs_review'"
+      },
+      "required_operator_approvals": [
+        "explicitly approve this exact target request id",
+        "explicitly approve approval_scope field update text",
+        "explicitly approve decision_note field update text",
+        "confirm no browser/api/worker/account/payment/public/security/real-money action",
+        "confirm rollback snapshot is captured before apply"
+      ],
+      "rollback_checks": [
+        "snapshot target service request before apply",
+        "verify status count delta is zero except intended field update",
+        "restore approval_scope and decision_note to previous values on failure",
+        "write post-apply validation artifact before any worker start"
+      ],
+      "rollback_snapshot": {
+        "approval_scope": null,
+        "decision_note": null,
+        "status": "needs_review",
+        "updated_at": "2026-06-14T14:37:52Z"
+      },
+      "target_request_id": "req-wave4-digital-products-browser-readonly-20260614",
+      "target_status_before": "needs_review",
+      "target_updated_at_before": "2026-06-14T14:37:52Z"
+    }
+  },
+  "positive_readiness_fixture_count": 1,
+  "queue_mutation_count": 0,
+  "recommended_default": "positive_readiness_fixture_requires_separate_apply_runner",
+  "required_operator_approval_count": 5,
+  "rollback_check_count": 4,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_positive_fixture.v1",
+  "source_guard_runner_evidence_id": "ceo-decision-parser-apply-readiness-guard-runner-20260616",
+  "source_guard_runner_task_id": "task-ceo-decision-parser-apply-readiness-guard-runner-20260616",
+  "source_guard_runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-guard-runner-validation-latest.json",
+  "summary": "Created one positive apply-readiness fixture that should pass the readiness guard while still requiring a separate explicit operator approval before any DB update command can run.",
+  "target_service_request_count": 1,
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_fixture": 1,
+  "tasks_table_rows_after": 209,
+  "tasks_table_rows_before": 208
+}

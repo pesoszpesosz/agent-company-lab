@@ -1,0 +1,103 @@
+{
+  "schema_version": "marketplace_readiness_matrix.v1",
+  "generated_date": "2026-06-14",
+  "lane_id": "digital_products_templates_plugins",
+  "task_scope": "local readiness matrix for MSD-008 through MSD-012",
+  "product": {
+    "name": "Agent Skill Starter Kit v0",
+    "folder": "E:/agent-company-lab/products/agent-skill-starter-kit-v0",
+    "build_report": "E:/agent-company-lab/reports/digital-products-templates-plugins/agent-skill-starter-kit-v0-build-report-20260614.md",
+    "proof_packet": "E:/agent-company-lab/reports/digital-products-templates-plugins/agent-skill-starter-kit-proof-packet-20260614.md",
+    "status": "local proof bundle complete",
+    "realized_usd": 0
+  },
+  "boundary": {
+    "browser_actions": false,
+    "current_terms_verification": false,
+    "seller_account_actions": false,
+    "payment_tax_kyc_actions": false,
+    "listing_or_upload_actions": false,
+    "public_promotion_actions": false,
+    "real_money_actions": false
+  },
+  "readiness_summary": {
+    "routes_reviewed_from_local_files": 5,
+    "routes_ready_for_public_listing": 0,
+    "routes_ready_for_browser_read_only_review": 4,
+    "routes_excluded_from_v0": 1,
+    "best_local_next_route_family": "direct digital-download marketplaces after approved read-only terms review"
+  },
+  "local_asset_check": {
+    "readme": true,
+    "skill_template": true,
+    "gate_checklist": true,
+    "service_request_checklist": true,
+    "artifact_contract": true,
+    "acceptance_review": true,
+    "fictional_example_skill": true,
+    "buyer_guide": true,
+    "license_ip_note": true,
+    "screenshot_plan": true,
+    "listing_draft": true,
+    "non_ascii_files_found": 0,
+    "required_gate_terms_missing": 0
+  },
+  "routes": [
+    {
+      "candidate_id": "MSD-008",
+      "route": "Gumroad-style direct digital download",
+      "local_fit": "high",
+      "local_assets_sufficient_for_review_packet": true,
+      "ready_for_public_listing": false,
+      "first_required_gate": "Approved browser-read-only marketplace terms and fee review.",
+      "later_gates": ["seller account decision", "legal/KYC/tax/payment review", "IP/license review", "listing/public-action approval"],
+      "local_next_artifact": "E:/agent-company-lab/reports/digital-products-templates-plugins/gumroad-style-listing-readiness-20260614.md",
+      "reasoning": "The product is a Markdown/template bundle, so a direct download route is a natural fit after current platform terms and payout rules are reviewed."
+    },
+    {
+      "candidate_id": "MSD-009",
+      "route": "Lemon Squeezy-style direct product route",
+      "local_fit": "medium_high",
+      "local_assets_sufficient_for_review_packet": true,
+      "ready_for_public_listing": false,
+      "first_required_gate": "Approved browser-read-only marketplace terms and merchant/payment review.",
+      "later_gates": ["seller account decision", "payment/tax review", "refund/support language", "listing/public-action approval"],
+      "local_next_artifact": "E:/agent-company-lab/reports/digital-products-templates-plugins/lemon-squeezy-style-listing-readiness-20260614.md",
+      "reasoning": "The local bundle can be sold as files, but merchant, tax, refund, payout, and delivery details need current review."
+    },
+    {
+      "candidate_id": "MSD-010",
+      "route": "Prompt marketplace route",
+      "local_fit": "medium",
+      "local_assets_sufficient_for_review_packet": true,
+      "ready_for_public_listing": false,
+      "first_required_gate": "Approved browser-read-only marketplace format, review, payout, and IP rules review.",
+      "later_gates": ["marketplace account decision", "payout setup review", "claim/IP review", "listing/public-action approval"],
+      "local_next_artifact": "E:/agent-company-lab/reports/digital-products-templates-plugins/prompt-marketplace-readiness-20260614.md",
+      "reasoning": "The product may fit if the marketplace accepts agent skill/template files, but current accepted formats and review rules are unverified."
+    },
+    {
+      "candidate_id": "MSD-011",
+      "route": "Notion template route",
+      "local_fit": "low_medium_for_v0",
+      "local_assets_sufficient_for_review_packet": false,
+      "ready_for_public_listing": false,
+      "first_required_gate": "Approved browser-read-only marketplace terms review after a Notion-native product exists.",
+      "later_gates": ["Notion-native build", "creator account decision", "payment/tax review if paid", "listing/public-action approval"],
+      "local_next_artifact": "E:/agent-company-lab/reports/digital-products-templates-plugins/notion-template-readiness-20260614.md",
+      "reasoning": "The current product is a Markdown folder, not a Notion workspace. Treat as secondary after direct-download routes."
+    },
+    {
+      "candidate_id": "MSD-012",
+      "route": "Shopify app/theme ecosystem",
+      "local_fit": "poor_for_v0",
+      "local_assets_sufficient_for_review_packet": false,
+      "ready_for_public_listing": false,
+      "first_required_gate": "No v0 action; only reconsider after product becomes an app/theme or supportable service.",
+      "later_gates": ["partner account decision", "app/theme build", "review requirements", "payment/tax review", "public listing approval"],
+      "local_next_artifact": "E:/agent-company-lab/reports/digital-products-templates-plugins/shopify-route-hold-20260614.md",
+      "reasoning": "This route adds app-review and support burden that does not match the existing local Markdown kit."
+    }
+  ],
+  "recommended_local_next_action": "Prepare one direct-download listing-readiness packet that can be reused for Gumroad-style and Lemon-Squeezy-style review once browser/legal/payment gates are approved."
+}

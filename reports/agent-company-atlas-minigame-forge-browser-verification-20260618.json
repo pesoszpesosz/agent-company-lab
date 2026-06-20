@@ -1,0 +1,164 @@
+{
+  "assets": {
+    "claim_scout_texture": {
+      "path": "E:\\agent-company-lab\\web\\assets\\games\\claim-scout-bg-20260617.png",
+      "sha256": "1ecdd3d9fb3c3fe76a910f48340abd28847fee8d35cdbd34ff076093930909a7",
+      "size_bytes": 2552798
+    }
+  },
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_asset_filter_changed": 1,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_forge_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_texture_loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop_stats_files_actions_present",
+      "passed": true
+    },
+    {
+      "name": "extension_files_show_expected_states",
+      "passed": true
+    },
+    {
+      "name": "asset_action_sets_game_filter",
+      "passed": true
+    },
+    {
+      "name": "game_action_opens_game_view",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_forge_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_texture_stats_files_actions_present",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "desktop_mobile_texture_files_stats_and_local_action_verification_passed",
+  "desktop": {
+    "action_values": [
+      "game",
+      "asset",
+      "arcade"
+    ],
+    "console_error_count": 0,
+    "file_count": 4,
+    "files": [
+      {
+        "label": "VISUAL",
+        "path": "web/data/lane-visuals.json",
+        "state": "complete"
+      },
+      {
+        "label": "REGISTRY",
+        "path": "MINIGAME_REGISTRY",
+        "state": "complete"
+      },
+      {
+        "label": "MODULE",
+        "path": "web/app.js",
+        "state": "complete"
+      },
+      {
+        "label": "GUIDE",
+        "path": "web/games/README.md",
+        "state": "scouting"
+      }
+    ],
+    "forge_exists": true,
+    "forge_height": 1026,
+    "forge_visible": true,
+    "forge_width": 343,
+    "horizontal_overflow": false,
+    "image_loaded": true,
+    "image_natural_height": 1024,
+    "image_natural_width": 1536,
+    "image_src": "./assets/games/claim-scout-bg-20260617.png",
+    "module_id": "claim-scout",
+    "module_name": "Claim Scout",
+    "module_type": "custom renderer",
+    "stat_count": 4,
+    "stat_labels": [
+      "module",
+      "stages",
+      "assets",
+      "status"
+    ],
+    "title": "Agent Company Atlas",
+    "url": "http://127.0.0.1:8767/index.html#lane=paid_code_bounties&view=overview",
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "generated_at": "2026-06-18T09:48:08Z",
+  "interactions": {
+    "asset_action_clicked": true,
+    "asset_filter_active_after_click": true,
+    "asset_vault_count_text": "12 / 65 game",
+    "detail_tabs_include_game": true,
+    "game_action_clicked": true,
+    "game_section_visible": true,
+    "hash_after_game": "#lane=paid_code_bounties&view=game"
+  },
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "action_count": 3,
+    "console_error_count": 0,
+    "file_count": 4,
+    "forge_exists": true,
+    "forge_height": 845,
+    "forge_visible": true,
+    "forge_width": 305,
+    "horizontal_overflow": false,
+    "image_loaded": true,
+    "image_natural_height": 1024,
+    "image_natural_width": 1536,
+    "stat_count": 4,
+    "url": "http://127.0.0.1:8767/index.html#lane=paid_code_bounties&view=overview",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "next_action": "Continue closing older Atlas platform tasks or return to the next ranked money-path promotion item when one appears.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_minigame_forge_browser_verification.v1",
+  "status": "minigame_forge_browser_verified",
+  "task_id": "task-agent-company-atlas-minigame-forge-v1-20260618"
+}

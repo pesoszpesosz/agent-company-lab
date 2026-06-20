@@ -1,0 +1,36 @@
+{
+  "cases_checked": 6,
+  "external_side_effects": false,
+  "failed_count": 0,
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "deployments_created": 0,
+    "external_side_effects": false,
+    "flow_runs": 0,
+    "flows_decorated": 0,
+    "model_api_calls": false,
+    "prefect_cloud_calls": 0,
+    "prefect_imports": 0,
+    "prefect_server_starts": 0,
+    "prefect_test_harness_starts": 0,
+    "schedules_created": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "task_runs": 0,
+    "tasks_decorated": 0,
+    "work_pools_created": 0,
+    "worker_starts": 0,
+    "workers_started": 0
+  },
+  "schema_version": "agent_company.trace_metadata.prefect_flow_manifest_source_refresh_fixture.v1",
+  "source_urls": [
+    "https://docs.prefect.io/v3/how-to-guides/workflows/write-and-run",
+    "https://docs.prefect.io/v3/concepts/flows",
+    "https://docs.prefect.io/v3/concepts/deployments",
+    "https://docs.prefect.io/v3/concepts/workers",
+    "https://docs.prefect.io/v3/how-to-guides/workflows/test-workflows"
+  ]
+}

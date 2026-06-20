@@ -1,0 +1,87 @@
+{
+  "trace_id": "trace-agent-company-atlas-minigame-registry-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "minigame_scope": "all_registered_lane_modules",
+  "summary": "Replaced the hardcoded minigame branch chain with a static MINIGAME_REGISTRY so new money-path lane modules can register render and count hooks through a single extension point.",
+  "design_research": {
+    "queries": [
+      "MDN JavaScript modules import export browser static modules extensibility",
+      "frontend plugin architecture registry pattern JavaScript dashboard extension points",
+      "game architecture modular game objects JavaScript minigame registry pattern",
+      "Backstage plugin architecture extensions official docs frontend plugin extension points",
+      "Grafana plugin development app plugin dashboards official docs extension points"
+    ],
+    "source_urls": [
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+      "https://backstage.io/docs/plugins/",
+      "https://grafana.com/developers/plugin-tools/"
+    ],
+    "pattern_notes": [
+      "Browser-native modules are a viable future extraction path, but the current repo intentionally has no npm install or build step.",
+      "Plugin-style systems use named extension points and metadata so new functionality does not require open-ended dispatch branching.",
+      "For this static Atlas slice, a local registry gives future lanes a single place to add renderer and progress-count hooks while preserving the current deployment model."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/app.js",
+      "web/index.html",
+      "web/README.md",
+      "web/games/README.md"
+    ],
+    "registry_entries": [
+      "baseline-climb",
+      "venue-mapper",
+      "offer-route",
+      "paper-trial",
+      "settlement-replay",
+      "grant-expedition",
+      "scope-run",
+      "payout-vault",
+      "claim-scout",
+      "signal-harvest",
+      "systems-grid",
+      "foundry-run"
+    ],
+    "contract": [
+      "Each minigame id maps to a render(lane) hook.",
+      "Each minigame id maps to a count(lane) hook for shared step controls.",
+      "Unregistered minigame ids fall back to the generic checkpoint board.",
+      "New module guidance lives in web/games/README.md."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "lane_visuals_json": "passed",
+      "snapshot_json_before_regeneration": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route_scope": "http://localhost:5177/?verify=minigame-registry&cache=20260617-minigame-registry#lane=<lane>&view=game",
+      "checks": [
+        {
+          "viewport": "390x920",
+          "route": "paid_code_bounties Claim Scout",
+          "result": "Board visible, generated texture loaded, 4 scout cards rendered, no horizontal document overflow, and no console errors."
+        },
+        {
+          "viewport": "390x920",
+          "route": "platform_engineering Systems Grid",
+          "result": "Board visible, generated texture loaded, 6 systems cells rendered, no horizontal document overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "route": "paid_code_bounties Claim Scout",
+          "result": "Board visible, generated texture loaded, 4 scout cards rendered, no horizontal document overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "route": "platform_engineering Systems Grid",
+          "result": "Board visible, generated texture loaded, 6 systems cells rendered, no horizontal document overflow, and no console errors."
+        }
+      ]
+    }
+  }
+}

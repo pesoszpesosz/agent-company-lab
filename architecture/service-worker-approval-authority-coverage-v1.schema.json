@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.service_worker_approval_authority_coverage.v1",
+  "title": "Agent Company Service Worker Approval Authority Coverage v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "coverage_status",
+    "service_count",
+    "service_rows",
+    "current_request_count",
+    "request_rows",
+    "approval_granted_by_coverage",
+    "decision_authority_granted_by_coverage",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.service_worker_approval_authority_coverage.v1"
+    },
+    "coverage_status": {
+      "enum": [
+        "report_only_no_authority_granted",
+        "blocked_missing_role",
+        "blocked_missing_service_coverage",
+        "blocked_request_without_service_route"
+      ]
+    },
+    "service_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "service_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "current_request_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "request_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "approval_granted_by_coverage": {
+      "const": false
+    },
+    "decision_authority_granted_by_coverage": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

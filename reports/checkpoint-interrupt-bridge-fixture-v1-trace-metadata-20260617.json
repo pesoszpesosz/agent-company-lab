@@ -1,0 +1,23 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "task_id": "task-checkpoint-interrupt-bridge-fixture-v1-20260617",
+  "trace_id": "trace-checkpoint-interrupt-bridge-fixture-v1-20260617",
+  "artifact_family": "checkpoint-interrupt-bridge-fixture-v1",
+  "summary": "Built a local LangGraph-style checkpoint interrupt bridge fixture without importing LangGraph, installing dependencies, starting runtimes, executing graph nodes, resuming checkpoints, applying decisions, or mutating service requests.",
+  "validation_report": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-bridge-fixture-v1-validation-20260617.json",
+  "source_candidate": "langchain-ai/langgraph",
+  "accepted_count": 1,
+  "rejected_count": 19,
+  "fixture_count": 20,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "runtime_adoption_allowed": false,
+  "dependency_installs": 0,
+  "external_framework_imports": 0,
+  "runtime_starts": 0,
+  "graph_nodes_executed": 0,
+  "checkpoint_resumes": 0,
+  "worker_starts": 0,
+  "external_side_effects": false,
+  "next_action": "Use this bridge as report-only scaffolding for future checkpoint/resume UI or lane-manager handoff fixtures; do not install LangGraph."
+}

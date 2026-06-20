@@ -1,0 +1,279 @@
+{
+  "version": "2026-06-14-draft",
+  "purpose": "Per-lane source registry for refreshers, managers, and seeker agents. A source spec defines what a lane may read, what command or method refreshes it, what artifacts it should create, and which gates stop external action.",
+  "specs": [
+    {
+      "cadence": "lane_owner_on_demand_or_weekly",
+      "id": "ai_ml_competitions_public_prize_source_seed",
+      "lane_id": "ai_ml_competitions",
+      "name": "AI/ML Competition Public Prize Source Seed",
+      "notes": "Use to find prize competitions and benchmark tasks. Account creation, dataset download behind terms, submissions, and paid compute all require separate gates.",
+      "outputs": [
+        "E:\\agent-company-lab\\reports\\ai-ml-competitions\\public-prize-source-refresh-YYYYMMDD.md",
+        "lane_evidence",
+        "service_request_candidates"
+      ],
+      "refresh_command": "Prepare a read-only public listing scan only after lane manager claim; save results to a dated local shortlist artifact.",
+      "risk_gate": "read_only_public_research_no_account_submission_dataset_download_or_terms_acceptance",
+      "source_paths": [
+        "Kaggle competitions listing",
+        "DrivenData competitions listing",
+        "EvalAI challenges listing",
+        "AICrowd challenges listing",
+        "Hugging Face competitions/spaces calls when prize route is explicit"
+      ],
+      "source_type": "public_competition_registry"
+    },
+    {
+      "id": "content_grok_x_read_only_research",
+      "lane_id": "content_and_social_growth",
+      "name": "Grok/X Read-Only Research",
+      "source_type": "browser_or_api_research",
+      "source_paths": [
+        "https://x.com/i/grok",
+        "local x account manager workspace"
+      ],
+      "refresh_command": "Use grok-x-research skill only after service request approval; save prompt/output/verification artifacts.",
+      "cadence": "service_request_only",
+      "risk_gate": "no_public_x_action_no_like_follow_reply_post_no_account_setting_change",
+      "outputs": [
+        "E:\\agent-company-lab\\data\\x-grok-research\\",
+        "service_requests"
+      ],
+      "notes": "Current request exists as req-grok-research-worker-20260614 and remains needs_review."
+    },
+    {
+      "cadence": "lane_owner_on_demand_or_weekly",
+      "id": "digital_products_marketplace_demand_source_seed",
+      "lane_id": "digital_products_templates_plugins",
+      "name": "Digital Product Marketplace Demand Source Seed",
+      "notes": "Use to identify sellable template/plugin ideas and marketplace blockers. Publishing/listing/payment setup requires explicit service requests.",
+      "outputs": [
+        "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-demand-refresh-YYYYMMDD.md",
+        "lane_evidence",
+        "legal_kyc_tax_payment_gate_candidates"
+      ],
+      "refresh_command": "Prepare a read-only demand and fee scan only after lane manager claim; no listing, account, checkout, or payment action.",
+      "risk_gate": "read_only_market_research_no_listing_account_payment_or_public_submission",
+      "source_paths": [
+        "Gumroad public marketplace/search pages",
+        "Lemon Squeezy storefront examples",
+        "Etsy digital product public category pages",
+        "GitHub trending/template/plugin repositories",
+        "Codex/OpenAI plugin and skill local product notes"
+      ],
+      "source_type": "public_marketplace_research"
+    },
+    {
+      "id": "lead_generation_policy_sources",
+      "lane_id": "lead_generation_and_sales",
+      "name": "Lead Generation Policy and Offer Sources",
+      "source_type": "policy_and_crm_design",
+      "source_paths": [
+        "future outreach policy notes",
+        "future offer templates"
+      ],
+      "refresh_command": "Draft policy and offer packets only; no email, DM, marketplace, or CRM action.",
+      "cadence": "lane_owner_on_demand",
+      "risk_gate": "no_spam_no_outreach_no_account_action_without_service_request_and_policy_review",
+      "outputs": [
+        "lead generation manager packet"
+      ],
+      "notes": "This lane starts with compliance and targeting rules, not sending messages."
+    },
+    {
+      "id": "local_trading_research_import",
+      "lane_id": "local_trading_strategy_research",
+      "name": "Local Trading Research Import",
+      "source_type": "local_workspace",
+      "source_paths": [
+        "C:\\Users\\matth\\Documents\\Codex\\2026-06-12\\recovered-trading-edge",
+        "E:\\openclaw-unified"
+      ],
+      "refresh_command": "Read-only inventory first; no broker/API/trading action.",
+      "cadence": "lane_owner_on_demand",
+      "risk_gate": "paper_backtest_only_until_broker_treasury_and_real_money_gate_clear",
+      "outputs": [
+        "local_trading manager packet"
+      ],
+      "notes": "Do not duplicate OpenClaw trading execution; import patterns only."
+    },
+    {
+      "cadence": "lane_owner_on_demand_or_weekly",
+      "id": "money_source_discovery_public_venue_source_seed",
+      "lane_id": "money_source_discovery",
+      "name": "Money Source Discovery Public Venue Source Seed",
+      "notes": "Use to widen the online money-path map. Any registration, outreach, wallet, payment, or public submission remains separately gated.",
+      "outputs": [
+        "E:\\agent-company-lab\\reports\\money-source-discovery\\public-venue-source-refresh-YYYYMMDD.md",
+        "lane_evidence",
+        "service_request_candidates"
+      ],
+      "refresh_command": "Prepare a read-only source registry scan only after lane manager claim; classify venue, payout route, account gate, and proof artifact.",
+      "risk_gate": "read_only_discovery_no_registration_outreach_wallet_payment_or_submission",
+      "source_paths": [
+        "public bounty and paid-task venue lists",
+        "grant and hackathon aggregators",
+        "creator-marketplace opportunity lists",
+        "AI evaluation and data-labeling opportunity pages",
+        "local profit-edge imported negative and parked rows"
+      ],
+      "source_type": "public_venue_registry"
+    },
+    {
+      "id": "paid_code_profit_edge_scan_import",
+      "lane_id": "paid_code_bounties",
+      "name": "Paid Code Scan Import",
+      "source_type": "local_reports",
+      "source_paths": [
+        "E:\\profit-edge-lab\\reports\\bounty-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\github-fresh-bounty-pulse-latest.md",
+        "E:\\profit-edge-lab\\reports\\algora-bounty-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\opire-bounty-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\bountyhub-bounty-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\gibwork-bounty-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\gitpay-task-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\unitone-skill-bounty-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\projectdiscovery-bounty-scan-latest.md"
+      ],
+      "refresh_command": "Run only from paid_code_bounties lane owner after claim: E:\\profit-edge-lab scanner scripts listed in README.",
+      "cadence": "lane_owner_on_demand",
+      "risk_gate": "read_only_until_claim_rules_duplicate_checks_and_public_action_approval",
+      "outputs": [
+        "lane_evidence",
+        "paid_code_bounties manager packet"
+      ],
+      "notes": "Imported rows are mostly negative samples. Do not submit PRs from platform_engineering."
+    },
+    {
+      "id": "platform_infra_repo_metadata",
+      "lane_id": "platform_engineering",
+      "name": "Agent Infrastructure GitHub Metadata",
+      "source_type": "github_metadata",
+      "source_paths": [
+        "microsoft/agent-framework",
+        "pydantic/pydantic-ai",
+        "PrefectHQ/prefect",
+        "dagster-io/dagster",
+        "ray-project/ray",
+        "langfuse/langfuse",
+        "Arize-ai/phoenix",
+        "vercel-labs/agent-browser"
+      ],
+      "refresh_command": "gh repo view <repo> --json nameWithOwner,description,stargazerCount,forkCount,primaryLanguage,licenseInfo,url,updatedAt,latestRelease",
+      "cadence": "weekly_or_before_architecture_choice",
+      "risk_gate": "read_only_github_metadata",
+      "outputs": [
+        "E:\\agent-company-lab\\data\\curated-infra-repos-refresh-YYYYMMDD.json",
+        "E:\\agent-company-lab\\data\\curated-infra-repos-refresh-YYYYMMDD.csv"
+      ],
+      "notes": "Use for architecture research only; not a signal to file issues or PRs."
+    },
+    {
+      "id": "platform_official_docs_refresh",
+      "lane_id": "platform_engineering",
+      "name": "Official Agent Infrastructure Docs",
+      "source_type": "web_docs",
+      "source_paths": [
+        "https://docs.langchain.com/oss/python/langgraph/overview",
+        "https://developers.openai.com/api/docs/guides/agents",
+        "https://openai.github.io/openai-agents-python/agents/",
+        "https://learn.microsoft.com/en-us/agent-framework/overview/",
+        "https://pydantic.dev/docs/ai/overview/",
+        "https://docs.crewai.com/",
+        "https://pydantic.dev/docs/ai/integrations/durable_execution/temporal/",
+        "https://www.prefect.io/solutions/agents",
+        "https://docs.dagster.io/",
+        "https://langfuse.com/docs/observability/overview",
+        "https://arize.com/docs/phoenix/tracing/how-to-tracing/setup-tracing/instrument",
+        "https://agent-browser.dev/"
+      ],
+      "refresh_command": "Use web research and save citations into a dated source-refresh report.",
+      "cadence": "weekly_or_before_framework_commitment",
+      "risk_gate": "read_only_web_research",
+      "outputs": [
+        "E:\\agent-company-lab\\reports\\source-research-refresh-YYYYMMDD.md"
+      ],
+      "notes": "Prefer official docs and primary GitHub repos over blog/tutorial summaries."
+    },
+    {
+      "id": "platform_profit_edge_daily_queue",
+      "lane_id": "platform_engineering",
+      "name": "Profit Edge Daily Queue Snapshot",
+      "source_type": "local_markdown",
+      "source_paths": [
+        "E:\\profit-edge-lab\\reports\\daily-action-queue-latest.md"
+      ],
+      "refresh_command": "powershell -ExecutionPolicy Bypass -File E:\\profit-edge-lab\\scripts\\Build-DailyActionQueue.ps1",
+      "cadence": "on_demand_before_ceo_review",
+      "risk_gate": "read_only_local_import_no_execution_lane_ownership",
+      "outputs": [
+        "E:\\agent-company-lab\\reports\\profit-edge-import-latest.md",
+        "lane_evidence"
+      ],
+      "notes": "Use for lane-routing context only. Do not act on the promoted RustChain payout item from this thread."
+    },
+    {
+      "id": "prediction_profit_edge_scan_import",
+      "lane_id": "prediction_market_research",
+      "name": "Prediction Market Research Import",
+      "source_type": "local_reports",
+      "source_paths": [
+        "E:\\profit-edge-lab\\reports\\prediction-market-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\cross-venue-next-team-latest.md",
+        "E:\\profit-edge-lab\\reports\\polymarket-tennis-edge-packet-latest.md",
+        "E:\\profit-edge-lab\\reports\\kalshi-btc-range-edge-latest.md",
+        "E:\\profit-edge-lab\\reports\\kalshi-btc-settlement-lag-latest.md",
+        "E:\\profit-edge-lab\\reports\\kalshi-crypto-settlement-lag-latest.md",
+        "E:\\profit-edge-lab\\reports\\kalshi-settlement-lag-latest.md"
+      ],
+      "refresh_command": "Run only from prediction_market_research lane owner after claim; use paper/data-only mode.",
+      "cadence": "lane_owner_on_demand_or_scheduled_capture",
+      "risk_gate": "data_only_until_venue_eligibility_fees_treasury_and_real_money_gate_clear",
+      "outputs": [
+        "lane_evidence",
+        "prediction manager packet",
+        "paper/replay artifact"
+      ],
+      "notes": "Treat Polymarket as data-only for a US user unless eligibility changes are explicitly verified."
+    },
+    {
+      "id": "security_profit_edge_scan_import",
+      "lane_id": "security_bounty_private_reports",
+      "name": "Security Bounty and Private Report Import",
+      "source_type": "local_reports",
+      "source_paths": [
+        "E:\\profit-edge-lab\\reports\\security-bounty-source-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\google-oss-static-review-shortlist-latest.md",
+        "E:\\profit-edge-lab\\reports\\issuehunt-security-program-scan-latest.md",
+        "E:\\profit-edge-lab\\reports\\sherlock-contest-1259-detail-latest.md",
+        "E:\\profit-edge-lab\\reports\\submitted-security-advisory-monitor-latest.md"
+      ],
+      "refresh_command": "Run only from security_bounty_private_reports lane owner after claim and scope rules review.",
+      "cadence": "lane_owner_on_demand",
+      "risk_gate": "read_only_static_review_until_program_scope_user_approval_and_private_route_clear",
+      "outputs": [
+        "lane_evidence",
+        "security manager packet"
+      ],
+      "notes": "Security testing beyond public code review requires explicit scope and approval."
+    },
+    {
+      "id": "web3_profit_edge_terms_import",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "name": "Web3 Terms and Target Import",
+      "source_type": "local_reports",
+      "source_paths": [
+        "E:\\profit-edge-lab\\reports\\web3-public-code-target-shortlist-latest.md"
+      ],
+      "refresh_command": "Run only from web3 lane owner after claim; terms and deadline scouting only.",
+      "cadence": "lane_owner_on_demand",
+      "risk_gate": "no_wallet_registration_deployment_transaction_or_submission_without_user_approval",
+      "outputs": [
+        "lane_evidence",
+        "web3 manager packet"
+      ],
+      "notes": "Wallet/account/deployment work must be a separate service request."
+    }
+  ]
+}

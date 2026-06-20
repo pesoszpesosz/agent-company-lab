@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.worker_capability_class_registry.v1",
+  "title": "Agent Company Worker Capability Class Registry v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_runtime_adoption_docket_path",
+    "source_docket_item_count",
+    "capability_class_count",
+    "worker_registration_allowed",
+    "worker_start_allowed",
+    "runtime_start_allowed",
+    "browser_session_start_allowed",
+    "service_requests_assigned",
+    "model_api_calls",
+    "mcp_tool_calls",
+    "external_side_effects"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.worker_capability_class_registry.v1"
+    },
+    "source_runtime_adoption_docket_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "source_docket_item_count": {
+      "type": "integer",
+      "minimum": 20
+    },
+    "capability_class_count": {
+      "type": "integer",
+      "minimum": 8
+    },
+    "worker_registration_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "mcp_tool_calls": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  }
+}

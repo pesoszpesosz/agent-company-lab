@@ -1,0 +1,228 @@
+{
+  "approval_request": {
+    "allowed_to_accept_terms_or_payout": false,
+    "allowed_to_capture_email_or_market_publicly": false,
+    "allowed_to_create_api_key": false,
+    "allowed_to_create_checkout_or_payment_link": false,
+    "allowed_to_create_storefront_or_product": false,
+    "allowed_to_login_or_create_account": false,
+    "allowed_to_process_customer_data": false,
+    "allowed_to_publish_listing": false,
+    "allowed_to_upload_files": false,
+    "minimum_next_approval_scope": "Approve country/Managed Payments availability, account and terms route, payout/tax/business identity, product IP/license, refund/support language, restricted-product fit, pricing margin, screenshots/copy/forbidden claims, zip manifest/checksum, privacy/customer-data/email posture, API-key policy, and public launch scope.",
+    "request_type": "human_review_before_any_lemon_squeezy_action"
+  },
+  "boundary": {
+    "api_keys_created_or_used": 0,
+    "browser_sessions_started": 0,
+    "checkout_or_payment_links_created": 0,
+    "customer_data_processed": 0,
+    "email_capture_or_marketing": 0,
+    "external_side_effects": 0,
+    "files_uploaded": 0,
+    "lemon_squeezy_account_or_login": false,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_payout_setup": 0,
+    "product_or_storefront_created": false,
+    "public_listing_or_promotion": 0,
+    "service_requests_mutated": 0,
+    "terms_or_payout_accepted": false,
+    "workers_or_runtimes_started": 0,
+    "zip_created_or_uploaded": false
+  },
+  "decision": "approval_packet_only_no_account_no_terms_no_upload_no_checkout_no_public_listing",
+  "evidence_assets": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\lemon-squeezy-route-decision-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\lemon-squeezy-route-decision-local-proof-validation.json",
+    "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\README.md",
+    "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\docs\\listing-draft.md",
+    "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\docs\\license-and-ip-note.md",
+    "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0\\docs\\buyer-guide.md"
+  ],
+  "forbidden_claims": [
+    "guaranteed_income_or_revenue_results",
+    "platform_approval_or_compliance_guarantee",
+    "automatic_client_acquisition_or_job_success",
+    "tax_legal_financial_or_payment_advice",
+    "official_affiliation_with_lemon_squeezy_gumroad_promptbase_fiverr_upwork_or_kaggle",
+    "unbounded_support_refund_or_customization_promise",
+    "data_privacy_or_security_certification_claim",
+    "crypto_wallet_airdrop_or_bounty_profit_guarantee"
+  ],
+  "generated_at": "2026-06-18T09:06:37Z",
+  "lane_id": "digital_products_templates_plugins",
+  "next_local_action": "If the operator approves, create exact local listing copy, refund/support text, screenshot checklist, and deterministic zip manifest files. Do not log in, accept terms, create a storefront/product, upload files, create checkouts/payment links/API keys, process customer data, capture email, publish, promote, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
+  "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+  "pricing_margin_scenarios": [
+    {
+      "before_support_costs_usd": 7.15,
+      "extra_payment_refund_support_reserve_usd": 0.9,
+      "lemon_squeezy_public_ecommerce_fee_estimate_usd": 0.95,
+      "margin_ratio_before_support": 0.7944,
+      "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+      "price_usd": 9
+    },
+    {
+      "before_support_costs_usd": 15.65,
+      "extra_payment_refund_support_reserve_usd": 1.9,
+      "lemon_squeezy_public_ecommerce_fee_estimate_usd": 1.45,
+      "margin_ratio_before_support": 0.8237,
+      "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+      "price_usd": 19
+    },
+    {
+      "before_support_costs_usd": 24.15,
+      "extra_payment_refund_support_reserve_usd": 2.9,
+      "lemon_squeezy_public_ecommerce_fee_estimate_usd": 1.95,
+      "margin_ratio_before_support": 0.8328,
+      "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+      "price_usd": 29
+    },
+    {
+      "before_support_costs_usd": 41.15,
+      "extra_payment_refund_support_reserve_usd": 4.9,
+      "lemon_squeezy_public_ecommerce_fee_estimate_usd": 2.95,
+      "margin_ratio_before_support": 0.8398,
+      "note": "Planning estimate only; payment-method, payout, tax, refund, dispute, and support costs require human review before publishing.",
+      "price_usd": 49
+    }
+  ],
+  "product_manifest": {
+    "file_count": 12,
+    "files": [
+      {
+        "relative_path": "docs/buyer-guide.md",
+        "sha256": "d680cdd927d0f67b0b29069b0a7148808ef965e15727ce2a9246eb65b68ad3c2",
+        "size_bytes": 1554
+      },
+      {
+        "relative_path": "docs/license-and-ip-note.md",
+        "sha256": "06d1915faf9c6dc489bb1c8015cf3e0c2bfa129cb6e6d0c8eb6434d816e89c8d",
+        "size_bytes": 1477
+      },
+      {
+        "relative_path": "docs/listing-draft.md",
+        "sha256": "5d716f468e916d7ccb32ae56b22d4d3ba15770a52f043cb24128cae7da10ee35",
+        "size_bytes": 1737
+      },
+      {
+        "relative_path": "docs/screenshot-plan.md",
+        "sha256": "1f4d00b660a6e7cbb8df5b6d22c4233e04b0b300935f47287caab4c5cd045ab3",
+        "size_bytes": 1111
+      },
+      {
+        "relative_path": "examples/local-research-skill/sample-output.md",
+        "sha256": "ffef4ee635ac60f2459f7104621396dab2ff638cd205bf618d09e490544e9d98",
+        "size_bytes": 1021
+      },
+      {
+        "relative_path": "examples/local-research-skill/SKILL.md",
+        "sha256": "77cc8f92edbd1baab88814e22c76f3356fff1269589615a74284e079005df0d0",
+        "size_bytes": 2153
+      },
+      {
+        "relative_path": "README.md",
+        "sha256": "d1a37031fd3bdb8be274bb831598e8d45108469fc46bdd8b11276fa119c3aae2",
+        "size_bytes": 3544
+      },
+      {
+        "relative_path": "templates/acceptance-review.template.md",
+        "sha256": "c743b49bb1cd0611da4f5af7cbd59560f8cef6d327323d0fbd793f26f305a65d",
+        "size_bytes": 1300
+      },
+      {
+        "relative_path": "templates/artifact-contract.template.md",
+        "sha256": "36c20fbd97cc2ea15a176994ceb7d50c1c301dae690a678abfdecabbc9f89293",
+        "size_bytes": 1168
+      },
+      {
+        "relative_path": "templates/gate-checklist.template.md",
+        "sha256": "85fa022701091518a524447c6a24e099298dd9569b5ac04d6dac224afd8c2888",
+        "size_bytes": 2029
+      },
+      {
+        "relative_path": "templates/service-request-checklist.template.md",
+        "sha256": "772719198037441534a47c8a6427b70accebc75db787fa08282e6f0a9fe8011e",
+        "size_bytes": 1589
+      },
+      {
+        "relative_path": "templates/SKILL.template.md",
+        "sha256": "bc8f1b5c7832c788f4fd5b95e794e9215c393e09e8ac77388572254ba65ad99f",
+        "size_bytes": 2987
+      }
+    ],
+    "product_dir": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+    "zip_checksum_plan": "After explicit human approval, create a deterministic zip from exactly these relative paths, record SHA-256, and review it before any Lemon Squeezy upload. This packet does not create or upload a zip."
+  },
+  "refund_support_terms_draft": {
+    "customer_promise": "Buyer receives the downloadable files and docs; no guarantee of marketplace approval, revenue, client acquisition, compliance, or platform eligibility.",
+    "refund_posture": "Human must approve exact refund language before listing; draft should cap support and avoid guaranteed outcomes.",
+    "support_posture": "Async best-effort documentation support only unless a separate paid service and support limit are approved."
+  },
+  "required_human_decisions": [
+    "country_and_managed_payments_availability_review",
+    "account_creation_and_terms_acceptance_approval",
+    "business_identity_tax_and_payout_review",
+    "product_ip_license_and_asset_ownership_review",
+    "refund_support_and_customer_promise_review",
+    "prohibited_or_restricted_product_review",
+    "pricing_margin_review_including_5_percent_plus_50_cent_fee_and_extra_payment_fees",
+    "storefront_copy_screenshot_and_forbidden_claims_review",
+    "zip_checksum_and_file_delivery_security_review",
+    "privacy_customer_data_and_email_marketing_review",
+    "api_key_secret_storage_review_before_any_api_or_webhook_work",
+    "public_listing_and_launch_approval"
+  ],
+  "schema_version": "digital_products.lemon_squeezy_no_publish_launch_approval_packet.v1",
+  "selected_product_route": {
+    "blocked_until_approval": [
+      "storefront",
+      "file upload",
+      "checkout",
+      "payment",
+      "public listing"
+    ],
+    "example": "Agent Skill Starter Kit v0 zip with docs, worksheets, and examples",
+    "fit": "high",
+    "local_requirements": [
+      "license file",
+      "refund/support draft",
+      "checksum",
+      "sample screenshots",
+      "buyer promise audit"
+    ],
+    "product_name": "Agent Skill Starter Kit v0",
+    "product_type": "direct_download_template_pack"
+  },
+  "source_hard_kill_reasons": [
+    "managed_payments_or_country_support_unavailable",
+    "operator_declines_account_terms_or_payout_setup",
+    "product_ip_or_asset_rights_unclear",
+    "product_category_restricted_or_terms_risk_unreviewed",
+    "support_refund_or_customer_promise_unbounded",
+    "gross_margin_too_low_after_fee_payment_method_refund_and_support_costs",
+    "requires_api_keys_or_customer_data_before approval",
+    "requires_public_listing_or_email_capture_before privacy_review",
+    "product_value_not_distinct_from_existing_free_material",
+    "cannot_produce_secure_zip_manifest_and_buyer_docs_locally"
+  ],
+  "source_launch_gates": [
+    "country_and_managed_payments_availability_review",
+    "account_creation_and_terms_acceptance_approval",
+    "business_identity_tax_and_payout_review",
+    "product_ip_license_and_asset_ownership_review",
+    "refund_support_and_customer_promise_review",
+    "prohibited_or_restricted_product_review",
+    "pricing_margin_review_including_5_percent_plus_50_cent_fee_and_extra_payment_fees",
+    "storefront_copy_screenshot_and_forbidden_claims_review",
+    "zip_checksum_and_file_delivery_security_review",
+    "privacy_customer_data_and_email_marketing_review",
+    "api_key_secret_storage_review_before_any_api_or_webhook_work",
+    "public_listing_and_launch_approval"
+  ],
+  "source_proof_path": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\lemon-squeezy-route-decision-local-proof.json",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-lemon_squeezy_digital_products-20260618",
+  "status": "lemon_squeezy_no_publish_launch_approval_packet_ready_local_only",
+  "task_id": "task-lemon-squeezy-no-publish-launch-approval-packet-v1-20260618"
+}

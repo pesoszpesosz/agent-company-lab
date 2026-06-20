@@ -1,0 +1,21 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "external_side_effects": 0,
+    "github_comments_or_prs": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "opire_account_or_login": false,
+    "payments": 0,
+    "proposals_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "try_claim_reward_commands": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "local_proof_completed",
+  "generated_at": "2026-06-18T06:54:05Z",
+  "lane_id": "paid_code_bounties",
+  "schema_version": "opire_source_spec_parser_plan_local_proof.trace.v1",
+  "source": "tools/create_opire_source_spec_parser_plan_local_proof.py",
+  "summary": "Opire paid-OSS public card parser plan created with external actions gated.",
+  "task_id": "task-lane-scout-opire_paid_oss-20260618"
+}

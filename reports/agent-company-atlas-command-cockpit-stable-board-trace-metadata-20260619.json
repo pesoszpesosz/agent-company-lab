@@ -1,0 +1,20 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-stable-board-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-stable-board-v1-20260619",
+  "traceId": "trace-atlas_command_cockpit_stable_board_added-20260619",
+  "title": "Command Cockpit Stable Board",
+  "createdAt": "2026-06-19T18:50:20Z",
+  "summary": "Kept the Command Cockpit selected path stable during interaction and gave the Quest board more premium first-screen presence.",
+  "changes": [
+    "Routes repeated detail-panel auto-scroll calls through a cockpit-aware helper so Command Cockpit lane changes update in place.",
+    "Adds a tighter overview-only cockpit layout with a shorter HUD, stronger board framing, and more first-screen room for the Quest surface.",
+    "Adds a calm board-scan animation to the Quest cockpit so motion emphasizes live state instead of extra vertical widgets."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py"
+  ]
+}

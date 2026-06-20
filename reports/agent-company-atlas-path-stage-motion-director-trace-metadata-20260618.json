@@ -1,0 +1,53 @@
+{
+  "id": "trace-agent-company-atlas-path-stage-motion-director-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-stage-motion-director-v1-20260618",
+  "event_id": "trace-atlas_path_stage_motion_director_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-stage-motion-director-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Stage Motion Director",
+  "summary": "Added a compact stage-motion layer to the Path Stage Ribbon: scan drift, progress runner, and status-aware node sparks make gates, unlocks, and focused route nodes feel alive without adding scroll.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_stage_motion_director.py"
+  ],
+  "browser_verification": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-stage-motion-director-polish-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "body_deck": "command",
+    "body_detail_view": "path",
+    "scroll_y": 0,
+    "overflow_x": 0,
+    "detail_panel_y": 122,
+    "detail_panel_height": 586,
+    "detail_panel_bottom": 708,
+    "path_stage_ribbon_y": 361,
+    "path_stage_ribbon_height": 66,
+    "path_stage_ribbon_bottom": 427,
+    "path_stage_motion_height": 54,
+    "path_stage_motion_pointer_events": "none",
+    "path_stage_scan_animation": "pathStageScanDrift",
+    "path_core_deck_y": 134,
+    "path_core_deck_bottom": 461,
+    "focused_node_class": "path-stage-node gate gated is-focused",
+    "focused_spark_animation": "pathStageSparkWake",
+    "focused_spark_opacity": 0.72,
+    "gated_nodes": 3,
+    "unlocked_nodes": 2
+  },
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_motion_director.py -q failed before implementation because the Path Stage Ribbon lacked a dedicated motion director layer.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_motion_director.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py -q",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_motion.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_utility_motion.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_path_chrome.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "Browser verification confirmed the stage motion layer remains clipped inside the compact ribbon, pointer-events stay disabled, no horizontal overflow appears, and the first-screen panel still ends at y=708 in a 720px viewport.",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas (43 passed, 55 deselected)",
+    "python -c snapshot check confirmed motion-director task and trace are present with 12 lanes"
+  ]
+}

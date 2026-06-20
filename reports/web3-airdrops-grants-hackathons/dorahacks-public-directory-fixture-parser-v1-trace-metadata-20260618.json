@@ -1,0 +1,36 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "buidl_ai_or_organizer_tools_used": 0,
+    "buidls_or_applications_submitted": 0,
+    "dorahacks_account_or_login": false,
+    "external_side_effects": 0,
+    "github_public_actions": 0,
+    "hackathons_joined_or_registrations": 0,
+    "local_scout_candidates": 1,
+    "messages_comments_or_public_posts": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "profiles_buidls_or_teams_created": 0,
+    "saved_opportunity_rows_created": 4,
+    "scored_rows": 4,
+    "service_requests_mutated": 0,
+    "submission_ready_count": 0,
+    "votes_donations_prize_claims_or_payments": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "dorahacks_public_directory_fixture_parser_created",
+  "generated_at": "2026-06-18T09:31:31Z",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "packet_summary": {
+    "candidate_count": 1,
+    "kill_or_wait_count": 3,
+    "row_count": 4,
+    "source_acceptance_checks": 7,
+    "submission_ready_count": 0
+  },
+  "schema_version": "web3.dorahacks_public_directory_fixture_parser.trace.v1",
+  "source": "tools/create_dorahacks_public_directory_fixture_parser.py",
+  "summary": "Local DoraHacks public-directory fixture parser created; no account, wallet, profile, registration, submission, vote, payment, public action, BUIDL AI, runtime, or model/API call.",
+  "task_id": "task-dorahacks-public-directory-fixture-parser-v1-20260618"
+}

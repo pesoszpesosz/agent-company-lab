@@ -1,0 +1,299 @@
+{
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_accept_count": 4,
+  "expected_reject_count": 8,
+  "fixture_suite_count": 12,
+  "fixtures": [
+    {
+      "expected": "accept",
+      "expected_state": "accepted_for_report_only_routing",
+      "fixture_id": "positive_hold",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "decision-hold-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply, no external actions, no service request mutation.",
+        "scope": "report_only_or_sandbox_dry_run_preparation_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "accept",
+      "expected_state": "accepted_for_sandbox_dry_run_preparation_only",
+      "fixture_id": "positive_approve_sandbox_dry_run_only",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "decision-approve_sandbox_dry_run_only-20260616",
+        "decision_type": "approve_sandbox_dry_run_only",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply, no external actions, no service request mutation.",
+        "scope": "report_only_or_sandbox_dry_run_preparation_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "accept",
+      "expected_state": "accepted_for_report_only_routing",
+      "fixture_id": "positive_request_rework",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "decision-request_rework-20260616",
+        "decision_type": "request_rework",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply, no external actions, no service request mutation.",
+        "scope": "report_only_or_sandbox_dry_run_preparation_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "accept",
+      "expected_state": "accepted_for_report_only_routing",
+      "fixture_id": "positive_reject_migration_path",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "decision-reject_migration_path-20260616",
+        "decision_type": "reject_migration_path",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply, no external actions, no service request mutation.",
+        "scope": "report_only_or_sandbox_dry_run_preparation_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "decision_id is required",
+      "fixture_id": "missing_decision_id",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "report_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "decision_type must be one of the review options",
+      "fixture_id": "unknown_decision_type",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "negative-unknown_decision_type-20260616",
+        "decision_type": "approve_live_apply",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "report_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "live migration SQL apply is outside this contract",
+      "fixture_id": "live_apply_scope",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "negative-live_apply_scope-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "live_migration_sql_apply",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "artifact_paths must include review and validation artifacts",
+      "fixture_id": "missing_artifact_paths",
+      "submitted_intake": {
+        "artifact_paths": [],
+        "decision_id": "negative-missing_artifact_paths-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "report_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "expires_at must be in the future at parse time",
+      "fixture_id": "expired_decision",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "negative-expired_decision-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-15T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "report_only",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "operator signature fields are required",
+      "fixture_id": "unsigned_decision",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "negative-unsigned_decision-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "report_only"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "browser/account/wallet/payment/public/security actions are forbidden",
+      "fixture_id": "gated_action_bundle",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "negative-gated_action_bundle-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "sandbox_dry_run_plus_wallet_and_browser_action",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    },
+    {
+      "expected": "reject",
+      "expected_reason": "service request mutation is forbidden by this intake",
+      "fixture_id": "service_request_mutation",
+      "submitted_intake": {
+        "artifact_paths": [
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-operator-review-validation-latest.json",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-latest.md",
+          "E:\\agent-company-lab\\reports\\agent-company-migration-decision-intake-contract-validation-latest.json"
+        ],
+        "decision_id": "negative-service_request_mutation-20260616",
+        "decision_type": "hold",
+        "expires_at": "2026-06-17T00:00:00Z",
+        "operator_name": "operator",
+        "risk_acknowledgement": "No live apply.",
+        "scope": "update_service_request_and_assign_worker",
+        "signed_utc": "2026-06-16T00:00:00Z"
+      }
+    }
+  ],
+  "generated_utc": "2026-06-16T11:54:28Z",
+  "lane_evidence_rows_after": 141,
+  "lane_evidence_rows_before": 140,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_decision_fixture_suite_ready_for_report_only_runner",
+  "negative_fixture_count": 8,
+  "next_action": "Build the report-only fixture runner next; do not parse live decisions or apply operator decisions.",
+  "output_state_count": 4,
+  "output_states": [
+    "accepted_hold",
+    "accepted_sandbox_dry_run_preparation_only",
+    "accepted_rework_request",
+    "accepted_rejection_closeout"
+  ],
+  "parser_guard_count": 9,
+  "parser_guards": [
+    "parse_json_only_no_freeform_commands",
+    "require_all_fields_present",
+    "reject_unknown_decision_type",
+    "reject_live_apply_scope",
+    "reject_external_or_gated_action_requests",
+    "require_artifact_paths_match_operator_review_packet",
+    "require_expiration_and_signed_timestamp",
+    "emit_report_only_routing_result",
+    "never_apply_decision_inside_parser"
+  ],
+  "positive_fixture_count": 4,
+  "recommended_default": "build_report_only_fixture_runner_next_without_parsing_live_decisions",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "fixtures_executed": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_decision_fixture_suite.v1",
+  "source_intake_evidence_id": "agent-company-migration-decision-intake-contract-20260616",
+  "source_intake_task_id": "task-agent-company-migration-decision-intake-contract-20260616",
+  "suite_evidence_id": "agent-company-migration-decision-fixture-suite-20260616",
+  "suite_lane_id": "platform_engineering",
+  "suite_task_id": "task-agent-company-migration-decision-fixture-suite-20260616",
+  "summary": "Prepared a report-only fixture suite for the migration decision intake contract, with positive and negative submitted-intake cases and expected parser outcomes.",
+  "task_rows_inserted_by_fixture_suite": 1,
+  "tasks_table_rows_after": 233,
+  "tasks_table_rows_before": 232
+}

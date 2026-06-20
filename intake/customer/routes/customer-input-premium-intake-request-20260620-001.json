@@ -1,0 +1,59 @@
+{
+  "schema_version": "customer_input_route_packet.v1",
+  "input_id": "customer-input-premium-intake-request-20260620-001",
+  "received_utc": "2026-06-20T17:04:00Z",
+  "status": "applied",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "customer_intent": "Add an agent that can receive the user's newest requests and materials, inspect company context, route work to the right lanes, update the user, avoid poisoning the CEO context, guarantee useful knowledge is applied, and avoid becoming a rejection engine.",
+  "input_class": "new_request",
+  "secondary_classes": [
+    "constraint_or_preference",
+    "lane_material_policy",
+    "knowledge_application_policy"
+  ],
+  "routes": [
+    {
+      "lane_or_surface": "premium_customer_intake",
+      "reason": "Owns future customer requests, materials, routing, and updates.",
+      "status": "applied"
+    },
+    {
+      "lane_or_surface": "ai_resources_lab",
+      "reason": "Evaluates the intake system as company infrastructure and prevents overlapping agents.",
+      "status": "applied"
+    },
+    {
+      "lane_or_surface": "human_action_desk",
+      "reason": "Receives rare user-only tasks but should not become a generic todo list.",
+      "status": "referenced"
+    },
+    {
+      "lane_or_surface": "youtube_content_channels",
+      "reason": "First named example for future material routing.",
+      "status": "referenced"
+    },
+    {
+      "lane_or_surface": "ceo_state_packet",
+      "reason": "CEO receives a compact capsule, not raw materials.",
+      "status": "applied"
+    }
+  ],
+  "ceo_context_capsule": {
+    "short_summary": "The customer wants a single intake agent that acts like a premium-customer success desk for the company.",
+    "why_this_route": "The request is company-structure work that should own future user input without duplicating AR, human-action desk, or CEO roles.",
+    "application_path": "role_lane_agent_contract_workspace_routing_ledger_knowledge_loop_update_feed",
+    "human_action_needed": false,
+    "ceo_attention_needed": true
+  },
+  "next_artifact": "customer_request_routing_ledger_v1",
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "wallet_payment_trading_actions": 0,
+    "model_api_mcp_calls": 0,
+    "worker_runtime_queue_starts": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

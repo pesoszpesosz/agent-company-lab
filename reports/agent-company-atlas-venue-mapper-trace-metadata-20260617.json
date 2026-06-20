@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "agent-company-atlas-trace.v1",
+  "traceId": "trace-agent-company-atlas-venue-mapper-v1-20260617",
+  "generatedUtc": "2026-06-17T16:40:50Z",
+  "laneId": "money_source_discovery",
+  "title": "Venue Mapper Custom Minigame",
+  "status": "complete",
+  "research": {
+    "queries": [
+      "game UI fog of war discovery map nodes beacon route design inspiration",
+      "strategy game map fog of war resource discovery UI beacons",
+      "gamified dashboard opportunity map milestones blockers visual UI",
+      "fog of war video game map visibility game mechanic Wikipedia",
+      "League of Legends fog of war map vision official",
+      "Civilization VI fog of war map exploration official"
+    ],
+    "takeaways": [
+      "Fog-of-war patterns make uncertainty visible by obscuring unexplored or unverified areas.",
+      "Map upgrades should preserve clarity and performance while improving visual fidelity.",
+      "Reveal routes, beacons, and scan rings fit this lane because opportunity sources move from unknown to candidate to proof-ready."
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Fog_of_war",
+      "https://www.riotgames.com/en/news/story-fog-and-war",
+      "https://civilization.fandom.com/wiki/Fog_of_war"
+    ]
+  },
+  "imageGeneration": {
+    "mode": "built_in_image_gen",
+    "sourcePath": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_077fe9e11c81b7ea016a32cdd98cf0819183d3bd3e1501abb0.png",
+    "workspacePath": "web/assets/games/venue-mapper-bg-20260617.png",
+    "prompt": "Use case: stylized-concept. Asset type: website game module background texture for a static dashboard minigame. Primary request: premium dark game UI background for a Venue Mapper module about discovering online money venues, opportunity source cartography, payout clarity, and first-proof routes. Scene/backdrop: futuristic cartography table with glowing map tiles, fog-of-war patches, source beacons, route lines, compass scan rings, small treasure-like venue nodes, and faint tactical grid marks. Subject: abstract opportunity source map, beacons, route pins, scan cones, payout signal crystals; no people or characters. Style/medium: polished 3D game concept art, premium SaaS-game hybrid, clean enough for dashboard UI overlays. Composition/framing: wide landscape dashboard texture, darker open negative space through the center for cards and controls, richer detail around edges, no decorative border. Lighting/mood: quiet high-end control room glow, luminous teal and green scan light with warm amber payout highlights. Color palette: dark charcoal, deep teal, green, amber, faint blue, restrained violet accents. Materials/textures: glass map surface, matte metal trim, holographic fog, soft volumetric glow, crisp but not noisy. Constraints: no text, no letters, no numbers, no logos, no watermark, no people, no brand marks, no currency symbols, avoid clutter in the center."
+  },
+  "implementation": {
+    "filesChanged": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/README.md"
+    ],
+    "assetsCreated": [
+      "web/assets/games/venue-mapper-bg-20260617.png"
+    ],
+    "frontend": [
+      "Added venue-mapper dispatch in renderGameView and gameStepCount.",
+      "Added buildVenueMapperSites to derive five map beacons from lane trail text, counts, artifacts, traces, service requests, blockers, and gates.",
+      "Added renderVenueMapperGame and renderVenueSite with focused beacon controls, clarity verdict, route map, fog sweeps, and site cards.",
+      "Added responsive Venue Mapper CSS for docked detail panels, stacked desktop, and mobile layouts."
+    ]
+  },
+  "validation": {
+    "static": {
+      "status": "passed",
+      "commands": [
+        "node --check web/app.js",
+        "python -m py_compile tools/generate_visual_dashboard_snapshot.py",
+        "python -m json.tool web/data/snapshot.json > $null",
+        "python -m json.tool web/data/lane-visuals.json > $null",
+        "python -m json.tool reports/agent-company-atlas-venue-mapper-trace-metadata-20260617.json > $null",
+        "python tools/generate_visual_dashboard_snapshot.py",
+        "rg -n \"[^\\x00-\\x7F]\" web/index.html web/app.js web/styles.css web/README.md web/data/lane-visuals.json reports/agent-company-atlas-venue-mapper-trace-metadata-20260617.json"
+      ]
+    },
+    "browser": {
+      "status": "passed",
+      "routes": [
+        {
+          "url": "http://localhost:5177/?verify=venue-mapper&cache=20260617-venue-mapper#lane=money_source_discovery&view=game",
+          "viewport": "390x920",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "beacons": 5,
+          "sites": 5,
+          "controlCheck": "next advanced focus from Source Beacon to Payout Signal",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "decorativeBoardPaintClipped": true
+        },
+        {
+          "url": "http://localhost:5177/?verify=venue-mapper&cache=20260617-venue-mapper#lane=money_source_discovery&view=game",
+          "viewport": "1600x900",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "beacons": 5,
+          "sites": 5,
+          "heroColumns": "78px 193px",
+          "siteColumns": "309px",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "decorativeBoardPaintClipped": false,
+          "consoleErrors": 0
+        },
+        {
+          "url": "http://localhost:5177/?verify=venue-mapper&cache=20260617-venue-mapper#lane=money_source_discovery&view=game",
+          "viewport": "1280x800",
+          "activeTab": "game",
+          "textureLoaded": true,
+          "beacons": 5,
+          "sites": 5,
+          "heroColumns": "78px 885px 132px",
+          "siteColumns": "221px 221px 221px 221px 221px",
+          "bodyOverflow": false,
+          "panelOverflow": false,
+          "decorativeBoardPaintClipped": true,
+          "consoleErrors": 0
+        }
+      ]
+    }
+  }
+}

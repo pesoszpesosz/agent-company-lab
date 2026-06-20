@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.telemetry_export_egress_apply_command_contract.v1",
+  "title": "Telemetry Export Egress Apply Command Contract v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "command_id",
+    "command_type",
+    "target_route_id",
+    "target_egress_type",
+    "source_apply_preflight_blocker_path",
+    "source_guard_validation_path",
+    "source_intake_validation_path",
+    "source_gateway_docket_validation_path",
+    "source_egress_ledger_validation_path",
+    "source_identity_validation_path",
+    "expected_source_apply_preflight_status",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "redaction_policy_path",
+    "redaction_policy_present",
+    "destination_scope_path",
+    "destination_scope_present",
+    "retention_policy_path",
+    "retention_policy_present",
+    "sample_trace_artifact_path",
+    "sample_trace_artifact_present",
+    "allowed_scope",
+    "target_request_ids",
+    "immutable_command_preview_sha256",
+    "apply_command_allowed",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "telemetry_export_allowed",
+    "external_trace_export_allowed",
+    "private_prompt_upload_allowed",
+    "credential_export_allowed",
+    "unredacted_log_sync_allowed",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.telemetry_export_egress_apply_command_contract.v1"
+    },
+    "command_type": {
+      "enum": [
+        "deny_noop",
+        "report_only_apply_command_contract"
+      ]
+    },
+    "target_route_id": {
+      "const": "telemetry_export_gateway"
+    },
+    "target_egress_type": {
+      "const": "telemetry_export"
+    },
+    "apply_command_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "telemetry_export_allowed": {
+      "const": false
+    },
+    "external_trace_export_allowed": {
+      "const": false
+    },
+    "private_prompt_upload_allowed": {
+      "const": false
+    },
+    "credential_export_allowed": {
+      "const": false
+    },
+    "unredacted_log_sync_allowed": {
+      "const": false
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

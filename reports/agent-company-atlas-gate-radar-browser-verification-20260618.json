@@ -1,0 +1,145 @@
+{
+  "assets": {
+    "realm_skin_sheet": {
+      "path": "E:\\agent-company-lab\\web\\assets\\system\\gate-radar-realm-skin-sheet-20260618.png",
+      "sha256": "a0a099968bbb69b79125cd2023bbec3d02f00ed3a29da6992c9b86390fbc2cd5",
+      "size_bytes": 2583286
+    },
+    "sigil_sheet": {
+      "path": "E:\\agent-company-lab\\web\\assets\\system\\gate-radar-sigil-sheet-20260618.png",
+      "sha256": "aec6db2f3633c80cd47f3de777d8c9eb3305c1d569ad554364c4678bb54a7aea",
+      "size_bytes": 2376166
+    }
+  },
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_filter_preference_written": 1,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_browser_local_note_cleared": 1,
+    "temporary_browser_local_note_saved": 1,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_radar_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_filters_pings_cards_actions_present",
+      "passed": true
+    },
+    {
+      "name": "desktop_notes_and_realm_skin_present",
+      "passed": true
+    },
+    {
+      "name": "generated_sigil_and_realm_assets_present",
+      "passed": true
+    },
+    {
+      "name": "browser_filter_interaction_passed",
+      "passed": true
+    },
+    {
+      "name": "temporary_note_saved_and_cleared",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_radar_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_filters_pings_cards_actions_present",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "desktop_mobile_filter_note_and_generated_asset_verification_passed",
+  "desktop": {
+    "action_count": 3,
+    "asset_image_count": 2,
+    "card_count": 5,
+    "console_error_count": 0,
+    "filter_count": 4,
+    "filter_values": [
+      "all",
+      "blocker",
+      "browser",
+      "public"
+    ],
+    "horizontal_overflow": false,
+    "note_input_exists": true,
+    "note_panel_exists": true,
+    "ping_count": 5,
+    "radar_exists": true,
+    "radar_height": 3798,
+    "radar_visible": true,
+    "radar_width": 343,
+    "realm_css": "url('./assets/system/gate-radar-realm-skin-sheet-20260618.png')",
+    "sigil_css": "url('./assets/system/gate-radar-sigil-sheet-20260618.png')",
+    "skin_class": "gate-radar-board skin-platform",
+    "skin_text": "Control Tower - Circuit lattice skin for infrastructure gates and orchestration pressure.",
+    "title": "Agent Company Atlas",
+    "url": "http://127.0.0.1:8766/index.html#lane=platform_engineering&view=overview",
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "generated_at": "2026-06-18T09:44:20Z",
+  "interaction": {
+    "active_filter_after_click": "browser",
+    "browser_filter_clicked": true,
+    "note_input_value_after_clear": "",
+    "noted_card_count_after_clear": 0,
+    "temporary_note_cleared": true,
+    "temporary_note_saved": true,
+    "visible_card_count_after_filter": 1
+  },
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "action_count": 3,
+    "card_count": 5,
+    "console_error_count": 0,
+    "filter_count": 4,
+    "horizontal_overflow": false,
+    "note_input_exists": true,
+    "ping_count": 5,
+    "radar_exists": true,
+    "radar_height": 1840,
+    "radar_visible": true,
+    "radar_width": 305,
+    "skin_class": "gate-radar-board skin-platform",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "next_action": "Continue closing older Atlas platform tasks or return to the next ranked money-path promotion item when one appears.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_gate_radar_browser_verification.v1",
+  "status": "gate_radar_browser_verified",
+  "task_id": "task-agent-company-atlas-gate-radar-v1-20260618"
+}

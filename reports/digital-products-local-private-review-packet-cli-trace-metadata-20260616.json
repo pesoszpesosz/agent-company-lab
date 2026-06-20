@@ -1,0 +1,25 @@
+{
+  "api_calls": false,
+  "artifact_paths": [
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-latest.md",
+    "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-cli-test-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-cli-validation-20260616.json",
+    "E:\\agent-company-lab\\reports\\digital-products-local-private-review-packet-cli-20260616.md"
+  ],
+  "browser_sessions_started": 0,
+  "closeout_task_id": "task-digital-products-local-private-review-packet-cli-20260616",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T21:53:07Z",
+  "packet_lane_id": "digital_products_templates_plugins",
+  "packet_task_id": "task-digital-products-local-private-review-packet-20260616",
+  "runtime": "local_cli",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_sha256": "5507713E04F0DB57D9761D7F530B9D48D49A088B17DB0CB20DBBC7F53579ACE5",
+  "span_kind": "internal",
+  "worker_starts": 0
+}

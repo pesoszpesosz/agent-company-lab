@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.model_api_egress_signed_decision_guard.v1",
+  "title": "Model API Egress Signed Decision Guard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "decision",
+    "route_id",
+    "egress_type",
+    "source_gateway_docket_path",
+    "source_gateway_docket_sha256",
+    "operator_id",
+    "operator_attestation",
+    "signed_utc",
+    "expires_utc",
+    "allowed_scope",
+    "allowed_gate_ids",
+    "approval_is_not_apply",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "worker_start_allowed",
+    "browser_session_start_allowed",
+    "provider_key_use_allowed",
+    "provider_keys_used",
+    "model_api_call_allowed",
+    "model_api_calls",
+    "training_data_upload_allowed",
+    "training_data_uploaded",
+    "max_cost_usd",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.egress_route_signed_decision_intake_contract.v1"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["deny", "approve_route_preflight_only"]
+    },
+    "route_id": {
+      "const": "model_api_gateway"
+    },
+    "egress_type": {
+      "const": "model_api"
+    },
+    "approval_is_not_apply": {
+      "const": true
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "worker_registration_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "runtime_start_allowed": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "provider_key_use_allowed": {
+      "const": false
+    },
+    "provider_keys_used": {
+      "const": false
+    },
+    "model_api_call_allowed": {
+      "const": false
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "training_data_upload_allowed": {
+      "const": false
+    },
+    "training_data_uploaded": {
+      "const": false
+    },
+    "max_cost_usd": {
+      "const": 0
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "service_requests_updated": {
+      "const": 0
+    },
+    "mcp_tool_calls": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-public-action-egress-apply-preflight-blocker-v1-20260618",
+  "task_id": "task-public-action-egress-apply-preflight-blocker-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:43:28Z",
+  "summary": "Created a report-only public_action_gateway apply-preflight blocker. The blocker keeps public egress blocked because no real signed operator public-action decision, no exact action-body approval packet, and no public-action apply-command contract exist; it preserves zero posts, zero form submissions, zero PRs, zero bounty claims, zero messages, zero browser sessions, zero account actions, zero service-request mutations, zero worker starts, zero MCP/model calls, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\public-action-egress-signed-decision-guard-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\public-action-egress-apply-preflight-blocker-v1.schema.json",
+      "sha256": "7e2a3541dc8bab142a8e56571acb90be9e8c4e0b7d0dc5375d5f1b4fbc6453ca"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_public_action_egress_apply_preflight_blocker.py",
+      "sha256": "0c4fb5e39541987e67f15386db7e37177d0f9af88c0b89b049e9ab6024a5cfa6"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_public_action_egress_apply_preflight_blocker.py",
+      "sha256": "73531bfea18ca83750ff95b6f57cc1b1b4be1eee09983cae11690c225ddb7aad"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-apply-preflight-blocker-v1-20260618.json",
+      "sha256": "fe7f7b17820796e254a1891c24c9bd2a079268ba4d17ae40f9417da09a64fbed"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-apply-preflight-blocker-v1-validation-20260618.json",
+      "sha256": "b0d56f353aac79b8777a7ecbddf58032d87c59a5ca6f5a94b90edaf6bb9e745b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\public-action-egress-apply-preflight-blocker-v1-20260618.md",
+      "sha256": "26803c9adb8101a3cbd647a5b49a7584089690e7424edf35784435d6921bc58e"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest tests.test_public_action_egress_apply_preflight_blocker tests.test_egress_route_chain_integrity_audit",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "47 tests passed",
+    "target_route_id": "public_action_gateway",
+    "target_egress_type": "public_submission",
+    "apply_preflight_status": "blocked_no_real_signed_decision",
+    "blocker_reason": "no_real_signed_operator_public_action_egress_decision_artifact",
+    "real_signed_decision_present": false,
+    "exact_action_body_approval_present": false,
+    "apply_command_contract_present": false,
+    "apply_allowed": false,
+    "public_action_allowed": false,
+    "public_actions": false,
+    "posts_created": 0,
+    "forms_submitted": 0,
+    "prs_opened": 0,
+    "bounty_claims": 0,
+    "messages_sent": 0,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "public_action_allowed": false,
+    "public_actions": false,
+    "posts_created": 0,
+    "forms_submitted": 0,
+    "prs_opened": 0,
+    "bounty_claims": 0,
+    "messages_sent": 0,
+    "browser_session_start_allowed": false,
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build public_action_gateway apply-command contract requiring real signed decision, exact action-body approval, immutable command preview, and zero auto-execution."
+}

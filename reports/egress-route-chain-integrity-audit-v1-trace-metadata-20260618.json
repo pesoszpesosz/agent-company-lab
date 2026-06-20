@@ -1,0 +1,86 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-egress-route-chain-integrity-audit-v1-20260618",
+  "task_id": "task-egress-route-chain-integrity-audit-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:54:18Z",
+  "summary": "Updated the report-only egress route chain integrity audit across all unified egress routes. The audit confirms 8 routes, 6 full report-only safety chains, and 2 partial chains. It now recognizes account_wallet_payment_gateway signed-decision guard as present, recommends account_wallet_payment_gateway apply-preflight blocker next, and preserves zero account creation, zero wallet creation, zero fund transfer, zero payment action, zero real-money action, zero public actions, zero worker starts, zero live egress, and zero external side effects.",
+  "source_gateway_docket": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\egress-route-chain-integrity-audit-v1.schema.json",
+      "sha256": "4616b0a8cca81997be49cd42cea8b3e6b509ec78ef101a057b053c35c6a833e0"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_egress_route_chain_integrity_audit.py",
+      "sha256": "3fae753556e32a65da57ee46b495da8843a18f205d372566928d08aa04b534f0"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+      "sha256": "86af2b89e1185dbce6ea7845de2c300be8cb2ef016c617d1e7eeee3bad28ef07"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-20260618.json",
+      "sha256": "58d3e3974f13d1ec13b738da1c6346c21ca62c219cd766f1cf1ae6dfaae7c4af"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-validation-20260618.json",
+      "sha256": "fd425361edf38cdec7e2ae043c161b627710e5a3443703de2582df783a22a821"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-20260618.md",
+      "sha256": "1b3dcb0b7bb74cc80de5df088d60e1cba471006be387c6f371f1f298baf05881"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest tests.test_account_wallet_payment_egress_signed_decision_guard tests.test_egress_route_chain_integrity_audit",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "49 tests passed",
+    "route_count": 8,
+    "full_chain_route_count": 6,
+    "partial_chain_route_count": 2,
+    "account_wallet_payment_present_layers": [
+      "unified_gateway_docket",
+      "signed_decision_intake_contract",
+      "signed_decision_guard"
+    ],
+    "recommended_next_route_id": "account_wallet_payment_gateway",
+    "recommended_next_layer": "apply_preflight_blocker",
+    "account_creation_allowed": false,
+    "wallet_creation_allowed": false,
+    "funds_transfer_allowed": false,
+    "payment_action_allowed": false,
+    "real_money_action_allowed": false,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "account_creation_allowed": false,
+    "wallet_creation_allowed": false,
+    "funds_transfer_allowed": false,
+    "payment_action_allowed": false,
+    "real_money_action_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build route-specific apply_preflight_blocker for account_wallet_payment_gateway while preserving zero live egress."
+}

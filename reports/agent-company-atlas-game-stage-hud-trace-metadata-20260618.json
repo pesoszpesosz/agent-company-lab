@@ -1,0 +1,50 @@
+{
+  "id": "trace-atlas_game_stage_hud_added-20260618",
+  "title": "Game Stage HUD",
+  "createdUtc": "2026-06-18T21:01:20Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "summary": "Added a compact Game Stage HUD and focused Systems Grid presentation so lane minigames feel more like playable modules and less like long page stacks.",
+  "changes": [
+    "Game mode now hides duplicated detail page chrome and replaces it with a compact arcade navigation HUD.",
+    "The Systems Grid minigame now suppresses the duplicate card stack in Game mode while keeping the animated control plane, current module status, and working step controls visible.",
+    "Phone-width Game mode keeps the systems hero, verdict, control plane, and actions inside a tighter first-screen panel."
+  ],
+  "browserEvidence": {
+    "desktop1440x900": {
+      "hudVisible": true,
+      "hudButtons": 6,
+      "oldTopDisplay": "none",
+      "oldTabsDisplay": "none",
+      "systemsGridDisplay": "none",
+      "panelHeight": 586,
+      "detailHeight": 577,
+      "boardHeight": 448,
+      "horizontalOverflowPx": -15
+    },
+    "mobile390x844": {
+      "hudVisible": true,
+      "hudButtons": 6,
+      "oldTopDisplay": "none",
+      "oldTabsDisplay": "none",
+      "systemsGridDisplay": "none",
+      "panelHeight": 520,
+      "detailHeight": 518,
+      "boardHeight": 395,
+      "horizontalOverflowPx": -15
+    }
+  },
+  "verification": {
+    "focused": "python -m pytest tests/test_agent_company_atlas_game_stage_hud.py -q -> 2 passed",
+    "full": "python -m pytest -q -> 114 passed",
+    "syntax": "node --check web\\app.js -> passed"
+  },
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "tests/test_agent_company_atlas_game_stage_hud.py",
+    "web/data/snapshot.json"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "accepted_signed_decision_count": 0,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_rejection_match_count": 6,
+  "generated_utc": "2026-06-19T21:03:22Z",
+  "lane_evidence_rows_after": 123,
+  "lane_evidence_rows_before": 122,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_readiness_signed_decision_guard_runner_passed_no_mutations",
+  "mutation_applied_count": 0,
+  "negative_signed_decision_fixture_count": 6,
+  "next_action": "Create a positive signed-decision fixture next; keep apply disabled until that fixture passes and the user explicitly approves a real apply command.",
+  "queue_mutation_count": 0,
+  "recommended_default": "keep_apply_disabled_until_signed_decision_guard_passes_positive_fixture",
+  "rejected_signed_decision_count": 6,
+  "runner_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-guard-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-guard-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_readiness_signed_decision_guard_runner.v1",
+  "signed_decision_guard_execution_count": 6,
+  "signed_decision_guard_results": [
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_operator_signature",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_operator_signature",
+      "fixture_id": "missing-operator-signature",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_target_request_id_mismatch",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_target_request_id_mismatch",
+      "fixture_id": "wrong-target-request-id",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_approval_scope_text_mismatch",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_approval_scope_text_mismatch",
+      "fixture_id": "edited-approval-scope-text",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_rollback_snapshot_mismatch",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_rollback_snapshot_mismatch",
+      "fixture_id": "stale-rollback-snapshot",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_scope_expiration",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_scope_expiration",
+      "fixture_id": "missing-scope-expiration",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_side_effect_confirmation_drift",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_side_effect_confirmation_drift",
+      "fixture_id": "side-effect-confirmation-drift",
+      "matched_expected": true
+    }
+  ],
+  "source_fixtures_evidence_id": "ceo-decision-parser-apply-readiness-signed-decision-negative-fixtures-20260616",
+  "source_fixtures_task_id": "task-ceo-decision-parser-apply-readiness-signed-decision-negative-fixtures-20260616",
+  "source_fixtures_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-readiness-signed-decision-negative-fixtures-validation-latest.json",
+  "summary": "Ran a local report-only signed-decision guard against six negative fixtures. The guard rejected every malformed signed decision with the expected rule and performed no mutation.",
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_runner": 1,
+  "tasks_table_rows_after": 215,
+  "tasks_table_rows_before": 214
+}

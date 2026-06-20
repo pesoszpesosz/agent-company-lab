@@ -1,0 +1,42 @@
+{
+  "all_assign_previews_require_manual_review": true,
+  "all_plans_no_assignment": true,
+  "api_calls": false,
+  "approval_granted_by_plan": false,
+  "assign_command_preview_count": 11,
+  "assignable_now_count": 0,
+  "assignment_plan_path": "E:\\agent-company-lab\\reports\\service-worker-assignment-plan-latest.json",
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T10:21:36Z",
+  "planned_count": 14,
+  "route_counts": {
+    "blocked_until_human_cro_approval": 11,
+    "terminal_complete_no_assignment": 1,
+    "terminal_rejected_no_assignment": 2
+  },
+  "schema_version": "service_worker_assignment_plan_validation.v1",
+  "service_requests_assigned_by_plan": 0,
+  "service_requests_updated_by_plan": 0,
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "worker_role_counts": {
+    "browser_action_worker": 8,
+    "chief_risk_officer": 1,
+    "evidence_builder": 1,
+    "observability_worker": 3,
+    "reputation_review_worker": 1
+  },
+  "worker_starts": 0,
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "task_id": "task-agent-company-atlas-deck-dock-v1-20260618",
+  "trace_id": "trace-agent-company-atlas-deck-dock-v1-20260618",
+  "event_id": "trace-atlas_deck_dock_added-20260618",
+  "event_type": "atlas_deck_dock_added",
+  "event_time": "2026-06-18T00:00:00Z",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Added and verified a sticky Atlas Deck Dock that converts the long atlas page into compact Control, Worlds, Command, History, Library, and All modes. The fix directly addresses the operator critique that the website had too much scrolling and weak interaction quality.",
+  "user_problem": {
+    "critique": "The overall website was too scroll-heavy and the animation/navigation quality felt weak.",
+    "design_response": "Use mode-based atlas decks so the default cockpit view is compact while the full audit view remains available."
+  },
+  "implementation": {
+    "feature": "Atlas Deck Dock",
+    "default_deck": "control",
+    "decks": [
+      "control",
+      "worlds",
+      "command",
+      "history",
+      "library",
+      "all"
+    ],
+    "notable_fixes_from_browser_qa": [
+      "Moved route parsing before route.deck usage in loadSnapshot so initial renders do not trip a temporal-dead-zone error.",
+      "Scoped deck-button click handling to #atlas-deck-dock [data-atlas-deck] so body[data-atlas-deck] no longer intercepts every page click.",
+      "Moved route persistence into setAtlasDeck so deck changes from dock buttons and cross-panel actions keep the URL hash in sync."
+    ],
+    "generated_asset": null
+  },
+  "files_changed": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_deck_dock.py",
+    "reports/agent-company-atlas-deck-dock-trace-metadata-20260618.json",
+    "web/data/snapshot.json"
+  ],
+  "verification": {
+    "static": [
+      {
+        "command": "node --check E:\\agent-company-lab\\web\\app.js",
+        "result": "passed"
+      },
+      {
+        "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_deck_dock.py -q",
+        "result": "1 passed"
+      },
+      {
+        "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+        "result": "23 passed, 55 deselected"
+      }
+    ],
+    "browser": [
+      {
+        "url": "http://127.0.0.1:5177/?verify=atlas-deck-dock-route-sync#lane=platform_engineering&view=overview&deck=control",
+        "finding": "Control deck rendered with 3 visible atlas sections, 4 Live Ops action buttons, no console warnings/errors, and no document horizontal overflow."
+      },
+      {
+        "url": "http://127.0.0.1:5177/?verify=atlas-deck-dock-route-sync#lane=platform_engineering&view=overview&deck=all",
+        "finding": "All deck rendered with 24 visible atlas sections and no document horizontal overflow."
+      },
+      {
+        "finding": "Control versus All reduced scroll height by 34757 px in the browser QA run."
+      },
+      {
+        "finding": "Live Ops TIMELINE switched to the History deck, exposed the mission feed panel, and updated the hash to deck=history."
+      },
+      {
+        "finding": "Live Ops COMMS switched to the Command deck, exposed the Command Relay Deck, and updated the hash to deck=command."
+      },
+      {
+        "finding": "Responsive QA at 390x844, 820x1180, 1280x720, and 1600x900 showed a visible dock, 6 deck buttons, 4 Live Ops actions, no body/document horizontal overflow, and no console warnings/errors."
+      }
+    ]
+  },
+  "follow_up": [
+    "Continue replacing long stacked sections with focused deck experiences.",
+    "Upgrade motion quality inside each deck after the layout pressure is under control.",
+    "Create lane-specific minigame skins and richer bot avatars as reusable standalone repo assets."
+  ]
+}

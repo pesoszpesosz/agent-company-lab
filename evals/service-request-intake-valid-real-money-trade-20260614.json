@@ -1,0 +1,10 @@
+{
+  "lane_id": "platform_engineering",
+  "venue": "validator_test_only",
+  "instrument_or_market": "fictional_paper_market",
+  "paper_evidence_artifact": "E:\\agent-company-lab\\reports\\service-catalog-latest.md",
+  "fees_and_depth": "not_applicable_validator_test",
+  "max_loss": "0_usd_no_trade",
+  "proposed_capital": "0_usd",
+  "kill_switch": "no_external_action_test_request"
+}

@@ -1,0 +1,39 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_implementation_preflight_cli_validation.v1",
+    "created_at":  "2026-06-15T16:03:46Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-implementation-preflight-cli-20260615",
+    "command_added_count":  1,
+    "preflight_check_count":  9,
+    "passed_preflight_check_count":  9,
+    "upstream_validation_count":  4,
+    "upstream_validation_passed_count":  4,
+    "runtime_implementation_allowed":  false,
+    "runtime_code_write_allowed":  false,
+    "report_only_scaffolding_allowed":  true,
+    "chain_integrity_checked_report_count":  21,
+    "chain_integrity_failure_count":  0,
+    "forbidden_runtime_import_count":  0,
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_mutation_count":  0,
+    "model_api_gate_remains_parked":  true,
+    "model_api_pool_registered":  false,
+    "all_checks_passed":  true,
+    "failure_count":  0,
+    "failures":  [
+
+                 ],
+    "next_action":  "Create local-only adapter implementation preflight fixtures for permitted report-only scaffolding, still without Temporal/Inngest imports or runtime starts."
+}

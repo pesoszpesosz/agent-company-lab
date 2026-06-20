@@ -1,0 +1,89 @@
+{
+  "trace_id": "trace-agent-company-atlas-expansion-realms-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "company_level_expansion_realms",
+  "summary": "Added a data-derived Expansion Realms layer that groups lanes into scalable game-like packs with avatar clusters, pack meters, clickable lane chips, and active-state sync.",
+  "design_research": {
+    "queries": [
+      "dashboard information architecture grouping many cards progressive disclosure patterns",
+      "game world map biome selection level packs UI pattern",
+      "scalable dashboard card grouping filters tabs large number of projects UX"
+    ],
+    "source_urls": [
+      "https://www.nngroup.com/articles/progressive-disclosure/",
+      "https://www.nngroup.com/articles/tabs-used-right/",
+      "https://ixdf.org/literature/topics/progressive-disclosure"
+    ],
+    "pattern_notes": [
+      "Progressive disclosure keeps the essential group overview visible while deferring lane-level details until requested.",
+      "Grouped navigation reduces scanning cost when a dashboard has many repeated cards or paths.",
+      "The Atlas pack layer avoids hidden carousel tabs; it keeps all current packs visible on desktop and bounded-scrollable on mobile."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "data_inputs": [
+      "lane.department",
+      "lane.name",
+      "lane.visual.realm",
+      "lane.visual.avatar",
+      "lane.level",
+      "lane.progress",
+      "lane.score",
+      "lane.counts.blockers",
+      "lane.counts.outcomes",
+      "lane.counts.artifacts",
+      "lane.visual.minigame.id"
+    ],
+    "realm_families": [
+      "Build Realms",
+      "Growth Realms",
+      "Market Realms",
+      "Revenue Realms",
+      "Discovery Realms",
+      "Custom fallback realms"
+    ],
+    "ui_contract": [
+      "Every current lane appears once as a lane chip inside a realm pack.",
+      "Packs are derived from lane metadata and do not require snapshot schema changes.",
+      "Each pack shows lane count, outcome count, blocker count, artifact count, total levels, and a progress meter.",
+      "Clicking a pack lead or lane chip syncs URL hash, lane detail, lane list, progression card, and active realm pack state.",
+      "Phone view uses a one-column bounded scroll deck; laptop uses three columns; wide desktop uses five columns."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "lane_visuals_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=expansion-realms-final&cache=20260617-expansion-realms",
+      "checks": [
+        {
+          "viewport": "390x920",
+          "result": "Expansion Realms panel visible, 5 packs rendered, 12 lane chips rendered, 4 summary stats rendered, one-column bounded scroll deck, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Expansion Realms panel visible, 5 packs rendered, 12 lane chips rendered, three-column deck, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1600x900",
+          "result": "Expansion Realms panel visible, 5 packs rendered, 12 lane chips rendered, five-column deck, no horizontal overflow, and no console errors."
+        },
+        {
+          "viewport": "1280x800",
+          "result": "Clicking the prediction_market_research lane chip updated the hash to #lane=prediction_market_research&view=overview and activated the matching realm chip, pack, progression card, lane-list row, and detail panel."
+        }
+      ]
+    }
+  }
+}

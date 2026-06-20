@@ -1,0 +1,25 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-stage-event-ribbon-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-stage-event-ribbon-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_stage_event_ribbon_added-20260619",
+  "title": "Command Cockpit Stage Event Ribbon",
+  "timestamp": "2026-06-19T15:25:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Added a compact event ribbon inside the selected lane stage so recent events, proof, gates, and next move stay visible without adding another scrolling report stack.",
+  "changes": [
+    "Derived event, proof, gate, and next-move cells from each lane's trail, evidence, blockers, service requests, and next action.",
+    "Mounted the ribbon inside the Command Cockpit Overview stage with a sweep runner and compact sticky behavior.",
+    "Contained the ribbon horizontally on narrow screens so long lane text does not create page overflow."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

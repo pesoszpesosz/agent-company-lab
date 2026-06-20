@@ -1,0 +1,33 @@
+{
+  "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-paid_code_bounties-first-local-proof-20260615 --lane-id paid_code_bounties --title \"Prepare first local paid-code bounty duplicate-check proof packet\" --priority 86 --owner-agent-id lane-manager-paid_code_bounties-019ec612 --duplicate-key paid_code_bounties-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\paid_code_bounties-manager-proof-task-20260615.md --next-action \"Use imported paid-code evidence to draft a duplicate-check proof packet with repo-readiness checks, payout-gate notes, and no-claim boundary.\"",
+  "department": "Cashflow Engineering",
+  "evidence_count": 15,
+  "evidence_id": "pe-ledger-fuzoe-pd-hunter-18-org-list-expansion-4db3aa286661",
+  "forbidden_actions": [
+    "Do not execute the command preview without explicit human approval.",
+    "Do not browse, use accounts, register, accept terms, upload data, publish, submit, contact anyone, trade, touch wallets/payments, or call model/API services from this packet.",
+    "Do not mutate service requests, assign service workers, start workers, perform security testing, or create external side effects from this packet."
+  ],
+  "generated_utc": "2026-06-15T17:21:52Z",
+  "lane_id": "paid_code_bounties",
+  "live_task_created": false,
+  "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+  "parked_request_count": 1,
+  "parked_request_ids": [
+    "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+  ],
+  "proposed_task": {
+    "duplicate_key": "paid_code_bounties-first-local-proof-20260615",
+    "evidence_required": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\paid_code_bounties-manager-proof-task-20260615.md",
+    "lane_id": "paid_code_bounties",
+    "next_action": "Use imported paid-code evidence to draft a duplicate-check proof packet with repo-readiness checks, payout-gate notes, and no-claim boundary.",
+    "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+    "priority": 86,
+    "task_id": "task-paid_code_bounties-first-local-proof-20260615",
+    "title": "Prepare first local paid-code bounty duplicate-check proof packet"
+  },
+  "report_only": true,
+  "schema_version": "agent_company.manager_proof_task_packet.v1",
+  "source_spec_count": 1,
+  "source_spec_id": "paid_code_profit_edge_scan_import"
+}

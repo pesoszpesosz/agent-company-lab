@@ -1,0 +1,203 @@
+{
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_hash_changes": 2,
+    "browser_local_queue_draft_staged": 1,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_panel_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_cards_meters_and_actions_present",
+      "passed": true
+    },
+    {
+      "name": "desktop_has_comms_queue_path_actions",
+      "passed": true
+    },
+    {
+      "name": "desktop_active_state_and_motion_signals_present",
+      "passed": true
+    },
+    {
+      "name": "queue_action_stages_local_draft",
+      "passed": true
+    },
+    {
+      "name": "comms_action_opens_lane_comms",
+      "passed": true
+    },
+    {
+      "name": "path_action_opens_lane_path",
+      "passed": true
+    },
+    {
+      "name": "active_card_syncs_to_selected_lane",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_single_column_crew_deck_present",
+      "passed": true
+    },
+    {
+      "name": "mobile_actions_no_overflow_or_errors",
+      "passed": true
+    },
+    {
+      "name": "wide_three_column_crew_deck_present",
+      "passed": true
+    },
+    {
+      "name": "wide_actions_no_overflow_or_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "crew_cards_readiness_meters_queue_comms_path_responsive_checks_passed",
+  "desktop": {
+    "action_count": 36,
+    "action_types": [
+      "comms",
+      "path",
+      "queue"
+    ],
+    "active_cards": 1,
+    "animated_signal": true,
+    "cards": 11,
+    "comms_buttons": 12,
+    "console_error_count": 0,
+    "grid_columns": 2,
+    "horizontal_overflow": false,
+    "lanes": 11,
+    "meters": 11,
+    "panel_exists": true,
+    "panel_height": 1641,
+    "panel_visible": true,
+    "panel_width": 1187,
+    "path_buttons": 12,
+    "queue_buttons": 12,
+    "reduced_motion_signal": true,
+    "url": "http://127.0.0.1:8773/index.html?verify=crew-bridge-fresh-20260618#lane=platform_engineering&view=overview",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "generated_at": "2026-06-18T10:14:16Z",
+  "interactions": {
+    "active_card_recheck_count": 1,
+    "active_card_recheck_lane": "money_source_discovery",
+    "comms_button_count_for_money_source_discovery": 1,
+    "comms_hash_after_click": "#lane=money_source_discovery&view=comms",
+    "comms_selected_heading": "Money Source Discovery",
+    "comms_visible_after_click": true,
+    "path_button_count_for_money_source_discovery": 1,
+    "path_hash_after_click": "#lane=money_source_discovery&view=path",
+    "path_selected_heading": "Money Source Discovery",
+    "path_visible_after_click": true,
+    "queue_button_count_for_money_source_discovery": 1,
+    "queue_card_staged": true,
+    "queue_outbox_excerpt_contains_review_gate": true,
+    "queue_outbox_has_lane": true
+  },
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "action_buttons": 36,
+    "active_cards": 1,
+    "cards": 11,
+    "comms_buttons": 12,
+    "console_error_count": 0,
+    "grid_columns": 1,
+    "horizontal_overflow": false,
+    "meters": 11,
+    "panel_exists": true,
+    "panel_height": 3474,
+    "panel_visible": true,
+    "panel_width": 313,
+    "path_buttons": 12,
+    "queue_buttons": 12,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "next_action": "Continue closing Atlas platform tasks, starting with Milestone Runway verification.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_crew_bridge_browser_verification.v1",
+  "source_files": {
+    "app": {
+      "path": "E:\\agent-company-lab\\web\\app.js",
+      "sha256": "49fb537fd4ea17db6403d54c8139b6165138223826528d9fcb59ac3a048838c7",
+      "size_bytes": 469167
+    },
+    "index": {
+      "path": "E:\\agent-company-lab\\web\\index.html",
+      "sha256": "3a8fee2fe528b4aea399d4c625a696a1c0a31bd835febd03dd415a4b30e2c2b7",
+      "size_bytes": 15465
+    },
+    "prior_trace_metadata": {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-atlas-crew-bridge-trace-metadata-20260618.json",
+      "sha256": "2a39d8df046fffeab6f61817a9e6de42d6872b64c28f4dfc7310218bbca77702",
+      "size_bytes": 5843
+    },
+    "readme": {
+      "path": "E:\\agent-company-lab\\web\\README.md",
+      "sha256": "459cd6f9f3fd61436a1f4e0ef172d64f4fb02876731b15faaae54b64df64c912",
+      "size_bytes": 37432
+    },
+    "snapshot": {
+      "path": "E:\\agent-company-lab\\web\\data\\snapshot.json",
+      "sha256": "f4aea045bb0fed475813be2c63261d4c0ec74b1cad6c8b6155f1ce2054abe69c",
+      "size_bytes": 1011692
+    },
+    "styles": {
+      "path": "E:\\agent-company-lab\\web\\styles.css",
+      "sha256": "03f3fdd6d892c21cdeb5109d20b347020cc2de6a83e1d736a03fa68f2f3aad02",
+      "size_bytes": 476554
+    }
+  },
+  "status": "crew_bridge_browser_verified",
+  "task_id": "task-agent-company-atlas-crew-bridge-v1-20260618",
+  "wide": {
+    "action_buttons": 36,
+    "active_cards": 1,
+    "cards": 11,
+    "comms_buttons": 12,
+    "console_error_count": 0,
+    "grid_columns": 3,
+    "horizontal_overflow": false,
+    "meters": 11,
+    "panel_exists": true,
+    "panel_height": 1110,
+    "panel_visible": true,
+    "panel_width": 1507,
+    "path_buttons": 12,
+    "queue_buttons": 12,
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    }
+  }
+}

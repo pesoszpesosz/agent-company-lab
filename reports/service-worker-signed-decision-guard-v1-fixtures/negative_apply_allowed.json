@@ -1,0 +1,34 @@
+{
+  "allowed_request_ids": [
+    "req-algora-opik-readonly-refresh-20260618"
+  ],
+  "allowed_scope": "browser_read_only_session:approve_assignment_preflight_only:exact_scope",
+  "apply_allowed": true,
+  "approval_is_not_apply": true,
+  "decision": "approve_assignment_preflight_only",
+  "decision_id": "service-worker-signed-decision-negative-apply_allowed",
+  "exact_scope_required": true,
+  "expires_utc": "2099-01-01T00:00:00Z",
+  "operator_attestation": "approve_assignment_preflight_only for browser_read_only_session. I understand this signed decision is report-only and does not apply approval, assign requests, start workers, open browsers, call APIs, or perform external actions.",
+  "operator_id": "human-operator",
+  "request_type": "browser_research",
+  "runtime_boundary": {
+    "api_calls": false,
+    "apply_allowed": false,
+    "approval_granted_by_guard": false,
+    "approval_rows_written": 0,
+    "browser_sessions_started": false,
+    "decision_authority_granted_by_guard": false,
+    "decisions_applied": 0,
+    "external_side_effects": false,
+    "rejection_granted_by_guard": false,
+    "report_only": true,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.service_worker_signed_decision_guard.v1",
+  "service_id": "browser_read_only_session",
+  "signed_utc": "2026-06-17T20:35:00Z",
+  "source_intake_contract_path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-intake-contract-v1-20260617.json"
+}

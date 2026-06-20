@@ -1,0 +1,217 @@
+{
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_asset_filter_changed": 1,
+    "browser_local_hash_changes": 3,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_panel_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_motion_cards_samples_and_chips_present",
+      "passed": true
+    },
+    {
+      "name": "desktop_active_state_and_motion_types_present",
+      "passed": true
+    },
+    {
+      "name": "desktop_actions_present",
+      "passed": true
+    },
+    {
+      "name": "desktop_reduced_motion_and_animation_signal_present",
+      "passed": true
+    },
+    {
+      "name": "lane_chip_switches_motion_family",
+      "passed": true
+    },
+    {
+      "name": "arcade_action_reveals_arcade_deck",
+      "passed": true
+    },
+    {
+      "name": "assets_action_filters_game_assets",
+      "passed": true
+    },
+    {
+      "name": "game_action_opens_lane_game",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_single_column_motion_audit_present",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "wide_four_column_motion_audit_present",
+      "passed": true
+    },
+    {
+      "name": "wide_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "motion_family_cards_live_samples_reduced_motion_actions_and_responsive_checks_passed",
+  "desktop": {
+    "action_buttons": [
+      "arcade",
+      "assets",
+      "game"
+    ],
+    "active_cards": 1,
+    "active_chips": 1,
+    "animated": 21,
+    "cards": 6,
+    "console_error_count": 0,
+    "grid_columns": 3,
+    "has_reduced_motion_rule": true,
+    "heading": "Grid motion audit",
+    "horizontal_overflow": false,
+    "lane_chips": 12,
+    "note_text": "5 motion families include gated lanes; new minigame ids fall back to Spark until a custom personality is added.",
+    "panel_exists": true,
+    "panel_height": 881,
+    "panel_visible": true,
+    "panel_width": 1221,
+    "reduced_motion_signal": true,
+    "samples": 7,
+    "type_keys": [
+      "drift",
+      "grid",
+      "map",
+      "pulse",
+      "route",
+      "scan"
+    ],
+    "url": "http://127.0.0.1:8772/index.html?verify=motion-forge-fresh-20260618#lane=platform_engineering&view=overview",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "generated_at": "2026-06-18T10:09:39Z",
+  "interactions": {
+    "arcade_action_count": 1,
+    "arcade_action_reveals_deck": true,
+    "arcade_cards_after_action": 12,
+    "asset_count_after_assets_action": "12 / 66 game",
+    "asset_filter_after_assets_action": "game",
+    "assets_action_count": 1,
+    "game_action_buttons_after_play": 3,
+    "game_action_count": 1,
+    "game_assets_after_assets_action": 12,
+    "game_contains_lane_specific_minigame": true,
+    "game_contains_venue_mapper": true,
+    "game_hash_after_clean_play": "#lane=money_source_discovery&view=game",
+    "game_selected_heading_after_play": "Money Source Discovery",
+    "lane_chip_active_chip": "money_source_discovery",
+    "lane_chip_active_type": "map",
+    "lane_chip_count_for_money_source_discovery": 1,
+    "lane_chip_hash_after_click": "#lane=money_source_discovery&view=overview",
+    "lane_chip_heading_after_click": "Map motion audit"
+  },
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "active_cards": 1,
+    "active_chips": 1,
+    "animated": 21,
+    "cards": 6,
+    "console_error_count": 0,
+    "grid_columns": 1,
+    "horizontal_overflow": false,
+    "lane_chips": 12,
+    "panel_exists": true,
+    "panel_height": 2812,
+    "panel_visible": true,
+    "panel_width": 347,
+    "samples": 7,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "next_action": "Continue closing Atlas platform tasks, starting with Crew Bridge squad-readiness verification.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_motion_forge_browser_verification.v1",
+  "source_files": {
+    "app": {
+      "path": "E:\\agent-company-lab\\web\\app.js",
+      "sha256": "f4336517ee43a8a1503d43a29eab66e1d51fe39cd478193933b68fc781ec1f70",
+      "size_bytes": 458453
+    },
+    "index": {
+      "path": "E:\\agent-company-lab\\web\\index.html",
+      "sha256": "3a8fee2fe528b4aea399d4c625a696a1c0a31bd835febd03dd415a4b30e2c2b7",
+      "size_bytes": 15465
+    },
+    "prior_trace_metadata": {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-atlas-motion-forge-trace-metadata-20260618.json",
+      "sha256": "f1544af226dda9946224542a2beabcb87cc12c6f0673364c070d142d27ae069a",
+      "size_bytes": 6080
+    },
+    "readme": {
+      "path": "E:\\agent-company-lab\\web\\README.md",
+      "sha256": "459cd6f9f3fd61436a1f4e0ef172d64f4fb02876731b15faaae54b64df64c912",
+      "size_bytes": 37432
+    },
+    "snapshot": {
+      "path": "E:\\agent-company-lab\\web\\data\\snapshot.json",
+      "sha256": "f4aea045bb0fed475813be2c63261d4c0ec74b1cad6c8b6155f1ce2054abe69c",
+      "size_bytes": 1011692
+    },
+    "styles": {
+      "path": "E:\\agent-company-lab\\web\\styles.css",
+      "sha256": "03f3fdd6d892c21cdeb5109d20b347020cc2de6a83e1d736a03fa68f2f3aad02",
+      "size_bytes": 476554
+    }
+  },
+  "status": "motion_forge_browser_verified",
+  "task_id": "task-agent-company-atlas-motion-forge-v1-20260618",
+  "wide": {
+    "active_cards": 1,
+    "active_chips": 1,
+    "animated": 21,
+    "cards": 6,
+    "console_error_count": 0,
+    "grid_columns": 4,
+    "horizontal_overflow": false,
+    "lane_chips": 12,
+    "panel_exists": true,
+    "panel_height": 910,
+    "panel_visible": true,
+    "panel_width": 1541,
+    "samples": 7,
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    }
+  }
+}

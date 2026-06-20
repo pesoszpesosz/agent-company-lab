@@ -1,0 +1,34 @@
+from __future__ import annotations
+
+"""Compatibility facade for signed CEO decision apply-command writers."""
+
+from .ceo_decision_signed_apply_preflight import (
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_preflight,
+    write_ceo_decision_parser_apply_readiness_signed_decision_operator_apply_approval_packet,
+)
+
+from .ceo_decision_signed_apply_command_contract import (
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_contract,
+)
+
+from .ceo_decision_signed_apply_command_fixtures import (
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_negative_fixtures,
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_guard_runner,
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_positive_fixture,
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_positive_runner,
+)
+
+from .ceo_decision_signed_apply_closeout import (
+    write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_closeout,
+)
+
+__all__ = [
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_preflight",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_operator_apply_approval_packet",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_contract",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_negative_fixtures",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_guard_runner",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_positive_fixture",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_positive_runner",
+    "write_ceo_decision_parser_apply_readiness_signed_decision_apply_command_closeout",
+]

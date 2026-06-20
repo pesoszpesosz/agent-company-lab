@@ -1,0 +1,33 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "candidate_rows": 0,
+    "external_side_effects": 0,
+    "fixture_rows_created": 10,
+    "github_comments_or_prs": 0,
+    "hard_reject_rows": 1,
+    "model_mcp_or_external_api_calls": 0,
+    "opire_account_or_login": false,
+    "parsed_rows_emitted": 10,
+    "payments": 0,
+    "proposals_or_submissions": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "try_claim_reward_commands": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "opire_saved_card_parser_checker_created",
+  "generated_at": "2026-06-18T08:49:08Z",
+  "lane_id": "paid_code_bounties",
+  "packet_summary": {
+    "candidate_count": 0,
+    "hard_reject_count": 1,
+    "parked_count": 9,
+    "rejected_or_deprioritized_count": 0,
+    "row_count": 10
+  },
+  "schema_version": "paid_code.opire_saved_card_parser_checker.trace.v1",
+  "source": "tools/create_opire_saved_card_parser_checker.py",
+  "summary": "Local Opire saved-card parser checker created; no account, claim, public action, payment, or external side effect.",
+  "task_id": "task-opire-saved-card-parser-checker-v1-20260618"
+}

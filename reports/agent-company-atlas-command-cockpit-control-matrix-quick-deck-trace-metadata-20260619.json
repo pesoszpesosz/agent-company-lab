@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-control-matrix-quick-deck-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-control-matrix-quick-deck-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-control-matrix-quick-deck-v1-20260619",
+  "title": "Command Cockpit Control Matrix Quick Deck",
+  "createdAt": "2026-06-19T10:02:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the selected-lane control matrix into a quick game-controller deck inside the Command Cockpit so more mounted-stage content stays visible.",
+  "proof": [
+    "Scoped the quick deck to Command Cockpit only, preserving the richer full control matrix elsewhere.",
+    "Collapsed Latest, Gate, and Next into three compact chronicle chips without adding a new scroll section.",
+    "Kept view portals visible as a compact command row and paired the view runner with quick lane switching on the bottom row.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the quick-deck unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

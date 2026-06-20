@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.model_api_egress_apply_command_contract.v1",
+  "title": "Model API Egress Apply Command Contract v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "command_id",
+    "command_type",
+    "target_route_id",
+    "target_egress_type",
+    "source_apply_preflight_blocker_path",
+    "source_guard_validation_path",
+    "expected_source_apply_preflight_status",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "allowed_scope",
+    "target_request_ids",
+    "apply_command_allowed",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "provider_key_use_allowed",
+    "provider_keys_used",
+    "model_api_call_allowed",
+    "model_api_calls",
+    "training_data_upload_allowed",
+    "training_data_uploaded",
+    "max_cost_usd",
+    "worker_start_allowed",
+    "service_requests_assigned",
+    "service_requests_updated",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.model_api_egress_apply_command_contract.v1"
+    },
+    "command_type": {
+      "type": "string",
+      "enum": ["deny_noop", "report_only_apply_command_contract"]
+    },
+    "target_route_id": {
+      "const": "model_api_gateway"
+    },
+    "target_egress_type": {
+      "const": "model_api"
+    },
+    "apply_command_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "provider_key_use_allowed": {
+      "const": false
+    },
+    "provider_keys_used": {
+      "const": false
+    },
+    "model_api_call_allowed": {
+      "const": false
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "training_data_upload_allowed": {
+      "const": false
+    },
+    "training_data_uploaded": {
+      "const": false
+    },
+    "max_cost_usd": {
+      "const": 0
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "service_request_execution_plan.v1",
+  "plan_id": "plan-next-wave-digital-marketplace-browser-readonly-20260614",
+  "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+  "service_id": "browser_read_only_session",
+  "request_type": "browser_research",
+  "lane_id": "digital_products_templates_plugins",
+  "created_utc": "2026-06-14T20:08:00Z",
+  "approval_status_snapshot": "needs_review",
+  "plan_is_approval": false,
+  "objective": "After explicit approval only, read public marketplace terms, fees, payout, listing, prohibited-content, refund, file-delivery, and seller-requirement pages for the Agent Skill Starter Kit direct-download route.",
+  "operator_role": "browser_action_worker",
+  "allowed_scope": {
+    "allowed_hosts": [
+      "gumroad.com",
+      "www.lemonsqueezy.com",
+      "lemonsqueezy.com",
+      "promptbase.com"
+    ],
+    "starting_urls": [
+      "https://gumroad.com/",
+      "https://www.lemonsqueezy.com/ecommerce/digital-products",
+      "https://promptbase.com/sell"
+    ],
+    "allowed_page_types": [
+      "public marketing pages",
+      "public help or documentation pages linked from the starting URLs",
+      "public pricing, fees, payout, seller, refund, prohibited-content, acceptable-use, and terms pages"
+    ],
+    "allowed_actions": [
+      "open public pages",
+      "follow public documentation or help links on allowed hosts",
+      "record source URLs and page titles",
+      "copy short factual snippets within copyright limits",
+      "summarize terms, fees, payout rules, listing requirements, refund rules, file-delivery constraints, and prohibited-content constraints",
+      "capture local Markdown notes and optional screenshots"
+    ]
+  },
+  "prohibited_actions": [
+    "login",
+    "signup",
+    "seller onboarding",
+    "terms acceptance",
+    "listing creation",
+    "product upload",
+    "payment setup",
+    "tax form or KYC form entry",
+    "purchase",
+    "public promotion",
+    "comments or messages",
+    "saving settings",
+    "submitting forms",
+    "entering credentials, OTPs, payment details, personal data, private files, or wallet information",
+    "using signed-in pages",
+    "bypassing paywalls, rate limits, access controls, or platform rules"
+  ],
+  "stop_conditions": [
+    "Any page asks for login, signup, account creation, seller onboarding, consent acceptance, payment, tax, KYC, private data, credentials, OTP, wallet action, or file upload.",
+    "A required page is not public or requires a signed-in state.",
+    "A link leaves the allowed hosts.",
+    "The browser worker cannot distinguish public guidance from contractual acceptance.",
+    "The task would require a public action, marketplace listing, or real-money/payment action."
+  ],
+  "execution_steps": [
+    {
+      "step_id": "preflight",
+      "action": "Verify the service request is explicitly approved and assigned before opening any browser session. If status is still needs_review, stop and write no browser output.",
+      "allowed": true,
+      "evidence_to_capture": [
+        "service request status",
+        "approval scope",
+        "assigned worker"
+      ]
+    },
+    {
+      "step_id": "gumroad_public_review",
+      "action": "Read public Gumroad pages linked from the starting URL for fees, payouts, seller requirements, prohibited content, refunds, and digital file delivery.",
+      "allowed": true,
+      "evidence_to_capture": [
+        "source URLs",
+        "page titles",
+        "fee/payout summary",
+        "listing and seller constraints",
+        "stop gates encountered"
+      ]
+    },
+    {
+      "step_id": "lemon_squeezy_public_review",
+      "action": "Read public Lemon Squeezy pages linked from the starting URL for digital product listing, merchant-of-record/payment/tax positioning, fees, payouts, seller requirements, prohibited content, refunds, and file delivery.",
+      "allowed": true,
+      "evidence_to_capture": [
+        "source URLs",
+        "page titles",
+        "fee/payout summary",
+        "merchant/payment/tax gates",
+        "listing and file-delivery constraints"
+      ]
+    },
+    {
+      "step_id": "promptbase_public_review",
+      "action": "Read public PromptBase sell and help pages for accepted product types, seller requirements, review process, fees/payouts, prohibited content, and whether the Agent Skill Starter Kit format appears eligible.",
+      "allowed": true,
+      "evidence_to_capture": [
+        "source URLs",
+        "page titles",
+        "accepted format notes",
+        "seller/review constraints",
+        "eligibility concerns"
+      ]
+    },
+    {
+      "step_id": "route_comparison",
+      "action": "Compare Gumroad, Lemon Squeezy, and PromptBase for the existing Agent Skill Starter Kit v0 using only captured public evidence.",
+      "allowed": true,
+      "evidence_to_capture": [
+        "recommended first route",
+        "blocking gates per route",
+        "questions for user/CRO",
+        "next local action before listing"
+      ]
+    }
+  ],
+  "evidence_requirements": [
+    "Every claim must cite a captured public URL.",
+    "Fees, payout timing, seller requirements, and prohibited-content notes must be separated by marketplace.",
+    "Unverified or unavailable information must be marked unknown rather than inferred.",
+    "The output must explicitly state that no account, listing, upload, payment, tax/KYC, public action, or real-money action was performed."
+  ],
+  "expected_outputs": [
+    {
+      "kind": "browser_readonly_capture",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-capture-20260614.md",
+      "required": true
+    },
+    {
+      "kind": "route_comparison_json",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-route-comparison-20260614.json",
+      "required": true
+    },
+    {
+      "kind": "blocker_note",
+      "path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\marketplace-browser-readonly-blocker-note-20260614.md",
+      "required": false
+    }
+  ],
+  "post_run_updates": [
+    "record artifacts in SQLite",
+    "record trace event with api_calls=false and external_side_effects=false",
+    "complete service request only if approved scope was followed and output artifacts exist",
+    "do not mark any route public-listing ready unless legal/payment and public-action gates are separately approved"
+  ],
+  "external_side_effects_allowed": false,
+  "real_money_allowed": false,
+  "public_action_allowed": false,
+  "account_or_identity_action_allowed": false,
+  "metadata": {
+    "api_calls": false,
+    "browser_allowed_after_approval_only": true,
+    "source_packet": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\packet.md",
+    "current_request_status": "needs_review",
+    "created_by": "recovered-profitable-edge-infra"
+  }
+}

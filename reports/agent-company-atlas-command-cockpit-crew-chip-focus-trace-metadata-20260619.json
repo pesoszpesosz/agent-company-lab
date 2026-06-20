@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-crew-chip-focus-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-crew-chip-focus-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-crew-chip-focus-v1-20260619",
+  "title": "Command Cockpit Crew Chip Focus",
+  "createdAt": "2026-06-19T14:12:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Turned the desktop Command Cockpit Overview bot handoff into a compact crew chip and softened the right edge so the selected lane reads as one focused game stage.",
+  "proof": [
+    "Scoped the smaller bot chip to Command Cockpit Overview so other detail views keep their richer handoff card.",
+    "Trimmed crew avatar, copy, padding, and height to reduce right-side visual noise without hiding owner identity.",
+    "Added a pointer-safe focus fade on the selected-lane content edge so dense HUD text no longer reads as another hidden column."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-crew-chip-focus-trace-metadata-20260619.json"
+  ]
+}

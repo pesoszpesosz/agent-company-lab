@@ -1,0 +1,72 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-map-notes-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Bridged browser-local Gate Radar notes into the Path Map so matching gate nodes and the route board show private operator memory without changing the snapshot schema.",
+  "design_research": {
+    "queries": [
+      "2026 dashboard UX annotations notes timeline blockers path visualization best practices",
+      "timeline visualizations UX annotations milestones blockers dashboard best practices",
+      "operations dashboard comments notes triage blockers UX best practices"
+    ],
+    "source_urls": [
+      "https://omni.co/articles/data-visualization-best-practices-for-better-decision-making",
+      "https://www.smashingmagazine.com/2025/09/ux-strategies-real-time-dashboards/",
+      "https://www.pencilandpaper.io/articles/ux-pattern-analysis-data-dashboards",
+      "https://www.tableau.com/visualization/data-visualization-best-practices"
+    ],
+    "pattern_notes": [
+      "Dashboard annotations should sit close to the decision point so operators do not need to recall context from another view.",
+      "Complex dashboards stay usable when they prioritize the next action, use consistent visual hierarchy, and keep scan paths short.",
+      "Route and timeline views benefit from progressive disclosure: badges and previews show what matters now, while deeper logs remain available on demand."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-path-map-notes-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].gateMap",
+      "snapshot.lanes[].serviceRequests",
+      "snapshot.lanes[].promotionGates",
+      "browser localStorage key agent-company-atlas.gate-radar-notes.v1"
+    ],
+    "ui_contract": [
+      "Reuse Gate Radar signal ids in Path Map gate nodes so note ids match across views.",
+      "Render a note badge and compact preview on matching Path Map gate nodes.",
+      "Add a local-only Path Notes card to the Path Map bottom grid.",
+      "Add a notes stat to the Path Map stats row.",
+      "Keep notes browser-local and avoid mutating web/data/snapshot.json."
+    ]
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-map-notes-red&cache=20260618-gate-radar-notes-final#lane=digital_products_templates_plugins&view=path",
+      "evidence": "A seeded Gate Radar note was not visible in Path Map before implementation: no path note panel, preview, noted node, or proof text."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-map-notes-green-wrap#lane=digital_products_templates_plugins&view=path",
+      "evidence": "A seeded note rendered in Path Map as a Path Notes panel, gate-node preview, note badge, and noted node, with no console errors, no failed requests, and no horizontal overflow."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x844",
+        "820x1180",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports showed the seeded note, Path Notes panel, and noted gate node with no bad rectangles, no horizontal overflow, no console errors, and no failed requests."
+    },
+    "static": {
+      "node_check_app_js": "passed"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "cases_checked": 6,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-20260617.json",
+  "generated_utc": "2026-06-20T12:13:23Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-20260617.md",
+  "next_local_test": "inngest_event_name_and_flow_control_fixture_against_central_outbox_history_v1",
+  "passed_count": 6,
+  "rows": [
+    {
+      "actual_failures": [],
+      "actual_shape_valid": true,
+      "case_id": "case-valid-needs-review-approval-shape-parked",
+      "expected_disposition": "shape_valid_but_parked_no_mutation",
+      "expected_failures": [],
+      "expected_reducer_state": "parked.awaiting_human_review",
+      "expected_shape_valid": true,
+      "matches_expected": true,
+      "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+      "signal_name": "human_review_decision",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [],
+      "actual_shape_valid": true,
+      "case_id": "case-valid-needs-review-reject-shape-terminal-preview",
+      "expected_disposition": "shape_valid_reject_preview_no_mutation",
+      "expected_failures": [],
+      "expected_reducer_state": "parked.awaiting_human_review",
+      "expected_shape_valid": true,
+      "matches_expected": true,
+      "request_id": "req-next-wave-security-report-route-review-20260614",
+      "signal_name": "human_review_decision",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [
+        "authority_route_missing_required_human_or_cro",
+        "public_action_requires_separate_gate",
+        "requested_disposition_not_allowed"
+      ],
+      "actual_shape_valid": false,
+      "case_id": "case-invalid-public-action-without-authority",
+      "expected_disposition": "reject_shape_public_action_not_authorized",
+      "expected_failures": [
+        "authority_route_missing_required_human_or_cro",
+        "public_action_requires_separate_gate",
+        "requested_disposition_not_allowed"
+      ],
+      "expected_reducer_state": "parked.awaiting_human_review",
+      "expected_shape_valid": false,
+      "matches_expected": true,
+      "request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "signal_name": "human_review_decision",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [
+        "forbidden_payload_field_present:api_key"
+      ],
+      "actual_shape_valid": false,
+      "case_id": "case-invalid-sensitive-payload",
+      "expected_disposition": "reject_shape_sensitive_field_present",
+      "expected_failures": [
+        "forbidden_payload_field_present:api_key"
+      ],
+      "expected_reducer_state": "parked.awaiting_human_review",
+      "expected_shape_valid": false,
+      "matches_expected": true,
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+      "signal_name": "human_review_decision",
+      "status_snapshot": "needs_review"
+    },
+    {
+      "actual_failures": [],
+      "actual_shape_valid": true,
+      "case_id": "case-terminal-complete-no-replay-start",
+      "expected_disposition": "terminal_notice_no_replay_start",
+      "expected_failures": [],
+      "expected_reducer_state": "terminal.completed_from_ledger_snapshot",
+      "expected_shape_valid": true,
+      "matches_expected": true,
+      "request_id": "req-test-lifecycle-approve-20260614",
+      "signal_name": "terminal_snapshot_notice",
+      "status_snapshot": "complete"
+    },
+    {
+      "actual_failures": [],
+      "actual_shape_valid": true,
+      "case_id": "case-terminal-rejected-no-revive",
+      "expected_disposition": "terminal_notice_no_revive",
+      "expected_failures": [],
+      "expected_reducer_state": "terminal.rejected_from_ledger_snapshot",
+      "expected_shape_valid": true,
+      "matches_expected": true,
+      "request_id": "req-test-lifecycle-reject-20260614",
+      "signal_name": "terminal_snapshot_notice",
+      "status_snapshot": "rejected"
+    }
+  ],
+  "runtime_boundary": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_client_connections": 0,
+    "temporal_queries_executed": 0,
+    "temporal_server_started": false,
+    "temporal_signals_sent": 0,
+    "temporal_updates_sent": 0,
+    "temporal_workers_started": 0,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\temporal-signal-shape-fixture-v1.schema.json",
+  "schema_version": "agent_company.temporal_signal_shape_fixture_validation.v1",
+  "top_level_failures": []
+}

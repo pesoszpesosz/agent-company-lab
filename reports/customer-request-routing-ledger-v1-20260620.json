@@ -1,0 +1,77 @@
+{
+  "entries": [
+    {
+      "followup_escalation": {
+        "escalation_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab",
+        "generated_utc": "2026-06-20T20:57:36Z",
+        "report_path": "E:\\agent-company-lab\\reports\\customer-followup-escalation-v1-20260620.md",
+        "status": "escalation_needed",
+        "target_surface": "ai_resources_lab"
+      },
+      "followup_monitor": {
+        "counts": {
+          "requires_intake_attention": 6,
+          "stale_unacknowledged": 6,
+          "total": 6
+        },
+        "generated_utc": "2026-06-20T20:52:06Z",
+        "report_path": "E:\\agent-company-lab\\reports\\customer-followup-monitor-v1-20260620.md",
+        "status": "attention_needed"
+      },
+      "followup_task_ids": [
+        "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+        "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+        "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+        "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+        "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
+        "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery"
+      ],
+      "input_class": "new_request",
+      "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+      "next_artifact": "E:\\agent-company-lab\\intake\\customer\\processed\\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md",
+      "primary_route": "ai_resources_lab",
+      "raw_material_path": "E:\\agent-company-lab\\intake\\customer\\dropbox\\customer-input-ceo-operating-goal-objective-20260620-002.md",
+      "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.md",
+      "secondary_routes": [
+        "youtube_content_channels",
+        "paid_code_bounties",
+        "prediction_market_research",
+        "ai_ml_competitions",
+        "money_source_discovery",
+        "human_action_desk",
+        "goal_evolver_review",
+        "ceo_state_packet"
+      ],
+      "status": "synthesized"
+    },
+    {
+      "input_class": "new_request",
+      "input_id": "customer-input-premium-intake-request-20260620-001",
+      "next_artifact": "customer_request_routing_ledger_v1",
+      "primary_route": "premium_customer_intake",
+      "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\routes\\customer-input-premium-intake-request-20260620-001.md",
+      "secondary_routes": [
+        "ai_resources_lab",
+        "human_action_desk",
+        "youtube_content_channels",
+        "ceo_state_packet"
+      ],
+      "status": "applied"
+    }
+  ],
+  "generated_utc": "2026-06-20T20:57:36Z",
+  "ledger_rule": "Every customer input should become routed, synthesized, applied, parked with a revisit condition, blocked by an explicit gate, or rejected with a safer alternative when rejection is truly necessary.",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "schema_version": "customer_request_routing_ledger.v1",
+  "status": "active_local_ledger",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

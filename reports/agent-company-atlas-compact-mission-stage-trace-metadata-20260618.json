@@ -1,0 +1,39 @@
+{
+  "id": "trace-agent-company-atlas-compact-mission-stage-v1-20260618",
+  "task_id": "task-agent-company-atlas-compact-mission-stage-v1-20260618",
+  "event_id": "trace-atlas_compact_mission_stage_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-compact-mission-stage-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Compact Mission Stage",
+  "summary": "Converted the direct Command/Path entry into a bounded mission-stage surface with compact path header, tighter mission/core modules, viewport-limited detail panel, and animated signal layer.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_compact_mission_stage.py"
+  ],
+  "browser_verification": {
+    "url": "http://127.0.0.1:5177/index.html?verify=compact-mission-stage-final-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "body_deck": "command",
+    "overflow_x": 0,
+    "detail_panel_y": 229,
+    "detail_panel_height": 640,
+    "detail_top_height": 128,
+    "path_map_board_y": 486,
+    "path_mission_glance_y": 497,
+    "path_core_deck_y": 646
+  },
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_mission_stage.py -q failed before implementation because the mission-stage class and compact path-header rules were missing.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_mission_stage.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+    "Browser runtime: direct Command/Path route opened with bounded detail panel, compact path header, mission-stage board, Path Mission Glance at y=497, and overflow 0."
+  ]
+}

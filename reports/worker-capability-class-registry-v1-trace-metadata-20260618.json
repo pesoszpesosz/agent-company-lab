@@ -1,0 +1,70 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-worker-capability-class-registry-v1-20260618",
+  "task_id": "task-worker-capability-class-registry-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T23:01:05Z",
+  "summary": "Created a report-only worker capability class registry from the runtime adoption docket. The registry maps 27 docket candidates into 10 gated worker capability classes and preserves zero worker registration, worker start, runtime start, browser start, model/API, MCP, telemetry export, service request assignment, or external side effects.",
+  "source_runtime_adoption_docket": "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\worker-capability-class-registry-v1.schema.json",
+      "sha256": "f94515b27ed3ebb5c1447a98570b0a7929c41f4c24a742291fcaa84524fc4244"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_worker_capability_class_registry.py",
+      "sha256": "4ba945387fd0b332e27e928a10fcc9e943d09026a2bcccaf0818cbebf822f580"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_worker_capability_class_registry.py",
+      "sha256": "99d2f35fd29177909f75a37dcbb7147bc2c29e6a88d93394d9cbefdc49eaae53"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
+      "sha256": "8d70933a307f2f54b733bc1595589750f6fb57dcf21589ca928dc2870c48295c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-validation-20260618.json",
+      "sha256": "d40709e2e40ffc751887753ff64d7c5ab0a96abc41d4d2966943d910a0cbfc10"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.md",
+      "sha256": "fe4e827ab7778dfe8f1dbb97f166258b118969dc48f3d640382eb4e416694a6b"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_worker_capability_class_registry.py",
+    "focused_test_result": "passed",
+    "source_docket_item_count": 27,
+    "capability_class_count": 10,
+    "unmapped_docket_item_count": 0,
+    "worker_registration_allowed": false,
+    "worker_start_allowed": false,
+    "runtime_start_allowed": false,
+    "browser_session_start_allowed": false,
+    "service_requests_assigned": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "telemetry_exports": 0,
+    "external_side_effects": false
+  },
+  "next_action": "Build unified_agent_egress_gateway_docket_v1 before registering or starting any worker capability class."
+}

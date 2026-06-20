@@ -1,0 +1,349 @@
+{
+  "hard_kill_reasons": [
+    "vdp_only_or_no_cash_bounty_for_cash_lane",
+    "program_or_asset_not_accepting_submissions",
+    "scope_or_bounty_eligibility_unclear",
+    "safe_harbor_or_authorization_unclear",
+    "requires_active_testing_without_explicit_approval",
+    "requires_login_credentials_pii_social_engineering_dos_spam_or_phishing",
+    "requires_touching_sensitive_or_production_only_data_without_safe_test_path",
+    "duplicate_or_publicly_known_issue_likely",
+    "payment_tax_identity_country_or_sanctions_eligibility_unclear",
+    "private_program_invite_nda_or_clear_membership_required",
+    "report_route_not_private_or_not_on_approved_platform",
+    "local_static_or_fixture_proof_cannot_be_produced"
+  ],
+  "program_fields": [
+    "program_url",
+    "observed_utc",
+    "program_name",
+    "program_type",
+    "program_status",
+    "bounty_available",
+    "minimum_bounty",
+    "maximum_bounty",
+    "average_bounty",
+    "managed_by_hackerone",
+    "response_standards",
+    "asset_types",
+    "scope_assets",
+    "out_of_scope_assets",
+    "asset_eligibility_for_submission",
+    "asset_eligibility_for_bounty",
+    "safe_harbor_present",
+    "safe_harbor_variant",
+    "program_policy_url",
+    "testing_permissions",
+    "forbidden_testing",
+    "rate_limits",
+    "credential_policy",
+    "privacy_data_policy",
+    "disclosure_policy",
+    "duplicate_policy",
+    "minimum_severity",
+    "report_template_fields",
+    "proof_of_concept_expectations",
+    "payment_tax_identity_requirements",
+    "country_or_sanctions_eligibility",
+    "public_activity_signal",
+    "hactivity_duplicate_signal",
+    "local_candidate_source",
+    "score",
+    "kill_reasons",
+    "next_local_action"
+  ],
+  "program_rows": [
+    {
+      "asset_eligibility_for_bounty": true,
+      "asset_eligibility_for_submission": true,
+      "asset_types": [
+        "source_code_repository",
+        "web"
+      ],
+      "average_bounty": 450,
+      "bounty_available": true,
+      "country_or_sanctions_eligibility": "unknown_requires_human_review",
+      "credential_policy": "no_credentials_allowed_for_local_fixture",
+      "disclosure_policy": "private_report_only_after_approval",
+      "duplicate_policy": "must_check_public_hacktivity_before_submission",
+      "forbidden_testing": [
+        "live_scanning",
+        "credential_stuffing",
+        "dos",
+        "social_engineering",
+        "pii_access"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "local_candidate_source": "public_source_code_review_only",
+      "managed_by_hackerone": true,
+      "maximum_bounty": 5000,
+      "minimum_bounty": 100,
+      "minimum_severity": "medium",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [
+        "production_accounts",
+        "customer_data",
+        "social_engineering"
+      ],
+      "payment_tax_identity_requirements": "unknown_requires_human_review",
+      "privacy_data_policy": "do_not_access_customer_or_private_data",
+      "program_name": "Example OSS BBP saved public row",
+      "program_policy_url": "https://hackerone.com/example-oss-bbp/policy",
+      "program_status": "active",
+      "program_type": "bug_bounty_program",
+      "program_url": "https://hackerone.com/example-oss-bbp",
+      "proof_of_concept_expectations": "local_static_analysis_notes_only",
+      "public_activity_signal": "some_disclosed_reports",
+      "rate_limits": "unread_specific_policy_limits",
+      "report_template_fields": [
+        "title",
+        "asset",
+        "weakness",
+        "impact",
+        "steps",
+        "poc",
+        "remediation"
+      ],
+      "response_standards": "public_card_shows_response_metrics",
+      "safe_harbor_present": true,
+      "safe_harbor_variant": "standard_good_faith",
+      "scope_assets": [
+        "https://github.com/example/example-oss"
+      ],
+      "testing_permissions": "public_source_review_only_in_this_fixture"
+    },
+    {
+      "asset_eligibility_for_bounty": false,
+      "asset_eligibility_for_submission": true,
+      "asset_types": [
+        "web"
+      ],
+      "average_bounty": 0,
+      "bounty_available": false,
+      "country_or_sanctions_eligibility": "unknown",
+      "credential_policy": "unknown",
+      "disclosure_policy": "coordinated_disclosure",
+      "duplicate_policy": "unknown",
+      "forbidden_testing": [
+        "active_testing_without_approval"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "local_candidate_source": "practice_only_no_cash",
+      "managed_by_hackerone": false,
+      "maximum_bounty": 0,
+      "minimum_bounty": 0,
+      "minimum_severity": "unknown",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [
+        "all_non_listed_assets"
+      ],
+      "payment_tax_identity_requirements": "not_applicable_no_bounty",
+      "privacy_data_policy": "unknown",
+      "program_name": "Example VDP saved public row",
+      "program_policy_url": "https://hackerone.com/example-vdp/policy",
+      "program_status": "active",
+      "program_type": "vulnerability_disclosure_program",
+      "program_url": "https://hackerone.com/example-vdp",
+      "proof_of_concept_expectations": "unknown",
+      "public_activity_signal": "low",
+      "rate_limits": "unknown",
+      "report_template_fields": [
+        "description",
+        "impact"
+      ],
+      "response_standards": "best_effort",
+      "safe_harbor_present": true,
+      "safe_harbor_variant": "vdp_safe_harbor",
+      "scope_assets": [
+        "https://example-vdp.invalid"
+      ],
+      "testing_permissions": "read_policy_only"
+    },
+    {
+      "asset_eligibility_for_bounty": false,
+      "asset_eligibility_for_submission": false,
+      "asset_types": [
+        "api",
+        "web"
+      ],
+      "average_bounty": 800,
+      "bounty_available": true,
+      "country_or_sanctions_eligibility": "unknown_requires_human_review",
+      "credential_policy": "private",
+      "disclosure_policy": "private",
+      "duplicate_policy": "private",
+      "forbidden_testing": [
+        "all_testing_without_membership"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "local_candidate_source": "none_private_membership_required",
+      "managed_by_hackerone": true,
+      "maximum_bounty": 10000,
+      "minimum_bounty": 250,
+      "minimum_severity": "private",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [],
+      "payment_tax_identity_requirements": "unknown_requires_human_review",
+      "privacy_data_policy": "private",
+      "program_name": "Example private invite row",
+      "program_policy_url": "",
+      "program_status": "invite_only",
+      "program_type": "private_program",
+      "program_url": "https://hackerone.com/example-private",
+      "proof_of_concept_expectations": "private",
+      "public_activity_signal": "hidden",
+      "rate_limits": "private",
+      "report_template_fields": [],
+      "response_standards": "private_only",
+      "safe_harbor_present": false,
+      "safe_harbor_variant": "not_public",
+      "scope_assets": [],
+      "testing_permissions": "membership_required"
+    },
+    {
+      "asset_eligibility_for_bounty": true,
+      "asset_eligibility_for_submission": true,
+      "asset_types": [
+        "web"
+      ],
+      "average_bounty": 120,
+      "bounty_available": true,
+      "country_or_sanctions_eligibility": "unknown_requires_human_review",
+      "credential_policy": "no_test_credentials_available",
+      "disclosure_policy": "private_report_only",
+      "duplicate_policy": "unknown",
+      "forbidden_testing": [
+        "scanning",
+        "credential_attacks",
+        "dos",
+        "pii"
+      ],
+      "hactivity_duplicate_signal": "not_checked_no_browser_session",
+      "local_candidate_source": "no_public_source_static_path",
+      "managed_by_hackerone": true,
+      "maximum_bounty": 1500,
+      "minimum_bounty": 50,
+      "minimum_severity": "medium",
+      "observed_utc": "2026-06-18T07:15:32Z",
+      "out_of_scope_assets": [
+        "automated_scanning",
+        "rate_limit_testing",
+        "customer_data"
+      ],
+      "payment_tax_identity_requirements": "unknown_requires_human_review",
+      "privacy_data_policy": "avoid_private_data",
+      "program_name": "Example cash web program with unclear static path",
+      "program_policy_url": "https://hackerone.com/example-cash-web/policy",
+      "program_status": "active",
+      "program_type": "bug_bounty_program",
+      "program_url": "https://hackerone.com/example-cash-web",
+      "proof_of_concept_expectations": "live_repro_expected_but_not_allowed_here",
+      "public_activity_signal": "active",
+      "rate_limits": "unknown",
+      "report_template_fields": [
+        "title",
+        "asset",
+        "impact",
+        "steps"
+      ],
+      "response_standards": "public_card_shows_slow_response",
+      "safe_harbor_present": true,
+      "safe_harbor_variant": "policy_specific",
+      "scope_assets": [
+        "https://example-cash-web.invalid"
+      ],
+      "testing_permissions": "policy_must_be_read_before_testing"
+    }
+  ],
+  "schema_version": "security_bounty.hackerone_no_login_public_program_fixture.v1",
+  "scoring_rubric": [
+    {
+      "factor": "cash_bounty_clarity",
+      "good": "specific program and asset expose bounty eligibility and min/max reward",
+      "points": 20
+    },
+    {
+      "factor": "scope_clarity",
+      "good": "in-scope and out-of-scope assets are explicit and narrow",
+      "points": 15
+    },
+    {
+      "factor": "safe_harbor_clarity",
+      "good": "program includes clear safe harbor for good-faith work",
+      "points": 15
+    },
+    {
+      "factor": "local_static_proofability",
+      "good": "issue can be researched from public source or local fixtures without live testing",
+      "points": 15
+    },
+    {
+      "factor": "low_harm_profile",
+      "good": "no need for credentials, PII, production mutation, scanning, or sensitive data",
+      "points": 10
+    },
+    {
+      "factor": "duplicate_risk",
+      "good": "Hacktivity/public reports do not show the same weakness path",
+      "points": 10
+    },
+    {
+      "factor": "payout_tax_route_clarity",
+      "good": "eligibility and payout/tax gates are known before submission",
+      "points": 5
+    },
+    {
+      "factor": "report_effort_fit",
+      "good": "proof can be written with clear reproduction, impact, and remediation within one focused sprint",
+      "points": 10
+    }
+  ],
+  "source": "manually_saved_public_program_directory_and_policy_snippets_no_hackerone_login_no_testing",
+  "source_gate_notes": [
+    "At least six public/current or local sources are recorded.",
+    "Packet distinguishes cash BBP rows from VDP-only disclosure rows.",
+    "At least twenty program fields are defined.",
+    "At least five route stages are defined.",
+    "At least eight hard kill reasons are defined.",
+    "At least one local-only route stage is allowed and no live testing stage is allowed.",
+    "Boundary proves no HackerOne account, browser session, contact, test, report, payment, public action, worker/runtime, model/MCP call, or external side effect occurred.",
+    "HackerOne describes H1 Bounty as continuous researcher-led testing by a global community.",
+    "The page says programs expose bounty tables, disclosure guidelines, safe harbor statements, payments, researcher controls, report lifecycle management, triage, and response data.",
+    "This supports a rules-first cash route, but not direct target testing without a specific program policy and explicit operator approval.",
+    "The hacker page separates bug bounty programs, HackerOne Clear, pentest engagements, and Vulnerability Disclosure Programs.",
+    "It states that researchers can use VDPs to submit vulnerabilities to organizations that welcome reports and commit to safe harbor.",
+    "It also says bounty payment identity may be required, so payment and tax handling remain gated.",
+    "Guidelines tell finders to respect program rules, privacy, patience, and do no harm.",
+    "They say each program publishes a policy for the specific service or product and that the program policy supersedes general guidelines when conflicts exist.",
+    "Submission guidance requires detailed vulnerability descriptions, reproducible steps, and proof-of-concept detail.",
+    "Bounty payments are discretionary, subject to eligibility restrictions, paid in USD, and tax consequences remain the researcher's responsibility.",
+    "HackerOne says safe harbor is a clear statement that good-faith security research is authorized and protected from organization legal action.",
+    "The January 2026 article says scope definitions remain based on explicitly included assets, even when safe harbor is enabled.",
+    "It recommends clarification before borderline conduct and says bad-faith conduct is not covered.",
+    "HackerOne scope assets have types, identifiers, eligibility for submission, eligibility for bounty, environmental scoring, labels, and instructions.",
+    "Assets can be ineligible for submission or bounty, and HackerOne exposes warnings when a selected asset is not paid or reportable.",
+    "This makes asset-level scope and bounty eligibility required fields before any cash-route work.",
+    "Opportunity Discovery centralizes bounty programs, VDPs, pentests, and future earning openings.",
+    "Program cards include program features, asset types, minimum and maximum bounty, response standards, and status tags.",
+    "Filtering by program type, asset type, industry, and sort order is a read-only discovery route, but live page interaction is still gated in this lab.",
+    "The Directory documents organization security contacts, disclosure policies, and associated bug bounty programs.",
+    "It exposes program data such as launch date, reports resolved, minimum and average bounty, managed labels, active-program labels, and bounty availability filters.",
+    "Directory pages can include organizations that do not use HackerOne, so report route and bounty eligibility must be verified per program.",
+    "Hacktivity is a learning signal showing community activity, disclosed reports, and bounty-awarded activity.",
+    "Disclosed reports can inform duplicate-risk and report-quality checks, but they are not permission to test a target.",
+    "Submitting a report requires using a program security page, selecting asset and weakness fields, writing proof of concept, impact, and reproduction steps, then submitting.",
+    "The final submit action cannot be undone for report details and therefore remains blocked without exact approval.",
+    "High-quality reports should outline the bug, reproduce it, assess coverage, and include relevant logs or supporting material.",
+    "Before submitting, researchers should verify that the issue is in scope and not already reported.",
+    "Report quality requirements favor local/static proof preparation before any platform submission.",
+    "Payment FAQ mentions PayPal, Coinbase, and Currencycloud as payout providers.",
+    "Payments can take time after award and require a valid tax form and selected payout method.",
+    "Payment preferences, tax forms, identity, and payout setup remain human-gated.",
+    "The prior local security scan ranked rules-first bounty discovery as high upside but required a rules-first gate before any target work.",
+    "It favored static source review and exact scope review over active testing.",
+    "The IssueHunt scan demonstrates the same pattern: public program rows can be scored, but account setup, testing, and reporting require approval.",
+    "It supplies a reusable rules-first scoring discipline for the HackerOne lane."
+  ],
+  "source_proof_path": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\hackerone-rules-route-readiness-local-proof.json",
+  "source_scout_task_id": "task-lane-scout-hackerone_program_rules-20260618"
+}

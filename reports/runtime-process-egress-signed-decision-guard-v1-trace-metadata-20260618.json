@@ -1,0 +1,89 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-runtime-process-egress-signed-decision-guard-v1-20260618",
+  "task_id": "task-runtime-process-egress-signed-decision-guard-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:14:16Z",
+  "summary": "Created a report-only runtime_process_gateway signed-decision guard. The guard accepts only deny and preflight-only runtime route decisions, rejects 43 dependency-install, runtime-start, worker-start, queue-mutation, service-request-mutation, MCP/model-call, payment, and live-egress fixtures, and preserves zero dependency installs, zero runtime starts, zero worker starts, zero queue mutations, zero service-request mutations, zero model/API calls, zero MCP calls, zero live egress, and zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\runtime-start-signed-decision-guard-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\runtime-process-egress-signed-decision-guard-v1.schema.json",
+      "sha256": "e64203f023d529527b9e05f0d47d142ae4a949e2095ef7f45c406e99405cce6c"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_runtime_process_egress_signed_decision_guard.py",
+      "sha256": "695378d5a6c633da3b353c26d06886b3c1fa89c8e79718dc2045f0b7102c2189"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_runtime_process_egress_signed_decision_guard.py",
+      "sha256": "705ecc8571aa59ec6c3f71885c7fca27842faec82a396c020c9b34a7589ef0d2"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\runtime-process-egress-signed-decision-guard-v1-20260618.json",
+      "sha256": "6209b1336c1658c53080631502b6c5848fddb8bd0f053b5665f1cc39b312784e"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\runtime-process-egress-signed-decision-guard-v1-validation-20260618.json",
+      "sha256": "9dd6524d1cc9754b073cc40dba68e390910e239322b963c8847049e888477c35"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\runtime-process-egress-signed-decision-guard-v1-20260618.md",
+      "sha256": "f318d3c59b3a2b331ea9cefc6c60ebc6c92fec1c919419d74b728c31333c62f6"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_runtime_process_egress_signed_decision_guard.py E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "43 tests passed",
+    "target_route_id": "runtime_process_gateway",
+    "target_egress_type": "runtime_start",
+    "fixture_count": 45,
+    "accepted_count": 2,
+    "rejected_count": 43,
+    "apply_allowed": false,
+    "runtime_start_allowed": false,
+    "runtime_starts": 0,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "dependency_installs": 0,
+    "queue_mutations": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_allowed": false,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "dependency_installs": 0,
+    "runtime_start_allowed": false,
+    "runtime_starts": 0,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "queue_mutations": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build runtime_process_gateway apply preflight blocker before any dependency install, runtime process start, worker start, queue mutation, service-request mutation, or live egress."
+}

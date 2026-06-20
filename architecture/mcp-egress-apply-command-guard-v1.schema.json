@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.mcp_egress_apply_command_guard.v1",
+  "title": "MCP Egress Apply Command Guard v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "command_id",
+    "command_type",
+    "target_route_id",
+    "target_egress_type",
+    "source_apply_preflight_blocker_path",
+    "expected_source_apply_preflight_status",
+    "real_signed_decision_present",
+    "allowed_scope",
+    "target_request_ids",
+    "apply_command_allowed",
+    "apply_allowed",
+    "gateway_registration_allowed",
+    "gateway_start_allowed",
+    "live_egress_allowed",
+    "mcp_server_enable_allowed",
+    "mcp_tool_call_allowed",
+    "mcp_servers_started",
+    "mcp_servers_enabled",
+    "credentials_created",
+    "credential_access_allowed",
+    "worker_start_allowed",
+    "runtime_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.mcp_egress_apply_command_guard.v1"
+    },
+    "command_type": {
+      "type": "string",
+      "enum": [
+        "deny_noop",
+        "report_only_apply_command_guard"
+      ]
+    },
+    "target_route_id": {
+      "const": "mcp_tool_gateway"
+    },
+    "target_egress_type": {
+      "const": "mcp_tool"
+    },
+    "apply_command_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "gateway_registration_allowed": {
+      "const": false
+    },
+    "gateway_start_allowed": {
+      "const": false
+    },
+    "live_egress_allowed": {
+      "const": false
+    },
+    "mcp_server_enable_allowed": {
+      "const": false
+    },
+    "mcp_tool_call_allowed": {
+      "const": false
+    },
+    "mcp_servers_started": {
+      "const": 0
+    },
+    "mcp_servers_enabled": {
+      "const": 0
+    },
+    "credentials_created": {
+      "const": false
+    },
+    "credential_access_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "service_requests_assigned": {
+      "const": 0
+    },
+    "service_requests_updated": {
+      "const": 0
+    },
+    "model_api_calls": {
+      "const": false
+    },
+    "mcp_tool_calls": {
+      "const": false
+    },
+    "external_side_effects": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

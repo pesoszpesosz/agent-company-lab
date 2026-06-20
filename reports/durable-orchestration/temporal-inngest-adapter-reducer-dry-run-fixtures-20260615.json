@@ -1,0 +1,598 @@
+{
+  "api_calls": false,
+  "external_side_effects": false,
+  "fixture_count": 14,
+  "fixtures": [
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "signed-in browser approval",
+          "read-only prompt scope",
+          "no post/reply/like/follow/message/settings changes"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-01",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-grok-research-worker-20260614:agent_company/service_request.needs_review:needs_review:browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "source_event_id": "service-request-event/req-grok-research-worker-20260614/service_request.needs_review/1",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_signed_in_read_only"
+      },
+      "request_id": "req-grok-research-worker-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "user legal/payment decision",
+          "no KYC/tax/payment entry by automation",
+          "no contract acceptance by replay"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-02",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-next-wave-digital-legal-payment-review-20260614:agent_company/service_request.needs_review:needs_review:legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "source_event_id": "service-request-event/req-next-wave-digital-legal-payment-review-20260614/service_request.needs_review/2",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "legal_kyc_tax_payment_review"
+      },
+      "request_id": "req-next-wave-digital-legal-payment-review-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-03",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-next-wave-digital-marketplace-browser-readonly-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-next-wave-digital-marketplace-browser-readonly-20260614/service_request.needs_review/3",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-04",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-next-wave-paid-code-algora-archestra-browser-readonly-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-next-wave-paid-code-algora-archestra-browser-readonly-20260614/service_request.needs_review/4",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-05",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-next-wave-security-google-oss-vrp-browser-readonly-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-next-wave-security-google-oss-vrp-browser-readonly-20260614/service_request.needs_review/5",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "user approval",
+          "CRO approval",
+          "program scope verified",
+          "submission route verified",
+          "no automatic submission"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-06",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-next-wave-security-report-route-review-20260614:agent_company/service_request.needs_review:needs_review:security_report_submission_requires_user_and_cro_approval_no_submission",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "security_report_submission_requires_user_and_cro_approval_no_submission",
+        "source_event_id": "service-request-event/req-next-wave-security-report-route-review-20260614/service_request.needs_review/6",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "public_submission"
+      },
+      "request_id": "req-next-wave-security-report-route-review-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "provider selected",
+          "model selected",
+          "max cost set",
+          "credential route approved",
+          "lane/output artifact scope approved"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-07",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-pydantic-ai-model-backed-adapter-20260614:agent_company/service_request.needs_review:needs_review:model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "source_event_id": "service-request-event/req-pydantic-ai-model-backed-adapter-20260614/service_request.needs_review/7",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "model_api_execution"
+      },
+      "request_id": "req-pydantic-ai-model-backed-adapter-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-08",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-test-browser-readonly-complete-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-test-browser-readonly-complete-20260614/service_request.needs_review/8",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-test-browser-readonly-complete-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "terminal.completed_from_ledger_snapshot",
+        "parked": false,
+        "resume_requirements": [
+          "new explicit task or service request; do not replay-start terminal rows",
+          "explicit approval for risk gate"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": true
+      },
+      "fixture_id": "fixture-reducer-dry-run-09",
+      "input": {
+        "assigned_agent_id_snapshot": "recovered-profitable-edge-infra",
+        "event_name": "agent_company/service_request.completed",
+        "idempotency_key": "service-request-event:req-test-lifecycle-approve-20260614:agent_company/service_request.completed:complete:test_no_external_action",
+        "live_status_snapshot": "complete",
+        "risk_gate": "test_no_external_action",
+        "source_event_id": "service-request-event/req-test-lifecycle-approve-20260614/service_request.completed/9",
+        "started_at_snapshot": "2026-06-14T11:14:06Z",
+        "status_snapshot": "complete",
+        "worker_type": "local_runtime_adapter"
+      },
+      "request_id": "req-test-lifecycle-approve-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "terminal.rejected_from_ledger_snapshot",
+        "parked": false,
+        "resume_requirements": [
+          "new explicit request; do not revive rejected rows by replay",
+          "explicit approval for risk gate"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": true
+      },
+      "fixture_id": "fixture-reducer-dry-run-10",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.rejected",
+        "idempotency_key": "service-request-event:req-test-lifecycle-reject-20260614:agent_company/service_request.rejected:rejected:test_no_external_action",
+        "live_status_snapshot": "rejected",
+        "risk_gate": "test_no_external_action",
+        "source_event_id": "service-request-event/req-test-lifecycle-reject-20260614/service_request.rejected/10",
+        "started_at_snapshot": null,
+        "status_snapshot": "rejected",
+        "worker_type": "local_runtime_adapter"
+      },
+      "request_id": "req-test-lifecycle-reject-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "terminal.rejected_from_ledger_snapshot",
+        "parked": false,
+        "resume_requirements": [
+          "new explicit request; do not revive rejected rows by replay",
+          "explicit approval for risk gate"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": true
+      },
+      "fixture_id": "fixture-reducer-dry-run-11",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.rejected",
+        "idempotency_key": "service-request-event:req-test-service-intake-valid-20260614:agent_company/service_request.rejected:rejected:test_validator_no_external_action",
+        "live_status_snapshot": "rejected",
+        "risk_gate": "test_validator_no_external_action",
+        "source_event_id": "service-request-event/req-test-service-intake-valid-20260614/service_request.rejected/11",
+        "started_at_snapshot": null,
+        "status_snapshot": "rejected",
+        "worker_type": "other_gated_worker"
+      },
+      "request_id": "req-test-service-intake-valid-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-12",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-wave4-ai-ml-competitions-browser-readonly-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-wave4-ai-ml-competitions-browser-readonly-20260614/service_request.needs_review/12",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-13",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-wave4-digital-products-browser-readonly-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-wave4-digital-products-browser-readonly-20260614/service_request.needs_review/13",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-wave4-digital-products-browser-readonly-20260614"
+    },
+    {
+      "expected_exit": {
+        "exit_code": 0,
+        "stderr_allowed": false,
+        "stdout_schema": "agent_company.durable_adapter_dry_run_result.v1"
+      },
+      "expected_output": {
+        "approval_granted": false,
+        "assign_worker": false,
+        "call_api": false,
+        "emit_followup_event": false,
+        "external_side_effects_allowed": false,
+        "ledger_mutation_allowed": false,
+        "output_state": "parked.awaiting_human_review",
+        "parked": true,
+        "resume_requirements": [
+          "human approval packet",
+          "CRO/CEO approval if risk gate requires it",
+          "exact request scope match",
+          "eligible worker pool registered",
+          "artifact output path approved",
+          "catalog approval",
+          "public read-only scope",
+          "no login/signup/form/public/payment action"
+        ],
+        "schedule_activity": false,
+        "start_worker": false,
+        "terminal": false
+      },
+      "fixture_id": "fixture-reducer-dry-run-14",
+      "input": {
+        "assigned_agent_id_snapshot": null,
+        "event_name": "agent_company/service_request.needs_review",
+        "idempotency_key": "service-request-event:req-wave4-money-source-discovery-browser-readonly-20260614:agent_company/service_request.needs_review:needs_review:catalog_required_approval_no_external_action",
+        "live_status_snapshot": "needs_review",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "source_event_id": "service-request-event/req-wave4-money-source-discovery-browser-readonly-20260614/service_request.needs_review/14",
+        "started_at_snapshot": null,
+        "status_snapshot": "needs_review",
+        "worker_type": "browser_read_only"
+      },
+      "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614"
+    }
+  ],
+  "generated_utc": "2026-06-15T14:40:25Z",
+  "schema_version": "agent_company.durable_adapter_reducer_fixture_set.v1",
+  "source_reducer_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-validation-20260615.json"
+}

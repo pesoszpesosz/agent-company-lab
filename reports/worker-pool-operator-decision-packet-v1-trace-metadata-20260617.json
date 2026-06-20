@@ -1,0 +1,23 @@
+{
+  "source_review_packet_count": 7,
+  "required_field_count": 31,
+  "negative_fixture_count": 12,
+  "candidate_identity_envelope_decisions": 5,
+  "hold_decisions": 2,
+  "recommended_next_build": "worker_pool_operator_decision_contract_v1_schema_and_negative_fixture_suite",
+  "runtime_boundary": {
+    "report_only": true,
+    "registers_pools": false,
+    "assigns_service_requests": false,
+    "starts_workers": false,
+    "executes_command_previews": false,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

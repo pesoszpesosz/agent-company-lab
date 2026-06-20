@@ -1,0 +1,90 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "allo_profile_or_pool_created": false,
+    "browser_sessions_started": 0,
+    "donations_checkouts_matching_claims_or_payouts": 0,
+    "external_side_effects": 0,
+    "gitcoin_account_or_login": false,
+    "github_oauth_or_credentials_used": false,
+    "grant_applications_submitted": 0,
+    "kyc_or_identity_verification_started": false,
+    "model_mcp_or_external_api_calls": 0,
+    "passport_or_stamps_connected": false,
+    "public_posts_or_contribution_solicitation": 0,
+    "service_requests_mutated": 0,
+    "tag_requests_or_round_applications": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "candidate_project_present",
+      "passed": true
+    },
+    {
+      "name": "round_fit_present",
+      "passed": true
+    },
+    {
+      "name": "deliverables_present",
+      "passed": true
+    },
+    {
+      "name": "budget_present",
+      "passed": true
+    },
+    {
+      "name": "impact_metrics_present",
+      "passed": true
+    },
+    {
+      "name": "evidence_assets_present",
+      "passed": true
+    },
+    {
+      "name": "required_gates_complete",
+      "passed": true
+    },
+    {
+      "name": "rules_checklist_present",
+      "passed": true
+    },
+    {
+      "name": "fit_rubric_present",
+      "passed": true
+    },
+    {
+      "name": "approval_packet_denies_account_identity_wallet_submit_public",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_github",
+      "passed": true
+    },
+    {
+      "name": "no_kyc_or_passport",
+      "passed": true
+    },
+    {
+      "name": "no_wallet_or_allo",
+      "passed": true
+    },
+    {
+      "name": "no_submission_payment_or_public_action",
+      "passed": true
+    },
+    {
+      "name": "no_service_runtime_model_mutation",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T09:24:06Z",
+  "schema_version": "web3_grants.gitcoin_no_submit_grant_fit_memo.validation.v1",
+  "task_id": "task-gitcoin-no-submit-grant-fit-memo-v1-20260618"
+}

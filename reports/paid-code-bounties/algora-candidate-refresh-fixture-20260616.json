@@ -1,0 +1,214 @@
+{
+  "artifact_id": "algora-candidate-refresh-fixture-20260616",
+  "generated_utc": "2026-06-16T21:12:00Z",
+  "task_id": "task-algora-candidate-refresh-fixture-20260616",
+  "lane_id": "paid_code_bounties",
+  "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+  "source_packet": "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-live-candidate-refresh-20260616.md",
+  "mode": "no_network_parser_fixture",
+  "external_side_effects": false,
+  "configured_public_urls": [
+    "https://algora.io/golemcloud/home",
+    "https://algora.io/CapSoftware/bounties",
+    "https://algora.io/tursodatabase/bounties",
+    "https://algora.io/golemcloud/bounties",
+    "https://algora.io/prettier/bounties",
+    "https://algora.io/tsperf/bounties"
+  ],
+  "parser_contract": {
+    "input_fields": [
+      "fixture_id",
+      "algora_url",
+      "page_text",
+      "github_issue_url",
+      "amount_text",
+      "state_text",
+      "claim_text",
+      "last_activity_text",
+      "local_testability_note"
+    ],
+    "output_fields": [
+      "candidate_id",
+      "algora_url",
+      "github_issue_url",
+      "amount_usd",
+      "state",
+      "claim_count",
+      "repo_health",
+      "local_testability",
+      "decision",
+      "gate",
+      "rejection_reasons"
+    ],
+    "allowed_decisions": [
+      "promote_local_triage",
+      "watchlist",
+      "reject",
+      "reference_only"
+    ],
+    "hard_reject_rules": [
+      "missing_explicit_amount",
+      "completed_or_closed",
+      "tiny_and_crowded",
+      "requires_credentials_or_paid_service",
+      "subjective_acceptance",
+      "needs_public_comment_to_clarify"
+    ]
+  },
+  "fixtures": [
+    {
+      "fixture_id": "algora_org_examples_reference_only",
+      "algora_url": "https://algora.io",
+      "page_text": "Algora shows examples of completed bounties and the bounty mechanism. No specific open issue is selected in this fixture.",
+      "github_issue_url": null,
+      "amount_text": null,
+      "state_text": "examples and completed bounties visible",
+      "claim_text": null,
+      "last_activity_text": null,
+      "local_testability_note": "reference page only",
+      "expected": {
+        "candidate_id": "algora-org-examples-reference-only",
+        "amount_usd": null,
+        "state": "unclear",
+        "claim_count": null,
+        "repo_health": "unknown",
+        "local_testability": "blocked",
+        "decision": "reference_only",
+        "gate": "No candidate issue; use only to verify parser shape.",
+        "rejection_reasons": [
+          "missing_explicit_amount",
+          "no_specific_open_issue"
+        ]
+      }
+    },
+    {
+      "fixture_id": "golemcloud_zero_open_watchlist",
+      "algora_url": "https://algora.io/golemcloud/home",
+      "page_text": "Golem Cloud has visible historical activity and completed bounties, with zero open bounties in the public page text sample.",
+      "github_issue_url": null,
+      "amount_text": null,
+      "state_text": "0 open bounties, completed history",
+      "claim_text": null,
+      "last_activity_text": "recent completed activity visible",
+      "local_testability_note": "project can be watched, but no current issue exists",
+      "expected": {
+        "candidate_id": "golemcloud-zero-open-watchlist",
+        "amount_usd": null,
+        "state": "none_open",
+        "claim_count": null,
+        "repo_health": "active",
+        "local_testability": "blocked",
+        "decision": "watchlist",
+        "gate": "Wait for an explicit open bounty before local triage.",
+        "rejection_reasons": [
+          "no_open_bounty"
+        ]
+      }
+    },
+    {
+      "fixture_id": "capsoftware_low_amount_crowded_reject",
+      "algora_url": "https://algora.io/CapSoftware/bounties",
+      "page_text": "Open bounty visible with a low displayed amount and multiple visible claims or discussion signals.",
+      "github_issue_url": "https://github.com/CapSoftware/Cap/issues/example",
+      "amount_text": "$50",
+      "state_text": "open",
+      "claim_text": "5 claims",
+      "last_activity_text": "recent discussion",
+      "local_testability_note": "local tests possible but expected value is poor",
+      "expected": {
+        "candidate_id": "capsoftware-low-amount-crowded",
+        "amount_usd": 50,
+        "state": "open",
+        "claim_count": 5,
+        "repo_health": "active",
+        "local_testability": "clear",
+        "decision": "reject",
+        "gate": "Do not spend sprint time on low-value crowded bounty.",
+        "rejection_reasons": [
+          "tiny_and_crowded"
+        ]
+      }
+    },
+    {
+      "fixture_id": "turso_unclear_amount_watchlist",
+      "algora_url": "https://algora.io/tursodatabase/bounties",
+      "page_text": "Source category page candidate where issue links may appear, but the fixture intentionally omits amount.",
+      "github_issue_url": "https://github.com/tursodatabase/turso/issues/example",
+      "amount_text": null,
+      "state_text": "open signal unclear",
+      "claim_text": null,
+      "last_activity_text": "unknown",
+      "local_testability_note": "database setup may require careful local reproduction",
+      "expected": {
+        "candidate_id": "turso-unclear-amount-watchlist",
+        "amount_usd": null,
+        "state": "unclear",
+        "claim_count": null,
+        "repo_health": "unknown",
+        "local_testability": "unclear",
+        "decision": "watchlist",
+        "gate": "Read-only refresh required for explicit amount and acceptance state.",
+        "rejection_reasons": [
+          "missing_explicit_amount",
+          "state_unclear"
+        ]
+      }
+    },
+    {
+      "fixture_id": "prettier_clear_local_triage_candidate",
+      "algora_url": "https://algora.io/prettier/bounties",
+      "page_text": "Open bounty with explicit $250 amount, one visible claim, clear issue link, deterministic formatting test target, and no credential requirement in the fixture.",
+      "github_issue_url": "https://github.com/prettier/prettier/issues/example",
+      "amount_text": "$250",
+      "state_text": "open",
+      "claim_text": "1 claim",
+      "last_activity_text": "updated recently",
+      "local_testability_note": "standard open-source local test suite expected",
+      "expected": {
+        "candidate_id": "prettier-clear-local-triage-candidate",
+        "amount_usd": 250,
+        "state": "open",
+        "claim_count": 1,
+        "repo_health": "active",
+        "local_testability": "clear",
+        "decision": "promote_local_triage",
+        "gate": "Local triage only; no claim, comment, PR, or payout details without GitHub/public-action approval.",
+        "rejection_reasons": []
+      }
+    },
+    {
+      "fixture_id": "tsperf_subjective_acceptance_reject",
+      "algora_url": "https://algora.io/tsperf/bounties",
+      "page_text": "Open bounty with explicit amount, but acceptance text asks for broad performance improvements with no measurable target in the fixture.",
+      "github_issue_url": "https://github.com/microsoft/TypeScript/issues/example",
+      "amount_text": "$300",
+      "state_text": "open",
+      "claim_text": "0 claims",
+      "last_activity_text": "unknown",
+      "local_testability_note": "benchmark scope unclear and may require subjective acceptance",
+      "expected": {
+        "candidate_id": "tsperf-subjective-acceptance-reject",
+        "amount_usd": 300,
+        "state": "open",
+        "claim_count": 0,
+        "repo_health": "unknown",
+        "local_testability": "unclear",
+        "decision": "reject",
+        "gate": "Reject until measurable acceptance target exists.",
+        "rejection_reasons": [
+          "subjective_acceptance"
+        ]
+      }
+    }
+  ],
+  "next_action": "Implement a parser against this fixture before any approved read-only live refresh.",
+  "prohibited_actions": [
+    "live_algora_fetch",
+    "live_github_fetch",
+    "github_comment",
+    "bounty_claim",
+    "fork_or_pr",
+    "payout_details",
+    "account_action"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-focus-beam-v1-20260619",
+  "title": "Command Cockpit Focus Beam",
+  "created_at": "2026-06-19T20:35:20Z",
+  "kind": "ui_unlock",
+  "summary": "Selected Quest nodes now drive a generated focus-beam reticle inside the existing cockpit board.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/assets/system/command-cockpit-focus-beam-20260619.png",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "questFieldCells",
+      "questFocusedRole",
+      "focusedCell.role",
+      "focusedCell.tone"
+    ],
+    "outputs": [
+      "renderQuestFocusBeam",
+      "quest-focus-beam",
+      "system-command-cockpit-focus-beam"
+    ]
+  },
+  "verification": {
+    "intent": "Improve animation quality by making motion follow the clicked path node instead of adding another scrolling report row.",
+    "layout": "The focus beam is absolutely positioned inside .quest-field and uses computed focus percentage variables.",
+    "motion": "The beam uses transform and opacity animation with mobile compression rules."
+  }
+}

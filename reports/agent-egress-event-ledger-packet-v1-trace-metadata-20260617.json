@@ -1,0 +1,26 @@
+{
+  "required_field_count": 38,
+  "egress_type_count": 14,
+  "policy_verdict_count": 4,
+  "negative_fixture_count": 15,
+  "candidate_first_event_count": 4,
+  "recommended_next_build": "agent_egress_event_ledger_contract_v1_schema_fixtures_validator_design",
+  "runtime_boundary": {
+    "report_only": true,
+    "gateway_started": false,
+    "gateway_installed": false,
+    "api_keys_created": false,
+    "live_egress_events_recorded": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "browser_sessions_started": 0,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "credential_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

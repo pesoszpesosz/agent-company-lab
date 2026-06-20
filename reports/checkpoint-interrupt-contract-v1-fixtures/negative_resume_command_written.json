@@ -1,0 +1,40 @@
+{
+  "apply_allowed": false,
+  "apply_preflight_validation_path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-apply-preflight-blocker-v1-validation-20260617.json",
+  "checkpoint_id": "checkpoint-negative-resume_command_written",
+  "interrupt_reason": "service_worker_gate",
+  "lane_id": "security_bounty_private_reports",
+  "manual_review_required": true,
+  "operator_docket_validation_path": "E:\\agent-company-lab\\reports\\service-worker-operator-decision-docket-v1-validation-20260617.json",
+  "required_artifacts": [
+    "E:\\agent-company-lab\\reports\\agent-company-current-source-radar-wave15-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\service-worker-operator-decision-docket-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\service-worker-signed-decision-apply-preflight-blocker-v1-validation-20260617.json"
+  ],
+  "resume_allowed": false,
+  "runtime_boundary": {
+    "apply_commands_executed": 0,
+    "apply_commands_written": 0,
+    "approval_rows_written": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "resume_commands_executed": 0,
+    "resume_commands_written": 1,
+    "runtime_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.checkpoint_interrupt_contract.v1",
+  "service_request_id": "req-next-wave-security-report-route-review-20260614",
+  "source_kind": "service_request",
+  "source_research_validation_path": "E:\\agent-company-lab\\reports\\agent-company-current-source-radar-wave15-validation-20260617.json",
+  "task_id": "",
+  "worker_start_allowed": false
+}

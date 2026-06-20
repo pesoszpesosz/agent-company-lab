@@ -1,0 +1,86 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "candidate_rows": 0,
+    "external_side_effects": 0,
+    "fixture_rows_created": 10,
+    "github_comments_or_prs": 0,
+    "hard_reject_rows": 1,
+    "model_mcp_or_external_api_calls": 0,
+    "opire_account_or_login": false,
+    "parsed_rows_emitted": 10,
+    "payments": 0,
+    "proposals_or_submissions": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "try_claim_reward_commands": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "at_least_ten_rows",
+      "passed": true
+    },
+    {
+      "name": "parsed_rows_match_fixture",
+      "passed": true
+    },
+    {
+      "name": "every_row_has_decision",
+      "passed": true
+    },
+    {
+      "name": "captcha_abuse_hard_rejected",
+      "passed": true
+    },
+    {
+      "name": "candidate_requires_readonly_refresh_only",
+      "passed": true
+    },
+    {
+      "name": "aggregate_gate_flags_present",
+      "passed": true
+    },
+    {
+      "name": "fixture_exists",
+      "passed": true
+    },
+    {
+      "name": "results_exists",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_try_claim_or_reward_commands",
+      "passed": true
+    },
+    {
+      "name": "no_public_github_actions",
+      "passed": true
+    },
+    {
+      "name": "no_payments_or_submissions",
+      "passed": true
+    },
+    {
+      "name": "no_service_request_mutation",
+      "passed": true
+    },
+    {
+      "name": "no_runtime_model_or_mcp",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T08:49:08Z",
+  "schema_version": "paid_code.opire_saved_card_parser_checker.validation.v1",
+  "task_id": "task-opire-saved-card-parser-checker-v1-20260618"
+}

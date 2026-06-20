@@ -1,0 +1,15 @@
+{
+  "traceId": "trace-agent-company-atlas-active-lane-view-transition-meter-v1-20260619",
+  "taskId": "task-agent-company-atlas-active-lane-view-transition-meter-v1-20260619",
+  "eventId": "trace-atlas_active_lane_view_transition_meter_added-20260619",
+  "title": "Active Lane View Transition Meter",
+  "createdUtc": "2026-06-19T02:44:20Z",
+  "summary": "Added a compact animated stage meter inside the active lane HUD so the mounted view position is visible while switching Overview, Path, Chronicle, Trail, Game, and Comms.",
+  "goalFit": "Improves the Agent Company Atlas as a premium, game-like command cockpit by making selected path navigation feel continuous without adding another scroll-heavy panel.",
+  "uiSurface": "Selected lane active HUD",
+  "proof": [
+    "web/app.js renders active-lane-view-transition after the view portal dock",
+    "web/styles.css animates activeLaneViewRunner across the view meter",
+    "web/data/snapshot.json records the unlock in the platform engineering lane after regeneration"
+  ]
+}

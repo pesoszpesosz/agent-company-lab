@@ -1,0 +1,90 @@
+{
+  "generated_utc": "2026-06-20T20:57:36Z",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "schema_version": "customer_update_feed.v3",
+  "status": "active_local_update_feed",
+  "updates": [
+    {
+      "applied": [
+        "followup_escalation_packet_written",
+        "ai_resources_or_ceo_triage_task_created",
+        "routing_ledger_escalation_status_updated"
+      ],
+      "generated_utc": "2026-06-20T20:57:36Z",
+      "human_action_needed": false,
+      "next": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
+      "route_packet_path": "E:\\agent-company-lab\\reports\\customer-followup-escalation-v1-20260620.md",
+      "summary": "Follow-up escalation packet written for 6 stale customer lane tasks.",
+      "update_id": "customer-update-followup-escalation-customer-input-ceo-operating-goal-objective-20260620-002"
+    },
+    {
+      "applied": [
+        "followup_monitor_report_written",
+        "routing_ledger_monitor_status_updated"
+      ],
+      "generated_utc": "2026-06-20T20:52:06Z",
+      "human_action_needed": false,
+      "next": "Escalate ownerless, blocked, or stale follow-ups to AI Resources or the CEO decision batch.",
+      "route_packet_path": "E:\\agent-company-lab\\reports\\customer-followup-monitor-v1-20260620.md",
+      "summary": "Follow-up monitor checked 6 lane tasks; 6 need intake attention.",
+      "update_id": "customer-update-followup-monitor-customer-input-ceo-operating-goal-objective-20260620-002"
+    },
+    {
+      "applied": [
+        "lane_followup_packet_written",
+        "lane_owned_tasks_created_or_refreshed",
+        "routing_ledger_marked_synthesized"
+      ],
+      "generated_utc": "2026-06-20T18:13:05Z",
+      "human_action_needed": false,
+      "next": "Lane managers can claim or work the generated local tasks; no external action is authorized.",
+      "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\processed\\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md",
+      "summary": "Lane follow-up tasks synthesized for `customer-input-ceo-operating-goal-objective-20260620-002`.",
+      "update_id": "customer-update-customer-input-ceo-operating-goal-objective-20260620-002-followups"
+    },
+    {
+      "applied": [
+        "raw_input_preserved",
+        "compact_route_packet_written",
+        "routing_ledger_updated",
+        "customer_update_feed_updated"
+      ],
+      "generated_utc": "2026-06-20T18:06:19Z",
+      "human_action_needed": true,
+      "next": "ai_resources_lab_followup_packet_or_task",
+      "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.md",
+      "summary": "Customer input `customer-input-ceo-operating-goal-objective-20260620-002` routed to `ai_resources_lab`.",
+      "update_id": "customer-update-customer-input-ceo-operating-goal-objective-20260620-002"
+    },
+    {
+      "applied": [
+        "10_structured_script_briefs",
+        "30_title_variants",
+        "10_thumbnail_briefs",
+        "production_manifest",
+        "reputation_copyright_checklist",
+        "youtube_material_route_template"
+      ],
+      "generated_utc": "2026-06-20T17:18:00Z",
+      "human_action_needed": false,
+      "next": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1.",
+      "summary": "YouTube lane now has its first no-post proof.",
+      "update_id": "customer-update-youtube-no-post-batch-created-20260620-002"
+    },
+    {
+      "applied": [
+        "premium_customer_intake_agent_added",
+        "premium_customer_intake_lane_added_and_claimed",
+        "premium_customer_intake_router_v1_added"
+      ],
+      "generated_utc": "2026-06-20T17:04:00Z",
+      "human_action_needed": false,
+      "next": "Future customer requests and materials route through intake so raw material does not pollute CEO context.",
+      "summary": "Premium customer intake was installed and claimed.",
+      "update_id": "customer-update-premium-intake-installed-20260620-001"
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "external_side_effects": false
+  }
+}

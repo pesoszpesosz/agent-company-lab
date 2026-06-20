@@ -1,0 +1,36 @@
+{
+  "schema_version": "agent_company.optimism_single_asset_candidate_packet_validation.v1",
+  "generated_utc": "2026-06-17T22:00:11Z",
+  "task_id": "task-optimism-single-asset-candidate-packet-v1-20260618",
+  "checked_files": [
+    "E:\\agent-company-lab\\data\\optimism-single-asset-candidate-packet-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-single-asset-candidate-packet-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-single-asset-candidate-packet-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-single-asset-candidate-packet-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\optimism-single-asset-candidate-packet-v1-trace-metadata-20260618.json"
+  ],
+  "selected_asset_id": "optimism-sc-005",
+  "selected_filter_id": "olf-001",
+  "invariant_count": 10,
+  "expected_min_invariant_count": 8,
+  "source_snapshot_sha256": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F",
+  "submission_ready_count": 0,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

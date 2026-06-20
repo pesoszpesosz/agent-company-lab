@@ -1,0 +1,49 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_four_sources",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_four_trend_themes",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_seven_calendar_entries",
+      "passed": true
+    },
+    {
+      "name": "all_calendar_entries_no_post",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_six_gates",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_fiverr_account_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_public_posts_or_replies",
+      "passed": true
+    },
+    {
+      "name": "no_client_outreach_or_proposals",
+      "passed": true
+    },
+    {
+      "name": "no_model_mcp_or_external_api_calls",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T06:57:59Z",
+  "schema_version": "fiverr_trends_no_post_content_calendar_local_proof.validation.v1",
+  "task_id": "task-lane-scout-fiverr_2026_trends-20260618"
+}

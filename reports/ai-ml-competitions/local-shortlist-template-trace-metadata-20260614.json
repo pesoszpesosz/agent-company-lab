@@ -1,0 +1,14 @@
+{
+  "span_kind": "agent",
+  "runtime": "codex_desktop",
+  "api_calls": false,
+  "browser_actions": false,
+  "live_data_access": false,
+  "account_actions": false,
+  "rules_acceptance": false,
+  "dataset_download": false,
+  "submission_actions": false,
+  "realized_usd": 0,
+  "task_id": "task-ai-ml-competition-local-shortlist-template-20260614",
+  "lane_id": "ai_ml_competitions"
+}

@@ -1,0 +1,27 @@
+{
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "contract_input_count": 20,
+  "validation_rule_count": 15,
+  "negative_fixture_count": 21,
+  "positive_fixture_count": 1,
+  "expected_current_status": "candidate_contract_design_only",
+  "recommended_next_build": "local_runtime_adapter_pool_activation_contract_v1_schema_fixture_files_validator_runner",
+  "runtime_boundary": {
+    "report_only": true,
+    "validator_created": false,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "command_previews_executed": 0,
+    "local_runtime_processes_started": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "credentials_created": false,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

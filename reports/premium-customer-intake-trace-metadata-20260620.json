@@ -1,0 +1,25 @@
+{
+  "span_kind": "AGENT",
+  "runtime": "codex_premium_customer_intake_bootstrap",
+  "api_calls": false,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "accounts_created": 0,
+  "public_actions": 0,
+  "service_requests_approved_or_assigned": 0,
+  "worker_starts": 0,
+  "lane_added": "premium_customer_intake",
+  "department_added": "customer_operator_success",
+  "role_added": "premium_customer_intake_agent",
+  "registered_agent": "premium-customer-intake-agent-20260620",
+  "packets_created": [
+    "premium_customer_intake_router_v1",
+    "customer_input_route_packet_v1",
+    "customer_request_routing_ledger_v1",
+    "knowledge_application_loop_v1",
+    "customer_update_feed_v1",
+    "ceo_state_packet_v2"
+  ],
+  "context_hygiene_rule": "Raw customer requests and materials stay in intake artifacts; CEO receives compact context capsules and applied-knowledge deltas.",
+  "not_a_rejection_engine": true
+}

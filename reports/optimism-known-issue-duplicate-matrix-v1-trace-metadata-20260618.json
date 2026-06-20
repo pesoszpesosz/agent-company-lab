@@ -1,0 +1,35 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "generated_utc": "2026-06-17T22:04:00Z",
+  "trace_id": "trace-optimism-known-issue-duplicate-matrix-v1-20260618",
+  "task_id": "task-optimism-known-issue-duplicate-matrix-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "agent_id": "recovered-profitable-edge-infra",
+  "operation": "optimism_known_issue_duplicate_matrix",
+  "input_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/optimism/scope/",
+    "https://github.com/paradigmxyz/reth/",
+    "https://bbp-form.ethereum.org/",
+    "https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version"
+  ],
+  "output_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-known-issue-duplicate-matrix-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-known-issue-duplicate-matrix-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-known-issue-duplicate-matrix-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-known-issue-duplicate-matrix-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-known-issue-duplicate-matrix-v1-20260618.md"
+  ],
+  "boundary": {
+    "report_only": true,
+    "security_tests": false,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

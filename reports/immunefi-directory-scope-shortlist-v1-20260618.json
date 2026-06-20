@@ -1,0 +1,57 @@
+{
+  "schema_version": "agent_company.immunefi_directory_scope_shortlist_report.v1",
+  "generated_utc": "2026-06-17T21:31:00Z",
+  "task_id": "task-immunefi-directory-scope-shortlist-v1-20260618",
+  "dataset_json": "E:\\agent-company-lab\\data\\immunefi-directory-scope-shortlist-v1-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\immunefi-directory-scope-shortlist-v1-20260618.csv",
+  "source_directory_url": "https://immunefi.com/bug-bounty/",
+  "source_directory_observed_update": "Jun 17th 2026 at 16:00 UTC",
+  "program_count": 9,
+  "submission_ready_count": 0,
+  "top_programs": [
+    "optimism",
+    "ens",
+    "lido",
+    "immutable"
+  ],
+  "decision": "Promote Immunefi rules and scope extraction only. No target-specific security testing or bounty submission is ready.",
+  "ranking_basis": [
+    "publicly visible payout and update recency",
+    "scope clarity and local-only proof path",
+    "PoC/KYC/reporting gates",
+    "duplicate/known-issue surface",
+    "expected value before service-worker gates"
+  ],
+  "promoted_local_proofs": [
+    "optimism_scope_rules_extraction_packet_v1",
+    "ens_scope_known_issues_matrix_v1",
+    "lido_scope_rules_extraction_packet_v1",
+    "security_report_quality_gate_v1"
+  ],
+  "lane_mapping": {
+    "lane_id": "security_bounty_private_reports",
+    "first_agent_type": "program_rules_reader",
+    "service_worker_needs": [
+      "browser_read_only_session",
+      "security_report_submission_gate",
+      "wallet_public_address_or_payment_reply",
+      "legal_kyc_tax_payment_gate"
+    ]
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build optimism_scope_rules_extraction_packet_v1 and security_report_quality_gate_v1 before any target-specific testing or report drafting."
+}

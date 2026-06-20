@@ -1,0 +1,27 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "bugcrowd_account_or_login": false,
+    "credentials_or_private_assets_used": 0,
+    "crowdstream_actions": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "programs_followed_or_feedback_sent": 0,
+    "programs_joined_or_invites_accepted": 0,
+    "public_comments_or_disclosures": 0,
+    "reports_submitted_or_drafts_saved": 0,
+    "security_testing_performed": 0,
+    "service_requests_mutated": 0,
+    "support_tickets_or_contacts": 0,
+    "targets_tested": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "local_proof_completed",
+  "generated_at": "2026-06-18T07:19:52Z",
+  "lane_id": "security_bounty_private_reports",
+  "schema_version": "bugcrowd_rules_first_triage_local_proof.trace.v1",
+  "source": "tools/create_bugcrowd_rules_first_triage_local_proof.py",
+  "summary": "Bugcrowd rules first-triage packet created with no account, browser session, target testing, program follow, support ticket, submission, payment, public action, worker/runtime, model/MCP call, or external side effect.",
+  "task_id": "task-lane-scout-bugcrowd_program_rules-20260618"
+}

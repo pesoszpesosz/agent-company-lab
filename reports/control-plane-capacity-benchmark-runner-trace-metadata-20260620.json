@@ -1,0 +1,39 @@
+{
+  "span_kind": "AGENT",
+  "runtime": "codex_control_plane_capacity_benchmark_runner",
+  "schema_version": "control_plane_capacity_benchmark_runner.v1",
+  "generated_at": "2026-06-20T17:50:20Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-control-plane-capacity-benchmark-runner-v1-20260620",
+  "agent_id": "recovered-profitable-edge-infra",
+  "command": "python tools\\agent_company.py run-control-plane-capacity-benchmark --run-id 20260620 --overwrite",
+  "api_calls": false,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "accounts_created": 0,
+  "public_actions": 0,
+  "service_requests_approved_or_assigned": 0,
+  "worker_starts": 0,
+  "production_rows_inserted_by_benchmark": 0,
+  "synthetic_data_only": true,
+  "benchmark_targets": [
+    1000,
+    10000,
+    100000
+  ],
+  "runner_module": "E:\\agent-company-lab\\tools\\agent_company_core\\control_plane_capacity_benchmark_runner.py",
+  "runner_report": "E:\\agent-company-lab\\reports\\control-plane-capacity-benchmark-runner-v1-20260620.md",
+  "runner_json": "E:\\agent-company-lab\\reports\\control-plane-capacity-benchmark-runner-v1-20260620.json",
+  "synthetic_runner_db": "E:\\agent-company-lab\\work\\capacity-benchmark\\control_plane_capacity_benchmark_runner_v1_20260620.sqlite",
+  "test_command": "python -m pytest tests\\test_control_plane_capacity_benchmark_runner.py -q",
+  "test_result": "2 passed in 0.08s",
+  "slowest_100k_query": {
+    "label": "count_open_tasks",
+    "seconds": 0.005425
+  },
+  "capacity_policy": [
+    "run_after_material_schema_changes",
+    "run_before_external_workflow_engine_rollout",
+    "run_500000_and_1000000_row_scenarios_before_claiming_high_volume_worker_readiness"
+  ]
+}

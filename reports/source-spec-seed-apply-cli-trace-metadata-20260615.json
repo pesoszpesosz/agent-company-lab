@@ -1,0 +1,19 @@
+{
+  "agent_id": "recovered-profitable-edge-infra",
+  "applied_spec_count": 3,
+  "external_side_effects": false,
+  "generated_at": "2026-06-15T17:08:07.876203+00:00",
+  "lane_id": "platform_engineering",
+  "next_action": "Use the completed source-spec registry to create first local evidence packets for the six owned non-platform lanes that still have no evidence rows.",
+  "registry_file_modified_by_apply": true,
+  "schema_version": "agent_company.source_spec_seed_apply_cli_trace_metadata.v1",
+  "seed_packet_count": 3,
+  "seed_packet_count_latest": 0,
+  "source_spec_gap_count_after_apply": 0,
+  "source_spec_gap_count_latest": 0,
+  "source_specs_registry_count_after": 13,
+  "source_specs_registry_count_before": 10,
+  "source_specs_table_rows_after": 13,
+  "source_specs_table_rows_before": 10,
+  "task_id": "task-source-spec-seed-apply-cli-20260615"
+}

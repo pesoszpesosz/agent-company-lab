@@ -1,0 +1,68 @@
+{
+  "schema_version": "temporal_inngest_adapter_cli_p2_cleanup_test.v1",
+  "generated_local": "2026-06-15T18:17:15.1233370+03:00",
+  "generated_utc_approx": "2026-06-15T15:17:15Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-temporal-inngest-adapter-cli-p2-cleanup-20260615",
+  "tool_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "tool_sha256_before": "618855E17387D3B01A266A53F3C907D40CA5E05C5340CF3EE735C6F26B5C547A",
+  "tool_sha256_after": "572696D6766B4548F9B29692110C9F630F991A74E9AD7613BAE001F96013B081",
+  "implemented_p2_items": [
+    "removed unused DURABLE_ADAPTER_DRY_RUN_DEFAULT_RESULT constant",
+    "added DURABLE_ADAPTER_RESUME_REQUIREMENTS_ORDER_POLICY constant",
+    "emitted resume_requirements_order_policy in dry-run result-set payload"
+  ],
+  "positive": {
+    "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-reducer-dry-run-fixtures-20260615.json",
+    "result_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-cli-p2-cleanup-positive-result-20260615.json",
+    "result_sha256": "3C22916F45AB3F4F43EE5FAFFD7922ED1E412DCC34CF9EDF954C4FD4AD4D6131",
+    "result_count": 14,
+    "failure_count": 0,
+    "resume_requirements_order_policy": "strict_order_is_semantic_for_review_packet_display"
+  },
+  "negative_regression": [
+    {
+      "name": "duplicate_ids",
+      "exit_code": 1,
+      "result_created": false
+    },
+    {
+      "name": "output_shape",
+      "exit_code": 1,
+      "result_created": false
+    }
+  ],
+  "checks": {
+    "syntax_ok": true,
+    "unused_default_constant_absent": true,
+    "resume_requirements_policy_symbol_present": true,
+    "positive_json_ok": true,
+    "positive_json_policy_present": true,
+    "positive_write_ok": true,
+    "negative_duplicate_ids_rejected": true,
+    "negative_output_shape_rejected": true,
+    "negative_result_files_created": 0,
+    "service_request_mutation_count": 0
+  },
+  "runtime_boundary": {
+    "python_files_modified": 1,
+    "cli_commands_added_to_runner": 0,
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "approvals_granted": 0,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "temporal_activities_scheduled": 0,
+    "inngest_service_started": false,
+    "inngest_events_emitted": 0,
+    "api_calls": false,
+    "external_side_effects": false
+  },
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "next_action": "Create the next local-only durable orchestration integration report that maps the hardened reducer contract to service-worker decision packet refresh commands without starting external runtimes."
+}

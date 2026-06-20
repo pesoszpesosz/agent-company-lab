@@ -1,0 +1,26 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-quest-level-map-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-quest-level-map-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_quest_level_map_added-20260619",
+  "title": "Command Cockpit Quest Level Map",
+  "timestamp": "2026-06-19T17:03:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Turned the Command Cockpit Overview Quest field into a compact in-stage level map so the selected lane reads more like a playable path without adding another panel.",
+  "changes": [
+    "Added quest-field count metadata, a route-bed layer, and node socket markup to the existing Quest field.",
+    "Styled World, Level, Checkpoint, Gate, and Next cells as compact route nodes with a progress runner and subtle desktop stagger.",
+    "Flattened the mobile treatment so the route remains readable without clipping the narrow cockpit.",
+    "Recorded the change as the latest platform UI unlock in the generated snapshot history."
+  ],
+  "artifacts": [
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

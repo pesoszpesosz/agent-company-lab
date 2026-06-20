@@ -1,0 +1,44 @@
+{
+  "artifact": "money-path-expansion-radar-wave17",
+  "created_utc": "2026-06-17T21:35:00Z",
+  "task_id": "task-money-path-expansion-radar-wave17-20260618",
+  "trace_id": "trace-money-path-expansion-radar-wave17-20260618",
+  "lane_id": "money_source_discovery",
+  "agent_id": "recovered-profitable-edge-infra",
+  "dataset_json": "E:\\agent-company-lab\\data\\money-path-expansion-radar-wave17-20260618.json",
+  "dataset_csv": "E:\\agent-company-lab\\data\\money-path-expansion-radar-wave17-20260618.csv",
+  "report_json": "E:\\agent-company-lab\\reports\\money-path-expansion-radar-wave17-20260618.json",
+  "report_md": "E:\\agent-company-lab\\reports\\money-path-expansion-radar-wave17-20260618.md",
+  "validation_path": "E:\\agent-company-lab\\reports\\money-path-expansion-radar-wave17-validation-20260618.json",
+  "summary": {
+    "path_count": 10,
+    "source_url_count": 41,
+    "lane_count": 9,
+    "ready_for_local_research_count": 10,
+    "highest_priority_paths": [
+      "security_bug_bounties_web3_and_vdp",
+      "ai_automation_freelance_services",
+      "paid_open_source_bounties"
+    ],
+    "all_checks_passed": true,
+    "failure_count": 0
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "security_tests": false,
+    "trades_or_deposits": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Create local proof packets for the top four money paths without account registration, public actions, security testing, trades, wallets, or payment setup."
+}

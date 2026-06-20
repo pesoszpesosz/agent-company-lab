@@ -1,0 +1,82 @@
+{
+  "traceId": "trace-agent-company-atlas-chronicle-stage-dock-v1-20260619",
+  "taskId": "task-agent-company-atlas-chronicle-stage-dock-v1-20260619",
+  "eventId": "trace-atlas_chronicle_stage_dock_added-20260619",
+  "createdUtc": "2026-06-18T21:43:12Z",
+  "laneId": "platform_engineering",
+  "laneName": "Platform Engineering",
+  "title": "Chronicle Stage Dock",
+  "summary": "Turned the lane Chronicle into a compact staged log console so SIGNAL opens as a no-overflow status panel while ROUTE, GATES, and STREAM unlock the deeper expanding history on demand.",
+  "changeType": "ui_compactness",
+  "stageModel": {
+    "defaultStage": "signal",
+    "stages": [
+      "signal",
+      "route",
+      "gates",
+      "stream"
+    ],
+    "defaultBehavior": "Only the active Chronicle module is mounted in the stage panel.",
+    "expansionBehavior": "STREAM remains the deep event-history surface for long lane narratives."
+  },
+  "browserEvidence": {
+    "desktopSignal": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "detailHeight": 393,
+      "panelHeight": 586,
+      "dockHeight": 52,
+      "boardHeight": 239,
+      "overflow": 0,
+      "mountedModules": {
+        "grid": 0,
+        "mapline": 0,
+        "gates": 0,
+        "stream": 0
+      }
+    },
+    "mobileSignal": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "detailHeight": 383,
+      "panelHeight": 385,
+      "dockHeight": 42,
+      "boardHeight": 239,
+      "overflow": 0,
+      "mountedModules": {
+        "grid": 0,
+        "mapline": 0,
+        "gates": 0,
+        "stream": 0
+      }
+    },
+    "desktopStream": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "activeStage": "STREAM",
+      "streamModules": 1,
+      "overflow": 978,
+      "note": "Deep scroll is intentionally isolated to the explicit STREAM stage."
+    }
+  },
+  "verification": [
+    "python -m pytest tests/test_agent_company_atlas_chronicle_stage_dock.py -q",
+    "node --check web/app.js",
+    "In-app browser QA on command deck Chronicle route at 1440x900 and 390x844"
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_chronicle_stage_dock.py",
+    "reports/agent-company-atlas-chronicle-stage-dock-trace-metadata-20260619.json",
+    "web/data/snapshot.json"
+  ]
+}

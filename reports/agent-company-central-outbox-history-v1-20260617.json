@@ -1,0 +1,119 @@
+{
+  "schema_version": "agent_company.central_outbox_history.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "messages": [
+    {
+      "message_id": "msg-wave10-central-outbox-build-20260617",
+      "created_utc": "2026-06-17T00:00:00Z",
+      "sender_agent_id": "recovered-profitable-edge-infra",
+      "recipient_type": "ceo",
+      "recipient_id": "agent-company-ceo",
+      "lane_id": "platform_engineering",
+      "task_id": "task-agent-company-central-outbox-history-v1-20260617",
+      "service_request_id": null,
+      "message_type": "artifact_notice",
+      "priority": 89,
+      "subject": "Central outbox/history v1 contract ready for local validation",
+      "body": "Wave 10 recommended a replayable communication surface before external durable runtimes or A2A endpoints. This fixture proves the local message contract without starting workers or mutating service requests.",
+      "context_refs": [
+        {
+          "kind": "report",
+          "ref": "E:\\agent-company-lab\\reports\\agent-company-deep-research-wave10-20260617.md"
+        },
+        {
+          "kind": "artifact",
+          "ref": "E:\\agent-company-lab\\architecture\\central-outbox-history-v1.schema.json"
+        }
+      ],
+      "approval_posture": "local_only",
+      "prohibited_actions": [
+        "browser_session",
+        "account_action",
+        "wallet_action",
+        "payment_action",
+        "public_action",
+        "security_testing",
+        "model_api_call",
+        "runtime_start",
+        "dependency_install",
+        "service_request_mutation",
+        "real_money_action"
+      ],
+      "requested_local_action": "Validate the fixture and use it as the contract for future manager/service-worker dispatch history.",
+      "replay_status": "queued",
+      "external_side_effects": false
+    },
+    {
+      "message_id": "msg-paid-code-parser-followup-20260617",
+      "created_utc": "2026-06-17T00:00:00Z",
+      "sender_agent_id": "recovered-profitable-edge-infra",
+      "recipient_type": "agent",
+      "recipient_id": "lane-manager-paid_code_bounties-019ec612",
+      "lane_id": "paid_code_bounties",
+      "task_id": null,
+      "service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+      "message_type": "gate_request",
+      "priority": 72,
+      "subject": "Algora live refresh remains gated behind read-only approval",
+      "body": "The no-network parser checker passed locally. Any live Algora or GitHub refresh must use the existing browser_read_only_session request and must not claim, comment, fork, PR, or provide payout details.",
+      "context_refs": [
+        {
+          "kind": "evidence",
+          "ref": "evidence-algora-candidate-refresh-fixture-check-20260616"
+        },
+        {
+          "kind": "service_request",
+          "ref": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614"
+        }
+      ],
+      "approval_posture": "needs_human_review",
+      "prohibited_actions": [
+        "browser_session",
+        "account_action",
+        "public_action",
+        "payment_action",
+        "service_request_mutation",
+        "real_money_action"
+      ],
+      "requested_local_action": "Keep the parsed fixture as local proof and wait for exact read-only browser approval before refreshing live pages.",
+      "replay_status": "queued",
+      "external_side_effects": false
+    },
+    {
+      "message_id": "msg-ai-competition-arc-followup-20260617",
+      "created_utc": "2026-06-17T00:00:00Z",
+      "sender_agent_id": "recovered-profitable-edge-infra",
+      "recipient_type": "agent",
+      "recipient_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "lane_id": "ai_ml_competitions",
+      "task_id": null,
+      "service_request_id": null,
+      "message_type": "dispatch",
+      "priority": 70,
+      "subject": "ARC toy harness passed and can be extended locally",
+      "body": "The standard-library synthetic ARC harness passed five local cases. The next safe action is extending synthetic families, not Kaggle access, official ARC data, paid compute, or submission.",
+      "context_refs": [
+        {
+          "kind": "evidence",
+          "ref": "evidence-arc-toy-harness-run-20260616"
+        },
+        {
+          "kind": "artifact",
+          "ref": "E:\\agent-company-lab\\tools\\arc_toy_harness.py"
+        }
+      ],
+      "approval_posture": "local_only",
+      "prohibited_actions": [
+        "account_action",
+        "payment_action",
+        "public_action",
+        "model_api_call",
+        "dependency_install",
+        "real_money_action"
+      ],
+      "requested_local_action": "Add more synthetic ARC families only if the competition lane remains prioritized.",
+      "replay_status": "queued",
+      "external_side_effects": false
+    }
+  ]
+}

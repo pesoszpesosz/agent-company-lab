@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "trophy-filters-v1",
+  "generatedAt": "2026-06-17T15:01:17Z",
+  "feature": {
+    "id": "agent-company-atlas-trophy-filters-v1",
+    "title": "Trophy Room filters and new-unlock pulse",
+    "purpose": "Make the Trophy Room scalable as outcomes grow by adding tier filters, lane filters, a new-unlock pulse, and explicit Trail actions."
+  },
+  "research": [
+    {
+      "title": "Trophy Room Design Philosophy",
+      "url": "https://medium.com/%40GWBycer/evolving-achievements-with-trophy-room-design-26dcde5c3d13",
+      "takeaway": "Achievement items work best when integrated into the experience instead of sitting outside the game loop."
+    },
+    {
+      "title": "UI Patterns: Collectible Achievements",
+      "url": "https://ui-patterns.com/patterns/CollectibleAchievements",
+      "takeaway": "Large collectible sets benefit from attractive display objects and browsable show-room behavior."
+    },
+    {
+      "title": "IxDF: Achievements in UX/UI Design",
+      "url": "https://ixdf.org/literature/topics/achievements",
+      "takeaway": "Achievements communicate performance levels and encourage continued engagement."
+    },
+    {
+      "title": "Userpilot: Micro-interaction Examples",
+      "url": "https://userpilot.com/blog/micro-interaction-examples/",
+      "takeaway": "Small feedback animations can make interface state changes feel responsive and reduce ambiguity."
+    }
+  ],
+  "implementation": {
+    "sourceFiles": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Trophy Room now has tier chips for all, mythic, gold, silver, and bronze trophies.",
+      "Trophy Room now has a lane dropdown generated from snapshot.lanes.",
+      "Tier and lane filters combine and rerender the trophy list without changing the snapshot.",
+      "The freshest trophy receives a new-unlock pulse and label.",
+      "Each trophy has an explicit Open trail button that preserves source-lane Trail drilldown.",
+      "Filter preferences use browser-local storage when available and degrade safely when storage is unavailable."
+    ],
+    "storage": [
+      "agent-company-atlas.trophy-filter.v1"
+    ]
+  },
+  "validation": {
+    "staticChecks": [
+      {
+        "command": "node --check web\\app.js",
+        "status": "passed"
+      },
+      {
+        "command": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+        "status": "passed"
+      },
+      {
+        "command": "python -m json.tool web\\data\\snapshot.json",
+        "status": "passed"
+      },
+      {
+        "command": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md",
+        "status": "passed",
+        "result": "no non-ASCII matches"
+      }
+    ],
+    "browserDefault": {
+      "url": "http://localhost:5177/?verify=trophy-filters#lane=platform_engineering&view=overview",
+      "checks": {
+        "cardCount": 12,
+        "countText": "214 unlocks",
+        "activeTier": "all",
+        "laneOptions": 13,
+        "newUnlockCount": 1,
+        "firstTitle": "Atlas Trophy Room Visual Upgrade",
+        "firstKicker": "mythic +166 xp new unlock",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserTierFilter": {
+      "checks": {
+        "clickedTier": "gold",
+        "activeTier": "gold",
+        "cardCount": 10,
+        "countText": "10 shown",
+        "cardTiers": [
+          "gold"
+        ],
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserLaneFilter": {
+      "checks": {
+        "selectedLane": "ai_ml_competitions",
+        "activeTier": "gold",
+        "cardCount": 5,
+        "countText": "5 shown",
+        "laneIds": [
+          "ai_ml_competitions"
+        ],
+        "cardTiers": [
+          "gold"
+        ],
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserMobile": {
+      "url": "http://localhost:5177/?verify=trophy-filters-mobile#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 390,
+        "height": 840
+      },
+      "checks": {
+        "cardCount": 12,
+        "activeTier": "all",
+        "laneValue": "all",
+        "newUnlockCount": 1,
+        "firstTitle": "Atlas Trophy Room Visual Upgrade",
+        "firstWidth": 317,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserInteraction": {
+      "url": "http://localhost:5177/?verify=trophy-filters-open-fixed#lane=platform_engineering&view=overview",
+      "checks": {
+        "scopedTrophyCardCount": 1,
+        "openTrailButtonCount": 1,
+        "resultHash": "#lane=platform_engineering&view=trail",
+        "detailActiveTab": "trail",
+        "detailHeading": "Platform Engineering",
+        "trailItems": 18,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserFinalSmoke": {
+      "url": "http://localhost:5177/?verify=trophy-filters-final#lane=platform_engineering&view=overview",
+      "viewport": {
+        "width": 390,
+        "height": 840
+      },
+      "checks": {
+        "cardCount": 11,
+        "countText": "11 shown",
+        "activeTier": "mythic",
+        "laneValue": "all",
+        "newUnlockCount": 1,
+        "firstTitle": "Atlas Trophy Room Filter Upgrade",
+        "firstKicker": "mythic +166 xp new unlock",
+        "firstOpenButton": "Open trail",
+        "includesFilterOutcome": true,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    }
+  },
+  "nextIdeas": [
+    "Generate a trophy icon sheet for tier-specific medals.",
+    "Add a trophy count histogram by lane realm.",
+    "Add a snapshot-refresh unlock toast for newly added outcomes.",
+    "Let lanes define custom trophy milestones in lane-visuals.json."
+  ]
+}

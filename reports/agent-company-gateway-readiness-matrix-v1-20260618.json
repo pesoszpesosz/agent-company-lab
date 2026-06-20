@@ -1,0 +1,204 @@
+{
+  "schema_version": "agent_company.gateway_readiness_matrix.v1",
+  "generated_utc": "2026-06-17T21:24:00Z",
+  "task_id": "task-agent-company-gateway-readiness-matrix-v1-20260618",
+  "source_wave": "E:\\agent-company-lab\\reports\\agent-company-operational-infra-radar-wave16-20260618.json",
+  "purpose": "Convert wave 16 gateway, sandbox, and observability research into local readiness criteria for future agent-company gateway adoption without installing, starting, or routing through any gateway.",
+  "gateway_domains": [
+    {
+      "domain_id": "llm_model_api_gateway",
+      "candidate_sources": [
+        "agentgateway/agentgateway",
+        "katanemo/plano",
+        "pydantic/pydantic-ai",
+        "cloudflare/agents"
+      ],
+      "local_current_assets": [
+        "service_catalog:model_api_execution_gate",
+        "service_requests:req-pydantic-ai-model-backed-adapter-20260614",
+        "agent_egress_event_ledger_v1",
+        "runtime_start_preflight_v1",
+        "runtime_start_signed_decision_guard_v1",
+        "runtime_start_apply_preflight_blocker_v1"
+      ],
+      "readiness": "blocked_requires_signed_decision",
+      "readiness_score": 5,
+      "missing_prerequisites": [
+        "real signed operator decision naming provider, model, cost ceiling, lane scope, credential route, output artifact path, and kill switch",
+        "model call ledger schema tied to trace_events and artifacts",
+        "budget/spend policy visible in CEO review"
+      ],
+      "adoption_rule": "Do not route any model/API traffic through a gateway until the signed decision and model-call ledger exist and validate.",
+      "next_local_build": "model_api_gateway_decision_packet_v1"
+    },
+    {
+      "domain_id": "mcp_tool_gateway",
+      "candidate_sources": [
+        "agentgateway/agentgateway",
+        "IBM/mcp-context-forge",
+        "agent-infra/sandbox",
+        "cloudflare/agents"
+      ],
+      "local_current_assets": [
+        "mcp_tool_registry_gate_v1",
+        "agent_egress_event_ledger_v1",
+        "worker_activation_preflight_chain_v1",
+        "service_catalog:secrets_credentials_handling_gate"
+      ],
+      "readiness": "ready_local_only",
+      "readiness_score": 7,
+      "missing_prerequisites": [
+        "approved MCP server registry row for each server",
+        "per-tool allowlist and denied-by-default policy",
+        "signed tool-call scope before any live MCP call"
+      ],
+      "adoption_rule": "Local registry design can proceed; live MCP traffic remains blocked until server/tool rows and signed scope exist.",
+      "next_local_build": "mcp_gateway_registry_packet_v1"
+    },
+    {
+      "domain_id": "a2a_agent_to_agent_gateway",
+      "candidate_sources": [
+        "agentgateway/agentgateway",
+        "IBM/mcp-context-forge",
+        "cloudflare/agents",
+        "microsoft/autogen"
+      ],
+      "local_current_assets": [
+        "lanes table with owner_agent_id and owner_thread_id",
+        "trace_events table",
+        "lane_manager_checkpoint_handoff_v1",
+        "agent_task_dag_contract_v1"
+      ],
+      "readiness": "ready_local_only",
+      "readiness_score": 6,
+      "missing_prerequisites": [
+        "message envelope schema for lane-manager-to-service-worker handoffs",
+        "reply/ack timeout policy",
+        "identity envelope attached to every inter-agent message"
+      ],
+      "adoption_rule": "Build local message envelopes and replay packets before considering any external A2A gateway.",
+      "next_local_build": "agent_to_agent_message_envelope_v1"
+    },
+    {
+      "domain_id": "browser_worker_gateway",
+      "candidate_sources": [
+        "browser-use/browser-use",
+        "vercel-labs/agent-browser",
+        "cloudflare/agents"
+      ],
+      "local_current_assets": [
+        "browser_read_only_worker_policy_v1",
+        "browser_read_only_assignment_preflight_v1",
+        "browser_read_only_signed_approval_guard_v1",
+        "browser_read_only_apply_preflight_blocker_v1",
+        "service_requests browser_research rows"
+      ],
+      "readiness": "blocked_requires_signed_decision",
+      "readiness_score": 6,
+      "missing_prerequisites": [
+        "real signed browser read-only approval",
+        "domain allowlist and explicit session objective",
+        "browser state capture path",
+        "public-action hard stop confirmation"
+      ],
+      "adoption_rule": "Do not start Browser Use, Agent Browser, Cloudflare browser agents, or any browser session until approval passes apply preflight.",
+      "next_local_build": "browser_checkpoint_resume_packet_v1"
+    },
+    {
+      "domain_id": "computer_use_sandbox_gateway",
+      "candidate_sources": [
+        "trycua/cua",
+        "agent-infra/sandbox"
+      ],
+      "local_current_assets": [
+        "sandbox_execution_gate_contract_v1",
+        "local_runtime_adapter_pool_identity_envelope_v1",
+        "worker_activation_preflight_chain_v1"
+      ],
+      "readiness": "not_ready",
+      "readiness_score": 3,
+      "missing_prerequisites": [
+        "worker class matrix separating browser, desktop, shell, file, and MCP capabilities",
+        "container/VM runtime start preflight",
+        "filesystem and network egress policy",
+        "secrets and private file boundary"
+      ],
+      "adoption_rule": "Study sandbox designs only; no VM, Docker, desktop, shell, or file-capable agent runtime may start.",
+      "next_local_build": "browser_computer_use_worker_class_matrix_v1"
+    },
+    {
+      "domain_id": "observability_gateway",
+      "candidate_sources": [
+        "VoltAgent/voltagent",
+        "agentgateway/agentgateway",
+        "IBM/mcp-context-forge"
+      ],
+      "local_current_assets": [
+        "trace_events table",
+        "artifacts table",
+        "outcomes table",
+        "ceo-review-latest.md",
+        "control-plane-status-latest.md",
+        "agent-company-atlas snapshot"
+      ],
+      "readiness": "ready_local_only",
+      "readiness_score": 8,
+      "missing_prerequisites": [
+        "checkpoint/resume UI packets",
+        "trace replay grouping by lane and service request",
+        "health state rollups per manager"
+      ],
+      "adoption_rule": "Build local observability packets first; do not export telemetry to SaaS or external collectors without approval.",
+      "next_local_build": "checkpoint_resume_ui_packet_design_v1"
+    },
+    {
+      "domain_id": "cloud_durable_agent_gateway",
+      "candidate_sources": [
+        "cloudflare/agents",
+        "Azure-Samples/durable-task-extension-for-agent-framework"
+      ],
+      "local_current_assets": [
+        "checkpoint_interrupt_contract_v1",
+        "checkpoint_interrupt_bridge_fixture_v1",
+        "lane_manager_checkpoint_handoff_v1",
+        "durable_adapter_runtime_interface_contract"
+      ],
+      "readiness": "not_ready",
+      "readiness_score": 2,
+      "missing_prerequisites": [
+        "cloud account and billing approval",
+        "deployment boundary",
+        "secret handling route",
+        "data retention policy",
+        "rollback and cost kill switch"
+      ],
+      "adoption_rule": "Cloud durable-agent platforms remain references only until local checkpoint/resume and signed approval loops are proven.",
+      "next_local_build": "local_to_cloud_deployment_gate_matrix_v1"
+    }
+  ],
+  "summary": {
+    "domain_count": 7,
+    "ready_local_only_count": 3,
+    "blocked_requires_signed_decision_count": 2,
+    "not_ready_count": 2,
+    "highest_priority_next_build": "checkpoint_resume_ui_packet_design_v1",
+    "reason": "Three gateway domains depend on visible checkpoint/resume packets before any safe activation path can be reviewed."
+  },
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "dependency_installs": 0,
+    "gateway_process_starts": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "public_actions": false,
+    "payment_actions": false,
+    "wallet_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build checkpoint_resume_ui_packet_design_v1 as a local report-only packet set before gateway, browser, MCP, model, or cloud activation."
+}

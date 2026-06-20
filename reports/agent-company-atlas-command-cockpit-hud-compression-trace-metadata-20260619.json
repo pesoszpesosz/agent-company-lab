@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-hud-compression-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-hud-compression-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-hud-compression-v1-20260619",
+  "title": "Command Cockpit HUD Compression",
+  "createdAt": "2026-06-19T08:26:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the selected-lane HUD into a denser Command Cockpit status bar so the mounted lane stage starts sooner.",
+  "proof": [
+    "Added tested Command Cockpit CSS that tightens the active-lane HUD grid, padding, portraits, level meter, stat cells, and bot handoff block.",
+    "Hid long HUD subcopy only in the Cockpit stage because the mounted lane stage and stage lens already carry deeper context.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the HUD-compression unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_active_lane_level_hud.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

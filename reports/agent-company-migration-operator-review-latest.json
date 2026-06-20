@@ -1,0 +1,102 @@
+{
+  "approval_condition_count": 8,
+  "approval_conditions": [
+    "operator supplies an explicit signed decision id",
+    "decision scope names sandbox dry-run only unless separately approved",
+    "backup path is specified and outside the live DB file",
+    "migration draft and preflight validation both pass",
+    "service request counts are snapshotted before any sandbox action",
+    "rollback drill is required on the sandbox copy",
+    "post-dry-run integrity report is required before any next ask",
+    "approval expires unless used for the named command and artifact set"
+  ],
+  "decision_option_count": 4,
+  "decision_options": [
+    {
+      "default": true,
+      "effect": "No apply command is enabled; continue report-only planning.",
+      "option": "hold"
+    },
+    {
+      "default": false,
+      "effect": "Allow a future command to copy the DB and test migration SQL on a throwaway copy only.",
+      "option": "approve_sandbox_dry_run_only"
+    },
+    {
+      "default": false,
+      "effect": "Send the migration packet back for table, rollback, or gate revisions.",
+      "option": "request_rework"
+    },
+    {
+      "default": false,
+      "effect": "Close this schema path and keep the current control-plane tables unchanged.",
+      "option": "reject_migration_path"
+    }
+  ],
+  "evidence_link_count": 4,
+  "evidence_links": [
+    "E:\\agent-company-lab\\reports\\agent-company-report-only-migration-draft-latest.md",
+    "E:\\agent-company-lab\\reports\\agent-company-report-only-migration-draft-validation-latest.json",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-apply-preflight-latest.md",
+    "E:\\agent-company-lab\\reports\\agent-company-migration-apply-preflight-validation-latest.json"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T11:42:41Z",
+  "human_instruction_count": 7,
+  "human_instructions": [
+    "Review the migration draft markdown before approving anything.",
+    "Prefer hold unless a sandbox dry-run is genuinely needed.",
+    "Do not approve live migration SQL from this packet.",
+    "If approving, write the exact option and artifact paths into the decision.",
+    "Limit any approval to one command run and one timestamped sandbox copy.",
+    "Require a post-run validation report before considering schema apply.",
+    "Reject or request rework if any gate language is ambiguous."
+  ],
+  "lane_evidence_rows_after": 139,
+  "lane_evidence_rows_before": 138,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_migration_operator_review_packet_ready_for_signed_decision_or_hold",
+  "next_action": "Wait for a signed operator decision or prepare a report-only decision-intake parser; do not enable or run the apply command.",
+  "operator_review_packet_count": 1,
+  "recommended_default": "hold_without_signed_operator_approval",
+  "refusal_condition_count": 8,
+  "refusal_conditions": [
+    "missing signed decision id",
+    "approval tries to include live SQL apply",
+    "backup path is missing or points to the live DB",
+    "preflight or migration validation is stale or failing",
+    "service request state drift is detected",
+    "worker start, browser, account, wallet, payment, public, or security action is requested",
+    "rollback drill is omitted",
+    "artifact paths do not match this review packet"
+  ],
+  "review_evidence_id": "agent-company-migration-operator-review-20260616",
+  "review_lane_id": "platform_engineering",
+  "review_task_id": "task-agent-company-migration-operator-review-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "apply_command_enabled": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "migration_sql_executed": false,
+    "operator_decision_applied": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.migration_operator_review.v1",
+  "source_preflight_evidence_id": "agent-company-migration-apply-preflight-20260616",
+  "source_preflight_task_id": "task-agent-company-migration-apply-preflight-20260616",
+  "summary": "Prepared a human operator review packet for the migration preflight, with decision options, approval/refusal conditions, evidence links, and a default hold posture.",
+  "task_rows_inserted_by_review": 1,
+  "tasks_table_rows_after": 231,
+  "tasks_table_rows_before": 230
+}

@@ -1,0 +1,20 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-node-focus-lens-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-node-focus-lens-v1-20260619",
+  "traceId": "trace-atlas_command_cockpit_node_focus_lens_added-20260619",
+  "title": "Command Cockpit Node Focus Lens",
+  "createdAt": "2026-06-19T19:05:20Z",
+  "summary": "Made the Command Cockpit Quest level map selectable so node details expand inside the board instead of creating another scroll row.",
+  "changes": [
+    "Adds per-lane Quest node focus state for World, Level, Checkpoint, Gate, and Next sockets.",
+    "Renders Quest field cells as selectable board buttons with focused-state styling and accessible pressed state.",
+    "Adds a compact focus lens under the Quest map so each node reveals title and meta detail inside the existing cockpit board."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ]
+}

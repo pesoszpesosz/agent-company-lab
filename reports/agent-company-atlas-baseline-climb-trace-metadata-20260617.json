@@ -1,0 +1,111 @@
+{
+  "traceId": "trace-agent-company-atlas-baseline-climb-v1-20260617",
+  "taskId": "task-agent-company-atlas-baseline-climb-v1-20260617",
+  "laneId": "ai_ml_competitions",
+  "agentId": "recovered-profitable-edge-infra",
+  "generatedAt": "2026-06-17T17:16:00Z",
+  "upgrade": {
+    "name": "Atlas Baseline Climb lane minigame",
+    "summary": "Promoted the AI/ML competitions lane from a generic checkpoint module into a custom Baseline Climb minigame with a generated benchmark-arena texture, ascent nodes, altitude scoring, and lane-derived climb stations."
+  },
+  "research": [
+    {
+      "query": "AI benchmark leaderboard game UI progress climb design inspiration",
+      "takeaway": "Benchmark progression works best when nearby climb targets and improvement steps are visible, not only final rank."
+    },
+    {
+      "query": "machine learning competition leaderboard dashboard gamification UI",
+      "takeaway": "Leaderboard-oriented dashboards need dataset, metric, baseline, and submission gates to stay explicit."
+    },
+    {
+      "query": "data science competition platform leaderboard progress UI benchmark visualization",
+      "takeaway": "Competition UX benefits from a score trail that distinguishes local evaluation from public submission."
+    }
+  ],
+  "imageGeneration": {
+    "mode": "built_in_image_gen",
+    "sourcePath": "C:\\Users\\matth\\.codex\\generated_images\\019ed1eb-b158-73a0-ac2d-3719a0a6e69f\\ig_03f5fd4dceb49b8d016a32cb54b6408191b13b42031a771329.png",
+    "workspacePath": "web/assets/games/baseline-climb-bg-20260617.png",
+    "prompt": "Premium dark game UI background for a Baseline Climb minigame about AI/ML competitions, benchmarks, datasets, and leaderboard progress. Futuristic benchmark arena with luminous climbing path, floating leaderboard pylons, dataset gate portals, evaluation rings, clean geometric platforms, dark open center for UI overlays, no text, no logos, no people."
+  },
+  "implementation": [
+    "Copied the generated benchmark-arena background into web/assets/games/baseline-climb-bg-20260617.png.",
+    "Added the texture path to ai_ml_competitions in web/data/lane-visuals.json.",
+    "Added baseline-climb dispatch to game routing and game step counts in web/app.js.",
+    "Added a lane-derived Baseline Climb model for eligibility, dataset, baseline, leaderboard, and submission stations.",
+    "Rendered an animated ascent route with score nodes, altitude verdict, station cards, meters, and existing game controls.",
+    "Added responsive CSS for docked side-panel, stacked desktop, and mobile layouts.",
+    "Documented the custom renderer and generated texture in web/README.md."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "web/data/lane-visuals.json",
+    "web/assets/games/baseline-climb-bg-20260617.png"
+  ],
+  "staticValidation": {
+    "status": "passed",
+    "commands": [
+      "node --check web\\app.js",
+      "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+      "python -m json.tool web\\data\\snapshot.json",
+      "python -m json.tool web\\data\\lane-visuals.json",
+      "python -m json.tool reports\\agent-company-atlas-baseline-climb-trace-metadata-20260617.json",
+      "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md web\\data\\lane-visuals.json reports\\agent-company-atlas-baseline-climb-trace-metadata-20260617.json"
+    ]
+  },
+  "browserValidation": {
+    "status": "passed",
+    "target": "http://localhost:5177/?verify=baseline-climb#lane=ai_ml_competitions&view=game",
+    "validatedAt": "2026-06-17T17:28:00Z",
+    "mobileNarrow": {
+      "viewport": {
+        "width": 390,
+        "height": 920
+      },
+      "activeTab": "game",
+      "textureLoaded": true,
+      "nodeCount": 5,
+      "activeNodeCount": 1,
+      "stageCount": 5,
+      "nextControlChangedFocusedStage": true,
+      "horizontalOverflow": false,
+      "panelOverflow": false,
+      "decorativeBoardPaintClipped": true
+    },
+    "desktopDocked": {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "activeTab": "game",
+      "textureLoaded": true,
+      "heroColumns": "78px 193px",
+      "stageColumns": "309px",
+      "nodeCount": 5,
+      "stageCount": 5,
+      "horizontalOverflow": false,
+      "panelOverflow": false,
+      "boardOverflow": false,
+      "browserErrors": []
+    },
+    "desktopStacked": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activeTab": "game",
+      "textureLoaded": true,
+      "heroColumns": "78px 885px 132px",
+      "stageColumns": "221px 221px 221px 221px 221px",
+      "nodeCount": 5,
+      "stageCount": 5,
+      "horizontalOverflow": false,
+      "panelOverflow": false,
+      "decorativeBoardPaintClipped": true,
+      "browserErrors": []
+    }
+  }
+}

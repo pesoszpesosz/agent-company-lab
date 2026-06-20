@@ -1,0 +1,76 @@
+{
+  "trace_id": "trace-agent-company-atlas-relay-portal-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "platform_engineering",
+  "surface": "atlas_relay_command_hub",
+  "summary": "Generated and integrated a reusable Atlas Relay portal artwork as a premium command-hub panel with selected-lane stats and quick jumps to Path Map, Comms, Mission Feed, and system assets.",
+  "design_research": {
+    "queries": [
+      "game UI hub screen world map command center UX design pattern",
+      "dashboard visual hierarchy command center UX pattern",
+      "game progression map UI nodes unlocks hub design pattern"
+    ],
+    "source_urls": [
+      "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/",
+      "https://www.nngroup.com/articles/dashboards-preattentive/",
+      "https://www.gridsagegames.com/blog/2016/02/designing-cogminds-world-map/",
+      "https://dribbble.com/search/command-center-dashboard"
+    ],
+    "pattern_notes": [
+      "The command hub should emphasize the selected lane and the next available action with clear visual hierarchy.",
+      "Dashboard panels should expose at-a-glance operational numbers before deeper drill-downs.",
+      "World-map and command-center references support a central visual anchor with routes, status, and navigational affordances."
+    ]
+  },
+  "image_generation": {
+    "mode": "built-in image_gen tool",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_046062a54a349c2f016a330574a1248191ac564d8d533893e1.png",
+    "workspace_path": "web/assets/system/relay-portal-20260617.png",
+    "prompt_summary": "Premium sci-fi fantasy system relay portal environment for an agent-company dashboard, wide 16:9, dark command chamber, luminous circular relay gate, floating map fragments, holographic routes, teal/cyan/gold palette, no text, no logos, no characters."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/relay-portal-20260617.png",
+      "reports/agent-company-atlas-relay-portal-trace-metadata-20260617.json"
+    ],
+    "data_inputs": [
+      "snapshot.totals.blockers",
+      "snapshot.totals.artifacts",
+      "snapshot.agents[].status",
+      "snapshot.missionFeed.items",
+      "snapshot.lanes[]",
+      "selected lane chronicleNextAction()"
+    ],
+    "ui_contract": [
+      "Render a generated Atlas Relay panel after the hero grid.",
+      "Use the selected lane to label the command route and derive the next objective text.",
+      "Show linked bot count, gate count, route event count, and artifact vault count.",
+      "Provide local-only PATH, COM, FEED, and ART actions.",
+      "PATH opens the selected lane Path Map, COM opens its command deck, FEED scrolls to the Mission Feed, and ART filters the Visual Asset Vault to system assets.",
+      "Register the relay artwork as a system asset in the Visual Asset Vault."
+    ]
+  },
+  "verification": {
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=relay-portal&cache=20260617-relay-portal#lane=platform_engineering&view=overview",
+      "engine": "Playwright against local Chrome",
+      "checks": [
+        "390x920 viewport: Atlas Relay rendered in one column, image loaded at 1672x941, no horizontal overflow, no console errors, and no failed responses.",
+        "1280x800 viewport: Atlas Relay rendered in two compact columns at 1236px wide and 391px tall with PATH, COM, FEED, and ART actions visible.",
+        "1280x800 interaction: PATH changed the hash to #lane=platform_engineering&view=path and rendered Path Map.",
+        "1280x800 interaction: COM changed the hash to #lane=platform_engineering&view=comms and rendered the command deck.",
+        "1280x800 interaction: ART filtered the Visual Asset Vault to system assets and showed exactly one Atlas relay portal card.",
+        "1600x900 viewport: Atlas Relay rendered in two columns with no horizontal overflow, no console errors, and no failed responses."
+      ]
+    }
+  }
+}

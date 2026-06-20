@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "trophy-medal-sheet-v1",
+  "generatedAt": "2026-06-17T15:09:14Z",
+  "feature": {
+    "id": "agent-company-atlas-trophy-medal-sheet-v1",
+    "title": "Generated Trophy Room medal sheet",
+    "purpose": "Upgrade Trophy Room collectibles from CSS-only medals to a generated game-UI medal spritesheet while preserving lane identity badges and tier filtering."
+  },
+  "research": [
+    {
+      "title": "Dribbble: Medal game designs",
+      "url": "https://dribbble.com/search/medal-game",
+      "takeaway": "Game medal inspiration commonly uses polished rank badges, metallic materials, and clear trophy silhouettes."
+    },
+    {
+      "title": "Dribbble: Bronze, silver, gold, platinum designs",
+      "url": "https://dribbble.com/search/bronze-silver-gold-platinum",
+      "takeaway": "Tiered visual systems need material differences that remain recognizable at small UI sizes."
+    },
+    {
+      "title": "Shutterstock: Game UI stars trophy illustrations",
+      "url": "https://www.shutterstock.com/search/game-ui-stars-trophy?image_type=illustration",
+      "takeaway": "Achievement visuals often combine trophies, badges, and high-contrast game UI framing."
+    },
+    {
+      "title": "Dreamstime: Medal game UI illustrations",
+      "url": "https://www.dreamstime.com/illustration/medal-game-ui.html",
+      "takeaway": "Game UI medal sets commonly group tier variants into reusable icon families."
+    }
+  ],
+  "imageGeneration": {
+    "mode": "built-in image_gen",
+    "sourceFile": "C:\\Users\\matth\\.codex\\generated_images\\019ed1eb-b158-73a0-ac2d-3719a0a6e69f",
+    "workspaceFile": "web/assets/trophies/trophy-medal-sheet-20260617.png",
+    "prompt": "Create a premium 2x2 spritesheet of four collectible achievement medals for a dark futuristic agent-company dashboard. The medals represent Mythic, Gold, Silver, and Bronze tiers, in that order from top-left to bottom-right. Use polished high-end game UI icon art, crisp 3D-rendered medals, no text, no numbers, no logos, no watermark."
+  },
+  "implementation": {
+    "sourceFiles": [
+      "web/assets/trophies/trophy-medal-sheet-20260617.png",
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Trophy cards now render a tier-specific medal sprite from the generated 2x2 sheet.",
+      "The lane avatar remains as a small overlay badge on each trophy so source-lane identity is still visible.",
+      "Mythic, gold, silver, and bronze map to top-left, top-right, bottom-left, and bottom-right sheet quadrants.",
+      "The static asset is versioned in the project under web/assets/trophies and documented in the README."
+    ]
+  },
+  "assetValidation": {
+    "path": "web/assets/trophies/trophy-medal-sheet-20260617.png",
+    "size": {
+      "width": 1254,
+      "height": 1254
+    },
+    "mode": "RGB",
+    "cells": [
+      {
+        "tier": "mythic",
+        "box": [0, 0, 627, 627],
+        "averageRgb": [53, 61, 44]
+      },
+      {
+        "tier": "gold",
+        "box": [627, 0, 1254, 627],
+        "averageRgb": [63, 49, 25]
+      },
+      {
+        "tier": "silver",
+        "box": [0, 627, 627, 1254],
+        "averageRgb": [49, 51, 54]
+      },
+      {
+        "tier": "bronze",
+        "box": [627, 627, 1254, 1254],
+        "averageRgb": [48, 32, 22]
+      }
+    ]
+  },
+  "validation": {
+    "staticChecks": [
+      {
+        "command": "node --check web\\app.js",
+        "status": "passed"
+      },
+      {
+        "command": "python -m py_compile tools\\generate_visual_dashboard_snapshot.py",
+        "status": "passed"
+      },
+      {
+        "command": "python -m json.tool web\\data\\snapshot.json",
+        "status": "passed"
+      },
+      {
+        "command": "rg -n \"[^\\x00-\\x7F]\" web\\index.html web\\app.js web\\styles.css web\\README.md",
+        "status": "passed",
+        "result": "no non-ASCII matches"
+      }
+    ],
+    "browserSpriteSmoke": {
+      "url": "http://localhost:5177/?verify=trophy-medals#lane=platform_engineering&view=overview",
+      "checks": {
+        "spriteCount": 11,
+        "trophyCards": 11,
+        "firstTitle": "Atlas Trophy Room Filter Upgrade",
+        "firstSpriteTier": "mythic",
+        "firstSpriteWidth": 86,
+        "firstBadgeWidth": 42,
+        "backgroundImage": "http://localhost:5177/assets/trophies/trophy-medal-sheet-20260617.png",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "200% 200%",
+        "laneBadgeOverlay": true,
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    },
+    "browserFinalSmoke": {
+      "url": "http://localhost:5177/?verify=trophy-medals-final#lane=platform_engineering&view=overview",
+      "checks": {
+        "cardCount": 11,
+        "firstTitle": "Atlas Trophy Medal Asset Upgrade",
+        "firstTier": "mythic",
+        "firstKicker": "mythic +166 xp new unlock",
+        "spriteBackground": "http://localhost:5177/assets/trophies/trophy-medal-sheet-20260617.png",
+        "spritePosition": "0% 0%",
+        "spriteSize": "200% 200%",
+        "laneBadge": true,
+        "openButton": "Open trail",
+        "overflowX": false,
+        "consoleErrors": 0
+      }
+    }
+  },
+  "nextIdeas": [
+    "Generate separate transparent medal cutouts if the Trophy Room needs larger hero trophies.",
+    "Add tier-specific hover particles that inherit the medal material color.",
+    "Generate lane-specific trophy frames for minigame-specific outcome types.",
+    "Add a trophy icon manifest if future repos want to swap sheets without CSS edits."
+  ]
+}

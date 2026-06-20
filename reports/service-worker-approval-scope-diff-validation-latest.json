@@ -1,0 +1,25 @@
+{
+  "all_reports_no_start_authority": true,
+  "api_calls": false,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T10:21:10Z",
+  "route_counts": {
+    "missing_exact_scope": 9,
+    "scope_text_without_approval_record": 2,
+    "terminal_complete_scope_audit_only": 1,
+    "terminal_rejected_scope_audit_only": 2
+  },
+  "schema_version": "service_worker_approval_scope_diff_validation.v1",
+  "scope_compatible_count": 0,
+  "scope_diff_path": "E:\\agent-company-lab\\reports\\service-worker-approval-scope-diff-latest.json",
+  "service_requests_approved_by_report": 0,
+  "service_requests_started_by_report": 0,
+  "service_requests_updated_by_report": 0,
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "validated_count": 14,
+  "worker_starts": 0
+}

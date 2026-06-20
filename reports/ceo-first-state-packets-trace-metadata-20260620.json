@@ -1,0 +1,24 @@
+{
+  "span_kind": "AGENT",
+  "runtime": "codex_ceo_state_packet_bootstrap",
+  "api_calls": false,
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "accounts_created": 0,
+  "public_actions": 0,
+  "service_requests_approved_or_assigned": 0,
+  "worker_starts": 0,
+  "packets_created": [
+    "ai_resources_candidate_registry_v1",
+    "human_action_feed_v1",
+    "ceo_state_packet_v1",
+    "youtube_lane_scout_packet_v1"
+  ],
+  "lane_added": "youtube_content_channels",
+  "roles_added": [
+    "youtube_channel_manager",
+    "youtube_script_worker",
+    "youtube_asset_pipeline_worker"
+  ],
+  "registered_agent": "lane-manager-youtube_content_channels-20260620"
+}

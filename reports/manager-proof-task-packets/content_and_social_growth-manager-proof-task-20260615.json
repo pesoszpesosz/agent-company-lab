@@ -1,0 +1,33 @@
+{
+  "command_preview": "python E:\\agent-company-lab\\tools\\agent_company.py create-task --task-id task-content_and_social_growth-first-local-proof-20260615 --lane-id content_and_social_growth --title \"Prepare first local read-only social research proof packet\" --priority 86 --owner-agent-id lane-manager-content_and_social_growth-019ec613 --duplicate-key content_and_social_growth-first-local-proof-20260615 --evidence-required E:\\agent-company-lab\\reports\\manager-proof-task-packets\\content_and_social_growth-manager-proof-task-20260615.md --next-action \"Use local social-growth source specs to draft a read-only research proof packet with candidate topics, reply/follow gates, and no-posting boundary.\"",
+  "department": "Audience/Distribution",
+  "evidence_count": 1,
+  "evidence_id": "first-local-evidence-content_and_social_growth-20260615",
+  "forbidden_actions": [
+    "Do not execute the command preview without explicit human approval.",
+    "Do not browse, use accounts, register, accept terms, upload data, publish, submit, contact anyone, trade, touch wallets/payments, or call model/API services from this packet.",
+    "Do not mutate service requests, assign service workers, start workers, perform security testing, or create external side effects from this packet."
+  ],
+  "generated_utc": "2026-06-15T17:21:52Z",
+  "lane_id": "content_and_social_growth",
+  "live_task_created": false,
+  "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+  "parked_request_count": 1,
+  "parked_request_ids": [
+    "req-test-browser-readonly-complete-20260614"
+  ],
+  "proposed_task": {
+    "duplicate_key": "content_and_social_growth-first-local-proof-20260615",
+    "evidence_required": "E:\\agent-company-lab\\reports\\manager-proof-task-packets\\content_and_social_growth-manager-proof-task-20260615.md",
+    "lane_id": "content_and_social_growth",
+    "next_action": "Use local social-growth source specs to draft a read-only research proof packet with candidate topics, reply/follow gates, and no-posting boundary.",
+    "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+    "priority": 86,
+    "task_id": "task-content_and_social_growth-first-local-proof-20260615",
+    "title": "Prepare first local read-only social research proof packet"
+  },
+  "report_only": true,
+  "schema_version": "agent_company.manager_proof_task_packet.v1",
+  "source_spec_count": 1,
+  "source_spec_id": "content_grok_x_read_only_research"
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "agent-company-atlas-trace-metadata.v1",
+  "iteration": "feed-playback-saved-views-v1",
+  "feature": {
+    "id": "mission-feed-saved-views-playback",
+    "title": "Mission Feed Saved Views and Playback",
+    "purpose": "Upgrade the global Mission Feed into a reusable, replayable company timeline with browser-local saved lenses and source-lane drilldown."
+  },
+  "research": [
+    {
+      "name": "Saved Filter Sets",
+      "url": "https://cloudscape.design/patterns/general/filter-patterns/saved-filter-sets/",
+      "takeaway": "Saved filter configurations should be quickly reusable for repeated collection views."
+    },
+    {
+      "name": "Saved Views",
+      "url": "https://www.gooddata.ai/docs/cloud/create-dashboards/filters/saved-views/",
+      "takeaway": "Saved views let operators preserve common dashboard filter combinations and restore them with one click."
+    },
+    {
+      "name": "Activity Feed",
+      "url": "https://uxpatterns.dev/patterns/social/activity-feed",
+      "takeaway": "Activity feeds should aggregate events in order while keeping event source, type, time, and detail visible."
+    },
+    {
+      "name": "Session Replay Timeline",
+      "url": "https://www.browserbase.com/blog/session-replay",
+      "takeaway": "Replay surfaces benefit from a scrubbable timeline with synchronized contextual panels."
+    }
+  ],
+  "implementation": {
+    "uiSurface": "Mission Feed panel",
+    "storage": {
+      "selectedFilter": "localStorage: agent-company-atlas.feed-filter.v1",
+      "savedViews": "localStorage: agent-company-atlas.feed-saved-views.v1"
+    },
+    "sourceFiles": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md"
+    ],
+    "interactions": [
+      "Apply default feed lenses for all events, gates, evidence, outcomes, and traces.",
+      "Save the current feed filter as a browser-local lens.",
+      "Persist selected feed filter and saved lenses across page reloads.",
+      "Reset browser-local saved feed lenses back to defaults.",
+      "Replay the filtered feed with previous, play/pause, and next controls.",
+      "Open the playback event source lane Trail view."
+    ],
+    "safetyBoundary": "The feature only reads snapshot.missionFeed and browser-local preferences. It does not mutate the control plane, send messages, or start workers."
+  },
+  "validation": {
+    "staticChecks": {
+      "nodeCheck": "passed",
+      "pythonCompile": "passed",
+      "jsonValidation": "passed",
+      "asciiCheck": "passed"
+    },
+    "snapshot": {
+      "regenerated": true,
+      "lanes": 12,
+      "feedItems": 90,
+      "visibleFeedCards": 18,
+      "dispatchSuggestions": 12
+    },
+    "browserDesktop": {
+      "initialFeedCards": 18,
+      "initialFeedCount": "90 events",
+      "initialSavedChips": 5,
+      "proofLensFeedCount": "20 evidence",
+      "proofLensNonEvidenceCards": 0,
+      "savedLensChipCount": 6,
+      "reloadPersistence": "passed",
+      "playbackNext": "2/20",
+      "playbackAutoAdvance": "3/20",
+      "playbackPauseToggle": "P",
+      "playbackDrilldown": "#lane=platform_engineering&view=trail",
+      "cleanupSavedChips": 5,
+      "cleanupFeedCount": "90 events",
+      "consoleErrors": 0,
+      "pageOverflow": false
+    },
+    "browserMobile": {
+      "viewport": "390x840",
+      "playbackColumns": "328px",
+      "savedChips": 5,
+      "visibleFeedCards": 18,
+      "feedCount": "90 events",
+      "consoleErrors": 0,
+      "pageOverflow": false
+    }
+  }
+}

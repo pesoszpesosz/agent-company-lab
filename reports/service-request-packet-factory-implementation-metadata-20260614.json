@@ -1,0 +1,11 @@
+{
+  "span_kind": "internal",
+  "runtime": "local_cli",
+  "api_calls": false,
+  "external_side_effects": false,
+  "command_added": "scaffold-service-request",
+  "acceptance_passed": true,
+  "missing_intake_guard": true,
+  "complete_intake_db_request": "needs_review",
+  "unapproved_start_blocked": true
+}

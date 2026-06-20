@@ -1,0 +1,240 @@
+{
+  "schema_version": "youtube_no_post_content_batch.v1",
+  "generated_utc": "2026-06-20T17:18:00Z",
+  "lane_id": "youtube_content_channels",
+  "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+  "status": "local_proof_artifact",
+  "batch_rule": "Production-planning artifact only. Each script brief must be transformed, checked, sourced, and approved before any upload or public use.",
+  "script_briefs": [
+    {
+      "brief_id": "yt-brief-001",
+      "title": "The CEO Whose First Job Is Saying No",
+      "experiment": "agent_company_build_log",
+      "audience": "AI builders and automation operators",
+      "hook": "The first thing this AI CEO did was not launch anything. It built brakes.",
+      "outline": [
+        "Many agents can create noise faster than value.",
+        "The CEO role allocates lanes, reads evidence, and preserves gates.",
+        "The first proof added AI Resources, human-action feed, YouTube lane, and customer intake.",
+        "Control plane first, public launch later."
+      ],
+      "title_variants": [
+        "I built a CEO for an AI agent company, and its first job was saying no",
+        "Why my AI agent company needed brakes before workers",
+        "The boring control layer that makes AI agents useful"
+      ],
+      "thumbnail_brief": "Split-screen command board versus chaos board. Text: CEO FIRST.",
+      "risk_notes": "Do not imply revenue has been earned. Use local artifacts as proof."
+    },
+    {
+      "brief_id": "yt-brief-002",
+      "title": "The Fastest Way To Test An AI Tool Is Not To Install It",
+      "experiment": "ai_tool_teardown_shorts",
+      "audience": "Busy builders choosing tools",
+      "hook": "Most tools fail before install. You just need the right test.",
+      "outline": [
+        "Check overlap with existing tools first.",
+        "Define first local proof.",
+        "Check license, runtime, account, API cost, and data gates.",
+        "Promote, watch, or reject with reason."
+      ],
+      "title_variants": [
+        "The fastest AI tool test happens before install",
+        "Stop installing every shiny AI repo",
+        "My two-block rule for testing AI tools"
+      ],
+      "thumbnail_brief": "Stopwatch, repo card, red/green local proof stamp. Text: TEST FIRST.",
+      "risk_notes": "No claims about specific third-party tools without current source review."
+    },
+    {
+      "brief_id": "yt-brief-003",
+      "title": "Local Proof Beats Public Launch",
+      "experiment": "agent_company_build_log",
+      "audience": "AI builders and indie operators",
+      "hook": "A local proof is the cheapest way to find out if a launch is worth it.",
+      "outline": [
+        "Public launch creates reputation and account risk.",
+        "Local artifacts reveal feasibility and quality first.",
+        "Examples include product drafts, bounty checklists, and YouTube no-post batches.",
+        "Gate only after proof is strong."
+      ],
+      "title_variants": [
+        "A local proof beats a public launch when agents move fast",
+        "Before you launch, make the proof cheap",
+        "Why I am building no-post assets first"
+      ],
+      "thumbnail_brief": "Small local file stack facing large upload button. Text: PROOF FIRST.",
+      "risk_notes": "Avoid presenting local plans as market validation."
+    },
+    {
+      "brief_id": "yt-brief-004",
+      "title": "Workers Are Not Service Workers",
+      "experiment": "agent_company_build_log",
+      "audience": "Automation operators",
+      "hook": "Some AI workers build. Some touch the world. Those should not be the same permission.",
+      "outline": [
+        "Workers produce local artifacts.",
+        "Service workers prepare or execute gated actions.",
+        "External actions require exact approval.",
+        "This prevents accidental posts, trades, uploads, or account actions."
+      ],
+      "title_variants": [
+        "How I split AI workers from service workers",
+        "The permission boundary every agent company needs",
+        "Why my AI workers cannot just post things"
+      ],
+      "thumbnail_brief": "Two labeled lanes: BUILD and TOUCH WORLD. Text: SPLIT THEM.",
+      "risk_notes": "Do not imply service workers are currently executing live actions."
+    },
+    {
+      "brief_id": "yt-brief-005",
+      "title": "AI Resources: HR For Agents",
+      "experiment": "agent_company_build_log",
+      "audience": "Builders managing many AI tools",
+      "hook": "If a company has HR, an agent company needs AR: AI Resources.",
+      "outline": [
+        "New agents are hires, not decorations.",
+        "AR checks overlap before adding tools.",
+        "AR runs local tests and fast-fails.",
+        "AR retires duplicate or stale agents."
+      ],
+      "title_variants": [
+        "AI Resources: HR for agents, tools, and workflows",
+        "The department that stops AI sprawl",
+        "Why every agent company needs AI Resources"
+      ],
+      "thumbnail_brief": "Org chart with one highlighted department. Text: AI RESOURCES.",
+      "risk_notes": "Avoid overclaiming that AR has tested all candidates already."
+    },
+    {
+      "brief_id": "yt-brief-006",
+      "title": "A YouTube Channel Can Start Before The Channel Exists",
+      "experiment": "digital_product_demo_channel",
+      "audience": "AI creators and operators",
+      "hook": "The safest first YouTube step is not making the channel. It is making ten usable briefs.",
+      "outline": [
+        "Channel creation has account and terms gates.",
+        "Uploading has public-action and copyright gates.",
+        "No-post batches test audience, format, and production load.",
+        "The first proof is scripts, titles, thumbnails, and manifest."
+      ],
+      "title_variants": [
+        "A YouTube channel can start before you create the channel",
+        "The no-post YouTube test I use first",
+        "Before channel creation: build the content batch"
+      ],
+      "thumbnail_brief": "Empty channel page outline beside content cards. Text: NO-POST TEST.",
+      "risk_notes": "No upload or channel creation instruction."
+    },
+    {
+      "brief_id": "yt-brief-007",
+      "title": "Every Money Idea Needs A Kill Rule",
+      "experiment": "small_business_ai_automation",
+      "audience": "Operators testing online money paths",
+      "hook": "A money idea without a kill rule is just a time sink wearing a costume.",
+      "outline": [
+        "Define proof, gate, expected value, and timebox.",
+        "Kill when payout path is unclear.",
+        "Kill when gates dominate value.",
+        "Promote only when proof is strong."
+      ],
+      "title_variants": [
+        "Why every money idea needs a kill rule",
+        "The anti-time-sink rule for online money experiments",
+        "How I stop AI agents from chasing bad ideas"
+      ],
+      "thumbnail_brief": "Timer, checklist, crossed-out weak idea. Text: KILL RULE.",
+      "risk_notes": "Avoid financial advice; keep examples operational."
+    },
+    {
+      "brief_id": "yt-brief-008",
+      "title": "Turning A Prompt Pack Into A Product Without Listing It",
+      "experiment": "digital_product_demo_channel",
+      "audience": "Template buyers and AI creators",
+      "hook": "You can make a digital product more real without listing it anywhere.",
+      "outline": [
+        "Package local assets.",
+        "Draft listing copy privately.",
+        "Check fees, terms, payout, and support burden.",
+        "Stop before account, payment, and public listing gates."
+      ],
+      "title_variants": [
+        "Turning a prompt pack into a product without listing it",
+        "How to make a digital product real before a marketplace",
+        "Private product readiness beats rushed listings"
+      ],
+      "thumbnail_brief": "Product folder, private draft badge, marketplace gate. Text: NOT LISTED YET.",
+      "risk_notes": "Do not imply marketplace approval or sales."
+    },
+    {
+      "brief_id": "yt-brief-009",
+      "title": "Big AI Prizes, Tiny First Proof",
+      "experiment": "kaggle_arc_baseline_diary",
+      "audience": "Competition learners and builders",
+      "hook": "A huge prize does not mean your first step should be huge.",
+      "outline": [
+        "Competitions have rules, accounts, datasets, and submission gates.",
+        "First proof is a local baseline and eligibility packet.",
+        "Decide after proof whether to spend more time.",
+        "Avoid confusing prize size with expected value."
+      ],
+      "title_variants": [
+        "Kaggle and ARC prizes look huge, but the first proof is tiny",
+        "The small first step before an AI competition",
+        "Do not chase a prize before a baseline"
+      ],
+      "thumbnail_brief": "Big trophy beside tiny local notebook. Text: TINY PROOF.",
+      "risk_notes": "Do not mention active competition claims without current source verification."
+    },
+    {
+      "brief_id": "yt-brief-010",
+      "title": "Prediction Markets Are Research Until Treasury Says Otherwise",
+      "experiment": "bounty_code_quality_recaps",
+      "audience": "Curious builders and market researchers",
+      "hook": "A market hypothesis is not a trade. It is research until the treasury gate says yes.",
+      "outline": [
+        "Public data can support paper research.",
+        "Real-money action needs eligibility, fees, liquidity, risk, and kill switch.",
+        "Paper evidence must precede capital.",
+        "The CEO should not confuse curiosity with permission."
+      ],
+      "title_variants": [
+        "Prediction markets are research until the treasury gate says otherwise",
+        "A market idea is not a trade",
+        "Why paper evidence comes before real-money bets"
+      ],
+      "thumbnail_brief": "Paper ticket beside locked treasury door. Text: PAPER ONLY.",
+      "risk_notes": "Not financial advice. No trading instruction."
+    }
+  ],
+  "b_roll_and_source_plan": [
+    "Use only generated, self-created, or licensed visuals until public-action review approves sourced material.",
+    "Internal artifacts may be shown as blurred or redacted local documents.",
+    "Do not use platform logos, creator clips, YouTube thumbnails, repo screenshots, marketplace pages, or competition pages without source review.",
+    "Customer-provided videos should be routed through youtube_material_route_template_v1 and transformed into lessons; do not copy phrasing, structure, or visuals directly."
+  ],
+  "voiceover_and_editing_options": [
+    "human_voice_later_no_external_tool_needed_now",
+    "local_text_only_storyboard_for_initial_proof",
+    "generated_voice_after_model_api_tool_and_usage_rights_review",
+    "hired_editor_after_budget_and_terms_review"
+  ],
+  "completion_definition": [
+    "10_structured_script_briefs",
+    "30_title_variants",
+    "10_thumbnail_briefs",
+    "source_licensing_guidance",
+    "voiceover_editor_options",
+    "production_manifest_reference",
+    "reputation_copyright_checklist_reference"
+  ],
+  "zero_side_effect_boundary": {
+    "youtube_accounts_or_channels_created": 0,
+    "videos_uploaded": 0,
+    "comments_posts_likes_follows_or_public_actions": 0,
+    "paid_tools_or_stock_assets_purchased": 0,
+    "browser_sessions_started": 0,
+    "model_api_mcp_calls": 0,
+    "external_side_effects": false
+  }
+}

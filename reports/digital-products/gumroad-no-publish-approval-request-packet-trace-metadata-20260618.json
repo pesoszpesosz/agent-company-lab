@@ -1,0 +1,67 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "external_side_effects": 0,
+    "gumroad_account_or_login": false,
+    "listings_published": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "orders_or_payments": 0,
+    "payout_or_payment_setup": false,
+    "prices_published": 0,
+    "products_uploaded_or_edited": 0,
+    "public_actions": 0,
+    "seller_profile_created_or_edited": false,
+    "service_requests_mutated": 0,
+    "terms_or_seller_agreement_accepted": false,
+    "workers_or_runtimes_started": 0,
+    "zip_created_or_uploaded": false
+  },
+  "event_type": "approval_packet_created",
+  "generated_at": "2026-06-18T08:29:48Z",
+  "lane_id": "digital_products_templates_plugins",
+  "schema_version": "digital_products.gumroad_no_publish_approval_request_packet.trace.v1",
+  "selected_candidate": {
+    "candidate_id": "agent_skill_starter_kit_v0",
+    "download_shape": [
+      "README.md",
+      "templates/SKILL.template.md",
+      "templates/gate-checklist.template.md",
+      "templates/service-request-checklist.template.md",
+      "templates/artifact-contract.template.md",
+      "templates/acceptance-review.template.md",
+      "examples/local-research-skill/SKILL.md",
+      "examples/local-research-skill/sample-output.md",
+      "docs/buyer-guide.md",
+      "docs/license-and-ip-note.md",
+      "docs/listing-draft.md",
+      "docs/screenshot-plan.md"
+    ],
+    "local_evidence_assets": [
+      "products/agent-skill-starter-kit-v0/README.md",
+      "products/agent-skill-starter-kit-v0/docs/listing-draft.md",
+      "products/agent-skill-starter-kit-v0/docs/license-and-ip-note.md"
+    ],
+    "product_type": "downloadable_markdown_template_kit",
+    "readiness_score": 91,
+    "required_pre_listing_fixes": [
+      "Review Gumroad prohibited-products list against the final listing copy.",
+      "Avoid consulting, get-rich, crypto, hacking/cracking, spam, revenue, compliance, or platform-approval claims.",
+      "Confirm the license/IP note matches the intended buyer license.",
+      "Create a local zip manifest and checksum before any upload approval.",
+      "Human-review title, category, price, refund language, and all claims."
+    ],
+    "source_gates": [
+      "gumroad_account",
+      "ip_license_claims_review",
+      "payout_setup",
+      "public_listing",
+      "seller_terms",
+      "tax_payment_review"
+    ],
+    "why": "Already packaged as a concrete file tree, avoids live client data, and can be positioned as templates rather than consulting, revenue claims, or platform endorsement.",
+    "working_title": "Agent Skill Starter Kit: Templates For Safer Reusable AI-Agent Workflows"
+  },
+  "source": "tools/create_gumroad_no_publish_approval_packet.py",
+  "summary": "No-publish Gumroad approval request packet created from local proof and product manifest.",
+  "task_id": "task-gumroad-no-publish-approval-request-packet-20260618"
+}

@@ -1,0 +1,106 @@
+{
+  "traceId": "trace-agent-company-atlas-path-stage-hud-strip-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-stage-hud-strip-v1-20260618",
+  "eventId": "trace-atlas_path_stage_hud_strip_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-stage-hud-strip-trace-metadata-20260618",
+  "title": "Path Stage HUD Strip",
+  "date": "2026-06-18",
+  "summary": "Generated and integrated a compact route-stage HUD bitmap into the Path Stage Ribbon so direct Path views feel more like a game route rail without adding another scroll section.",
+  "sourceInspiration": [
+    {
+      "label": "Habitica",
+      "url": "https://habitica.com/",
+      "note": "RPG-style progression and rewards can make ordinary task surfaces feel like quests."
+    },
+    {
+      "label": "Goalscape",
+      "url": "https://goalscape.com/",
+      "note": "Visual goal hierarchy reinforces the need for glanceable progress before deep detail."
+    },
+    {
+      "label": "Miro",
+      "url": "https://miro.com/",
+      "note": "Expandable visual workspaces point toward zoomable depth instead of long linear pages."
+    }
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "web/assets/system/path-stage-hud-strip-20260618.png",
+    "tools/generate_path_stage_hud_strip.py",
+    "tests/test_agent_company_atlas_path_stage_hud_strip.py"
+  ],
+  "asset": {
+    "path": "web/assets/system/path-stage-hud-strip-20260618.png",
+    "bytes": 1054853,
+    "generator": "tools/generate_path_stage_hud_strip.py",
+    "role": "Reusable compact HUD strip for the Path Stage Ribbon and Visual Asset Vault."
+  },
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-stage-hud-strip-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "bodyDetailView": "path",
+    "pathStageRibbon": {
+      "x": 46,
+      "y": 228,
+      "width": 528,
+      "height": 66,
+      "bottom": 294
+    },
+    "pathStageMotion": {
+      "x": 52,
+      "y": 234,
+      "width": 516,
+      "height": 54,
+      "bottom": 288
+    },
+    "detailPanel": {
+      "x": 22,
+      "y": -11,
+      "width": 1221,
+      "height": 586,
+      "bottom": 575
+    },
+    "overflowX": 0,
+    "panelBottomWithinViewport": true,
+    "assetVaultImagePresent": true,
+    "computedBackgrounds": {
+      "ribbonIncludesAsset": true,
+      "motionIncludesAsset": true,
+      "ribbonBackgroundSize": "auto, cover, auto, auto"
+    }
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_hud_strip.py -q",
+      "phase": "red",
+      "result": "1 failed because web/assets/system/path-stage-hud-strip-20260618.png did not exist."
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_hud_strip.py -q",
+      "phase": "green",
+      "result": "1 passed in 0.11s"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_hud_strip.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_motion_director.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py -q",
+      "phase": "focused regression",
+      "result": "3 passed in 0.05s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "phase": "syntax",
+      "result": "exit 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "phase": "full atlas",
+      "result": "44 passed, 55 deselected in 0.19s"
+    }
+  ],
+  "nextAction": "Continue reducing scroll by turning direct Path view into a true stage mode: one bounded cockpit viewport with lower panels hidden behind explicit dock open states."
+}

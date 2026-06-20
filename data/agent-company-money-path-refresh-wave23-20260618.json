@@ -1,0 +1,267 @@
+{
+  "schema_version": "agent_company.money_path_refresh_wave23.v1",
+  "generated_utc": "2026-06-18T03:18:00Z",
+  "lane_id": "platform_engineering",
+  "task_id": "task-agent-company-money-path-refresh-wave23-20260618",
+  "purpose": "Refresh current online money-path source signals for lane managers without starting browser sessions, accounts, submissions, payments, trades, or public actions.",
+  "recommended_next_build": "money_path_lane_scout_packet_v1",
+  "source_count": 18,
+  "source_categories": [
+    "ai_freelance_services",
+    "ai_ml_competitions",
+    "paid_open_source_bounties",
+    "security_bounty_private_reports",
+    "digital_products_templates_plugins",
+    "web3_grants_hackathons",
+    "prediction_market_research"
+  ],
+  "money_paths": [
+    {
+      "path_id": "ai_freelance_services_upwork",
+      "lane_id": "lead_generation_and_sales",
+      "source_url": "https://www.upwork.com/freelance-jobs/artificial-intelligence/",
+      "source_type": "marketplace_public_page",
+      "signal": "Upwork lists active AI freelance jobs and states AI engineers can earn median hourly rates of $35-$60.",
+      "agent_company_fit": "Good fit for a service-offer lane if the agent company can package AI automation, workflow, and implementation proofs.",
+      "first_local_proof": "Build a local offer matrix from existing lab capabilities: AI automation audit, workflow implementation, prompt/eval safety review, and dashboard/report generation.",
+      "required_gate_before_external_action": "outreach_delivery_gate plus account/terms/payment review before proposals or profile changes."
+    },
+    {
+      "path_id": "ai_freelance_services_fiverr",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://www.fiverr.com/categories/ai-services",
+      "source_type": "marketplace_public_page",
+      "signal": "Fiverr has a dedicated AI services surface including AI apps, AI agents, automation, data/model training, and consulting categories.",
+      "agent_company_fit": "Good fit for packaging repeatable productized services later; marketplace posting is gated.",
+      "first_local_proof": "Create draft gig/service bundles and compare them to existing Agent Skill Starter Kit assets.",
+      "required_gate_before_external_action": "marketplace account, legal/payment/tax, public listing, and reputation review gates."
+    },
+    {
+      "path_id": "ai_freelance_trends_upwork",
+      "lane_id": "lead_generation_and_sales",
+      "source_url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "source_type": "marketplace_research_release",
+      "signal": "Upwork's 2026 in-demand skills release says demand for top AI-enabled skills more than doubled year over year.",
+      "agent_company_fit": "Supports prioritizing AI automation/productized service lanes over generic low-complexity freelance work.",
+      "first_local_proof": "Score current lab assets against high-demand AI-enabled skill categories and identify one proofable offer.",
+      "required_gate_before_external_action": "No outreach or proposal without human-approved offer, account route, and anti-spam review."
+    },
+    {
+      "path_id": "fiverr_business_trends_ai_automation",
+      "lane_id": "content_and_social_growth",
+      "source_url": "https://www.fiverr.com/resources/guides/reports/business-trends-index-june-2026",
+      "source_type": "marketplace_trend_report",
+      "signal": "Fiverr's June 2026 Business Trends Index centers AI automation, video content, Shopify execution, and social media marketing demand.",
+      "agent_company_fit": "Useful for offer and content positioning; not proof of direct income by itself.",
+      "first_local_proof": "Draft a no-post content and offer calendar for AI automation and Shopify-adjacent local proof assets.",
+      "required_gate_before_external_action": "public_action_execution and outreach_delivery gates before posting, DMs, or listing copy."
+    },
+    {
+      "path_id": "arc_prize_2026",
+      "lane_id": "ai_ml_competitions",
+      "source_url": "https://arcprize.org/competitions/2026",
+      "source_type": "competition_official_page",
+      "signal": "ARC Prize 2026 advertises $2M in prizes across 3 tracks for open-source AGI progress.",
+      "agent_company_fit": "High-upside but hard; best initial agent task is local benchmark/harness work, not live submission.",
+      "first_local_proof": "Extend existing ARC toy harness into a local baseline/evaluation packet for ARC-AGI-2/3 style tasks.",
+      "required_gate_before_external_action": "competition rules, account registration, team/IP/license, and submission gates."
+    },
+    {
+      "path_id": "arc_agi_3_2026",
+      "lane_id": "ai_ml_competitions",
+      "source_url": "https://arcprize.org/competitions/2026/arc-agi-3",
+      "source_type": "competition_official_page",
+      "signal": "ARC-AGI-3 lists $850K total, including a $700K grand prize and guaranteed top-score/milestone prizes.",
+      "agent_company_fit": "Good for a dedicated research agent, but expected time-to-cash is long and uncertainty is high.",
+      "first_local_proof": "Write an ARC-AGI-3 eligibility/rules gate packet and baseline architecture sketch from public docs only.",
+      "required_gate_before_external_action": "competition account, rules acceptance, compute budget, and submission approval."
+    },
+    {
+      "path_id": "kaggle_money_competitions",
+      "lane_id": "ai_ml_competitions",
+      "source_url": "https://www.kaggle.com/competitions?prestigeFilter=money",
+      "source_type": "competition_directory",
+      "signal": "Kaggle exposes a money-prize competition filter with active AI competitions such as ARC Prize 2026.",
+      "agent_company_fit": "Reusable source for competition scouts; live participation requires account/rules gates.",
+      "first_local_proof": "Build a local competition scout worksheet from public listings: prize, deadline, rules gate, dataset gate, baseline feasibility.",
+      "required_gate_before_external_action": "account registration, rules, data license, team, compute cost, and submission gates."
+    },
+    {
+      "path_id": "paid_oss_algora",
+      "lane_id": "paid_code_bounties",
+      "source_url": "https://www.comet.com/docs/opik/contributing/developer-programs/bounties",
+      "source_type": "project_bounty_docs",
+      "signal": "Comet Opik docs direct contributors to an official Algora bounty board and require reading CLA/contribution guidance.",
+      "agent_company_fit": "Good fit for local code-reading and duplicate-check agents, but claims/PRs are public-action gated.",
+      "first_local_proof": "Convert one existing Algora fixture into a claim-readiness checklist with duplicate, scope, CLA, and maintainer-signal checks.",
+      "required_gate_before_external_action": "GitHub public action, CLA/legal, account, and bounty claim gates."
+    },
+    {
+      "path_id": "paid_oss_opire",
+      "lane_id": "paid_code_bounties",
+      "source_url": "https://opire.dev/",
+      "source_type": "bounty_marketplace_public_page",
+      "signal": "Opire describes a bounty platform where developers solve open-source issues and earn rewards.",
+      "agent_company_fit": "Good candidate for a fresh-source scout once read-only browser/API access is approved.",
+      "first_local_proof": "Create a local source-spec row and parser fixture plan for Opire-style bounty listings.",
+      "required_gate_before_external_action": "read-only source refresh gate, account review, public claim/PR gate, payout gate."
+    },
+    {
+      "path_id": "security_hackerone_directory",
+      "lane_id": "security_bounty_private_reports",
+      "source_url": "https://hackerone.com/directory/programs",
+      "source_type": "security_program_directory",
+      "signal": "HackerOne's directory is a community-curated resource for identifying security contact/program routes.",
+      "agent_company_fit": "Useful for rules-route discovery; active testing and submissions remain tightly gated.",
+      "first_local_proof": "Pick one existing local vulnerability memo and map its possible program route/readiness without submitting.",
+      "required_gate_before_external_action": "program rules, legal scope, security testing approval, account, and private report submission gates."
+    },
+    {
+      "path_id": "security_bugcrowd_programs",
+      "lane_id": "security_bounty_private_reports",
+      "source_url": "https://www.bugcrowd.com/bug-bounty-list/",
+      "source_type": "security_program_directory",
+      "signal": "Bugcrowd describes a comprehensive crowdsourced bug bounty and vulnerability disclosure program list.",
+      "agent_company_fit": "Good for source discovery and rules triage; no testing or submission without approval.",
+      "first_local_proof": "Draft a rules-first triage packet template for Bugcrowd-style program entries.",
+      "required_gate_before_external_action": "scope/rules review, account route, legal/security authorization, and submission gate."
+    },
+    {
+      "path_id": "digital_products_gumroad",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://gumroad.com/",
+      "source_type": "digital_product_platform",
+      "signal": "Gumroad markets itself around helping creators earn a first dollar online and sell digital products.",
+      "agent_company_fit": "Good low-complexity digital product route after legal/payment/listing gates.",
+      "first_local_proof": "Use existing Agent Skill Starter Kit package manifest to produce a Gumroad-style local listing draft and asset gap check.",
+      "required_gate_before_external_action": "account, payment/tax/legal, public listing, customer-support, and reputation review gates."
+    },
+    {
+      "path_id": "digital_products_lemon_squeezy",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://www.lemonsqueezy.com/ecommerce/digital-products",
+      "source_type": "digital_product_platform",
+      "signal": "Lemon Squeezy supports digital products, lead magnets, pay-what-you-want, subscriptions, payments, and tax handling.",
+      "agent_company_fit": "Strong for software/template product route, but onboarding/payment/tax gates are central.",
+      "first_local_proof": "Prepare Lemon Squeezy route decision packet comparing digital download, lead magnet, and license/subscription shapes.",
+      "required_gate_before_external_action": "legal/KYC/tax/payment/account-contract and public listing gates."
+    },
+    {
+      "path_id": "promptbase_prompts_skills",
+      "lane_id": "digital_products_templates_plugins",
+      "source_url": "https://promptbase.com/sell",
+      "source_type": "prompt_skill_marketplace",
+      "signal": "PromptBase offers selling prompts or agent skills/SKILL.md files, with 0% fees via direct link and 20% via marketplace, and payouts through Stripe or Zoneless.",
+      "agent_company_fit": "Directly relevant to Codex skill products; current lab already has skill/package artifacts to evaluate.",
+      "first_local_proof": "Create a PromptBase-style eligibility packet for the Agent Skill Starter Kit with allowed content, screenshots, copy, and payout gates.",
+      "required_gate_before_external_action": "account, prompt/skill submission rules, payout/tax/legal, marketplace listing, and public-action gates."
+    },
+    {
+      "path_id": "web3_gitcoin_grants",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "source_url": "https://gitcoin.co/program",
+      "source_type": "grant_program_page",
+      "signal": "Gitcoin Grants is a seasonal funding initiative for early-stage builders using crowdfunding and matching grants.",
+      "agent_company_fit": "Potential funding lane if the agent-company artifacts become a public-good or open-source tooling project.",
+      "first_local_proof": "Draft a no-submit grant-fit memo: public-good framing, eligibility gaps, proof assets, and account/wallet requirements.",
+      "required_gate_before_external_action": "account, wallet, public project page, legal/tax/payment, grant application, and public-action gates."
+    },
+    {
+      "path_id": "web3_dorahacks_bounties",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "source_url": "https://dorahacks.io/",
+      "source_type": "hackathon_bounty_platform",
+      "signal": "DoraHacks positions itself as an open-source incentive, hackathon, bounty, and grants platform.",
+      "agent_company_fit": "Good for deadline/source scouting; direct participation has high account/wallet/public-submission gates.",
+      "first_local_proof": "Create a DoraHacks scout packet template: prize, deadline, chain/wallet need, team need, code/public-submission need.",
+      "required_gate_before_external_action": "wallet/account, legal/tax/payment, public submission, code deployment, and reputation gates."
+    },
+    {
+      "path_id": "prediction_kalshi_public_data",
+      "lane_id": "prediction_market_research",
+      "source_url": "https://docs.kalshi.com/getting_started/quick_start_market_data",
+      "source_type": "market_data_api_docs",
+      "signal": "Kalshi documents public market data endpoints that can be accessed without authentication.",
+      "agent_company_fit": "Good fit for paper-only market data monitors and forecast calibration, not real-money trading.",
+      "first_local_proof": "Build a local no-auth market-data schema and paper-only signal worksheet without orders or account access.",
+      "required_gate_before_external_action": "prediction market data source gate; real-money trading requires eligibility, account, treasury, and kill-switch gates."
+    },
+    {
+      "path_id": "prediction_polymarket_us_docs",
+      "lane_id": "prediction_market_research",
+      "source_url": "https://docs.polymarket.us/getting-started/welcome",
+      "source_type": "prediction_market_api_docs",
+      "signal": "Polymarket US docs cover fetching market data, placing orders, and redeeming positions through API credentials.",
+      "agent_company_fit": "Potential read-only research source; any credential, order, wallet, or redemption path is blocked.",
+      "first_local_proof": "Write a Polymarket US route gate memo separating public/docs research from credentialed trading functions.",
+      "required_gate_before_external_action": "credentials, account, wallet/payment, eligibility, trading, and regulatory gates."
+    }
+  ],
+  "lane_priority_recommendations": [
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "priority": 1,
+      "reason": "Existing Agent Skill Starter Kit artifacts make digital-product route the most locally proofable without external action.",
+      "next_local_task": "Build marketplace route eligibility packets for PromptBase, Gumroad, and Lemon Squeezy."
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "priority": 2,
+      "reason": "Existing Algora parser/worksheet artifacts can be hardened locally before any live bounty claim.",
+      "next_local_task": "Create a paid-OSS source router that scores Algora/Opire candidates by freshness, duplicate risk, scope, and claim gate."
+    },
+    {
+      "lane_id": "lead_generation_and_sales",
+      "priority": 3,
+      "reason": "Upwork/Fiverr signals show demand for AI services, but outreach/profile/proposal actions are gated.",
+      "next_local_task": "Create a no-outreach offer proof matrix from current lab capabilities."
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "priority": 4,
+      "reason": "ARC Prize has large upside, but time-to-cash and difficulty are high.",
+      "next_local_task": "Extend ARC toy harness into a public-rules eligibility and baseline packet."
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "priority": 5,
+      "reason": "Kalshi public market data supports paper-only research, while real trading is gated.",
+      "next_local_task": "Create no-auth market-data schema and paper-only signal worksheet."
+    },
+    {
+      "lane_id": "security_bounty_private_reports",
+      "priority": 6,
+      "reason": "Existing local memos are valuable, but submissions/testing need strict rules and authorization gates.",
+      "next_local_task": "Map one existing vulnerability memo to HackerOne/Bugcrowd program-readiness without testing or submitting."
+    },
+    {
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "priority": 7,
+      "reason": "Grant/hackathon routes are possible but account/wallet/public-submission gates are heavy.",
+      "next_local_task": "Create no-submit Gitcoin/DoraHacks eligibility packet templates."
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "report_only": true,
+    "web_docs_reads": 18,
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_attempted": 0,
+    "wallets_created": 0,
+    "payments_configured": 0,
+    "trades_placed": 0,
+    "orders_placed": 0,
+    "submissions_sent": 0,
+    "proposals_sent": 0,
+    "public_posts_or_comments": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "dependency_installs": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build money_path_lane_scout_packet_v1 as report-only packets that convert each refreshed path into a lane manager local proof task, with explicit gates before any account, browser, wallet, payment, proposal, submission, trade, public action, worker start, model/MCP call, or external side effect."
+}

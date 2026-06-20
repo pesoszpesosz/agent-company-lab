@@ -1,0 +1,35 @@
+{
+  "schema_version": "agent_company.optimism_local_review_candidate_filter_validation.v1",
+  "generated_utc": "2026-06-17T21:56:43Z",
+  "task_id": "task-optimism-local-review-candidate-filter-v1-20260618",
+  "checked_files": [
+    "E:\\agent-company-lab\\data\\optimism-local-review-candidate-filter-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-local-review-candidate-filter-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-local-review-candidate-filter-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-local-review-candidate-filter-v1-20260618.md",
+    "E:\\agent-company-lab\\reports\\optimism-local-review-candidate-filter-v1-trace-metadata-20260618.json"
+  ],
+  "filter_count": 9,
+  "expected_min_filter_count": 8,
+  "hard_stop_or_near_hard_stop_count": 5,
+  "local_review_allowed_count": 3,
+  "submission_ready_count": 0,
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

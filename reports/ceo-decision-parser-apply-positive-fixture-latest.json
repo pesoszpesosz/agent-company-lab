@@ -1,0 +1,74 @@
+{
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_preview_update_count": 1,
+  "fixture_evidence_id": "ceo-decision-parser-apply-positive-fixture-20260616",
+  "fixture_lane_id": "platform_engineering",
+  "fixture_task_id": "task-ceo-decision-parser-apply-positive-fixture-20260616",
+  "generated_utc": "2026-06-15T23:59:01Z",
+  "lane_evidence_rows_after": 112,
+  "lane_evidence_rows_before": 111,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_apply_positive_fixture_ready_preview_only",
+  "mutation_applied_count": 0,
+  "next_action": "Use this positive fixture with the apply guard before building any real apply path; the next step is a report-only apply dry-run runner that confirms the preview while leaving the DB unchanged.",
+  "positive_apply_fixture": {
+    "expected_accepted": true,
+    "expected_preview_state": "would_update_single_service_request_approval_scope",
+    "expected_real_mutation": false,
+    "fixture_id": "valid-single-service-request-approval-scope-preview",
+    "submitted_apply": {
+      "approval_packet_id": "decision-packet-batch-digital-products-marketplace-validation",
+      "explicit_mutation_approval_text": "I explicitly approve applying exactly one parser preview mutation to the named service request id req-wave4-digital-products-browser-readonly-20260614; do not open browsers, start workers, or perform account/payment/public actions.",
+      "forbidden_actions_acknowledged": true,
+      "max_update_count": 1,
+      "runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-guard-runner-validation-latest.json",
+      "service_request_status_snapshot_required": true,
+      "target_service_request_ids": [
+        "req-wave4-digital-products-browser-readonly-20260614"
+      ]
+    }
+  },
+  "positive_apply_fixture_count": 1,
+  "preview_update": {
+    "applied": false,
+    "approval_scope_before": null,
+    "decision_note_before": null,
+    "field_updates": {
+      "approval_scope": "Read-only public digital-product marketplace/category pages for demand, price-band, saturation, and buyer-language notes only; no login, posting, listing, messaging, checkout, account settings, personal data entry, saved changes, or payment/account actions.",
+      "decision_note": "parser_apply_dry_run_preview_only_no_mutation"
+    },
+    "request_id": "req-wave4-digital-products-browser-readonly-20260614",
+    "status_after": "needs_review",
+    "status_before": "needs_review",
+    "would_update_count": 1
+  },
+  "queue_mutation_count": 0,
+  "recommended_default": "preview_single_service_request_update_before_apply",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_apply_positive_fixture.v1",
+  "source_guard_runner_evidence_id": "ceo-decision-parser-apply-guard-runner-20260616",
+  "source_guard_runner_task_id": "task-ceo-decision-parser-apply-guard-runner-20260616",
+  "source_guard_runner_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-apply-guard-runner-validation-latest.json",
+  "summary": "Created one positive apply dry-run fixture that previews a single bounded service-request approval-scope update without applying it.",
+  "target_service_request_count": 1,
+  "target_status_after": "needs_review",
+  "target_status_before": "needs_review",
+  "task_rows_inserted_by_fixture": 1,
+  "tasks_table_rows_after": 204,
+  "tasks_table_rows_before": 203
+}

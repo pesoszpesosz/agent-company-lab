@@ -1,0 +1,40 @@
+{
+  "boundary": {
+    "allo_profile_or_pool_created": false,
+    "browser_sessions_started": 0,
+    "donations_checkouts_matching_claims_or_payouts": 0,
+    "external_side_effects": 0,
+    "gitcoin_account_or_login": false,
+    "github_oauth_or_credentials_used": false,
+    "grant_applications_submitted": 0,
+    "kyc_or_identity_verification_started": false,
+    "model_mcp_or_external_api_calls": 0,
+    "passport_or_stamps_connected": false,
+    "public_posts_or_contribution_solicitation": 0,
+    "service_requests_mutated": 0,
+    "tag_requests_or_round_applications": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "gitcoin_no_submit_grant_fit_memo_created",
+  "generated_at": "2026-06-18T09:24:06Z",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "round_fit": {
+    "fit_reasons": [
+      "The lab is developer tooling and public-good infrastructure if sanitized and released as open docs/templates.",
+      "Existing evidence assets show repeatable local-only gating, traces, and integrity checks.",
+      "The project can help builders avoid unsafe account, wallet, bounty, marketplace, and trading actions."
+    ],
+    "fit_risks": [
+      "Grant round/domain must be verified immediately before any application.",
+      "Private opportunity data and local operator details must be removed before public release.",
+      "KYC, Passport, GitHub OAuth, wallet, Allo, and anti-Sybil routes require human approval."
+    ],
+    "fit_score": 79,
+    "target_round_or_domain": "Gitcoin Grants developer tooling / infrastructure public-good route"
+  },
+  "schema_version": "web3_grants.gitcoin_no_submit_grant_fit_memo.trace.v1",
+  "source": "tools/create_gitcoin_no_submit_grant_fit_memo.py",
+  "summary": "Local Gitcoin grant-fit memo created; no account, identity, wallet, submission, payment, public action, or runtime.",
+  "task_id": "task-gitcoin-no-submit-grant-fit-memo-v1-20260618"
+}

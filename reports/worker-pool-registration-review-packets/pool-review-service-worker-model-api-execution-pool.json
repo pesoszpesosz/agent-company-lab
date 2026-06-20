@@ -1,0 +1,36 @@
+{
+  "current_request_count": 1,
+  "decision_route": "manual_review_register_later",
+  "department_id": "service_worker_observability",
+  "manual_command_preview": [
+    "python",
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "register-agent",
+    "--agent-id",
+    "service-worker-model-api-execution-pool",
+    "--role-id",
+    "observability_worker",
+    "--department-id",
+    "service_worker_observability"
+  ],
+  "must_not_do": [
+    "do_not_execute_command_preview",
+    "do_not_register_pool_without_manual_user_decision",
+    "do_not_assign_service_requests",
+    "do_not_start_workers",
+    "do_not_open_browser_or_use_accounts",
+    "do_not_touch_wallet_payment_kyc_tax_or_legal_commitments",
+    "do_not_call_model_or_external_api"
+  ],
+  "packet_id": "pool-review-service-worker-model-api-execution-pool",
+  "priority": "medium",
+  "review_questions": [
+    "Is this pool needed before the next approved service request?",
+    "Who is allowed to own this pool if registered?",
+    "What exact approval scope must exist before assignment?",
+    "What provider, model, maximum cost, input scope, and output artifact path are approved?"
+  ],
+  "role_id": "observability_worker",
+  "worker_pool_id": "service-worker-model-api-execution-pool",
+  "worker_type": "model_api_execution"
+}

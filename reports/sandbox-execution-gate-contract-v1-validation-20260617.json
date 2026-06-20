@@ -1,0 +1,100 @@
+{
+  "account_actions": false,
+  "all_checks_passed": true,
+  "api_keys_used": false,
+  "browser_sessions_started": 0,
+  "candidate_pattern_count": 2,
+  "cloud_sandbox_started": false,
+  "commands_executed": 0,
+  "contract_path": "E:\\agent-company-lab\\reports\\sandbox-execution-gate-contract-v1-20260617.json",
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "files_written_outside_workspace": 0,
+  "generated_utc": "2026-06-17T18:20:06Z",
+  "hard_deny_count": 10,
+  "markdown_path": "E:\\agent-company-lab\\reports\\sandbox-execution-gate-contract-v1-20260617.md",
+  "model_api_calls": false,
+  "negative_probe_count": 10,
+  "negative_probe_rejected_count": 10,
+  "network_enabled": false,
+  "payment_actions": false,
+  "probe_results": [
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "network_any",
+      "reason": "unbounded_network_access"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "workspace_any_write",
+      "reason": "wildcard_filesystem_write"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "ambient_secrets",
+      "reason": "ambient_secrets_or_environment_dump"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "pip_latest",
+      "reason": "unbounded_dependency_install"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "public_pr",
+      "reason": "public_pr_issue_comment_or_submission"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "browser_login",
+      "reason": "browser_or_account_action"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "wallet_action",
+      "reason": "wallet_payment_real_money_action"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "security_scan_live",
+      "reason": "live_security_testing_or_exploitation"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "service_mutation",
+      "reason": "service_request_mutation_without_separate_approval"
+    },
+    {
+      "disposition": "reject",
+      "passed": true,
+      "probe_id": "cloud_no_cost_cap",
+      "reason": "cloud_sandbox_start_without_cost_cap"
+    }
+  ],
+  "processes_started": 0,
+  "public_actions": false,
+  "real_money_actions": false,
+  "required_approval_field_count": 18,
+  "runtime_starts": 0,
+  "sandbox_sessions_started": 0,
+  "schema_path": "E:\\agent-company-lab\\architecture\\sandbox-execution-gate-contract-v1.schema.json",
+  "schema_version": "agent_company.sandbox_execution_gate_contract_validation.v1",
+  "secrets_read": false,
+  "security_testing_actions": false,
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "wallet_actions": false,
+  "worker_starts": 0
+}

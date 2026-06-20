@@ -1,0 +1,206 @@
+{
+  "external_side_effects": false,
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-candidate-refresh-fixture-20260616.json",
+  "fixtures_checked": 6,
+  "generated_utc": "2026-06-16T20:58:48Z",
+  "json_path": "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-candidate-refresh-fixture-check-20260616.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-candidate-refresh-fixture-check-20260616.md",
+  "network_calls": false,
+  "passed_count": 6,
+  "rows": [
+    {
+      "actual": {
+        "algora_url": "https://algora.io",
+        "amount_usd": null,
+        "candidate_id": "algora-org-examples-reference-only",
+        "claim_count": null,
+        "decision": "reference_only",
+        "gate": "No candidate issue; use only to verify parser shape.",
+        "github_issue_url": null,
+        "local_testability": "blocked",
+        "rejection_reasons": [
+          "missing_explicit_amount",
+          "no_specific_open_issue"
+        ],
+        "repo_health": "unknown",
+        "state": "unclear"
+      },
+      "expected": {
+        "amount_usd": null,
+        "candidate_id": "algora-org-examples-reference-only",
+        "claim_count": null,
+        "decision": "reference_only",
+        "gate": "No candidate issue; use only to verify parser shape.",
+        "local_testability": "blocked",
+        "rejection_reasons": [
+          "missing_explicit_amount",
+          "no_specific_open_issue"
+        ],
+        "repo_health": "unknown",
+        "state": "unclear"
+      },
+      "failures": [],
+      "fixture_id": "algora_org_examples_reference_only"
+    },
+    {
+      "actual": {
+        "algora_url": "https://algora.io/golemcloud/home",
+        "amount_usd": null,
+        "candidate_id": "golemcloud-zero-open-watchlist",
+        "claim_count": null,
+        "decision": "watchlist",
+        "gate": "Wait for an explicit open bounty before local triage.",
+        "github_issue_url": null,
+        "local_testability": "blocked",
+        "rejection_reasons": [
+          "no_open_bounty"
+        ],
+        "repo_health": "active",
+        "state": "none_open"
+      },
+      "expected": {
+        "amount_usd": null,
+        "candidate_id": "golemcloud-zero-open-watchlist",
+        "claim_count": null,
+        "decision": "watchlist",
+        "gate": "Wait for an explicit open bounty before local triage.",
+        "local_testability": "blocked",
+        "rejection_reasons": [
+          "no_open_bounty"
+        ],
+        "repo_health": "active",
+        "state": "none_open"
+      },
+      "failures": [],
+      "fixture_id": "golemcloud_zero_open_watchlist"
+    },
+    {
+      "actual": {
+        "algora_url": "https://algora.io/CapSoftware/bounties",
+        "amount_usd": 50.0,
+        "candidate_id": "capsoftware-low-amount-crowded",
+        "claim_count": 5,
+        "decision": "reject",
+        "gate": "Do not spend sprint time on low-value crowded bounty.",
+        "github_issue_url": "https://github.com/CapSoftware/Cap/issues/example",
+        "local_testability": "clear",
+        "rejection_reasons": [
+          "tiny_and_crowded"
+        ],
+        "repo_health": "active",
+        "state": "open"
+      },
+      "expected": {
+        "amount_usd": 50,
+        "candidate_id": "capsoftware-low-amount-crowded",
+        "claim_count": 5,
+        "decision": "reject",
+        "gate": "Do not spend sprint time on low-value crowded bounty.",
+        "local_testability": "clear",
+        "rejection_reasons": [
+          "tiny_and_crowded"
+        ],
+        "repo_health": "active",
+        "state": "open"
+      },
+      "failures": [],
+      "fixture_id": "capsoftware_low_amount_crowded_reject"
+    },
+    {
+      "actual": {
+        "algora_url": "https://algora.io/tursodatabase/bounties",
+        "amount_usd": null,
+        "candidate_id": "turso-unclear-amount-watchlist",
+        "claim_count": null,
+        "decision": "watchlist",
+        "gate": "Read-only refresh required for explicit amount and acceptance state.",
+        "github_issue_url": "https://github.com/tursodatabase/turso/issues/example",
+        "local_testability": "unclear",
+        "rejection_reasons": [
+          "missing_explicit_amount",
+          "state_unclear"
+        ],
+        "repo_health": "unknown",
+        "state": "unclear"
+      },
+      "expected": {
+        "amount_usd": null,
+        "candidate_id": "turso-unclear-amount-watchlist",
+        "claim_count": null,
+        "decision": "watchlist",
+        "gate": "Read-only refresh required for explicit amount and acceptance state.",
+        "local_testability": "unclear",
+        "rejection_reasons": [
+          "missing_explicit_amount",
+          "state_unclear"
+        ],
+        "repo_health": "unknown",
+        "state": "unclear"
+      },
+      "failures": [],
+      "fixture_id": "turso_unclear_amount_watchlist"
+    },
+    {
+      "actual": {
+        "algora_url": "https://algora.io/prettier/bounties",
+        "amount_usd": 250.0,
+        "candidate_id": "prettier-clear-local-triage-candidate",
+        "claim_count": 1,
+        "decision": "promote_local_triage",
+        "gate": "Local triage only; no claim, comment, PR, or payout details without GitHub/public-action approval.",
+        "github_issue_url": "https://github.com/prettier/prettier/issues/example",
+        "local_testability": "clear",
+        "rejection_reasons": [],
+        "repo_health": "active",
+        "state": "open"
+      },
+      "expected": {
+        "amount_usd": 250,
+        "candidate_id": "prettier-clear-local-triage-candidate",
+        "claim_count": 1,
+        "decision": "promote_local_triage",
+        "gate": "Local triage only; no claim, comment, PR, or payout details without GitHub/public-action approval.",
+        "local_testability": "clear",
+        "rejection_reasons": [],
+        "repo_health": "active",
+        "state": "open"
+      },
+      "failures": [],
+      "fixture_id": "prettier_clear_local_triage_candidate"
+    },
+    {
+      "actual": {
+        "algora_url": "https://algora.io/tsperf/bounties",
+        "amount_usd": 300.0,
+        "candidate_id": "tsperf-subjective-acceptance-reject",
+        "claim_count": 0,
+        "decision": "reject",
+        "gate": "Reject until measurable acceptance target exists.",
+        "github_issue_url": "https://github.com/microsoft/TypeScript/issues/example",
+        "local_testability": "unclear",
+        "rejection_reasons": [
+          "subjective_acceptance"
+        ],
+        "repo_health": "unknown",
+        "state": "open"
+      },
+      "expected": {
+        "amount_usd": 300,
+        "candidate_id": "tsperf-subjective-acceptance-reject",
+        "claim_count": 0,
+        "decision": "reject",
+        "gate": "Reject until measurable acceptance target exists.",
+        "local_testability": "unclear",
+        "rejection_reasons": [
+          "subjective_acceptance"
+        ],
+        "repo_health": "unknown",
+        "state": "open"
+      },
+      "failures": [],
+      "fixture_id": "tsperf_subjective_acceptance_reject"
+    }
+  ],
+  "schema_version": "agent_company.algora_fixture_parser_check.v1"
+}

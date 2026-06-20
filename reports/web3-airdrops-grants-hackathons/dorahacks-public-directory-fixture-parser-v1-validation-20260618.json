@@ -1,0 +1,93 @@
+{
+  "all_checks_passed": true,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "buidl_ai_or_organizer_tools_used": 0,
+    "buidls_or_applications_submitted": 0,
+    "dorahacks_account_or_login": false,
+    "external_side_effects": 0,
+    "github_public_actions": 0,
+    "hackathons_joined_or_registrations": 0,
+    "local_scout_candidates": 1,
+    "messages_comments_or_public_posts": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "profiles_buidls_or_teams_created": 0,
+    "saved_opportunity_rows_created": 4,
+    "scored_rows": 4,
+    "service_requests_mutated": 0,
+    "submission_ready_count": 0,
+    "votes_donations_prize_claims_or_payments": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "checks": [
+    {
+      "name": "at_least_four_saved_opportunity_rows",
+      "passed": true
+    },
+    {
+      "name": "saved_rows_match_scores",
+      "passed": true
+    },
+    {
+      "name": "has_local_scout_candidate",
+      "passed": true
+    },
+    {
+      "name": "all_rows_have_candidate_artifact_or_kill_reason",
+      "passed": true
+    },
+    {
+      "name": "closed_rows_not_promoted",
+      "passed": true
+    },
+    {
+      "name": "zero_submission_ready",
+      "passed": true
+    },
+    {
+      "name": "source_fields_present",
+      "passed": true
+    },
+    {
+      "name": "source_rubric_present",
+      "passed": true
+    },
+    {
+      "name": "source_kill_reasons_present",
+      "passed": true
+    },
+    {
+      "name": "fixture_exists",
+      "passed": true
+    },
+    {
+      "name": "results_exists",
+      "passed": true
+    },
+    {
+      "name": "no_account_browser_or_wallet",
+      "passed": true
+    },
+    {
+      "name": "no_profile_registration_or_submission",
+      "passed": true
+    },
+    {
+      "name": "no_vote_payment_public_or_ai",
+      "passed": true
+    },
+    {
+      "name": "no_github_service_runtime_model_mutation",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T09:31:31Z",
+  "schema_version": "web3.dorahacks_public_directory_fixture_parser.validation.v1",
+  "task_id": "task-dorahacks-public-directory-fixture-parser-v1-20260618"
+}

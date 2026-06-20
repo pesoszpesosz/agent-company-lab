@@ -1,0 +1,447 @@
+{
+  "active_lane_count": 12,
+  "all_active_lanes_have_next_test_candidate": true,
+  "all_active_lanes_scanned": true,
+  "evidence_gap_count": 0,
+  "evidence_gap_lane_ids": [],
+  "generated_utc": "2026-06-15T20:26:12Z",
+  "idle_owned_lane_count": 11,
+  "idle_owned_lane_ids": [
+    "ai_ml_competitions",
+    "content_and_social_growth",
+    "digital_products_templates_plugins",
+    "lead_generation_and_sales",
+    "local_trading_strategy_research",
+    "money_source_discovery",
+    "paid_code_bounties",
+    "platform_engineering",
+    "prediction_market_research",
+    "security_bounty_private_reports",
+    "web3_airdrops_grants_hackathons"
+  ],
+  "lane_rows": [
+    {
+      "department": "Competition Lab",
+      "evidence_count": 1,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "ai_ml_competitions",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "owner_thread_id": "019ec69a-3c39-7de3-849b-f2d19a2d03da",
+      "parked_service_request_count": 1,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\local-shortlist-template-summary-20260614.md",
+        "event_id": "trace-event-ai_ml_competitions-local-shortlist-template-20260614",
+        "event_time": "2026-06-14T15:19:58Z",
+        "event_type": "local_proof_template_written",
+        "lane_id": "ai_ml_competitions",
+        "summary": "Wrote local AI/ML competition shortlist template pack: refined rubric, blank top-five table, CSV, and no-live-data baseline notebook shell; no external actions."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 1,
+      "trace_event_count": 3
+    },
+    {
+      "department": "Audience/Distribution",
+      "evidence_count": 1,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "content_and_social_growth",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "owner_thread_id": "019ec613-1080-7520-80e3-24dc7cfc31ea",
+      "parked_service_request_count": 1,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\content-and-social-growth\\readonly-capture-template-20260614.md",
+        "event_id": "trace-readonly_capture_template_created-bf3f0ad22502",
+        "event_time": "2026-06-14T15:18:49Z",
+        "event_type": "readonly_capture_template_created",
+        "lane_id": "content_and_social_growth",
+        "summary": "Created local content/social read-only capture template with fixture rows; X/Grok/Radar rows remain awaiting exact service approval."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 1,
+      "trace_event_count": 4
+    },
+    {
+      "department": "Product Studio",
+      "evidence_count": 1,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "digital_products_templates_plugins",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "owner_thread_id": "019ec69a-9fe3-7530-b83e-ae404554bca7",
+      "parked_service_request_count": 3,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\digital-products-templates-plugins\\agent-skill-starter-kit-package-manifest-20260614.json",
+        "event_id": "trace-event-digital-products-package-manifest-20260614",
+        "event_time": "2026-06-14T17:36:59Z",
+        "event_type": "product_package_manifest_written",
+        "lane_id": "digital_products_templates_plugins",
+        "summary": "Created internal package manifest/checklist for Agent Skill Starter Kit v0 with 12 files, 21670 bytes, SHA-256 hashes, no zip, and no public listing readiness."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 1,
+      "trace_event_count": 8
+    },
+    {
+      "department": "Growth/Sales",
+      "evidence_count": 1,
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "lead_generation_and_sales",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "owner_thread_id": "019ec613-9786-7a70-97fd-21143953b39f",
+      "parked_service_request_count": 0,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\lead-generation-and-sales\\source-category-policy-review-20260614.md",
+        "event_id": "trace-source_category_policy_review_written-b648562d60a3",
+        "event_time": "2026-06-14T15:30:22Z",
+        "event_type": "source_category_policy_review_written",
+        "lane_id": "lead_generation_and_sales",
+        "summary": "Lead generation manager wrote a local-only source-category policy review with allowed/prohibited future lead-source categories, data-handling gates, and no real lead data."
+      },
+      "recommended_next_test": "Draft non-spam offer rules, target filters, proof artifacts, and review gates before any outreach account or message action.",
+      "source_spec_count": 1,
+      "trace_event_count": 3
+    },
+    {
+      "department": "Quant Research",
+      "evidence_count": 1,
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "local_trading_strategy_research",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "owner_thread_id": "019ec613-e69b-7ce1-8aed-36383f3136f6",
+      "parked_service_request_count": 0,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\local-trading-strategy-research\\xau-paper-evidence-intake-20260614.md",
+        "event_id": "trace-local_paper_evidence_intake-dcac2f2b7153",
+        "event_time": "2026-06-14T15:19:37Z",
+        "event_type": "local_paper_evidence_intake",
+        "lane_id": "local_trading_strategy_research",
+        "summary": "Created XAU paper-evidence intake report from local artifacts only; reconciled raw rows, sequential no-overlap rows, compact watch ledger, and readiness blockers with no broker/API/live action."
+      },
+      "recommended_next_test": "Inventory local backtest artifacts and define a paper-only evidence standard; no broker/API/trade action.",
+      "source_spec_count": 1,
+      "trace_event_count": 2
+    },
+    {
+      "department": "Strategic Research",
+      "evidence_count": 1,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "money_source_discovery",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "owner_thread_id": "019ec699-e02b-7ce1-a7a6-32afc857c254",
+      "parked_service_request_count": 1,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\money-source-discovery\\blocked-row-action-queue-20260614.json",
+        "event_id": "trace-event-money-source-blocked-row-action-queue-20260614",
+        "event_time": "2026-06-14T17:27:39Z",
+        "event_type": "blocked_row_action_queue_written",
+        "lane_id": "money_source_discovery",
+        "summary": "Generated machine-readable blocked action queue for MSD-002 through MSD-016 with first gates, prohibited actions, and safe local next actions; zero rows ready for external execution."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 1,
+      "trace_event_count": 6
+    },
+    {
+      "department": "Cashflow Engineering",
+      "evidence_count": 15,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "paid_code_bounties",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "owner_thread_id": "019ec612-d317-71f1-b02f-c85f2295e320",
+      "parked_service_request_count": 1,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\packet.md",
+        "event_id": "trace-event-req-next-wave-paid-code-algora-archestra-browser-readonly-20260614-scaffolded",
+        "event_time": "2026-06-14T15:26:51Z",
+        "event_type": "service_request_packet_scaffolded",
+        "lane_id": "paid_code_bounties",
+        "summary": "Scaffolded service request packet req-next-wave-paid-code-algora-archestra-browser-readonly-20260614 for browser_read_only_session; validation_ok=True; db_created=True."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 1,
+      "trace_event_count": 4
+    },
+    {
+      "department": "Platform Engineering",
+      "evidence_count": 2,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "platform_engineering",
+      "open_task_count": 0,
+      "owner_agent_id": "recovered-profitable-edge-infra",
+      "owner_thread_id": "019ebbda-2002-7361-8597-03625189c3ff",
+      "parked_service_request_count": 2,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\manager-proof-task-packets-cli-20260615.md",
+        "event_id": "trace-event-manager-proof-task-packets-cli-20260615",
+        "event_time": "2026-06-15T17:24:09Z",
+        "event_type": "manager_proof_task_packets_generated",
+        "lane_id": "platform_engineering",
+        "summary": "Generated report-only manager proof-task packets for six parked non-platform lanes without creating live lane tasks."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 3,
+      "trace_event_count": 117
+    },
+    {
+      "department": "Markets Research",
+      "evidence_count": 9,
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "prediction_market_research",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "owner_thread_id": "019ec637-a391-7693-915f-5ec5e5d82ee7",
+      "parked_service_request_count": 0,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\prediction-market-research\\archived-packet-parser-checker-proof-20260614.md",
+        "event_id": "trace-event-prediction-archived-packet-parser-checker-20260614",
+        "event_time": "2026-06-14T15:31:48Z",
+        "event_type": "local_parser_checker_completed",
+        "lane_id": "prediction_market_research",
+        "summary": "Completed offline archived-packet parser/checker; parsed 32 packet rows from local killed replay set and reproduced 0 actionable candidates; realized_usd=0."
+      },
+      "recommended_next_test": "Create a paper-only replay task for one imported market edge and define the data source of truth, fees, settlement timing, and no-trade gate.",
+      "source_spec_count": 1,
+      "trace_event_count": 3
+    },
+    {
+      "department": "Security Research",
+      "evidence_count": 19,
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "security_bounty_private_reports",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "owner_thread_id": "019ec612-4cf1-7601-8818-ddd3028a06f4",
+      "parked_service_request_count": 2,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\packet.md",
+        "event_id": "trace-event-req-next-wave-security-google-oss-vrp-browser-readonly-20260614-scaffolded",
+        "event_time": "2026-06-14T15:26:51Z",
+        "event_type": "service_request_packet_scaffolded",
+        "lane_id": "security_bounty_private_reports",
+        "summary": "Scaffolded service request packet req-next-wave-security-google-oss-vrp-browser-readonly-20260614 for browser_read_only_session; validation_ok=True; db_created=True."
+      },
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "source_spec_count": 1,
+      "trace_event_count": 4
+    },
+    {
+      "department": "Revenue Collection",
+      "evidence_count": 21,
+      "gap_tags": [
+        "keep_read_only_external_owner_boundary"
+      ],
+      "lane_id": "submitted_bounty_payouts",
+      "open_task_count": 0,
+      "owner_agent_id": null,
+      "owner_thread_id": "other Find profitable edge worker, not this recovered infrastructure thread",
+      "parked_service_request_count": 0,
+      "recent_trace_event": null,
+      "recommended_next_test": "Keep read-only visibility; do not duplicate the external payout worker.",
+      "source_spec_count": 0,
+      "trace_event_count": 0
+    },
+    {
+      "department": "Venture/Hackathon Desk",
+      "evidence_count": 1,
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "open_task_count": 0,
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "owner_thread_id": "019ec613-54d0-7d13-ada3-d448a4b4cc99",
+      "parked_service_request_count": 0,
+      "recent_trace_event": {
+        "artifact_path": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\glamsterdam-m1-source-map-duplicate-sweep-20260614.md",
+        "event_id": "trace-local_m1_source_map_duplicate_sweep-65a5c8bc6a60",
+        "event_time": "2026-06-14T15:30:30Z",
+        "event_type": "local_m1_source_map_duplicate_sweep",
+        "lane_id": "web3_airdrops_grants_hackathons",
+        "summary": "Created local-only Glamsterdam M1 source map, duplicate sweep, and blocker list from existing artifacts; no browsing, submission, account, wallet, deployment, quest, public project, or transaction."
+      },
+      "recommended_next_test": "Scout terms, deadlines, eligibility, and required account/wallet actions; stop before registration, wallet, deployment, or transaction work.",
+      "source_spec_count": 1,
+      "trace_event_count": 3
+    }
+  ],
+  "next_action": "Create source-spec seed packets for owned lanes with missing source specs, then refresh parked service-request review packets without side effects.",
+  "next_test_candidates": [
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "ai_ml_competitions",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "content_and_social_growth",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "digital_products_templates_plugins",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "lead_generation_and_sales",
+      "recommended_next_test": "Draft non-spam offer rules, target filters, proof artifacts, and review gates before any outreach account or message action.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "local_trading_strategy_research",
+      "recommended_next_test": "Inventory local backtest artifacts and define a paper-only evidence standard; no broker/API/trade action.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "money_source_discovery",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "paid_code_bounties",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "platform_engineering",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "prediction_market_research",
+      "recommended_next_test": "Create a paper-only replay task for one imported market edge and define the data source of truth, fees, settlement timing, and no-trade gate.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "refresh_parked_service_requests",
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "security_bounty_private_reports",
+      "recommended_next_test": "Refresh the parked service-request review packet and keep action gated.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "keep_read_only_external_owner_boundary"
+      ],
+      "lane_id": "submitted_bounty_payouts",
+      "recommended_next_test": "Keep read-only visibility; do not duplicate the external payout worker.",
+      "requires_human_approval_for_side_effects": true
+    },
+    {
+      "allowed_scope": "local_report_only",
+      "gap_tags": [
+        "create_next_narrow_manager_task"
+      ],
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "recommended_next_test": "Scout terms, deadlines, eligibility, and required account/wallet actions; stop before registration, wallet, deployment, or transaction work.",
+      "requires_human_approval_for_side_effects": true
+    }
+  ],
+  "owned_active_lane_count": 11,
+  "parked_service_request_count": 11,
+  "purpose": "Report-only scan of lane, service, source, evidence, and trace coverage to identify the next safe infrastructure tests.",
+  "read_only_external_owned_lane_ids": [
+    "submitted_bounty_payouts"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.company_expansion_gap_map.v1",
+  "service_catalog_count": 13,
+  "service_request_status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "source_spec_gap_count": 0,
+  "source_spec_gap_lane_ids": []
+}

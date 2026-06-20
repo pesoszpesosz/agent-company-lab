@@ -1,0 +1,1033 @@
+{
+  "accepted_count": 1,
+  "all_checks_passed": true,
+  "assignment_allowed": false,
+  "contract_design_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-contract-v1-20260617.json",
+  "contract_design_sha256": "55299e9d434db9bad3b1a144cb95369e93779cbe747fe91acf4f87fef4fea299",
+  "expected_accepted_count": 1,
+  "expected_rejected_count": 25,
+  "failure_count": 0,
+  "failures": [],
+  "fixture_count": 26,
+  "fixture_dir": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures",
+  "generated_utc": "2026-06-20T21:07:33Z",
+  "next_action": "Promote this validator into the activation preflight chain, then build the egress-ledger validator; do not register pools, assign requests, start workers, or perform external actions.",
+  "positive_fixture": {
+    "expected_result": "pass_identity_candidate_not_registration_approval",
+    "fixture_id": "identity_local_runtime_adapter_report_only_candidate"
+  },
+  "registration_allowed": false,
+  "rejected_count": 25,
+  "results": [
+    {
+      "expected": "accepted",
+      "name": "positive_report_only_identity_candidate",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\positive_report_only_identity_candidate.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": true,
+        "assignment_allowed": false,
+        "errors": [],
+        "identity_envelope_id": "identity-positive-local-runtime-adapter-report-only",
+        "registration_allowed": false,
+        "rejected": false,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ac45e076bc0fbdead12f6bdb180aaff3486ae9e2381882fcb86f29dd861d0202"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wrong_worker_pool_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_wrong_worker_pool_id.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "worker_pool_id_mismatch"
+        ],
+        "identity_envelope_id": "identity-negative-wrong_worker_pool_id",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "aefea57d3fb3b101045fee6ae3cc9f2a4ba930a5c16ccc64cb50039bdbbbca59"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wrong_role_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_wrong_role_id.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "role_id_mismatch"
+        ],
+        "identity_envelope_id": "identity-negative-wrong_role_id",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "e3a79be79a288dd8c5fedd2cf3c99e357c8d6beed73e412d2cb4b4d5ee2e7087"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wrong_department_id",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_wrong_department_id.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "department_id_mismatch"
+        ],
+        "identity_envelope_id": "identity-negative-wrong_department_id",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "a178f593c2304173288693ff42a17c5feb05785c060e2557979915a6b6f77643"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_missing_operator_decision_artifact",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_missing_operator_decision_artifact.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "operator_decision_artifact_path_missing"
+        ],
+        "identity_envelope_id": "identity-negative-missing_operator_decision_artifact",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "e718a126aea72a11d92df19b7d28fae268071ef3d64a03c3d734047f466f5485"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_operator_decision_claims_registration_approval",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_operator_decision_claims_registration_approval.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "operator_decision_must_not_claim_registration_approval"
+        ],
+        "identity_envelope_id": "identity-negative-operator_decision_claims_registration_approval",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "abe07a23894c6793816f84d2ee39a76b369a3f644ca04b99aeb05e609260d968"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_expired_identity_envelope",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_expired_identity_envelope.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "expires_not_after_created",
+          "identity_envelope_expired"
+        ],
+        "identity_envelope_id": "identity-negative-expired_identity_envelope",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ff0da8b0fc1d8f232181f2bc9d731c0f76e80f0765ee631b78febcb3dd4aec65"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_revoked_identity_envelope",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_revoked_identity_envelope.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "identity_envelope_not_active"
+        ],
+        "identity_envelope_id": "identity-negative-revoked_identity_envelope",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "2db90cefc95bba1cf120a8a0de18de2f7d162a268cc0aa05a1a270ced0edfefb"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_allowed_runtime_mode_live",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_allowed_runtime_mode_live.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "allowed_runtime_modes_must_be_report_only_local_dry_run_only"
+        ],
+        "identity_envelope_id": "identity-negative-allowed_runtime_mode_live",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "2a10c64542eed6b7f42951ab3be18a47d0053773aa45b811bbbe0c9104a425bb"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_allowed_egress_type_browser_read_only",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_allowed_egress_type_browser_read_only.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "allowed_egress_types_must_be_empty"
+        ],
+        "identity_envelope_id": "identity-negative-allowed_egress_type_browser_read_only",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "11bbbb8ecdb87c11d6a325df3e17555254aca062fbc4dc09112507064df2ecce"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_allowed_egress_type_model_api",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_allowed_egress_type_model_api.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "allowed_egress_types_must_be_empty"
+        ],
+        "identity_envelope_id": "identity-negative-allowed_egress_type_model_api",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "9c557e235113a07154f3ad5ef1545e4032d97410c82db3facf0fea9a4a692696"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_allowed_mcp_server_non_empty",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_allowed_mcp_server_non_empty.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "allowed_mcp_servers_must_be_empty"
+        ],
+        "identity_envelope_id": "identity-negative-allowed_mcp_server_non_empty",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "94cd5fc8ca5354f660497819e8b58ef145c73fe694167e21870485606bcef05e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_allowed_mcp_tool_non_empty",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_allowed_mcp_tool_non_empty.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "allowed_mcp_tools_must_be_empty"
+        ],
+        "identity_envelope_id": "identity-negative-allowed_mcp_tool_non_empty",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "b317a93e95b4661e46c286a50f2a117d0f02e87d71ddefb170c91a6a171cf23a"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_credential_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_credential_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "credential_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-credential_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "1cb61e20adf915b8af5f87f94daccf04ae318ef011837019e0c33243fe9dc41d"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_browser_session_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_browser_session_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "browser_session_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-browser_session_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "5c2e660685d551827e7cdfd7b1f71c849f978b0b91abccecf819716fca0df23f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_network_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_network_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "network_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-network_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "beac7354e4265821ffcf5859e7c693b032581d871f2d9a397783174e7033d46e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_wallet_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_wallet_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "wallet_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-wallet_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "1c11ed6c3c866f067f7bb50b2dc03667fcd167bd4ba928de6f4445b49f5f6ce6"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_payment_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_payment_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "payment_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-payment_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "77a168fe4e749068fd0c862017600cdd71916883bd18f6e03c6a06eecfd1402e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_account_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_account_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "account_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-account_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "9086654d93faca473af6902cd83d4c2014f0a82e18a177c1d6e72face748a95f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_public_action_policy_allow",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_public_action_policy_allow.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "public_action_policy_must_be_deny"
+        ],
+        "identity_envelope_id": "identity-negative-public_action_policy_allow",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ff92397a69545e73080a64796339bc4d09747b634cfd33d653d44d04980e6c42"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_filesystem_writes_unbounded",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_filesystem_writes_unbounded.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "filesystem_policy_unbounded_writes_must_be_false",
+          "filesystem_policy_write_scope_must_not_be_wildcard"
+        ],
+        "identity_envelope_id": "identity-negative-filesystem_writes_unbounded",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "6dd0c07f6ddd4f87dcbcfcacdcce8550b0071ee5c8a81cb5f64c575d66e8f15f"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_trace_event_required_false",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_trace_event_required_false.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "trace_event_required_must_be_true"
+        ],
+        "identity_envelope_id": "identity-negative-trace_event_required_false",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "5c19398063b9bd313e06ac04ac1b644a5cf5baa58203bb2ac41c0ae9ac1cd5d5"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_post_run_evidence_required_false",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_post_run_evidence_required_false.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "post_run_evidence_required_must_be_true"
+        ],
+        "identity_envelope_id": "identity-negative-post_run_evidence_required_false",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "54b02eae021a9985ba60e330aac149198596842247064f9e0fcc8fbede4b97a4"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_external_side_effects_true",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_external_side_effects_true.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "runtime_boundary_external_side_effects_must_equal_False"
+        ],
+        "identity_envelope_id": "identity-negative-external_side_effects_true",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "b3e102fc217aadb4adf8af95b2948843f6ad20fa4df4371fbe63d1818947eaca"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_service_request_assignment_nonzero",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_service_request_assignment_nonzero.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "runtime_boundary_service_requests_assigned_must_equal_0"
+        ],
+        "identity_envelope_id": "identity-negative-service_request_assignment_nonzero",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "ed1afdd7d8077db45f38a9253173e08675f45ebf86ceae825f592da24396ae6e"
+    },
+    {
+      "expected": "rejected",
+      "name": "negative_worker_start_nonzero",
+      "passed": true,
+      "path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures\\negative_worker_start_nonzero.json",
+      "result": {
+        "accepted_for_registration_candidate_preflight": false,
+        "assignment_allowed": false,
+        "errors": [
+          "runtime_boundary_worker_starts_must_equal_0"
+        ],
+        "identity_envelope_id": "identity-negative-worker_start_nonzero",
+        "registration_allowed": false,
+        "rejected": true,
+        "runtime_boundary": {
+          "account_actions": false,
+          "browser_sessions_started": 0,
+          "credentials_created": false,
+          "external_side_effects": false,
+          "identity_system_installed": false,
+          "mcp_tool_calls": false,
+          "model_api_calls": false,
+          "network_calls_by_worker": false,
+          "payment_actions": false,
+          "public_actions": false,
+          "report_only": true,
+          "service_requests_assigned": 0,
+          "spiffe_ids_issued": false,
+          "svids_issued": false,
+          "wallet_actions": false,
+          "worker_pools_registered": 0,
+          "worker_starts": 0
+        },
+        "warnings": [],
+        "worker_start_allowed": false
+      },
+      "sha256": "1c63956a928886dee56c03cc81a2836ea35168eb62503bf6fcc1ef66e7f42fb8"
+    }
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_created": false,
+    "external_side_effects": false,
+    "identity_system_installed": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "network_calls_by_worker": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "service_requests_assigned": 0,
+    "spiffe_ids_issued": false,
+    "svids_issued": false,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "schema_path": "E:\\agent-company-lab\\architecture\\local-runtime-adapter-pool-identity-envelope-v1.schema.json",
+  "schema_version": "agent_company.local_runtime_adapter_pool_identity_envelope_validator_report.v1",
+  "worker_start_allowed": false
+}

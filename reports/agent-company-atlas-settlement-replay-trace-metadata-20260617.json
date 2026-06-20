@@ -1,0 +1,97 @@
+{
+  "id": "agent-company-atlas-settlement-replay-v1-20260617",
+  "created_at": "2026-06-17",
+  "lane_id": "prediction_market_research",
+  "module": "Settlement Replay",
+  "purpose": "Promote the prediction-market research lane from a generic checkpoint game into a lane-specific data-only replay module with its own generated observatory texture, responsive board, and settlement-focused station model.",
+  "research": {
+    "queries": [
+      "prediction market dashboard settlement rules UI event timeline resolution source clock",
+      "prediction market trading interface resolution rules source of truth dashboard",
+      "event replay timeline UI financial markets settlement risk dashboard",
+      "prediction market resolution rules source of truth settlement event dashboard",
+      "Kalshi market settlement rules source of truth documentation",
+      "Polymarket market resolution rules source source of truth documentation"
+    ],
+    "reference_urls": [
+      "https://docs.kalshi.com/",
+      "https://polymarket.com/learn",
+      "https://www.investopedia.com/prediction-market-definition-5218946"
+    ],
+    "design_takeaways": [
+      "Resolution source, rules, eligibility, settlement timing, and finality risk should be visible objects rather than hidden notes.",
+      "The module should emphasize archived packet replay and source-clock checks instead of trade execution.",
+      "No-trade, account, credential, deposit, withdrawal, KYC, and real-money boundaries should appear as sealed gates."
+    ]
+  },
+  "image_generation": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_03e9bb14426b80a9016a32d5f9f8c8819194c38d80bbdff967.png",
+    "workspace_path": "web/assets/games/settlement-replay-bg-20260617.png",
+    "prompt_summary": "Premium dark futuristic market observatory, circular replay chamber, event timeline arcs, settlement clocks, rules tablets, dispute locks, data packet tiles, sealed treasury/no-trade vault, violet and teal lighting, no text, no people, no logos."
+  },
+  "implementation": {
+    "files_changed": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/data/lane-visuals.json",
+      "web/README.md"
+    ],
+    "assets_added": [
+      "web/assets/games/settlement-replay-bg-20260617.png"
+    ],
+    "frontend_features": [
+      "Added settlement-replay dispatch and step-count support.",
+      "Added five data-derived settlement stations: Packet Archive, Paper Replay, Rules Clock, Venue Friction, and No-Trade Vault.",
+      "Added a lane-specific board with orbit rings, diamond nodes, clock sweep, meter cards, sealed warning states, and responsive desktop/mobile layouts.",
+      "Added versioned cache keys and README documentation for standalone reuse."
+    ],
+    "safety_boundaries": [
+      "The module reads local trail/snapshot data only.",
+      "It does not connect to venues, accounts, credentials, trading APIs, deposits, withdrawals, KYC flows, orders, or real-money trading.",
+      "The no-trade station visualizes those boundaries as sealed."
+    ]
+  },
+  "validation": {
+    "static": {
+      "node_check_web_app_js": "passed",
+      "lane_visuals_json": "passed",
+      "asset_exists": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=settlement-replay&cache=20260617-settlement-replay#lane=prediction_market_research&view=game",
+      "mobile_390x920": {
+        "texture_loaded": true,
+        "stages": 5,
+        "nodes": 5,
+        "initial_focus": "Packet Archive",
+        "next_focus": "Paper Replay",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      },
+      "desktop_docked_1600x900": {
+        "texture_loaded": true,
+        "stages": 5,
+        "nodes": 5,
+        "hero_columns": "78px 193px",
+        "stage_columns": "309px",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      },
+      "desktop_stacked_1280x800": {
+        "texture_loaded": true,
+        "stages": 5,
+        "nodes": 5,
+        "hero_columns": "78px 885px 132px",
+        "stage_columns": "221px 221px 221px 221px 221px",
+        "body_overflow_x": false,
+        "board_overflow_x": false,
+        "console_errors": 0
+      }
+    }
+  }
+}

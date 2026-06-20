@@ -1,0 +1,74 @@
+{
+  "traceId": "trace-agent-company-atlas-path-core-live-tokens-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-core-live-tokens-v1-20260618",
+  "eventId": "trace-atlas_path_core_live_tokens_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-core-live-tokens-trace-metadata-20260618",
+  "title": "Path Core Live Tokens",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "agentId": "recovered-profitable-edge-infra",
+  "problem": "The Path Core motion rail still leaned on generic scan-line motion and did not clearly communicate what was happening in the lane.",
+  "implementation": [
+    "Added pathCoreLiveTokens to derive compact blocker, proof, work, notes, or seed tokens from lane data.",
+    "Rendered live tokens inside the existing Core motion rail so the animation improves the cockpit without adding another scroll section.",
+    "Styled blocker, proof, and work tokens with distinct colors, counts, labels, and staggered drift motion.",
+    "Added reduced-motion handling, cache keys, documentation, and a focused contract test."
+  ],
+  "filesChanged": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_core_live_tokens.py"
+  ],
+  "browserEvidence": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-core-live-tokens-20260618#lane=platform_engineering&view=path&deck=command",
+    "activeTabText": "path",
+    "activeCore": "scan",
+    "tokenCount": 3,
+    "tokens": [
+      {
+        "id": "blockers",
+        "className": "path-core-live-token blocker",
+        "text": "4 Gate",
+        "visible": true
+      },
+      {
+        "id": "proof",
+        "className": "path-core-live-token proof",
+        "text": "2,535 Proof",
+        "visible": true
+      },
+      {
+        "id": "work",
+        "className": "path-core-live-token work",
+        "text": "2 Work",
+        "visible": true
+      }
+    ],
+    "railHeight": 42,
+    "stageHeight": 437,
+    "panelBottomWithinViewport": true,
+    "tokenOverflow": false,
+    "overflowX": 0
+  },
+  "verification": [
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_live_tokens.py -q",
+      "result": "RED failed before implementation because pathCoreLiveTokens did not exist"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_live_tokens.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_motion.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_cockpit_chrome.py -q",
+      "result": "4 passed in 0.14s"
+    },
+    {
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "exit code 0"
+    },
+    {
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "47 passed, 55 deselected in 0.26s"
+    }
+  ],
+  "nextAction": "Continue improving the first Path viewport with tighter readable bot/blocker/proof surfaces before adding any deeper scroll-heavy modules."
+}

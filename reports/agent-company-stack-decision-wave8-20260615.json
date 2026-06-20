@@ -1,0 +1,80 @@
+{
+  "api_calls": false,
+  "approval_granted": false,
+  "browser_actions": false,
+  "decisions": [
+    {
+      "component": "Core control plane",
+      "decision": "Keep current SQLite task/artifact/trace/service-request spine; do not replace it with a framework runtime yet.",
+      "why": "The lab already has gates, packet schemas, chain integrity, and review artifacts. Replacing it before worker execution starts would add migration risk without earning more money-path throughput."
+    },
+    {
+      "component": "Typed local worker runtime",
+      "decision": "Promote Pydantic AI as the first typed worker implementation path for local/non-gated model workflows.",
+      "why": "Strong Python fit, provider-agnostic model layer, typed validation, and observability align with existing Pydantic eval artifacts."
+    },
+    {
+      "component": "Long-running manager/seekers",
+      "decision": "Evaluate LangGraph for stateful manager and seeker loops after current service-worker approval chain is stable.",
+      "why": "Durable execution and human-in-the-loop features match manager checkpoints and reviewable state updates."
+    },
+    {
+      "component": "Production multi-agent orchestration",
+      "decision": "Track Microsoft Agent Framework as the likely cross-runtime production target; do not build on AutoGen for new core work.",
+      "why": "MAF is the active Microsoft path with production, governance, durability, workflow, MCP/A2A, Python/.NET support; AutoGen is maintenance-mode."
+    },
+    {
+      "component": "Durable service-worker queues",
+      "decision": "Keep SQLite queue reports now; next adapter proof should compare DBOS and Hatchet against existing service-worker packet semantics.",
+      "why": "DBOS is minimal Postgres-backed durable execution; Hatchet is stronger when queue scale, retries, monitoring, and self-hosted dashboard matter."
+    },
+    {
+      "component": "Human/account/payment gates",
+      "decision": "Keep all legal/KYC/payment/wallet/account/browser-public actions as service requests requiring human/CRO decisions.",
+      "why": "Every external action class remains a boundary; runtime choice must not bypass approval records or exact-scope review."
+    }
+  ],
+  "external_actions": false,
+  "generated_utc": "2026-06-15T12:13:03Z",
+  "next_actions": [
+    "Add a local runtime-bridge scorecard mapping Microsoft Agent Framework, LangGraph, Pydantic AI, DBOS, Hatchet, and current SQLite reports against the 11 pending service-worker packets.",
+    "Build one dry-run Pydantic AI worker only for a local artifact summarization task with api_calls=false unless model/API approval is explicitly granted.",
+    "Design a DBOS-vs-Hatchet adapter test that consumes service-worker request packets and emits local result placeholders without enqueueing external work.",
+    "Keep AutoGen references only for migration/pattern comparison; remove it from any new-core recommendation unless MAF is unavailable."
+  ],
+  "schema_version": "agent_company_stack_decision_wave8.v1",
+  "service_requests_updated": 0,
+  "sources": [
+    {
+      "evidence": "Open multi-language framework for production-grade AI agents and multi-agent workflows in .NET/Python; emphasizes durability, restartability, observability, governance, human-in-the-loop control, graph workflows, MCP/A2A, and hosted/cloud patterns.",
+      "name": "Microsoft Agent Framework",
+      "url": "https://github.com/microsoft/agent-framework"
+    },
+    {
+      "evidence": "AutoGen README now marks the project maintenance mode and points new users to Microsoft Agent Framework; keep it as legacy pattern source, not new core.",
+      "name": "Microsoft AutoGen",
+      "url": "https://github.com/microsoft/autogen"
+    },
+    {
+      "evidence": "Low-level infrastructure for long-running stateful workflows/agents with durable execution, human-in-the-loop, memory, and trace/debugging support.",
+      "name": "LangGraph",
+      "url": "https://github.com/langchain-ai/langgraph"
+    },
+    {
+      "evidence": "Python agent framework for production-grade GenAI applications/workflows; model-agnostic provider support and OpenTelemetry/Logfire observability fit typed local workers.",
+      "name": "Pydantic AI",
+      "url": "https://github.com/pydantic/pydantic-ai"
+    },
+    {
+      "evidence": "Orchestration engine for background tasks, AI agents, and durable workflows; supports Python/TypeScript/Go/Ruby with queueing, retries, durability, monitoring, alerting, and logging.",
+      "name": "Hatchet",
+      "url": "https://github.com/hatchet-dev/hatchet"
+    },
+    {
+      "evidence": "Postgres-backed durable Python workflows and queues; checkpointing/resume, queue concurrency/rate limits, scheduling, notifications, programmatic workflow management.",
+      "name": "DBOS Transact Python",
+      "url": "https://github.com/dbos-inc/dbos-transact-py"
+    }
+  ],
+  "worker_starts": 0
+}

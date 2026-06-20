@@ -1,0 +1,161 @@
+{
+  "assets": {
+    "lane_genesis_foundry_texture": {
+      "path": "E:\\agent-company-lab\\web\\assets\\system\\lane-genesis-foundry-20260618.png",
+      "sha256": "2009801a5fae1eb3e0a6efe32fcaa1e2be5645bcca450adedcd142bb398920c2",
+      "size_bytes": 2748217
+    }
+  },
+  "boundary": {
+    "account_login_or_profile_actions": 0,
+    "browser_local_asset_filter_changed": 1,
+    "browser_sessions_started": 1,
+    "external_network_calls": 0,
+    "external_side_effects": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "public_posts_messages_or_submissions": 0,
+    "service_requests_mutated": 0,
+    "temporary_localhost_static_server_started": 1,
+    "temporary_localhost_static_server_stopped": 1,
+    "wallet_payment_or_trade_actions": 0
+  },
+  "checks": [
+    {
+      "name": "desktop_panel_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_texture_loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop_stats_actions_cards_and_future_slots_present",
+      "passed": true
+    },
+    {
+      "name": "desktop_interactive_lane_cards_present",
+      "passed": true
+    },
+    {
+      "name": "assets_action_opens_asset_vault",
+      "passed": true
+    },
+    {
+      "name": "games_action_reveals_registry",
+      "passed": true
+    },
+    {
+      "name": "lane_card_opens_lane_game_view",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "mobile_panel_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_texture_stats_actions_cards_present",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_or_console_errors",
+      "passed": true
+    },
+    {
+      "name": "temporary_server_stopped",
+      "passed": true
+    },
+    {
+      "name": "no_external_side_effects",
+      "passed": true
+    }
+  ],
+  "decision": "desktop_mobile_blueprint_actions_and_generated_asset_verification_passed",
+  "desktop": {
+    "action_values": [
+      "forge",
+      "games",
+      "assets",
+      "bots"
+    ],
+    "card_count": 6,
+    "console_error_count": 0,
+    "future_slot_count": 8,
+    "horizontal_overflow": false,
+    "image_loaded": true,
+    "image_natural_height": 929,
+    "image_natural_width": 1693,
+    "image_src": "./assets/system/lane-genesis-foundry-20260618.png",
+    "interactive_card_count": 5,
+    "panel_exists": true,
+    "panel_height": 1131,
+    "panel_visible": true,
+    "panel_width": 1381,
+    "readiness": "80%",
+    "sample_blueprints": [
+      "discovery-scout",
+      "proof-lab",
+      "audience-loop",
+      "market-sim",
+      "payout-ladder",
+      "custom-realm"
+    ],
+    "stat_count": 5,
+    "stat_labels": [
+      "Blueprints",
+      "Open slots",
+      "Game modules",
+      "Art kits",
+      "Bot sockets"
+    ],
+    "title": "Agent Company Atlas",
+    "url": "http://127.0.0.1:8768/index.html",
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "generated_at": "2026-06-18T09:55:15Z",
+  "interactions": {
+    "asset_filter_active_after_click": true,
+    "asset_vault_count_text": "65 assets",
+    "assets_action_clicked": true,
+    "game_view_visible_after_lane_card": true,
+    "games_action_clicked": true,
+    "hash_after_lane_card": "#lane=platform_engineering&view=game",
+    "lane_card_clicked": true,
+    "registry_text_contains_minigame_registry_codex": true,
+    "registry_visible_after_games": true,
+    "selected_heading_after_lane_card": "Platform Engineering"
+  },
+  "lane_id": "platform_engineering",
+  "mobile": {
+    "action_count": 4,
+    "card_count": 6,
+    "console_error_count": 0,
+    "future_slot_count": 8,
+    "horizontal_overflow": false,
+    "image_loaded": true,
+    "image_natural_height": 929,
+    "image_natural_width": 1693,
+    "interactive_card_count": 5,
+    "panel_exists": true,
+    "panel_height": 1660,
+    "panel_visible": true,
+    "panel_width": 347,
+    "stat_count": 5,
+    "url": "http://127.0.0.1:8768/index.html",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "next_action": "Continue closing Atlas platform tasks or return to the next ranked money-path promotion item when one appears.",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "schema_version": "platform_engineering.atlas_lane_genesis_foundry_browser_verification.v1",
+  "status": "lane_genesis_foundry_browser_verified",
+  "task_id": "task-agent-company-atlas-lane-genesis-foundry-v1-20260618"
+}

@@ -1,0 +1,181 @@
+{
+  "artifact_count_registered": 7,
+  "counts_before_closeout": {
+    "artifacts": 564,
+    "outcomes": 149,
+    "tasks": 146,
+    "trace_events": 160
+  },
+  "event_id": "trace-event-paid-code-duplicate-check-worksheet-cli-20260615",
+  "generated_utc": "2026-06-15T20:45:46Z",
+  "outcome_id": "outcome-paid-code-duplicate-check-worksheet-cli-20260615",
+  "schema_version": "agent_company.paid_code_duplicate_check_worksheet_trace_metadata.v1",
+  "side_effect_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "source_sha256": "5A35BCC3EFAAFA73E64FBA159D0348DB50A0790A9F2FDC645C4F796E8A2B0B18",
+  "task_id": "task-paid-code-duplicate-check-worksheet-cli-20260615",
+  "trace_id": "trace-paid-code-duplicate-check-worksheet-cli-20260615",
+  "validation": {
+    "account_actions": false,
+    "all_checks_passed": true,
+    "api_calls": false,
+    "blocked_by_gate_count": 6,
+    "browser_sessions_started": 0,
+    "chain_checked_report_count": 35,
+    "chain_failure_count": 0,
+    "chain_integrity_all_checks_passed": true,
+    "chain_integrity_validation_path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "closeout_artifact_count_planned": 7,
+    "evidence_rows_inserted_or_updated": 1,
+    "external_side_effects": false,
+    "failure_count": 0,
+    "generated_utc": "2026-06-15T20:45:46Z",
+    "live_tasks_completed": 1,
+    "live_tasks_created": 1,
+    "local_only_item_count": 6,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "schema_version": "agent_company.paid_code_duplicate_check_worksheet_cli_validation.v1",
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "source_sha256": "5A35BCC3EFAAFA73E64FBA159D0348DB50A0790A9F2FDC645C4F796E8A2B0B18",
+    "task_id": "task-paid-code-duplicate-check-worksheet-cli-20260615",
+    "task_rows_inserted_by_worksheet": 1,
+    "wallet_actions": false,
+    "worker_starts": 0,
+    "worksheet_item_count": 12,
+    "worksheet_lane_id": "paid_code_bounties",
+    "worksheet_task_id": "task-paid-code-duplicate-check-worksheet-20260615",
+    "worksheet_validation_all_checks_passed": true,
+    "worksheet_validation_path": "E:\\agent-company-lab\\reports\\paid-code-duplicate-check-worksheet-validation-latest.json"
+  },
+  "worksheet": {
+    "blocked_by_gate_count": 6,
+    "evidence_rows_inserted_or_updated": 1,
+    "forbidden_actions": [
+      "Do not browse, use accounts, register, accept terms, claim bounties, submit PRs, comment publicly, or contact maintainers from this worksheet.",
+      "Do not perform security testing, touch wallets/payments, call APIs, assign service workers, or mutate service requests from this worksheet."
+    ],
+    "generated_utc": "2026-06-15T20:44:26Z",
+    "lane_evidence_rows_after": 75,
+    "lane_evidence_rows_before": 74,
+    "live_tasks_completed": 1,
+    "live_tasks_created": 1,
+    "local_only_item_count": 6,
+    "next_action": "Paid-code lane manager should complete the six local-only worksheet items first; any live issue refresh, claim, PR, payout, or security-sensitive step must go through service requests.",
+    "runtime_boundary": {
+      "account_actions": false,
+      "api_calls": false,
+      "browser_sessions_started": 0,
+      "external_side_effects": false,
+      "payment_actions": false,
+      "public_actions": false,
+      "real_money_actions": false,
+      "security_testing_actions": false,
+      "service_requests_assigned": 0,
+      "service_requests_updated": 0,
+      "wallet_actions": false,
+      "worker_starts": 0
+    },
+    "schema_version": "agent_company.paid_code_duplicate_check_worksheet.v1",
+    "source_proof_evidence_id": "first-ranked-local-proof-paid_code_bounties-20260615",
+    "source_proof_path": "E:\\agent-company-lab\\reports\\first-ranked-manager-proof-latest.json",
+    "source_proof_task_id": "task-paid_code_bounties-first-local-proof-20260615",
+    "summary": "Built a paid-code duplicate-check worksheet from the completed first ranked proof. It separates six local-only checks from six gated checks that require explicit browser, legal/payment, public-action, or security approval.",
+    "task_rows_inserted_by_worksheet": 1,
+    "tasks_table_rows_after": 146,
+    "tasks_table_rows_before": 145,
+    "worksheet_evidence_id": "paid-code-duplicate-check-worksheet-20260615",
+    "worksheet_item_count": 12,
+    "worksheet_items": [
+      {
+        "gate_required": null,
+        "item_id": "local-evidence-normalization",
+        "mode": "local_only",
+        "question": "Summarize the imported evidence row in one sentence and identify why it was parked, rejected, or still candidate-worthy."
+      },
+      {
+        "gate_required": null,
+        "item_id": "candidate-status-from-import",
+        "mode": "local_only",
+        "question": "Classify the candidate as rejected, parked, or needs fresh triage using only local imported status and next_action fields."
+      },
+      {
+        "gate_required": null,
+        "item_id": "duplicate-risk-from-import",
+        "mode": "local_only",
+        "question": "Extract known duplicate signals such as active PRs, many comments, existing claims, owner hold, or rewarded duplicate work."
+      },
+      {
+        "gate_required": null,
+        "item_id": "payout-trust-from-import",
+        "mode": "local_only",
+        "question": "Record any local evidence about escrow, paid state, bounty amount confidence, attribution, or payment gate risk."
+      },
+      {
+        "gate_required": null,
+        "item_id": "effort-shape-from-import",
+        "mode": "local_only",
+        "question": "Infer repo/language/test/build effort only from local scan summaries; mark unknowns instead of browsing."
+      },
+      {
+        "gate_required": null,
+        "item_id": "local-go-no-go-note",
+        "mode": "local_only",
+        "question": "Write a no-browser go/no-go note and the exact gate that would be needed before refreshing the candidate live."
+      },
+      {
+        "gate_required": "browser_read_only_session",
+        "item_id": "live-open-state-check",
+        "mode": "blocked_by_gate",
+        "question": "Verify whether the issue is still open and the bounty still accepts new work."
+      },
+      {
+        "gate_required": "browser_read_only_session",
+        "item_id": "live-pr-claim-check",
+        "mode": "blocked_by_gate",
+        "question": "Check live PRs, comments, claims, and maintainer signals for duplicate or stale work."
+      },
+      {
+        "gate_required": "legal_kyc_tax_payment",
+        "item_id": "terms-and-payout-check",
+        "mode": "blocked_by_gate",
+        "question": "Confirm current bounty terms, payout route, attribution, and any account or payment requirements."
+      },
+      {
+        "gate_required": "browser_read_only_session",
+        "item_id": "repo-build-feasibility-check",
+        "mode": "blocked_by_gate",
+        "question": "Inspect repo setup, tests, language/tooling, and likely implementation surface."
+      },
+      {
+        "gate_required": "public_action_approval",
+        "item_id": "public-claim-or-pr-action",
+        "mode": "blocked_by_gate",
+        "question": "Comment, claim, submit PR, or otherwise make a public action."
+      },
+      {
+        "gate_required": "security_testing_approval",
+        "item_id": "security-sensitive-review",
+        "mode": "blocked_by_gate",
+        "question": "Run exploit/security testing or security-sensitive validation beyond public code review."
+      }
+    ],
+    "worksheet_lane_id": "paid_code_bounties",
+    "worksheet_task_id": "task-paid-code-duplicate-check-worksheet-20260615"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-browser-read-only-signed-approval-guard-adapter-contract-integration-v1-20260618",
+  "task_id": "task-browser-read-only-signed-approval-guard-adapter-contract-integration-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-17T22:36:00Z",
+  "summary": "Integrated browser-worker adapter contract validation into the browser read-only signed approval guard. Report-only guard now requires the source assignment preflight to expose adapter_contract_gate=present_valid_start_blocked and binds signed approval decisions to the adapter contract validation path.",
+  "source_preflight_validation": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json",
+  "source_adapter_contract_validation": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\browser-read-only-signed-approval-guard-v1.schema.json",
+      "sha256": "bc3300f4e8422557963517948992f6bdf88b9a92ea92ac08399f459bfe3c7ca2"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\validate_browser_read_only_signed_approval_guard.py",
+      "sha256": "7288419d2c44466ac626ce23e8029d505fcc5b61b755cb09e98ec84d78f15816"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_browser_read_only_signed_approval_guard.py",
+      "sha256": "3b376ef5f844b2c5fd3bdad5f63af3de00fc0f9cb2a44bdeb8bf98f6557f6039"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-20260617.json",
+      "sha256": "f4a6c70494399f766d9e8fb43b82fca04f2cba077de47c9bac82852e99becc74"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-validation-20260617.json",
+      "sha256": "a7eaa6faaf91faa2742642dd3c34e4edd5a71e8355b5dbb4152b427e0ac47f9f"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-20260617.md",
+      "sha256": "9a26451d8fec2b08a83a12b87ab1040733accdfc94910e40f79b2181c17f48fc"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_browser_read_only_signed_approval_guard.py",
+    "focused_test_result": "passed",
+    "accepted_count": 2,
+    "rejected_count": 26,
+    "adapter_contract_gate": "present_valid_start_blocked",
+    "assignment_allowed": false,
+    "browser_session_start_allowed": false,
+    "worker_start_allowed": false,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "approval_rows_written": 0,
+    "service_requests_assigned": 0,
+    "service_requests_mutated": 0,
+    "browser_sessions_started": 0,
+    "worker_starts": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Use this adapter-bound signed approval guard as a prerequisite for any future browser read-only apply preflight; no browser assignment or session start is allowed without a separate explicit apply path."
+}

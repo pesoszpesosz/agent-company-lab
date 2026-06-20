@@ -1,0 +1,52 @@
+{
+  "all_api_calls_false": true,
+  "all_dependencies_not_imported": true,
+  "all_enqueue_now_false": true,
+  "all_external_side_effects_false": true,
+  "all_manifests_contract_only_or_sqlite_local": true,
+  "all_network_required_false": true,
+  "generated_utc": "2026-06-15T09:12:28Z",
+  "manifest_count": 4,
+  "mapped_request_total": 56,
+  "route_counts_by_adapter": {
+    "dbos_service_worker_queue_manifest": {
+      "hold_for_approval_do_not_enqueue": 11,
+      "terminal_complete_do_not_enqueue": 1,
+      "terminal_rejected_do_not_enqueue": 2
+    },
+    "hatchet_service_worker_queue_manifest": {
+      "hold_for_approval_do_not_enqueue": 11,
+      "terminal_complete_do_not_enqueue": 1,
+      "terminal_rejected_do_not_enqueue": 2
+    },
+    "sqlite_service_worker_queue_adapter": {
+      "hold_for_approval_do_not_enqueue": 11,
+      "terminal_complete_do_not_enqueue": 1,
+      "terminal_rejected_do_not_enqueue": 2
+    },
+    "temporal_service_worker_queue_manifest": {
+      "hold_for_approval_do_not_enqueue": 11,
+      "terminal_complete_do_not_enqueue": 1,
+      "terminal_rejected_do_not_enqueue": 2
+    }
+  },
+  "schema_version": "durable_service_worker_queue_adapter_validation.v1",
+  "service_requests_approved_by_manifest": 0,
+  "service_requests_started_by_manifest": 0,
+  "source_queue_count": 14,
+  "source_queue_path": "E:\\agent-company-lab\\reports\\service-worker-request-queue-latest.json",
+  "status_counts": {
+    "complete": 1,
+    "needs_review": 11,
+    "rejected": 2
+  },
+  "worker_type_counts": {
+    "browser_read_only": 7,
+    "browser_signed_in_read_only": 1,
+    "legal_kyc_tax_payment_review": 1,
+    "local_runtime_adapter": 2,
+    "model_api_execution": 1,
+    "other_gated_worker": 1,
+    "public_submission": 1
+  }
+}

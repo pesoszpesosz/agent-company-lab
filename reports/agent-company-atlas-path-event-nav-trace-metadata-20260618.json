@@ -1,0 +1,81 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-event-nav-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Extended the Path Map Event Proof lens with NEWER/OLDER full-trail navigation and a position readout so operators can walk neighboring lane events without leaving Node Intel.",
+  "design_research": {
+    "queries": [
+      "timeline event detail next previous navigation UX pattern",
+      "activity feed event detail previous next dashboard UX",
+      "master detail previous next record navigation dashboard UI"
+    ],
+    "source_urls": [
+      "https://dribbble.com/search/timeline-navigation",
+      "https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-master-detail-forms.html",
+      "https://community.glideapps.com/t/previous-and-next-record-in-detail-view/65449",
+      "https://help.smartsuite.com/en/articles/4806278-next-previous-record-navigation",
+      "https://uxpatterns.dev/patterns/data-display/timeline"
+    ],
+    "pattern_notes": [
+      "Previous and next record controls reduce repeated back-and-forth when reviewing many records.",
+      "Timeline navigation should preserve context and stay responsive rather than forcing a separate page.",
+      "Dense activity feeds need compact controls that do not expand the first scan or break small cards."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "reports/agent-company-atlas-path-event-nav-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "snapshot.lanes[].trail",
+      "focused Path Map Node Intel event",
+      "browser-only state.pathEventFocusByLane"
+    ],
+    "ui_contract": [
+      "Resolve the selected proof event against the full lane trail, not only the visible related-event stack.",
+      "Show the selected event's 1-based trail position and total lane trail length.",
+      "Add NEWER and OLDER controls that update browser-local selected event state.",
+      "Pull an out-of-stack selected event into the visible related-event list so the lens and selected row stay connected.",
+      "Keep the compact nav row contained inside narrow Node Intel cards across responsive grid widths."
+    ]
+  },
+  "debugging": {
+    "issue": "Initial green check found the Route Handoff card intercepting the OLDER button click.",
+    "root_cause": "The Event Proof lens and nav row were contributing an intrinsic width wider than the narrow Node Intel grid column, causing the OLDER control to overflow into the neighboring card.",
+    "fix": "Constrained Node Intel children, forced the lens to a minmax(0, 1fr) grid track, made the nav row shrinkable, and reduced nav button height/padding."
+  },
+  "verification": {
+    "red_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-event-nav-red#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Before implementation, .path-event-nav was absent, there were 0 data-path-event-step buttons, no .path-event-position, and no NEWER/OLDER labels."
+    },
+    "green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-event-nav-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "The lens rendered 2 nav buttons and position 53 / 64. Clicking OLDER changed the position to 54 / 64 and changed the lens title to Browser Research while keeping exactly 1 selected event and no browser errors."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x900",
+        "820x900",
+        "1280x900",
+        "1600x950"
+      ],
+      "evidence": "All tested viewports completed an OLDER step to 54 / 64, kept one selected event, kept document width equal to viewport width, and reported no bad rectangles, console errors, or failed requests."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed",
+      "metadata_json": "passed",
+      "http_status": 200
+    }
+  }
+}

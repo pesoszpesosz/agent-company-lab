@@ -1,0 +1,30 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:41:33Z",
+  "trace_id": "trace-gumroad-direct-download-local-proof-20260618",
+  "task_id": "task-lane-scout-gumroad_direct_download-20260618",
+  "lane_id": "digital_products_templates_plugins",
+  "event_type": "gumroad_direct_download_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\gumroad-direct-download-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\gumroad-direct-download-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\gumroad-direct-download-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "browser_sessions_started": 0,
+    "gumroad_account_or_login": false,
+    "seller_profile_created_or_edited": false,
+    "terms_or_seller_agreement_accepted": false,
+    "products_uploaded_or_edited": 0,
+    "listings_published": 0,
+    "prices_published": 0,
+    "payout_or_payment_setup": false,
+    "orders_or_payments": 0,
+    "public_actions": 0,
+    "service_requests_mutated": 0,
+    "workers_or_runtimes_started": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "Create a no-publish Gumroad approval request packet for Agent Skill Starter Kit v0; include seller terms/prohibited-products review, IP/license review, price/refund/copy review, zip checksum plan, payout/tax/payment gate, and public listing approval."
+}

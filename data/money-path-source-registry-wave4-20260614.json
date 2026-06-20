@@ -1,0 +1,129 @@
+{
+  "version": "2026-06-14-wave4",
+  "purpose": "Current online money-path source expansion for the agent-company lab. This registry distinguishes agent-doable research/proof work from human-only earning actions.",
+  "global_rules": [
+    "Agents may research, normalize, score, draft, and produce local proof artifacts.",
+    "Agents must not impersonate the user, perform human-only paid tasks, accept terms, create accounts, submit public work, trade, deposit, withdraw, connect wallets, or send outreach without a scoped approved service request.",
+    "Human-only platforms can still be valuable as opportunity intelligence: agents can prepare eligibility packets, account checklists, task rubrics, and dashboards for the user."
+  ],
+  "candidate_lanes": [
+    {
+      "lane_id": "ai_training_eval_gigs",
+      "department": "Human Work Intelligence",
+      "agent_fit": "research_and_preparation_only",
+      "why_it_exists": "AI training, expert evaluation, coding/math/law/medicine review, and data annotation platforms can pay humans, but the paid tasks generally require genuine human judgment and platform terms.",
+      "representative_sources": [
+        {"name": "DataAnnotation", "url": "https://www.dataannotation.tech/", "signal": "Remote AI-training work and expert tasks; advertised expert rates vary by project."},
+        {"name": "Outlier", "url": "https://outlier.ai/", "signal": "Freelance AI trainer/expert platform; public page claims large expert network and total payouts."},
+        {"name": "Toloka", "url": "https://toloka.ai/", "signal": "Training data for AI agents and LLMs; useful as market signal and potential work/provider surface."},
+        {"name": "TELUS Digital AI", "url": "https://www.telusinternational.ai/", "signal": "Flexible remote AI/data roles including AI trainers and data annotators."},
+        {"name": "Prolific participants", "url": "https://www.prolific.com/participants", "signal": "Paid online studies; human participant route, not bot route."}
+      ],
+      "first_agent_task": "Build a human-only eligibility and risk packet: required identity/account steps, skills, likely task types, pay-claim verification, tax/payment gates, and a no-automation rule.",
+      "service_workers_required": ["account_registration_worker", "legal_kyc_tax_payment_gate", "secrets_credentials_handling_gate"],
+      "hard_stops": ["no paid task execution by agents", "no identity/KYC/tax/payment setup", "no platform account creation", "no generated answers submitted as human work"]
+    },
+    {
+      "lane_id": "qa_usability_testing_gigs",
+      "department": "Human QA Desk",
+      "agent_fit": "research_and_preparation_only_with_optional_local_practice",
+      "why_it_exists": "Crowdtesting and usability platforms can pay for real user/device feedback. Agents can prepare checklists and practice bug reports, but paid tests must remain user-performed unless platform rules explicitly permit automation.",
+      "representative_sources": [
+        {"name": "uTest", "url": "https://www.utest.com/", "signal": "Large freelance software-testing community."},
+        {"name": "UserTesting get paid to test", "url": "https://www.usertesting.com/get-paid-to-test", "signal": "Paid user-perspective tests; application and participant route."},
+        {"name": "Test IO become a tester", "url": "https://test.io/company/become-a-tester", "signal": "Freelance testing community for apps and websites."},
+        {"name": "Applause/uTest", "url": "https://www.applause.com/blog/work-from-home-with-utest/", "signal": "Applause describes uTest members using personal devices to earn by testing apps/sites."}
+      ],
+      "first_agent_task": "Create a local QA-bug-report practice kit and eligibility packet: device inventory, sample defect reports, payout/terms questions, and account gates.",
+      "service_workers_required": ["account_registration_worker", "legal_kyc_tax_payment_gate"],
+      "hard_stops": ["no paid test execution by agents", "no fake device/user feedback", "no account creation without approval"]
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "department": "Competition Research",
+      "agent_fit": "high_for_research_experiments_low_for_submission_without_user_review",
+      "why_it_exists": "ML competitions and AI hackathons can have large prize pools and are well suited to agent-assisted experiment generation, local notebooks, and reproducible reports.",
+      "representative_sources": [
+        {"name": "Kaggle competitions", "url": "https://www.kaggle.com/competitions?prestigeFilter=money", "signal": "Money-prize ML competitions; search result showed ARC Prize 2026 and other active prize competitions."},
+        {"name": "DrivenData competitions", "url": "https://www.drivendata.org/competitions/", "signal": "AI/data science competitions with social impact and prize history."},
+        {"name": "ML Contests", "url": "https://mlcontests.com/", "signal": "Aggregates ML/data/robotics competitions including large-prize listings."},
+        {"name": "lablab.ai hackathons", "url": "https://lablab.ai/ai-hackathons", "signal": "AI hackathon calendar and project gallery; several 2026 events listed."},
+        {"name": "ETHGlobal", "url": "https://ethglobal.com/", "signal": "Ethereum/web3 hackathons, often with prizes/sponsor tracks."}
+      ],
+      "first_agent_task": "Scout active competitions with prize, deadline, compute needs, rules, team/account gates, data license, and a one-day baseline feasibility estimate.",
+      "service_workers_required": ["account_registration_worker", "data_purchase_api_access_gate", "model_api_execution_gate", "public_action_execution"],
+      "hard_stops": ["no submission without rules review", "no paid compute/API spend without approval", "no team/account signup without approval"]
+    },
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "department": "Digital Product Studio",
+      "agent_fit": "high_for_research_build_artifacts_medium_for_distribution",
+      "why_it_exists": "Templates, prompt packs, agent skills, plugins, scripts, and small software products can compound better than one-off gigs if they solve a specific buyer problem.",
+      "representative_sources": [
+        {"name": "Gumroad", "url": "https://gumroad.com/", "signal": "Creator storefront for digital products; public page emphasizes earning first dollar online."},
+        {"name": "Lemon Squeezy digital products", "url": "https://www.lemonsqueezy.com/ecommerce/digital-products", "signal": "Digital-product and SaaS billing/merchant-of-record option."},
+        {"name": "PromptBase sell prompts/skills", "url": "https://promptbase.com/sell", "signal": "Marketplace for prompts and agent skill.md files; public page describes marketplace/link fees and payout route."},
+        {"name": "Notion Marketplace", "url": "https://www.notion.com/templates", "signal": "Template marketplace with paid creator path."},
+        {"name": "Shopify partner/app revenue", "url": "https://shopify.dev/docs/apps/launch/distribution/revenue-share", "signal": "App Store revenue share and registration requirements."}
+      ],
+      "first_agent_task": "Create a product opportunity board: buyer pain, artifact type, build time, distribution route, account/payment/tax gates, and one local prototype packet.",
+      "service_workers_required": ["legal_kyc_tax_payment_gate", "account_registration_worker", "public_action_execution", "model_api_execution_gate"],
+      "hard_stops": ["no marketplace listing without approval", "no payment/tax setup", "no false revenue claims", "no copyrighted/restricted asset reuse"]
+    },
+    {
+      "lane_id": "affiliate_partner_programs",
+      "department": "Partnership Revenue",
+      "agent_fit": "medium_for_research_high_dependency_on_audience_distribution",
+      "why_it_exists": "B2B SaaS partner/affiliate programs can pay recurring commissions, but require honest content, traffic, compliance, and often account approval.",
+      "representative_sources": [
+        {"name": "PartnerStack", "url": "https://partnerstack.com/partners-and-publishers", "signal": "B2B SaaS partner network and marketplace."},
+        {"name": "PartnerStack marketplace", "url": "https://market.partnerstack.com/", "signal": "Program directory for SaaS affiliate/referral/reseller programs."},
+        {"name": "impact.com affiliate partners", "url": "https://impact.com/partners/affiliate-partners/", "signal": "Affiliate marketplace for connecting with brands."},
+        {"name": "Rewardful affiliate program", "url": "https://www.rewardful.com/affiliate-program", "signal": "Example SaaS affiliate program with recurring commission claim."},
+        {"name": "FirstPromoter affiliate program", "url": "https://firstpromoter.com/affiliate-program", "signal": "Example SaaS affiliate program with recurring commission route."}
+      ],
+      "first_agent_task": "Build a partner-program scout table: niche fit, commission, cookie/duration, approval requirements, content obligations, traffic source, and compliance risks.",
+      "service_workers_required": ["account_registration_worker", "outreach_delivery_gate", "public_action_execution", "legal_kyc_tax_payment_gate"],
+      "hard_stops": ["no affiliate applications without approval", "no misleading endorsements", "no spam/outreach", "no undisclosed affiliate links"]
+    },
+    {
+      "lane_id": "productized_services_marketplaces",
+      "department": "Service Offers",
+      "agent_fit": "medium_high_for_offer_building_and_delivery_artifacts",
+      "why_it_exists": "Freelance and service marketplaces can create cashflow if the company packages narrow AI automation, website repair, QA, analytics, or security-review offers with proof artifacts.",
+      "representative_sources": [
+        {"name": "Upwork", "url": "https://www.upwork.com/", "signal": "Freelance marketplace; public page emphasizes AI-amplified talent and services."},
+        {"name": "Fiverr", "url": "https://www.fiverr.com/", "signal": "Freelance-services marketplace with AI, app, web, data, and tagging categories."},
+        {"name": "Shopify Partners", "url": "https://www.shopify.com/partners", "signal": "Partner/service/app ecosystem for commerce work."},
+        {"name": "PartnerStack", "url": "https://partnerstack.com/", "signal": "Potential B2B SaaS partner/service channel."}
+      ],
+      "first_agent_task": "Create 3 offer packets with fictional samples only: scope, deliverables, fixed price, proof artifact, anti-spam targeting rule, and delivery checklist.",
+      "service_workers_required": ["account_registration_worker", "outreach_delivery_gate", "legal_kyc_tax_payment_gate", "public_action_execution"],
+      "hard_stops": ["no client outreach", "no marketplace proposals", "no account setup", "no claim of credentials/results not proven"]
+    },
+    {
+      "lane_id": "money_source_discovery",
+      "department": "CEO Research",
+      "agent_fit": "high_for_agents",
+      "why_it_exists": "The company needs a recurring seeker that finds new paths, classifies them, and routes them to managers without taking side effects.",
+      "representative_sources": [
+        {"name": "Current wave reports", "url": "E:\\agent-company-lab\\reports", "signal": "Local research and generated dashboards."},
+        {"name": "GitHub search", "url": "https://github.com/search", "signal": "Find emerging bounty, competition, and agent-infrastructure repositories."},
+        {"name": "ML Contests", "url": "https://mlcontests.com/", "signal": "Aggregation source for competitions."},
+        {"name": "PartnerStack marketplace", "url": "https://market.partnerstack.com/", "signal": "Aggregation source for partner programs."}
+      ],
+      "first_agent_task": "Run a weekly no-side-effect source sweep and produce a delta report: new source, lane fit, gate class, expected value band, evidence URL, and recommended owner.",
+      "service_workers_required": ["browser_read_only_session", "data_purchase_api_access_gate"],
+      "hard_stops": ["no signup", "no public interaction", "no scraping against terms", "no duplicate lane assignment"]
+    }
+  ],
+  "promotion_order": [
+    "money_source_discovery",
+    "ai_ml_competitions",
+    "digital_products_templates_plugins",
+    "productized_services_marketplaces",
+    "qa_usability_testing_gigs",
+    "ai_training_eval_gigs",
+    "affiliate_partner_programs"
+  ]
+}

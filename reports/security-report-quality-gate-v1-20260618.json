@@ -1,0 +1,42 @@
+{
+  "schema_version": "agent_company.security_report_quality_gate_report.v1",
+  "generated_utc": "2026-06-17T21:54:02Z",
+  "task_id": "task-security-report-quality-gate-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "title": "Security Report Quality Gate v1",
+  "source_summary": [
+    "Immunefi report guidance requires thorough, detailed reports, economic-damage articulation, and complete runnable PoCs.",
+    "Immunefi platform rules prohibit mainnet/public-testnet testing, misrepresenting scope/severity/impact, duplicate submissions, placeholder reports, and incomplete PoCs where required.",
+    "Immunefi severity v2.3 is impact-centered and may downgrade or reject bugs with elevated privileges or uncommon user interaction.",
+    "Optimism program-specific rules, known issues, assets, and out-of-scope rows must be checked before any candidate moves forward."
+  ],
+  "gate_count": 17,
+  "hard_stop_gate_ids": [
+    "srg-002",
+    "srg-003",
+    "srg-004",
+    "srg-005",
+    "srg-015",
+    "srg-016",
+    "srg-017"
+  ],
+  "required_inputs_for_candidate": [
+    "affected_asset",
+    "asset_scope_mapping",
+    "impact_scope_mapping",
+    "known_issue_duplicate_matrix_notes",
+    "local_poc_plan_or_result",
+    "severity_mapping",
+    "economic_damage_estimate",
+    "root_cause",
+    "remediation",
+    "side_effect_audit"
+  ],
+  "blocked_until": [
+    "optimism_local_review_candidate_filter_v1 exists",
+    "candidate-specific report draft passes all required gates",
+    "exact security_report_submission_gate approval exists before any external submission"
+  ],
+  "submission_ready_count": 0,
+  "next_action": "Build optimism_local_review_candidate_filter_v1 from the Optimism asset table, duplicate matrix, and this report-quality gate."
+}

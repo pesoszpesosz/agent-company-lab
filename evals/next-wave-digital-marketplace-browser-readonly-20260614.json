@@ -1,0 +1,10 @@
+{
+  "intake": {
+    "lane_id": "digital_products_templates_plugins",
+    "target_url": "https://gumroad.com/ ; https://www.lemonsqueezy.com/ecommerce/digital-products ; https://promptbase.com/sell",
+    "allowed_read_scope": "Read public marketplace terms, fees, payout, listing, prohibited-content, refund, file-delivery, and seller-requirement pages relevant to the Agent Skill Starter Kit route. Capture URLs, visible requirements, fees to verify, and stop gates into a local artifact only.",
+    "forbidden_actions": "No login, signup, seller onboarding, terms acceptance, listing creation, product upload, payment setup, tax/KYC forms, purchase, public promotion, comments, messages, or browser actions beyond approved public reading.",
+    "evidence_needed": "Markdown capture with source URLs, fee/payout/listing requirements, account/payment/legal gates, IP/content risks, and recommendation: Gumroad vs Lemon Squeezy vs PromptBase for later user decision.",
+    "session_sensitivity": "public_pages_only_no_signed_in_session"
+  }
+}

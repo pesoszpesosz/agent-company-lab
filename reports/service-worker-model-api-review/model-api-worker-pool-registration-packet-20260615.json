@@ -1,0 +1,83 @@
+{
+  "api_calls": false,
+  "approval_granted_by_packet": false,
+  "boundaries": [
+    "requires separate human/CRO approval before any service request assignment",
+    "requires compatible exact approval scope before assignment",
+    "requires execution-readiness verifier before any start",
+    "must write local artifacts and trace evidence for any allowed work",
+    "must stop at credentials, private data, account, public-action, payment, wallet, legal, model/API cost, or unclear scope gates",
+    "no provider/model/API call until provider, model, max cost, data scope, and output artifact path are explicitly approved",
+    "registration alone must not approve the model/API service request",
+    "registration alone must not assign or start any worker",
+    "registration alone must not call provider/model/API endpoints",
+    "registration should be deferred if the human review form remains parked"
+  ],
+  "capabilities": [
+    "provider/model/cost scope check",
+    "input/output artifact boundary check",
+    "cost and trace logging before any API call"
+  ],
+  "current_pool_status": "missing_service_worker_pool",
+  "current_request_status_expected": "needs_review",
+  "decision_authority_granted_by_packet": false,
+  "department_id": "service_worker_observability",
+  "dependency_imports": 0,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-15T13:30:00Z",
+  "manual_registration_effect_if_human_runs_preview": [
+    "Creates a local agent/pool identity for model/API execution review capacity.",
+    "Does not approve req-pydantic-ai-model-backed-adapter-20260614.",
+    "Does not assign req-pydantic-ai-model-backed-adapter-20260614.",
+    "Does not start a worker or call an API."
+  ],
+  "manual_registration_preconditions": [
+    "Human, CEO, and CRO agree the pool should exist as reusable infrastructure, not as approval to execute the pending request.",
+    "The model/API human review form has been reviewed and remains separate from any service-request approval.",
+    "The pool owner, role, department, trace ID, and artifact-writing requirements are understood.",
+    "The operator accepts that any later assignment/start still requires exact approved scope, execution readiness, and cost/data/output checks."
+  ],
+  "packet_id": "packet-model-api-worker-pool-registration-20260615",
+  "pool_registered_by_packet": false,
+  "proof_of_non_execution": {
+    "api_calls": false,
+    "approval_granted_by_packet": false,
+    "chain_integrity_all_checks_passed": true,
+    "decision_authority_granted_by_packet": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "pool_registered_by_packet": false,
+    "service_requests_assigned_by_packet": 0,
+    "service_requests_updated_by_packet": 0,
+    "worker_starts": 0
+  },
+  "recommended_now": "do_not_register_automatically_prepare_for_manual_review",
+  "register_agent_command_preview_argv": [
+    "python",
+    "E:\\agent-company-lab\\tools\\agent_company.py",
+    "register-agent",
+    "--agent-id",
+    "service-worker-model-api-execution-pool",
+    "--role-id",
+    "observability_worker",
+    "--department-id",
+    "service_worker_observability"
+  ],
+  "register_command_requires_manual_review": true,
+  "role_id": "observability_worker",
+  "schema_version": "model_api_worker_pool_registration_packet.v1",
+  "service_requests_assigned_by_packet": 0,
+  "service_requests_updated_by_packet": 0,
+  "source_artifacts": {
+    "chain_integrity_validation": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json",
+    "human_review_form": "E:\\agent-company-lab\\reports\\service-worker-model-api-review\\model-api-gate-human-review-form-20260615.json",
+    "pool_registration_plan": "E:\\agent-company-lab\\reports\\service-worker-pool-registration-plan-latest.json",
+    "pool_registry": "E:\\agent-company-lab\\reports\\service-worker-pool-registry-latest.json"
+  },
+  "source_service_request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+  "worker_pool_id": "service-worker-model-api-execution-pool",
+  "worker_starts": 0,
+  "worker_type": "model_api_execution"
+}

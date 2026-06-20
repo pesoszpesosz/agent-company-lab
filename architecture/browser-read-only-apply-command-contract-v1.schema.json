@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_company.browser_read_only_apply_command_contract.v1",
+  "title": "Agent Company Browser Read-Only Apply Command Contract v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "command_id",
+    "command_type",
+    "source_apply_preflight_blocker_path",
+    "source_guard_validation_path",
+    "source_adapter_contract_validation_path",
+    "expected_source_apply_preflight_status",
+    "real_signed_decision_path",
+    "real_signed_decision_present",
+    "allowed_scope",
+    "target_request_ids",
+    "apply_command_allowed",
+    "apply_allowed",
+    "assignment_allowed",
+    "browser_session_start_allowed",
+    "worker_start_allowed",
+    "rollback_plan",
+    "runtime_boundary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.browser_read_only_apply_command_contract.v1"
+    },
+    "command_id": {
+      "type": "string",
+      "pattern": "^browser-read-only-apply-command-[a-z0-9][a-z0-9-]{4,120}$"
+    },
+    "command_type": {
+      "enum": [
+        "deny_noop",
+        "report_only_apply_command_contract"
+      ]
+    },
+    "source_apply_preflight_blocker_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "source_guard_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "source_adapter_contract_validation_path": {
+      "type": "string",
+      "minLength": 5
+    },
+    "expected_source_apply_preflight_status": {
+      "const": "blocked_no_real_signed_decision"
+    },
+    "real_signed_decision_path": {
+      "type": "string"
+    },
+    "real_signed_decision_present": {
+      "const": false
+    },
+    "allowed_scope": {
+      "enum": [
+        "none",
+        "report_only_apply_command_contract"
+      ]
+    },
+    "target_request_ids": {
+      "type": "array",
+      "maxItems": 0,
+      "items": {
+        "type": "string"
+      }
+    },
+    "apply_command_allowed": {
+      "const": false
+    },
+    "apply_allowed": {
+      "const": false
+    },
+    "assignment_allowed": {
+      "const": false
+    },
+    "browser_session_start_allowed": {
+      "const": false
+    },
+    "worker_start_allowed": {
+      "const": false
+    },
+    "rollback_plan": {
+      "type": "string",
+      "minLength": 20
+    },
+    "runtime_boundary": {
+      "type": "object"
+    }
+  }
+}

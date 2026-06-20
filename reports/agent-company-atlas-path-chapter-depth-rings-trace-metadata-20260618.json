@@ -1,0 +1,81 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-depth-rings-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-depth-rings-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_depth_rings_added-20260618",
+  "created_at": "2026-06-18T06:30:04Z",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Added generated-art Chapter Depth Rings to the selected Path Map chapter dossier so proof, gate, task, trace, visible-record, and hidden-depth signals read as an orbital game HUD.",
+  "design_research": {
+    "queries": [
+      "game UI timeline progression rings history dashboard design inspiration",
+      "game quest log timeline chapter progression UI inspiration",
+      "dashboard visualizing activity history concentric rings UI design"
+    ],
+    "source_urls": [
+      "https://www.nngroup.com/articles/timelines-ux/",
+      "https://dribbble.com/search/game-ui-timeline",
+      "https://dribbble.com/search/radial-dashboard"
+    ],
+    "pattern_notes": [
+      "Timeline and chapter surfaces should communicate sequence and depth before asking users to read every row.",
+      "Radial HUDs can compress multiple status dimensions into a compact glanceable module when labels remain explicit.",
+      "The component must be data-derived and schema-light so future standalone agent-company repos inherit it."
+    ]
+  },
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_07bf423e3822c78e016a338f1d28b4819187a627cdf3eb0ae6.png",
+    "workspace_path": "web/assets/system/path-chapter-depth-rings-20260618.png",
+    "prompt_summary": "Premium dark sci-fi chapter history depth rings HUD backdrop with concentric orbit rings, teal/amber nodes, no text, no logos."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/path-chapter-depth-rings-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_depth_rings.py",
+      "reports/agent-company-atlas-path-chapter-depth-rings-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a path-chapter-depth-rings panel inside the selected chapter record deck.",
+      "Use generated path-chapter-depth-rings-20260618.png as the orbital backdrop.",
+      "Render proof/gate/task/trace path-chapter-depth-ring layers from chapter.counts.",
+      "Render a path-chapter-depth-key with explicit counts and percentages.",
+      "Pass filteredRecords.length and remaining hidden records into renderPathChapterDepthRings.",
+      "Register the generated texture in the Visual Asset Vault system assets."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_depth_rings.py -q failed before implementation on missing path-chapter-depth-rings-20260618.png.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_depth_rings.py -q passed after generated asset, component, styles, docs, cache token, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "depth_rings_contract_tests": "passed",
+      "asset_present_bytes": 2256824,
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-depth-rings-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered Chapter Depth Rings with generated backdrop path-chapter-depth-rings-20260618.png, four data rings, four key cells, Asset Vault registration, active reveal control, zero bad rectangles, zero horizontal overflow, and zero console errors. Clicking Reveal increased visible chapter records from 4 to 8 and reduced hidden depth from 14 to 10 while keeping the panel stable."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "Browser sweep at 390x820, 820x900, 1280x900, and 1600x1000 kept the Depth Rings panel, four rings, four key cells, orbit, generated backdrop, reveal control, zero bad rectangles, zero horizontal overflow, and zero console errors."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "activation_step_count": 9,
+  "pool_count": 7,
+  "closest_pilot_pool": "service-worker-local-runtime-adapter-pool",
+  "recommended_next_build": "local_runtime_adapter_pool_activation_preflight_v1",
+  "runtime_boundary": {
+    "report_only": true,
+    "worker_pools_registered": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "command_previews_executed": 0,
+    "browser_sessions_started": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "gateway_or_mcp_installs": 0,
+    "credentials_created": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "account_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  }
+}

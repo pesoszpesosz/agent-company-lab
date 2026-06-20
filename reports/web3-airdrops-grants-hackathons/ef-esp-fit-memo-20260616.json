@@ -1,0 +1,61 @@
+{
+  "schema_version": "agent_company.web3_airdrops_grants_hackathons.ef_esp_fit_memo.v1",
+  "generated_utc": "2026-06-16T20:44:00Z",
+  "task_id": "task-ef-esp-fit-memo-20260616",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+  "decision": "promote_local_prototype_fit_task_no_application",
+  "source_urls": [
+    "https://esp.ethereum.foundation/",
+    "https://esp.ethereum.foundation/applicants",
+    "https://esp.ethereum.foundation/applicants/wishlist",
+    "https://blog.ethereum.org/2025/11/03/new-esp-grants"
+  ],
+  "fit_ideas": [
+    {
+      "rank": 1,
+      "idea": "agent_company_grant_rfp_radar_for_ethereum_public_goods",
+      "first_local_proof": "source ingestion plus Wishlist/RFP classifier plus no-wallet/no-submission gates",
+      "gate": "esp_application_legal_payment_public_proposal_budget_review"
+    },
+    {
+      "rank": 2,
+      "idea": "open_source_service_worker_approval_templates_for_web3_grants",
+      "first_local_proof": "template set for approval scopes, milestone checklists, evidence bundles",
+      "gate": "public_repo_listing_proposal_gate"
+    },
+    {
+      "rank": 3,
+      "idea": "local_only_smart_contract_audit_contest_prep_harness",
+      "first_local_proof": "read-only checklist and synthetic vulnerable contracts",
+      "gate": "security_legal_public_release_review"
+    },
+    {
+      "rank": 4,
+      "idea": "ethereum_hackathon_grant_calendar_with_eligibility_gates",
+      "first_local_proof": "calendar schema and sample dashboard from public sources",
+      "gate": "public_deployment_proposal_gate"
+    }
+  ],
+  "score": {
+    "strategic_upside": 5,
+    "cash_probability": 2,
+    "time_to_first_local_proof": 4,
+    "gate_burden": 5,
+    "reuse_value": 5
+  },
+  "kill_criterion": "Do not request ESP application approval unless a local classifier maps at least five current Wishlist/RFP items and rejects at least two with clear reasons.",
+  "next_action": "Create ef-esp-wishlist-rfp-classifier-prototype-20260616.md/json.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

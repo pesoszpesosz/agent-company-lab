@@ -1,0 +1,11 @@
+{
+  "span_kind": "internal",
+  "runtime": "local_cli",
+  "api_calls": false,
+  "external_side_effects": false,
+  "total_launched_lanes": 10,
+  "startup_complete": 10,
+  "needs_nudge": [],
+  "needs_completion_check": [],
+  "in_progress": []
+}

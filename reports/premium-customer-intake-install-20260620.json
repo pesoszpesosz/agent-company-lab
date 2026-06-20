@@ -1,0 +1,25 @@
+{
+  "schema_version": "premium_customer_intake_install.v1",
+  "generated_utc": "2026-06-20T17:04:00Z",
+  "status": "installed_locally",
+  "lane_id": "premium_customer_intake",
+  "department": "Customer/Operator Success",
+  "role_id": "premium_customer_intake_agent",
+  "agent_id": "premium-customer-intake-agent-20260620",
+  "contract_path": "E:\\agent-company-lab\\architecture\\premium-customer-intake-router-v1.md",
+  "workspace_path": "E:\\agent-company-lab\\intake\\customer",
+  "operating_rule": "Receive the user's newest input, check current company context, route the input to the correct lane or worker, preserve raw materials outside the CEO context, and update the user with what changed.",
+  "anti_poisoning_rule": "Raw materials do not go into the CEO thread by default; the CEO receives compact capsules and applied-knowledge deltas.",
+  "non_rejection_rule": "Inputs must be routed, synthesized, applied, or parked with a revisit condition unless unsafe, illegal, impossible, spammy, duplicate without new information, or out of scope.",
+  "minimum_inquiry_rule": "Ask no broad inquiries; ask a narrow clarifying question only when routing would otherwise be materially wrong or risky.",
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "wallet_payment_trading_actions": 0,
+    "model_api_mcp_calls": 0,
+    "worker_runtime_queue_starts": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "traceId": "trace-agent-company-atlas-path-depth-pill-v1-20260618",
+  "taskId": "task-agent-company-atlas-path-depth-pill-v1-20260618",
+  "eventId": "trace-atlas_path_depth_pill_added-20260618",
+  "artifactId": "artifact-agent-company-atlas-path-depth-pill-trace-metadata-20260618",
+  "title": "Path Depth Pill",
+  "createdAt": "2026-06-18",
+  "laneId": "platform_engineering",
+  "ownerAgentId": "recovered-profitable-edge-infra",
+  "problem": "The direct Path cockpit was becoming too scroll-heavy because the default Stage Depth selector consumed a full row inside the main game board. The operator needs one-screen stage controls first, with deeper archive and utility panels available only when explicitly opened.",
+  "implementation": [
+    "Converted the default Stage Depth dock into an absolute floating pill when the Path board is in one-screen Stage mode.",
+    "Kept Archive and Tools as full depth modes, so deep panels still expand intentionally after selection.",
+    "Added a subtle scan animation and glass treatment to make the selector feel like a game HUD control rather than another dashboard row.",
+    "Reserved bottom clearance inside the Core Deck so the floating pill does not feel accidental.",
+    "Updated docs, cache tags, and regression coverage."
+  ],
+  "filesChanged": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_depth_pill.py"
+  ],
+  "browserEvidence": {
+    "desktop": {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "boardVisible": true,
+      "dockPosition": "absolute",
+      "dockInsideBoard": true,
+      "corePaddingBottom": "60px",
+      "overflowX": 0,
+      "boardRect": {
+        "x": 35,
+        "y": 173,
+        "width": 1195,
+        "height": 402,
+        "bottom": 575
+      },
+      "dockRect": {
+        "x": 773,
+        "y": 510,
+        "width": 430,
+        "height": 50,
+        "bottom": 560
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boardStartsInViewport": true,
+      "panelBottomWithinViewport": true,
+      "dockPosition": "absolute",
+      "dockInsideBoard": true,
+      "corePaddingBottom": "60px",
+      "overflowX": 0,
+      "boardRect": {
+        "x": 27,
+        "y": 207,
+        "width": 306,
+        "height": 562,
+        "bottom": 769
+      },
+      "dockRect": {
+        "x": 50,
+        "y": 707,
+        "width": 270,
+        "height": 50,
+        "bottom": 758
+      }
+    }
+  },
+  "verification": [
+    {
+      "type": "red-test",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_depth_pill.py -q",
+      "result": "failed before implementation because the default Stage Depth pill selectors did not exist"
+    },
+    {
+      "type": "focused-tests",
+      "command": "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_depth_pill.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_shell.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_split_stage.py -q",
+      "result": "3 passed"
+    },
+    {
+      "type": "syntax",
+      "command": "node --check E:\\agent-company-lab\\web\\app.js",
+      "result": "passed"
+    },
+    {
+      "type": "full-atlas-suite",
+      "command": "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas",
+      "result": "52 passed, 55 deselected"
+    }
+  ],
+  "nextAction": "Continue replacing tall dashboard stacks with compact game HUD layers, then raise animation quality with purpose-built lane motion and richer agent art."
+}

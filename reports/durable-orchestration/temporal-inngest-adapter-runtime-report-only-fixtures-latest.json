@@ -1,0 +1,95 @@
+{
+  "fixtures": [
+    {
+      "accepted": true,
+      "allowed_scope": "local_report_only",
+      "artifact_kind": "report_markdown",
+      "candidate_action": "render a markdown summary of the runtime interface contract",
+      "fixture_id": "allow_contract_summary_markdown",
+      "observed_disposition": "allowed.local_report_only",
+      "rejected": false,
+      "runtime_fixture": false,
+      "runtime_side_effect_fixture": false,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": true,
+      "allowed_scope": "local_report_only",
+      "artifact_kind": "report_json",
+      "candidate_action": "render a JSON matrix of rejected runtime-side-effect candidates",
+      "fixture_id": "allow_negative_fixture_matrix_json",
+      "observed_disposition": "allowed.local_report_only",
+      "rejected": false,
+      "runtime_fixture": false,
+      "runtime_side_effect_fixture": false,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": true,
+      "allowed_scope": "local_report_only",
+      "artifact_kind": "validation_json",
+      "candidate_action": "render a preflight gate snapshot for human review",
+      "fixture_id": "allow_preflight_gate_snapshot",
+      "observed_disposition": "allowed.local_report_only",
+      "rejected": false,
+      "runtime_fixture": false,
+      "runtime_side_effect_fixture": false,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": true,
+      "allowed_scope": "local_report_only",
+      "artifact_kind": "report_markdown",
+      "candidate_action": "render a pointer to the latest chain-integrity validation",
+      "fixture_id": "allow_chain_readiness_pointer",
+      "observed_disposition": "allowed.local_report_only",
+      "rejected": false,
+      "runtime_fixture": false,
+      "runtime_side_effect_fixture": false,
+      "side_effects_performed": false
+    },
+    {
+      "accepted": true,
+      "allowed_scope": "local_report_only",
+      "artifact_kind": "planning_markdown",
+      "candidate_action": "render a todo packet for future explicitly-approved runtime adapter work",
+      "fixture_id": "allow_adapter_todo_packet",
+      "observed_disposition": "allowed.local_report_only",
+      "rejected": false,
+      "runtime_fixture": false,
+      "runtime_side_effect_fixture": false,
+      "side_effects_performed": false
+    }
+  ],
+  "forbidden_runtime_imports": [],
+  "generated_utc": "2026-06-15T16:09:31Z",
+  "lane_id": "platform_engineering",
+  "model_api_pool_registered": false,
+  "model_api_request": {
+    "assigned_agent_id": null,
+    "completed_at": null,
+    "decision_note": null,
+    "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+    "started_at": null,
+    "status": "needs_review"
+  },
+  "next_action": "Create the local report-only adapter scaffolding packet from these allowed fixtures, without importing Temporal/Inngest or starting runtimes.",
+  "preflight_validation_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-implementation-preflight-validation-latest.json",
+  "purpose": "Positive fixtures for the only implementation work currently allowed: local report-only scaffolding.",
+  "report_only_fixture_count": 5,
+  "runtime_boundary": {
+    "api_calls": false,
+    "dependency_imports": 0,
+    "dependency_installs": 0,
+    "external_side_effects": false,
+    "inngest_events_emitted": 0,
+    "inngest_service_started": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "temporal_activities_scheduled": 0,
+    "temporal_server_started": false,
+    "temporal_workflows_started": 0,
+    "worker_starts": 0
+  },
+  "schema_version": "temporal_inngest_adapter_runtime_report_only_fixtures.v1"
+}

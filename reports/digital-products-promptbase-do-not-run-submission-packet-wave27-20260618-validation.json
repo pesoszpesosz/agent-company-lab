@@ -1,0 +1,64 @@
+{
+  "schema_version": "digital_products.promptbase_do_not_run_submission_packet_validation.v1",
+  "generated_utc": "2026-06-18T06:13:28Z",
+  "task_id": "task-digital-products-promptbase-do-not-run-submission-packet-wave27-20260618",
+  "validated_paths": [
+    "E:\\agent-company-lab\\data\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.json",
+    "E:\\agent-company-lab\\reports\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.md"
+  ],
+  "checks": [
+    {
+      "check": "packet_schema_present",
+      "passed": true
+    },
+    {
+      "check": "six_exact_approval_packets_present",
+      "passed": true
+    },
+    {
+      "check": "browser_account_payment_public_gates_named",
+      "passed": true
+    },
+    {
+      "check": "command_free_review_steps_present",
+      "passed": true
+    },
+    {
+      "check": "blocker_map_covers_all_approval_packets",
+      "passed": true
+    },
+    {
+      "check": "boundary_has_zero_external_side_effects",
+      "passed": true
+    },
+    {
+      "check": "manifest_file_count_matches_product",
+      "passed": true
+    },
+    {
+      "check": "submission_inventory_marked_non_final",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "failure_count": 0,
+  "boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_performed": 0,
+    "terms_accepted": 0,
+    "payment_or_payout_actions": 0,
+    "kyc_tax_actions": 0,
+    "zip_created": false,
+    "public_uploads": 0,
+    "marketplace_drafts_created": 0,
+    "marketplace_submissions": 0,
+    "public_promotions": 0,
+    "service_requests_mutated": 0,
+    "workers_started": 0,
+    "runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_or_mcp_calls": 0,
+    "external_side_effects": 0
+  }
+}

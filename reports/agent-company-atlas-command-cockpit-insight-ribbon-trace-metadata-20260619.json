@@ -1,0 +1,35 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-insight-ribbon-v1-20260619",
+  "title": "Command Cockpit Insight Ribbon",
+  "created_at": "2026-06-19T20:20:20Z",
+  "kind": "ui_unlock",
+  "summary": "Focused Quest nodes now project compact milestone, blocker, bot, proof, and next-move signals inside the existing cockpit board.",
+  "surface": "web",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/assets/system/command-cockpit-insight-ribbon-20260619.png",
+    "web/README.md",
+    "tools/visual_dashboard_recent_unlocks.py"
+  ],
+  "data_contract": {
+    "inputs": [
+      "snapshot.lanes",
+      "snapshot.agents",
+      "lane.trail",
+      "lane.gateMap",
+      "lane.serviceRequests",
+      "lane.counts"
+    ],
+    "outputs": [
+      "questInsightRibbonSignals",
+      "renderQuestInsightRibbon",
+      "system-command-cockpit-insight-ribbon"
+    ]
+  },
+  "verification": {
+    "intent": "Make clicked path nodes feel deeper without adding another vertical report section.",
+    "accessibility": "The ribbon is labelled from the focused Quest node and remains inside the existing Quest level map.",
+    "motion": "The ribbon sweep is transform-only and covered by the global reduced-motion rule."
+  }
+}

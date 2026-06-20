@@ -1,0 +1,294 @@
+{
+  "acceptance_checks": [
+    "At least six public/current or local sources are recorded.",
+    "Packet distinguishes cash BBP rows from VDP-only disclosure rows.",
+    "At least twenty program fields are defined.",
+    "At least five route stages are defined.",
+    "At least eight hard kill reasons are defined.",
+    "At least one local-only route stage is allowed and no live testing stage is allowed.",
+    "Boundary proves no HackerOne account, browser session, contact, test, report, payment, public action, worker/runtime, model/MCP call, or external side effect occurred."
+  ],
+  "boundary": {
+    "browser_sessions_started": 0,
+    "credentials_or_private_assets_used": 0,
+    "directory_edits_or_feedback": 0,
+    "external_side_effects": 0,
+    "hackerone_account_or_login": false,
+    "hactivity_votes_or_follows": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "payments_or_tax_forms": 0,
+    "programs_bookmarked_or_followed": 0,
+    "programs_contacted": 0,
+    "public_comments_or_disclosures": 0,
+    "reports_submitted": 0,
+    "security_testing_performed": 0,
+    "service_requests_mutated": 0,
+    "targets_tested": 0,
+    "workers_or_runtimes_started": 0
+  },
+  "cash_route_disambiguation": "HackerOne discovery mixes cash BBP opportunities, VDP-only disclosure routes, pentest engagements, and private/invite-only work. This lane is cash-first: VDP-only rows are useful for practice, disclosure process learning, or reputation, but they must not be promoted as bounty-cash candidates unless the specific program or asset exposes bounty eligibility.",
+  "decision": "rules_readiness_only_no_account_no_testing_no_submission_no_payment_no_public_action",
+  "generated_at": "2026-06-18T07:15:32Z",
+  "hard_kill_reasons": [
+    "vdp_only_or_no_cash_bounty_for_cash_lane",
+    "program_or_asset_not_accepting_submissions",
+    "scope_or_bounty_eligibility_unclear",
+    "safe_harbor_or_authorization_unclear",
+    "requires_active_testing_without_explicit_approval",
+    "requires_login_credentials_pii_social_engineering_dos_spam_or_phishing",
+    "requires_touching_sensitive_or_production_only_data_without_safe_test_path",
+    "duplicate_or_publicly_known_issue_likely",
+    "payment_tax_identity_country_or_sanctions_eligibility_unclear",
+    "private_program_invite_nda_or_clear_membership_required",
+    "report_route_not_private_or_not_on_approved_platform",
+    "local_static_or_fixture_proof_cannot_be_produced"
+  ],
+  "lane_id": "security_bounty_private_reports",
+  "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+  "program_fields": [
+    "program_url",
+    "observed_utc",
+    "program_name",
+    "program_type",
+    "program_status",
+    "bounty_available",
+    "minimum_bounty",
+    "maximum_bounty",
+    "average_bounty",
+    "managed_by_hackerone",
+    "response_standards",
+    "asset_types",
+    "scope_assets",
+    "out_of_scope_assets",
+    "asset_eligibility_for_submission",
+    "asset_eligibility_for_bounty",
+    "safe_harbor_present",
+    "safe_harbor_variant",
+    "program_policy_url",
+    "testing_permissions",
+    "forbidden_testing",
+    "rate_limits",
+    "credential_policy",
+    "privacy_data_policy",
+    "disclosure_policy",
+    "duplicate_policy",
+    "minimum_severity",
+    "report_template_fields",
+    "proof_of_concept_expectations",
+    "payment_tax_identity_requirements",
+    "country_or_sanctions_eligibility",
+    "public_activity_signal",
+    "hactivity_duplicate_signal",
+    "local_candidate_source",
+    "score",
+    "kill_reasons",
+    "next_local_action"
+  ],
+  "recommended_next_local_proof": "Create a no-login HackerOne public program fixture from manually saved program directory, Opportunity Discovery, and program-policy snippets; run the scorer; emit only static/public-code-review candidate drafts. Keep account, browser login, target testing, report submission, payment/tax forms, public disclosure, worker/runtime, and model/MCP calls blocked.",
+  "route_stages": [
+    {
+      "allowed_now": true,
+      "description": "Capture public program/opportunity/directory card text into a local fixture.",
+      "gate": "local_or_approved_read_only_browser",
+      "stage": "public_discovery_fixture"
+    },
+    {
+      "allowed_now": true,
+      "description": "Extract program type, bounty eligibility, scope, safe harbor, exclusions, response standards, disclosure, and payout gates.",
+      "gate": "public_read_only_no_login_no_testing",
+      "stage": "program_rules_extraction"
+    },
+    {
+      "allowed_now": true,
+      "description": "For source-code or OSS-like assets only, prepare local/static hypotheses without touching live targets.",
+      "gate": "local_source_review_only",
+      "stage": "local_static_candidate_prep"
+    },
+    {
+      "allowed_now": false,
+      "description": "Use public disclosed report patterns only to reject duplicates and improve report structure.",
+      "gate": "public_read_only_no_upvote_no_follow_no_comment",
+      "stage": "hacktivity_duplicate_review"
+    },
+    {
+      "allowed_now": false,
+      "description": "Any live target probing, credential use, scanner, API call, rate-limit interaction, exploit check, or account workflow.",
+      "gate": "explicit_security_testing_approval_required",
+      "stage": "security_testing_gate"
+    },
+    {
+      "allowed_now": true,
+      "description": "Write a report draft with title, scope proof, impact, local reproduction, caveats, and screenshots/logs if locally generated.",
+      "gate": "local_draft_only",
+      "stage": "private_report_draft"
+    },
+    {
+      "allowed_now": false,
+      "description": "Submit report, set payout/tax preferences, request disclosure, contact program, or publish anything.",
+      "gate": "explicit_operator_approval_required",
+      "stage": "submission_payment_public_disclosure_gate"
+    }
+  ],
+  "schema_version": "hackerone_rules_route_readiness_local_proof.v1",
+  "scoring_rubric": [
+    {
+      "factor": "cash_bounty_clarity",
+      "good": "specific program and asset expose bounty eligibility and min/max reward",
+      "points": 20
+    },
+    {
+      "factor": "scope_clarity",
+      "good": "in-scope and out-of-scope assets are explicit and narrow",
+      "points": 15
+    },
+    {
+      "factor": "safe_harbor_clarity",
+      "good": "program includes clear safe harbor for good-faith work",
+      "points": 15
+    },
+    {
+      "factor": "local_static_proofability",
+      "good": "issue can be researched from public source or local fixtures without live testing",
+      "points": 15
+    },
+    {
+      "factor": "low_harm_profile",
+      "good": "no need for credentials, PII, production mutation, scanning, or sensitive data",
+      "points": 10
+    },
+    {
+      "factor": "duplicate_risk",
+      "good": "Hacktivity/public reports do not show the same weakness path",
+      "points": 10
+    },
+    {
+      "factor": "payout_tax_route_clarity",
+      "good": "eligibility and payout/tax gates are known before submission",
+      "points": 5
+    },
+    {
+      "factor": "report_effort_fit",
+      "good": "proof can be written with clear reproduction, impact, and remediation within one focused sprint",
+      "points": 10
+    }
+  ],
+  "sources": [
+    {
+      "observations": [
+        "HackerOne describes H1 Bounty as continuous researcher-led testing by a global community.",
+        "The page says programs expose bounty tables, disclosure guidelines, safe harbor statements, payments, researcher controls, report lifecycle management, triage, and response data.",
+        "This supports a rules-first cash route, but not direct target testing without a specific program policy and explicit operator approval."
+      ],
+      "type": "official_bbp_product_page",
+      "url": "https://www.hackerone.com/product/bug-bounty-platform"
+    },
+    {
+      "observations": [
+        "The hacker page separates bug bounty programs, HackerOne Clear, pentest engagements, and Vulnerability Disclosure Programs.",
+        "It states that researchers can use VDPs to submit vulnerabilities to organizations that welcome reports and commit to safe harbor.",
+        "It also says bounty payment identity may be required, so payment and tax handling remain gated."
+      ],
+      "type": "official_hacker_page",
+      "url": "https://www.hackerone.com/hackers"
+    },
+    {
+      "observations": [
+        "Guidelines tell finders to respect program rules, privacy, patience, and do no harm.",
+        "They say each program publishes a policy for the specific service or product and that the program policy supersedes general guidelines when conflicts exist.",
+        "Submission guidance requires detailed vulnerability descriptions, reproducible steps, and proof-of-concept detail.",
+        "Bounty payments are discretionary, subject to eligibility restrictions, paid in USD, and tax consequences remain the researcher's responsibility."
+      ],
+      "type": "official_disclosure_guidelines",
+      "url": "https://www.hackerone.com/terms/disclosure-guidelines"
+    },
+    {
+      "observations": [
+        "HackerOne says safe harbor is a clear statement that good-faith security research is authorized and protected from organization legal action.",
+        "The January 2026 article says scope definitions remain based on explicitly included assets, even when safe harbor is enabled.",
+        "It recommends clarification before borderline conduct and says bad-faith conduct is not covered."
+      ],
+      "type": "official_safe_harbor_docs",
+      "url": "https://docs.hackerone.com/en/articles/8494502-safe-harbor-overview-faq"
+    },
+    {
+      "observations": [
+        "HackerOne scope assets have types, identifiers, eligibility for submission, eligibility for bounty, environmental scoring, labels, and instructions.",
+        "Assets can be ineligible for submission or bounty, and HackerOne exposes warnings when a selected asset is not paid or reportable.",
+        "This makes asset-level scope and bounty eligibility required fields before any cash-route work."
+      ],
+      "type": "official_scope_docs",
+      "url": "https://docs.hackerone.com/en/articles/8494552-defining-scope"
+    },
+    {
+      "observations": [
+        "Opportunity Discovery centralizes bounty programs, VDPs, pentests, and future earning openings.",
+        "Program cards include program features, asset types, minimum and maximum bounty, response standards, and status tags.",
+        "Filtering by program type, asset type, industry, and sort order is a read-only discovery route, but live page interaction is still gated in this lab."
+      ],
+      "type": "official_opportunity_discovery_docs",
+      "url": "https://docs.hackerone.com/en/articles/8369900-opportunity-discovery"
+    },
+    {
+      "observations": [
+        "The Directory documents organization security contacts, disclosure policies, and associated bug bounty programs.",
+        "It exposes program data such as launch date, reports resolved, minimum and average bounty, managed labels, active-program labels, and bounty availability filters.",
+        "Directory pages can include organizations that do not use HackerOne, so report route and bounty eligibility must be verified per program."
+      ],
+      "type": "official_directory_docs",
+      "url": "https://docs.hackerone.com/en/articles/8410373-directory"
+    },
+    {
+      "observations": [
+        "Hacktivity is a learning signal showing community activity, disclosed reports, and bounty-awarded activity.",
+        "Disclosed reports can inform duplicate-risk and report-quality checks, but they are not permission to test a target."
+      ],
+      "type": "official_hacktivity_docs",
+      "url": "https://docs.hackerone.com/en/articles/8410358-hacktivity"
+    },
+    {
+      "observations": [
+        "Submitting a report requires using a program security page, selecting asset and weakness fields, writing proof of concept, impact, and reproduction steps, then submitting.",
+        "The final submit action cannot be undone for report details and therefore remains blocked without exact approval."
+      ],
+      "type": "official_submission_docs",
+      "url": "https://docs.hackerone.com/en/articles/8473994-submitting-reports"
+    },
+    {
+      "observations": [
+        "High-quality reports should outline the bug, reproduce it, assess coverage, and include relevant logs or supporting material.",
+        "Before submitting, researchers should verify that the issue is in scope and not already reported.",
+        "Report quality requirements favor local/static proof preparation before any platform submission."
+      ],
+      "type": "official_report_quality_docs",
+      "url": "https://docs.hackerone.com/en/articles/8475116-quality-reports"
+    },
+    {
+      "observations": [
+        "Payment FAQ mentions PayPal, Coinbase, and Currencycloud as payout providers.",
+        "Payments can take time after award and require a valid tax form and selected payout method.",
+        "Payment preferences, tax forms, identity, and payout setup remain human-gated."
+      ],
+      "type": "official_payment_docs",
+      "url": "https://docs.hackerone.com/en/articles/8399426-payment-faqs"
+    },
+    {
+      "observations": [
+        "The prior local security scan ranked rules-first bounty discovery as high upside but required a rules-first gate before any target work.",
+        "It favored static source review and exact scope review over active testing."
+      ],
+      "type": "local_prior_security_scan",
+      "url": "E:\\profit-edge-lab\\reports\\security-bounty-source-scan-latest.md"
+    },
+    {
+      "observations": [
+        "The IssueHunt scan demonstrates the same pattern: public program rows can be scored, but account setup, testing, and reporting require approval.",
+        "It supplies a reusable rules-first scoring discipline for the HackerOne lane."
+      ],
+      "type": "local_prior_alternative_scan",
+      "url": "E:\\profit-edge-lab\\reports\\issuehunt-security-program-scan-latest.md"
+    }
+  ],
+  "status": "hackerone_rules_route_readiness_ready_local_only",
+  "summary": "HackerOne is a viable security-bounty research lane only after each candidate program is classified by program type, bounty eligibility, scope, safe harbor, exclusions, duplicate risk, report route, and payment gates. This packet builds the local rules-readiness worksheet and scorer inputs; it does not create an account, open a browser session, test any target, submit a report, contact a program, configure payouts, or disclose anything.",
+  "task_id": "task-lane-scout-hackerone_program_rules-20260618"
+}

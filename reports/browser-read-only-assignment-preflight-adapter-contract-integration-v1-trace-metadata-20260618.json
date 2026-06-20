@@ -1,0 +1,17 @@
+{
+  "adapter_contract_gate": "present_valid_start_blocked",
+  "adapter_contract_validation_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
+  "api_calls": false,
+  "assignment_allowed_count": 0,
+  "assignment_preflight_validation_path": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json",
+  "browser_actions": false,
+  "candidate_request_count": 7,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-17T22:29:32Z",
+  "lane_id": "platform_engineering",
+  "runtime": "codex_local_tdd_report_only",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "span_kind": "internal",
+  "task_id": "task-browser-read-only-assignment-preflight-adapter-contract-integration-v1-20260618",
+  "trace_id": "trace-browser-read-only-assignment-preflight-adapter-contract-integration-v1-20260618"
+}

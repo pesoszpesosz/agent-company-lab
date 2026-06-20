@@ -1,0 +1,66 @@
+{
+  "trace_id": "trace-agent-company-atlas-path-chapter-questline-art-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-chapter-questline-art-v1-20260618",
+  "event_id": "trace-atlas_path_chapter_questline_art_added-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_detail_path_map",
+  "summary": "Generated and wired a bitmap Chapter Questline HUD texture so the selected Path Map chapter run-map has a premium six-beacon game-art backdrop and a Visual Asset Vault entry.",
+  "generation": {
+    "mode": "built_in_image_gen",
+    "source_image": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0c045704975d7e9e016a33616568bc81918d1fb59635b26e7d.png",
+    "project_image": "web/assets/system/path-chapter-questline-20260618.png",
+    "prompt": "Premium sci-fi game interface texture for a chapter questline run map: six abstract stage beacons connected by luminous route rails, including spawn, proof, gate, task, unlock, and next-move moods; dark glass control-panel surface, faint grid lines, holographic route, black anodized metal, teal/green unlocked nodes, one red gate, amber next-action beacon, no readable text, no logos, no characters, no watermark."
+  },
+  "implementation": {
+    "files": [
+      "web/assets/system/path-chapter-questline-20260618.png",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_path_chapter_questline.py",
+      "reports/agent-company-atlas-path-chapter-questline-art-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Use path-chapter-questline-20260618.png as the Chapter Questline art layer through --questline-art.",
+      "Keep stage cards readable by layering the image under dark gradients and existing stage controls.",
+      "Register system-path-chapter-questline in the Visual Asset Vault.",
+      "Document the asset as a reusable standalone repo system texture.",
+      "Preserve local-only Questline interactions and Event Proof focus behavior."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_path_chapter_questline.py -q failed before asset integration because web/assets/system/path-chapter-questline-20260618.png did not exist.",
+      "green": "pytest tests\\test_agent_company_atlas_path_chapter_questline.py -q passed after generating the image and wiring app/styles/docs/registry references."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "chapter_contract_tests": "passed",
+      "image_asset_size_bytes": 1824105,
+      "browser_visual_qa": "passed",
+      "console_errors": 0
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=path-chapter-questline-art-green#lane=digital_products_templates_plugins&view=path",
+      "evidence": "Rendered one Chapter Questline with the computed background image containing path-chapter-questline-20260618.png, six stages, four clickable source stages, no horizontal overflow, and zero console errors."
+    },
+    "asset_vault": {
+      "status": "passed",
+      "evidence": "The Visual Asset Vault rendered the system-path-chapter-questline card with quest badge, Chapter run-map HUD texture subtitle, and the generated image reference."
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All tested viewports kept the Questline texture in computed styles, rendered six stages and four clickable source stages, and showed no horizontal overflow, bad rectangles, clipped stage text, or console errors."
+    }
+  }
+}

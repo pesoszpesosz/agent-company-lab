@@ -1,0 +1,111 @@
+{
+  "accepted_dry_run_preview_count": 1,
+  "approval_request_count": 0,
+  "evidence_rows_inserted_or_updated": 1,
+  "expected_preview_match_count": 1,
+  "expected_rejection_match_count": 6,
+  "fixture_suite_count": 7,
+  "generated_utc": "2026-06-15T23:44:49Z",
+  "lane_evidence_rows_after": 108,
+  "lane_evidence_rows_before": 107,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "ceo_decision_parser_report_only_runner_passed_no_mutations",
+  "negative_fixture_count": 6,
+  "next_action": "Keep this parser runner report-only; next add a mutation-preflight packet that states the exact operator approval required before any service request update can be applied.",
+  "parser_execution_count": 7,
+  "parser_results": [
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_missing_packet_id",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_missing_packet_id",
+      "fixture_id": "missing-packet-id",
+      "fixture_type": "negative",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_unknown_option",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unknown_option",
+      "fixture_id": "unknown-option",
+      "fixture_type": "negative",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_unbounded_scope",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_unbounded_scope",
+      "fixture_id": "unbounded-scope",
+      "fixture_type": "negative",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_forbidden_action_conflict",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_forbidden_action_conflict",
+      "fixture_id": "forbidden-action-conflict",
+      "fixture_type": "negative",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_no_expiration_or_review",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_no_expiration_or_review",
+      "fixture_id": "no-expiration",
+      "fixture_type": "negative",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": false,
+      "actual_rule_id": "reject_implicit_or_contextual_approval",
+      "expected_accepted": false,
+      "expected_rule_id": "reject_implicit_or_contextual_approval",
+      "fixture_id": "implicit-contextual-approval",
+      "fixture_type": "negative",
+      "matched_expected": true
+    },
+    {
+      "actual_accepted": true,
+      "actual_preview_state": "would_create_bounded_service_request_update",
+      "expected_accepted": true,
+      "expected_preview_state": "would_create_bounded_service_request_update",
+      "fixture_id": "valid-digital-products-readonly-browser-preview",
+      "fixture_type": "positive",
+      "matched_expected": true
+    }
+  ],
+  "positive_fixture_count": 1,
+  "queue_mutation_count": 0,
+  "recommended_default": "keep_parser_report_only_until_operator_approves_mutations",
+  "rejected_decision_count": 6,
+  "runner_evidence_id": "ceo-decision-parser-report-only-runner-20260616",
+  "runner_lane_id": "platform_engineering",
+  "runner_task_id": "task-ceo-decision-parser-report-only-runner-20260616",
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.ceo_decision_parser_report_only_runner.v1",
+  "source_harness_evidence_id": "ceo-decision-parser-report-only-harness-20260616",
+  "source_harness_task_id": "task-ceo-decision-parser-report-only-harness-20260616",
+  "source_harness_validation_path": "E:\\agent-company-lab\\reports\\ceo-decision-parser-report-only-harness-validation-latest.json",
+  "summary": "Ran a local report-only CEO decision parser against six negative fixtures and one positive dry-run fixture. The parser matched all expected outcomes and produced no queue mutation or external side effect.",
+  "task_rows_inserted_by_runner": 1,
+  "tasks_table_rows_after": 200,
+  "tasks_table_rows_before": 199
+}

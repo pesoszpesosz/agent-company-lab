@@ -1,0 +1,14 @@
+{
+  "api_calls": false,
+  "counts_by_readiness": {
+    "not_started_or_not_recorded": 1,
+    "startup_complete": 6
+  },
+  "needs_completion_check": [],
+  "needs_nudge": [
+    "prediction_market_research"
+  ],
+  "runtime": "local_sqlite_filesystem_monitor",
+  "span_kind": "EVALUATOR",
+  "total_lanes": 7
+}

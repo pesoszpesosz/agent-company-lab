@@ -1,0 +1,239 @@
+{
+  "approval_gate_count": 6,
+  "approval_gates": [
+    "registration_or_login",
+    "wallet_or_payment_method",
+    "real_money_trade_or_spend",
+    "public_submission_or_marketplace_post",
+    "security_testing_beyond_read_only",
+    "personal_data_or_sensitive_browser_submission"
+  ],
+  "architecture_mapping_count": 7,
+  "architecture_mappings": [
+    {
+      "layer": "CEO",
+      "recommended_stack": [
+        "Temporal",
+        "LangGraph"
+      ],
+      "responsibility": "Portfolio state, policy, priorities, approvals, kill/promote decisions."
+    },
+    {
+      "layer": "Managers",
+      "recommended_stack": [
+        "LangGraph",
+        "CrewAI"
+      ],
+      "responsibility": "Lane plans, task decomposition, evidence quality, worker handoffs."
+    },
+    {
+      "layer": "Seekers",
+      "recommended_stack": [
+        "OpenAI Agents SDK",
+        "LangGraph"
+      ],
+      "responsibility": "Research money paths, normalize leads, write proof packets."
+    },
+    {
+      "layer": "Workers",
+      "recommended_stack": [
+        "Temporal",
+        "OpenAI Agents SDK"
+      ],
+      "responsibility": "Execute approved local tasks, draft artifacts, run scanners, maintain state."
+    },
+    {
+      "layer": "Action gates",
+      "recommended_stack": [
+        "Temporal",
+        "OpenAI Agents SDK guardrails"
+      ],
+      "responsibility": "Pause registration, wallets, payments, public submissions, real-money, and security testing."
+    },
+    {
+      "layer": "Evidence ledger",
+      "recommended_stack": [
+        "SQLite now",
+        "Temporal history later"
+      ],
+      "responsibility": "Durable records for sources, reports, decisions, and next actions."
+    },
+    {
+      "layer": "Observability",
+      "recommended_stack": [
+        "OpenAI tracing",
+        "LangSmith-style traces",
+        "local reports"
+      ],
+      "responsibility": "Trace handoffs, tool calls, decisions, failures, and ROI outcomes."
+    }
+  ],
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "candidate_id": "temporal_durable_spine",
+      "fit": "durable_orchestration_spine",
+      "recommended_role": "system_of_record_for_workflow_state",
+      "risk": "Needs careful deterministic workflow design and activity boundaries for model calls and external actions.",
+      "source_id": "temporal_docs",
+      "why": "The agent company needs long-lived service requests, paused approvals, retries, and replayable state."
+    },
+    {
+      "candidate_id": "langgraph_stateful_manager_layer",
+      "fit": "stateful_agent_graphs",
+      "recommended_role": "ceo_manager_seeker_graphs",
+      "risk": "Should not be the only durable system of record until persistence/replay boundaries are explicit.",
+      "source_id": "langgraph_github",
+      "why": "Maps naturally to long-running stateful agents, subgraphs, human-in-the-loop checkpoints, and memory."
+    },
+    {
+      "candidate_id": "openai_agents_sdk_guarded_tool_layer",
+      "fit": "guarded_tool_agents",
+      "recommended_role": "tool_calling_handoffs_guardrails_tracing",
+      "risk": "Model/API cost and external side effects need explicit budget and action gates.",
+      "source_id": "openai_agents_sdk_docs",
+      "why": "Directly matches the need for specialized agents, handoffs, tool schemas, guardrails, tracing, and sandboxing."
+    },
+    {
+      "candidate_id": "crewai_department_pattern",
+      "fit": "role_based_department_design",
+      "recommended_role": "department_templates_and_task_delegation",
+      "risk": "Must separate autonomous brainstorming from approval-gated execution.",
+      "source_id": "crewai_github",
+      "why": "Crews and Flows provide a clean vocabulary for role-based work and event-driven process control."
+    },
+    {
+      "candidate_id": "autogen_agent_protocol_reference",
+      "fit": "agent_to_agent_runtime_patterns",
+      "recommended_role": "message_passing_and_group_coordination_reference",
+      "risk": "Framework migration churn and overlapping abstractions require a narrow adoption surface.",
+      "source_id": "autogen_github",
+      "why": "Event-driven agents and distributed runtime concepts are useful for multi-chat, multi-worker coordination."
+    }
+  ],
+  "cashflow_lane_mapping_count": 8,
+  "cashflow_lane_mappings": [
+    {
+      "agent_type": "seeker+patch_worker",
+      "gate": "public_submission_or_pr_requires_operator_approval",
+      "lane": "paid_code_bounties"
+    },
+    {
+      "agent_type": "scope_researcher+report_drafter",
+      "gate": "security_testing_beyond_read_only_requires_scope_approval",
+      "lane": "security_bounties"
+    },
+    {
+      "agent_type": "market_scout+paper_trade_auditor",
+      "gate": "real_money_trading_requires_capital_and_operator_approval",
+      "lane": "prediction_markets"
+    },
+    {
+      "agent_type": "demand_researcher+asset_builder",
+      "gate": "marketplace_posting_or_account_action_requires_operator_approval",
+      "lane": "digital_products"
+    },
+    {
+      "agent_type": "source_scout+compliance_reviewer",
+      "gate": "signup_or outreach requires account and policy approval",
+      "lane": "affiliate_leads"
+    },
+    {
+      "agent_type": "dataset_scout+license_reviewer",
+      "gate": "paid data access or scraping needs legal review",
+      "lane": "data_arbitrage"
+    },
+    {
+      "agent_type": "client_researcher+proposal_drafter",
+      "gate": "client contact or offer submission requires approval",
+      "lane": "automation_services"
+    },
+    {
+      "agent_type": "repo_scout+maintainer",
+      "gate": "publishing packages, releases, or pricing requires approval",
+      "lane": "open_source_products"
+    }
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T10:59:47Z",
+  "infrastructure_radar_count": 1,
+  "lane_evidence_rows_after": 134,
+  "lane_evidence_rows_before": 133,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_infrastructure_radar_ready_for_department_design",
+  "next_action": "Turn this radar into a department architecture packet with concrete tables, service request types, thread templates, and worker pool interfaces.",
+  "primary_source_count": 5,
+  "primary_sources": [
+    {
+      "agent_company_takeaway": "Use for stateful CEO/manager graphs, subagent planning, human review pauses, and auditable long-running investigations.",
+      "name": "LangGraph",
+      "observed_fact": "Low-level orchestration framework for long-running, stateful agents with durable execution, human-in-the-loop, memory, tracing, and deployment support.",
+      "source_id": "langgraph_github",
+      "source_type": "official_github",
+      "url": "https://github.com/langchain-ai/langgraph"
+    },
+    {
+      "agent_company_takeaway": "Use as the clearest role/team metaphor for departments, managers, seekers, task delegation, and work package templates.",
+      "name": "CrewAI",
+      "observed_fact": "Crews model role-based autonomous collaboration; Flows provide production-ready event-driven workflows, secure state management, and conditional branching.",
+      "source_id": "crewai_github",
+      "source_type": "official_github",
+      "url": "https://github.com/crewAIInc/crewAI"
+    },
+    {
+      "agent_company_takeaway": "Use as a reference for agent-to-agent protocols, group chat coordination, and distributed runtime boundaries.",
+      "name": "Microsoft AutoGen",
+      "observed_fact": "Core API implements message passing, event-driven agents, and local/distributed runtime; AgentChat supports common multi-agent patterns.",
+      "source_id": "autogen_github",
+      "source_type": "official_github",
+      "url": "https://github.com/microsoft/autogen"
+    },
+    {
+      "agent_company_takeaway": "Use as the model for durable request lifecycles, retries, suspended work, replayable audit, and worker pools.",
+      "name": "Temporal",
+      "observed_fact": "Temporal is a scalable runtime for durable executions; workflows preserve state through failures, workers execute code, and event history is source of truth.",
+      "source_id": "temporal_docs",
+      "source_type": "official_docs",
+      "url": "https://docs.temporal.io/temporal"
+    },
+    {
+      "agent_company_takeaway": "Use for local role agents, callable tools, handoffs, guardrails, traceability, and sandboxed execution boundaries.",
+      "name": "OpenAI Agents SDK",
+      "observed_fact": "Agents SDK is intended for code-first orchestration of agents, tools, handoffs, guardrails, tracing, and sandbox execution.",
+      "source_id": "openai_agents_sdk_docs",
+      "source_type": "official_docs",
+      "url": "https://developers.openai.com/api/docs/libraries#use-the-agents-sdk"
+    }
+  ],
+  "radar_evidence_id": "agent-company-infrastructure-radar-20260616",
+  "radar_lane_id": "platform_engineering",
+  "radar_task_id": "task-agent-company-infrastructure-radar-20260616",
+  "recommended_default": "use_temporal_or_durable_queue_for_workflow_state_and_agent_frameworks_for_role_level_reasoning",
+  "recommended_spine": [
+    "Temporal-style durable service request lifecycle for every path and worker action.",
+    "LangGraph-style stateful CEO/manager/seeker graphs for planning and review.",
+    "OpenAI Agents SDK-style guarded tools, handoffs, tracing, and sandbox execution.",
+    "CrewAI-style department templates for role definitions and repeatable task packets."
+  ],
+  "recommended_spine_count": 4,
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.infrastructure_radar.v1",
+  "summary": "Created a primary-source-backed infrastructure radar for the agent company: durable orchestration spine, stateful manager graphs, guarded tool agents, department templates, and approval gates.",
+  "task_rows_inserted_by_radar": 1,
+  "tasks_table_rows_after": 226,
+  "tasks_table_rows_before": 225
+}

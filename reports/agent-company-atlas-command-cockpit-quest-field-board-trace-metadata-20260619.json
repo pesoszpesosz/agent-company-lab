@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-quest-field-board-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-quest-field-board-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-quest-field-board-v1-20260619",
+  "title": "Command Cockpit Quest Field Board",
+  "createdAt": "2026-06-19T13:36:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Turned the Command Cockpit Overview current-run module into a more game-like quest field with route cells for world, level, checkpoint, gate, and next move.",
+  "proof": [
+    "Added questFieldCells and renderQuestFieldCell so the existing quest data renders as a visual route board.",
+    "Placed the quest field in the Command Cockpit Overview command row and hid the taller next/gate report cards there.",
+    "Added route runner, sweep, and cell wake animations while keeping the mobile version compact and horizontally contained."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-quest-field-board-trace-metadata-20260619.json"
+  ]
+}

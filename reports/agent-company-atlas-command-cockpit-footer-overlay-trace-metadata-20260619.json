@@ -1,0 +1,26 @@
+{
+  "trace_meta_id": "trace-agent-company-atlas-command-cockpit-footer-overlay-v1-20260619",
+  "task_id": "task-agent-company-atlas-command-cockpit-footer-overlay-v1-20260619",
+  "trace_id": "trace-atlas_command_cockpit_footer_overlay_added-20260619",
+  "title": "Command Cockpit Footer Overlay",
+  "timestamp": "2026-06-19T17:49:28Z",
+  "status": "completed",
+  "lane": "platform_engineering",
+  "category": "visual_dashboard",
+  "summary": "Converted the mounted-stage footer rail into a compact overlay so the cockpit Overview keeps status visible without adding another scroll row.",
+  "changes": [
+    "Changed the Command Cockpit Overview footer rail from sticky content to an absolute glass HUD overlay.",
+    "Added mounted-stage bottom padding so the overlay stays readable without pushing the page taller.",
+    "Compressed footer status cells into compact two-column readouts.",
+    "Reduced mobile footer height and spacing while keeping status labels readable.",
+    "Recorded the footer-overlay pass as the latest platform UI unlock in generated snapshot history."
+  ],
+  "artifacts": [
+    "web/styles.css",
+    "web/README.md",
+    "web/index.html",
+    "web/data/snapshot.json",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

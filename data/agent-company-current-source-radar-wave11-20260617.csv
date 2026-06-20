@@ -1,0 +1,12 @@
+category,full_name,stars,pushed_at,agent_company_fit_score,local_decision,risk_gate,html_url,official_url
+workflow_automation,n8n-io/n8n,192938,2026-06-17T17:59:25Z,11,reference_for_service_worker_workflow_ui,report_only_no_credentials_no_workflow_execution,https://github.com/n8n-io/n8n,https://n8n.io/
+agent_app_builder,langflow-ai/langflow,149790,2026-06-17T18:02:48Z,11,reference_for_visual_flow_patterns,report_only_no_flow_execution_no_api_keys,https://github.com/langflow-ai/langflow,https://www.langflow.org/
+agent_app_builder,langgenius/dify,145619,2026-06-17T17:49:19Z,11,reference_for_product_studio_and_app_builder,report_only_no_container_no_account_no_public_app,https://github.com/langgenius/dify,https://dify.ai/
+coding_agent_harness,OpenHands/OpenHands,77538,2026-06-17T18:04:44Z,10,sandboxed_code_worker_pattern_candidate,report_only_no_code_execution_no_pr_public_action,https://github.com/OpenHands/OpenHands,https://www.all-hands.dev/
+agent_platform_control_plane,agno-agi/agno,40749,2026-06-17T17:15:36Z,10,study_control_plane_patterns,report_only_no_dependency_install_no_runtime_start,https://github.com/agno-agi/agno,https://www.agno.com/
+agent_app_builder,FlowiseAI/Flowise,53686,2026-06-16T11:05:50Z,9,reference_for_low_code_agent_pipeline_ui,report_only_no_node_install_no_api_keys,https://github.com/FlowiseAI/Flowise,https://flowiseai.com/
+typescript_agent_app_framework,mastra-ai/mastra,25178,2026-06-17T18:04:15Z,9,watch_ts_agent_app_surface,report_only_no_node_install_no_server_start,https://github.com/mastra-ai/mastra,https://mastra.ai/
+workflow_automation,activepieces/activepieces,22801,2026-06-17T17:22:19Z,9,watch_as_open_workflow_automation_alternative,report_only_no_credentials_no_workflow_execution,https://github.com/activepieces/activepieces,https://www.activepieces.com/
+sandbox_execution,e2b-dev/E2B,12632,2026-06-17T15:50:01Z,9,sandbox_contract_candidate,report_only_no_cloud_sandbox_no_api_key_no_cost,https://github.com/e2b-dev/E2B,https://e2b.dev/
+production_agent_harness,strands-agents/harness-sdk,6186,2026-06-17T17:10:42Z,9,watch_harness_and_intervention_primitives,report_only_no_sdk_install_no_model_api,https://github.com/strands-agents/harness-sdk,https://strandsagents.com/
+typescript_agent_ops_platform,VoltAgent/voltagent,9659,2026-06-08T20:06:55Z,7,watch_observability_guardrails_evals,report_only_no_console_no_cloud_no_deploy,https://github.com/voltagent/voltagent,https://voltagent.dev/

@@ -1,0 +1,44 @@
+# Agent Company Trace Events
+
+Generated UTC: 2026-06-20T21:01:14Z
+Database: `E:\agent-company-lab\state\agent_company.sqlite`
+Rows shown: 9
+
+## Boundary
+
+- Trace events are local audit records for agent/company operations.
+- A trace event is not approval to perform account, wallet, browser, public, legal/KYC/billing, or real-money actions.
+
+## Counts By Event Type
+
+| Event Type | Count |
+| --- | ---: |
+| `premium_customer_followup_escalation_command_ready` | 1 |
+| `premium_customer_followup_escalation_written` | 1 |
+| `premium_customer_followup_monitor_checked` | 1 |
+| `premium_customer_followup_monitor_command_ready` | 1 |
+| `premium_customer_followup_synthesizer_command_ready` | 1 |
+| `premium_customer_input_routed` | 1 |
+| `premium_customer_intake_installed` | 1 |
+| `premium_customer_intake_router_command_ready` | 1 |
+| `premium_customer_lane_followups_synthesized` | 1 |
+
+## Counts By Lane
+
+| Lane | Count |
+| --- | ---: |
+| `premium_customer_intake` | 9 |
+
+## Events
+
+| Time | Type | Trace | Lane | Task | Agent | Event | Source | Artifact | Metadata |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-20T21:00:44Z | premium_customer_followup_escalation_command_ready | `trace-premium-customer-intake-20260620` | `premium_customer_intake` | `task-premium-customer-followup-escalation-command-v1-20260620` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-followup-escalation-command-v1-20260620` - Created an executable follow-up escalation command that converts stale customer-generated lane tasks into one AI Resources triage packet without starting lane work. | codex | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | {"command": "escalate-premium-customer-followups", "external_side_effects": false, "target_surface": "ai_resources_lab"} |
+| 2026-06-20T20:57:36Z | premium_customer_followup_escalation_written | `trace-premium-customer-followup-escalation-customer-input-ceo-operating-goal-objective-20260620-002` | `premium_customer_intake` | `task-premium-customer-followup-escalation-v1-customer-input-ceo-operating-goal-objective-20260620-002` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-followup-escalation-customer-input-ceo-operating-goal-objective-20260620-002` - Wrote escalation packet for 6 premium customer follow-up tasks. | premium_customer_followup_escalation_v1 | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | {"escalation_item_count": 6, "escalation_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab", "input_id": "customer-input-ceo-operating-goal-objective-20260620-0 |
+| 2026-06-20T20:52:59Z | premium_customer_followup_monitor_command_ready | `trace-premium-customer-followup-monitor-command-v1-20260620` | `premium_customer_intake` | `task-premium-customer-followup-monitor-command-v1-20260620` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-followup-monitor-command-v1-20260620` - Created an executable follow-up monitor that flags unacknowledged, ownerless, blocked, and stale customer-generated lane tasks without claiming work. | codex_current_ceo_thread | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_monitor.py | {"command": "python tools\\agent_company.py monitor-premium-customer-followups --input-id <input-id>", "monitor_counts": {"requires_intake_attention": 6, "stale_unacknowledged": 6, "total": 6}, "next_capability": "stale_ |
+| 2026-06-20T20:52:06Z | premium_customer_followup_monitor_checked | `trace-premium-customer-followup-monitor-customer-input-ceo-operating-goal-objective-20260620-002` | `premium_customer_intake` | `task-premium-customer-followup-monitor-v1-customer-input-ceo-operating-goal-objective-20260620-002` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-followup-monitor-customer-input-ceo-operating-goal-objective-20260620-002` - Checked 6 premium customer follow-up tasks; 6 need intake attention. | premium_customer_followup_monitor_v1 | E:\agent-company-lab\reports\customer-followup-monitor-v1-20260620.md | {"counts": {"requires_intake_attention": 6, "stale_unacknowledged": 6, "total": 6}, "input_id": "customer-input-ceo-operating-goal-objective-20260620-002", "report_path": "E:\\agent-company-lab\\reports\\customer-followu |
+| 2026-06-20T18:13:49Z | premium_customer_followup_synthesizer_command_ready | `trace-premium-customer-followup-synthesizer-command-v1-20260620` | `premium_customer_intake` | `task-premium-customer-followup-synthesizer-command-v1-20260620` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-followup-synthesizer-command-v1-20260620` - Created an executable follow-up synthesizer that turns routed customer inputs into lane-owned local tasks without external side effects. | codex_current_ceo_thread | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_synthesizer.py | {"command": "python tools\\agent_company.py synthesize-premium-customer-followups --route-packet <route.json>", "followup_packet": "E:\\agent-company-lab\\intake\\customer\\processed\\customer-input-ceo-operating-goal-ob |
+| 2026-06-20T18:13:05Z | premium_customer_lane_followups_synthesized | `trace-customer-input-ceo-operating-goal-objective-20260620-002-lane-followups` | `premium_customer_intake` | `task-customer-input-ceo-operating-goal-objective-20260620-002-lane-followup-synthesis` | premium-customer-intake-agent-20260620 | `trace-event-customer-input-ceo-operating-goal-objective-20260620-002-lane-followups` - Synthesized 6 lane-owned follow-up tasks for customer-input-ceo-operating-goal-objective-20260620-002. | premium_customer_followup_synthesizer_v1 | E:\agent-company-lab\intake\customer\processed\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md | {"followup_task_ids": ["task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels", "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties", "task |
+| 2026-06-20T18:07:09Z | premium_customer_intake_router_command_ready | `trace-premium-customer-intake-router-command-v1-20260620` | `premium_customer_intake` | `task-premium-customer-intake-router-command-v1-20260620` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-router-command-v1-20260620` - Created an executable premium-customer intake router that preserves raw input, writes compact route packets, updates ledgers, and records local traces. | codex_current_ceo_thread | E:\agent-company-lab\tools\agent_company_core\premium_customer_intake_router.py | {"command": "python tools\\agent_company.py route-premium-customer-input", "next_capability": "lane_specific_followup_task_synthesis_from_route_packets", "preserved_raw": "E:\\agent-company-lab\\intake\\customer\\dropbox |
+| 2026-06-20T18:06:19Z | premium_customer_input_routed | `trace-customer-input-ceo-operating-goal-objective-20260620-002` | `premium_customer_intake` | `task-customer-input-ceo-operating-goal-objective-20260620-002` | premium-customer-intake-agent-20260620 | `trace-event-customer-input-ceo-operating-goal-objective-20260620-002` - Routed premium customer input customer-input-ceo-operating-goal-objective-20260620-002 to ai_resources_lab. | premium_customer_intake_router_v1 | E:\agent-company-lab\intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.md | {"input_class": "new_request", "input_id": "customer-input-ceo-operating-goal-objective-20260620-002", "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20 |
+| 2026-06-20T17:08:42Z | premium_customer_intake_installed | `trace-premium-customer-intake-router-v1-20260620` | `premium_customer_intake` | `task-premium-customer-intake-router-v1-20260620` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-router-v1-20260620` - Installed premium customer intake agent, routing contract, customer intake workspace, routing ledger, knowledge application loop, customer update feed, and CEO context capsule rule. | codex_current_ceo_thread | E:\agent-company-lab\architecture\premium-customer-intake-router-v1.md | {"accounts_created": 0, "api_calls": false, "browser_sessions_started": 0, "context_hygiene_rule": "Raw customer requests and materials stay in intake artifacts; CEO receives compact context capsules and applied-knowledg |

@@ -1,0 +1,11 @@
+{
+    "negative_fixture_count":  8,
+    "rejected_fixture_count":  8,
+    "accepted_fixture_count":  0,
+    "chain_integrity_checked_report_count":  20,
+    "chain_integrity_failure_count":  0,
+    "forbidden_runtime_import_count":  0,
+    "model_api_gate_remains_parked":  true,
+    "model_api_pool_registered":  false,
+    "external_side_effects":  false
+}

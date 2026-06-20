@@ -1,0 +1,90 @@
+{
+  "trace_id": "trace-agent-company-atlas-live-ops-pulse-v1-20260618",
+  "task_id": "task-agent-company-atlas-live-ops-pulse-v1-20260618",
+  "event_id": "trace-atlas_live_ops_pulse_added-20260618",
+  "created_at": "2026-06-18T10:00:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "live_ops_pulse",
+  "summary": "Added a generated-art Live Ops Pulse under the first-screen hero so latest movement, active tasks, blocker gates, ready bot asks, staged local drafts, bot ownership, and lane pulse cards become visible as a current-state command board.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0831ca1f5466dfaa016a33c0cc60f48197ad612fdd140cefa8.png",
+    "workspace_path": "web/assets/system/live-ops-pulse-20260618.png",
+    "bytes": 2494307,
+    "sha256": "CAC73C6A938F6D65C751BDB7E8644B489E9EA00AF0B1D7AD25E0D46CA3BDD1F3",
+    "prompt_summary": "Premium dark sci-fi live operations pulse arena with central pulse core, lane beacons, bot communication beams, blocker gate shields, proof sparks, timeline waveforms, teal/green/amber/coral/violet accents, no readable text, no logos, no faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/live-ops-pulse-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_live_ops_pulse.py",
+      "reports/agent-company-atlas-live-ops-pulse-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a Live Ops Pulse section directly below the first-screen hero.",
+      "Use generated live-ops-pulse-20260618.png as the current-state command backdrop and Visual Asset Vault entry.",
+      "Derive pulse cards from existing lanes, mission feed items, dispatch suggestions, staged local drafts, bot ownership, tasks, gates, proof, traces, and outcomes without adding snapshot schema.",
+      "Expose LATEST, GATES, COMMS, and TIMELINE actions through existing Atlas surfaces.",
+      "Let each lane pulse card drill into the source lane Trail view.",
+      "Render future sockets for live worker feed, approval queue, cross-lane broadcast, and profit ticker expansion.",
+      "Refresh the Live Ops Pulse when local dispatch state changes.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_live_ops_pulse.py -q failed before implementation on missing liveOpsPulse element wiring.",
+      "green": "pytest tests\\test_agent_company_atlas_live_ops_pulse.py -q passed after generated asset, renderer, styles, docs, cache token, handlers, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "live_ops_pulse_contract_test": "passed",
+      "focused_frontend_contract_tests": "21 passed",
+      "asset_present_bytes": 2494307
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=live-ops-pulse-green",
+      "evidence": {
+        "live_ops_pulse_present": true,
+        "generated_art_loaded": true,
+        "generated_art_natural_size": "1672x941",
+        "stat_count": 5,
+        "pulse_card_count": 10,
+        "future_slot_count": 3,
+        "lane_linked_cards": 10,
+        "action_count": 4,
+        "beacon_count": 8,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "LATEST -> Mission Feed all lens visible with 90 events",
+          "GATES -> Mission Feed service_request lens visible with 2 service request events",
+          "COMMS -> Command Relay Deck visible",
+          "TIMELINE -> Mission Feed playback console visible",
+          "Lane pulse card -> selected platform_engineering Trail view with active Trail tab"
+        ],
+        "horizontal_overflow_px": 0,
+        "panel_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Live Ops Pulse with generated art loaded at 1672x941 natural size, five stats, ten pulse cards, three future sockets, four local actions, zero bad rects, zero button text overflow, zero panel overflow, zero page horizontal overflow, and zero console errors."
+    }
+  }
+}

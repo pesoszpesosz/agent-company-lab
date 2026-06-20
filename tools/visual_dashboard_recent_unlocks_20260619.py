@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+"""Recent UI unlock records added on 2026-06-19."""
+
+from __future__ import annotations
+
+from visual_dashboard_recent_unlocks_20260619_late import RECENT_UI_UNLOCKS_20260619_LATE
+from visual_dashboard_recent_unlocks_20260619_evening import RECENT_UI_UNLOCKS_20260619_EVENING
+from visual_dashboard_recent_unlocks_20260619_afternoon import RECENT_UI_UNLOCKS_20260619_AFTERNOON
+from visual_dashboard_recent_unlocks_20260619_foundation import RECENT_UI_UNLOCKS_20260619_FOUNDATION
+
+RECENT_UI_UNLOCKS_20260619 = RECENT_UI_UNLOCKS_20260619_LATE + RECENT_UI_UNLOCKS_20260619_EVENING + RECENT_UI_UNLOCKS_20260619_AFTERNOON + RECENT_UI_UNLOCKS_20260619_FOUNDATION

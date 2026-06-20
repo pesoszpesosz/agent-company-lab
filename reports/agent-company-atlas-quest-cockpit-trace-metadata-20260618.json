@@ -1,0 +1,82 @@
+{
+  "trace_id": "trace-agent-company-atlas-quest-cockpit-v1-20260618",
+  "created_at": "2026-06-18",
+  "lane_id": "platform_engineering",
+  "surface": "lane_overview_quest_cockpit",
+  "summary": "Added a Quest Cockpit to each lane Overview so the selected money path opens with world, level, checkpoint, current gate, next move, recent events, and fast jumps into deeper lane views.",
+  "design_research": {
+    "queries": [
+      "quest log dashboard timeline UX game progression task management design patterns",
+      "interactive timeline dashboard drill down user experience best practices",
+      "game progression map UI task management dashboard unlock levels"
+    ],
+    "source_urls": [
+      "https://datacalculus.com/en/blog/mobile-gaming-apps/uiux-designer/designing-intuitive-quest-logs-for-mobile-gaming-apps",
+      "https://www.usedatabrain.com/blog/interactive-dashboard",
+      "https://docs.gamerebellion.com/sdk/analytics-dashboards/progression",
+      "https://uxpatterns.dev/patterns/data-display/timeline",
+      "https://www.lazarev.agency/articles/dashboard-ux-design"
+    ],
+    "pattern_notes": [
+      "Quest logs should work as evolving roadmaps that combine objectives, context, progress markers, and reward feedback.",
+      "Interactive dashboards should support drill-down so the first view stays readable while deeper evidence remains reachable.",
+      "Progression systems scale cleanly when they expose hierarchy such as world, level, and checkpoint.",
+      "Timeline patterns are useful for activity history when they preserve sequence, status, and source context.",
+      "Complex dashboards benefit from story-first hierarchy and progressive disclosure."
+    ]
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "reports/agent-company-atlas-quest-cockpit-trace-metadata-20260618.json"
+    ],
+    "data_inputs": [
+      "lane.visual.realm",
+      "lane.visual.minigame.texture",
+      "lane.level",
+      "lane.progress",
+      "lane.score",
+      "lane.counts",
+      "lane.quest.checkpoints[]",
+      "lane.gateMap[]",
+      "lane.serviceRequests[]",
+      "lane.trail[]",
+      "lane.recentTasks[]",
+      "lane.recentOutcomes[]"
+    ],
+    "ui_contract": [
+      "Render Quest Cockpit at the top of the lane Overview before the World Module.",
+      "Show world, level, and checkpoint hierarchy as quest stages.",
+      "Show asks, unlocks, events, and score as compact lane signals.",
+      "Show one Next Move card and one Current Gate card derived from the same lane data used by Chronicle and Comms.",
+      "Show up to four recent lane events as an event chain.",
+      "PATH, LOG, GAME, COM, and TRL controls use existing data-detail-view routing and remain local-only.",
+      "Use the lane texture, accent colors, avatar, and existing card geometry so new lanes inherit the cockpit automatically."
+    ]
+  },
+  "verification": {
+    "tdd": {
+      "red": "Playwright behavior check first failed with cockpit=false, stages=0, controls=0, gate=false, next=false.",
+      "green": "After implementation the same behavior check passed with cockpit=true, stages=3, controls=5, gate=true, next=true, events=4, and no horizontal overflow."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "snapshot_json": "passed"
+    },
+    "browser": {
+      "status": "passed",
+      "route": "http://localhost:5177/?verify=quest-cockpit-responsive&cache=20260618-quest-cockpit-v2#lane=platform_engineering&view=overview",
+      "engine": "Playwright against local Chrome",
+      "checks": [
+        "390x920 viewport: Quest Cockpit rendered 3 stages, 4 signals, 4 events, 5 controls, two-column stage/event grids, no clipped cockpit text, no horizontal overflow, no console errors, and no failed responses.",
+        "1280x800 viewport: Quest Cockpit rendered the full desktop layout with 3 stages, 4 signals, 4 events, 5 controls, no clipped cockpit text, no horizontal overflow, no console errors, and no failed responses.",
+        "1600x900 viewport: Quest Cockpit rendered inside the narrow side detail panel with two-column stage/event grids, no clipped cockpit text, no horizontal overflow, no console errors, and no failed responses.",
+        "PATH control changed the route to #lane=platform_engineering&view=path and rendered Path Map.",
+        "COM control changed the route to #lane=platform_engineering&view=comms and rendered the command deck."
+      ]
+    }
+  }
+}

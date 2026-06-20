@@ -1,0 +1,86 @@
+{
+  "trace_id": "trace-agent-company-atlas-minigame-registry-codex-v1-20260618",
+  "task_id": "task-agent-company-atlas-minigame-registry-codex-v1-20260618",
+  "event_id": "trace-atlas_minigame_registry_codex_added-20260618",
+  "created_at": "2026-06-18T08:30:00Z",
+  "lane_id": "platform_engineering",
+  "surface": "minigame_registry_codex",
+  "summary": "Added a generated-art Minigame Registry Codex between Arcade Deck and Motion Forge so lane minigames, renderer readiness, textures, stages, gates, and future module slots become visible as an expandable company catalog.",
+  "generated_asset": {
+    "mode": "built_in_image_gen",
+    "source_path": "C:/Users/matth/.codex/generated_images/019ed1eb-b158-73a0-ac2d-3719a0a6e69f/ig_0d8d7e614f01b2b9016a33ac2d55b88191af8405933b945368.png",
+    "workspace_path": "web/assets/system/minigame-registry-codex-20260618.png",
+    "bytes": 2539637,
+    "sha256": "C433914A64FC3FC9D698470A8B93802C9AB5EF02186114C4542DBAE5628AE47D",
+    "prompt_summary": "Premium dark sci-fi minigame module registry codex with game cartridges, renderer tiles, stage rails, texture slots, gate markers, future expansion sockets, teal/amber/green/violet glows, no text, no logos, no faces."
+  },
+  "implementation": {
+    "files": [
+      "web/index.html",
+      "web/app.js",
+      "web/styles.css",
+      "web/README.md",
+      "web/assets/system/minigame-registry-codex-20260618.png",
+      "web/data/snapshot.json",
+      "tests/test_agent_company_atlas_minigame_registry_codex.py",
+      "reports/agent-company-atlas-minigame-registry-codex-trace-metadata-20260618.json"
+    ],
+    "ui_contract": [
+      "Render a Minigame Registry Codex between Arcade Deck and Motion Forge.",
+      "Use generated minigame-registry-codex-20260618.png as the reusable module-catalog backdrop.",
+      "Derive module cards from existing lane minigame textures, registry hooks, game steps, blockers, and lane style metadata without adding snapshot schema.",
+      "Summarize module, renderer, texture, stage, and gate counts from existing records.",
+      "Expose ARCADE, ASSET, and FORGE actions for jumping to the launcher, game-texture vault lens, and expansion tooling.",
+      "Allow every module card to drill into the source lane Game view.",
+      "Render future module slots so expanded lane counts have visible minigame capacity.",
+      "Register the codex texture in the Visual Asset Vault system assets.",
+      "Keep animation transform/opacity-based and covered by reduced-motion handling."
+    ]
+  },
+  "verification": {
+    "red_green": {
+      "status": "passed",
+      "red": "pytest tests\\test_agent_company_atlas_minigame_registry_codex.py -q failed before implementation on missing minigameRegistryCodex selector.",
+      "green": "pytest tests\\test_agent_company_atlas_minigame_registry_codex.py -q passed after generated asset, renderer, styles, docs, cache token, and Asset Vault wiring."
+    },
+    "static": {
+      "node_check_app_js": "passed",
+      "minigame_registry_codex_contract_test": "passed",
+      "asset_present_bytes": 2539637
+    },
+    "browser_green_route": {
+      "status": "passed",
+      "route": "http://127.0.0.1:5177/?verify=minigame-registry-codex-green",
+      "evidence": {
+        "minigame_registry_codex_present": true,
+        "generated_art_loaded": true,
+        "stat_count": 5,
+        "card_count": 8,
+        "future_slot_count": 4,
+        "lane_linked_cards": 8,
+        "action_count": 3,
+        "asset_vault_entry_present": true,
+        "action_results": [
+          "ARCADE -> Arcade Deck scroll target",
+          "ASSET -> game Asset Vault lens with 12 visible game cards",
+          "FORGE -> Expansion Forge scroll target",
+          "Lane card -> selected lane Game tab"
+        ],
+        "horizontal_overflow_px": 0,
+        "bad_rects": 0,
+        "button_overflows": 0,
+        "console_errors": 0
+      }
+    },
+    "responsive": {
+      "status": "passed",
+      "viewports": [
+        "390x820",
+        "820x900",
+        "1280x900",
+        "1600x1000"
+      ],
+      "evidence": "All checked viewports rendered the Minigame Registry Codex with generated art, five stats, eight module cards, four future slots, three local actions, zero bad rects, zero button text overflow, zero page horizontal overflow, and zero console errors."
+    }
+  }
+}

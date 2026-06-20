@@ -1,0 +1,20 @@
+{
+  "id": "trace-agent-company-atlas-command-cockpit-minigame-sigil-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-minigame-sigil-v1-20260619",
+  "traceId": "trace-atlas_command_cockpit_minigame_sigil_added-20260619",
+  "title": "Command Cockpit Minigame Sigil",
+  "createdAt": "2026-06-19T18:20:20Z",
+  "summary": "Added a compact animated minigame sigil to the Command Cockpit current-run hero so each selected path exposes a lane-specific game-module identity without adding scroll height.",
+  "changes": [
+    "Derives sigil initials and module title from lane minigame metadata with fallback support for future lanes.",
+    "Adds orbit and glint motion inside a fixed-size hero slot to improve game feel without expanding the first viewport.",
+    "Adds responsive mobile styling that keeps the module identity visible while hiding tiny metadata on narrow screens."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py"
+  ]
+}

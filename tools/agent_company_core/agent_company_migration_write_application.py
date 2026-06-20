@@ -1,0 +1,23 @@
+from __future__ import annotations
+
+"""Compatibility facade for migration approval-response application writers."""
+
+from .agent_company_migration_write_application_contract import (
+    write_agent_company_migration_decision_parser_write_approval_response_application_packet_contract,
+    write_agent_company_migration_decision_parser_write_approval_response_application_preflight,
+)
+from .agent_company_migration_write_application_fixtures import (
+    write_agent_company_migration_decision_parser_write_approval_response_application_packet_fixture_suite,
+)
+from .agent_company_migration_write_application_runner import (
+    write_agent_company_migration_decision_parser_write_approval_response_application_packet_runner,
+    write_agent_company_migration_decision_parser_write_approval_response_application_packet_runner_review,
+)
+
+__all__ = [
+    "write_agent_company_migration_decision_parser_write_approval_response_application_preflight",
+    "write_agent_company_migration_decision_parser_write_approval_response_application_packet_contract",
+    "write_agent_company_migration_decision_parser_write_approval_response_application_packet_fixture_suite",
+    "write_agent_company_migration_decision_parser_write_approval_response_application_packet_runner",
+    "write_agent_company_migration_decision_parser_write_approval_response_application_packet_runner_review",
+]

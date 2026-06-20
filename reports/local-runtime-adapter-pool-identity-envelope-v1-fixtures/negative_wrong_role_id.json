@@ -1,0 +1,84 @@
+{
+  "account_policy": "deny",
+  "activation_contract_artifact_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-activation-contract-design-v1-20260617.json",
+  "agent_id": "service-worker-local-runtime-adapter-pool",
+  "allowed_egress_types": [],
+  "allowed_input_artifact_paths": [
+    "E:\\agent-company-lab\\reports\\worker-activation-runway-v1-20260617.json",
+    "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-activation-preflight-v1-20260617.json"
+  ],
+  "allowed_mcp_servers": [],
+  "allowed_mcp_tools": [],
+  "allowed_output_artifact_roots": [
+    "E:\\agent-company-lab\\reports"
+  ],
+  "allowed_runtime_modes": [
+    "report_only_local_dry_run"
+  ],
+  "allowed_service_request_types": [
+    "lifecycle_test",
+    "model_api_execution"
+  ],
+  "allowed_targets": [],
+  "browser_session_policy": "deny",
+  "budget_scope": "zero_or_not_applicable",
+  "created_utc": "2026-06-17T19:35:00Z",
+  "credential_policy": "deny",
+  "data_sensitivity_ceiling": "local_report_only",
+  "delegation_chain": [
+    "human_operator",
+    "recovered-profitable-edge-infra",
+    "service-worker-local-runtime-adapter-pool"
+  ],
+  "department_id": "service_worker_observability",
+  "expires_utc": "2099-01-01T00:00:00Z",
+  "filesystem_policy": {
+    "read_scope": "declared_input_artifact_paths_only",
+    "unbounded_writes": false,
+    "write_scope": "declared_output_artifact_roots_only"
+  },
+  "identity_envelope_id": "identity-negative-wrong_role_id",
+  "identity_schema_version": "agent_company.local_runtime_adapter_pool_identity_envelope.v1",
+  "lane_ids": [
+    "platform_engineering"
+  ],
+  "mcp_policy": "deny_until_registry_gate_and_egress_event",
+  "model_api_policy": "deny_until_separate_costed_provider_approval",
+  "network_policy": "deny",
+  "operator_decision_artifact_path": "E:\\agent-company-lab\\reports\\worker-pool-operator-decision-packet-v1-20260617.json",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "owner_thread_id": "019ebbda-2002-7361-8597-03625189c3ff",
+  "payment_policy": "deny",
+  "policy_verifier": "validate_local_runtime_adapter_pool_identity_envelope.py",
+  "post_run_evidence_required": true,
+  "principal_mode": "non_human_worker_pool_candidate",
+  "public_action_policy": "deny",
+  "rate_limit_scope": "local_only",
+  "recording_required": true,
+  "redaction_required": true,
+  "revocation_reason": "",
+  "revocation_status": "active",
+  "role_id": "browser_action_worker",
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_created": false,
+    "external_side_effects": false,
+    "identity_system_installed": false,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "network_calls_by_worker": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "service_requests_assigned": 0,
+    "spiffe_ids_issued": false,
+    "svids_issued": false,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "trace_event_required": true,
+  "wallet_policy": "deny",
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool"
+}

@@ -1,0 +1,24 @@
+{
+  "traceId": "trace-agent-company-atlas-stage-focus-v1-20260619",
+  "taskId": "task-agent-company-atlas-stage-focus-v1-20260619",
+  "eventId": "event-agent-company-atlas-stage-focus-v1-20260619",
+  "title": "Atlas Stage Focus",
+  "createdAt": "2026-06-19T06:02:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Added atlasStage routing, section stage tags, and focus gates so Cockpit, Map, Bots, Feed, Worlds, and Assets each reveal their matching stage while All remains the full audit stack.",
+  "proof": [
+    "Added atlasStage state, defaults, hash routing, and teleport activation so the rail selects a focused stage.",
+    "Tagged dashboard sections with reusable stage labels and hid non-matching stages outside the All audit deck.",
+    "Updated README, cache markers, snapshot generation, and regression floors so the standalone dashboard records the stage-focus unlock."
+  ],
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_deck_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

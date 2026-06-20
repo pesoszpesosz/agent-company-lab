@@ -1,0 +1,8 @@
+{
+  "api_calls": false,
+  "external_side_effects": false,
+  "recommended_local_build_count": 5,
+  "runtime": "local_python_report_writer",
+  "source_count": 13,
+  "span_kind": "research_wave"
+}

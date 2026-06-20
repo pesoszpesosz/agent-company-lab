@@ -1,0 +1,115 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/durable-service-worker-queue-adapter-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "adapter_family": {
+      "enum": [
+        "sqlite_local",
+        "dbos",
+        "hatchet",
+        "temporal"
+      ],
+      "type": "string"
+    },
+    "adapter_id": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "api_calls": {
+      "type": "boolean"
+    },
+    "approval_gate_policy": {
+      "type": "object"
+    },
+    "dependency_imported": {
+      "type": "boolean"
+    },
+    "enqueue_policy": {
+      "type": "object"
+    },
+    "external_side_effects": {
+      "type": "boolean"
+    },
+    "mapped_request_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "mapped_requests": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "network_required": {
+      "type": "boolean"
+    },
+    "next_local_test": {
+      "minLength": 10,
+      "type": "string"
+    },
+    "replay_policy": {
+      "type": "object"
+    },
+    "result_policy": {
+      "type": "object"
+    },
+    "route_counts": {
+      "type": "object"
+    },
+    "runtime_mode": {
+      "enum": [
+        "local_contract_only",
+        "local_sqlite_queue"
+      ],
+      "type": "string"
+    },
+    "safe_now": {
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "durable_service_worker_queue_adapter_manifest.v1"
+    },
+    "source_contract": {
+      "const": "service_worker_request.v1"
+    },
+    "stop_conditions": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "supported_worker_types": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "adapter_id",
+    "adapter_family",
+    "runtime_mode",
+    "source_contract",
+    "supported_worker_types",
+    "safe_now",
+    "network_required",
+    "dependency_imported",
+    "api_calls",
+    "external_side_effects",
+    "enqueue_policy",
+    "approval_gate_policy",
+    "replay_policy",
+    "result_policy",
+    "mapped_request_count",
+    "route_counts",
+    "mapped_requests",
+    "stop_conditions",
+    "next_local_test"
+  ],
+  "title": "Agent Company Durable Service Worker Queue Adapter Manifest v1",
+  "type": "object"
+}

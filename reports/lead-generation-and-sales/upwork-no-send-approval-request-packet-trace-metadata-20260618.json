@@ -1,0 +1,54 @@
+{
+  "boundary": {
+    "browser_sessions_started": 0,
+    "client_messages_sent": 0,
+    "contracts_or_payments": 0,
+    "credentials_requested_or_used": false,
+    "external_side_effects": 0,
+    "jobs_selected_for_submission": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "profile_created_or_edited": false,
+    "proposals_sent": 0,
+    "public_actions": 0,
+    "real_client_data_used": false,
+    "service_requests_mutated": 0,
+    "upwork_account_or_login": false,
+    "workers_or_runtimes_started": 0
+  },
+  "event_type": "approval_packet_created",
+  "generated_at": "2026-06-18T07:56:38Z",
+  "lane_id": "lead_generation_and_sales",
+  "schema_version": "lead_generation.upwork_no_send_approval_request_packet.trace.v1",
+  "selected_offer": {
+    "candidate_id": "ai_integration_workflow_audit",
+    "draft_scope": [
+      "Map one described workflow from client-provided plain-language notes.",
+      "Identify safe automation candidates and human approval points.",
+      "Produce one synthetic proof packet with no private client data.",
+      "Deliver a next-step blueprint rather than a production build."
+    ],
+    "fit_score": 100,
+    "local_offer_name": "Supervised AI Integration Workflow Audit",
+    "not_in_scope": [
+      "Upwork profile creation.",
+      "Proposal sending.",
+      "Client contact.",
+      "Contract/payment setup.",
+      "Live integrations.",
+      "Credentials, private data, or public posting."
+    ],
+    "offer_name": "Supervised AI Agent Workflow Audit",
+    "source_gates": [
+      "account",
+      "client_data_privacy",
+      "credential_handling",
+      "payment",
+      "proposal",
+      "public_action"
+    ],
+    "why": "It uses the strongest local proof already built and aligns with public AI-agent/automation demand without needing credentials or platform action."
+  },
+  "source": "tools/create_upwork_no_send_approval_packet.py",
+  "summary": "No-send Upwork approval request packet created from local proof assets.",
+  "task_id": "task-upwork-no-send-approval-request-packet-20260618"
+}

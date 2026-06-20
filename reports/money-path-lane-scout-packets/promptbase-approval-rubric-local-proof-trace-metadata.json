@@ -1,0 +1,33 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "generated_utc": "2026-06-18T06:24:22Z",
+  "trace_id": "trace-promptbase-approval-rubric-local-proof-20260618",
+  "task_id": "task-lane-scout-promptbase_agent_skill_route-20260618",
+  "lane_id": "digital_products_templates_plugins",
+  "event_type": "promptbase_approval_rubric_local_proof_created",
+  "artifact_paths": [
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\promptbase-approval-rubric-local-proof.md",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\promptbase-approval-rubric-local-proof.json",
+    "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\promptbase-approval-rubric-local-proof-validation.json"
+  ],
+  "side_effects": {
+    "browser_sessions_started": 0,
+    "accounts_created": 0,
+    "logins_performed": 0,
+    "terms_accepted": 0,
+    "payment_or_payout_actions": 0,
+    "kyc_tax_actions": 0,
+    "zip_created": false,
+    "public_uploads": 0,
+    "marketplace_drafts_created": 0,
+    "marketplace_submissions": 0,
+    "public_promotions": 0,
+    "service_requests_mutated": 0,
+    "workers_started": 0,
+    "runtimes_started": 0,
+    "dependencies_installed": 0,
+    "model_or_mcp_calls": 0,
+    "external_side_effects": 0
+  },
+  "next_action": "If the operator wants to proceed, review only the read-only guideline approval first and convert it into one exact-scope service request; keep account, payment, package build, listing, upload, submission, worker/runtime, model/MCP, and public actions blocked."
+}

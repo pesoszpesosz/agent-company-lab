@@ -1,0 +1,110 @@
+{
+  "artifact_actions": {
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "dependency_imports": false,
+    "dependency_installs": false,
+    "external_side_effects": false,
+    "model_api_calls": false,
+    "queue_enqueues": 0,
+    "runtime_starts": 0,
+    "service_request_mutations": 0
+  },
+  "decision": "Keep SQLite as the active source of truth. Promote Temporal and Inngest as the next comparison candidates only through local fixtures. Hold DBOS, Prefect, Restate, and Pydantic durable execution integrations until dependency, runtime, model/API, credential, and service-worker approvals exist.",
+  "failed_count": 0,
+  "fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-20260617.json",
+  "generated_utc": "2026-06-20T12:35:28Z",
+  "json_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-validation-20260617.json",
+  "markdown_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\durable-runtime-adapter-matrix-v2-20260617.md",
+  "passed_count": 7,
+  "recommended_next_local_tests": [
+    "durable_runtime_adapter_matrix_v2_to_service_worker_reducer_fixture",
+    "temporal_signal_shape_fixture_against_service_worker_request_v1",
+    "inngest_event_name_and_flow_control_fixture_against_central_outbox_history_v1",
+    "dbos_workflow_step_boundary_fixture_for_service_worker_request_v1"
+  ],
+  "required_runtimes_present": true,
+  "rows": [
+    {
+      "category": "local_control_plane",
+      "display_name": "Local SQLite Control Plane",
+      "failures": [],
+      "first_local_test": "durable_runtime_adapter_matrix_v2_to_service_worker_reducer_fixture",
+      "fits_existing_gates": true,
+      "promotion_decision": "keep_as_source_of_truth_now",
+      "runtime_id": "sqlite_control_plane",
+      "safe_now": true,
+      "score": 91
+    },
+    {
+      "category": "durable_workflow_engine",
+      "display_name": "Temporal Python SDK",
+      "failures": [],
+      "first_local_test": "temporal_signal_shape_fixture_against_service_worker_request_v1",
+      "fits_existing_gates": true,
+      "promotion_decision": "hold_for_local_reducer_fixture_then_human_runtime_approval",
+      "runtime_id": "temporal_python",
+      "safe_now": false,
+      "score": 83
+    },
+    {
+      "category": "event_driven_durable_functions",
+      "display_name": "Inngest",
+      "failures": [],
+      "first_local_test": "inngest_event_name_and_flow_control_fixture_against_central_outbox_history_v1",
+      "fits_existing_gates": true,
+      "promotion_decision": "candidate_after_local_outbox_event_contract",
+      "runtime_id": "inngest",
+      "safe_now": false,
+      "score": 78
+    },
+    {
+      "category": "database_backed_durable_workflows",
+      "display_name": "DBOS Python",
+      "failures": [],
+      "first_local_test": "dbos_workflow_step_boundary_fixture_for_service_worker_request_v1",
+      "fits_existing_gates": true,
+      "promotion_decision": "candidate_after_sqlite_to_postgres_state_boundary_review",
+      "runtime_id": "dbos_python",
+      "safe_now": false,
+      "score": 76
+    },
+    {
+      "category": "agent_integration_layer",
+      "display_name": "Pydantic AI Durable Execution Integrations",
+      "failures": [],
+      "first_local_test": "pydantic_durable_adapter_manifest_fixture_without_model_api_calls",
+      "fits_existing_gates": true,
+      "promotion_decision": "use_as_reference_only_until_model_api_gate_is_approved",
+      "runtime_id": "pydantic_ai_durable_execution",
+      "safe_now": false,
+      "score": 75
+    },
+    {
+      "category": "python_workflow_orchestrator",
+      "display_name": "Prefect",
+      "failures": [],
+      "first_local_test": "prefect_flow_manifest_for_local_source_refresh_without_runtime_start",
+      "fits_existing_gates": true,
+      "promotion_decision": "watchlist_for_source_refresh_and_eval_flows",
+      "runtime_id": "prefect",
+      "safe_now": false,
+      "score": 66
+    },
+    {
+      "category": "durable_agent_runtime",
+      "display_name": "Restate",
+      "failures": [],
+      "first_local_test": "restate_agent_service_boundary_fixture_against_central_outbox_history_v1",
+      "fits_existing_gates": true,
+      "promotion_decision": "watchlist_after_outbox_and_browser_safety_contracts",
+      "runtime_id": "restate",
+      "safe_now": false,
+      "score": 70
+    }
+  ],
+  "rows_checked": 7,
+  "schema_path": "E:\\agent-company-lab\\architecture\\durable-runtime-adapter-matrix-v2.schema.json",
+  "schema_version": "agent_company.durable_runtime_adapter_matrix_validation.v2",
+  "top_level_failures": []
+}

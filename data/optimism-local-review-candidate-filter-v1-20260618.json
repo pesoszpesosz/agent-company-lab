@@ -1,0 +1,263 @@
+{
+  "schema_version": "agent_company.optimism_local_review_candidate_filter.v1",
+  "generated_utc": "2026-06-17T21:56:43Z",
+  "task_id": "task-optimism-local-review-candidate-filter-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "inputs": [
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-known-issue-duplicate-matrix-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\security-report-quality-gate-v1-20260618.json"
+  ],
+  "asset_counts": {
+    "total": 33,
+    "Blockchain/DLT": 4,
+    "Smart Contract": 19,
+    "Web & App": 10
+  },
+  "filter_rules": [
+    {
+      "filter_id": "olf-001",
+      "candidate_class": "Optimism smart-contract invariant review",
+      "example_assets": [
+        "OptimismPortal",
+        "DisputeGameFactory",
+        "FaultDisputeGame",
+        "PreimageOracle",
+        "SystemConfig",
+        "MIPS"
+      ],
+      "allowed_local_work": [
+        "source map",
+        "invariant memo",
+        "known-issue comparison",
+        "local-only PoC plan"
+      ],
+      "promotion_requirements": [
+        "affected asset in scope",
+        "impact in scope",
+        "not a listed bridge foot gun",
+        "passes duplicate matrix",
+        "passes security report quality gate"
+      ],
+      "blockers": [
+        "no live fork transaction",
+        "no mainnet/public testnet testing",
+        "no private report submission"
+      ],
+      "routing": "local_review_allowed_quality_gate_required",
+      "priority": 90
+    },
+    {
+      "filter_id": "olf-002",
+      "candidate_class": "Bridge/token configuration foot-gun claim",
+      "example_assets": [
+        "L1StandardBridge",
+        "L1ERC721Bridge",
+        "OptimismMintableERC20Factory"
+      ],
+      "allowed_local_work": [
+        "classification memo only",
+        "duplicate and exclusion comparison"
+      ],
+      "promotion_requirements": [
+        "must prove a new bypass beyond documented fake ERC20 or token misconfiguration cases",
+        "must prove direct Optimism protocol impact"
+      ],
+      "blockers": [
+        "third-party token bridge implementation bug",
+        "fee-on-transfer/rebasing/local-remote mismatch foot gun",
+        "fake ERC20 issue without a new bypass"
+      ],
+      "routing": "hard_stop_unless_new_protocol_bypass",
+      "priority": 30
+    },
+    {
+      "filter_id": "olf-003",
+      "candidate_class": "op-node or op-batcher Alt-DA issue",
+      "example_assets": [
+        "op-node"
+      ],
+      "allowed_local_work": [
+        "scope memo",
+        "source map"
+      ],
+      "promotion_requirements": [
+        "must show issue is outside excluded Alt-DA feature"
+      ],
+      "blockers": [
+        "Alt-DA feature of op-node/op-batcher is out of scope",
+        "node start or network test not authorized"
+      ],
+      "routing": "hard_stop_until_alt_da_exclusion_cleared",
+      "priority": 20
+    },
+    {
+      "filter_id": "olf-004",
+      "candidate_class": "op-reth execution-client issue",
+      "example_assets": [
+        "op-reth"
+      ],
+      "allowed_local_work": [
+        "read-only source map",
+        "upstream route comparison"
+      ],
+      "promotion_requirements": [
+        "must clear upstream reth and Ethereum Foundation route",
+        "must prove Optimism-specific impact not covered upstream"
+      ],
+      "blockers": [
+        "upstream reth duplicate",
+        "Ethereum Foundation replay route",
+        "end-of-service client condition"
+      ],
+      "routing": "upstream_route_check_required",
+      "priority": 35
+    },
+    {
+      "filter_id": "olf-005",
+      "candidate_class": "op-dispute-mon detected dispute-game condition",
+      "example_assets": [
+        "op-dispute-mon",
+        "DisputeGameFactory",
+        "PermissionedDisputeGame",
+        "FaultDisputeGame"
+      ],
+      "allowed_local_work": [
+        "detector-coverage map",
+        "excluded-condition memo"
+      ],
+      "promotion_requirements": [
+        "must prove issue is not already detected by op-dispute-mon",
+        "must prove in-scope direct impact"
+      ],
+      "blockers": [
+        "op-challenger/dispute-game issue already detected by op-dispute-mon",
+        "proof-of-whale Fault Proof attack"
+      ],
+      "routing": "local_review_allowed_only_after_detector_clearance",
+      "priority": 55
+    },
+    {
+      "filter_id": "olf-006",
+      "candidate_class": "Public RPC, Beacon API, or chain-operator topology issue",
+      "example_assets": [
+        "Blockchain/DLT"
+      ],
+      "allowed_local_work": [
+        "classification memo only"
+      ],
+      "promotion_requirements": [
+        "none for excluded public exposure or operator best-practice issues"
+      ],
+      "blockers": [
+        "public JSON-RPC/Beacon API exposure",
+        "chain operator best-practice or network-topology violation"
+      ],
+      "routing": "hard_stop",
+      "priority": 5
+    },
+    {
+      "filter_id": "olf-007",
+      "candidate_class": "Web/App domain issue",
+      "example_assets": [
+        "Optimism's App",
+        "Optimism's Gateway",
+        "Optimism's Console",
+        "Optimism's Docs",
+        "Main Optimism website"
+      ],
+      "allowed_local_work": [
+        "scope route memo",
+        "no-browser static source/source-map review if public source exists"
+      ],
+      "promotion_requirements": [
+        "must avoid out-of-scope domains",
+        "must verify whether Agora-operated route applies",
+        "must prove direct financial impact on OP Stack or Optimism protocol"
+      ],
+      "blockers": [
+        "third-party systems",
+        "browser extension testing",
+        "phishing/social engineering",
+        "Agora-operated vote/atlas route unless direct protocol financial impact"
+      ],
+      "routing": "route_gate_required_before_any_browser_work",
+      "priority": 25
+    },
+    {
+      "filter_id": "olf-008",
+      "candidate_class": "Protocol economic/governance attack",
+      "example_assets": [
+        "Primacy of Impact placeholder",
+        "PolicyEngineStaking"
+      ],
+      "allowed_local_work": [
+        "impact-classification memo"
+      ],
+      "promotion_requirements": [
+        "must prove direct code bug and not basic economic/governance/Sybil/centralization risk"
+      ],
+      "blockers": [
+        "51% attack",
+        "basic economic attack",
+        "governance attack",
+        "Sybil",
+        "centralization risk",
+        "lack of liquidity"
+      ],
+      "routing": "hard_stop_unless_direct_code_bug",
+      "priority": 15
+    },
+    {
+      "filter_id": "olf-009",
+      "candidate_class": "Local proof-ready candidate",
+      "example_assets": [
+        "Any in-scope Optimism asset after filters olf-001 through olf-008"
+      ],
+      "allowed_local_work": [
+        "write local review memo",
+        "write PoC plan",
+        "prepare report draft locally",
+        "record no-side-effect validation"
+      ],
+      "promotion_requirements": [
+        "asset in scope",
+        "impact in scope",
+        "duplicate matrix passed",
+        "quality gate passed",
+        "local PoC plan is runnable",
+        "no prohibited testing",
+        "no submission without exact approval"
+      ],
+      "blockers": [
+        "missing any required gate",
+        "external side effect required"
+      ],
+      "routing": "promote_to_local_candidate_packet_only",
+      "priority": 80
+    }
+  ],
+  "summary": {
+    "filter_count": 9,
+    "hard_stop_or_near_hard_stop_count": 5,
+    "local_review_allowed_count": 3,
+    "submission_ready_count": 0,
+    "highest_priority_allowed_route": "Optimism smart-contract invariant review",
+    "next_action": "Future agent should create a single candidate packet using olf-001 or olf-009 only after selecting one asset and proving duplicate/quality gate clearance."
+  },
+  "boundary": {
+    "report_only": true,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "runtime_starts": 0,
+    "security_tests": false,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}

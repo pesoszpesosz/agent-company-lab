@@ -1,0 +1,25 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-quest-command-strips-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-quest-command-strips-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-quest-command-strips-v1-20260619",
+  "title": "Command Cockpit Quest Command Strips",
+  "createdAt": "2026-06-19T10:50:20Z",
+  "lane": "platform_engineering",
+  "status": "completed",
+  "summary": "Compressed the first Overview Quest module's support cards into command strips inside the Command Cockpit so the selected lane shows state without becoming another tall report.",
+  "proof": [
+    "Scoped the Quest support compression to the Command Cockpit so the fuller Quest cockpit remains available elsewhere.",
+    "Reduced Quest signal cell spacing, min-height, and padding to make the status row read like a compact HUD strip.",
+    "Reduced Next Move and Current Gate cards to short command strips and hid long support copy only in the Cockpit.",
+    "Compacted quick action buttons so PATH, LOG, GAME, COM, and TRL stay available without adding vertical weight.",
+    "Updated README, index marker, snapshot generation, regression floors, and trace metadata so the standalone atlas records the Quest Command Strips unlock."
+  ],
+  "files": [
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "tests/test_agent_company_atlas_overview_stage_dock.py",
+    "tests/test_agent_company_atlas_snapshot_json.py"
+  ]
+}

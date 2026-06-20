@@ -1,0 +1,17 @@
+{
+  "fixture_row_count": 6,
+  "generated_utc": "2026-06-17T22:12:32Z",
+  "lane_id": "security_bounty_private_reports",
+  "next_action": "Only after explicit approval, materialize a local patch file and run local upstream tests; do not submit or test live targets.",
+  "recommended_first_patch": "Add the assertion after line 1332 in test_finalizeWithdrawalTransaction_noTxData_succeeds, then repeat across failed-target, gas-estimation revert, insufficient-gas revert, reentrancy, and external-proof paths.",
+  "schema_version": "agent_company.optimism_portal_l2sender_fixture_plan_report.v1",
+  "source_hashes": {
+    "OptimismPortal2.sol": "B541EF7166AF8CD177F64324571E642D9C511AB8C7441268B096954C5F3E464F",
+    "OptimismPortal2.t.sol": "FF9721FAD3CED4B7FBE7CE1B008EBD41897C2B3457F1D4E45EC0C209A28E3935"
+  },
+  "source_snapshot_count": 2,
+  "status": "report_only_fixture_plan_no_patch_no_testing_no_submission",
+  "submission_ready_count": 0,
+  "task_id": "task-optimism-portal-l2sender-fixture-plan-v1-20260618",
+  "title": "OptimismPortal l2Sender Postcondition Fixture Plan v1"
+}

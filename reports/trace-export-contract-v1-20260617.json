@@ -1,0 +1,147 @@
+{
+  "schema_version": "agent_company.trace_export_contract.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "source_database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "target_backends": [
+    "local_jsonl",
+    "opentelemetry_preview",
+    "langfuse_preview",
+    "phoenix_preview"
+  ],
+  "redaction_policy": {
+    "deny_metadata_keys": [
+      "password",
+      "secret",
+      "token",
+      "cookie",
+      "authorization",
+      "api_key",
+      "private_key",
+      "seed_phrase",
+      "otp",
+      "payment_details"
+    ],
+    "deny_value_patterns": [
+      "sk-",
+      "xox",
+      "ghp_",
+      "gho_",
+      "AIza",
+      "BEGIN PRIVATE KEY",
+      "seed phrase",
+      "set-cookie:",
+      "authorization:"
+    ],
+    "allowed_export_fields": [
+      "event_id",
+      "trace_id",
+      "span_id",
+      "parent_span_id",
+      "lane_id",
+      "task_id",
+      "agent_id",
+      "event_type",
+      "event_time",
+      "span_kind",
+      "runtime",
+      "api_calls",
+      "external_side_effects",
+      "summary_redacted",
+      "artifact_ref",
+      "attributes"
+    ],
+    "path_policy": "local_paths_allowed_no_private_file_contents"
+  },
+  "export_spans": [
+    {
+      "event_id": "trace-central-outbox-history-v1-20260617",
+      "trace_id": "trace-central-outbox-history-v1-20260617",
+      "span_id": "trace-central-outbox-history-v1-20260617",
+      "parent_span_id": null,
+      "lane_id": "platform_engineering",
+      "task_id": "task-agent-company-central-outbox-history-v1-20260617",
+      "agent_id": "recovered-profitable-edge-infra",
+      "event_type": "local_infrastructure_contract_registered",
+      "event_time": "2026-06-16T21:07:35Z",
+      "span_kind": "ARTIFACT",
+      "runtime": "python_stdlib",
+      "api_calls": false,
+      "external_side_effects": false,
+      "summary_redacted": "Central outbox/history v1 contract, fixture, and validator establish replayable manager/service-worker communication before external durable runtimes or A2A endpoints.",
+      "artifact_ref": "E:\\agent-company-lab\\reports\\agent-company-central-outbox-history-v1-20260617.md",
+      "attributes": {
+        "messages_checked": 3,
+        "failed_count": 0,
+        "source": "codex",
+        "export_policy": "local_preview_only"
+      }
+    },
+    {
+      "event_id": "trace-agent-company-deep-research-wave10-20260617",
+      "trace_id": "trace-agent-company-wave10-20260617",
+      "span_id": "trace-agent-company-deep-research-wave10-20260617",
+      "parent_span_id": null,
+      "lane_id": "platform_engineering",
+      "task_id": "task-agent-company-deep-research-wave10-20260617",
+      "agent_id": "recovered-profitable-edge-infra",
+      "event_type": "source_backed_research_wave_registered",
+      "event_time": "2026-06-16T21:05:12Z",
+      "span_kind": "SOURCE_REFRESH",
+      "runtime": "codex_web_and_github_public",
+      "api_calls": false,
+      "external_side_effects": false,
+      "summary_redacted": "Wave 10 current-source infrastructure radar over 21 GitHub repositories and official docs with local-only build recommendations.",
+      "artifact_ref": "E:\\agent-company-lab\\reports\\agent-company-deep-research-wave10-20260617.md",
+      "attributes": {
+        "repo_count": 21,
+        "source": "codex",
+        "export_policy": "local_preview_only"
+      }
+    },
+    {
+      "event_id": "trace-evidence-algora-candidate-refresh-fixture-check-20260616",
+      "trace_id": "trace-executable-local-proof-wave-20260616",
+      "span_id": "trace-evidence-algora-candidate-refresh-fixture-check-20260616",
+      "parent_span_id": null,
+      "lane_id": "paid_code_bounties",
+      "task_id": "task-algora-fixture-checker-20260616",
+      "agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "event_type": "executable_local_proof_registered",
+      "event_time": "2026-06-16T20:59:23Z",
+      "span_kind": "EVALUATOR",
+      "runtime": "python_stdlib",
+      "api_calls": false,
+      "external_side_effects": false,
+      "summary_redacted": "No-network Algora fixture checker validates candidate rows with zero failures and keeps live Algora/GitHub/public/payment actions blocked.",
+      "artifact_ref": "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-candidate-refresh-fixture-check-20260616.json",
+      "attributes": {
+        "lane_family": "paid_code_bounties",
+        "source": "codex",
+        "export_policy": "local_preview_only"
+      }
+    },
+    {
+      "event_id": "trace-evidence-arc-toy-harness-run-20260616",
+      "trace_id": "trace-executable-local-proof-wave-20260616",
+      "span_id": "trace-evidence-arc-toy-harness-run-20260616",
+      "parent_span_id": null,
+      "lane_id": "ai_ml_competitions",
+      "task_id": "task-arc-toy-harness-runner-20260616",
+      "agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "event_type": "executable_local_proof_registered",
+      "event_time": "2026-06-16T20:59:23Z",
+      "span_kind": "EVALUATOR",
+      "runtime": "python_stdlib",
+      "api_calls": false,
+      "external_side_effects": false,
+      "summary_redacted": "Standard-library synthetic ARC harness solves local cases with zero failures and no official/gated data.",
+      "artifact_ref": "E:\\agent-company-lab\\reports\\ai-ml-competitions\\arc-toy-harness-run-20260616.json",
+      "attributes": {
+        "lane_family": "ai_ml_competitions",
+        "source": "codex",
+        "export_policy": "local_preview_only"
+      }
+    }
+  ],
+  "external_side_effects": false
+}

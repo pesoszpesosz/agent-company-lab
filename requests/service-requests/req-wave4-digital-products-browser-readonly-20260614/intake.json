@@ -1,0 +1,8 @@
+{
+  "allowed_read_scope": "Public marketplace/category pages only. Capture product formats, pricing patterns, buyer problem signals, creator/listing requirements, fees, and payment/account gates.",
+  "evidence_needed": "A local digital-product opportunity shortlist with product idea, build artifact, marketplace terms/payment gates, and first local prototype task.",
+  "forbidden_actions": "No login, signup, listing creation, purchase, payment setup, message, review, upload, or public promotion.",
+  "lane_id": "digital_products_templates_plugins",
+  "session_sensitivity": "public_read_only",
+  "target_url": "https://gumroad.com/discover"
+}

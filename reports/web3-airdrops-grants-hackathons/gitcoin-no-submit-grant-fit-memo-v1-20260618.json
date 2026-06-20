@@ -1,0 +1,203 @@
+{
+  "boundary": {
+    "allo_profile_or_pool_created": false,
+    "browser_sessions_started": 0,
+    "donations_checkouts_matching_claims_or_payouts": 0,
+    "external_side_effects": 0,
+    "gitcoin_account_or_login": false,
+    "github_oauth_or_credentials_used": false,
+    "grant_applications_submitted": 0,
+    "kyc_or_identity_verification_started": false,
+    "model_mcp_or_external_api_calls": 0,
+    "passport_or_stamps_connected": false,
+    "public_posts_or_contribution_solicitation": 0,
+    "service_requests_mutated": 0,
+    "tag_requests_or_round_applications": 0,
+    "wallet_connected_or_transaction_signed": false,
+    "workers_or_runtimes_started": 0
+  },
+  "candidate_project": {
+    "budget_or_use_of_funds": [
+      {
+        "amount_usd": 1200,
+        "category": "documentation_and_sanitization",
+        "rationale": "Convert local infrastructure into public-safe docs and examples."
+      },
+      {
+        "amount_usd": 900,
+        "category": "fixture_and_test_packaging",
+        "rationale": "Prepare reproducible local-only examples and test harnesses."
+      },
+      {
+        "amount_usd": 600,
+        "category": "maintenance_and_review",
+        "rationale": "Keep gate templates and docs current for one round cycle."
+      }
+    ],
+    "deliverables": [
+      "Open a read-only architecture report describing the lane/agent/task/artifact/outcome/trace/service-request model.",
+      "Publish local-only safety-gate templates for account, KYC, wallet, marketplace, bounty, and trading workflows after explicit approval.",
+      "Package reproducible fixture/checker examples for prediction markets, bounty programs, grants, and digital products using synthetic or saved public rows.",
+      "Document integrity checks for service-worker chain, egress chain, coverage, and artifact traceability."
+    ],
+    "impact_metrics": [
+      "number_of_public_gate_templates",
+      "number_of_reproducible_fixture_checkers",
+      "number_of_integrity_checks",
+      "number_of_adoptable_agent_company_schema_docs",
+      "downstream_builder_feedback_after_public_release"
+    ],
+    "problem_statement": "Small builders need safe, auditable agent-company infrastructure for discovering online revenue paths without accidental account, payment, wallet, public-post, or security-testing side effects.",
+    "project_name": "Agent Company Public-Good Infrastructure Lab",
+    "project_owner": "local_operator_review_required",
+    "public_promotion_plan_local_only": "Draft only; no public campaign, contribution solicitation, donor coordination, or quid pro quo.",
+    "roadmap": [
+      "Week 1: extract sanitized architecture docs and fixture schemas from the local lab.",
+      "Week 2: prepare grant-safe public repo/docs with no private credentials, no paid opportunity targets, and no platform-sensitive data.",
+      "Week 3: add examples and acceptance tests for local-only gates.",
+      "Week 4: publish impact report and maintenance plan if approved."
+    ],
+    "target_domain_fit": "developer_tooling_and_infrastructure"
+  },
+  "decision": "grant_fit_memo_only_no_account_no_wallet_no_submit_no_public_campaign",
+  "duplicate_or_prior_funding_sweep": [
+    "No live search or browser action performed in this packet.",
+    "Must check current Gitcoin rounds, prior local grant packets, public repo status, and any prior funding before submission."
+  ],
+  "evidence_assets": [
+    {
+      "path": "E:\\agent-company-lab\\reports\\agent-company-money-path-coverage-audit-latest.md",
+      "sha256": "c07d4bcf9f2cab5b99895c9dae224a59df9812b3b3035744c5135e47a829e9bc",
+      "size_bytes": 2377
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\control-plane-status-latest.md",
+      "sha256": "824096382cfd1f22351b8b56be0cd7ca00c20d83e834ed78aca79309e5defff7",
+      "size_bytes": 120415
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md",
+      "sha256": "7401cd6799087c29e99aa2719ee30ab154075ffa35f8351724ff407b0fba3373",
+      "size_bytes": 25884
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\egress-route-chain-integrity-audit-v1-20260618.md",
+      "sha256": "4ff55c3f8fd1925ed34ecdd059c831c4ca4e075c004dd0fc9539b9c59aaedb0a",
+      "size_bytes": 2998
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\artifacts-latest.md",
+      "sha256": "d0db547a019409e352d18b78a8dede06bd245f18b1e1b742b3e3c4b8ca480639",
+      "size_bytes": 44299
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\trace-events-latest.md",
+      "sha256": "ae9bad186da2a6d6101d33254fb714c9ed8143330ab1bf3c1678ecc715c743c6",
+      "size_bytes": 87187
+    }
+  ],
+  "fit_rubric": [
+    {
+      "factor": "round_domain_fit",
+      "good": "project clearly maps to an open Gitcoin domain such as developer tooling or public goods",
+      "points": 20
+    },
+    {
+      "factor": "public_good_credibility",
+      "good": "work is open, non-extractive, and useful to a broader ecosystem",
+      "points": 15
+    },
+    {
+      "factor": "deliverable_clarity",
+      "good": "milestones, artifacts, and acceptance evidence are concrete",
+      "points": 15
+    },
+    {
+      "factor": "impact_metrics",
+      "good": "usage, adoption, developer impact, or maintenance metrics are measurable",
+      "points": 10
+    },
+    {
+      "factor": "budget_reasonableness",
+      "good": "use of funds is specific and proportional",
+      "points": 10
+    },
+    {
+      "factor": "approval_readiness",
+      "good": "rules, tags, and review requirements are addressed before submission",
+      "points": 10
+    },
+    {
+      "factor": "identity_gate_clarity",
+      "good": "KYC, GitHub, Passport, and anti-Sybil gates are known and not bypassed",
+      "points": 10
+    },
+    {
+      "factor": "no_collusion_risk",
+      "good": "no quid pro quo, fake contributors, donation incentives, or coordinated Sybil behavior",
+      "points": 10
+    }
+  ],
+  "generated_at": "2026-06-18T09:24:06Z",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "next_local_action": "Prepare sanitized public-good repo outline and exact application draft fields as local files only. Do not log in, use GitHub OAuth, start KYC/Passport, connect wallets, create Allo profiles/pools, submit grants/tag requests, donate/checkout/claim payouts, solicit contributors, post publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
+  "no_submit_approval_packet": {
+    "allowed_to_connect_wallet_or_sign_transaction": false,
+    "allowed_to_create_allo_profile_or_pool": false,
+    "allowed_to_donate_checkout_claim_or_payout": false,
+    "allowed_to_launch_public_campaign": false,
+    "allowed_to_login_or_create_account": false,
+    "allowed_to_start_kyc_or_passport": false,
+    "allowed_to_submit_grant_or_tag_request": false,
+    "allowed_to_use_github_oauth": false,
+    "minimum_next_approval_scope": "Approve exact round/domain, sanitized public-good repo/artifacts, grant rules, KYC/Passport/GitHub/wallet posture, budget, impact metrics, duplicate funding sweep, and public-campaign policy before any platform action."
+  },
+  "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+  "required_gates": [
+    "specific_round_domain_and_deadline_review",
+    "grant_rules_and_participation_policy_review",
+    "project_public_good_and_open_source_scope_review",
+    "budget_use_of_funds_review",
+    "impact_metric_and_prior_work_evidence_review",
+    "duplicate_prior_funding_and_eligibility_sweep",
+    "github_oauth_or_gitcoin_account_approval",
+    "kyc_passport_personhood_or_anti_sybil_approval",
+    "wallet_transaction_allo_profile_or_pool_approval",
+    "submission_tag_request_public_campaign_approval"
+  ],
+  "round_fit": {
+    "fit_reasons": [
+      "The lab is developer tooling and public-good infrastructure if sanitized and released as open docs/templates.",
+      "Existing evidence assets show repeatable local-only gating, traces, and integrity checks.",
+      "The project can help builders avoid unsafe account, wallet, bounty, marketplace, and trading actions."
+    ],
+    "fit_risks": [
+      "Grant round/domain must be verified immediately before any application.",
+      "Private opportunity data and local operator details must be removed before public release.",
+      "KYC, Passport, GitHub OAuth, wallet, Allo, and anti-Sybil routes require human approval."
+    ],
+    "fit_score": 79,
+    "target_round_or_domain": "Gitcoin Grants developer tooling / infrastructure public-good route"
+  },
+  "rules_checklist": [
+    "round_not_open_or_domain_mismatch",
+    "project_not_a_public_good_or_value_claim_unclear",
+    "grant_rules_or_participation_policy_unreviewed",
+    "requires_gitcoin_or_github_login_without_approval",
+    "requires_kyc_passport_identity_or_personhood_verification_without_approval",
+    "requires_wallet_connection_transaction_signature_or_onchain_profile",
+    "requires_payment_donation_checkout_matching_claim_or_payout",
+    "requires_public_submission_upload_or_tag_request_without_approval",
+    "requires_public_campaign_contribution_solicitation_or_quid_pro_quo",
+    "collusion_sybil_or_fake_contributor_risk",
+    "budget_deliverables_or_impact_metrics_too_vague",
+    "duplicate_prior_funding_or_eligibility_conflict_unresolved",
+    "local_draft_cannot_produce_required_evidence"
+  ],
+  "schema_version": "web3_grants.gitcoin_no_submit_grant_fit_memo.v1",
+  "source_proof_path": "E:\\agent-company-lab\\reports\\money-path-lane-scout-packets\\gitcoin-grant-fit-local-proof.json",
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-gitcoin_grants-20260618",
+  "status": "gitcoin_no_submit_grant_fit_memo_ready_local_only",
+  "task_id": "task-gitcoin-no-submit-grant-fit-memo-v1-20260618"
+}

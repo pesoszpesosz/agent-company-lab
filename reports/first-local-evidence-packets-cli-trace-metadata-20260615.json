@@ -1,0 +1,17 @@
+{
+  "agent_id": "recovered-profitable-edge-infra",
+  "all_evidence_packets_local_only": true,
+  "all_target_lanes_have_evidence_after": true,
+  "evidence_packet_count": 6,
+  "evidence_rows_inserted_or_updated": 6,
+  "external_side_effects": false,
+  "generated_at": "2026-06-15T17:15:06.479942+00:00",
+  "lane_id": "platform_engineering",
+  "latest_evidence_gap_count": 0,
+  "next_action": "Create narrow manager tasks for first approved local proof work, starting with lanes that still have parked service requests.",
+  "schema_version": "agent_company.first_local_evidence_packets_cli_trace_metadata.v1",
+  "source_spec_gap_count_after": 0,
+  "task_id": "task-first-local-evidence-packets-cli-20260615",
+  "zero_evidence_lane_count_after": 0,
+  "zero_evidence_lane_count_before": 6
+}

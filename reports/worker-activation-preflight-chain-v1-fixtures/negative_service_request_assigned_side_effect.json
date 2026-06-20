@@ -1,0 +1,30 @@
+{
+  "activation_preflight_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-activation-preflight-v1-20260617.json",
+  "chain_id": "chain-negative-service_request_assigned_side_effect",
+  "chain_verdict": "preflight_passed_registration_blocked",
+  "egress_validation_path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
+  "identity_validation_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
+  "lane_id": "platform_engineering",
+  "mcp_registry_validation_path": "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-v1-validation-20260617.json",
+  "mcp_tool_call_allowed": false,
+  "operator_decision_status": "report_only",
+  "registration_allowed": false,
+  "runtime_boundary": {
+    "account_actions": false,
+    "browser_sessions_started": 0,
+    "credentials_created": false,
+    "external_side_effects": false,
+    "mcp_servers_started": 0,
+    "mcp_tool_calls": false,
+    "model_api_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "report_only": true,
+    "service_requests_assigned": 1,
+    "wallet_actions": false,
+    "worker_pools_registered": 0,
+    "worker_starts": 0
+  },
+  "worker_pool_id": "service-worker-local-runtime-adapter-pool",
+  "worker_start_allowed": false
+}

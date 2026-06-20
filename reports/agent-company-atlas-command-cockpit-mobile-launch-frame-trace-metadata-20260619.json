@@ -1,0 +1,23 @@
+{
+  "traceId": "trace-agent-company-atlas-command-cockpit-mobile-launch-frame-v1-20260619",
+  "taskId": "task-agent-company-atlas-command-cockpit-mobile-launch-frame-v1-20260619",
+  "eventId": "event-agent-company-atlas-command-cockpit-mobile-launch-frame-v1-20260619",
+  "title": "Command Cockpit Mobile Launch Frame",
+  "createdAt": "2026-06-19T12:11:20Z",
+  "laneId": "platform_engineering",
+  "status": "completed",
+  "summary": "Trimmed the mobile Command Cockpit chrome into a first-screen launch frame with a smaller brand row, hidden snapshot pill, thinner deck rail, compact path strip, and mission stage visible in the first phone viewport.",
+  "proof": [
+    "Added a scoped mobile launch-frame marker and CSS rules for Command Cockpit only.",
+    "Hid redundant mobile snapshot and lane-panel header chrome while preserving a compact horizontal path selector.",
+    "Verified the live 390x760 cockpit: path strip y=102, HUD y=156, mission stage y=334, stage bottom=748, and no horizontal document overflow."
+  ],
+  "files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_command_workspace_first.py",
+    "tools/generate_visual_dashboard_snapshot.py",
+    "reports/agent-company-atlas-command-cockpit-mobile-launch-frame-trace-metadata-20260619.json"
+  ]
+}

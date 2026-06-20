@@ -1,0 +1,43 @@
+{
+  "id": "trace-agent-company-atlas-path-viewport-stage-v1-20260618",
+  "task_id": "task-agent-company-atlas-path-viewport-stage-v1-20260618",
+  "event_id": "trace-atlas_path_viewport_stage_added-20260618",
+  "artifact_id": "artifact-agent-company-atlas-path-viewport-stage-trace-metadata-20260618",
+  "date": "2026-06-18",
+  "lane": "platform_engineering",
+  "title": "Path Viewport Stage",
+  "summary": "Compacted the direct Path view by removing redundant Path Map chrome and tightening path-only detail padding so Mission Glance, the Stage Ribbon, and Core Deck controls start higher in the first viewport.",
+  "files": [
+    "web/app.js",
+    "web/styles.css",
+    "web/index.html",
+    "web/README.md",
+    "tests/test_agent_company_atlas_path_viewport_stage.py"
+  ],
+  "browser_verification": {
+    "url": "http://127.0.0.1:5177/index.html?verify=path-viewport-stage-20260618#lane=platform_engineering&view=path&deck=command",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "body_deck": "command",
+    "overflow_x": 0,
+    "detail_content_padding_top": "12px",
+    "path_viewport_section_y": 410,
+    "path_viewport_header_display": "none",
+    "path_map_board_y": 418,
+    "path_mission_glance_y": 429,
+    "path_stage_ribbon_y": 578,
+    "path_stage_ribbon_bottom": 652,
+    "path_core_deck_y": 662,
+    "path_core_tabs_y": 670,
+    "path_core_tabs_bottom": 717
+  },
+  "verification": [
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_viewport_stage.py -q failed before implementation because the path viewport wrapper was missing.",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_viewport_stage.py -q",
+    "python -m pytest E:\\agent-company-lab\\tests\\test_agent_company_atlas_compact_mission_stage.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_stage_ribbon.py E:\\agent-company-lab\\tests\\test_agent_company_atlas_path_core_deck.py -q",
+    "node --check E:\\agent-company-lab\\web\\app.js",
+    "Browser runtime: direct Command/Path route shows the hidden redundant Path Map header, mission stage at y=418, Stage Ribbon bottom at 652, Core Deck controls visible by y=717, and overflow 0."
+  ]
+}

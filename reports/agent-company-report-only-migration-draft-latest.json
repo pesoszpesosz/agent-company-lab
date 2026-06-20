@@ -1,0 +1,273 @@
+{
+  "apply_gate_count": 7,
+  "apply_gates": [
+    "operator_approval_required_before_sql_execution",
+    "backup_agent_company_sqlite_before_apply",
+    "run_migration_against_throwaway_copy_first",
+    "confirm_no_service_request_state_mutation",
+    "confirm_no_worker_threads_started",
+    "confirm_no_browser_account_wallet_payment_public_or_security_actions",
+    "record_post_apply_integrity_report_before_next_layer"
+  ],
+  "create_statement_count": 10,
+  "create_statements": [
+    "CREATE TABLE IF NOT EXISTS agent_threads (\n  thread_id TEXT PRIMARY KEY NOT NULL,\n  department_id TEXT,\n  lane_id TEXT,\n  role_id TEXT,\n  owner_agent_id TEXT,\n  state TEXT,\n  current_task_id TEXT,\n  service_request_id TEXT,\n  handoff_status TEXT,\n  last_report_path TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS departments (\n  department_id TEXT PRIMARY KEY NOT NULL,\n  manager_role_id TEXT,\n  purpose TEXT,\n  status TEXT,\n  default_lane_id TEXT,\n  approval_policy_id TEXT,\n  queue_limit INTEGER,\n  created_at TEXT,\n  updated_at TEXT,\n  last_reviewed_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS money_paths (\n  money_path_id TEXT PRIMARY KEY NOT NULL,\n  department_id TEXT,\n  name TEXT,\n  category TEXT,\n  payout_model REAL,\n  expected_value_score REAL,\n  legality_status TEXT,\n  capital_required REAL,\n  proofability_score REAL,\n  gate_level TEXT,\n  status TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS opportunity_leads (\n  lead_id TEXT PRIMARY KEY NOT NULL,\n  money_path_id TEXT,\n  source_url TEXT,\n  source_name TEXT,\n  payout_min REAL,\n  payout_max REAL,\n  currency TEXT,\n  account_required INTEGER,\n  risk_score REAL,\n  competition_score REAL,\n  proof_artifact_path TEXT,\n  next_action TEXT,\n  status TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS worker_pool_interfaces (\n  pool_id TEXT PRIMARY KEY NOT NULL,\n  department_id TEXT,\n  worker_role_id TEXT,\n  allowed_actions TEXT,\n  forbidden_actions TEXT,\n  input_schema TEXT,\n  output_schema TEXT,\n  approval_required INTEGER,\n  max_parallel_threads INTEGER,\n  status TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS approval_gates (\n  gate_id TEXT PRIMARY KEY NOT NULL,\n  gate_type TEXT,\n  department_id TEXT,\n  requested_by_thread_id TEXT,\n  service_request_id TEXT,\n  scope TEXT,\n  risk_summary TEXT,\n  approval_state TEXT,\n  approved_by TEXT,\n  expires_at TEXT,\n  rollback_plan TEXT,\n  decision_note TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS evidence_packets (\n  packet_id TEXT PRIMARY KEY NOT NULL,\n  lane_id TEXT,\n  department_id TEXT,\n  source_task_id TEXT,\n  source_path TEXT,\n  source_url TEXT,\n  confidence TEXT,\n  status TEXT,\n  summary TEXT,\n  next_action TEXT,\n  reviewer_note TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS task_handoffs (\n  handoff_id TEXT PRIMARY KEY NOT NULL,\n  from_thread_id TEXT,\n  to_thread_id TEXT,\n  task_id TEXT,\n  service_request_id TEXT,\n  handoff_type TEXT,\n  payload_path TEXT,\n  status TEXT,\n  response_path TEXT,\n  created_at TEXT,\n  updated_at TEXT,\n  completed_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS experiment_runs (\n  run_id TEXT PRIMARY KEY NOT NULL,\n  money_path_id TEXT,\n  department_id TEXT,\n  experiment_type TEXT,\n  hypothesis TEXT,\n  input_path TEXT,\n  output_path TEXT,\n  metric_json TEXT,\n  result_state TEXT,\n  kill_reason TEXT,\n  started_at TEXT,\n  completed_at TEXT,\n  created_at TEXT\n);",
+    "CREATE TABLE IF NOT EXISTS roi_ledger (\n  roi_entry_id TEXT PRIMARY KEY NOT NULL,\n  money_path_id TEXT,\n  lead_id TEXT,\n  task_id TEXT,\n  expected_value_usd REAL,\n  realized_value_usd REAL,\n  cost_usd REAL,\n  minutes_spent INTEGER,\n  payout_probability REAL,\n  status TEXT,\n  decision_reason TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);"
+  ],
+  "evidence_rows_inserted_or_updated": 1,
+  "generated_utc": "2026-06-16T11:27:18Z",
+  "index_statement_count": 20,
+  "index_statements": [
+    "CREATE INDEX IF NOT EXISTS idx_agent_threads_department_state ON agent_threads (department_id, state);",
+    "CREATE INDEX IF NOT EXISTS idx_agent_threads_owner_state ON agent_threads (owner_agent_id, state);",
+    "CREATE INDEX IF NOT EXISTS idx_departments_status_manager ON departments (status, manager_role_id);",
+    "CREATE INDEX IF NOT EXISTS idx_departments_default_lane ON departments (default_lane_id);",
+    "CREATE INDEX IF NOT EXISTS idx_money_paths_department_status ON money_paths (department_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_money_paths_category_score ON money_paths (category, expected_value_score);",
+    "CREATE INDEX IF NOT EXISTS idx_opportunity_leads_money_path_status ON opportunity_leads (money_path_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_opportunity_leads_risk_payout ON opportunity_leads (risk_score, payout_max);",
+    "CREATE INDEX IF NOT EXISTS idx_worker_pool_interfaces_department_status ON worker_pool_interfaces (department_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_worker_pool_interfaces_approval_status ON worker_pool_interfaces (approval_required, status);",
+    "CREATE INDEX IF NOT EXISTS idx_approval_gates_state_type ON approval_gates (approval_state, gate_type);",
+    "CREATE INDEX IF NOT EXISTS idx_approval_gates_service_request_state ON approval_gates (service_request_id, approval_state);",
+    "CREATE INDEX IF NOT EXISTS idx_evidence_packets_department_status ON evidence_packets (department_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_evidence_packets_source_task ON evidence_packets (source_task_id);",
+    "CREATE INDEX IF NOT EXISTS idx_task_handoffs_to_thread_status ON task_handoffs (to_thread_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_task_handoffs_task_status ON task_handoffs (task_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_experiment_runs_money_path_result ON experiment_runs (money_path_id, result_state);",
+    "CREATE INDEX IF NOT EXISTS idx_experiment_runs_department_started ON experiment_runs (department_id, started_at);",
+    "CREATE INDEX IF NOT EXISTS idx_roi_ledger_money_path_status ON roi_ledger (money_path_id, status);",
+    "CREATE INDEX IF NOT EXISTS idx_roi_ledger_value_probability ON roi_ledger (expected_value_usd, payout_probability);"
+  ],
+  "lane_evidence_rows_after": 137,
+  "lane_evidence_rows_before": 136,
+  "live_tasks_completed": 1,
+  "live_tasks_created": 1,
+  "local_decision": "agent_company_report_only_migration_draft_ready_for_apply_preflight_packet",
+  "migration_draft_count": 1,
+  "migration_evidence_id": "agent-company-report-only-migration-draft-20260616",
+  "migration_lane_id": "platform_engineering",
+  "migration_task_id": "task-agent-company-report-only-migration-draft-20260616",
+  "next_action": "Draft the apply-preflight packet next; do not execute migration SQL until the operator explicitly approves an apply step.",
+  "recommended_default": "draft_apply_preflight_next_without_executing_migration_sql",
+  "rollback_statement_count": 30,
+  "rollback_statements": [
+    "DROP INDEX IF EXISTS idx_agent_threads_department_state;",
+    "DROP INDEX IF EXISTS idx_agent_threads_owner_state;",
+    "DROP TABLE IF EXISTS agent_threads;",
+    "DROP INDEX IF EXISTS idx_departments_status_manager;",
+    "DROP INDEX IF EXISTS idx_departments_default_lane;",
+    "DROP TABLE IF EXISTS departments;",
+    "DROP INDEX IF EXISTS idx_money_paths_department_status;",
+    "DROP INDEX IF EXISTS idx_money_paths_category_score;",
+    "DROP TABLE IF EXISTS money_paths;",
+    "DROP INDEX IF EXISTS idx_opportunity_leads_money_path_status;",
+    "DROP INDEX IF EXISTS idx_opportunity_leads_risk_payout;",
+    "DROP TABLE IF EXISTS opportunity_leads;",
+    "DROP INDEX IF EXISTS idx_worker_pool_interfaces_department_status;",
+    "DROP INDEX IF EXISTS idx_worker_pool_interfaces_approval_status;",
+    "DROP TABLE IF EXISTS worker_pool_interfaces;",
+    "DROP INDEX IF EXISTS idx_approval_gates_state_type;",
+    "DROP INDEX IF EXISTS idx_approval_gates_service_request_state;",
+    "DROP TABLE IF EXISTS approval_gates;",
+    "DROP INDEX IF EXISTS idx_evidence_packets_department_status;",
+    "DROP INDEX IF EXISTS idx_evidence_packets_source_task;",
+    "DROP TABLE IF EXISTS evidence_packets;",
+    "DROP INDEX IF EXISTS idx_task_handoffs_to_thread_status;",
+    "DROP INDEX IF EXISTS idx_task_handoffs_task_status;",
+    "DROP TABLE IF EXISTS task_handoffs;",
+    "DROP INDEX IF EXISTS idx_experiment_runs_money_path_result;",
+    "DROP INDEX IF EXISTS idx_experiment_runs_department_started;",
+    "DROP TABLE IF EXISTS experiment_runs;",
+    "DROP INDEX IF EXISTS idx_roi_ledger_money_path_status;",
+    "DROP INDEX IF EXISTS idx_roi_ledger_value_probability;",
+    "DROP TABLE IF EXISTS roi_ledger;"
+  ],
+  "runtime_boundary": {
+    "account_actions": false,
+    "api_calls": false,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "migration_sql_executed": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "real_money_actions": false,
+    "security_testing_actions": false,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "tables_created": 0,
+    "wallet_actions": false,
+    "worker_starts": 0
+  },
+  "schema_version": "agent_company.report_only_migration_draft.v1",
+  "source_schema_plan_evidence_id": "agent-company-department-schema-plan-20260616",
+  "source_schema_plan_task_id": "task-agent-company-department-schema-plan-20260616",
+  "summary": "Drafted a report-only migration packet from the department schema plan, including SQL text, validation queries, rollback SQL, and apply gates without executing migration SQL.",
+  "table_migration_count": 10,
+  "table_migrations": [
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS agent_threads (\n  thread_id TEXT PRIMARY KEY NOT NULL,\n  department_id TEXT,\n  lane_id TEXT,\n  role_id TEXT,\n  owner_agent_id TEXT,\n  state TEXT,\n  current_task_id TEXT,\n  service_request_id TEXT,\n  handoff_status TEXT,\n  last_report_path TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_agent_threads_department_state ON agent_threads (department_id, state);",
+        "CREATE INDEX IF NOT EXISTS idx_agent_threads_owner_state ON agent_threads (owner_agent_id, state);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_agent_threads_department_state;",
+        "DROP INDEX IF EXISTS idx_agent_threads_owner_state;",
+        "DROP TABLE IF EXISTS agent_threads;"
+      ],
+      "table": "agent_threads",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM agent_threads;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS departments (\n  department_id TEXT PRIMARY KEY NOT NULL,\n  manager_role_id TEXT,\n  purpose TEXT,\n  status TEXT,\n  default_lane_id TEXT,\n  approval_policy_id TEXT,\n  queue_limit INTEGER,\n  created_at TEXT,\n  updated_at TEXT,\n  last_reviewed_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_departments_status_manager ON departments (status, manager_role_id);",
+        "CREATE INDEX IF NOT EXISTS idx_departments_default_lane ON departments (default_lane_id);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_departments_status_manager;",
+        "DROP INDEX IF EXISTS idx_departments_default_lane;",
+        "DROP TABLE IF EXISTS departments;"
+      ],
+      "table": "departments",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM departments;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS money_paths (\n  money_path_id TEXT PRIMARY KEY NOT NULL,\n  department_id TEXT,\n  name TEXT,\n  category TEXT,\n  payout_model REAL,\n  expected_value_score REAL,\n  legality_status TEXT,\n  capital_required REAL,\n  proofability_score REAL,\n  gate_level TEXT,\n  status TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_money_paths_department_status ON money_paths (department_id, status);",
+        "CREATE INDEX IF NOT EXISTS idx_money_paths_category_score ON money_paths (category, expected_value_score);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_money_paths_department_status;",
+        "DROP INDEX IF EXISTS idx_money_paths_category_score;",
+        "DROP TABLE IF EXISTS money_paths;"
+      ],
+      "table": "money_paths",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM money_paths;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS opportunity_leads (\n  lead_id TEXT PRIMARY KEY NOT NULL,\n  money_path_id TEXT,\n  source_url TEXT,\n  source_name TEXT,\n  payout_min REAL,\n  payout_max REAL,\n  currency TEXT,\n  account_required INTEGER,\n  risk_score REAL,\n  competition_score REAL,\n  proof_artifact_path TEXT,\n  next_action TEXT,\n  status TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_opportunity_leads_money_path_status ON opportunity_leads (money_path_id, status);",
+        "CREATE INDEX IF NOT EXISTS idx_opportunity_leads_risk_payout ON opportunity_leads (risk_score, payout_max);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_opportunity_leads_money_path_status;",
+        "DROP INDEX IF EXISTS idx_opportunity_leads_risk_payout;",
+        "DROP TABLE IF EXISTS opportunity_leads;"
+      ],
+      "table": "opportunity_leads",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM opportunity_leads;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS worker_pool_interfaces (\n  pool_id TEXT PRIMARY KEY NOT NULL,\n  department_id TEXT,\n  worker_role_id TEXT,\n  allowed_actions TEXT,\n  forbidden_actions TEXT,\n  input_schema TEXT,\n  output_schema TEXT,\n  approval_required INTEGER,\n  max_parallel_threads INTEGER,\n  status TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_worker_pool_interfaces_department_status ON worker_pool_interfaces (department_id, status);",
+        "CREATE INDEX IF NOT EXISTS idx_worker_pool_interfaces_approval_status ON worker_pool_interfaces (approval_required, status);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_worker_pool_interfaces_department_status;",
+        "DROP INDEX IF EXISTS idx_worker_pool_interfaces_approval_status;",
+        "DROP TABLE IF EXISTS worker_pool_interfaces;"
+      ],
+      "table": "worker_pool_interfaces",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM worker_pool_interfaces;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS approval_gates (\n  gate_id TEXT PRIMARY KEY NOT NULL,\n  gate_type TEXT,\n  department_id TEXT,\n  requested_by_thread_id TEXT,\n  service_request_id TEXT,\n  scope TEXT,\n  risk_summary TEXT,\n  approval_state TEXT,\n  approved_by TEXT,\n  expires_at TEXT,\n  rollback_plan TEXT,\n  decision_note TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_approval_gates_state_type ON approval_gates (approval_state, gate_type);",
+        "CREATE INDEX IF NOT EXISTS idx_approval_gates_service_request_state ON approval_gates (service_request_id, approval_state);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_approval_gates_state_type;",
+        "DROP INDEX IF EXISTS idx_approval_gates_service_request_state;",
+        "DROP TABLE IF EXISTS approval_gates;"
+      ],
+      "table": "approval_gates",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM approval_gates;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS evidence_packets (\n  packet_id TEXT PRIMARY KEY NOT NULL,\n  lane_id TEXT,\n  department_id TEXT,\n  source_task_id TEXT,\n  source_path TEXT,\n  source_url TEXT,\n  confidence TEXT,\n  status TEXT,\n  summary TEXT,\n  next_action TEXT,\n  reviewer_note TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_evidence_packets_department_status ON evidence_packets (department_id, status);",
+        "CREATE INDEX IF NOT EXISTS idx_evidence_packets_source_task ON evidence_packets (source_task_id);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_evidence_packets_department_status;",
+        "DROP INDEX IF EXISTS idx_evidence_packets_source_task;",
+        "DROP TABLE IF EXISTS evidence_packets;"
+      ],
+      "table": "evidence_packets",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM evidence_packets;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS task_handoffs (\n  handoff_id TEXT PRIMARY KEY NOT NULL,\n  from_thread_id TEXT,\n  to_thread_id TEXT,\n  task_id TEXT,\n  service_request_id TEXT,\n  handoff_type TEXT,\n  payload_path TEXT,\n  status TEXT,\n  response_path TEXT,\n  created_at TEXT,\n  updated_at TEXT,\n  completed_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_task_handoffs_to_thread_status ON task_handoffs (to_thread_id, status);",
+        "CREATE INDEX IF NOT EXISTS idx_task_handoffs_task_status ON task_handoffs (task_id, status);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_task_handoffs_to_thread_status;",
+        "DROP INDEX IF EXISTS idx_task_handoffs_task_status;",
+        "DROP TABLE IF EXISTS task_handoffs;"
+      ],
+      "table": "task_handoffs",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM task_handoffs;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS experiment_runs (\n  run_id TEXT PRIMARY KEY NOT NULL,\n  money_path_id TEXT,\n  department_id TEXT,\n  experiment_type TEXT,\n  hypothesis TEXT,\n  input_path TEXT,\n  output_path TEXT,\n  metric_json TEXT,\n  result_state TEXT,\n  kill_reason TEXT,\n  started_at TEXT,\n  completed_at TEXT,\n  created_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_experiment_runs_money_path_result ON experiment_runs (money_path_id, result_state);",
+        "CREATE INDEX IF NOT EXISTS idx_experiment_runs_department_started ON experiment_runs (department_id, started_at);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_experiment_runs_money_path_result;",
+        "DROP INDEX IF EXISTS idx_experiment_runs_department_started;",
+        "DROP TABLE IF EXISTS experiment_runs;"
+      ],
+      "table": "experiment_runs",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM experiment_runs;"
+    },
+    {
+      "create_statement": "CREATE TABLE IF NOT EXISTS roi_ledger (\n  roi_entry_id TEXT PRIMARY KEY NOT NULL,\n  money_path_id TEXT,\n  lead_id TEXT,\n  task_id TEXT,\n  expected_value_usd REAL,\n  realized_value_usd REAL,\n  cost_usd REAL,\n  minutes_spent INTEGER,\n  payout_probability REAL,\n  status TEXT,\n  decision_reason TEXT,\n  created_at TEXT,\n  updated_at TEXT\n);",
+      "index_statements": [
+        "CREATE INDEX IF NOT EXISTS idx_roi_ledger_money_path_status ON roi_ledger (money_path_id, status);",
+        "CREATE INDEX IF NOT EXISTS idx_roi_ledger_value_probability ON roi_ledger (expected_value_usd, payout_probability);"
+      ],
+      "rollback_statements": [
+        "DROP INDEX IF EXISTS idx_roi_ledger_money_path_status;",
+        "DROP INDEX IF EXISTS idx_roi_ledger_value_probability;",
+        "DROP TABLE IF EXISTS roi_ledger;"
+      ],
+      "table": "roi_ledger",
+      "validation_query": "SELECT COUNT(*) AS row_count FROM roi_ledger;"
+    }
+  ],
+  "task_rows_inserted_by_migration_draft": 1,
+  "tasks_table_rows_after": 229,
+  "tasks_table_rows_before": 228,
+  "validation_queries": [
+    "SELECT COUNT(*) AS row_count FROM agent_threads;",
+    "SELECT COUNT(*) AS row_count FROM departments;",
+    "SELECT COUNT(*) AS row_count FROM money_paths;",
+    "SELECT COUNT(*) AS row_count FROM opportunity_leads;",
+    "SELECT COUNT(*) AS row_count FROM worker_pool_interfaces;",
+    "SELECT COUNT(*) AS row_count FROM approval_gates;",
+    "SELECT COUNT(*) AS row_count FROM evidence_packets;",
+    "SELECT COUNT(*) AS row_count FROM task_handoffs;",
+    "SELECT COUNT(*) AS row_count FROM experiment_runs;",
+    "SELECT COUNT(*) AS row_count FROM roi_ledger;"
+  ],
+  "validation_query_count": 10
+}

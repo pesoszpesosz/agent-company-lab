@@ -1,0 +1,196 @@
+{
+  "schema_version": "agent_company.inngest_event_flow_control_fixture.v1",
+  "generated_utc": "2026-06-17T00:00:00Z",
+  "task_id": "task-inngest-event-flow-control-fixture-v1-20260617",
+  "lane_id": "platform_engineering",
+  "owner_agent_id": "recovered-profitable-edge-infra",
+  "source_urls": [
+    "https://www.inngest.com/docs/events",
+    "https://www.inngest.com/docs/features/events-triggers/event-format",
+    "https://www.inngest.com/docs/guides/flow-control",
+    "https://www.inngest.com/docs/guides/concurrency",
+    "https://www.inngest.com/docs/guides/throttling",
+    "https://www.inngest.com/docs/guides/rate-limiting",
+    "https://www.inngest.com/docs/guides/handling-idempotency"
+  ],
+  "source_outbox_path": "E:\\agent-company-lab\\reports\\agent-company-central-outbox-history-v1-20260617.json",
+  "source_temporal_signal_fixture_path": "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-signal-shape-fixture-v1-20260617.json",
+  "event_namespace": "agent_company",
+  "allowed_event_names": [
+    "agent_company/outbox.artifact_notice",
+    "agent_company/outbox.gate_request",
+    "agent_company/outbox.dispatch",
+    "agent_company/outbox.invalid_public_action"
+  ],
+  "flow_control_policy": {
+    "concurrency": {
+      "limit": 1,
+      "key_expression": "event.data.lane_id",
+      "purpose": "Only one outbox event per lane may be considered for a future runtime function at a time."
+    },
+    "throttle": {
+      "limit": 2,
+      "period": "1m",
+      "key_expression": "event.data.recipient_id",
+      "purpose": "Queue excess local previews rather than creating bursts toward one agent."
+    },
+    "rate_limit": {
+      "limit": 1,
+      "period": "10m",
+      "key_expression": "event.data.service_request_id",
+      "skip_allowed": false,
+      "purpose": "A service-request event requiring human review must not be silently skipped."
+    },
+    "idempotency": {
+      "key_expression": "event.data.message_id + ':' + event.name + ':' + event.data.replay_status",
+      "purpose": "Replay of the same local outbox message must collapse to the same preview event identity."
+    }
+  },
+  "events": [
+    {
+      "event_id": "evt-msg-wave10-central-outbox-build-20260617",
+      "source_message_id": "msg-wave10-central-outbox-build-20260617",
+      "event_name": "agent_company/outbox.artifact_notice",
+      "data": {
+        "message_id": "msg-wave10-central-outbox-build-20260617",
+        "lane_id": "platform_engineering",
+        "task_id": "task-agent-company-central-outbox-history-v1-20260617",
+        "service_request_id": null,
+        "recipient_id": "agent-company-ceo",
+        "recipient_type": "ceo",
+        "message_type": "artifact_notice",
+        "priority": 89,
+        "approval_posture": "local_only",
+        "replay_status": "queued",
+        "risk_gate": "local_only",
+        "idempotency_key": "outbox:msg-wave10-central-outbox-build-20260617:agent_company/outbox.artifact_notice:queued",
+        "allowed_runtime_disposition": "local_preview_only"
+      },
+      "user": {
+        "lane_id": "platform_engineering"
+      },
+      "flow_control": {
+        "concurrency_key": "platform_engineering",
+        "throttle_key": "agent-company-ceo",
+        "rate_limit_key": "none",
+        "skip_allowed": false
+      },
+      "expected_decision": "valid_local_preview_event",
+      "expected_failures": []
+    },
+    {
+      "event_id": "evt-msg-paid-code-parser-followup-20260617",
+      "source_message_id": "msg-paid-code-parser-followup-20260617",
+      "event_name": "agent_company/outbox.gate_request",
+      "data": {
+        "message_id": "msg-paid-code-parser-followup-20260617",
+        "lane_id": "paid_code_bounties",
+        "task_id": null,
+        "service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "recipient_id": "lane-manager-paid_code_bounties-019ec612",
+        "recipient_type": "agent",
+        "message_type": "gate_request",
+        "priority": 72,
+        "approval_posture": "needs_human_review",
+        "replay_status": "queued",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "idempotency_key": "outbox:msg-paid-code-parser-followup-20260617:agent_company/outbox.gate_request:queued",
+        "allowed_runtime_disposition": "park_awaiting_human_review"
+      },
+      "user": {
+        "lane_id": "paid_code_bounties"
+      },
+      "flow_control": {
+        "concurrency_key": "paid_code_bounties",
+        "throttle_key": "lane-manager-paid_code_bounties-019ec612",
+        "rate_limit_key": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "skip_allowed": false
+      },
+      "expected_decision": "valid_gate_request_event_parked",
+      "expected_failures": []
+    },
+    {
+      "event_id": "evt-msg-ai-competition-arc-followup-20260617",
+      "source_message_id": "msg-ai-competition-arc-followup-20260617",
+      "event_name": "agent_company/outbox.dispatch",
+      "data": {
+        "message_id": "msg-ai-competition-arc-followup-20260617",
+        "lane_id": "ai_ml_competitions",
+        "task_id": null,
+        "service_request_id": null,
+        "recipient_id": "lane-manager-ai_ml_competitions-019ec69a",
+        "recipient_type": "agent",
+        "message_type": "dispatch",
+        "priority": 70,
+        "approval_posture": "local_only",
+        "replay_status": "queued",
+        "risk_gate": "local_only",
+        "idempotency_key": "outbox:msg-ai-competition-arc-followup-20260617:agent_company/outbox.dispatch:queued",
+        "allowed_runtime_disposition": "local_preview_only"
+      },
+      "user": {
+        "lane_id": "ai_ml_competitions"
+      },
+      "flow_control": {
+        "concurrency_key": "ai_ml_competitions",
+        "throttle_key": "lane-manager-ai_ml_competitions-019ec69a",
+        "rate_limit_key": "none",
+        "skip_allowed": false
+      },
+      "expected_decision": "valid_local_dispatch_event",
+      "expected_failures": []
+    },
+    {
+      "event_id": "evt-invalid-public-action-20260617",
+      "source_message_id": "msg-paid-code-parser-followup-20260617",
+      "event_name": "agent_company/outbox.invalid_public_action",
+      "data": {
+        "message_id": "msg-paid-code-parser-followup-20260617",
+        "lane_id": "paid_code_bounties",
+        "task_id": null,
+        "service_request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "recipient_id": "lane-manager-paid_code_bounties-019ec612",
+        "recipient_type": "agent",
+        "message_type": "gate_request",
+        "priority": 72,
+        "approval_posture": "needs_human_review",
+        "replay_status": "queued",
+        "risk_gate": "catalog_required_approval_no_external_action",
+        "idempotency_key": "outbox:msg-paid-code-parser-followup-20260617:agent_company/outbox.invalid_public_action:queued",
+        "allowed_runtime_disposition": "comment_on_issue"
+      },
+      "user": {
+        "lane_id": "paid_code_bounties"
+      },
+      "flow_control": {
+        "concurrency_key": "paid_code_bounties",
+        "throttle_key": "lane-manager-paid_code_bounties-019ec612",
+        "rate_limit_key": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "skip_allowed": true
+      },
+      "expected_decision": "reject_public_action_or_silent_skip",
+      "expected_failures": [
+        "event_name_not_allowed_for_outbox_message_type",
+        "gate_request_skip_must_be_false",
+        "runtime_disposition_not_allowed"
+      ]
+    }
+  ],
+  "runtime_boundary": {
+    "dependency_installs": 0,
+    "dependency_imports": 0,
+    "inngest_client_created": false,
+    "inngest_functions_registered": 0,
+    "inngest_events_sent": 0,
+    "inngest_step_events_sent": 0,
+    "inngest_server_started": false,
+    "service_requests_updated": 0,
+    "service_requests_assigned": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "api_calls": false,
+    "model_api_calls": false,
+    "external_side_effects": false
+  },
+  "next_local_test": "dbos_workflow_step_boundary_fixture_for_service_worker_request_v1"
+}

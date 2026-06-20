@@ -1,0 +1,88 @@
+{
+  "schema_version": "agent_company.money_source_discovery.opentrain_role_feed_worksheet.v1",
+  "generated_utc": "2026-06-16T20:38:00Z",
+  "task_id": "task-opentrain-role-feed-worksheet-20260616",
+  "lane_id": "money_source_discovery",
+  "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+  "source_urls": [
+    "https://www.opentrain.ai/become-freelancer/",
+    "https://www.opentrain.ai/ai-training-careers/",
+    "https://www.opentrain.ai/jobs/visual-evaluation-specialist--cmpkicvsf003b04k3hgf3ppqp/",
+    "https://www.opentrain.ai/jobs/ai-data-reviewer--cmphrb2yr002004l86molnuw7/"
+  ],
+  "worksheet_rows": [
+    {
+      "role_cluster": "math_reasoning_evaluator",
+      "public_pay_signal": "$45/hr example; higher math/RLHF examples appear on domain pages",
+      "skills_to_prepare_locally": ["reasoning rubrics", "probability", "algebra", "structured explanations"],
+      "gate_burden": ["account_profile", "assessment", "contractor_terms", "tax_kyc_payment"],
+      "local_proof": "5-example math reasoning rubric sample pack",
+      "decision": "promote_to_local_sample_pack_task"
+    },
+    {
+      "role_cluster": "rlhf_red_teaming_safety_alignment",
+      "public_pay_signal": "$65/hr-$70/hr examples",
+      "skills_to_prepare_locally": ["prompt attack taxonomy", "policy critique", "structured evaluation notes"],
+      "gate_burden": ["account_profile", "policy_assessment", "contract_or_nda_review"],
+      "local_proof": "synthetic-prompt red-team evaluation worksheet",
+      "decision": "park_external_action_until_gates_clear"
+    },
+    {
+      "role_cluster": "code_generation_qa",
+      "public_pay_signal": "$50/hr example",
+      "skills_to_prepare_locally": ["test writing", "bug reproduction", "code review", "rubric design"],
+      "gate_burden": ["account_profile", "coding_assessment", "tax_kyc_payment"],
+      "local_proof": "failing-test plus fix-rationale sample",
+      "decision": "promote_cross_lane_with_paid_code_bounties"
+    },
+    {
+      "role_cluster": "medical_legal_document_review",
+      "public_pay_signal": "$55/hr-$60/hr examples",
+      "skills_to_prepare_locally": ["citation discipline", "uncertainty marking", "public-document rubric"],
+      "gate_burden": ["credential_risk", "privacy_or_confidentiality_terms", "contract_review"],
+      "local_proof": "credential-free public-document rubric",
+      "decision": "park_unless_human_credential_route_exists"
+    },
+    {
+      "role_cluster": "image_annotation_visual_evaluation",
+      "public_pay_signal": "$20/hr-$70/hr examples",
+      "skills_to_prepare_locally": ["visual QA", "classification consistency", "written English", "time-per-item estimates"],
+      "gate_burden": ["account_profile", "assessment", "weekly_time_commitment"],
+      "local_proof": "image-eval rubric and time-per-item estimate",
+      "decision": "promote_if_higher_value_queue_empty"
+    },
+    {
+      "role_cluster": "multilingual_translation_linguistics",
+      "public_pay_signal": "$35/hr example",
+      "skills_to_prepare_locally": ["verified language pair", "translation QA", "error taxonomy"],
+      "gate_burden": ["account_profile", "language_assessment", "residency_payment_gate"],
+      "local_proof": "verified language-pair sample only",
+      "decision": "park_pending_human_skill_inventory"
+    }
+  ],
+  "score": {
+    "expected_dollars_per_hour": 4,
+    "time_to_first_local_proof": 5,
+    "gate_burden": 4,
+    "repeatability": 4,
+    "agent_fit": 4
+  },
+  "required_gates_before_external_action": [
+    "account_registration_intake",
+    "legal_kyc_tax_payment_gate",
+    "assessment_contract_review"
+  ],
+  "next_action": "Create a local ai-training-sample-pack task for math reasoning, code QA, and RLHF samples.",
+  "runtime_boundary": {
+    "browser_sessions_started": 0,
+    "account_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "security_testing_actions": false,
+    "real_money_actions": false,
+    "service_requests_updated": 0,
+    "worker_starts": 0,
+    "external_side_effects": false
+  }
+}

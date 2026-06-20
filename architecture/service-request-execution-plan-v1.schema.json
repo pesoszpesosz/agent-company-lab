@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-company-lab.local/schemas/service-request-execution-plan-v1.schema.json",
+  "title": "Agent Company Service Request Execution Plan v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "plan_id",
+    "request_id",
+    "service_id",
+    "request_type",
+    "lane_id",
+    "created_utc",
+    "approval_status_snapshot",
+    "plan_is_approval",
+    "objective",
+    "operator_role",
+    "allowed_scope",
+    "prohibited_actions",
+    "stop_conditions",
+    "execution_steps",
+    "evidence_requirements",
+    "expected_outputs",
+    "post_run_updates",
+    "external_side_effects_allowed",
+    "real_money_allowed",
+    "public_action_allowed",
+    "account_or_identity_action_allowed",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": { "const": "service_request_execution_plan.v1" },
+    "plan_id": { "type": "string", "minLength": 3 },
+    "request_id": { "type": "string", "minLength": 3 },
+    "service_id": { "type": "string", "minLength": 1 },
+    "request_type": { "type": "string", "minLength": 1 },
+    "lane_id": { "type": "string", "minLength": 1 },
+    "created_utc": { "type": "string", "format": "date-time" },
+    "approval_status_snapshot": {
+      "type": "string",
+      "enum": ["needs_review", "approved", "rejected", "assigned", "in_progress", "complete"]
+    },
+    "plan_is_approval": { "const": false },
+    "objective": { "type": "string", "minLength": 10 },
+    "operator_role": { "type": "string", "minLength": 1 },
+    "allowed_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed_hosts", "starting_urls", "allowed_page_types", "allowed_actions"],
+      "properties": {
+        "allowed_hosts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "starting_urls": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "format": "uri" }
+        },
+        "allowed_page_types": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "allowed_actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "prohibited_actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "execution_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step_id", "action", "allowed", "evidence_to_capture"],
+        "properties": {
+          "step_id": { "type": "string", "minLength": 1 },
+          "action": { "type": "string", "minLength": 1 },
+          "allowed": { "type": "boolean" },
+          "evidence_to_capture": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "evidence_requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "path", "required"],
+        "properties": {
+          "kind": { "type": "string", "minLength": 1 },
+          "path": { "type": "string", "minLength": 1 },
+          "required": { "type": "boolean" }
+        }
+      }
+    },
+    "post_run_updates": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "external_side_effects_allowed": { "type": "boolean" },
+    "real_money_allowed": { "type": "boolean" },
+    "public_action_allowed": { "type": "boolean" },
+    "account_or_identity_action_allowed": { "type": "boolean" },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["api_calls", "browser_allowed_after_approval_only"],
+      "properties": {
+        "api_calls": { "type": "boolean" },
+        "browser_allowed_after_approval_only": { "type": "boolean" }
+      }
+    }
+  }
+}

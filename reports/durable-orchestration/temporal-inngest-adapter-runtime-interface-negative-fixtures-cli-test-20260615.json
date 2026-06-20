@@ -1,0 +1,69 @@
+{
+    "schema_version":  "temporal_inngest_adapter_runtime_interface_negative_fixtures_cli_test.v1",
+    "created_at":  "2026-06-15T15:56:30Z",
+    "task_id":  "task-temporal-inngest-adapter-runtime-interface-negative-fixtures-cli-20260615",
+    "command_added":  "write-durable-adapter-runtime-negative-fixtures",
+    "source_sha256_before":  "B752E9641A5A9F496EDB6BCCD2CCADEEC7034D974A816D6ECE7F716AB948F00D",
+    "source_sha256_after":  "D91F25C0B73817588D8A62C905E627E37F88CD4A8DFA66C12E82A021CCD948B4",
+    "commands_run":  [
+                         "python -m py_compile E:\\agent-company-lab\\tools\\agent_company.py",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-negative-fixtures --help",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-durable-adapter-runtime-negative-fixtures",
+                         "python -m json.tool temporal-inngest-adapter-runtime-interface-negative-fixtures-latest.json",
+                         "python -m json.tool temporal-inngest-adapter-runtime-interface-negative-fixtures-validation-latest.json",
+                         "python E:\\agent-company-lab\\tools\\agent_company.py write-service-worker-chain-integrity --path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.md --json-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-latest.json --validation-path E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                     ],
+    "generated_artifacts":  {
+                                "negative_fixtures_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-negative-fixtures-latest.json",
+                                "negative_fixtures_validation_json":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-negative-fixtures-validation-latest.json",
+                                "negative_fixtures_markdown":  "E:\\agent-company-lab\\reports\\durable-orchestration\\temporal-inngest-adapter-runtime-interface-negative-fixtures-latest.md",
+                                "chain_validation_json":  "E:\\agent-company-lab\\reports\\service-worker-chain-integrity-validation-latest.json"
+                            },
+    "hashes":  {
+                   "source":  "D91F25C0B73817588D8A62C905E627E37F88CD4A8DFA66C12E82A021CCD948B4",
+                   "negative_fixtures_json":  "0FE3654B4EE4FDF91113293F298380B918DAEF102A7406BBFF25BE20721D6D2C",
+                   "negative_fixtures_validation_json":  "009CFAE38DE81EDA7327B22C19A85156EDC978A42139306D68B8D7B57C6DEA52",
+                   "negative_fixtures_markdown":  "BDB5F167A412260FC0DF071E063EF63F8E84328ACF76AC8F4546DE3331E85014",
+                   "chain_validation_json":  "E16274948C11BA4A57930C9A58780BE5EEB6118CB47C39F072C7C3011A331373"
+               },
+    "validation_summary":  {
+                               "negative_fixture_count":  8,
+                               "rejected_fixture_count":  8,
+                               "accepted_fixture_count":  0,
+                               "contract_validation_loaded":  true,
+                               "contract_validation_passed":  true,
+                               "all_negative_fixtures_rejected":  true,
+                               "forbidden_runtime_import_count":  0,
+                               "model_api_gate_remains_parked":  true,
+                               "model_api_pool_registered":  false,
+                               "all_checks_passed":  true,
+                               "failure_count":  0
+                           },
+    "chain_integrity":  {
+                            "checked_report_count":  20,
+                            "failure_count":  0,
+                            "all_checks_passed":  true
+                        },
+    "runtime_boundary":  {
+                             "dependency_installs":  0,
+                             "dependency_imports":  0,
+                             "temporal_server_started":  false,
+                             "temporal_workflows_started":  0,
+                             "temporal_activities_scheduled":  0,
+                             "inngest_service_started":  false,
+                             "inngest_events_emitted":  0,
+                             "service_requests_updated":  0,
+                             "service_requests_assigned":  0,
+                             "worker_starts":  0,
+                             "api_calls":  false,
+                             "external_side_effects":  false
+                         },
+    "service_request_effects":  {
+                                    "status_unchanged":  true,
+                                    "model_api_request_status":  "needs_review",
+                                    "model_api_request_assigned":  false,
+                                    "model_api_pool_registered":  false,
+                                    "service_request_mutation_count":  0
+                                },
+    "next_action":  "Promote these negative fixtures into the durable adapter implementation preflight before writing any Temporal/Inngest runtime adapter code."
+}

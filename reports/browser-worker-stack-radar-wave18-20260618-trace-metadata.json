@@ -1,0 +1,29 @@
+{
+  "api_calls": false,
+  "browser_actions": false,
+  "candidate_count": 13,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-17T22:16:25Z",
+  "github_api_read_only": true,
+  "lane_id": "platform_engineering",
+  "runtime": "codex_local_report_only",
+  "schema_version": "agent_company.trace_metadata.v1",
+  "source_urls": [
+    "https://github.com/browser-use/browser-use",
+    "https://github.com/browser-use/browser-harness",
+    "https://github.com/browserbase/stagehand",
+    "https://github.com/browserbase/stagehand-python",
+    "https://github.com/Skyvern-AI/skyvern",
+    "https://github.com/microsoft/playwright-mcp",
+    "https://github.com/microsoft/playwright",
+    "https://github.com/vercel-labs/agent-browser",
+    "https://github.com/steel-dev/steel-browser",
+    "https://github.com/hyperbrowserai/HyperAgent",
+    "https://github.com/hyperbrowserai/mcp",
+    "https://github.com/nanobrowser/nanobrowser",
+    "https://github.com/browseros-ai/BrowserOS"
+  ],
+  "span_kind": "internal",
+  "task_id": "task-browser-worker-stack-radar-wave18-20260618",
+  "trace_id": "trace-browser-worker-stack-radar-wave18-20260618"
+}

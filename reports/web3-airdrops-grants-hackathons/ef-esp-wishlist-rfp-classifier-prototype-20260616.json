@@ -1,0 +1,26 @@
+{
+  "schema_version": "agent_company.web3_airdrops_grants_hackathons.ef_esp_wishlist_rfp_classifier_prototype.v1",
+  "generated_utc": "2026-06-16T20:57:00Z",
+  "task_id": "task-ef-esp-wishlist-rfp-classifier-prototype-20260616",
+  "lane_id": "web3_airdrops_grants_hackathons",
+  "formula": "fit_score = strategic_fit + local_proofability + reuse_value - gate_burden - credential_gap",
+  "promote_threshold": 6,
+  "prototype_rows": [
+    {"type": "public_goods_opportunity_radar", "score": 10, "decision": "promote_local_prototype"},
+    {"type": "builder_workflow_approval_templates", "score": 9, "decision": "promote_local_template_pack"},
+    {"type": "security_education_or_audit_prep", "score": 5, "decision": "park_until_security_scope_review"},
+    {"type": "community_growth_analytics", "score": 5, "decision": "park_until_public_data_rules_clear"},
+    {"type": "cryptography_research_implementation", "score": -2, "decision": "reject_without_specialist"},
+    {"type": "ethereum_app_layer_prototype", "score": 3, "decision": "park_pending_wallet_deployment_gates"},
+    {"type": "developer_tooling_documentation", "score": 9, "decision": "promote_if_exact_rfp_appears"}
+  ],
+  "next_action": "Create live-read-only Wishlist/RFP ingestion packet only if browser/read-only refresh is approved.",
+  "runtime_boundary": {
+    "esp_application": false,
+    "office_hours_request": false,
+    "proposal_or_budget_commitment": false,
+    "wallet_or_payment": false,
+    "public_action": false,
+    "external_side_effects": false
+  }
+}

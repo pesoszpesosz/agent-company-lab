@@ -1,0 +1,143 @@
+{
+  "rows": [
+    {
+      "amount_usd": 5522,
+      "command_available": true,
+      "initial_route": "high_amount_low_solver_but_requires_issue_url_and_scope_check",
+      "issue_title": "c1work",
+      "language_tags": [],
+      "owner": "rodrigompy",
+      "parser_action": "inspect_public_repo_and_issue_if_url_available",
+      "posted_or_issue_date": "31/05/2026",
+      "repo": "bugb",
+      "solver_count": 0
+    },
+    {
+      "amount_usd": 2780,
+      "command_available": true,
+      "initial_route": "many_solvers_and_large_complex_project",
+      "issue_title": "Readd support for web platform exports when using the C# (.NET) version of the engine",
+      "language_tags": [
+        "C++"
+      ],
+      "owner": "godotengine",
+      "parser_action": "reject_or_deprioritize",
+      "posted_or_issue_date": "29/09/2024",
+      "repo": "godot",
+      "solver_count": 8
+    },
+    {
+      "amount_usd": 1640,
+      "command_available": true,
+      "initial_route": "funding_or_donation_shape_unclear_deliverable",
+      "issue_title": "Donation/funding for german language",
+      "language_tags": [
+        "JavaScript"
+      ],
+      "owner": "hexgrad",
+      "parser_action": "deprioritize_until_scope_clear",
+      "posted_or_issue_date": "16/12/2025",
+      "repo": "kokoro",
+      "solver_count": 6
+    },
+    {
+      "amount_usd": 900,
+      "command_available": true,
+      "initial_route": "security_or_crash_scope_and_many_solvers",
+      "issue_title": "Crash found in fuzzer",
+      "language_tags": [
+        "C"
+      ],
+      "owner": "FalkorDB",
+      "parser_action": "reject_or_deprioritize",
+      "posted_or_issue_date": "26/09/2025",
+      "repo": "FalkorDB",
+      "solver_count": 14
+    },
+    {
+      "amount_usd": 590,
+      "command_available": true,
+      "initial_route": "high_competition_and_old_issue",
+      "issue_title": "Migration generation drops and creates columns instead of altering resulting in data loss",
+      "language_tags": [
+        "TypeScript"
+      ],
+      "owner": "typeorm",
+      "parser_action": "reject_or_deprioritize",
+      "posted_or_issue_date": "28/04/2024",
+      "repo": "typeorm",
+      "solver_count": 23
+    },
+    {
+      "amount_usd": 390,
+      "command_available": false,
+      "initial_route": "large_platform_feature_many_solvers",
+      "issue_title": "Add Wayland support",
+      "language_tags": [
+        "Python"
+      ],
+      "owner": "autokey",
+      "parser_action": "reject_or_deprioritize",
+      "posted_or_issue_date": "06/09/2024",
+      "repo": "autokey",
+      "solver_count": 12
+    },
+    {
+      "amount_usd": 345,
+      "command_available": true,
+      "initial_route": "nonzero_solver_count_and_large_codebase",
+      "issue_title": "Helix keymap",
+      "language_tags": [
+        "Rust"
+      ],
+      "owner": "zed-industries",
+      "parser_action": "deprioritize_until_duplicate_pr_scan",
+      "posted_or_issue_date": "30/08/2024",
+      "repo": "zed",
+      "solver_count": 5
+    },
+    {
+      "amount_usd": 220,
+      "command_available": true,
+      "initial_route": "language_fit_but_solver_count_requires_duplicate_check",
+      "issue_title": "Challenge #6: Improve testing and ci/cd cycles",
+      "language_tags": [
+        "Python"
+      ],
+      "owner": "qtop",
+      "parser_action": "inspect_as_possible_local_proof_fixture",
+      "posted_or_issue_date": "28/05/2026",
+      "repo": "qtop",
+      "solver_count": 4
+    },
+    {
+      "amount_usd": 200,
+      "command_available": true,
+      "initial_route": "low_solver_count_but_language_mismatch",
+      "issue_title": "External IDP tokens are not refreshed automatically for OAuth2 and OIDC IDPs when retrieving the external token",
+      "language_tags": [
+        "Java"
+      ],
+      "owner": "keycloak",
+      "parser_action": "inspect_only_if_language_fit_worker_available",
+      "posted_or_issue_date": "21/06/2024",
+      "repo": "keycloak",
+      "solver_count": 1
+    },
+    {
+      "amount_usd": 80,
+      "command_available": null,
+      "initial_route": "captcha_or_abuse_bypass_risk",
+      "issue_title": "Auto Solve hcapcha",
+      "language_tags": [
+        "Python"
+      ],
+      "owner": "flowese",
+      "parser_action": "hard_reject",
+      "posted_or_issue_date": "historical_public_card",
+      "repo": "UdioWrapper",
+      "solver_count": 11
+    }
+  ],
+  "schema_version": "paid_code.opire_saved_card_fixture.v1"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "agent_company.trace_metadata.v1",
+  "trace_id": "trace-runtime-process-egress-apply-preflight-blocker-v1-20260618",
+  "task_id": "task-runtime-process-egress-apply-preflight-blocker-v1-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "generated_utc": "2026-06-18T01:19:28Z",
+  "summary": "Created a report-only runtime_process_gateway apply-preflight blocker. The blocker observes the runtime process signed-decision guard, runtime-start preflight, runtime-start signed-decision guard, egress intake, gateway docket, and egress ledger validations, then blocks apply because no real signed operator runtime-process egress decision and no apply-command contract exist. It writes zero apply commands, executes zero commands, installs zero dependencies, starts zero runtime processes, starts zero workers, mutates zero queues, mutates zero service requests, calls zero MCP/model APIs, permits zero live egress, and creates zero external side effects.",
+  "source_validations": [
+    "E:\\agent-company-lab\\reports\\runtime-process-egress-signed-decision-guard-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\runtime-start-signed-decision-guard-v1-validation-20260617.json",
+    "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\agent-company-lab\\architecture\\runtime-process-egress-apply-preflight-blocker-v1.schema.json",
+      "sha256": "0e13489505aa82b79c0c27706709a9a6badd3303210bc3feddd15d45ea1f257b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tools\\write_runtime_process_egress_apply_preflight_blocker.py",
+      "sha256": "4932135ef396a10675d2e37ad71c5ac0a3fbbfa5a6c0c529c959302bec5fef14"
+    },
+    {
+      "path": "E:\\agent-company-lab\\tests\\test_runtime_process_egress_apply_preflight_blocker.py",
+      "sha256": "b8ba257f873feabc6e861c3e668fa2e94cd1c4533c709c37317c50ee9d0ff63b"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\runtime-process-egress-apply-preflight-blocker-v1-20260618.json",
+      "sha256": "c390d897f893bf420baf94b075b64c44a756d294d35943d8e673dd54ba8325f2"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\runtime-process-egress-apply-preflight-blocker-v1-validation-20260618.json",
+      "sha256": "de6ca6dcc3fccab0da088017afcfba5e4d201a6eac98f00fd8fb5e8c36276cc8"
+    },
+    {
+      "path": "E:\\agent-company-lab\\reports\\runtime-process-egress-apply-preflight-blocker-v1-20260618.md",
+      "sha256": "3e76c67f0c4b32ec7c43f61f06f655ba52e83e99654c1fbbd0870e6a6514b9da"
+    }
+  ],
+  "verification": {
+    "focused_test_command": "python -m unittest E:\\agent-company-lab\\tests\\test_runtime_process_egress_apply_preflight_blocker.py E:\\agent-company-lab\\tests\\test_egress_route_chain_integrity_audit.py",
+    "focused_test_result": "passed",
+    "full_test_command": "python -m unittest discover -s E:\\agent-company-lab\\tests -p \"test_*.py\"",
+    "full_test_result": "44 tests passed",
+    "target_route_id": "runtime_process_gateway",
+    "target_egress_type": "runtime_start",
+    "apply_preflight_status": "blocked_no_real_signed_decision",
+    "blocker_reason": "no_real_signed_operator_runtime_process_egress_decision_artifact",
+    "real_signed_decision_present": false,
+    "apply_command_contract_present": false,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "runtime_start_allowed": false,
+    "runtime_starts": 0,
+    "dependency_installs": 0,
+    "queue_mutations": 0,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "live_egress_allowed": false,
+    "external_side_effects": false
+  },
+  "boundary": {
+    "report_only": true,
+    "apply_allowed": false,
+    "apply_commands_written": 0,
+    "apply_commands_executed": 0,
+    "decisions_applied": 0,
+    "approval_rows_written": 0,
+    "gateway_registration_allowed": false,
+    "gateway_start_allowed": false,
+    "live_egress_allowed": false,
+    "dependency_installs": 0,
+    "runtime_start_allowed": false,
+    "runtime_starts": 0,
+    "worker_start_allowed": false,
+    "worker_starts": 0,
+    "queue_mutations": 0,
+    "service_requests_assigned": 0,
+    "service_requests_updated": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "payment_actions": false,
+    "public_actions": false,
+    "external_side_effects": false
+  },
+  "next_action": "Build runtime_process_gateway apply-command contract only after a real signed operator decision and executable command preview exist; until then, keep runtime process egress blocked."
+}

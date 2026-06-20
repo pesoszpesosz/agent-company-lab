@@ -1,0 +1,330 @@
+{
+  "account_actions": false,
+  "all_checks_passed": true,
+  "browser_session_start_allowed": false,
+  "dependency_installs": 0,
+  "external_side_effects": false,
+  "failure_count": 0,
+  "failures": [],
+  "gate_index": [
+    "account_registration_intake",
+    "agent_egress_event_ledger_v1",
+    "browser_read_only_apply_command_contract_v1",
+    "browser_read_only_apply_preflight_blocker_v1",
+    "browser_read_only_signed_approval_guard_v1",
+    "browser_read_only_worker_policy_v1",
+    "browser_worker_adapter_contract_v1",
+    "cost_budget_signed_decision",
+    "exact_action_body_approval",
+    "legal_kyc_tax_payment_gate",
+    "local_runtime_adapter_pool_identity_envelope_v1",
+    "mcp_tool_registry_gate_v1",
+    "model_api_execution_gate",
+    "public_action_execution_gate",
+    "reputation_review_worker",
+    "runtime_dependency_install_preflight_v1",
+    "runtime_start_apply_preflight_blocker_v1",
+    "runtime_start_preflight_v1",
+    "runtime_start_signed_decision_guard_v1",
+    "secrets_credentials_handling_gate",
+    "signed_operator_decision_required",
+    "telemetry_privacy_export_gate_v1",
+    "wallet_public_address_response",
+    "wallet_setup_packet"
+  ],
+  "gateway_decisions": [
+    "all_live_egress_routes_remain_report_only",
+    "agent_egress_event_ledger_is_required_for_every_route",
+    "route_specific_gates_must_pass_before_signed_operator_decision_intake",
+    "gateway_start_is_not_registration_and_neither_is_allowed_here",
+    "public_account_wallet_payment_model_mcp_browser_and_runtime_paths_are_separate_routes"
+  ],
+  "gateway_registration_allowed": false,
+  "gateway_routes": [
+    {
+      "allowed_phase": "local_report_only_allowed",
+      "blocked_actions": [
+        "live_gateway_start",
+        "external_api_call",
+        "service_request_mutation"
+      ],
+      "capability_class_ids": [
+        "agent_framework",
+        "browser_worker",
+        "durable_runtime",
+        "durable_workflow",
+        "gateway_or_mcp",
+        "model_backed_agent_framework",
+        "observability",
+        "platform_runtime",
+        "unknown_or_mixed",
+        "workflow_platform"
+      ],
+      "egress_type": "agent_to_agent",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "trace_event",
+        "input_artifact_hash",
+        "output_artifact_hash"
+      ],
+      "required_gates": [
+        "agent_egress_event_ledger_v1",
+        "local_runtime_adapter_pool_identity_envelope_v1"
+      ],
+      "route_id": "local_agent_to_agent_report_only"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "browser_session_start",
+        "signed_in_state_change",
+        "form_submit",
+        "download_private_file"
+      ],
+      "capability_class_ids": [
+        "browser_worker"
+      ],
+      "egress_type": "browser_read_only",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "approved_service_request",
+        "adapter_contract_report",
+        "redacted_screenshot_or_text_capture",
+        "post_run_trace"
+      ],
+      "required_gates": [
+        "browser_read_only_worker_policy_v1",
+        "browser_worker_adapter_contract_v1",
+        "browser_read_only_signed_approval_guard_v1",
+        "browser_read_only_apply_preflight_blocker_v1",
+        "browser_read_only_apply_command_contract_v1",
+        "agent_egress_event_ledger_v1"
+      ],
+      "route_id": "browser_read_only_gateway"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "mcp_server_start",
+        "mcp_tool_call",
+        "credential_read",
+        "network_write"
+      ],
+      "capability_class_ids": [
+        "gateway_or_mcp"
+      ],
+      "egress_type": "mcp_tool",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "registered_tool_entry",
+        "identity_envelope",
+        "egress_event",
+        "post_execution_evidence"
+      ],
+      "required_gates": [
+        "mcp_tool_registry_gate_v1",
+        "agent_egress_event_ledger_v1",
+        "local_runtime_adapter_pool_identity_envelope_v1",
+        "signed_operator_decision_required"
+      ],
+      "route_id": "mcp_tool_gateway"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "model_api_call",
+        "provider_key_use",
+        "training_data_upload",
+        "unbounded_cost"
+      ],
+      "capability_class_ids": [
+        "agent_framework",
+        "model_backed_agent_framework"
+      ],
+      "egress_type": "model_api",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "provider_scope",
+        "model_id",
+        "max_cost",
+        "data_boundary",
+        "redaction_plan",
+        "trace_event"
+      ],
+      "required_gates": [
+        "model_api_execution_gate",
+        "secrets_credentials_handling_gate",
+        "agent_egress_event_ledger_v1",
+        "cost_budget_signed_decision"
+      ],
+      "route_id": "model_api_gateway"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "dependency_install",
+        "runtime_process_start",
+        "queue_mutation",
+        "worker_start"
+      ],
+      "capability_class_ids": [
+        "durable_runtime",
+        "durable_workflow",
+        "workflow_platform",
+        "platform_runtime"
+      ],
+      "egress_type": "runtime_start",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "runtime_manifest",
+        "dependency_hashes",
+        "signed_runtime_decision",
+        "rollback_plan",
+        "trace_event"
+      ],
+      "required_gates": [
+        "runtime_start_preflight_v1",
+        "runtime_start_signed_decision_guard_v1",
+        "runtime_start_apply_preflight_blocker_v1",
+        "runtime_dependency_install_preflight_v1",
+        "agent_egress_event_ledger_v1"
+      ],
+      "route_id": "runtime_process_gateway"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "post_comment",
+        "submit_form",
+        "open_pr",
+        "claim_bounty",
+        "send_message"
+      ],
+      "capability_class_ids": [
+        "browser_worker",
+        "gateway_or_mcp",
+        "platform_runtime"
+      ],
+      "egress_type": "public_submission",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "exact_payload",
+        "target_url",
+        "account_identity",
+        "approval_record",
+        "post_action_receipt"
+      ],
+      "required_gates": [
+        "public_action_execution_gate",
+        "reputation_review_worker",
+        "agent_egress_event_ledger_v1",
+        "exact_action_body_approval"
+      ],
+      "route_id": "public_action_gateway"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "accept_terms",
+        "create_account",
+        "control_private_key",
+        "send_funds",
+        "publish_payment_address"
+      ],
+      "capability_class_ids": [
+        "platform_runtime",
+        "browser_worker"
+      ],
+      "egress_type": "account_wallet_payment",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "venue_terms_summary",
+        "custody_boundary",
+        "network_token_scope",
+        "user_decision_record"
+      ],
+      "required_gates": [
+        "account_registration_intake",
+        "wallet_setup_packet",
+        "wallet_public_address_response",
+        "legal_kyc_tax_payment_gate",
+        "agent_egress_event_ledger_v1"
+      ],
+      "route_id": "account_wallet_payment_gateway"
+    },
+    {
+      "allowed_phase": "report_only_design",
+      "blocked_actions": [
+        "external_trace_export",
+        "private_prompt_upload",
+        "credential_export",
+        "unredacted_log_sync"
+      ],
+      "capability_class_ids": [
+        "observability",
+        "gateway_or_mcp"
+      ],
+      "egress_type": "telemetry_export",
+      "gateway_registration_allowed": false,
+      "gateway_start_allowed": false,
+      "live_execution_allowed": false,
+      "next_action": "Create a signed operator decision packet and rerun all referenced gates before this route can move beyond report-only design.",
+      "required_evidence": [
+        "redaction_policy",
+        "destination_scope",
+        "retention_policy",
+        "sample_trace_artifact"
+      ],
+      "required_gates": [
+        "telemetry_privacy_export_gate_v1",
+        "agent_egress_event_ledger_v1",
+        "secrets_credentials_handling_gate"
+      ],
+      "route_id": "telemetry_export_gateway"
+    }
+  ],
+  "gateway_start_allowed": false,
+  "generated_utc": "2026-06-20T21:07:40Z",
+  "live_egress_allowed": false,
+  "mcp_tool_calls": false,
+  "model_api_calls": false,
+  "next_action": "Build signed operator decision intake for one exact egress route before any gateway registration, gateway start, or live egress.",
+  "payment_actions": false,
+  "public_actions": false,
+  "report_only": true,
+  "route_count": 8,
+  "runtime_start_allowed": false,
+  "schema_version": "agent_company.unified_agent_egress_gateway_docket.v1",
+  "security_testing_actions": false,
+  "service_requests_assigned": 0,
+  "service_requests_updated": 0,
+  "source_capability_class_count": 10,
+  "source_capability_registry_path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
+  "source_capability_registry_sha256": "1192f8a922de83c78f7f914d0265d5e11d0a74d576001b3be4643b834cd5568e",
+  "source_capability_validation_path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-validation-20260618.json",
+  "telemetry_exports": 0,
+  "wallet_actions": false,
+  "worker_registration_allowed": false,
+  "worker_start_allowed": false
+}

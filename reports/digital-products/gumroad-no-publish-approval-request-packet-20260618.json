@@ -1,0 +1,195 @@
+{
+  "approval_request": {
+    "allowed_to_accept_terms": false,
+    "allowed_to_configure_payout_or_payment": false,
+    "allowed_to_create_or_edit_seller_profile": false,
+    "allowed_to_login_or_create_account": false,
+    "allowed_to_publish_listing": false,
+    "allowed_to_publish_price": false,
+    "allowed_to_upload_or_edit_product": false,
+    "minimum_next_approval_scope": "A human must approve the exact Gumroad account route, seller terms, prohibited-products fit, IP/license claims, listing title/category/copy, price/refund/support language, deterministic zip manifest/checksum plan, payout/tax/payment assumptions, and public listing before any external action.",
+    "request_type": "human_review_before_any_gumroad_action"
+  },
+  "boundary": {
+    "browser_sessions_started": 0,
+    "external_side_effects": 0,
+    "gumroad_account_or_login": false,
+    "listings_published": 0,
+    "model_mcp_or_external_api_calls": 0,
+    "orders_or_payments": 0,
+    "payout_or_payment_setup": false,
+    "prices_published": 0,
+    "products_uploaded_or_edited": 0,
+    "public_actions": 0,
+    "seller_profile_created_or_edited": false,
+    "service_requests_mutated": 0,
+    "terms_or_seller_agreement_accepted": false,
+    "workers_or_runtimes_started": 0,
+    "zip_created_or_uploaded": false
+  },
+  "decision": "draft_only_needs_human_review_no_gumroad_action",
+  "evidence_assets": [
+    "E:/agent-company-lab/reports/money-path-lane-scout-packets/gumroad-direct-download-local-proof.json",
+    "E:/agent-company-lab/reports/money-path-lane-scout-packets/gumroad-direct-download-local-proof-validation.json",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/README.md",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/docs/listing-draft.md",
+    "E:/agent-company-lab/products/agent-skill-starter-kit-v0/docs/license-and-ip-note.md"
+  ],
+  "generated_at": "2026-06-18T08:29:48Z",
+  "lane_id": "digital_products_templates_plugins",
+  "next_local_action": "If the operator approves this packet, create an exact-scope service request for Gumroad account/listing copy and package-manifest review. Do not log in, create/edit a seller profile, accept terms, create/upload/edit a product, publish a listing or price, configure payout/tax/payment, or perform any public action from this packet alone.",
+  "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+  "pre_publish_checklist": [
+    "Verify the product is positioned as a downloadable template kit, not consulting, a business opportunity, or a revenue system.",
+    "Verify the listing avoids crypto, hacking/cracking, spam, deceptive marketing, platform approval, compliance, and guaranteed-results claims.",
+    "Verify every file in the manifest is intended for sale and the license/IP note matches the intended buyer rights.",
+    "Verify the title, description, category, thumbnail/screenshot plan, price, refund/support language, and product requirements are approved exactly.",
+    "Verify payout/tax/payment-country implications are reviewed by the human operator before seller setup.",
+    "Verify a deterministic zip and checksum are created only after approval and before any upload."
+  ],
+  "product_manifest": {
+    "file_count": 12,
+    "files": [
+      {
+        "relative_path": "docs/buyer-guide.md",
+        "sha256": "d680cdd927d0f67b0b29069b0a7148808ef965e15727ce2a9246eb65b68ad3c2",
+        "size_bytes": 1554
+      },
+      {
+        "relative_path": "docs/license-and-ip-note.md",
+        "sha256": "06d1915faf9c6dc489bb1c8015cf3e0c2bfa129cb6e6d0c8eb6434d816e89c8d",
+        "size_bytes": 1477
+      },
+      {
+        "relative_path": "docs/listing-draft.md",
+        "sha256": "5d716f468e916d7ccb32ae56b22d4d3ba15770a52f043cb24128cae7da10ee35",
+        "size_bytes": 1737
+      },
+      {
+        "relative_path": "docs/screenshot-plan.md",
+        "sha256": "1f4d00b660a6e7cbb8df5b6d22c4233e04b0b300935f47287caab4c5cd045ab3",
+        "size_bytes": 1111
+      },
+      {
+        "relative_path": "examples/local-research-skill/sample-output.md",
+        "sha256": "ffef4ee635ac60f2459f7104621396dab2ff638cd205bf618d09e490544e9d98",
+        "size_bytes": 1021
+      },
+      {
+        "relative_path": "examples/local-research-skill/SKILL.md",
+        "sha256": "77cc8f92edbd1baab88814e22c76f3356fff1269589615a74284e079005df0d0",
+        "size_bytes": 2153
+      },
+      {
+        "relative_path": "README.md",
+        "sha256": "d1a37031fd3bdb8be274bb831598e8d45108469fc46bdd8b11276fa119c3aae2",
+        "size_bytes": 3544
+      },
+      {
+        "relative_path": "templates/acceptance-review.template.md",
+        "sha256": "c743b49bb1cd0611da4f5af7cbd59560f8cef6d327323d0fbd793f26f305a65d",
+        "size_bytes": 1300
+      },
+      {
+        "relative_path": "templates/artifact-contract.template.md",
+        "sha256": "36c20fbd97cc2ea15a176994ceb7d50c1c301dae690a678abfdecabbc9f89293",
+        "size_bytes": 1168
+      },
+      {
+        "relative_path": "templates/gate-checklist.template.md",
+        "sha256": "85fa022701091518a524447c6a24e099298dd9569b5ac04d6dac224afd8c2888",
+        "size_bytes": 2029
+      },
+      {
+        "relative_path": "templates/service-request-checklist.template.md",
+        "sha256": "772719198037441534a47c8a6427b70accebc75db787fa08282e6f0a9fe8011e",
+        "size_bytes": 1589
+      },
+      {
+        "relative_path": "templates/SKILL.template.md",
+        "sha256": "bc8f1b5c7832c788f4fd5b95e794e9215c393e09e8ac77388572254ba65ad99f",
+        "size_bytes": 2987
+      }
+    ],
+    "product_dir": "E:\\agent-company-lab\\products\\agent-skill-starter-kit-v0",
+    "zip_checksum_plan": "After human approval, create a deterministic zip from exactly these relative paths, then record the zip SHA-256 before any upload. This packet does not create or upload a zip."
+  },
+  "required_human_decisions": [
+    "gumroad_account_route_and_identity_review",
+    "seller_terms_review",
+    "prohibited_products_review",
+    "ip_license_and_template_ownership_review",
+    "title_category_and_listing_copy_review",
+    "price_refund_and_support_language_review",
+    "zip_manifest_and_checksum_review",
+    "payout_tax_payment_country_review",
+    "no_revenue_business_opportunity_or_platform_claims_review",
+    "public_listing_approval"
+  ],
+  "schema_version": "digital_products.gumroad_no_publish_approval_request_packet.v1",
+  "selected_candidate": {
+    "candidate_id": "agent_skill_starter_kit_v0",
+    "download_shape": [
+      "README.md",
+      "templates/SKILL.template.md",
+      "templates/gate-checklist.template.md",
+      "templates/service-request-checklist.template.md",
+      "templates/artifact-contract.template.md",
+      "templates/acceptance-review.template.md",
+      "examples/local-research-skill/SKILL.md",
+      "examples/local-research-skill/sample-output.md",
+      "docs/buyer-guide.md",
+      "docs/license-and-ip-note.md",
+      "docs/listing-draft.md",
+      "docs/screenshot-plan.md"
+    ],
+    "local_evidence_assets": [
+      "products/agent-skill-starter-kit-v0/README.md",
+      "products/agent-skill-starter-kit-v0/docs/listing-draft.md",
+      "products/agent-skill-starter-kit-v0/docs/license-and-ip-note.md"
+    ],
+    "product_type": "downloadable_markdown_template_kit",
+    "readiness_score": 91,
+    "required_pre_listing_fixes": [
+      "Review Gumroad prohibited-products list against the final listing copy.",
+      "Avoid consulting, get-rich, crypto, hacking/cracking, spam, revenue, compliance, or platform-approval claims.",
+      "Confirm the license/IP note matches the intended buyer license.",
+      "Create a local zip manifest and checksum before any upload approval.",
+      "Human-review title, category, price, refund language, and all claims."
+    ],
+    "source_gates": [
+      "gumroad_account",
+      "ip_license_claims_review",
+      "payout_setup",
+      "public_listing",
+      "seller_terms",
+      "tax_payment_review"
+    ],
+    "why": "Already packaged as a concrete file tree, avoids live client data, and can be positioned as templates rather than consulting, revenue claims, or platform endorsement.",
+    "working_title": "Agent Skill Starter Kit: Templates For Safer Reusable AI-Agent Workflows"
+  },
+  "source_queue_task_id": "task-money-path-graduation-action-queue-v1-20260618",
+  "source_scout_task_id": "task-lane-scout-gumroad_direct_download-20260618",
+  "status": "gumroad_no_publish_approval_packet_ready_local_only",
+  "task_id": "task-gumroad-no-publish-approval-request-packet-20260618",
+  "unit_economics_planning": [
+    {
+      "before_other_costs_usd": 7.6,
+      "gumroad_direct_fee_usd": 1.4,
+      "note": "Uses 10% + $0.50 direct/profile fee from public pricing page; ignores refunds, chargebacks, income tax, payment-country differences, and paid promotion.",
+      "price_usd": 9
+    },
+    {
+      "before_other_costs_usd": 16.6,
+      "gumroad_direct_fee_usd": 2.4,
+      "note": "Middle planning price for a compact template bundle.",
+      "price_usd": 19
+    },
+    {
+      "before_other_costs_usd": 25.6,
+      "gumroad_direct_fee_usd": 3.4,
+      "note": "Higher planning price; needs stronger proof of utility before public use.",
+      "price_usd": 29
+    }
+  ]
+}

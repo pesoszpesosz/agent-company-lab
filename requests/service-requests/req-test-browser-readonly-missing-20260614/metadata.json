@@ -1,0 +1,22 @@
+{
+  "api_calls": false,
+  "catalog_service_id": "browser_read_only_session",
+  "db_request_created": false,
+  "external_side_effects": false,
+  "generated_utc": "2026-06-14T14:31:37Z",
+  "lane_id": "content_and_social_growth",
+  "missing_fields": [
+    "target_url",
+    "allowed_read_scope",
+    "forbidden_actions",
+    "evidence_needed",
+    "session_sensitivity"
+  ],
+  "request_id": "req-test-browser-readonly-missing-20260614",
+  "request_type": "browser_research",
+  "source": "agent_company.py scaffold-service-request",
+  "validation_ok": false,
+  "warnings": [
+    "Requester agent `test-manager` is not registered; packet keeps it as text, DB-linked fields use null."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$id": "https://agent-company-lab.local/schemas/sandbox-execution-gate-contract-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Company Sandbox Execution Gate Contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "agent_company.sandbox_execution_gate_contract.v1"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source_matrix_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_patterns": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1
+    },
+    "required_approval_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "default_policy": {
+      "type": "object"
+    },
+    "allowed_after_approval": {
+      "type": "object"
+    },
+    "hard_denies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "negative_probes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1
+    },
+    "runtime_boundary": {
+      "type": "object"
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "required": [
+    "schema_version",
+    "purpose",
+    "source_matrix_path",
+    "candidate_patterns",
+    "required_approval_fields",
+    "default_policy",
+    "allowed_after_approval",
+    "hard_denies",
+    "negative_probes",
+    "runtime_boundary",
+    "next_action"
+  ]
+}

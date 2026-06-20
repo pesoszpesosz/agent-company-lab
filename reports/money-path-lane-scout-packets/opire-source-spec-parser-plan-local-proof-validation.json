@@ -1,0 +1,49 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "has_at_least_six_sources",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_ten_parser_fields",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_six_sample_rows",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_seven_rejection_rules",
+      "passed": true
+    },
+    {
+      "name": "has_at_least_five_acceptance_checks",
+      "passed": true
+    },
+    {
+      "name": "external_side_effects_zero",
+      "passed": true
+    },
+    {
+      "name": "no_account_or_login",
+      "passed": true
+    },
+    {
+      "name": "no_try_claim_commands",
+      "passed": true
+    },
+    {
+      "name": "no_public_github_actions",
+      "passed": true
+    },
+    {
+      "name": "hard_rejects_captcha_or_abuse",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "generated_at": "2026-06-18T06:54:05Z",
+  "schema_version": "opire_source_spec_parser_plan_local_proof.validation.v1",
+  "task_id": "task-lane-scout-opire_paid_oss-20260618"
+}

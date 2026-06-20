@@ -1,0 +1,59 @@
+{
+  "event_type": "atlas_worlds_launch_added",
+  "task_id": "task-agent-company-atlas-worlds-launch-v1-20260618",
+  "trace_id": "trace-agent-company-atlas-worlds-launch-v1-20260618",
+  "event_id": "trace-atlas_worlds_launch_added-20260618",
+  "lane_id": "platform_engineering",
+  "agent_id": "recovered-profitable-edge-infra",
+  "summary": "Added a compact Worlds Launch level-select surface and reduced the default Worlds deck to the core play surfaces.",
+  "date": "2026-06-18",
+  "changes": [
+    "Added #worlds-launch above the Worlds play surfaces.",
+    "Rendered live world, realm, gate, custom-game, stage, and future-slot stats from the existing snapshot contract.",
+    "Added priority lane buttons that open the deep Path Map.",
+    "Added Loom, Arcade, Registry, Genesis, and Asset launch tiles.",
+    "Moved relay, setup, audit, and expansion boards out of the default Worlds deck into Command or Library while keeping them available in All.",
+    "Compressed mobile launcher rails with internal horizontal scrolling for actions and lanes."
+  ],
+  "files": [
+    "web/index.html",
+    "web/app.js",
+    "web/styles.css",
+    "web/README.md",
+    "tests/test_agent_company_atlas_worlds_launch.py"
+  ],
+  "verification": {
+    "static": [
+      "node --check E:\\agent-company-lab\\web\\app.js",
+      "python -m pytest E:\\agent-company-lab\\tests -q -k agent_company_atlas"
+    ],
+    "browser": {
+      "desktop": {
+        "viewport": "1280x720",
+        "worlds_sections": 4,
+        "launcher_height": 308,
+        "page_height": 3729,
+        "horizontal_overflow": false
+      },
+      "tablet": {
+        "viewport": "820x900",
+        "worlds_sections": 4,
+        "launcher_height": 480,
+        "horizontal_overflow": false
+      },
+      "mobile": {
+        "viewport": "390x844",
+        "worlds_sections": 4,
+        "launcher_height": 495,
+        "horizontal_overflow": false
+      },
+      "click_check": "Genesis launch tile switches to Library and reveals #lane-genesis-foundry.",
+      "console_errors": 0
+    }
+  },
+  "next_iteration": [
+    "Replace more static global panels with first-screen compact launchers.",
+    "Create a stronger animated visual language for lane cards and minigame transitions.",
+    "Continue reducing default deck height while preserving All as the full audit mode."
+  ]
+}

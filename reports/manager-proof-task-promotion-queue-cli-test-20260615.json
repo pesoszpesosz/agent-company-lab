@@ -1,0 +1,28 @@
+{
+  "chain_integrity": {
+    "all_checks_passed": true,
+    "checked_report_count": 33,
+    "failure_count": 0
+  },
+  "checks": {
+    "chain_integrity_refreshed": true,
+    "help_command": true,
+    "json_tool_queue": true,
+    "json_tool_validation": true,
+    "py_compile": true,
+    "write_manager_proof_task_promotion_queue": true
+  },
+  "generated_utc": "2026-06-15T20:35:04Z",
+  "queue_result": {
+    "blocked_queue_count": 0,
+    "first_recommended_lane_id": "paid_code_bounties",
+    "first_recommended_task_id": "task-paid_code_bounties-first-local-proof-20260615",
+    "promotion_candidate_count": 6,
+    "queue_entry_count": 6,
+    "ready_queue_count": 6,
+    "task_rows_inserted_by_queue": 0
+  },
+  "schema_version": "agent_company.manager_proof_task_promotion_queue_cli_test.v1",
+  "source_path": "E:\\agent-company-lab\\tools\\agent_company.py",
+  "source_sha256": "190325BF3F696A9A19CCF1823EB90344887016124B35A51D27B3F2314FE8BCEC"
+}

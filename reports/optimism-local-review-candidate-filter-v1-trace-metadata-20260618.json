@@ -1,0 +1,36 @@
+{
+  "schema_version": "openinference_trace_metadata.v1",
+  "generated_utc": "2026-06-17T21:56:43Z",
+  "trace_id": "trace-optimism-local-review-candidate-filter-v1-20260618",
+  "task_id": "task-optimism-local-review-candidate-filter-v1-20260618",
+  "lane_id": "security_bounty_private_reports",
+  "agent_id": "recovered-profitable-edge-infra",
+  "operation": "optimism_local_review_candidate_filter",
+  "input_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-asset-scope-table-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-known-issue-duplicate-matrix-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\security-report-quality-gate-v1-20260618.json",
+    "https://immunefi.com/bug-bounty/optimism/information/",
+    "https://immunefi.com/bug-bounty/optimism/scope/",
+    "https://immunefi.com/rules/",
+    "https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/"
+  ],
+  "output_artifacts": [
+    "E:\\agent-company-lab\\data\\optimism-local-review-candidate-filter-v1-20260618.json",
+    "E:\\agent-company-lab\\data\\optimism-local-review-candidate-filter-v1-20260618.csv",
+    "E:\\agent-company-lab\\reports\\optimism-local-review-candidate-filter-v1-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-local-review-candidate-filter-v1-validation-20260618.json",
+    "E:\\agent-company-lab\\reports\\optimism-local-review-candidate-filter-v1-20260618.md"
+  ],
+  "boundary": {
+    "report_only": true,
+    "security_tests": false,
+    "browser_sessions_started": 0,
+    "accounts_registered": 0,
+    "private_reports_submitted": 0,
+    "public_actions": false,
+    "wallet_actions": false,
+    "payment_actions": false,
+    "external_side_effects": false
+  }
+}
