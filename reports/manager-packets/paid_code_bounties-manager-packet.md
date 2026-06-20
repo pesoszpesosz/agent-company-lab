@@ -1,6 +1,6 @@
 # Manager Packet - paid_code_bounties
 
-Generated UTC: 2026-06-20T21:01:19Z
+Generated UTC: 2026-06-20T22:49:40Z
 Department: Cashflow Engineering
 Lane status: active
 Current owner: `lane-manager-paid_code_bounties-019ec612`
@@ -107,6 +107,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties` - Acknowledge customer follow-up triage for paid_code_bounties | lane-manager-paid_code_bounties-019ec612 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 76 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties` - Follow up customer input for paid_code_bounties | lane-manager-paid_code_bounties-019ec612 |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it. |
 | 91 | complete | `task-algora-opik-readonly-refresh-service-request-20260618` - Create Algora Opik read-only refresh service request | lane-manager-paid_code_bounties-019ec612 |  | E:\agent-company-lab\requests\service-requests\req-algora-opik-readonly-refresh-20260618\validation.json | Leave this request in needs_review. Do not assign, start, approve, or execute it until a later exact signed decision permits a public read-only Opik/Algora refresh. |
 | 88 | complete | `task-lane-scout-algora_comet_opik-20260618` - Lane scout local proof: algora comet opik | lane-manager-paid_code_bounties-019ec612 |  | E:\agent-company-lab\reports\money-path-lane-scout-packets\algora-comet-opik-claim-readiness-local-proof-validation.json | Park external Algora/Comet claim work until the Opik bounty program is verified active by an approved read-only refresh; then re-run duplicate/claim/payout checks before any public claim, comment, PR, account, CLA, or pa |
@@ -118,7 +119,6 @@ These require a scoped service request and approval before any execution:
 | 74 | complete | `task-lane-scout-opire_paid_oss-20260618` - Lane scout local proof: opire paid oss | lane-manager-paid_code_bounties-019ec612 |  | E:\agent-company-lab\reports\money-path-lane-scout-packets\opire-source-spec-parser-plan-local-proof-validation.json | Create a deterministic parser against saved/public Opire card snapshots extracting amount, owner, repo, title, language, command availability, solver count, URL/date fields, risk flags, and next local action; prove zero |
 | 70 | complete | `task-algora-explicit-payout-worksheet-20260616` - Create Algora explicit-payout issue worksheet | lane-manager-paid_code_bounties-019ec612 |  | E:\agent-company-lab\reports\paid-code-bounties\algora-explicit-payout-issue-worksheet-20260616.md | Create a local algora-live-candidate-refresh read-only packet or scanner. |
 | 70 | complete | `task-paid_code_bounties-startup-20260614` - Lane startup: read packet, choose first proof task, write local plan | lane-manager-paid_code_bounties-019ec612 |  | Local startup memo, source list, gates, and one next proof artifact | Run the first read-only explicit-payout scout/rank pass from the saved scan design; create a new scoped task before execution. |
-| 68 | complete | `task-algora-live-candidate-refresh-20260616` - Create Algora live-candidate refresh scanner packet | lane-manager-paid_code_bounties-019ec612 |  | E:\agent-company-lab\reports\paid-code-bounties\algora-live-candidate-refresh-20260616.md | Implement algora-candidate-refresh-fixture-20260616.json with configured public URLs and no-network parser fixture. |
 
 ## Service Requests
 

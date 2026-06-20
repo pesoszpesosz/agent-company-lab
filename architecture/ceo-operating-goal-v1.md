@@ -148,6 +148,12 @@ Near-term priority lanes:
 
 The CEO thread should stay small. Workers and managers carry detail in files, reports, traces, and task records.
 
+Refresh the compact CEO packet after each material dispatch batch:
+
+```powershell
+python tools\agent_company.py write-ceo-state-packet
+```
+
 Required CEO packet shape:
 
 - Current decision batch.
@@ -184,9 +190,32 @@ This goal should evolve from broad ambition into a tighter operating contract. E
 
 The goal evolver should preserve the spirit: many fast experiments, evidence before action, rare human requests, no uncontrolled side effects, and continuous improvement toward real money.
 
+## CEO Worker Constellation
+
+The CEO should delegate recurring detail to the AI Resources operating cell instead of carrying raw context in the CEO thread.
+
+Bootstrap or refresh the worker roster:
+
+```powershell
+python tools\agent_company.py bootstrap-ceo-workers
+```
+
+Current durable worker model:
+
+- AI Resources manager owns hire, evolve, park, and retire decisions.
+- Capability overlap mapper prevents duplicate agents before new hires.
+- Candidate registry curator tracks external AI tools and agent frameworks.
+- Local evaluation harness builder proves candidates locally before adoption.
+- Adoption/retirement reviewer recommends merge, evolve, watch, reject, or retire.
+- Continuity watchdog checks stale, offline, ownerless, overlapping, or goal-less work.
+- Premium customer context router keeps user materials out of CEO context and routes capsules.
+- Browser/account ops worker separates AI-doable account preparation from human KYC, billing, tax, terms, and legal gates.
+
+App automation `agent-company-continuity-watchdog` wakes every 15 minutes to continue the CEO continuity loop.
+
 ## Immediate Backlog
 
-1. Materialize `ai_resources_lab` into the seeded lane/departments registry and create the first AR candidate registry packet.
+1. Keep `bootstrap-ceo-workers` current with live worker thread handles and active goals.
 2. Create `human_action_feed_v1` as a local report-only schema and dashboard section.
 3. Create `ceo_state_packet_v1` to keep the CEO context window clean.
 4. Create `goal_evolver_review_v1` with proposed diffs, rationale, and no automatic application.

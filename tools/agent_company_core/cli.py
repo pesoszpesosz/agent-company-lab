@@ -27,6 +27,19 @@ from agent_company_core.control_reports import (
     write_company_expansion_gap_map,
     write_dashboard,
 )
+from agent_company_core.ai_resources_customer_followup_triage import write_ai_resources_customer_followup_triage
+from agent_company_core.ai_resources_owner_acknowledgement_requests import (
+    write_ai_resources_owner_acknowledgement_requests,
+)
+from agent_company_core.ai_resources_owner_acknowledgement_monitor import (
+    write_ai_resources_owner_acknowledgement_monitor,
+)
+from agent_company_core.ai_resources_owner_acknowledgement_dispatch import (
+    write_ai_resources_owner_acknowledgement_dispatch,
+)
+from agent_company_core.goal_evolver_review import write_goal_evolver_review
+from agent_company_core.ceo_state_packet import write_ceo_state_packet
+from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
 from agent_company_core.control_plane_capacity_benchmark_runner import write_control_plane_capacity_benchmark_runner
 from agent_company_core.premium_customer_followup_escalation import write_premium_customer_followup_escalation
 from agent_company_core.premium_customer_followup_monitor import write_premium_customer_followup_monitor
@@ -97,7 +110,7 @@ from agent_company_core.paths import (
 )
 
 
-def main() -> None:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Agent-company Phase 0 control plane")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
@@ -164,6 +177,63 @@ def main() -> None:
     premium_customer_escalation.add_argument("--update-feed-json")
     premium_customer_escalation.add_argument("--update-feed-md")
     premium_customer_escalation.add_argument("--no-db-record", action="store_true")
+    ai_resources_triage = sub.add_parser("triage-ai-resources-customer-followups")
+    ai_resources_triage.add_argument("--escalation-report", required=True)
+    ai_resources_triage.add_argument("--now-utc")
+    ai_resources_triage.add_argument("--path")
+    ai_resources_triage.add_argument("--json-path")
+    ai_resources_triage.add_argument("--no-db-record", action="store_true")
+    ai_resources_ack = sub.add_parser("request-ai-resources-owner-acknowledgements")
+    ai_resources_ack.add_argument("--triage-report", required=True)
+    ai_resources_ack.add_argument("--now-utc")
+    ai_resources_ack.add_argument("--path")
+    ai_resources_ack.add_argument("--json-path")
+    ai_resources_ack.add_argument("--no-db-record", action="store_true")
+    ai_resources_ack_monitor = sub.add_parser("monitor-ai-resources-owner-acknowledgements")
+    ai_resources_ack_monitor.add_argument("--input-id")
+    ai_resources_ack_monitor.add_argument("--stale-after-minutes", type=int, default=60)
+    ai_resources_ack_monitor.add_argument("--now-utc")
+    ai_resources_ack_monitor.add_argument("--path")
+    ai_resources_ack_monitor.add_argument("--json-path")
+    ai_resources_ack_monitor.add_argument("--no-db-record", action="store_true")
+    ai_resources_ack_dispatch = sub.add_parser("write-ai-resources-owner-acknowledgement-dispatch")
+    ai_resources_ack_dispatch.add_argument("--input-id")
+    ai_resources_ack_dispatch.add_argument("--stale-after-minutes", type=int, default=60)
+    ai_resources_ack_dispatch.add_argument("--now-utc")
+    ai_resources_ack_dispatch.add_argument("--path")
+    ai_resources_ack_dispatch.add_argument("--json-path")
+    ai_resources_ack_dispatch.add_argument("--no-db-record", action="store_true")
+    goal_evolver_review = sub.add_parser("write-goal-evolver-review")
+    goal_evolver_review.add_argument("--now-utc")
+    goal_evolver_review.add_argument("--path")
+    goal_evolver_review.add_argument("--json-path")
+    goal_evolver_review.add_argument("--goal-md-path")
+    goal_evolver_review.add_argument("--goal-json-path")
+    goal_evolver_review.add_argument("--agent-charter-path")
+    goal_evolver_review.add_argument("--evidence-limit", type=int, default=10)
+    goal_evolver_review.add_argument("--no-db-record", action="store_true")
+    ceo_state_packet = sub.add_parser("write-ceo-state-packet")
+    ceo_state_packet.add_argument("--now-utc")
+    ceo_state_packet.add_argument("--path")
+    ceo_state_packet.add_argument("--json-path")
+    ceo_state_packet.add_argument("--human-action-path")
+    ceo_state_packet.add_argument("--human-action-json-path")
+    ceo_state_packet.add_argument("--open-task-limit", type=int, default=10)
+    ceo_state_packet.add_argument("--dispatch-limit", type=int, default=10)
+    ceo_state_packet.add_argument("--no-db-record", action="store_true")
+    ceo_worker_bootstrap = sub.add_parser("bootstrap-ceo-workers")
+    ceo_worker_bootstrap.add_argument("--now-utc")
+    ceo_worker_bootstrap.add_argument("--path")
+    ceo_worker_bootstrap.add_argument("--json-path")
+    ceo_worker_bootstrap.add_argument("--ar-thread-id")
+    ceo_worker_bootstrap.add_argument("--overlap-thread-id")
+    ceo_worker_bootstrap.add_argument("--candidate-thread-id")
+    ceo_worker_bootstrap.add_argument("--evaluation-thread-id")
+    ceo_worker_bootstrap.add_argument("--retirement-thread-id")
+    ceo_worker_bootstrap.add_argument("--continuity-thread-id")
+    ceo_worker_bootstrap.add_argument("--premium-router-thread-id")
+    ceo_worker_bootstrap.add_argument("--browser-ops-thread-id")
+    ceo_worker_bootstrap.add_argument("--no-db-record", action="store_true")
     add_money_path_commands(sub)
     add_paid_code_commands(sub)
     add_digital_products_commands(sub)
@@ -282,6 +352,11 @@ def main() -> None:
 
     add_registry_service_request_commands(sub)
 
+    return parser
+
+
+def main() -> None:
+    parser = build_parser()
     args = parser.parse_args()
     with connect() as conn:
         if args.cmd == "init":
@@ -319,6 +394,27 @@ def main() -> None:
         elif args.cmd == "escalate-premium-customer-followups":
             init_db(conn)
             write_premium_customer_followup_escalation(conn, args)
+        elif args.cmd == "triage-ai-resources-customer-followups":
+            init_db(conn)
+            write_ai_resources_customer_followup_triage(conn, args)
+        elif args.cmd == "request-ai-resources-owner-acknowledgements":
+            init_db(conn)
+            write_ai_resources_owner_acknowledgement_requests(conn, args)
+        elif args.cmd == "monitor-ai-resources-owner-acknowledgements":
+            init_db(conn)
+            write_ai_resources_owner_acknowledgement_monitor(conn, args)
+        elif args.cmd == "write-ai-resources-owner-acknowledgement-dispatch":
+            init_db(conn)
+            write_ai_resources_owner_acknowledgement_dispatch(conn, args)
+        elif args.cmd == "write-goal-evolver-review":
+            init_db(conn)
+            write_goal_evolver_review(conn, args)
+        elif args.cmd == "write-ceo-state-packet":
+            init_db(conn)
+            write_ceo_state_packet(conn, args)
+        elif args.cmd == "bootstrap-ceo-workers":
+            init_db(conn)
+            write_ceo_worker_bootstrap(conn, args)
         elif handle_money_path_command(conn, args):
             pass
         elif handle_paid_code_command(conn, args):

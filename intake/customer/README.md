@@ -46,6 +46,30 @@ python tools\agent_company.py escalate-premium-customer-followups --monitor-repo
 
 The escalation command creates one local triage task for AI Resources or CEO review and does not mutate the original lane follow-up tasks.
 
+Classify escalated follow-ups into reuse, evolve, park, or CEO-decision paths:
+
+```powershell
+python tools\agent_company.py triage-ai-resources-customer-followups --escalation-report reports\customer-followup-escalation-v1-20260620.json
+```
+
+The AI Resources triage command writes a local decision packet and audit rows only. It does not mutate original lane follow-up tasks, start workers, create agents, open browsers, create accounts, publish, submit, trade, spend, call APIs, or approve service requests.
+
+Request acknowledgement from the existing lane owners when triage chooses reuse:
+
+```powershell
+python tools\agent_company.py request-ai-resources-owner-acknowledgements --triage-report reports\ai-resources-customer-followup-triage-v1-20260621.json
+```
+
+The acknowledgement command creates local owner acknowledgement tasks only. Each owner must acknowledge the customer follow-up, park it with a revisit condition, or request a CEO decision-batch item before workers or overlapping agents are added.
+
+Monitor owner acknowledgement tasks without touching lane execution:
+
+```powershell
+python tools\agent_company.py monitor-ai-resources-owner-acknowledgements --input-id customer-input-id
+```
+
+The acknowledgement monitor flags ownerless, stale, blocked, active, and complete owner acknowledgement tasks without mutating the original follow-up work, creating new workers, or starting agents.
+
 ## Non-Rejection Rule
 
 Inputs should be routed, synthesized, applied, or parked with a revisit condition. Rejection is reserved for unsafe, illegal, impossible, spammy, duplicate-without-new-information, or out-of-scope inputs.

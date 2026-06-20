@@ -1,0 +1,106 @@
+{
+  "acknowledgement_requests": [
+    {
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_resources_lab",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 90,
+      "recommended_action": "Acknowledge the customer follow-up locally: accept the existing task, park it with a revisit condition, or request a CEO decision-batch item.",
+      "source_followup_status": "new",
+      "source_followup_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
+      "triage_decision": "reuse_existing_owner"
+    },
+    {
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_ml_competitions",
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "priority": 90,
+      "recommended_action": "Acknowledge the customer follow-up locally: accept the existing task, park it with a revisit condition, or request a CEO decision-batch item.",
+      "source_followup_status": "new",
+      "source_followup_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+      "triage_decision": "reuse_existing_owner"
+    },
+    {
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:money_source_discovery",
+      "lane_id": "money_source_discovery",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "priority": 90,
+      "recommended_action": "Acknowledge the customer follow-up locally: accept the existing task, park it with a revisit condition, or request a CEO decision-batch item.",
+      "source_followup_status": "new",
+      "source_followup_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery",
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery",
+      "triage_decision": "reuse_existing_owner"
+    },
+    {
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
+      "lane_id": "paid_code_bounties",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 90,
+      "recommended_action": "Acknowledge the customer follow-up locally: accept the existing task, park it with a revisit condition, or request a CEO decision-batch item.",
+      "source_followup_status": "new",
+      "source_followup_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+      "triage_decision": "reuse_existing_owner"
+    },
+    {
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:prediction_market_research",
+      "lane_id": "prediction_market_research",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "priority": 90,
+      "recommended_action": "Acknowledge the customer follow-up locally: accept the existing task, park it with a revisit condition, or request a CEO decision-batch item.",
+      "source_followup_status": "new",
+      "source_followup_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
+      "triage_decision": "reuse_existing_owner"
+    },
+    {
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:youtube_content_channels",
+      "lane_id": "youtube_content_channels",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "priority": 90,
+      "recommended_action": "Acknowledge the customer follow-up locally: accept the existing task, park it with a revisit condition, or request a CEO decision-batch item.",
+      "source_followup_status": "new",
+      "source_followup_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
+      "triage_decision": "reuse_existing_owner"
+    }
+  ],
+  "counts": {
+    "owner_acknowledgement_requested": 6,
+    "skipped": 0,
+    "total": 6
+  },
+  "generated_utc": "2026-06-20T21:32:32Z",
+  "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+  "json_path": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-requests-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-requests-v1-20260621.md",
+  "next_action": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+  "schema_version": "ai_resources_owner_acknowledgement_requests.v1",
+  "status": "acknowledgement_requests_ready",
+  "summary": "Prepared 6 lane-owner acknowledgement requests from AI Resources triage.",
+  "triage_report_path": "reports\\ai-resources-customer-followup-triage-v1-20260621.json",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

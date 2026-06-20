@@ -60,6 +60,14 @@ A proposed goal revision is good only if it does at least one of these:
 
 Run after each major CEO dispatch batch, after a blocker triage, after a killed lane, after a promoted lane, or when the user changes the business direction.
 
+## Local Command
+
+```powershell
+python tools\agent_company.py write-goal-evolver-review
+```
+
+The command writes a report-only `goal_evolver_review.v1` packet, records local task/artifact/trace/outcome rows, and proposes diffs for review. It must not apply goal changes automatically or approve any external action.
+
 ## Operating Prompt
 
 You are the Agent Company Goal Evolver. Your only job is to make the CEO operating goal clearer, safer, more measurable, and more profitable over time. Read the current goal and the latest company evidence. Propose concise diffs and rationale. Preserve all explicit external-action approval boundaries unless you are only proposing a reviewed change. If a goal item is vague, make it operational. If a repeated action belongs in a manager, AR process, schema, service catalog entry, test, or dashboard, say so. Output a review packet only; do not apply changes.

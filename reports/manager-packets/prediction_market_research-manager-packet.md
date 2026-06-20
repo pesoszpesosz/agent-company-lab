@@ -1,6 +1,6 @@
 # Manager Packet - prediction_market_research
 
-Generated UTC: 2026-06-20T21:01:19Z
+Generated UTC: 2026-06-20T22:49:40Z
 Department: Markets Research
 Lane status: active
 Current owner: `lane-manager-prediction_market_research-relaunch-20260614`
@@ -100,6 +100,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research` - Acknowledge customer follow-up triage for prediction_market_research | lane-manager-prediction_market_research-relaunch-20260614 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 76 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research` - Follow up customer input for prediction_market_research | lane-manager-prediction_market_research-relaunch-20260614 |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Create a local market-angle packet with data needs, venue gates, and no-trade boundary. |
 | 86 | complete | `task-kalshi-public-data-paper-signal-checker-v1-20260618` - Create Kalshi public-data paper signal checker | lane-manager-prediction_market_research-relaunch-20260614 |  | E:\agent-company-lab\reports\prediction-market-research\kalshi-public-data-paper-signal-checker-v1-validation-20260618.json | Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed req |
 | 85 | complete | `task-agent-company-atlas-settlement-replay-v1-20260617` - Add custom Settlement Replay Atlas minigame | recovered-profitable-edge-infra |  | Generated settlement replay texture, custom frontend minigame renderer, trace metadata, regenerated snapshot, and browser validation | Use browser verification results to tune the Settlement Replay responsive layout, then continue adding lane-specific minigames. |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "agent-company-visual-dashboard.snapshot.v1",
-  "generatedUtc": "2026-06-20T21:01:59Z",
+  "generatedUtc": "2026-06-20T22:49:40Z",
   "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
   "sources": {
     "sqlite": "./state/agent_company.sqlite",
@@ -11,14 +11,14 @@
   },
   "totals": {
     "lanes": 15,
-    "departments": 22,
-    "agents": 16,
-    "tasks": 683,
+    "departments": 24,
+    "agents": 23,
+    "tasks": 707,
     "serviceRequests": 16,
     "evidence": 219,
-    "outcomes": 431,
-    "traces": 607,
-    "artifacts": 2602,
+    "outcomes": 441,
+    "traces": 617,
+    "artifacts": 2637,
     "pendingRequests": 13,
     "blockers": 13,
     "realizedUsd": 0.0
@@ -33,7 +33,7 @@
     {
       "id": "evidence-chain",
       "title": "Evidence Chain",
-      "description": "219 evidence records and 2602 artifacts are traceable.",
+      "description": "219 evidence records and 2637 artifacts are traceable.",
       "unlocked": true
     },
     {
@@ -51,18 +51,18 @@
     {
       "id": "trace-memory",
       "title": "Trace Memory",
-      "description": "607 trace events keep the company timeline replayable.",
+      "description": "617 trace events keep the company timeline replayable.",
       "unlocked": true
     }
   ],
   "departments": [
     {
       "department_id": "ai_resources",
-      "name": "AI Resources",
-      "manager_agent_id": null,
-      "status": "planned",
+      "name": "Artificial Resources",
+      "manager_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "status": "active",
       "created_at": "2026-06-20T16:47:26Z",
-      "updated_at": "2026-06-20T17:05:52Z"
+      "updated_at": "2026-06-21T01:25:00Z"
     },
     {
       "department_id": "audience_distribution",
@@ -79,6 +79,14 @@
       "status": "planned",
       "created_at": "2026-06-14T10:47:34Z",
       "updated_at": "2026-06-20T17:05:52Z"
+    },
+    {
+      "department_id": "ceo_control_room",
+      "name": "CEO Control Room",
+      "manager_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "status": "active",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z"
     },
     {
       "department_id": "competition_lab",
@@ -119,6 +127,14 @@
       "status": "planned",
       "created_at": "2026-06-14T10:47:54Z",
       "updated_at": "2026-06-20T17:05:52Z"
+    },
+    {
+      "department_id": "premium_customer_intake",
+      "name": "Premium Customer Intake",
+      "manager_agent_id": "premium-customer-context-router-20260621",
+      "status": "active",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z"
     },
     {
       "department_id": "product_studio",
@@ -235,6 +251,71 @@
   ],
   "agents": [
     {
+      "agent_id": "adoption-retirement-reviewer-20260621",
+      "role_id": "adoption_retirement_reviewer",
+      "thread_id": "multi-agent:019ee737-87bc-7b10-bbb1-d2fc08e15988",
+      "department_id": "ai_resources",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
+    },
+    {
+      "agent_id": "browser-account-ops-worker-20260621",
+      "role_id": "browser_account_ops_worker",
+      "thread_id": "multi-agent:019ee737-8b96-7eb0-abd1-93e46819ee6a",
+      "department_id": "ceo_control_room",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
+    },
+    {
+      "agent_id": "candidate-registry-curator-20260621",
+      "role_id": "candidate_registry_curator",
+      "thread_id": "codex-thread:019ee738-aa1d-72c0-8de1-99900e8649c1",
+      "department_id": "ai_resources",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
+    },
+    {
+      "agent_id": "capability-overlap-mapper-20260621",
+      "role_id": "capability_overlap_mapper",
+      "thread_id": "multi-agent:019ee737-6bef-7e02-947e-53bc42aa11b3",
+      "department_id": "ai_resources",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
+    },
+    {
+      "agent_id": "continuity-watchdog-worker-20260621",
+      "role_id": "continuity_watchdog_worker",
+      "thread_id": "codex-thread:019ee738-6cf8-7803-884e-3be1ea2d419b",
+      "department_id": "ai_resources",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
+    },
+    {
       "agent_id": "goal-evolver-agent-20260620",
       "role_id": "goal_evolver_agent",
       "thread_id": "codex-current-ceo-thread-20260620",
@@ -282,28 +363,28 @@
         "name": "Ai Ml Competitions",
         "state": "gated",
         "level": 12,
-        "score": 2730,
+        "score": 2748,
         "nextAction": "For local_baseline_only rows, create offline stub baselines using synthetic/public-open data only. Do not log in, create API tokens, accept competition rules, download Kaggle data, run Kaggle notebooks, submit, pay, post publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone."
       }
     },
     {
       "agent_id": "lane-manager-ai_resources_lab-20260620",
       "role_id": "ai_resources_manager",
-      "thread_id": "codex-current-ceo-thread-20260620",
+      "thread_id": "codex-thread:019ee738-60d5-7723-95f8-fb6e70ee7f4f",
       "department_id": "ai_resources",
       "status": "active",
-      "permissions_json": "[]",
-      "notes": null,
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
       "created_at": "2026-06-20T16:47:52Z",
-      "updated_at": "2026-06-20T16:47:52Z",
+      "updated_at": "2026-06-21T01:25:00Z",
       "visual": {},
       "lane": {
         "id": "ai_resources_lab",
         "name": "Ai Resources Lab",
         "state": "advancing",
-        "level": 6,
-        "score": 418,
-        "nextAction": "Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs."
+        "level": 12,
+        "score": 2010,
+        "nextAction": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch."
       }
     },
     {
@@ -432,7 +513,7 @@
         "name": "Money Source Discovery",
         "state": "gated",
         "level": 12,
-        "score": 2270,
+        "score": 2288,
         "nextAction": "Have lane managers claim the top ranked queue item and create only the named local artifact/parser/checker/draft. If the next action needs account, wallet, payment, trade, submission, public action, worker/runtime, model/MCP, or external API access, create a separate approval packet instead of executing it."
       }
     },
@@ -458,7 +539,7 @@
         "name": "Paid Code Bounties",
         "state": "gated",
         "level": 12,
-        "score": 2891,
+        "score": 2909,
         "nextAction": "Promote only candidate_needs_readonly_refresh rows into exact read-only refresh packets. Do not run /try, /claim, GitHub comments, PRs, account login, Stripe, payout, workers, model/API calls, or public actions."
       }
     },
@@ -484,7 +565,7 @@
         "name": "Prediction Market Research",
         "state": "advancing",
         "level": 10,
-        "score": 1493,
+        "score": 1511,
         "nextAction": "Add more manually saved market/event snippets only, or create an exact-scope public-market-data service request. Do not call live APIs, log in, connect/create wallets, use private keys/session signers/API credentials, bridge, deposit, withdraw, approve tokens, post/cancel/sign orders, trade, market make, post referrals, start workers/runtimes, or call model/MCP/external APIs from this packet alone."
       }
     },
@@ -556,9 +637,35 @@
         "name": "Youtube Content Channels",
         "state": "advancing",
         "level": 4,
-        "score": 221,
+        "score": 239,
         "nextAction": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1."
       }
+    },
+    {
+      "agent_id": "local-evaluation-harness-builder-20260621",
+      "role_id": "local_evaluation_harness_builder",
+      "thread_id": "multi-agent:019ee737-83b0-7ea3-97b1-738eb32598fd",
+      "department_id": "ai_resources",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
+    },
+    {
+      "agent_id": "premium-customer-context-router-20260621",
+      "role_id": "premium_customer_context_router",
+      "thread_id": "codex-thread:019ee738-8be7-7962-a6df-2294ce084671",
+      "department_id": "premium_customer_intake",
+      "status": "active",
+      "permissions_json": "[\"local_db_read_write\", \"local_report_write\", \"local_artifact_register\", \"no_external_side_effects_without_service_gate\"]",
+      "notes": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
+      "created_at": "2026-06-21T01:15:00Z",
+      "updated_at": "2026-06-21T01:25:00Z",
+      "visual": {},
+      "lane": null
     },
     {
       "agent_id": "premium-customer-intake-agent-20260620",
@@ -672,14 +779,14 @@
         "x": 12,
         "y": 18
       },
-      "score": 2730,
+      "score": 2748,
       "level": 12,
       "progress": 100,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 18,
+        "tasks": 19,
         "completedTasks": 17,
-        "activeTasks": 1,
+        "activeTasks": 2,
         "serviceRequests": 1,
         "pendingRequests": 1,
         "evidence": 9,
@@ -689,8 +796,8 @@
         "blockers": 1
       },
       "taskCounts": {
-        "complete": 17,
-        "new": 1
+        "new": 2,
+        "complete": 17
       },
       "requestCounts": {
         "needs_review": 1
@@ -699,6 +806,14 @@
         "browser_research": 1
       },
       "recentTasks": [
+        {
+          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+          "title": "Acknowledge customer follow-up triage for ai_ml_competitions",
+          "status": "new",
+          "priority": 90,
+          "nextAction": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "ownerAgentId": "lane-manager-ai_ml_competitions-019ec69a"
+        },
         {
           "id": "task-arc-agi-3-micro-env-replay-baseline-v1-20260618",
           "title": "Create ARC-AGI-3 micro-environment replay baseline",
@@ -753,14 +868,6 @@
           "status": "new",
           "priority": 76,
           "nextAction": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
-          "ownerAgentId": "lane-manager-ai_ml_competitions-019ec69a"
-        },
-        {
-          "id": "task-lane-scout-kaggle_money_competitions-20260618",
-          "title": "Lane scout local proof: kaggle money competitions",
-          "status": "complete",
-          "priority": 72,
-          "nextAction": "Create a no-login Kaggle competition row fixture from manually saved public listing/rules snippets, then run the worksheet scorer and prove all rows either have a next local baseline action or a kill reason. Keep Kaggle account, API token, rules acceptance, data download, notebook execution, submission, payment, public action, worker/runtime, and model/MCP calls blocked.",
           "ownerAgentId": "lane-manager-ai_ml_competitions-019ec69a"
         }
       ],
@@ -1126,6 +1233,14 @@
         }
       ],
       "trail": [
+        {
+          "kind": "task",
+          "title": "Acknowledge customer follow-up triage for ai_ml_competitions",
+          "status": "new",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "artifact": null
+        },
         {
           "kind": "task",
           "title": "Follow up customer input for ai_ml_competitions",
@@ -2144,11 +2259,11 @@
     {
       "id": "ai_resources_lab",
       "name": "Ai Resources Lab",
-      "department": "AI Resources",
+      "department": "Artificial Resources",
       "status": "active",
       "state": "advancing",
       "ownerAgentId": "lane-manager-ai_resources_lab-20260620",
-      "ownerThreadId": "codex-current-ceo-thread-20260620",
+      "ownerThreadId": "codex-thread:019ee738-60d5-7723-95f8-fb6e70ee7f4f",
       "agentTypes": [
         "ai_resources_manager",
         "ai_resource_evaluator",
@@ -2206,25 +2321,26 @@
         "x": 43,
         "y": 20
       },
-      "score": 418,
-      "level": 6,
-      "progress": 10,
+      "score": 2010,
+      "level": 12,
+      "progress": 20,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 4,
-        "completedTasks": 2,
-        "activeTasks": 2,
+        "tasks": 23,
+        "completedTasks": 12,
+        "activeTasks": 11,
         "serviceRequests": 0,
         "pendingRequests": 0,
         "evidence": 0,
-        "outcomes": 2,
-        "traces": 2,
-        "artifacts": 19,
+        "outcomes": 12,
+        "traces": 12,
+        "artifacts": 54,
         "blockers": 0
       },
       "taskCounts": {
-        "complete": 2,
-        "new": 2
+        "complete": 12,
+        "in_progress": 8,
+        "new": 3
       },
       "requestCounts": {},
       "requestTypes": {},
@@ -2246,6 +2362,30 @@
           "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
         },
         {
+          "id": "task-ceo-worker-bootstrap-v1-20260621",
+          "title": "Bootstrap CEO worker constellation",
+          "status": "complete",
+          "priority": 99,
+          "nextAction": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+          "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
+        },
+        {
+          "id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621",
+          "title": "Active goal for lane-manager-ai_resources_lab-20260620",
+          "status": "in_progress",
+          "priority": 96,
+          "nextAction": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
+          "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
+        },
+        {
+          "id": "task-ceo-state-packet-v1-20260621",
+          "title": "Refresh CEO state packet v1",
+          "status": "complete",
+          "priority": 94,
+          "nextAction": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+          "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
+        },
+        {
           "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab",
           "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002",
           "status": "new",
@@ -2254,11 +2394,19 @@
           "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
         },
         {
-          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
-          "title": "Follow up customer input for ai_resources_lab",
-          "status": "new",
-          "priority": 91,
-          "nextAction": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
+          "id": "task-goal-evolver-review-v1-20260621",
+          "title": "Write Goal Evolver review packet v1",
+          "status": "complete",
+          "priority": 92,
+          "nextAction": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+          "ownerAgentId": "goal-evolver-agent-20260620"
+        },
+        {
+          "id": "task-ai-resources-customer-followup-triage-command-v1-20260621",
+          "title": "Executable AI Resources customer follow-up triage v1",
+          "status": "complete",
+          "priority": 92,
+          "nextAction": "Use triage-ai-resources-customer-followups after escalation to classify stale customer tasks into reuse, evolve, park, or CEO decision paths without starting workers.",
           "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
         }
       ],
@@ -2267,73 +2415,805 @@
       "recentEvidence": [],
       "recentOutcomes": [
         {
-          "id": "outcome-ceo-first-state-packets-v1-20260620",
-          "type": "ceo_state_packets_bootstrap",
-          "status": "complete",
+          "id": "outcome-ceo-worker-bootstrap-v1-20260621",
+          "type": "ceo_worker_bootstrap",
+          "status": "active",
           "realizedUsd": 0.0,
-          "nextAction": "Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs.",
-          "artifact": "./reports/ceo-state-packet-v1-20260620.md"
+          "nextAction": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+          "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
         },
         {
-          "id": "outcome-ceo-operating-goal-v1-20260620",
-          "type": "ceo_operating_goal_bootstrap",
+          "id": "outcome-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_owner_acknowledgement_dispatch",
+          "status": "dispatch_ready",
+          "realizedUsd": 0.0,
+          "nextAction": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
+        },
+        {
+          "id": "outcome-ceo-state-packet-v1-20260621",
+          "type": "ceo_state_packet",
+          "status": "current",
+          "realizedUsd": 0.0,
+          "nextAction": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+          "artifact": "./reports/ceo-state-packet-v1-20260621.md"
+        },
+        {
+          "id": "outcome-goal-evolver-review-v1-20260621",
+          "type": "goal_evolver_review",
+          "status": "apply_after_review",
+          "realizedUsd": 0.0,
+          "nextAction": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+          "artifact": "./reports/goal-evolver-review-v1-20260621.md"
+        },
+        {
+          "id": "outcome-ai-resources-owner-acknowledgement-monitor-capability-20260621",
+          "type": "ai_resources_owner_acknowledgement_monitor_capability",
           "status": "complete",
           "realizedUsd": 0.0,
-          "nextAction": "Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets.",
-          "artifact": "./architecture/ceo-operating-goal-v1.md"
+          "nextAction": "Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "id": "outcome-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_owner_acknowledgement_monitor",
+          "status": "attention_needed",
+          "realizedUsd": 0.0,
+          "nextAction": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "id": "outcome-ai-resources-owner-acknowledgement-requests-command-v1-20260621",
+          "type": "ai_resources_owner_acknowledgement_requests_capability",
+          "status": "validated",
+          "realizedUsd": 0.0,
+          "nextAction": "Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking.",
+          "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
+        },
+        {
+          "id": "outcome-ai-resources-owner-acknowledgement-requests-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_owner_acknowledgement_requests",
+          "status": "acknowledgement_requests_ready",
+          "realizedUsd": 0.0,
+          "nextAction": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
         }
       ],
       "recentTraces": [
         {
-          "id": "trace-event-ceo-first-state-packets-v1-20260620",
-          "type": "ceo_state_packets_installed",
-          "time": "2026-06-20T16:54:52Z",
-          "summary": "Installed first CEO state packets: AI Resources candidate registry, human-action feed, CEO state packet, and YouTube lane scout; added and claimed youtube_content_channels.",
-          "artifact": "./reports/ceo-state-packet-v1-20260620.md"
+          "id": "trace-event-ceo-state-packet-v1-20260621",
+          "type": "ceo_state_packet_refreshed",
+          "time": "2026-06-21T01:45:00Z",
+          "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+          "artifact": "./reports/ceo-state-packet-v1-20260621.md"
         },
         {
-          "id": "trace-event-ceo-operating-goal-v1-installed-20260620",
-          "type": "ceo_operating_goal_installed",
-          "time": "2026-06-20T16:48:52Z",
-          "summary": "Installed CEO operating goal v1, AI Resources lane/roles, goal-evolver charter, and human-action-desk role as local control-plane artifacts.",
-          "artifact": "./architecture/ceo-operating-goal-v1.md"
+          "id": "trace-event-goal-evolver-review-v1-20260621",
+          "type": "goal_evolver_review_written",
+          "time": "2026-06-21T01:40:00Z",
+          "summary": "Goal Evolver proposed 3 operating-goal diffs from current company evidence.",
+          "artifact": "./reports/goal-evolver-review-v1-20260621.md"
+        },
+        {
+          "id": "trace-event-ceo-worker-bootstrap-v1-20260621",
+          "type": "ceo_worker_constellation_bootstrapped",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Bootstrapped 8 CEO/AR workers with active goals.",
+          "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
+        },
+        {
+          "id": "trace-event-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_owner_acknowledgement_dispatch_written",
+          "time": "2026-06-21T00:50:00Z",
+          "summary": "Wrote 6 existing-owner dispatch items for stale acknowledgements.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
+        },
+        {
+          "id": "trace-ai-resources-owner-acknowledgement-monitor-command-ready-20260621",
+          "type": "ai_resources_owner_acknowledgement_monitor_command_ready",
+          "time": "2026-06-20T21:37:51Z",
+          "summary": "AI Resources owner acknowledgement monitor command is implemented, tested, documented, and live-run against the CEO operating-goal input.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "id": "trace-event-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_owner_acknowledgements_monitored",
+          "time": "2026-06-20T21:37:27Z",
+          "summary": "Checked 6 owner acknowledgement tasks; 6 need attention.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "id": "trace-event-ai-resources-owner-acknowledgement-requests-command-v1-20260621",
+          "type": "ai_resources_owner_acknowledgement_requests_command_ready",
+          "time": "2026-06-20T21:32:59Z",
+          "summary": "Created an executable owner acknowledgement request command that asks existing lane owners to respond without starting workers or mutating source follow-ups.",
+          "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
+        },
+        {
+          "id": "trace-event-ai-resources-owner-acknowledgement-requests-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_owner_acknowledgement_requests_written",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Wrote 6 owner acknowledgement requests for customer follow-up triage.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
+        },
+        {
+          "id": "trace-event-ai-resources-customer-followup-triage-command-v1-20260621",
+          "type": "ai_resources_customer_followup_triage_command_ready",
+          "time": "2026-06-20T21:29:18Z",
+          "summary": "Created an executable AI Resources triage command that classifies customer follow-up escalations without starting workers or mutating lane follow-ups.",
+          "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py"
+        },
+        {
+          "id": "trace-event-ai-resources-customer-followup-triage-customer-input-ceo-operating-goal-objective-20260620-002",
+          "type": "ai_resources_customer_followup_triage_written",
+          "time": "2026-06-20T21:28:40Z",
+          "summary": "Wrote AI Resources triage packet for 6 customer follow-up escalation items.",
+          "artifact": "./reports/ai-resources-customer-followup-triage-v1-20260621.md"
         }
       ],
       "milestones": [
         {
-          "kind": "outcome",
-          "title": "Ceo State Packets Bootstrap",
-          "status": "complete",
-          "time": "2026-06-20T16:54:59Z",
-          "summary": "Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs.",
-          "artifact": "./reports/ceo-state-packet-v1-20260620.md"
+          "kind": "trace",
+          "title": "Ceo State Packet Refreshed",
+          "status": "recorded",
+          "time": "2026-06-21T01:45:00Z",
+          "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+          "artifact": "./reports/ceo-state-packet-v1-20260621.md"
         },
         {
           "kind": "trace",
-          "title": "Ceo State Packets Installed",
+          "title": "Goal Evolver Review Written",
           "status": "recorded",
-          "time": "2026-06-20T16:54:52Z",
-          "summary": "Installed first CEO state packets: AI Resources candidate registry, human-action feed, CEO state packet, and YouTube lane scout; added and claimed youtube_content_channels.",
-          "artifact": "./reports/ceo-state-packet-v1-20260620.md"
-        },
-        {
-          "kind": "outcome",
-          "title": "Ceo Operating Goal Bootstrap",
-          "status": "complete",
-          "time": "2026-06-20T16:48:56Z",
-          "summary": "Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets.",
-          "artifact": "./architecture/ceo-operating-goal-v1.md"
+          "time": "2026-06-21T01:40:00Z",
+          "summary": "Goal Evolver proposed 3 operating-goal diffs from current company evidence.",
+          "artifact": "./reports/goal-evolver-review-v1-20260621.md"
         },
         {
           "kind": "trace",
-          "title": "Ceo Operating Goal Installed",
+          "title": "Ceo Worker Constellation Bootstrapped",
           "status": "recorded",
-          "time": "2026-06-20T16:48:52Z",
-          "summary": "Installed CEO operating goal v1, AI Resources lane/roles, goal-evolver charter, and human-action-desk role as local control-plane artifacts.",
-          "artifact": "./architecture/ceo-operating-goal-v1.md"
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Bootstrapped 8 CEO/AR workers with active goals.",
+          "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ceo Worker Bootstrap",
+          "status": "active",
+          "time": "2026-06-21T01:15:00Z",
+          "summary": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+          "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Dispatch",
+          "status": "dispatch_ready",
+          "time": "2026-06-21T00:50:00Z",
+          "summary": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Dispatch Written",
+          "status": "recorded",
+          "time": "2026-06-21T00:50:00Z",
+          "summary": "Wrote 6 existing-owner dispatch items for stale acknowledgements.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ceo State Packet",
+          "status": "current",
+          "time": "2026-06-21T00:30:00Z",
+          "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+          "artifact": "./reports/ceo-state-packet-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Goal Evolver Review",
+          "status": "apply_after_review",
+          "time": "2026-06-20T21:43:24Z",
+          "summary": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+          "artifact": "./reports/goal-evolver-review-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Monitor Capability",
+          "status": "complete",
+          "time": "2026-06-20T21:37:51Z",
+          "summary": "Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Monitor Command Ready",
+          "status": "recorded",
+          "time": "2026-06-20T21:37:51Z",
+          "summary": "AI Resources owner acknowledgement monitor command is implemented, tested, documented, and live-run against the CEO operating-goal input.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Monitor",
+          "status": "attention_needed",
+          "time": "2026-06-20T21:37:27Z",
+          "summary": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgements Monitored",
+          "status": "recorded",
+          "time": "2026-06-20T21:37:27Z",
+          "summary": "Checked 6 owner acknowledgement tasks; 6 need attention.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Requests Capability",
+          "status": "validated",
+          "time": "2026-06-20T21:32:59Z",
+          "summary": "Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking.",
+          "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Requests Command Ready",
+          "status": "recorded",
+          "time": "2026-06-20T21:32:59Z",
+          "summary": "Created an executable owner acknowledgement request command that asks existing lane owners to respond without starting workers or mutating source follow-ups.",
+          "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Requests",
+          "status": "acknowledgement_requests_ready",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Requests Written",
+          "status": "recorded",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Wrote 6 owner acknowledgement requests for customer follow-up triage.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
         }
       ],
       "trail": [
+        {
+          "kind": "task",
+          "title": "Refresh CEO state packet v1",
+          "status": "complete",
+          "time": "2026-06-21T01:45:00Z",
+          "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+          "artifact": null
+        },
+        {
+          "kind": "trace",
+          "title": "Ceo State Packet Refreshed",
+          "status": "recorded",
+          "time": "2026-06-21T01:45:00Z",
+          "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+          "artifact": "./reports/ceo-state-packet-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ceo-state-packet-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "CEO State Packet V1",
+              "Generated UTC: 2026-06-21T01:45:00Z",
+              "Status: `current_local_state_packet`",
+              "Packet id: `ceo-state-packet-v1-20260621`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Write Goal Evolver review packet v1",
+          "status": "complete",
+          "time": "2026-06-21T01:40:00Z",
+          "summary": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+          "artifact": null
+        },
+        {
+          "kind": "trace",
+          "title": "Goal Evolver Review Written",
+          "status": "recorded",
+          "time": "2026-06-21T01:40:00Z",
+          "summary": "Goal Evolver proposed 3 operating-goal diffs from current company evidence.",
+          "artifact": "./reports/goal-evolver-review-v1-20260621.md",
+          "artifactPreview": {
+            "label": "goal-evolver-review-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "Goal Evolver Review V1",
+              "Generated UTC: 2026-06-21T01:40:00Z",
+              "Review id: `goal-evolver-review-v1-20260621`",
+              "Apply recommendation: `apply_after_review`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Bootstrap CEO worker constellation",
+          "status": "complete",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for lane-manager-ai_resources_lab-20260620",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for capability-overlap-mapper-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for candidate-registry-curator-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for local-evaluation-harness-builder-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for adoption-retirement-reviewer-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for continuity-watchdog-worker-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for premium-customer-context-router-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Active goal for browser-account-ops-worker-20260621",
+          "status": "in_progress",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
+          "artifact": null
+        },
+        {
+          "kind": "trace",
+          "title": "Ceo Worker Constellation Bootstrapped",
+          "status": "recorded",
+          "time": "2026-06-21T01:25:00Z",
+          "summary": "Bootstrapped 8 CEO/AR workers with active goals.",
+          "artifact": "./reports/ceo-worker-roster-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ceo-worker-roster-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "CEO Worker Roster V1",
+              "Generated UTC: 2026-06-21T01:25:00Z",
+              "Status: `ceo_workers_bootstrapped`",
+              "Lane: `ai_resources_lab`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "outcome",
+          "title": "Ceo Worker Bootstrap",
+          "status": "active",
+          "time": "2026-06-21T01:15:00Z",
+          "summary": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+          "artifact": "./reports/ceo-worker-roster-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ceo-worker-roster-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "CEO Worker Roster V1",
+              "Generated UTC: 2026-06-21T01:25:00Z",
+              "Status: `ceo_workers_bootstrapped`",
+              "Lane: `ai_resources_lab`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Dispatch stale owner acknowledgements for customer-input-ceo-operating-goal-objective-20260620-002",
+          "status": "complete",
+          "time": "2026-06-21T00:50:00Z",
+          "summary": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Dispatch",
+          "status": "dispatch_ready",
+          "time": "2026-06-21T00:50:00Z",
+          "summary": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Dispatch V1",
+              "Generated UTC: 2026-06-21T00:50:00Z",
+              "Status: `dispatch_ready`",
+              "Dispatch id: `ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Dispatch Written",
+          "status": "recorded",
+          "time": "2026-06-21T00:50:00Z",
+          "summary": "Wrote 6 existing-owner dispatch items for stale acknowledgements.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Dispatch V1",
+              "Generated UTC: 2026-06-21T00:50:00Z",
+              "Status: `dispatch_ready`",
+              "Dispatch id: `ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "outcome",
+          "title": "Ceo State Packet",
+          "status": "current",
+          "time": "2026-06-21T00:30:00Z",
+          "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+          "artifact": "./reports/ceo-state-packet-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ceo-state-packet-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "CEO State Packet V1",
+              "Generated UTC: 2026-06-21T01:45:00Z",
+              "Status: `current_local_state_packet`",
+              "Packet id: `ceo-state-packet-v1-20260621`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "outcome",
+          "title": "Goal Evolver Review",
+          "status": "apply_after_review",
+          "time": "2026-06-20T21:43:24Z",
+          "summary": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+          "artifact": "./reports/goal-evolver-review-v1-20260621.md",
+          "artifactPreview": {
+            "label": "goal-evolver-review-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "Goal Evolver Review V1",
+              "Generated UTC: 2026-06-21T01:40:00Z",
+              "Review id: `goal-evolver-review-v1-20260621`",
+              "Apply recommendation: `apply_after_review`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Register AI Resources owner acknowledgement monitor command v1",
+          "status": "complete",
+          "time": "2026-06-20T21:37:51Z",
+          "summary": "Use monitor-ai-resources-owner-acknowledgements after owner acknowledgement requests to surface stale or blocked lane owner responses without mutating lane tasks.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Monitor Capability",
+          "status": "complete",
+          "time": "2026-06-20T21:37:51Z",
+          "summary": "Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Monitor V1",
+              "Generated UTC: 2026-06-20T21:37:27Z",
+              "Status: `attention_needed`",
+              "Input filter: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Monitor Command Ready",
+          "status": "recorded",
+          "time": "2026-06-20T21:37:51Z",
+          "summary": "AI Resources owner acknowledgement monitor command is implemented, tested, documented, and live-run against the CEO operating-goal input.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Monitor V1",
+              "Generated UTC: 2026-06-20T21:37:27Z",
+              "Status: `attention_needed`",
+              "Input filter: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Monitor owner acknowledgements for customer-input-ceo-operating-goal-objective-20260620-002",
+          "status": "complete",
+          "time": "2026-06-20T21:37:27Z",
+          "summary": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Monitor",
+          "status": "attention_needed",
+          "time": "2026-06-20T21:37:27Z",
+          "summary": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Monitor V1",
+              "Generated UTC: 2026-06-20T21:37:27Z",
+              "Status: `attention_needed`",
+              "Input filter: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgements Monitored",
+          "status": "recorded",
+          "time": "2026-06-20T21:37:27Z",
+          "summary": "Checked 6 owner acknowledgement tasks; 6 need attention.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Monitor V1",
+              "Generated UTC: 2026-06-20T21:37:27Z",
+              "Status: `attention_needed`",
+              "Input filter: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Executable AI Resources owner acknowledgement requests v1",
+          "status": "complete",
+          "time": "2026-06-20T21:32:59Z",
+          "summary": "Use request-ai-resources-owner-acknowledgements after triage to create owner acknowledgement tasks without mutating source follow-ups or starting workers.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Requests Capability",
+          "status": "validated",
+          "time": "2026-06-20T21:32:59Z",
+          "summary": "Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking.",
+          "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py",
+          "artifactPreview": {
+            "label": "ai_resources_owner_acknowledgement_requests.py",
+            "kind": "py",
+            "lines": [
+              "\"\"\"Request existing lane-owner acknowledgement for AI Resources triage items.\"\"\"",
+              "from __future__ import annotations",
+              "import argparse",
+              "import json"
+            ],
+            "truncated": true
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Requests Command Ready",
+          "status": "recorded",
+          "time": "2026-06-20T21:32:59Z",
+          "summary": "Created an executable owner acknowledgement request command that asks existing lane owners to respond without starting workers or mutating source follow-ups.",
+          "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py",
+          "artifactPreview": {
+            "label": "ai_resources_owner_acknowledgement_requests.py",
+            "kind": "py",
+            "lines": [
+              "\"\"\"Request existing lane-owner acknowledgement for AI Resources triage items.\"\"\"",
+              "from __future__ import annotations",
+              "import argparse",
+              "import json"
+            ],
+            "truncated": true
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Request lane-owner acknowledgements for customer-input-ceo-operating-goal-objective-20260620-002",
+          "status": "complete",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+          "artifact": null
+        },
+        {
+          "kind": "task",
+          "title": "Acknowledge customer follow-up triage for ai_resources_lab",
+          "status": "new",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Owner Acknowledgement Requests",
+          "status": "acknowledgement_requests_ready",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-requests-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Requests V1",
+              "Generated UTC: 2026-06-20T21:32:32Z",
+              "Status: `acknowledgement_requests_ready`",
+              "Input id: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Owner Acknowledgement Requests Written",
+          "status": "recorded",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Wrote 6 owner acknowledgement requests for customer follow-up triage.",
+          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-owner-acknowledgement-requests-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Owner Acknowledgement Requests V1",
+              "Generated UTC: 2026-06-20T21:32:32Z",
+              "Status: `acknowledgement_requests_ready`",
+              "Input id: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Executable AI Resources customer follow-up triage v1",
+          "status": "complete",
+          "time": "2026-06-20T21:29:18Z",
+          "summary": "Use triage-ai-resources-customer-followups after escalation to classify stale customer tasks into reuse, evolve, park, or CEO decision paths without starting workers.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Customer Followup Triage Capability",
+          "status": "validated",
+          "time": "2026-06-20T21:29:18Z",
+          "summary": "Use the live triage packet to request lane-owner acknowledgements before adding or duplicating workers.",
+          "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py",
+          "artifactPreview": {
+            "label": "ai_resources_customer_followup_triage.py",
+            "kind": "py",
+            "lines": [
+              "\"\"\"AI Resources triage for premium-customer follow-up escalations.\"\"\"",
+              "from __future__ import annotations",
+              "import argparse",
+              "import json"
+            ],
+            "truncated": true
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Customer Followup Triage Command Ready",
+          "status": "recorded",
+          "time": "2026-06-20T21:29:18Z",
+          "summary": "Created an executable AI Resources triage command that classifies customer follow-up escalations without starting workers or mutating lane follow-ups.",
+          "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py",
+          "artifactPreview": {
+            "label": "ai_resources_customer_followup_triage.py",
+            "kind": "py",
+            "lines": [
+              "\"\"\"AI Resources triage for premium-customer follow-up escalations.\"\"\"",
+              "from __future__ import annotations",
+              "import argparse",
+              "import json"
+            ],
+            "truncated": true
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Triage premium customer follow-up escalation for customer-input-ceo-operating-goal-objective-20260620-002",
+          "status": "complete",
+          "time": "2026-06-20T21:28:40Z",
+          "summary": "Use the triage packet to request owner acknowledgement, evolve one existing agent, park ambiguous work, or draft CEO decision-batch items without starting lane work.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Ai Resources Customer Followup Triage",
+          "status": "triage_ready",
+          "time": "2026-06-20T21:28:40Z",
+          "summary": "Use the triage packet to request owner acknowledgement, evolve one existing agent, park ambiguous work, or draft CEO decision-batch items without starting lane work.",
+          "artifact": "./reports/ai-resources-customer-followup-triage-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-customer-followup-triage-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Customer Follow-Up Triage V1",
+              "Generated UTC: 2026-06-20T21:28:40Z",
+              "Status: `triage_ready`",
+              "Input id: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Ai Resources Customer Followup Triage Written",
+          "status": "recorded",
+          "time": "2026-06-20T21:28:40Z",
+          "summary": "Wrote AI Resources triage packet for 6 customer follow-up escalation items.",
+          "artifact": "./reports/ai-resources-customer-followup-triage-v1-20260621.md",
+          "artifactPreview": {
+            "label": "ai-resources-customer-followup-triage-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "AI Resources Customer Follow-Up Triage V1",
+              "Generated UTC: 2026-06-20T21:28:40Z",
+              "Status: `triage_ready`",
+              "Input id: `customer-input-ceo-operating-goal-objective-20260620-002`"
+            ],
+            "truncated": false
+          }
+        },
         {
           "kind": "task",
           "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002",
@@ -2476,7 +3356,7 @@
             "id": "ai_resources_lab-next-unlock",
             "title": "Next Unlock",
             "status": "active",
-            "description": "Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs."
+            "description": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions."
           }
         ]
       },
@@ -7017,14 +7897,14 @@
         "x": 62,
         "y": 43
       },
-      "score": 2270,
+      "score": 2288,
       "level": 12,
-      "progress": 91,
+      "progress": 96,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 16,
+        "tasks": 17,
         "completedTasks": 15,
-        "activeTasks": 1,
+        "activeTasks": 2,
         "serviceRequests": 1,
         "pendingRequests": 1,
         "evidence": 7,
@@ -7035,7 +7915,7 @@
       },
       "taskCounts": {
         "complete": 15,
-        "new": 1
+        "new": 2
       },
       "requestCounts": {
         "needs_review": 1
@@ -7051,6 +7931,14 @@
           "priority": 92,
           "nextAction": "Have lane managers claim the top ranked queue item and create only the named local artifact/parser/checker/draft. If the next action needs account, wallet, payment, trade, submission, public action, worker/runtime, model/MCP, or external API access, create a separate approval packet instead of executing it.",
           "ownerAgentId": "recovered-profitable-edge-infra"
+        },
+        {
+          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery",
+          "title": "Acknowledge customer follow-up triage for money_source_discovery",
+          "status": "new",
+          "priority": 90,
+          "nextAction": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "ownerAgentId": "lane-manager-money_source_discovery-019ec699"
         },
         {
           "id": "task-money-path-lane-scout-packet-v1-20260618",
@@ -7099,14 +7987,6 @@
           "priority": 71,
           "nextAction": "Package the highest-leverage local proof template among MSD-003 through MSD-016; browser/current-source verification remains blocked until service approval.",
           "ownerAgentId": "recovered-profitable-edge-infra"
-        },
-        {
-          "id": "task-opentrain-role-feed-worksheet-20260616",
-          "title": "Create OpenTrain AI role-feed worksheet",
-          "status": "complete",
-          "priority": 70,
-          "nextAction": "Create a local ai-training-sample-pack task for math reasoning, code QA, and RLHF samples.",
-          "ownerAgentId": "lane-manager-money_source_discovery-019ec699"
         }
       ],
       "serviceRequests": [
@@ -7464,6 +8344,14 @@
         }
       ],
       "trail": [
+        {
+          "kind": "task",
+          "title": "Acknowledge customer follow-up triage for money_source_discovery",
+          "status": "new",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "artifact": null
+        },
         {
           "kind": "task",
           "title": "Follow up customer input for money_source_discovery",
@@ -8412,14 +9300,14 @@
         "x": 93,
         "y": 45
       },
-      "score": 2891,
+      "score": 2909,
       "level": 12,
       "progress": 100,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 15,
+        "tasks": 16,
         "completedTasks": 14,
-        "activeTasks": 1,
+        "activeTasks": 2,
         "serviceRequests": 2,
         "pendingRequests": 2,
         "evidence": 22,
@@ -8430,7 +9318,7 @@
       },
       "taskCounts": {
         "complete": 14,
-        "new": 1
+        "new": 2
       },
       "requestCounts": {
         "needs_review": 2
@@ -8445,6 +9333,14 @@
           "status": "complete",
           "priority": 91,
           "nextAction": "Leave this request in needs_review. Do not assign, start, approve, or execute it until a later exact signed decision permits a public read-only Opik/Algora refresh.",
+          "ownerAgentId": "lane-manager-paid_code_bounties-019ec612"
+        },
+        {
+          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+          "title": "Acknowledge customer follow-up triage for paid_code_bounties",
+          "status": "new",
+          "priority": 90,
+          "nextAction": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
           "ownerAgentId": "lane-manager-paid_code_bounties-019ec612"
         },
         {
@@ -8494,14 +9390,6 @@
           "priority": 82,
           "nextAction": "Regenerate the Atlas snapshot and browser-verify the Claim Scout game view.",
           "ownerAgentId": "recovered-profitable-edge-infra"
-        },
-        {
-          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
-          "title": "Follow up customer input for paid_code_bounties",
-          "status": "new",
-          "priority": 76,
-          "nextAction": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
-          "ownerAgentId": "lane-manager-paid_code_bounties-019ec612"
         }
       ],
       "serviceRequests": [
@@ -8881,6 +9769,14 @@
         }
       ],
       "trail": [
+        {
+          "kind": "task",
+          "title": "Acknowledge customer follow-up triage for paid_code_bounties",
+          "status": "new",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "artifact": null
+        },
         {
           "kind": "task",
           "title": "Follow up customer input for paid_code_bounties",
@@ -17385,14 +18281,14 @@
         "x": 43,
         "y": 68
       },
-      "score": 1493,
+      "score": 1511,
       "level": 10,
-      "progress": 65,
+      "progress": 71,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 9,
+        "tasks": 10,
         "completedTasks": 8,
-        "activeTasks": 1,
+        "activeTasks": 2,
         "serviceRequests": 0,
         "pendingRequests": 0,
         "evidence": 9,
@@ -17402,12 +18298,20 @@
         "blockers": 0
       },
       "taskCounts": {
-        "complete": 8,
-        "new": 1
+        "new": 2,
+        "complete": 8
       },
       "requestCounts": {},
       "requestTypes": {},
       "recentTasks": [
+        {
+          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
+          "title": "Acknowledge customer follow-up triage for prediction_market_research",
+          "status": "new",
+          "priority": 90,
+          "nextAction": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "ownerAgentId": "lane-manager-prediction_market_research-relaunch-20260614"
+        },
         {
           "id": "task-kalshi-public-data-paper-signal-checker-v1-20260618",
           "title": "Create Kalshi public-data paper signal checker",
@@ -17462,14 +18366,6 @@
           "status": "complete",
           "priority": 67,
           "nextAction": "Keep prediction_market_research in data/paper-only mode; optional next proof is reusable local parser/checker against archived packets; no accounts, credentials, orders, trading APIs, deposits, withdrawals, or real-money trades.",
-          "ownerAgentId": "lane-manager-prediction_market_research-relaunch-20260614"
-        },
-        {
-          "id": "task-lane-scout-polymarket_docs_research-20260618",
-          "title": "Lane scout local proof: polymarket docs research",
-          "status": "complete",
-          "priority": 62,
-          "nextAction": "Create a Polymarket saved-market fixture parser/checker from manually saved docs/API examples only; emit paper-only rows with spread, fee, liquidity, resolution, jurisdiction, wallet, and max-loss kill reasons. Keep live API calls, account/login, Polymarket US onboarding, wallet/private-key/session-signer work, deposits, withdrawals, bridge, payments, trades, market-making, public posts/referrals, worker/runtime, and model/MCP calls blocked.",
           "ownerAgentId": "lane-manager-prediction_market_research-relaunch-20260614"
         }
       ],
@@ -17804,6 +18700,14 @@
         }
       ],
       "trail": [
+        {
+          "kind": "task",
+          "title": "Acknowledge customer follow-up triage for prediction_market_research",
+          "status": "new",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "artifact": null
+        },
         {
           "kind": "task",
           "title": "Follow up customer input for prediction_market_research",
@@ -22445,14 +23349,14 @@
         "x": 62,
         "y": 97
       },
-      "score": 221,
+      "score": 239,
       "level": 4,
-      "progress": 69,
+      "progress": 85,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 2,
+        "tasks": 3,
         "completedTasks": 1,
-        "activeTasks": 1,
+        "activeTasks": 2,
         "serviceRequests": 0,
         "pendingRequests": 0,
         "evidence": 0,
@@ -22463,7 +23367,7 @@
       },
       "taskCounts": {
         "complete": 1,
-        "new": 1
+        "new": 2
       },
       "requestCounts": {},
       "requestTypes": {},
@@ -22474,6 +23378,14 @@
           "status": "complete",
           "priority": 117,
           "nextAction": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1.",
+          "ownerAgentId": "lane-manager-youtube_content_channels-20260620"
+        },
+        {
+          "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
+          "title": "Acknowledge customer follow-up triage for youtube_content_channels",
+          "status": "new",
+          "priority": 90,
+          "nextAction": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
           "ownerAgentId": "lane-manager-youtube_content_channels-20260620"
         },
         {
@@ -22526,6 +23438,14 @@
         }
       ],
       "trail": [
+        {
+          "kind": "task",
+          "title": "Acknowledge customer follow-up triage for youtube_content_channels",
+          "status": "new",
+          "time": "2026-06-20T21:32:32Z",
+          "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+          "artifact": null
+        },
         {
           "kind": "task",
           "title": "Follow up customer input for youtube_content_channels",
@@ -24977,6 +25897,580 @@
         "artifact": "reports/agent-company-atlas-chronicle-stage-dock-trace-metadata-20260618.json"
       },
       {
+        "id": "ai_resources_lab-task-0",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Refresh CEO state packet v1",
+        "status": "complete",
+        "time": "2026-06-21T01:45:00Z",
+        "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-trace-1",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ceo State Packet Refreshed",
+        "status": "recorded",
+        "time": "2026-06-21T01:45:00Z",
+        "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+        "artifact": "./reports/ceo-state-packet-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-2",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Write Goal Evolver review packet v1",
+        "status": "complete",
+        "time": "2026-06-21T01:40:00Z",
+        "summary": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-trace-3",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Goal Evolver Review Written",
+        "status": "recorded",
+        "time": "2026-06-21T01:40:00Z",
+        "summary": "Goal Evolver proposed 3 operating-goal diffs from current company evidence.",
+        "artifact": "./reports/goal-evolver-review-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-4",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Bootstrap CEO worker constellation",
+        "status": "complete",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-5",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for lane-manager-ai_resources_lab-20260620",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-6",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for capability-overlap-mapper-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-7",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for candidate-registry-curator-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-8",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for local-evaluation-harness-builder-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-9",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for adoption-retirement-reviewer-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-10",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for continuity-watchdog-worker-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-11",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for premium-customer-context-router-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-12",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Active goal for browser-account-ops-worker-20260621",
+        "status": "in_progress",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-trace-13",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ceo Worker Constellation Bootstrapped",
+        "status": "recorded",
+        "time": "2026-06-21T01:25:00Z",
+        "summary": "Bootstrapped 8 CEO/AR workers with active goals.",
+        "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-outcome-14",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ceo Worker Bootstrap",
+        "status": "active",
+        "time": "2026-06-21T01:15:00Z",
+        "summary": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+        "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-15",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Dispatch stale owner acknowledgements for customer-input-ceo-operating-goal-objective-20260620-002",
+        "status": "complete",
+        "time": "2026-06-21T00:50:00Z",
+        "summary": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-16",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ai Resources Owner Acknowledgement Dispatch",
+        "status": "dispatch_ready",
+        "time": "2026-06-21T00:50:00Z",
+        "summary": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-trace-17",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ai Resources Owner Acknowledgement Dispatch Written",
+        "status": "recorded",
+        "time": "2026-06-21T00:50:00Z",
+        "summary": "Wrote 6 existing-owner dispatch items for stale acknowledgements.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-outcome-18",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ceo State Packet",
+        "status": "current",
+        "time": "2026-06-21T00:30:00Z",
+        "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+        "artifact": "./reports/ceo-state-packet-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-outcome-19",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Goal Evolver Review",
+        "status": "apply_after_review",
+        "time": "2026-06-20T21:43:24Z",
+        "summary": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+        "artifact": "./reports/goal-evolver-review-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-20",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Register AI Resources owner acknowledgement monitor command v1",
+        "status": "complete",
+        "time": "2026-06-20T21:37:51Z",
+        "summary": "Use monitor-ai-resources-owner-acknowledgements after owner acknowledgement requests to surface stale or blocked lane owner responses without mutating lane tasks.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-21",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ai Resources Owner Acknowledgement Monitor Capability",
+        "status": "complete",
+        "time": "2026-06-20T21:37:51Z",
+        "summary": "Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-trace-22",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ai Resources Owner Acknowledgement Monitor Command Ready",
+        "status": "recorded",
+        "time": "2026-06-20T21:37:51Z",
+        "summary": "AI Resources owner acknowledgement monitor command is implemented, tested, documented, and live-run against the CEO operating-goal input.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-23",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Monitor owner acknowledgements for customer-input-ceo-operating-goal-objective-20260620-002",
+        "status": "complete",
+        "time": "2026-06-20T21:37:27Z",
+        "summary": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-24",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ai Resources Owner Acknowledgement Monitor",
+        "status": "attention_needed",
+        "time": "2026-06-20T21:37:27Z",
+        "summary": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-trace-25",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ai Resources Owner Acknowledgements Monitored",
+        "status": "recorded",
+        "time": "2026-06-20T21:37:27Z",
+        "summary": "Checked 6 owner acknowledgement tasks; 6 need attention.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-26",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Executable AI Resources owner acknowledgement requests v1",
+        "status": "complete",
+        "time": "2026-06-20T21:32:59Z",
+        "summary": "Use request-ai-resources-owner-acknowledgements after triage to create owner acknowledgement tasks without mutating source follow-ups or starting workers.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-27",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ai Resources Owner Acknowledgement Requests Capability",
+        "status": "validated",
+        "time": "2026-06-20T21:32:59Z",
+        "summary": "Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking.",
+        "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
+      },
+      {
+        "id": "ai_resources_lab-trace-28",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ai Resources Owner Acknowledgement Requests Command Ready",
+        "status": "recorded",
+        "time": "2026-06-20T21:32:59Z",
+        "summary": "Created an executable owner acknowledgement request command that asks existing lane owners to respond without starting workers or mutating source follow-ups.",
+        "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
+      },
+      {
+        "id": "ai_ml_competitions-task-0",
+        "laneId": "ai_ml_competitions",
+        "laneName": "Ai Ml Competitions",
+        "laneState": "gated",
+        "laneLevel": 12,
+        "laneRealm": "Prize Lab",
+        "kind": "task",
+        "title": "Acknowledge customer follow-up triage for ai_ml_competitions",
+        "status": "new",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-29",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Request lane-owner acknowledgements for customer-input-ceo-operating-goal-objective-20260620-002",
+        "status": "complete",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-30",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Acknowledge customer follow-up triage for ai_resources_lab",
+        "status": "new",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-31",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ai Resources Owner Acknowledgement Requests",
+        "status": "acknowledgement_requests_ready",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-trace-32",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ai Resources Owner Acknowledgement Requests Written",
+        "status": "recorded",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Wrote 6 owner acknowledgement requests for customer follow-up triage.",
+        "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
+      },
+      {
+        "id": "money_source_discovery-task-0",
+        "laneId": "money_source_discovery",
+        "laneName": "Money Source Discovery",
+        "laneState": "gated",
+        "laneLevel": 12,
+        "laneRealm": "Source Cartography",
+        "kind": "task",
+        "title": "Acknowledge customer follow-up triage for money_source_discovery",
+        "status": "new",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+        "artifact": null
+      },
+      {
+        "id": "paid_code_bounties-task-0",
+        "laneId": "paid_code_bounties",
+        "laneName": "Paid Code Bounties",
+        "laneState": "gated",
+        "laneLevel": 12,
+        "laneRealm": "Bounty Forge",
+        "kind": "task",
+        "title": "Acknowledge customer follow-up triage for paid_code_bounties",
+        "status": "new",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+        "artifact": null
+      },
+      {
+        "id": "prediction_market_research-task-0",
+        "laneId": "prediction_market_research",
+        "laneName": "Prediction Market Research",
+        "laneState": "advancing",
+        "laneLevel": 10,
+        "laneRealm": "Market Observatory",
+        "kind": "task",
+        "title": "Acknowledge customer follow-up triage for prediction_market_research",
+        "status": "new",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+        "artifact": null
+      },
+      {
+        "id": "youtube_content_channels-task-0",
+        "laneId": "youtube_content_channels",
+        "laneName": "Youtube Content Channels",
+        "laneState": "advancing",
+        "laneLevel": 4,
+        "laneRealm": "Youtube Content Channels",
+        "kind": "task",
+        "title": "Acknowledge customer follow-up triage for youtube_content_channels",
+        "status": "new",
+        "time": "2026-06-20T21:32:32Z",
+        "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-task-33",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Executable AI Resources customer follow-up triage v1",
+        "status": "complete",
+        "time": "2026-06-20T21:29:18Z",
+        "summary": "Use triage-ai-resources-customer-followups after escalation to classify stale customer tasks into reuse, evolve, park, or CEO decision paths without starting workers.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-34",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Ai Resources Customer Followup Triage Capability",
+        "status": "validated",
+        "time": "2026-06-20T21:29:18Z",
+        "summary": "Use the live triage packet to request lane-owner acknowledgements before adding or duplicating workers.",
+        "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py"
+      },
+      {
+        "id": "ai_resources_lab-trace-35",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Ai Resources Customer Followup Triage Command Ready",
+        "status": "recorded",
+        "time": "2026-06-20T21:29:18Z",
+        "summary": "Created an executable AI Resources triage command that classifies customer follow-up escalations without starting workers or mutating lane follow-ups.",
+        "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py"
+      },
+      {
         "id": "premium_customer_intake-task-0",
         "laneId": "premium_customer_intake",
         "laneName": "Premium Customer Intake",
@@ -25017,20 +26511,6 @@
         "time": "2026-06-20T21:00:44Z",
         "summary": "Created an executable follow-up escalation command that converts stale customer-generated lane tasks into one AI Resources triage packet without starting lane work.",
         "artifact": "./tools/agent_company_core/premium_customer_followup_escalation.py"
-      },
-      {
-        "id": "ai_resources_lab-task-0",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "task",
-        "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002",
-        "status": "new",
-        "time": "2026-06-20T20:57:36Z",
-        "summary": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
-        "artifact": null
       },
       {
         "id": "premium_customer_intake-task-3",
@@ -25201,7 +26681,7 @@
         "artifact": "./tools/agent_company_core/premium_customer_followup_synthesizer.py"
       },
       {
-        "id": "ai_ml_competitions-task-0",
+        "id": "ai_ml_competitions-task-1",
         "laneId": "ai_ml_competitions",
         "laneName": "Ai Ml Competitions",
         "laneState": "gated",
@@ -25215,21 +26695,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-1",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "task",
-        "title": "Follow up customer input for ai_resources_lab",
-        "status": "new",
-        "time": "2026-06-20T18:13:05Z",
-        "summary": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
-        "artifact": null
-      },
-      {
-        "id": "money_source_discovery-task-0",
+        "id": "money_source_discovery-task-1",
         "laneId": "money_source_discovery",
         "laneName": "Money Source Discovery",
         "laneState": "gated",
@@ -25243,7 +26709,7 @@
         "artifact": null
       },
       {
-        "id": "paid_code_bounties-task-0",
+        "id": "paid_code_bounties-task-1",
         "laneId": "paid_code_bounties",
         "laneName": "Paid Code Bounties",
         "laneState": "gated",
@@ -25257,7 +26723,7 @@
         "artifact": null
       },
       {
-        "id": "prediction_market_research-task-0",
+        "id": "prediction_market_research-task-1",
         "laneId": "prediction_market_research",
         "laneName": "Prediction Market Research",
         "laneState": "advancing",
@@ -25313,7 +26779,7 @@
         "artifact": "./intake/customer/processed/customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md"
       },
       {
-        "id": "youtube_content_channels-task-0",
+        "id": "youtube_content_channels-task-1",
         "laneId": "youtube_content_channels",
         "laneName": "Youtube Content Channels",
         "laneState": "advancing",
@@ -25509,7 +26975,7 @@
         "artifact": "./reports/control-plane-capacity-benchmark-v1-20260620.md"
       },
       {
-        "id": "youtube_content_channels-task-1",
+        "id": "youtube_content_channels-task-2",
         "laneId": "youtube_content_channels",
         "laneName": "Youtube Content Channels",
         "laneState": "advancing",
@@ -25523,7 +26989,7 @@
         "artifact": null
       },
       {
-        "id": "youtube_content_channels-outcome-2",
+        "id": "youtube_content_channels-outcome-3",
         "laneId": "youtube_content_channels",
         "laneName": "Youtube Content Channels",
         "laneState": "advancing",
@@ -25537,7 +27003,7 @@
         "artifact": "./reports/youtube-no-post-content-batch-v1-20260620.md"
       },
       {
-        "id": "youtube_content_channels-trace-3",
+        "id": "youtube_content_channels-trace-4",
         "laneId": "youtube_content_channels",
         "laneName": "Youtube Content Channels",
         "laneState": "advancing",
@@ -25591,90 +27057,6 @@
         "time": "2026-06-20T17:08:42Z",
         "summary": "Installed premium customer intake agent, routing contract, customer intake workspace, routing ledger, knowledge application loop, customer update feed, and CEO context capsule rule.",
         "artifact": "./architecture/premium-customer-intake-router-v1.md"
-      },
-      {
-        "id": "ai_resources_lab-task-2",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "task",
-        "title": "Install first CEO state packets and YouTube lane scout",
-        "status": "complete",
-        "time": "2026-06-20T16:55:03Z",
-        "summary": "Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs.",
-        "artifact": null
-      },
-      {
-        "id": "ai_resources_lab-outcome-3",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "outcome",
-        "title": "Ceo State Packets Bootstrap",
-        "status": "complete",
-        "time": "2026-06-20T16:54:59Z",
-        "summary": "Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs.",
-        "artifact": "./reports/ceo-state-packet-v1-20260620.md"
-      },
-      {
-        "id": "ai_resources_lab-trace-4",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "trace",
-        "title": "Ceo State Packets Installed",
-        "status": "recorded",
-        "time": "2026-06-20T16:54:52Z",
-        "summary": "Installed first CEO state packets: AI Resources candidate registry, human-action feed, CEO state packet, and YouTube lane scout; added and claimed youtube_content_channels.",
-        "artifact": "./reports/ceo-state-packet-v1-20260620.md"
-      },
-      {
-        "id": "ai_resources_lab-task-5",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "task",
-        "title": "Install CEO operating goal and AI Resources bootstrap",
-        "status": "complete",
-        "time": "2026-06-20T16:49:00Z",
-        "summary": "Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets.",
-        "artifact": null
-      },
-      {
-        "id": "ai_resources_lab-outcome-6",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "outcome",
-        "title": "Ceo Operating Goal Bootstrap",
-        "status": "complete",
-        "time": "2026-06-20T16:48:56Z",
-        "summary": "Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets.",
-        "artifact": "./architecture/ceo-operating-goal-v1.md"
-      },
-      {
-        "id": "ai_resources_lab-trace-7",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 6,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "trace",
-        "title": "Ceo Operating Goal Installed",
-        "status": "recorded",
-        "time": "2026-06-20T16:48:52Z",
-        "summary": "Installed CEO operating goal v1, AI Resources lane/roles, goal-evolver charter, and human-action-desk role as local control-plane artifacts.",
-        "artifact": "./architecture/ceo-operating-goal-v1.md"
       },
       {
         "id": "platform_engineering-task-7",
@@ -26167,7 +27549,7 @@
         "artifact": "./reports/web3-airdrops-grants-hackathons/gitcoin-no-submit-grant-fit-memo-v1-trace-metadata-20260618.json"
       },
       {
-        "id": "prediction_market_research-task-1",
+        "id": "prediction_market_research-task-2",
         "laneId": "prediction_market_research",
         "laneName": "Prediction Market Research",
         "laneState": "advancing",
@@ -26181,7 +27563,7 @@
         "artifact": null
       },
       {
-        "id": "prediction_market_research-outcome-2",
+        "id": "prediction_market_research-outcome-3",
         "laneId": "prediction_market_research",
         "laneName": "Prediction Market Research",
         "laneState": "advancing",
@@ -26193,474 +27575,12 @@
         "time": "2026-06-18T09:20:02Z",
         "summary": "Add more manually saved market/event snippets only, or create an exact-scope public-market-data service request. Do not call live APIs, log in, connect/create wallets, use private keys/session signers/API credentials, bridge, deposit, withdraw, approve tokens, post/cancel/sign orders, trade, market make, post referrals, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
         "artifact": "./reports/prediction-market-research/polymarket-saved-market-fixture-checker-v1-validation-20260618.json"
-      },
-      {
-        "id": "prediction_market_research-trace-3",
-        "laneId": "prediction_market_research",
-        "laneName": "Prediction Market Research",
-        "laneState": "advancing",
-        "laneLevel": 10,
-        "laneRealm": "Market Observatory",
-        "kind": "trace",
-        "title": "Polymarket Saved Market Fixture Checker Created",
-        "status": "recorded",
-        "time": "2026-06-18T09:20:02Z",
-        "summary": "Created Polymarket saved-market fixture checker with paper-only killed rows and zero API/wallet/trade side effects.",
-        "artifact": "./reports/prediction-market-research/polymarket-saved-market-fixture-checker-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "security_bounty_private_reports-task-0",
-        "laneId": "security_bounty_private_reports",
-        "laneName": "Security Bounty Private Reports",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Scope Citadel",
-        "kind": "task",
-        "title": "Create Bugcrowd no-login public program fixture scorer",
-        "status": "complete",
-        "time": "2026-06-18T09:15:16Z",
-        "summary": "For static_candidate_draft rows, prepare only a local VRT/source-review checklist and private report skeleton. Do not create or use a Bugcrowd account, open a browser session, follow/join/contact programs, test targets, save platform drafts, submit reports, configure payout/tax forms, interact with CrowdStream, disclose publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "security_bounty_private_reports-outcome-1",
-        "laneId": "security_bounty_private_reports",
-        "laneName": "Security Bounty Private Reports",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Scope Citadel",
-        "kind": "outcome",
-        "title": "No Login Public Program Fixture Scorer",
-        "status": "bugcrowd_no_login_public_program_fixture_scorer_ready_local_only",
-        "time": "2026-06-18T09:15:16Z",
-        "summary": "For static_candidate_draft rows, prepare only a local VRT/source-review checklist and private report skeleton. Do not create or use a Bugcrowd account, open a browser session, follow/join/contact programs, test targets, save platform drafts, submit reports, configure payout/tax forms, interact with CrowdStream, disclose publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": "./reports/security-bounty-private-reports/bugcrowd-no-login-public-program-fixture-scorer-v1-validation-20260618.json"
-      },
-      {
-        "id": "security_bounty_private_reports-trace-2",
-        "laneId": "security_bounty_private_reports",
-        "laneName": "Security Bounty Private Reports",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Scope Citadel",
-        "kind": "trace",
-        "title": "Bugcrowd No Login Public Program Fixture Scorer Created",
-        "status": "recorded",
-        "time": "2026-06-18T09:15:16Z",
-        "summary": "Created Bugcrowd no-login public program scorer with local static drafts only and zero testing/submission/platform side effects.",
-        "artifact": "./reports/security-bounty-private-reports/bugcrowd-no-login-public-program-fixture-scorer-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "security_bounty_private_reports-task-3",
-        "laneId": "security_bounty_private_reports",
-        "laneName": "Security Bounty Private Reports",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Scope Citadel",
-        "kind": "task",
-        "title": "Create HackerOne no-login public program fixture scorer",
-        "status": "complete",
-        "time": "2026-06-18T09:10:56Z",
-        "summary": "For static_candidate_draft rows, prepare only a local public-source review checklist and report skeleton. Do not create or use a HackerOne account, open a browser session, follow/bookmark/contact programs, test targets, use credentials/private data, submit reports, configure payouts/tax forms, disclose publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "security_bounty_private_reports-outcome-4",
-        "laneId": "security_bounty_private_reports",
-        "laneName": "Security Bounty Private Reports",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Scope Citadel",
-        "kind": "outcome",
-        "title": "No Login Public Program Fixture Scorer",
-        "status": "hackerone_no_login_public_program_fixture_scorer_ready_local_only",
-        "time": "2026-06-18T09:10:56Z",
-        "summary": "For static_candidate_draft rows, prepare only a local public-source review checklist and report skeleton. Do not create or use a HackerOne account, open a browser session, follow/bookmark/contact programs, test targets, use credentials/private data, submit reports, configure payouts/tax forms, disclose publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": "./reports/security-bounty-private-reports/hackerone-no-login-public-program-fixture-scorer-v1-validation-20260618.json"
-      },
-      {
-        "id": "security_bounty_private_reports-trace-5",
-        "laneId": "security_bounty_private_reports",
-        "laneName": "Security Bounty Private Reports",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Scope Citadel",
-        "kind": "trace",
-        "title": "Hackerone No Login Public Program Fixture Scorer Created",
-        "status": "recorded",
-        "time": "2026-06-18T09:10:56Z",
-        "summary": "Created HackerOne no-login public program scorer with static drafts only and zero testing/submission side effects.",
-        "artifact": "./reports/security-bounty-private-reports/hackerone-no-login-public-program-fixture-scorer-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "digital_products_templates_plugins-task-0",
-        "laneId": "digital_products_templates_plugins",
-        "laneName": "Digital Products Templates Plugins",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Product Foundry",
-        "kind": "task",
-        "title": "Create Lemon Squeezy no-publish launch approval packet",
-        "status": "complete",
-        "time": "2026-06-18T09:06:37Z",
-        "summary": "If the operator approves, create exact local listing copy, refund/support text, screenshot checklist, and deterministic zip manifest files. Do not log in, accept terms, create a storefront/product, upload files, create checkouts/payment links/API keys, process customer data, capture email, publish, promote, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "digital_products_templates_plugins-outcome-1",
-        "laneId": "digital_products_templates_plugins",
-        "laneName": "Digital Products Templates Plugins",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Product Foundry",
-        "kind": "outcome",
-        "title": "Launch Approval Packet",
-        "status": "lemon_squeezy_no_publish_launch_approval_packet_ready_local_only",
-        "time": "2026-06-18T09:06:37Z",
-        "summary": "If the operator approves, create exact local listing copy, refund/support text, screenshot checklist, and deterministic zip manifest files. Do not log in, accept terms, create a storefront/product, upload files, create checkouts/payment links/API keys, process customer data, capture email, publish, promote, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": "./reports/digital-products/lemon-squeezy-no-publish-launch-approval-packet-v1-validation-20260618.json"
-      },
-      {
-        "id": "digital_products_templates_plugins-trace-2",
-        "laneId": "digital_products_templates_plugins",
-        "laneName": "Digital Products Templates Plugins",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Product Foundry",
-        "kind": "trace",
-        "title": "Lemon Squeezy No Publish Launch Approval Packet Created",
-        "status": "recorded",
-        "time": "2026-06-18T09:06:37Z",
-        "summary": "Created Lemon Squeezy no-publish launch approval packet with manifest, margins, gates, and zero external side effects.",
-        "artifact": "./reports/digital-products/lemon-squeezy-no-publish-launch-approval-packet-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "ai_ml_competitions-task-1",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "task",
-        "title": "Create Kaggle no-login competition fixture scorer",
-        "status": "complete",
-        "time": "2026-06-18T09:01:57Z",
-        "summary": "For local_baseline_only rows, create offline stub baselines using synthetic/public-open data only. Do not log in, create API tokens, accept competition rules, download Kaggle data, run Kaggle notebooks, submit, pay, post publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "ai_ml_competitions-outcome-2",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "outcome",
-        "title": "No Login Competition Fixture Scorer",
-        "status": "kaggle_no_login_fixture_scorer_ready_local_only",
-        "time": "2026-06-18T09:01:57Z",
-        "summary": "For local_baseline_only rows, create offline stub baselines using synthetic/public-open data only. Do not log in, create API tokens, accept competition rules, download Kaggle data, run Kaggle notebooks, submit, pay, post publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-        "artifact": "./reports/ai-ml-competitions/kaggle-no-login-competition-fixture-scorer-v1-validation-20260618.json"
-      },
-      {
-        "id": "ai_ml_competitions-trace-3",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "trace",
-        "title": "Kaggle No Login Competition Fixture Scorer Created",
-        "status": "recorded",
-        "time": "2026-06-18T09:01:57Z",
-        "summary": "Created local Kaggle no-login fixture scorer; every row has a local baseline action or kill reason and zero submission-ready rows.",
-        "artifact": "./reports/ai-ml-competitions/kaggle-no-login-competition-fixture-scorer-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "content_and_social_growth-task-0",
-        "laneId": "content_and_social_growth",
-        "laneName": "Content And Social Growth",
-        "laneState": "gated",
-        "laneLevel": 8,
-        "laneRealm": "Signal Garden",
-        "kind": "task",
-        "title": "Create Fiverr trends no-post review packet",
-        "status": "complete",
-        "time": "2026-06-18T08:55:01Z",
-        "summary": "If the operator approves, create exact public-copy drafts for these three entries as local files only. Do not post, reply, DM, follow, quote, tag, create a Fiverr gig/listing, contact clients, use private data, or run model/API calls from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "content_and_social_growth-outcome-1",
-        "laneId": "content_and_social_growth",
-        "laneName": "Content And Social Growth",
-        "laneState": "gated",
-        "laneLevel": 8,
-        "laneRealm": "Signal Garden",
-        "kind": "outcome",
-        "title": "No Post Review Packet",
-        "status": "fiverr_trends_no_post_review_packet_ready_local_only",
-        "time": "2026-06-18T08:55:01Z",
-        "summary": "If the operator approves, create exact public-copy drafts for these three entries as local files only. Do not post, reply, DM, follow, quote, tag, create a Fiverr gig/listing, contact clients, use private data, or run model/API calls from this packet alone.",
-        "artifact": "./reports/content-and-social-growth/fiverr-trends-no-post-review-packet-v1-validation-20260618.json"
-      },
-      {
-        "id": "content_and_social_growth-trace-2",
-        "laneId": "content_and_social_growth",
-        "laneName": "Content And Social Growth",
-        "laneState": "gated",
-        "laneLevel": 8,
-        "laneRealm": "Signal Garden",
-        "kind": "trace",
-        "title": "Fiverr Trends No Post Review Packet Created",
-        "status": "recorded",
-        "time": "2026-06-18T08:55:01Z",
-        "summary": "Created local no-post review packet for first three Fiverr-trends calendar entries with zero external side effects.",
-        "artifact": "./reports/content-and-social-growth/fiverr-trends-no-post-review-packet-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "paid_code_bounties-task-1",
-        "laneId": "paid_code_bounties",
-        "laneName": "Paid Code Bounties",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Bounty Forge",
-        "kind": "task",
-        "title": "Create Opire saved-card parser checker",
-        "status": "complete",
-        "time": "2026-06-18T08:49:08Z",
-        "summary": "Promote only candidate_needs_readonly_refresh rows into exact read-only refresh packets. Do not run /try, /claim, GitHub comments, PRs, account login, Stripe, payout, workers, model/API calls, or public actions.",
-        "artifact": null
-      },
-      {
-        "id": "paid_code_bounties-outcome-2",
-        "laneId": "paid_code_bounties",
-        "laneName": "Paid Code Bounties",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Bounty Forge",
-        "kind": "outcome",
-        "title": "Saved Card Parser Checker",
-        "status": "opire_saved_card_parser_checker_complete_local_only",
-        "time": "2026-06-18T08:49:08Z",
-        "summary": "Promote only candidate_needs_readonly_refresh rows into exact read-only refresh packets. Do not run /try, /claim, GitHub comments, PRs, account login, Stripe, payout, workers, model/API calls, or public actions.",
-        "artifact": "./reports/paid-code-bounties/opire-saved-card-parser-checker-v1-validation-20260618.json"
-      },
-      {
-        "id": "paid_code_bounties-trace-3",
-        "laneId": "paid_code_bounties",
-        "laneName": "Paid Code Bounties",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Bounty Forge",
-        "kind": "trace",
-        "title": "Opire Saved Card Parser Checker Created",
-        "status": "recorded",
-        "time": "2026-06-18T08:49:08Z",
-        "summary": "Created local Opire saved-card parser checker with no public actions or external side effects.",
-        "artifact": "./reports/paid-code-bounties/opire-saved-card-parser-checker-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "prediction_market_research-task-4",
-        "laneId": "prediction_market_research",
-        "laneName": "Prediction Market Research",
-        "laneState": "advancing",
-        "laneLevel": 10,
-        "laneRealm": "Market Observatory",
-        "kind": "task",
-        "title": "Create Kalshi public-data paper signal checker",
-        "status": "complete",
-        "time": "2026-06-18T08:39:46Z",
-        "summary": "Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked.",
-        "artifact": null
-      },
-      {
-        "id": "prediction_market_research-outcome-5",
-        "laneId": "prediction_market_research",
-        "laneName": "Prediction Market Research",
-        "laneState": "advancing",
-        "laneLevel": 10,
-        "laneRealm": "Market Observatory",
-        "kind": "outcome",
-        "title": "Paper Signal Checker",
-        "status": "kalshi_public_data_paper_signal_checker_complete_local_only",
-        "time": "2026-06-18T08:39:46Z",
-        "summary": "Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked.",
-        "artifact": "./reports/prediction-market-research/kalshi-public-data-paper-signal-checker-v1-validation-20260618.json"
-      },
-      {
-        "id": "prediction_market_research-trace-6",
-        "laneId": "prediction_market_research",
-        "laneName": "Prediction Market Research",
-        "laneState": "advancing",
-        "laneLevel": 10,
-        "laneRealm": "Market Observatory",
-        "kind": "trace",
-        "title": "Kalshi Public Data Paper Signal Checker Created",
-        "status": "recorded",
-        "time": "2026-06-18T08:39:46Z",
-        "summary": "Created local Kalshi saved-row paper signal checker with zero promotable candidates and zero external side effects.",
-        "artifact": "./reports/prediction-market-research/kalshi-public-data-paper-signal-checker-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "ai_ml_competitions-task-4",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "task",
-        "title": "Create ARC-AGI-3 prerequisite planner baseline",
-        "status": "complete",
-        "time": "2026-06-18T08:36:48Z",
-        "summary": "Add hidden-prerequisite environments where the planner must infer edges from blocked actions and failed attempts, then compare learned-edge planning against the visible-edge planner. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked.",
-        "artifact": null
-      },
-      {
-        "id": "ai_ml_competitions-outcome-5",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "outcome",
-        "title": "Local Competition Baseline",
-        "status": "arc_agi_3_prereq_planner_baseline_complete_local_only",
-        "time": "2026-06-18T08:36:48Z",
-        "summary": "Add hidden-prerequisite environments where the planner must infer edges from blocked actions and failed attempts, then compare learned-edge planning against the visible-edge planner. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked.",
-        "artifact": "./reports/ai-ml-competitions/arc-agi-3-prereq-planner-baseline-v1-validation-20260618.json"
-      },
-      {
-        "id": "ai_ml_competitions-trace-6",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "trace",
-        "title": "Arc Agi 3 Prereq Planner Baseline Created",
-        "status": "recorded",
-        "time": "2026-06-18T08:36:48Z",
-        "summary": "Created standard-library synthetic ARC-AGI-3 prerequisite planner baseline with zero external side effects.",
-        "artifact": "./reports/ai-ml-competitions/arc-agi-3-prereq-planner-baseline-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "digital_products_templates_plugins-task-3",
-        "laneId": "digital_products_templates_plugins",
-        "laneName": "Digital Products Templates Plugins",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Product Foundry",
-        "kind": "task",
-        "title": "Create no-publish Gumroad approval request packet",
-        "status": "complete",
-        "time": "2026-06-18T08:29:48Z",
-        "summary": "If the operator approves this packet, create an exact-scope service request for Gumroad account/listing copy and package-manifest review. Do not log in, create/edit a seller profile, accept terms, create/upload/edit a product, publish a listing or price, configure payout/tax/payment, or perform any public action from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "digital_products_templates_plugins-outcome-4",
-        "laneId": "digital_products_templates_plugins",
-        "laneName": "Digital Products Templates Plugins",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Product Foundry",
-        "kind": "outcome",
-        "title": "Approval Packet",
-        "status": "gumroad_no_publish_approval_packet_ready_local_only",
-        "time": "2026-06-18T08:29:48Z",
-        "summary": "If the operator approves this packet, create an exact-scope service request for Gumroad account/listing copy and package-manifest review. Do not log in, create/edit a seller profile, accept terms, create/upload/edit a product, publish a listing or price, configure payout/tax/payment, or perform any public action from this packet alone.",
-        "artifact": "./reports/digital-products/gumroad-no-publish-approval-request-packet-validation-20260618.json"
-      },
-      {
-        "id": "digital_products_templates_plugins-trace-5",
-        "laneId": "digital_products_templates_plugins",
-        "laneName": "Digital Products Templates Plugins",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Product Foundry",
-        "kind": "trace",
-        "title": "Approval Packet Created",
-        "status": "recorded",
-        "time": "2026-06-18T08:29:48Z",
-        "summary": "Created no-publish Gumroad approval request packet with product manifest and no external side effect.",
-        "artifact": "./reports/digital-products/gumroad-no-publish-approval-request-packet-trace-metadata-20260618.json"
-      },
-      {
-        "id": "ai_ml_competitions-task-7",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "task",
-        "title": "Create ARC-AGI-3 micro-environment replay baseline",
-        "status": "complete",
-        "time": "2026-06-18T08:26:41Z",
-        "summary": "Extend the synthetic micro-environment suite with distractors and a tiny planner that infers prerequisite graphs from replay history. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked.",
-        "artifact": null
-      },
-      {
-        "id": "ai_ml_competitions-outcome-8",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "outcome",
-        "title": "Local Competition Baseline",
-        "status": "arc_agi_3_micro_env_replay_baseline_complete_local_only",
-        "time": "2026-06-18T08:26:41Z",
-        "summary": "Extend the synthetic micro-environment suite with distractors and a tiny planner that infers prerequisite graphs from replay history. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked.",
-        "artifact": "./reports/ai-ml-competitions/arc-agi-3-micro-env-replay-baseline-v1-validation-20260618.json"
-      },
-      {
-        "id": "ai_ml_competitions-trace-9",
-        "laneId": "ai_ml_competitions",
-        "laneName": "Ai Ml Competitions",
-        "laneState": "gated",
-        "laneLevel": 12,
-        "laneRealm": "Prize Lab",
-        "kind": "trace",
-        "title": "Arc Agi 3 Micro Env Replay Baseline Created",
-        "status": "recorded",
-        "time": "2026-06-18T08:26:41Z",
-        "summary": "Created standard-library synthetic ARC-AGI-3 micro-environment replay baseline with zero external side effects.",
-        "artifact": "./reports/ai-ml-competitions/arc-agi-3-micro-env-replay-baseline-v1-trace-metadata-20260618.json"
-      },
-      {
-        "id": "lead_generation_and_sales-task-0",
-        "laneId": "lead_generation_and_sales",
-        "laneName": "Lead Generation And Sales",
-        "laneState": "unlocked",
-        "laneLevel": 11,
-        "laneRealm": "Deal Room",
-        "kind": "task",
-        "title": "Create Upwork AI-skills-demand no-send approval request packet",
-        "status": "complete",
-        "time": "2026-06-18T08:21:39Z",
-        "summary": "If the operator approves this packet, create an exact-scope service request for one Upwork AI Integration Workflow Audit account/profile/proposal review. Do not log in, create/edit a profile or portfolio, choose a live job, send a proposal, message a client, accept terms, or touch payment/tax setup from this packet alone.",
-        "artifact": null
-      },
-      {
-        "id": "lead_generation_and_sales-outcome-1",
-        "laneId": "lead_generation_and_sales",
-        "laneName": "Lead Generation And Sales",
-        "laneState": "unlocked",
-        "laneLevel": 11,
-        "laneRealm": "Deal Room",
-        "kind": "outcome",
-        "title": "Approval Packet",
-        "status": "upwork_ai_skills_no_send_approval_packet_ready_local_only",
-        "time": "2026-06-18T08:21:39Z",
-        "summary": "If the operator approves this packet, create an exact-scope service request for one Upwork AI Integration Workflow Audit account/profile/proposal review. Do not log in, create/edit a profile or portfolio, choose a live job, send a proposal, message a client, accept terms, or touch payment/tax setup from this packet alone.",
-        "artifact": "./reports/lead-generation-and-sales/upwork-ai-skills-no-send-approval-request-packet-validation-20260618.json"
       }
     ],
     "counts": {
-      "task": 134,
-      "outcome": 28,
-      "trace": 125,
+      "task": 142,
+      "trace": 121,
+      "outcome": 24,
       "evidence": 1
     }
   },
@@ -26777,14 +27697,14 @@
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
-        "laneLevel": 6,
+        "laneLevel": 12,
         "laneRealm": "Ai Resources Lab",
         "kind": "progress_check",
-        "urgency": 72,
+        "urgency": 81,
         "title": "Ask for next local proof",
         "reason": "Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets.",
         "targetAgentId": "lane-manager-ai_resources_lab-20260620",
-        "targetThreadId": "codex-current-ceo-thread-20260620",
+        "targetThreadId": "codex-thread:019ee738-60d5-7723-95f8-fb6e70ee7f4f",
         "command": "To lane-manager-ai_resources_lab-20260620: Review ai_resources_lab, summarize the newest trail records, propose exactly one local-only next action, and do not run browser, account, wallet, public, payment, security, or real-money work. Context: Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets."
       },
       {
@@ -26795,12 +27715,12 @@
         "laneLevel": 10,
         "laneRealm": "Market Observatory",
         "kind": "progress_check",
-        "urgency": 71,
+        "urgency": 72,
         "title": "Ask for next local proof",
-        "reason": "Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked.",
+        "reason": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
         "targetAgentId": "lane-manager-prediction_market_research-relaunch-20260614",
         "targetThreadId": "019ec637-a391-7693-915f-5ec5e5d82ee7",
-        "command": "To lane-manager-prediction_market_research-relaunch-20260614: Review prediction_market_research, summarize the newest trail records, propose exactly one local-only next action, and do not run browser, account, wallet, public, payment, security, or real-money work. Context: Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked."
+        "command": "To lane-manager-prediction_market_research-relaunch-20260614: Review prediction_market_research, summarize the newest trail records, propose exactly one local-only next action, and do not run browser, account, wallet, public, payment, security, or real-money work. Context: Write one local acknowledgement artifact before starting workers or creating overlapping agents."
       },
       {
         "id": "dispatch-youtube_content_channels-progress_check",
@@ -26810,7 +27730,7 @@
         "laneLevel": 4,
         "laneRealm": "Youtube Content Channels",
         "kind": "progress_check",
-        "urgency": 71,
+        "urgency": 72,
         "title": "Ask for next local proof",
         "reason": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1.",
         "targetAgentId": "lane-manager-youtube_content_channels-20260620",
@@ -26931,7 +27851,7 @@
       "id": "paid_code_bounties",
       "name": "Paid Code Bounties",
       "department": "Cashflow Engineering",
-      "score": 2891,
+      "score": 2909,
       "level": 12,
       "state": "gated",
       "nextAction": "Promote only candidate_needs_readonly_refresh rows into exact read-only refresh packets. Do not run /try, /claim, GitHub comments, PRs, account login, Stripe, payout, workers, model/API calls, or public actions."
@@ -26940,7 +27860,7 @@
       "id": "ai_ml_competitions",
       "name": "Ai Ml Competitions",
       "department": "Competition Lab",
-      "score": 2730,
+      "score": 2748,
       "level": 12,
       "state": "gated",
       "nextAction": "For local_baseline_only rows, create offline stub baselines using synthetic/public-open data only. Do not log in, create API tokens, accept competition rules, download Kaggle data, run Kaggle notebooks, submit, pay, post publicly, start workers/runtimes, or call model/MCP/external APIs from this packet alone."
@@ -26949,10 +27869,19 @@
       "id": "money_source_discovery",
       "name": "Money Source Discovery",
       "department": "Strategic Research",
-      "score": 2270,
+      "score": 2288,
       "level": 12,
       "state": "gated",
       "nextAction": "Have lane managers claim the top ranked queue item and create only the named local artifact/parser/checker/draft. If the next action needs account, wallet, payment, trade, submission, public action, worker/runtime, model/MCP, or external API access, create a separate approval packet instead of executing it."
+    },
+    {
+      "id": "ai_resources_lab",
+      "name": "Ai Resources Lab",
+      "department": "Artificial Resources",
+      "score": 2010,
+      "level": 12,
+      "state": "advancing",
+      "nextAction": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch."
     },
     {
       "id": "web3_airdrops_grants_hackathons",
@@ -26962,15 +27891,6 @@
       "level": 11,
       "state": "unlocked",
       "nextAction": "For local_scout_candidate rows, prepare only sanitized local project-fit writeups, repo/demo outlines, rules checklists, and approval packets. Do not log in, connect wallets, create profiles/BUIDLs/teams, join or register, submit, vote, donate, claim prizes, configure payment/tax, message or post publicly, use BUIDL AI, start workers/runtimes, or call model/MCP/external APIs from this packet alone."
-    },
-    {
-      "id": "lead_generation_and_sales",
-      "name": "Lead Generation And Sales",
-      "department": "Growth/Sales",
-      "score": 1744,
-      "level": 11,
-      "state": "unlocked",
-      "nextAction": "If the operator approves this packet, create an exact-scope service request for one Upwork AI Integration Workflow Audit account/profile/proposal review. Do not log in, create/edit a profile or portfolio, choose a live job, send a proposal, message a client, accept terms, or touch payment/tax setup from this packet alone."
     }
   ],
   "researchInfluences": [
@@ -26991,7 +27911,7 @@
     }
   ],
   "missionCounts": {
-    "task": 134,
-    "trace": 125
+    "task": 142,
+    "trace": 121
   }
 }

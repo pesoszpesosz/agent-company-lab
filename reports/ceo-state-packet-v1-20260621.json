@@ -1,0 +1,673 @@
+{
+  "active_blockers_and_gates": {
+    "blocked_task_count": 0,
+    "optional_gate_queue_count": 13,
+    "required_human_action_count": 0,
+    "service_requests_needing_review": 13,
+    "stale_owner_acknowledgement_count": 6
+  },
+  "ai_resources_candidate_shortlist": [
+    "ceo_state_packet_v1",
+    "human_action_feed_v1",
+    "goal_evolver_review_v1"
+  ],
+  "company_counts": {
+    "agents": 23,
+    "artifacts": 2553,
+    "departments": 24,
+    "lanes": 15,
+    "outcomes": 441,
+    "roles": 25,
+    "service_requests": 16,
+    "tasks": 623,
+    "trace_events": 533
+  },
+  "current_decision_batch": [
+    "owner_acknowledgement_pressure",
+    "goal_evolver_review",
+    "ceo_state_packet",
+    "human_action_feed",
+    "manager_dispatch_queue"
+  ],
+  "generated_utc": "2026-06-21T01:45:00Z",
+  "human_action_feed": {
+    "feed_status": "optional_gate_review_available",
+    "generated_utc": "2026-06-21T01:45:00Z",
+    "human_ask_required_fields": [
+      "exact_action_requested",
+      "why_ai_cannot_safely_do_it",
+      "business_reason",
+      "expected_upside",
+      "deadline_or_expiration",
+      "gate_category",
+      "source_evidence_path",
+      "decline_or_ignore_branch"
+    ],
+    "json_path": "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.json",
+    "md_path": "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.md",
+    "optional_gate_queue": [
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public Comet/Opik, Algora, and GitHub status for Opik bounty reopening; no claim, PR, account, CLA, payout, or public action.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "paid_code_bounties",
+        "priority": 1,
+        "request_id": "req-algora-opik-readonly-refresh-20260618",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-algora-opik-readonly-refresh-20260618\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Review public PromptBase guideline/seller pages for Agent Skill Starter Kit v0; no browser side effects.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "digital_products_templates_plugins",
+        "priority": 2,
+        "request_id": "req-promptbase-guideline-readonly-review-20260618",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-promptbase-guideline-readonly-review-20260618\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Review legal/KYC/tax/payment/payout/account-contract gates for Agent Skill Starter Kit marketplace route; no commitments.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "legal_kyc_tax_payment_requires_user_decision_no_commitment",
+        "lane_id": "digital_products_templates_plugins",
+        "priority": 3,
+        "request_id": "req-next-wave-digital-legal-payment-review-20260614",
+        "request_type": "legal_kyc_tax_payment",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-legal-payment-review-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public digital marketplace terms/fees/listing requirements for Agent Skill Starter Kit route; no browser side effects.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "digital_products_templates_plugins",
+        "priority": 4,
+        "request_id": "req-next-wave-digital-marketplace-browser-readonly-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-digital-marketplace-browser-readonly-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public Algora/GitHub issue state for archestra-ai/archestra#3218; no GitHub public action.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "paid_code_bounties",
+        "priority": 5,
+        "request_id": "req-next-wave-paid-code-algora-archestra-browser-readonly-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-paid-code-algora-archestra-browser-readonly-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public Google OSS VRP rendered rules/scope/submission route for rules_android; no account or submission action.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "security_bounty_private_reports",
+        "priority": 6,
+        "request_id": "req-next-wave-security-google-oss-vrp-browser-readonly-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-google-oss-vrp-browser-readonly-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Review security report submission route readiness for rules_android packet; no report submission.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "security_report_submission_requires_user_and_cro_approval_no_submission",
+        "lane_id": "security_bounty_private_reports",
+        "priority": 7,
+        "request_id": "req-next-wave-security-report-route-review-20260614",
+        "request_type": "security_report_submission",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-next-wave-security-report-route-review-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public AI/ML competition listings and capture rules/prize/dataset gates; no browser side effects.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "ai_ml_competitions",
+        "priority": 8,
+        "request_id": "req-wave4-ai-ml-competitions-browser-readonly-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-ai-ml-competitions-browser-readonly-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public digital-product marketplace pages and capture product opportunity signals; no browser side effects.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "digital_products_templates_plugins",
+        "priority": 9,
+        "request_id": "req-wave4-digital-products-browser-readonly-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-digital-products-browser-readonly-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Read public opportunity-source directories and capture monetizable source candidates; no browser side effects.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "money_source_discovery",
+        "priority": 10,
+        "request_id": "req-wave4-money-source-discovery-browser-readonly-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-wave4-money-source-discovery-browser-readonly-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Generate complete read-only browser service packet acceptance test; no browser opened.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "catalog_required_approval_no_external_action",
+        "lane_id": "content_and_social_growth",
+        "priority": 11,
+        "request_id": "req-test-browser-readonly-complete-20260614",
+        "request_type": "browser_research",
+        "source_evidence_path": "E:\\agent-company-lab\\requests\\service-requests\\req-test-browser-readonly-complete-20260614\\packet.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Run a real model-backed Pydantic AI adapter only after provider, model, max cost, allowed lanes, output artifact path, and credential route are explicitly approved.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "model_api_call_requires_provider_model_cost_lane_and_artifact_scope",
+        "lane_id": "platform_engineering",
+        "priority": 12,
+        "request_id": "req-pydantic-ai-model-backed-adapter-20260614",
+        "request_type": "model_api_execution",
+        "source_evidence_path": "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      },
+      {
+        "business_reason": "Could unlock gated work after local readiness is clear.",
+        "deadline_or_expiration": "none",
+        "decline_or_ignore_branch": "Keep the work local, parked, or fixture-only until a scoped approval exists.",
+        "exact_human_decision": "Approve, reject, or keep parked: Later run Grok/X research prompts for current agent-company infrastructure trends; save prompt/output/verification artifacts; do not post, like, follow, or reply.",
+        "expected_upside": "Sharper route proof or faster lane validation if approved.",
+        "gate_category": "browser_grok_or_x_requires_signed_in_browser_and_no_public_actions",
+        "lane_id": "platform_engineering",
+        "priority": 13,
+        "request_id": "req-grok-research-worker-20260614",
+        "request_type": "research_enrichment",
+        "source_evidence_path": "E:\\agent-company-lab\\notes\\research-log-20260614.md",
+        "why_ai_cannot_safely_do_it": "The service request is still in needs_review and may cross an external-action gate."
+      }
+    ],
+    "owner_agent_id": "human-action-desk-worker-20260620",
+    "required_now": [],
+    "schema_version": "human_action_feed.v1",
+    "service_request_status_counts": {
+      "complete": 1,
+      "needs_review": 13,
+      "rejected": 2
+    },
+    "zero_side_effect_boundary": {
+      "accounts_created": 0,
+      "browser_sessions_started": 0,
+      "external_side_effects": false,
+      "payments_trades_wallets_kyc_actions": 0,
+      "public_actions_taken": 0,
+      "service_requests_approved_rejected_assigned_or_started_by_feed": 0,
+      "user_credentials_requested_in_chat": 0
+    }
+  },
+  "json_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.json",
+  "killed_lanes_and_reasons": [],
+  "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
+  "metrics_since_last_packet": {
+    "artifacts_delta": 152,
+    "outcomes_delta": 23,
+    "tasks_delta": 44,
+    "trace_events_delta": 24
+  },
+  "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+  "next_dispatch_queue": [
+    {
+      "kind": "owner_acknowledgement",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
+    },
+    {
+      "kind": "owner_acknowledgement",
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+    },
+    {
+      "kind": "owner_acknowledgement",
+      "lane_id": "money_source_discovery",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery"
+    },
+    {
+      "kind": "owner_acknowledgement",
+      "lane_id": "paid_code_bounties",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
+    },
+    {
+      "kind": "owner_acknowledgement",
+      "lane_id": "prediction_market_research",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research"
+    },
+    {
+      "kind": "owner_acknowledgement",
+      "lane_id": "youtube_content_channels",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
+      "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
+      "task_id": "task-capability-overlap-mapper-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
+      "task_id": "task-candidate-registry-curator-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
+      "task_id": "task-local-evaluation-harness-builder-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
+      "task_id": "task-adoption-retirement-reviewer-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
+      "task_id": "task-continuity-watchdog-worker-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
+      "task_id": "task-premium-customer-context-router-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
+      "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621"
+    }
+  ],
+  "open_tasks": [
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 96,
+      "status": "in_progress",
+      "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621",
+      "title": "Active goal for lane-manager-ai_resources_lab-20260620"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 93,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab",
+      "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 91,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
+      "title": "Follow up customer input for ai_resources_lab"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
+      "owner_agent_id": "capability-overlap-mapper-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-capability-overlap-mapper-20260621-active-goal-20260621",
+      "title": "Active goal for capability-overlap-mapper-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
+      "owner_agent_id": "candidate-registry-curator-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-candidate-registry-curator-20260621-active-goal-20260621",
+      "title": "Active goal for candidate-registry-curator-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
+      "owner_agent_id": "local-evaluation-harness-builder-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-local-evaluation-harness-builder-20260621-active-goal-20260621",
+      "title": "Active goal for local-evaluation-harness-builder-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
+      "owner_agent_id": "adoption-retirement-reviewer-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-adoption-retirement-reviewer-20260621-active-goal-20260621",
+      "title": "Active goal for adoption-retirement-reviewer-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
+      "owner_agent_id": "continuity-watchdog-worker-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-continuity-watchdog-worker-20260621-active-goal-20260621",
+      "title": "Active goal for continuity-watchdog-worker-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
+      "owner_agent_id": "premium-customer-context-router-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-premium-customer-context-router-20260621-active-goal-20260621",
+      "title": "Active goal for premium-customer-context-router-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
+      "owner_agent_id": "browser-account-ops-worker-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621",
+      "title": "Active goal for browser-account-ops-worker-20260621"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 90,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
+      "title": "Acknowledge customer follow-up triage for ai_resources_lab"
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "priority": 90,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+      "title": "Acknowledge customer follow-up triage for ai_ml_competitions"
+    },
+    {
+      "lane_id": "money_source_discovery",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "priority": 90,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery",
+      "title": "Acknowledge customer follow-up triage for money_source_discovery"
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 90,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+      "title": "Acknowledge customer follow-up triage for paid_code_bounties"
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "priority": 90,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
+      "title": "Acknowledge customer follow-up triage for prediction_market_research"
+    },
+    {
+      "lane_id": "youtube_content_channels",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "priority": 90,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
+      "title": "Acknowledge customer follow-up triage for youtube_content_channels"
+    }
+  ],
+  "packet_id": "ceo-state-packet-v1-20260621",
+  "recent_outcomes": [
+    {
+      "created_at": "2026-06-21T01:15:00Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
+      "outcome_id": "outcome-ceo-worker-bootstrap-v1-20260621",
+      "outcome_type": "ceo_worker_bootstrap",
+      "realized_usd": 0.0,
+      "status": "active"
+    },
+    {
+      "created_at": "2026-06-21T00:50:00Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002",
+      "outcome_type": "ai_resources_owner_acknowledgement_dispatch",
+      "realized_usd": 0.0,
+      "status": "dispatch_ready"
+    },
+    {
+      "created_at": "2026-06-21T00:30:00Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
+      "outcome_id": "outcome-ceo-state-packet-v1-20260621",
+      "outcome_type": "ceo_state_packet",
+      "realized_usd": 0.0,
+      "status": "current"
+    },
+    {
+      "created_at": "2026-06-20T21:43:24Z",
+      "evidence": "E:\\agent-company-lab\\reports\\goal-evolver-review-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
+      "outcome_id": "outcome-goal-evolver-review-v1-20260621",
+      "outcome_type": "goal_evolver_review",
+      "realized_usd": 0.0,
+      "status": "apply_after_review"
+    },
+    {
+      "created_at": "2026-06-20T21:37:51Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-monitor-capability-20260621",
+      "outcome_type": "ai_resources_owner_acknowledgement_monitor_capability",
+      "realized_usd": 0.0,
+      "status": "complete"
+    },
+    {
+      "created_at": "2026-06-20T21:37:27Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002",
+      "outcome_type": "ai_resources_owner_acknowledgement_monitor",
+      "realized_usd": 0.0,
+      "status": "attention_needed"
+    },
+    {
+      "created_at": "2026-06-20T21:32:59Z",
+      "evidence": "E:\\agent-company-lab\\tools\\agent_company_core\\ai_resources_owner_acknowledgement_requests.py",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-requests-command-v1-20260621",
+      "outcome_type": "ai_resources_owner_acknowledgement_requests_capability",
+      "realized_usd": 0.0,
+      "status": "validated"
+    },
+    {
+      "created_at": "2026-06-20T21:32:32Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-requests-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-requests-customer-input-ceo-operating-goal-objective-20260620-002",
+      "outcome_type": "ai_resources_owner_acknowledgement_requests",
+      "realized_usd": 0.0,
+      "status": "acknowledgement_requests_ready"
+    }
+  ],
+  "schema_version": "ceo_state_packet.v1",
+  "status": "current_local_state_packet",
+  "top_promoted_lanes": [
+    {
+      "department": "Competition Lab",
+      "lane_id": "ai_ml_competitions",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "status": "active"
+    },
+    {
+      "department": "Artificial Resources",
+      "lane_id": "ai_resources_lab",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "status": "active"
+    },
+    {
+      "department": "Audience/Distribution",
+      "lane_id": "content_and_social_growth",
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "status": "active"
+    },
+    {
+      "department": "Product Studio",
+      "lane_id": "digital_products_templates_plugins",
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "status": "active"
+    },
+    {
+      "department": "Growth/Sales",
+      "lane_id": "lead_generation_and_sales",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "status": "active"
+    },
+    {
+      "department": "Quant Research",
+      "lane_id": "local_trading_strategy_research",
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "status": "active"
+    },
+    {
+      "department": "Strategic Research",
+      "lane_id": "money_source_discovery",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "status": "active"
+    },
+    {
+      "department": "Cashflow Engineering",
+      "lane_id": "paid_code_bounties",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "status": "active"
+    },
+    {
+      "department": "Platform Engineering",
+      "lane_id": "platform_engineering",
+      "owner_agent_id": "recovered-profitable-edge-infra",
+      "status": "active"
+    },
+    {
+      "department": "Markets Research",
+      "lane_id": "prediction_market_research",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "status": "active"
+    },
+    {
+      "department": "Customer/Operator Success",
+      "lane_id": "premium_customer_intake",
+      "owner_agent_id": "premium-customer-intake-agent-20260620",
+      "status": "active"
+    },
+    {
+      "department": "Security Research",
+      "lane_id": "security_bounty_private_reports",
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "status": "active"
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

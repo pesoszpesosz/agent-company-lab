@@ -1,0 +1,45 @@
+# CEO Worker Constellation V1
+
+Generated from the CEO objective on 2026-06-21.
+
+## Purpose
+
+The CEO brain stays context-light by delegating durable operating loops to AI Resources and adjacent workers. The bootstrap command keeps one AR lane, strengthens the existing `ai_resources_lab` owner, and adds specialized non-overlapping workers with active goals.
+
+## Command
+
+```powershell
+python tools\agent_company.py bootstrap-ceo-workers
+```
+
+Optional live handles can be attached with:
+
+```powershell
+--ar-thread-id
+--overlap-thread-id
+--candidate-thread-id
+--evaluation-thread-id
+--retirement-thread-id
+--continuity-thread-id
+--premium-router-thread-id
+--browser-ops-thread-id
+```
+
+## Workers
+
+- `lane-manager-ai_resources_lab-20260620`: owns the AR queue and hire/evolve/park/retire decisions.
+- `capability-overlap-mapper-20260621`: proves whether existing agents can evolve before any new hire.
+- `candidate-registry-curator-20260621`: collects candidate AI workers/tools into a local registry.
+- `local-evaluation-harness-builder-20260621`: designs local-only eval packets for candidates.
+- `adoption-retirement-reviewer-20260621`: recommends evolve, watch, reject, merge, or retire decisions.
+- `continuity-watchdog-worker-20260621`: checks stale, offline, ownerless, overlapping, and goal-less work.
+- `premium-customer-context-router-20260621`: accepts customer materials, preserves raw context, and routes capsules.
+- `browser-account-ops-worker-20260621`: separates AI-doable browser/account work from human KYC, billing, tax, and legal gates.
+
+## Automation
+
+App automation `agent-company-continuity-watchdog` wakes every 15 minutes to continue the CEO continuity loop, inspect current state, spawn bounded parallel helper agents when useful, and write local restore/escalation packets or CEO updates.
+
+## Boundary
+
+The constellation is local-control-plane only by default. It does not open browsers, create accounts, approve service requests, start external runtimes, publish, submit, trade, spend, call APIs, or contact anyone without a scoped gate.

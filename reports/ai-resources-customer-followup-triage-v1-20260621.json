@@ -1,0 +1,150 @@
+{
+  "counts": {
+    "ceo_decision_batch": 0,
+    "evolve_existing_agent": 0,
+    "park_with_revisit_condition": 0,
+    "reuse_existing_owner": 6,
+    "total": 6
+  },
+  "escalation_report_path": "reports\\customer-followup-escalation-v1-20260620.json",
+  "generated_utc": "2026-06-20T21:28:40Z",
+  "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+  "json_path": "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-triage-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-triage-v1-20260621.md",
+  "next_action": "Use the triage packet to request owner acknowledgement, evolve one existing agent, park ambiguous work, or draft CEO decision-batch items without starting lane work.",
+  "schema_version": "ai_resources_customer_followup_triage.v1",
+  "status": "triage_ready",
+  "summary": "AI Resources classified 6 customer follow-up escalation items into reuse, evolve, park, or CEO-decision paths.",
+  "triage_items": [
+    {
+      "decision": "reuse_existing_owner",
+      "decision_label": "Reuse existing owner",
+      "lane_id": "ai_resources_lab",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_start_workers_from_triage",
+        "do_not_claim_or_mutate_original_lane_followup",
+        "do_not_create_overlapping_agents",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_payment_trading_or_external_action"
+      ],
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "rationale": "The lane already has an owner; the fastest non-overlap repair is an owner acknowledgement packet.",
+      "recommended_action": "Ask the existing lane owner to acknowledge, park with reason, or produce the first local follow-up artifact.",
+      "source_next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
+      "source_target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
+      "task_status": "new"
+    },
+    {
+      "decision": "reuse_existing_owner",
+      "decision_label": "Reuse existing owner",
+      "lane_id": "ai_ml_competitions",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_start_workers_from_triage",
+        "do_not_claim_or_mutate_original_lane_followup",
+        "do_not_create_overlapping_agents",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_payment_trading_or_external_action"
+      ],
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "rationale": "The lane already has an owner; the fastest non-overlap repair is an owner acknowledgement packet.",
+      "recommended_action": "Ask the existing lane owner to acknowledge, park with reason, or produce the first local follow-up artifact.",
+      "source_next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
+      "source_target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+      "task_status": "new"
+    },
+    {
+      "decision": "reuse_existing_owner",
+      "decision_label": "Reuse existing owner",
+      "lane_id": "money_source_discovery",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_start_workers_from_triage",
+        "do_not_claim_or_mutate_original_lane_followup",
+        "do_not_create_overlapping_agents",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_payment_trading_or_external_action"
+      ],
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "rationale": "The lane already has an owner; the fastest non-overlap repair is an owner acknowledgement packet.",
+      "recommended_action": "Ask the existing lane owner to acknowledge, park with reason, or produce the first local follow-up artifact.",
+      "source_next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
+      "source_target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery",
+      "task_status": "new"
+    },
+    {
+      "decision": "reuse_existing_owner",
+      "decision_label": "Reuse existing owner",
+      "lane_id": "paid_code_bounties",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_start_workers_from_triage",
+        "do_not_claim_or_mutate_original_lane_followup",
+        "do_not_create_overlapping_agents",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_payment_trading_or_external_action"
+      ],
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "rationale": "The lane already has an owner; the fastest non-overlap repair is an owner acknowledgement packet.",
+      "recommended_action": "Ask the existing lane owner to acknowledge, park with reason, or produce the first local follow-up artifact.",
+      "source_next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "source_target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "task_status": "new"
+    },
+    {
+      "decision": "reuse_existing_owner",
+      "decision_label": "Reuse existing owner",
+      "lane_id": "prediction_market_research",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_start_workers_from_triage",
+        "do_not_claim_or_mutate_original_lane_followup",
+        "do_not_create_overlapping_agents",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_payment_trading_or_external_action"
+      ],
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "rationale": "The lane already has an owner; the fastest non-overlap repair is an owner acknowledgement packet.",
+      "recommended_action": "Ask the existing lane owner to acknowledge, park with reason, or produce the first local follow-up artifact.",
+      "source_next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
+      "source_target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+      "task_status": "new"
+    },
+    {
+      "decision": "reuse_existing_owner",
+      "decision_label": "Reuse existing owner",
+      "lane_id": "youtube_content_channels",
+      "monitor_status": "stale_unacknowledged",
+      "must_not_do": [
+        "do_not_start_workers_from_triage",
+        "do_not_claim_or_mutate_original_lane_followup",
+        "do_not_create_overlapping_agents",
+        "do_not_open_browser_or_create_account",
+        "do_not_perform_public_payment_trading_or_external_action"
+      ],
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "rationale": "The lane already has an owner; the fastest non-overlap repair is an owner acknowledgement packet.",
+      "recommended_action": "Ask the existing lane owner to acknowledge, park with reason, or produce the first local follow-up artifact.",
+      "source_next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "source_target_surface": "ai_resources_lab",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "task_status": "new"
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

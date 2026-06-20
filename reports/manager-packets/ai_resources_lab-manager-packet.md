@@ -1,7 +1,7 @@
 # Manager Packet - ai_resources_lab
 
-Generated UTC: 2026-06-20T21:01:18Z
-Department: AI Resources
+Generated UTC: 2026-06-20T22:49:40Z
+Department: Artificial Resources
 Lane status: active
 Current owner: `lane-manager-ai_resources_lab-20260620`
 
@@ -99,10 +99,18 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 96 | in_progress | `task-lane-manager-ai_resources_lab-20260620-active-goal-20260621` - Active goal for lane-manager-ai_resources_lab-20260620 | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence. |
 | 93 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab` - Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
 | 91 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab` - Follow up customer input for ai_resources_lab | lane-manager-ai_resources_lab-20260620 |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path. |
+| 90 | in_progress | `task-capability-overlap-mapper-20260621-active-goal-20260621` - Active goal for capability-overlap-mapper-20260621 | capability-overlap-mapper-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need. |
+| 90 | in_progress | `task-candidate-registry-curator-20260621-active-goal-20260621` - Active goal for candidate-registry-curator-20260621 | candidate-registry-curator-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence. |
+| 90 | in_progress | `task-local-evaluation-harness-builder-20260621-active-goal-20260621` - Active goal for local-evaluation-harness-builder-20260621 | local-evaluation-harness-builder-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption. |
+| 90 | in_progress | `task-adoption-retirement-reviewer-20260621-active-goal-20260621` - Active goal for adoption-retirement-reviewer-20260621 | adoption-retirement-reviewer-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents. |
+| 90 | in_progress | `task-continuity-watchdog-worker-20260621-active-goal-20260621` - Active goal for continuity-watchdog-worker-20260621 | continuity-watchdog-worker-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets. |
+| 90 | in_progress | `task-premium-customer-context-router-20260621-active-goal-20260621` - Active goal for premium-customer-context-router-20260621 | premium-customer-context-router-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer. |
+| 90 | in_progress | `task-browser-account-ops-worker-20260621-active-goal-20260621` - Active goal for browser-account-ops-worker-20260621 | browser-account-ops-worker-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects. |
+| 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab` - Acknowledge customer follow-up triage for ai_resources_lab | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 120 | complete | `task-ceo-operating-goal-v1-20260620` - Install CEO operating goal and AI Resources bootstrap | lane-manager-ai_resources_lab-20260620 |  | CEO operating goal Markdown/JSON, goal-evolver charter, registry/taxonomy updates, install report, trace event | Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets. |
-| 118 | complete | `task-ceo-first-state-packets-v1-20260620` - Install first CEO state packets and YouTube lane scout | lane-manager-ai_resources_lab-20260620 |  | AI Resources candidate registry, human-action feed, CEO state packet, YouTube lane scout, YouTube registry/taxonomy updates, trace event | Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs. |
 
 ## Service Requests
 
@@ -114,8 +122,14 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
-| complete | ceo_state_packets_bootstrap | `outcome-ceo-first-state-packets-v1-20260620` | 0.0 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260620.md | Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs. |
-| complete | ceo_operating_goal_bootstrap | `outcome-ceo-operating-goal-v1-20260620` | 0.0 | E:\agent-company-lab\architecture\ceo-operating-goal-v1.md | Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets. |
+| active | ceo_worker_bootstrap | `outcome-ceo-worker-bootstrap-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch. |
+| dispatch_ready | ai_resources_owner_acknowledgement_dispatch | `outcome-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch. |
+| current | ceo_state_packet | `outcome-ceo-state-packet-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed. |
+| apply_after_review | goal_evolver_review | `outcome-goal-evolver-review-v1-20260621` | 0.0 | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.md | CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path. |
+| complete | ai_resources_owner_acknowledgement_monitor_capability | `outcome-ai-resources-owner-acknowledgement-monitor-capability-20260621` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision. |
+| attention_needed | ai_resources_owner_acknowledgement_monitor | `outcome-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair. |
+| validated | ai_resources_owner_acknowledgement_requests_capability | `outcome-ai-resources-owner-acknowledgement-requests-command-v1-20260621` | 0.0 | E:\agent-company-lab\tools\agent_company_core\ai_resources_owner_acknowledgement_requests.py | Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking. |
+| acknowledgement_requests_ready | ai_resources_owner_acknowledgement_requests | `outcome-ai-resources-owner-acknowledgement-requests-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition. |
 
 ## Startup Commands
 

@@ -1,6 +1,6 @@
 # Manager Packet - money_source_discovery
 
-Generated UTC: 2026-06-20T21:01:19Z
+Generated UTC: 2026-06-20T22:49:40Z
 Department: Strategic Research
 Lane status: active
 Current owner: `lane-manager-money_source_discovery-019ec699`
@@ -100,6 +100,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery` - Acknowledge customer follow-up triage for money_source_discovery | lane-manager-money_source_discovery-019ec699 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 76 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery` - Follow up customer input for money_source_discovery | lane-manager-money_source_discovery-019ec699 |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger. |
 | 92 | complete | `task-money-path-graduation-action-queue-v1-20260618` - Money path graduation action queue v1 | recovered-profitable-edge-infra |  | E:\agent-company-lab\reports\money-path-graduation-action-queue-v1-validation-20260618.json | Have lane managers claim the top ranked queue item and create only the named local artifact/parser/checker/draft. If the next action needs account, wallet, payment, trade, submission, public action, worker/runtime, model |
 | 90 | complete | `task-money-path-lane-scout-packet-v1-20260618` - Build money_path_lane_scout_packet_v1 from refreshed current money paths | recovered-profitable-edge-infra |  | E:\agent-company-lab\reports\money-path-lane-scout-packet-v1-validation-20260618.json | Have lane managers execute the highest-priority local proof tasks one at a time, starting with Upwork AI offer matrix, PromptBase approval rubric, Algora claim-readiness checklist, and ARC baseline packet. Keep every acc |
@@ -111,7 +112,6 @@ These require a scoped service request and approval before any execution:
 | 70 | complete | `task-money_source_discovery-startup-20260614` - Lane startup: read packet, choose first proof task, write local plan | lane-manager-money_source_discovery-019ec699 |  | Local startup memo, source list, gates, and one next proof artifact | Run money_source_weekly_delta_local_dry_run from local Wave-4 files only; browser capture remains blocked until req-wave4-money-source-discovery-browser-readonly-20260614 is approved. |
 | 69 | complete | `task-money-source-weekly-delta-local-dry-run-20260614` - Local proof: money source weekly delta dry run | lane-manager-money_source_discovery-019ec699 |  | Local weekly delta table with at least ten candidate rows, owner lanes, gates, and proof artifact paths; realized_usd=0. | Use the local 16-row weekly delta as a proof queue; browser/current-source verification remains blocked until req-wave4-money-source-discovery-browser-readonly-20260614 is approved. |
 | 68 | complete | `task-ai-training-sample-pack-20260616` - Create AI training sample pack for math code QA and RLHF | lane-manager-money_source_discovery-019ec699 |  | E:\agent-company-lab\reports\money-source-discovery\ai-training-sample-pack-20260616.md | Create ai-training-profile-packet-draft-20260616.md with do-not-submit status. |
-| 66 | complete | `task-ai-training-profile-packet-draft-20260616` - Create AI training profile packet draft | lane-manager-money_source_discovery-019ec699 |  | E:\agent-company-lab\reports\money-source-discovery\ai-training-profile-packet-draft-20260616.md | Create platform-specific gate matrix only after read-only platform source refresh is approved. |
 
 ## Service Requests
 
