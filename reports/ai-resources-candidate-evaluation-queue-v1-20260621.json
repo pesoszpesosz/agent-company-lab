@@ -1,0 +1,334 @@
+{
+  "schema_version": "ai_resources_candidate_evaluation_queue.v1",
+  "generated_utc": "2026-06-20T22:50:01Z",
+  "local_date": "2026-06-21",
+  "lane_id": "ai_resources_lab",
+  "owner_agent_id": "candidate-registry-curator-20260621",
+  "handoff_owner_agent_id": "local-evaluation-harness-builder-20260621",
+  "status": "queued_local_only_no_execution",
+  "source_registry_path": "E:\\agent-company-lab\\reports\\ai-resources-candidate-registry-v2-20260621.json",
+  "queue_policy": {
+    "allowed_now": [
+      "read existing local artifacts",
+      "write local report-only evaluation packets",
+      "write deterministic parser or fixture specifications",
+      "run trusted local validation against generated JSON or existing repo tests when no external dependency install is required"
+    ],
+    "not_allowed": [
+      "install dependencies",
+      "import or execute untrusted candidate repos",
+      "start runtimes, workers, MCP servers, browsers, containers, or background services",
+      "call model APIs, external APIs, or MCP tools",
+      "open accounts, log in, mutate profiles, accept terms, touch KYC/tax/payment/wallet/trade flows",
+      "submit, publish, message, claim bounties, apply to jobs, post listings, create PR comments, or perform public actions"
+    ]
+  },
+  "queue_item_count": 12,
+  "queue_items": [
+    {
+      "rank": 1,
+      "candidate_id": "ceo_state_packet_v1",
+      "evaluation_id": "eval-ceo-state-packet-v1-local-integrity-20260621",
+      "evaluation_family": "control_plane_integrity",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
+        "E:\\agent-company-lab\\reports\\manager-packets\\index.md"
+      ],
+      "local_only_task": "Create an integrity packet that checks CEO state coverage, stale references, omitted gates, and raw-customer-context exclusion.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\ceo-state-packet-v1-local-integrity-20260621.md",
+      "success_checks": [
+        "Names every active CEO worker and goal from the roster.",
+        "Flags missing or stale manager packet links.",
+        "Confirms no raw premium customer material is copied into CEO context.",
+        "Preserves zero external side effects."
+      ],
+      "blocked_gates": [
+        "service_request_mutation",
+        "worker_restart",
+        "thread_message",
+        "external_api_call"
+      ]
+    },
+    {
+      "rank": 2,
+      "candidate_id": "human_action_feed_v1",
+      "evaluation_id": "eval-human-action-feed-v1-gate-separation-20260621",
+      "evaluation_family": "human_gate_routing",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\service-worker-operator-decision-docket-v1-20260617.json",
+        "E:\\agent-company-lab\\reports\\worker-activation-runway-v1-20260617.json"
+      ],
+      "local_only_task": "Check that human action rows separate must-do gates, optional approvals, and blocked actions without implying apply authority.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\human-action-feed-v1-gate-separation-20260621.md",
+      "success_checks": [
+        "Every human action has a gate type and exact next local artifact.",
+        "No action row claims approval has been applied.",
+        "Account, payment, wallet, public-action, browser, runtime, and model/API gates stay blocked."
+      ],
+      "blocked_gates": [
+        "account_mutation",
+        "payment_or_wallet_action",
+        "public_action",
+        "approval_apply"
+      ]
+    },
+    {
+      "rank": 3,
+      "candidate_id": "ai_resources_owner_acknowledgement_loop",
+      "evaluation_id": "eval-ai-resources-owner-ack-loop-stale-owner-fixture-20260621",
+      "evaluation_family": "continuity_and_ownership",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-requests-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.json"
+      ],
+      "local_only_task": "Build a fixture that reduces request, monitor, and dispatch rows into owner acknowledgement states and stale-owner warnings.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\owner-acknowledgement-loop-local-fixture-20260621.md",
+      "success_checks": [
+        "Detects ownerless or stale rows from local artifacts.",
+        "Does not send thread messages or restart workers.",
+        "Outputs only restore/escalation packet recommendations."
+      ],
+      "blocked_gates": [
+        "thread_message",
+        "worker_restart",
+        "service_request_assignment",
+        "external_notification"
+      ]
+    },
+    {
+      "rank": 4,
+      "candidate_id": "pydantic_ai_testmodel_adapter",
+      "evaluation_id": "eval-pydantic-ai-testmodel-fixture-only-20260621",
+      "evaluation_family": "local_prompt_and_worker_harness",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-worker-manifest-20260615.json",
+        "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.json"
+      ],
+      "local_only_task": "Run or specify fixture-only checks that use existing saved summaries and never invoke a provider model.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\pydantic-ai-testmodel-fixture-only-20260621.md",
+      "success_checks": [
+        "Uses local fixtures or existing generated reports only.",
+        "Shows prompt safety and stop-gate behavior.",
+        "No paid API, provider credentials, dependency install, or runtime start occurs."
+      ],
+      "blocked_gates": [
+        "model_api_call",
+        "dependency_install",
+        "runtime_start",
+        "credential_use"
+      ]
+    },
+    {
+      "rank": 5,
+      "candidate_id": "worker_capability_class_registry_v1",
+      "evaluation_id": "eval-worker-capability-class-overlap-map-20260621",
+      "evaluation_family": "capability_overlap",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md"
+      ],
+      "local_only_task": "Map queued registry candidates to capability classes and flag duplicate or overlapping owner responsibilities.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\worker-capability-class-overlap-map-20260621.md",
+      "success_checks": [
+        "Every queued external repo maps to exactly one capability class or an explicit manual-review bucket.",
+        "No worker registration or worker start is proposed.",
+        "Existing owners are named before any new hire suggestion."
+      ],
+      "blocked_gates": [
+        "worker_registration",
+        "worker_start",
+        "runtime_start",
+        "service_request_assignment"
+      ]
+    },
+    {
+      "rank": 6,
+      "candidate_id": "playwright_foundation_adapter",
+      "evaluation_id": "eval-playwright-browser-policy-contract-20260621",
+      "evaluation_family": "browser_worker_policy",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\architecture\\browser-worker-adapter-contract-v1.schema.json",
+        "E:\\agent-company-lab\\architecture\\browser-read-only-worker-policy-v1.schema.json"
+      ],
+      "local_only_task": "Compare the candidate's future adapter role with existing browser-worker policies and produce a no-start contract checklist.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\playwright-browser-policy-contract-20260621.md",
+      "success_checks": [
+        "Identifies read-only, account, public-action, and prompt-injection gates.",
+        "Does not start a browser or install Playwright.",
+        "Names existing browser-control capabilities before proposing a new worker."
+      ],
+      "blocked_gates": [
+        "browser_session_start",
+        "dependency_install",
+        "account_login",
+        "public_action"
+      ]
+    },
+    {
+      "rank": 7,
+      "candidate_id": "langgraph_checkpoint_inbox_patterns",
+      "evaluation_id": "eval-langgraph-checkpoint-contract-shape-20260621",
+      "evaluation_family": "checkpoint_and_interrupt_pattern",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\architecture\\checkpoint-interrupt-contract-v1.schema.json",
+        "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-validation-20260617.json"
+      ],
+      "local_only_task": "Extract a local checkpoint/inbox pattern from existing docket notes and compare it to checkpoint_interrupt_contract_v1.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\langgraph-checkpoint-contract-shape-20260621.md",
+      "success_checks": [
+        "Produces a framework-agnostic fixture shape.",
+        "Does not install or import LangGraph.",
+        "Preserves human interrupt and signed decision boundaries."
+      ],
+      "blocked_gates": [
+        "dependency_install",
+        "model_api_call",
+        "runtime_start",
+        "worker_start"
+      ]
+    },
+    {
+      "rank": 8,
+      "candidate_id": "prompt_eval_safety_harness",
+      "evaluation_id": "eval-candidate-registry-stop-gate-prompt-cases-20260621",
+      "evaluation_family": "prompt_safety",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\prompt-evals\\manager-prompt-safety-local-eval-latest.json",
+        "E:\\agent-company-lab\\evals\\manager-prompt-stop-gates-20260614.json",
+        "E:\\agent-company-lab\\reports\\ai-resources-candidate-registry-v2-20260621.json"
+      ],
+      "local_only_task": "Add candidate-registry stop-gate cases for adoption, external repo execution, and money-route public actions.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\candidate-registry-stop-gate-prompt-cases-20260621.md",
+      "success_checks": [
+        "At least one case refuses dependency install or runtime start.",
+        "At least one case refuses money-route public action or payment flow.",
+        "At least one case routes to a local evaluation packet."
+      ],
+      "blocked_gates": [
+        "model_api_call",
+        "external_api_call",
+        "public_action",
+        "dependency_install"
+      ]
+    },
+    {
+      "rank": 9,
+      "candidate_id": "promptbase_agent_skill_route",
+      "evaluation_id": "eval-promptbase-approval-rubric-local-only-20260621",
+      "evaluation_family": "money_route_local_proof",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\data\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.json",
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json"
+      ],
+      "local_only_task": "Create a local rubric for existing PromptBase approval packets and identify the first exact approval request, if any.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\promptbase-approval-rubric-local-only-20260621.md",
+      "success_checks": [
+        "Reviews only saved local packets.",
+        "No PromptBase browser, account, listing, upload, or submission occurs.",
+        "Next action is an exact approval packet, not execution."
+      ],
+      "blocked_gates": [
+        "marketplace_account",
+        "payment_tax_payout",
+        "public_listing",
+        "submission"
+      ]
+    },
+    {
+      "rank": 10,
+      "candidate_id": "upwork_ai_offer_matrix_route",
+      "evaluation_id": "eval-upwork-ai-offer-matrix-no-contact-20260621",
+      "evaluation_family": "money_route_local_proof",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-lane-scout-packet-v1-20260618.json",
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json"
+      ],
+      "local_only_task": "Create a no-contact offer matrix mapping existing lab capabilities to five AI job archetypes from saved observations.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\upwork-ai-offer-matrix-no-contact-20260621.md",
+      "success_checks": [
+        "Uses source observations from local artifacts only.",
+        "Avoids guaranteed client outcome claims.",
+        "No account, profile, proposal, message, or public action occurs."
+      ],
+      "blocked_gates": [
+        "account_login",
+        "proposal_or_message",
+        "payment_tax_payout",
+        "public_action"
+      ]
+    },
+    {
+      "rank": 11,
+      "candidate_id": "arc_prize_2026_baseline_harness",
+      "evaluation_id": "eval-arc-prize-local-toy-baseline-20260621",
+      "evaluation_family": "competition_local_proof",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\tools\\arc_toy_harness.py",
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json"
+      ],
+      "local_only_task": "Create a micro-environment replay baseline plan using only local toy fixtures and no official data.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\arc-prize-local-toy-baseline-20260621.md",
+      "success_checks": [
+        "Uses local toy fixtures only.",
+        "Names rules, account, data, compute, and submission gates.",
+        "No Kaggle account, official data download, submission, model/API, or paid compute occurs."
+      ],
+      "blocked_gates": [
+        "competition_account",
+        "official_data_download",
+        "submission",
+        "paid_compute_or_model_api"
+      ]
+    },
+    {
+      "rank": 12,
+      "candidate_id": "kalshi_public_data_worksheet",
+      "evaluation_id": "eval-kalshi-saved-row-paper-signal-20260621",
+      "evaluation_family": "paper_market_research",
+      "input_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.json",
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json"
+      ],
+      "local_only_task": "Create a saved-row paper signal checker spec with required kill reasons and zero live market access.",
+      "proof_artifact_to_create": "E:\\agent-company-lab\\reports\\ai-resources-evals\\kalshi-saved-row-paper-signal-20260621.md",
+      "success_checks": [
+        "Consumes saved rows or documented shapes only.",
+        "Emits paper-only candidate rows and kill reasons.",
+        "No account, API key, signed request, order, deposit, withdrawal, payment, or trade occurs."
+      ],
+      "blocked_gates": [
+        "live_api_call",
+        "account_login",
+        "trade_or_order",
+        "deposit_withdrawal_payment"
+      ]
+    }
+  ],
+  "recommended_execution_order": [
+    "control-plane assets first",
+    "local eval harnesses second",
+    "external repo contract comparisons third",
+    "money-route local proofs fourth"
+  ],
+  "zero_side_effect_boundary": {
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "wallets_or_payments_touched": 0,
+    "trades_or_orders_placed": 0,
+    "submissions_or_public_actions": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_api_calls": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

@@ -213,6 +213,12 @@ Current durable worker model:
 
 App automation `agent-company-continuity-watchdog` wakes every 15 minutes to continue the CEO continuity loop.
 
+Write the local continuity snapshot:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-snapshot
+```
+
 ## Immediate Backlog
 
 1. Keep `bootstrap-ceo-workers` current with live worker thread handles and active goals.

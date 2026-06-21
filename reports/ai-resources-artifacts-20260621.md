@@ -1,8 +1,8 @@
 # Agent Company Artifacts
 
-Generated UTC: 2026-06-20T22:49:40Z
+Generated UTC: 2026-06-21T11:33:50Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 54
+Rows shown: 56
 
 ## Counts By Kind
 
@@ -32,6 +32,8 @@ Rows shown: 54
 | `ceo_worker_roster_json` | 1 |
 | `ceo_worker_roster_markdown` | 1 |
 | `cli` | 1 |
+| `continuity_watchdog_snapshot_json` | 1 |
+| `continuity_watchdog_snapshot_markdown` | 1 |
 | `goal_evolver_review` | 1 |
 | `goal_evolver_review_json` | 1 |
 | `human_action_feed_json` | 2 |
@@ -55,12 +57,14 @@ Rows shown: 54
 
 | Lane | Count |
 | --- | ---: |
-| `ai_resources_lab` | 54 |
+| `ai_resources_lab` | 56 |
 
 ## Artifacts
 
 | Created | Kind | Lane | Task | Artifact | Path/URL | SHA256 | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_markdown | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | `artifact-continuity-watchdog-snapshot-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | a4ee5302353b90208daf9fff69644fecd68983b0587049d8bad6cdd0212b07c5 | Human-readable continuity watchdog snapshot. |
+| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_json | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | `artifact-continuity-watchdog-snapshot-v1-json-20260621` | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json | 7b176309865b56275f2257ef8ab94ef27fc4e3f89a5ada804714cbd66174bdc5 | Machine-readable continuity watchdog snapshot. |
 | 2026-06-21T01:15:00Z | ceo_worker_roster_markdown | `ai_resources_lab` | `task-ceo-worker-bootstrap-v1-20260621` | `artifact-ceo-worker-roster-v1-md-20260621` | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | 7c4c0c4f052f140848a499ce826b6e878da61fea9f9e0357a016a95c9b9e27bf | Human-readable CEO worker roster. |
 | 2026-06-21T01:15:00Z | ceo_worker_roster_json | `ai_resources_lab` | `task-ceo-worker-bootstrap-v1-20260621` | `artifact-ceo-worker-roster-v1-json-20260621` | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.json | c008105bff02e78c1cd20f98157c10ff323356a4f07e73fb72c864ffbca95bae | Machine-readable CEO worker roster. |
 | 2026-06-21T00:50:00Z | ai_resources_owner_acknowledgement_dispatch | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002` | `artifact-ai-resources-owner-acknowledgement-dispatch-md-customer-input-ceo-operating-goal-objective-20260620-002` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | f6062eb032636878323f7d38af4fa1b8114905298fa148069da79f9193585edc | Human-readable owner acknowledgement dispatch packet. |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "agent-company-visual-dashboard.snapshot.v1",
-  "generatedUtc": "2026-06-20T22:49:40Z",
+  "generatedUtc": "2026-06-21T11:33:57Z",
   "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
   "sources": {
     "sqlite": "./state/agent_company.sqlite",
@@ -13,12 +13,12 @@
     "lanes": 15,
     "departments": 24,
     "agents": 23,
-    "tasks": 707,
+    "tasks": 708,
     "serviceRequests": 16,
     "evidence": 219,
-    "outcomes": 441,
-    "traces": 617,
-    "artifacts": 2637,
+    "outcomes": 442,
+    "traces": 618,
+    "artifacts": 2639,
     "pendingRequests": 13,
     "blockers": 13,
     "realizedUsd": 0.0
@@ -33,7 +33,7 @@
     {
       "id": "evidence-chain",
       "title": "Evidence Chain",
-      "description": "219 evidence records and 2637 artifacts are traceable.",
+      "description": "219 evidence records and 2639 artifacts are traceable.",
       "unlocked": true
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "trace-memory",
       "title": "Trace Memory",
-      "description": "617 trace events keep the company timeline replayable.",
+      "description": "618 trace events keep the company timeline replayable.",
       "unlocked": true
     }
   ],
@@ -383,8 +383,8 @@
         "name": "Ai Resources Lab",
         "state": "advancing",
         "level": 12,
-        "score": 2010,
-        "nextAction": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch."
+        "score": 2141,
+        "nextAction": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically."
       }
     },
     {
@@ -2321,24 +2321,24 @@
         "x": 43,
         "y": 20
       },
-      "score": 2010,
+      "score": 2141,
       "level": 12,
-      "progress": 20,
+      "progress": 56,
       "realizedUsd": 0.0,
       "counts": {
-        "tasks": 23,
-        "completedTasks": 12,
+        "tasks": 24,
+        "completedTasks": 13,
         "activeTasks": 11,
         "serviceRequests": 0,
         "pendingRequests": 0,
         "evidence": 0,
-        "outcomes": 12,
-        "traces": 12,
-        "artifacts": 54,
+        "outcomes": 13,
+        "traces": 13,
+        "artifacts": 56,
         "blockers": 0
       },
       "taskCounts": {
-        "complete": 12,
+        "complete": 13,
         "in_progress": 8,
         "new": 3
       },
@@ -2386,6 +2386,14 @@
           "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
         },
         {
+          "id": "task-continuity-watchdog-snapshot-v1-20260621",
+          "title": "Write continuity watchdog snapshot v1",
+          "status": "complete",
+          "priority": 93,
+          "nextAction": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+          "ownerAgentId": "continuity-watchdog-worker-20260621"
+        },
+        {
           "id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab",
           "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002",
           "status": "new",
@@ -2400,20 +2408,20 @@
           "priority": 92,
           "nextAction": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
           "ownerAgentId": "goal-evolver-agent-20260620"
-        },
-        {
-          "id": "task-ai-resources-customer-followup-triage-command-v1-20260621",
-          "title": "Executable AI Resources customer follow-up triage v1",
-          "status": "complete",
-          "priority": 92,
-          "nextAction": "Use triage-ai-resources-customer-followups after escalation to classify stale customer tasks into reuse, evolve, park, or CEO decision paths without starting workers.",
-          "ownerAgentId": "lane-manager-ai_resources_lab-20260620"
         }
       ],
       "serviceRequests": [],
       "gateMap": [],
       "recentEvidence": [],
       "recentOutcomes": [
+        {
+          "id": "outcome-continuity-watchdog-snapshot-v1-20260621",
+          "type": "continuity_watchdog_snapshot",
+          "status": "restore_ready",
+          "realizedUsd": 0.0,
+          "nextAction": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+          "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md"
+        },
         {
           "id": "outcome-ceo-worker-bootstrap-v1-20260621",
           "type": "ceo_worker_bootstrap",
@@ -2469,23 +2477,22 @@
           "realizedUsd": 0.0,
           "nextAction": "Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking.",
           "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
-        },
-        {
-          "id": "outcome-ai-resources-owner-acknowledgement-requests-customer-input-ceo-operating-goal-objective-20260620-002",
-          "type": "ai_resources_owner_acknowledgement_requests",
-          "status": "acknowledgement_requests_ready",
-          "realizedUsd": 0.0,
-          "nextAction": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
-          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
         }
       ],
       "recentTraces": [
         {
           "id": "trace-event-ceo-state-packet-v1-20260621",
           "type": "ceo_state_packet_refreshed",
-          "time": "2026-06-21T01:45:00Z",
-          "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+          "time": "2026-06-21T11:33:50Z",
+          "summary": "Refreshed CEO state packet with 20 dispatch candidates and 13 optional human gate decisions.",
           "artifact": "./reports/ceo-state-packet-v1-20260621.md"
+        },
+        {
+          "id": "trace-event-continuity-watchdog-snapshot-v1-20260621",
+          "type": "continuity_watchdog_snapshot_written",
+          "time": "2026-06-21T11:33:42Z",
+          "summary": "Wrote continuity snapshot with 15 restore actions.",
+          "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md"
         },
         {
           "id": "trace-event-goal-evolver-review-v1-20260621",
@@ -2542,13 +2549,6 @@
           "time": "2026-06-20T21:29:18Z",
           "summary": "Created an executable AI Resources triage command that classifies customer follow-up escalations without starting workers or mutating lane follow-ups.",
           "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py"
-        },
-        {
-          "id": "trace-event-ai-resources-customer-followup-triage-customer-input-ceo-operating-goal-objective-20260620-002",
-          "type": "ai_resources_customer_followup_triage_written",
-          "time": "2026-06-20T21:28:40Z",
-          "summary": "Wrote AI Resources triage packet for 6 customer follow-up escalation items.",
-          "artifact": "./reports/ai-resources-customer-followup-triage-v1-20260621.md"
         }
       ],
       "milestones": [
@@ -2556,9 +2556,25 @@
           "kind": "trace",
           "title": "Ceo State Packet Refreshed",
           "status": "recorded",
-          "time": "2026-06-21T01:45:00Z",
-          "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+          "time": "2026-06-21T11:33:50Z",
+          "summary": "Refreshed CEO state packet with 20 dispatch candidates and 13 optional human gate decisions.",
           "artifact": "./reports/ceo-state-packet-v1-20260621.md"
+        },
+        {
+          "kind": "outcome",
+          "title": "Continuity Watchdog Snapshot",
+          "status": "restore_ready",
+          "time": "2026-06-21T11:33:42Z",
+          "summary": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+          "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md"
+        },
+        {
+          "kind": "trace",
+          "title": "Continuity Watchdog Snapshot Written",
+          "status": "recorded",
+          "time": "2026-06-21T11:33:42Z",
+          "summary": "Wrote continuity snapshot with 15 restore actions.",
+          "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md"
         },
         {
           "kind": "trace",
@@ -2663,22 +2679,6 @@
           "time": "2026-06-20T21:32:59Z",
           "summary": "Created an executable owner acknowledgement request command that asks existing lane owners to respond without starting workers or mutating source follow-ups.",
           "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
-        },
-        {
-          "kind": "outcome",
-          "title": "Ai Resources Owner Acknowledgement Requests",
-          "status": "acknowledgement_requests_ready",
-          "time": "2026-06-20T21:32:32Z",
-          "summary": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
-          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
-        },
-        {
-          "kind": "trace",
-          "title": "Ai Resources Owner Acknowledgement Requests Written",
-          "status": "recorded",
-          "time": "2026-06-20T21:32:32Z",
-          "summary": "Wrote 6 owner acknowledgement requests for customer follow-up triage.",
-          "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
         }
       ],
       "trail": [
@@ -2686,7 +2686,7 @@
           "kind": "task",
           "title": "Refresh CEO state packet v1",
           "status": "complete",
-          "time": "2026-06-21T01:45:00Z",
+          "time": "2026-06-21T11:33:50Z",
           "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
           "artifact": null
         },
@@ -2694,17 +2694,63 @@
           "kind": "trace",
           "title": "Ceo State Packet Refreshed",
           "status": "recorded",
-          "time": "2026-06-21T01:45:00Z",
-          "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+          "time": "2026-06-21T11:33:50Z",
+          "summary": "Refreshed CEO state packet with 20 dispatch candidates and 13 optional human gate decisions.",
           "artifact": "./reports/ceo-state-packet-v1-20260621.md",
           "artifactPreview": {
             "label": "ceo-state-packet-v1-20260621.md",
             "kind": "md",
             "lines": [
               "CEO State Packet V1",
-              "Generated UTC: 2026-06-21T01:45:00Z",
+              "Generated UTC: 2026-06-21T11:33:50Z",
               "Status: `current_local_state_packet`",
               "Packet id: `ceo-state-packet-v1-20260621`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "task",
+          "title": "Write continuity watchdog snapshot v1",
+          "status": "complete",
+          "time": "2026-06-21T11:33:42Z",
+          "summary": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+          "artifact": null
+        },
+        {
+          "kind": "outcome",
+          "title": "Continuity Watchdog Snapshot",
+          "status": "restore_ready",
+          "time": "2026-06-21T11:33:42Z",
+          "summary": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+          "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md",
+          "artifactPreview": {
+            "label": "continuity-watchdog-snapshot-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "Continuity Watchdog Snapshot V1",
+              "Generated UTC: 2026-06-21T11:33:42Z",
+              "Status: `restore_ready`",
+              "Cadence minutes: `15`"
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "kind": "trace",
+          "title": "Continuity Watchdog Snapshot Written",
+          "status": "recorded",
+          "time": "2026-06-21T11:33:42Z",
+          "summary": "Wrote continuity snapshot with 15 restore actions.",
+          "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md",
+          "artifactPreview": {
+            "label": "continuity-watchdog-snapshot-v1-20260621.md",
+            "kind": "md",
+            "lines": [
+              "Continuity Watchdog Snapshot V1",
+              "Generated UTC: 2026-06-21T11:33:42Z",
+              "Status: `restore_ready`",
+              "Cadence minutes: `15`"
             ],
             "truncated": false
           }
@@ -2904,7 +2950,7 @@
             "kind": "md",
             "lines": [
               "CEO State Packet V1",
-              "Generated UTC: 2026-06-21T01:45:00Z",
+              "Generated UTC: 2026-06-21T11:33:50Z",
               "Status: `current_local_state_packet`",
               "Packet id: `ceo-state-packet-v1-20260621`"
             ],
@@ -3356,7 +3402,7 @@
             "id": "ai_resources_lab-next-unlock",
             "title": "Next Unlock",
             "status": "active",
-            "description": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions."
+            "description": "Refreshed CEO state packet with 20 dispatch candidates and 13 optional human gate decisions."
           }
         ]
       },
@@ -25906,7 +25952,7 @@
         "kind": "task",
         "title": "Refresh CEO state packet v1",
         "status": "complete",
-        "time": "2026-06-21T01:45:00Z",
+        "time": "2026-06-21T11:33:50Z",
         "summary": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
         "artifact": null
       },
@@ -25920,12 +25966,54 @@
         "kind": "trace",
         "title": "Ceo State Packet Refreshed",
         "status": "recorded",
-        "time": "2026-06-21T01:45:00Z",
-        "summary": "Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions.",
+        "time": "2026-06-21T11:33:50Z",
+        "summary": "Refreshed CEO state packet with 20 dispatch candidates and 13 optional human gate decisions.",
         "artifact": "./reports/ceo-state-packet-v1-20260621.md"
       },
       {
         "id": "ai_resources_lab-task-2",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "task",
+        "title": "Write continuity watchdog snapshot v1",
+        "status": "complete",
+        "time": "2026-06-21T11:33:42Z",
+        "summary": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+        "artifact": null
+      },
+      {
+        "id": "ai_resources_lab-outcome-3",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "outcome",
+        "title": "Continuity Watchdog Snapshot",
+        "status": "restore_ready",
+        "time": "2026-06-21T11:33:42Z",
+        "summary": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+        "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-trace-4",
+        "laneId": "ai_resources_lab",
+        "laneName": "Ai Resources Lab",
+        "laneState": "advancing",
+        "laneLevel": 12,
+        "laneRealm": "Ai Resources Lab",
+        "kind": "trace",
+        "title": "Continuity Watchdog Snapshot Written",
+        "status": "recorded",
+        "time": "2026-06-21T11:33:42Z",
+        "summary": "Wrote continuity snapshot with 15 restore actions.",
+        "artifact": "./reports/continuity-watchdog-snapshot-v1-20260621.md"
+      },
+      {
+        "id": "ai_resources_lab-task-5",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -25939,7 +26027,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-trace-3",
+        "id": "ai_resources_lab-trace-6",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -25953,7 +26041,7 @@
         "artifact": "./reports/goal-evolver-review-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-task-4",
+        "id": "ai_resources_lab-task-7",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -25967,7 +26055,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-5",
+        "id": "ai_resources_lab-task-8",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -25981,7 +26069,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-6",
+        "id": "ai_resources_lab-task-9",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -25995,7 +26083,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-7",
+        "id": "ai_resources_lab-task-10",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26009,7 +26097,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-8",
+        "id": "ai_resources_lab-task-11",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26023,7 +26111,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-9",
+        "id": "ai_resources_lab-task-12",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26037,7 +26125,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-10",
+        "id": "ai_resources_lab-task-13",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26051,7 +26139,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-11",
+        "id": "ai_resources_lab-task-14",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26065,7 +26153,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-12",
+        "id": "ai_resources_lab-task-15",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26079,7 +26167,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-trace-13",
+        "id": "ai_resources_lab-trace-16",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26093,7 +26181,7 @@
         "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-outcome-14",
+        "id": "ai_resources_lab-outcome-17",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26107,7 +26195,7 @@
         "artifact": "./reports/ceo-worker-roster-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-task-15",
+        "id": "ai_resources_lab-task-18",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26121,7 +26209,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-outcome-16",
+        "id": "ai_resources_lab-outcome-19",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26135,7 +26223,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-trace-17",
+        "id": "ai_resources_lab-trace-20",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26149,7 +26237,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-dispatch-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-outcome-18",
+        "id": "ai_resources_lab-outcome-21",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26163,7 +26251,7 @@
         "artifact": "./reports/ceo-state-packet-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-outcome-19",
+        "id": "ai_resources_lab-outcome-22",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26177,7 +26265,7 @@
         "artifact": "./reports/goal-evolver-review-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-task-20",
+        "id": "ai_resources_lab-task-23",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26191,7 +26279,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-outcome-21",
+        "id": "ai_resources_lab-outcome-24",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26205,7 +26293,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-trace-22",
+        "id": "ai_resources_lab-trace-25",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26219,7 +26307,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-task-23",
+        "id": "ai_resources_lab-task-26",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26233,7 +26321,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-outcome-24",
+        "id": "ai_resources_lab-outcome-27",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26247,7 +26335,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-trace-25",
+        "id": "ai_resources_lab-trace-28",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26261,7 +26349,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-monitor-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-task-26",
+        "id": "ai_resources_lab-task-29",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26275,7 +26363,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-outcome-27",
+        "id": "ai_resources_lab-outcome-30",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26289,7 +26377,7 @@
         "artifact": "./tools/agent_company_core/ai_resources_owner_acknowledgement_requests.py"
       },
       {
-        "id": "ai_resources_lab-trace-28",
+        "id": "ai_resources_lab-trace-31",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26317,7 +26405,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-29",
+        "id": "ai_resources_lab-task-32",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26331,7 +26419,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-task-30",
+        "id": "ai_resources_lab-task-33",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26345,7 +26433,7 @@
         "artifact": null
       },
       {
-        "id": "ai_resources_lab-outcome-31",
+        "id": "ai_resources_lab-outcome-34",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26359,7 +26447,7 @@
         "artifact": "./reports/ai-resources-owner-acknowledgement-requests-v1-20260621.md"
       },
       {
-        "id": "ai_resources_lab-trace-32",
+        "id": "ai_resources_lab-trace-35",
         "laneId": "ai_resources_lab",
         "laneName": "Ai Resources Lab",
         "laneState": "advancing",
@@ -26427,48 +26515,6 @@
         "time": "2026-06-20T21:32:32Z",
         "summary": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
         "artifact": null
-      },
-      {
-        "id": "ai_resources_lab-task-33",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 12,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "task",
-        "title": "Executable AI Resources customer follow-up triage v1",
-        "status": "complete",
-        "time": "2026-06-20T21:29:18Z",
-        "summary": "Use triage-ai-resources-customer-followups after escalation to classify stale customer tasks into reuse, evolve, park, or CEO decision paths without starting workers.",
-        "artifact": null
-      },
-      {
-        "id": "ai_resources_lab-outcome-34",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 12,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "outcome",
-        "title": "Ai Resources Customer Followup Triage Capability",
-        "status": "validated",
-        "time": "2026-06-20T21:29:18Z",
-        "summary": "Use the live triage packet to request lane-owner acknowledgements before adding or duplicating workers.",
-        "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py"
-      },
-      {
-        "id": "ai_resources_lab-trace-35",
-        "laneId": "ai_resources_lab",
-        "laneName": "Ai Resources Lab",
-        "laneState": "advancing",
-        "laneLevel": 12,
-        "laneRealm": "Ai Resources Lab",
-        "kind": "trace",
-        "title": "Ai Resources Customer Followup Triage Command Ready",
-        "status": "recorded",
-        "time": "2026-06-20T21:29:18Z",
-        "summary": "Created an executable AI Resources triage command that classifies customer follow-up escalations without starting workers or mutating lane follow-ups.",
-        "artifact": "./tools/agent_company_core/ai_resources_customer_followup_triage.py"
       },
       {
         "id": "premium_customer_intake-task-0",
@@ -27878,10 +27924,10 @@
       "id": "ai_resources_lab",
       "name": "Ai Resources Lab",
       "department": "Artificial Resources",
-      "score": 2010,
+      "score": 2141,
       "level": 12,
       "state": "advancing",
-      "nextAction": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch."
+      "nextAction": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically."
     },
     {
       "id": "web3_airdrops_grants_hackathons",

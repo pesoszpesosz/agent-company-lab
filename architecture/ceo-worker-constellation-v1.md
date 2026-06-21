@@ -40,6 +40,14 @@ Optional live handles can be attached with:
 
 App automation `agent-company-continuity-watchdog` wakes every 15 minutes to continue the CEO continuity loop, inspect current state, spawn bounded parallel helper agents when useful, and write local restore/escalation packets or CEO updates.
 
+The executable local snapshot command is:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-snapshot
+```
+
+It reports ownerless lanes, missing owner-agent rows, agents missing thread handles, stale open tasks, expired leases, duplicate active keys, lanes with no open tasks, and stale owner acknowledgements. It only writes local reports and audit rows.
+
 ## Boundary
 
 The constellation is local-control-plane only by default. It does not open browsers, create accounts, approve service requests, start external runtimes, publish, submit, trade, spend, call APIs, or contact anyone without a scoped gate.

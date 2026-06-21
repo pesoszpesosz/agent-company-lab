@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2553,
+    "artifacts": 2555,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 441,
+    "outcomes": 442,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 623,
-    "trace_events": 533
+    "tasks": 624,
+    "trace_events": 534
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T01:45:00Z",
+  "generated_utc": "2026-06-21T11:33:50Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T01:45:00Z",
+    "generated_utc": "2026-06-21T11:33:50Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -251,10 +251,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 152,
-    "outcomes_delta": 23,
-    "tasks_delta": 44,
-    "trace_events_delta": 24
+    "artifacts_delta": 154,
+    "outcomes_delta": 24,
+    "tasks_delta": 45,
+    "trace_events_delta": 25
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -353,6 +353,30 @@
       "lane_id": "ai_resources_lab",
       "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
       "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "money_source_discovery",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "paid_code_bounties",
+      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
     }
   ],
   "open_tasks": [
@@ -499,10 +523,56 @@
       "status": "new",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
       "title": "Acknowledge customer follow-up triage for youtube_content_channels"
+    },
+    {
+      "lane_id": "youtube_content_channels",
+      "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "title": "Follow up customer input for youtube_content_channels"
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "title": "Follow up customer input for paid_code_bounties"
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+      "title": "Follow up customer input for prediction_market_research"
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+      "title": "Follow up customer input for ai_ml_competitions"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
+    {
+      "created_at": "2026-06-21T11:33:42Z",
+      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
+      "outcome_id": "outcome-continuity-watchdog-snapshot-v1-20260621",
+      "outcome_type": "continuity_watchdog_snapshot",
+      "realized_usd": 0.0,
+      "status": "restore_ready"
+    },
     {
       "created_at": "2026-06-21T01:15:00Z",
       "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
@@ -572,16 +642,6 @@
       "outcome_type": "ai_resources_owner_acknowledgement_requests_capability",
       "realized_usd": 0.0,
       "status": "validated"
-    },
-    {
-      "created_at": "2026-06-20T21:32:32Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-requests-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Lane owners should acknowledge each request with one local artifact or park/escalate with a concrete revisit condition.",
-      "outcome_id": "outcome-ai-resources-owner-acknowledgement-requests-customer-input-ceo-operating-goal-objective-20260620-002",
-      "outcome_type": "ai_resources_owner_acknowledgement_requests",
-      "realized_usd": 0.0,
-      "status": "acknowledgement_requests_ready"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

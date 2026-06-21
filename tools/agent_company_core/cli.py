@@ -40,6 +40,7 @@ from agent_company_core.ai_resources_owner_acknowledgement_dispatch import (
 from agent_company_core.goal_evolver_review import write_goal_evolver_review
 from agent_company_core.ceo_state_packet import write_ceo_state_packet
 from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
+from agent_company_core.continuity_watchdog_snapshot import write_continuity_watchdog_snapshot
 from agent_company_core.control_plane_capacity_benchmark_runner import write_control_plane_capacity_benchmark_runner
 from agent_company_core.premium_customer_followup_escalation import write_premium_customer_followup_escalation
 from agent_company_core.premium_customer_followup_monitor import write_premium_customer_followup_monitor
@@ -234,6 +235,13 @@ def build_parser() -> argparse.ArgumentParser:
     ceo_worker_bootstrap.add_argument("--premium-router-thread-id")
     ceo_worker_bootstrap.add_argument("--browser-ops-thread-id")
     ceo_worker_bootstrap.add_argument("--no-db-record", action="store_true")
+    continuity_watchdog_snapshot = sub.add_parser("write-continuity-watchdog-snapshot")
+    continuity_watchdog_snapshot.add_argument("--now-utc")
+    continuity_watchdog_snapshot.add_argument("--stale-after-minutes", type=int, default=60)
+    continuity_watchdog_snapshot.add_argument("--cadence-minutes", type=int, default=15)
+    continuity_watchdog_snapshot.add_argument("--path")
+    continuity_watchdog_snapshot.add_argument("--json-path")
+    continuity_watchdog_snapshot.add_argument("--no-db-record", action="store_true")
     add_money_path_commands(sub)
     add_paid_code_commands(sub)
     add_digital_products_commands(sub)
@@ -415,6 +423,9 @@ def main() -> None:
         elif args.cmd == "bootstrap-ceo-workers":
             init_db(conn)
             write_ceo_worker_bootstrap(conn, args)
+        elif args.cmd == "write-continuity-watchdog-snapshot":
+            init_db(conn)
+            write_continuity_watchdog_snapshot(conn, args)
         elif handle_money_path_command(conn, args):
             pass
         elif handle_paid_code_command(conn, args):

@@ -1,0 +1,788 @@
+{
+  "schema_version": "ai_resources_candidate_registry.v2",
+  "generated_utc": "2026-06-20T22:50:01Z",
+  "local_date": "2026-06-21",
+  "lane_id": "ai_resources_lab",
+  "owner_agent_id": "candidate-registry-curator-20260621",
+  "status": "report_only_normalized_registry",
+  "scope": "Normalize candidate AI workers, agent-company control-plane assets, research infrastructure, and money-making tools into a local-only evaluation queue.",
+  "source_policy": {
+    "external_fetches_performed": 0,
+    "network_or_api_calls_performed": 0,
+    "source_mode": "existing_local_evidence_only",
+    "notes": "This refresh used existing local artifacts under E:\\agent-company-lab. It did not query GitHub, browse external pages, call APIs, install dependencies, start runtimes, or execute untrusted candidate code."
+  },
+  "source_artifacts": [
+    {
+      "artifact_id": "ceo_worker_constellation_v1",
+      "path": "E:\\agent-company-lab\\architecture\\ceo-worker-constellation-v1.md",
+      "role": "worker boundary and constellation mandate"
+    },
+    {
+      "artifact_id": "ceo_worker_roster_v1",
+      "path": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
+      "role": "candidate-registry-curator active goal and peer worker handoff map"
+    },
+    {
+      "artifact_id": "seed_candidate_registry_v1",
+      "path": "E:\\agent-company-lab\\reports\\ai-resources-candidate-registry-v1-20260620.json",
+      "role": "prior registry seed"
+    },
+    {
+      "artifact_id": "runtime_adoption_docket_v1",
+      "path": "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+      "role": "external repo dispositions and gates"
+    },
+    {
+      "artifact_id": "worker_capability_class_registry_v1",
+      "path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
+      "role": "capability classes, overlap boundaries, and required gates"
+    },
+    {
+      "artifact_id": "money_path_graduation_queue_v1",
+      "path": "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+      "role": "ranked local-only money route queue"
+    },
+    {
+      "artifact_id": "money_path_lane_scout_packet_v1",
+      "path": "E:\\agent-company-lab\\data\\money-path-lane-scout-packet-v1-20260618.json",
+      "role": "source observations, proof artifacts, and stop gates for money-making routes"
+    }
+  ],
+  "normalization_rules": [
+    "Each candidate must point to local source evidence already present in the lab.",
+    "Each candidate must name the first local proof artifact or fixture before any adoption.",
+    "External repos are reference, adapter, or future-runtime candidates only; none are adopted.",
+    "Money-making routes can create local drafts, parser fixtures, approval packets, or paper-only worksheets only.",
+    "Existing agent-company assets are promoted only after overlap review and local evaluation evidence.",
+    "Every candidate keeps account, browser, dependency, runtime, model/API/MCP, public-action, wallet/payment, security-testing, trade, and submission gates explicit."
+  ],
+  "candidate_count": 33,
+  "category_counts": {
+    "agent_company_control_plane_asset": 5,
+    "ai_worker_or_framework": 14,
+    "research_infrastructure": 5,
+    "money_making_tool_or_route": 9
+  },
+  "disposition_counts": {
+    "queue_local_eval": 12,
+    "watch_reference": 15,
+    "keep_and_harden": 2,
+    "blocked_until_gate": 4
+  },
+  "candidates": [
+    {
+      "candidate_id": "ceo_state_packet_v1",
+      "display_name": "CEO state packet",
+      "normalized_category": "agent_company_control_plane_asset",
+      "candidate_type": "local_report_asset",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md"
+      ],
+      "why_test": "Keeps the CEO context-light while preserving state, decisions, tasks, and gates for continuity.",
+      "first_local_proof": "Diff the packet against current roster, manager packets, and latest trail artifacts; prove it omits raw customer material and preserves action gates.",
+      "disposition": "queue_local_eval",
+      "priority": 96,
+      "overlap_review": "Confirm it complements, not duplicates, continuity-watchdog restore packets.",
+      "required_gates": [
+        "local_report_only",
+        "raw_customer_context_exclusion_check"
+      ]
+    },
+    {
+      "candidate_id": "human_action_feed_v1",
+      "display_name": "Human action feed",
+      "normalized_category": "agent_company_control_plane_asset",
+      "candidate_type": "local_report_asset",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.md"
+      ],
+      "why_test": "Separates true human-required gates from optional approvals so workers do not stall or invent authority.",
+      "first_local_proof": "Run a local classification review against current service-request, account, payment, public-action, and runtime gates.",
+      "disposition": "queue_local_eval",
+      "priority": 94,
+      "overlap_review": "Coordinate with browser-account-ops-worker and premium-customer-context-router boundaries.",
+      "required_gates": [
+        "local_report_only",
+        "human_approval_not_apply_authority"
+      ]
+    },
+    {
+      "candidate_id": "ai_resources_owner_acknowledgement_loop",
+      "display_name": "AI Resources owner acknowledgement loop",
+      "normalized_category": "agent_company_control_plane_asset",
+      "candidate_type": "local_monitoring_asset",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-requests-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.json",
+        "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-triage-v1-20260621.json"
+      ],
+      "why_test": "Closes the ownerless-work gap without restarting workers or assigning service requests.",
+      "first_local_proof": "Create a local-only acknowledgement state reducer and stale-owner fixture; prove zero dispatch side effects.",
+      "disposition": "queue_local_eval",
+      "priority": 91,
+      "overlap_review": "Coordinate with lane-manager-ai_resources_lab and continuity-watchdog-worker.",
+      "required_gates": [
+        "local_report_only",
+        "no_thread_message_without_approval",
+        "no_service_request_assignment"
+      ]
+    },
+    {
+      "candidate_id": "continuity_watchdog_restore_packet",
+      "display_name": "Continuity watchdog restore packet",
+      "normalized_category": "agent_company_control_plane_asset",
+      "candidate_type": "local_continuity_asset",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\architecture\\ceo-worker-constellation-v1.md",
+        "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md"
+      ],
+      "why_test": "Detects stale, offline, ownerless, overlapping, and goal-less work before worker restarts.",
+      "first_local_proof": "Generate a local stale-lane fixture from existing reports and emit restore/escalation packets only.",
+      "disposition": "watch_reference",
+      "priority": 88,
+      "overlap_review": "Do not duplicate ai_resources owner acknowledgement checks.",
+      "required_gates": [
+        "local_report_only",
+        "no_worker_restart"
+      ]
+    },
+    {
+      "candidate_id": "browser_account_ops_gate_packet",
+      "display_name": "Browser/account operations gate packet",
+      "normalized_category": "agent_company_control_plane_asset",
+      "candidate_type": "local_gate_packet",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\architecture\\ceo-worker-constellation-v1.md",
+        "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md"
+      ],
+      "why_test": "Separates AI-doable browser/account preparation from human KYC, billing, tax, legal, and terms gates.",
+      "first_local_proof": "Create a local packet template that marks each action as AI-preparable, human-gated, or blocked.",
+      "disposition": "watch_reference",
+      "priority": 86,
+      "overlap_review": "Coordinate with human_action_feed_v1 and service-worker gate maps.",
+      "required_gates": [
+        "no_browser_session",
+        "no_account_mutation",
+        "legal_kyc_tax_payment_gate"
+      ]
+    },
+    {
+      "candidate_id": "pydantic_ai_testmodel_adapter",
+      "display_name": "Pydantic AI TestModel adapter",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "local_fixture_adapter",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-local-dry-run-worker-manifest-20260615.json",
+        "E:\\agent-company-lab\\reports\\worker-runtime\\pydantic-ai-eval-latest.json"
+      ],
+      "why_test": "Existing local adapter can evaluate prompt and worker shapes without paid model calls.",
+      "first_local_proof": "Run fixture-only evaluation against saved request summaries and compare outputs to prompt safety expectations.",
+      "disposition": "queue_local_eval",
+      "priority": 93,
+      "overlap_review": "Keep it as a harness, not a model-backed worker.",
+      "required_gates": [
+        "fixture_only",
+        "no_paid_api_call",
+        "no_dependency_install"
+      ]
+    },
+    {
+      "candidate_id": "openai_agents_manifest_only_adapter",
+      "display_name": "OpenAI Agents manifest-only adapter",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "manifest_reference",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\ai-resources-candidate-registry-v1-20260620.json",
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json"
+      ],
+      "why_test": "Preserves future tool, handoff, and guardrail shapes without running model-backed agents.",
+      "first_local_proof": "Validate a manifest-only packet that maps agent, tool, handoff, model, and cost fields to local gates.",
+      "disposition": "keep_and_harden",
+      "priority": 83,
+      "overlap_review": "Do not register as worker until model/provider/cost/secrets gates exist.",
+      "required_gates": [
+        "manifest_only",
+        "model_api_execution_gate",
+        "secrets_credentials_handling_gate"
+      ]
+    },
+    {
+      "candidate_id": "browser_use_browser_worker_adapter",
+      "display_name": "browser-use browser worker adapter",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_adapter_candidate",
+      "source_repo": "browser-use/browser-use",
+      "source_url": "https://github.com/browser-use/browser-use",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "High-fit browser-agent runtime candidate for future read-only browser-worker patterns.",
+      "first_local_proof": "Write a no-install adapter contract comparison against browser_worker_adapter_contract_v1 and signed approval guards.",
+      "disposition": "watch_reference",
+      "priority": 90,
+      "overlap_review": "Compare against existing browser plugin/control surface before any new browser worker hire.",
+      "required_gates": [
+        "browser_read_only_worker_policy_v1",
+        "browser_worker_adapter_contract_v1",
+        "browser_read_only_signed_approval_guard_v1",
+        "no_browser_session"
+      ]
+    },
+    {
+      "candidate_id": "playwright_foundation_adapter",
+      "display_name": "Playwright deterministic browser foundation",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_adapter_candidate",
+      "source_repo": "microsoft/playwright",
+      "source_url": "https://github.com/microsoft/playwright",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Best-fit deterministic foundation for approved future browser workers and visual verification.",
+      "first_local_proof": "Compare current in-app browser control patterns with Playwright policy gates using docs already in the lab.",
+      "disposition": "queue_local_eval",
+      "priority": 89,
+      "overlap_review": "Prefer existing in-app browser tooling until an exact worker scope needs Playwright.",
+      "required_gates": [
+        "dependency_install_gate",
+        "browser_start_signed_approval",
+        "public_action_gate"
+      ]
+    },
+    {
+      "candidate_id": "playwright_mcp_readonly_adapter",
+      "display_name": "Playwright MCP read-only adapter",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_adapter_candidate",
+      "source_repo": "microsoft/playwright-mcp",
+      "source_url": "https://github.com/microsoft/playwright-mcp",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json"
+      ],
+      "why_test": "Potential future MCP route for browser inspection if registry, prompt-injection, and browser-start gates mature.",
+      "first_local_proof": "Create a threat-model checklist only; no MCP server start or browser session.",
+      "disposition": "blocked_until_gate",
+      "priority": 70,
+      "overlap_review": "Must not bypass MCP tool registry or browser-account-ops gates.",
+      "required_gates": [
+        "mcp_tool_registry_gate_v1",
+        "browser_worker_adapter_contract_v1",
+        "prompt_injection_surface_review"
+      ]
+    },
+    {
+      "candidate_id": "langgraph_checkpoint_inbox_patterns",
+      "display_name": "LangGraph checkpoint and inbox patterns",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_reference",
+      "source_repo": "langchain-ai/langgraph",
+      "source_url": "https://github.com/langchain-ai/langgraph",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\adapter-candidate-scorecard-v1-20260617.json"
+      ],
+      "why_test": "Useful architecture evidence for checkpoints, interrupts, human review, and agent inboxes.",
+      "first_local_proof": "Extract a local checkpoint-interrupt fixture shape; do not install LangGraph.",
+      "disposition": "queue_local_eval",
+      "priority": 88,
+      "overlap_review": "Map to existing checkpoint_interrupt_contract_v1 before any framework adoption.",
+      "required_gates": [
+        "runtime_dependency_install_preflight_v1",
+        "model_api_execution_gate",
+        "runtime_start_preflight_v1"
+      ]
+    },
+    {
+      "candidate_id": "temporal_durable_runtime_reference",
+      "display_name": "Temporal durable runtime reference",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_future_runtime",
+      "source_repo": "temporalio/temporal",
+      "source_url": "https://github.com/temporalio/temporal",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Reference for long-running service-worker workflows and durable history replay.",
+      "first_local_proof": "Draft a service-request history replay manifest using only existing SQLite/report data.",
+      "disposition": "watch_reference",
+      "priority": 78,
+      "overlap_review": "Compare with DBOS, Restate, Hatchet, and current SQLite control plane.",
+      "required_gates": [
+        "runtime_start_preflight_v1",
+        "runtime_start_signed_decision_guard_v1",
+        "runtime_dependency_install_preflight_v1"
+      ]
+    },
+    {
+      "candidate_id": "restate_durable_service_reference",
+      "display_name": "Restate durable agent service reference",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_future_runtime",
+      "source_repo": "restatedev/restate",
+      "source_url": "https://github.com/restatedev/restate",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Reference for journaled tool and LLM step recovery.",
+      "first_local_proof": "Create a report-only journaled-step reducer fixture against copied local rows.",
+      "disposition": "watch_reference",
+      "priority": 77,
+      "overlap_review": "Compare with Temporal and existing egress ledger before runtime adoption.",
+      "required_gates": [
+        "runtime_start_preflight_v1",
+        "egress_event_ledger",
+        "dependency_install_gate"
+      ]
+    },
+    {
+      "candidate_id": "dbos_transactional_workflow_reference",
+      "display_name": "DBOS transactional workflow reference",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_future_runtime",
+      "source_repo": "dbos-inc/dbos-transact-py",
+      "source_url": "https://github.com/dbos-inc/dbos-transact-py",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Closest external pattern to a database-first durable workflow posture.",
+      "first_local_proof": "Write a transactional workflow reducer fixture using saved service-request rows only.",
+      "disposition": "watch_reference",
+      "priority": 76,
+      "overlap_review": "Only revisit if SQLite control-plane limits are proven by local evidence.",
+      "required_gates": [
+        "runtime_start_preflight_v1",
+        "runtime_dependency_install_preflight_v1",
+        "queue_mutation_guard_v1"
+      ]
+    },
+    {
+      "candidate_id": "mcp_context_forge_gateway_reference",
+      "display_name": "MCP Context Forge gateway reference",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_gateway_reference",
+      "source_repo": "IBM/mcp-context-forge",
+      "source_url": "https://github.com/IBM/mcp-context-forge",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Useful reference for MCP/A2A registry governance and tool discovery controls.",
+      "first_local_proof": "Map its registry concepts to existing mcp_tool_registry_gate_v1 and unified egress gateway docket.",
+      "disposition": "watch_reference",
+      "priority": 74,
+      "overlap_review": "Reference only until local MCP registry gates require a concrete implementation.",
+      "required_gates": [
+        "mcp_tool_registry_gate_v1",
+        "agent_egress_event_ledger_v1",
+        "unified_agent_egress_gateway_docket_v1"
+      ]
+    },
+    {
+      "candidate_id": "agentgateway_egress_reference",
+      "display_name": "AgentGateway egress reference",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_gateway_reference",
+      "source_repo": "agentgateway/agentgateway",
+      "source_url": "https://github.com/agentgateway/agentgateway",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json"
+      ],
+      "why_test": "Reference for unified policy, RBAC, spend, and observability around model/tool traffic.",
+      "first_local_proof": "Compare concepts to the local unified_agent_egress_gateway_docket_v1 without starting a gateway.",
+      "disposition": "watch_reference",
+      "priority": 73,
+      "overlap_review": "Must preserve local egress ledger authority.",
+      "required_gates": [
+        "no_gateway_process",
+        "no_model_traffic",
+        "signed_operator_decision"
+      ]
+    },
+    {
+      "candidate_id": "observability_replay_pack",
+      "display_name": "Langfuse/Phoenix/OpenLIT/VoltAgent replay pack",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_reference_pack",
+      "source_repos": [
+        "langfuse/langfuse",
+        "Arize-ai/phoenix",
+        "openlit/openlit",
+        "VoltAgent/voltagent"
+      ],
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Turns traces, evals, costs, and replay into CEO operating memory without telemetry export.",
+      "first_local_proof": "Design a local trace replay packet from existing outcomes/artifacts only.",
+      "disposition": "watch_reference",
+      "priority": 72,
+      "overlap_review": "Use existing trace/outcome tables before adding telemetry tooling.",
+      "required_gates": [
+        "telemetry_privacy_export_gate_v1",
+        "runtime_dependency_install_preflight_v1",
+        "no_saas_export"
+      ]
+    },
+    {
+      "candidate_id": "crewai_autogen_role_team_patterns",
+      "display_name": "CrewAI/AutoGen role-team patterns",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_reference_pack",
+      "source_repos": [
+        "crewAIInc/crewAI",
+        "microsoft/autogen"
+      ],
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json"
+      ],
+      "why_test": "Useful role taxonomy and groupchat evidence for multi-agent staffing, not runtime adoption.",
+      "first_local_proof": "Extract role/team labels into a capability-overlap map and compare to current roster.",
+      "disposition": "watch_reference",
+      "priority": 71,
+      "overlap_review": "Existing owners must evolve before new hires.",
+      "required_gates": [
+        "no_dependency_install",
+        "no_model_api_call",
+        "no_worker_start"
+      ]
+    },
+    {
+      "candidate_id": "humanlayer_human_approval_reference",
+      "display_name": "HumanLayer human approval reference",
+      "normalized_category": "ai_worker_or_framework",
+      "candidate_type": "external_repo_mixed_reference",
+      "source_repo": "humanlayer/humanlayer",
+      "source_url": "https://github.com/humanlayer/humanlayer",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json"
+      ],
+      "why_test": "Human approval UX may help route exact operator decisions, but notification/public-action surfaces are risky.",
+      "first_local_proof": "Create a local approval-state taxonomy and reject any notification or public-action integration.",
+      "disposition": "blocked_until_gate",
+      "priority": 65,
+      "overlap_review": "Manual architecture review required before any deeper work.",
+      "required_gates": [
+        "manual_architecture_review_required",
+        "chief_risk_officer_review",
+        "public_action_secrets_notification_gate"
+      ]
+    },
+    {
+      "candidate_id": "runtime_adoption_docket_v1",
+      "display_name": "Runtime adoption docket",
+      "normalized_category": "research_infrastructure",
+      "candidate_type": "local_research_artifact",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\agent-company-runtime-adoption-docket-v1-20260618.md"
+      ],
+      "why_test": "Already normalizes 27 external repos into reference, adapter, future-runtime, or blocked-dependency dispositions.",
+      "first_local_proof": "Use it as an input fixture for candidate registry validation and stale-source detection.",
+      "disposition": "keep_and_harden",
+      "priority": 92,
+      "overlap_review": "Owned by AI Resources; avoid re-fetching sources unless scoped.",
+      "required_gates": [
+        "local_report_only",
+        "no_external_refresh_without_scope"
+      ]
+    },
+    {
+      "candidate_id": "worker_capability_class_registry_v1",
+      "display_name": "Worker capability class registry",
+      "normalized_category": "research_infrastructure",
+      "candidate_type": "local_research_artifact",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
+        "E:\\agent-company-lab\\architecture\\worker-capability-class-registry-v1.schema.json"
+      ],
+      "why_test": "Prevents unsafe generic worker pools by splitting browser, durable runtime, gateway, model-backed, observability, and workflow classes.",
+      "first_local_proof": "Feed candidate rows through capability classes and flag duplicate/overlap candidates.",
+      "disposition": "queue_local_eval",
+      "priority": 90,
+      "overlap_review": "This is the overlap gate for future hires.",
+      "required_gates": [
+        "local_report_only",
+        "no_worker_registration",
+        "no_worker_start"
+      ]
+    },
+    {
+      "candidate_id": "adapter_candidate_scorecard_v1",
+      "display_name": "Adapter candidate scorecard",
+      "normalized_category": "research_infrastructure",
+      "candidate_type": "local_research_artifact",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\adapter-candidate-scorecard-v1-20260617.json",
+        "E:\\agent-company-lab\\reports\\adapter-candidate-scorecard-v1-20260617.md"
+      ],
+      "why_test": "Ranks framework adapter candidates while forcing zero runtime adoptions.",
+      "first_local_proof": "Update the scorecard input mapping with this registry and confirm selected_for_runtime_adoption_count remains zero.",
+      "disposition": "watch_reference",
+      "priority": 82,
+      "overlap_review": "Use as a score input only, not an adoption decision.",
+      "required_gates": [
+        "local_report_only",
+        "runtime_adoption_count_zero"
+      ]
+    },
+    {
+      "candidate_id": "prompt_eval_safety_harness",
+      "display_name": "Prompt eval safety harness",
+      "normalized_category": "research_infrastructure",
+      "candidate_type": "local_eval_harness",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\prompt-evals\\manager-prompt-safety-local-eval-latest.json",
+        "E:\\agent-company-lab\\evals\\manager-prompt-stop-gates-20260614.json"
+      ],
+      "why_test": "Reusable local harness for checking whether worker prompts preserve stop gates.",
+      "first_local_proof": "Add candidate-registry stop-gate cases and run only local fixture evals.",
+      "disposition": "queue_local_eval",
+      "priority": 87,
+      "overlap_review": "Coordinate with local-evaluation-harness-builder.",
+      "required_gates": [
+        "local_fixture_only",
+        "no_model_api_call"
+      ]
+    },
+    {
+      "candidate_id": "typed_worker_runtime_proposal_harness",
+      "display_name": "Typed worker runtime proposal harness",
+      "normalized_category": "research_infrastructure",
+      "candidate_type": "local_runtime_proposal",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.json",
+        "E:\\agent-company-lab\\reports\\artifacts-worker-runtime-proposals-latest.md"
+      ],
+      "why_test": "Can shape future typed worker proposals while preserving paper-only/runtime-blocked boundaries.",
+      "first_local_proof": "Create a typed proposal for one registry candidate without registering or starting a worker.",
+      "disposition": "watch_reference",
+      "priority": 75,
+      "overlap_review": "Must stay proposal-only until worker pool gates are signed.",
+      "required_gates": [
+        "no_worker_registration",
+        "no_runtime_start",
+        "service_worker_signed_decision_guard"
+      ]
+    },
+    {
+      "candidate_id": "upwork_ai_offer_matrix_route",
+      "display_name": "Upwork AI offer matrix route",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_money_route",
+      "source_url": "https://www.upwork.com/freelance-jobs/artificial-intelligence/",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\data\\money-path-lane-scout-packet-v1-20260618.json"
+      ],
+      "why_test": "Highest-priority local money route with no-contact offer-matrix proof.",
+      "first_local_proof": "Create a no-send Upwork approval request packet or offer matrix from saved source observations.",
+      "disposition": "queue_local_eval",
+      "priority": 91,
+      "overlap_review": "Coordinate with lead_generation_and_sales manager; do not create a duplicate worker.",
+      "required_gates": [
+        "account_login_gate",
+        "proposal_public_action_gate",
+        "payment_tax_payout_gate",
+        "no_external_api_call"
+      ]
+    },
+    {
+      "candidate_id": "promptbase_agent_skill_route",
+      "display_name": "PromptBase agent skill route",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_money_route",
+      "source_url": "https://promptbase.com/sell",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\data\\digital-products-promptbase-do-not-run-submission-packet-wave27-20260618.json"
+      ],
+      "why_test": "Near-term marketplace route with existing local approval packets and no listing/public-action authority.",
+      "first_local_proof": "Build a local approval rubric for the six PromptBase approval packets.",
+      "disposition": "queue_local_eval",
+      "priority": 89,
+      "overlap_review": "Coordinate with digital_products_templates_plugins manager.",
+      "required_gates": [
+        "account_login_gate",
+        "payment_tax_payout_gate",
+        "marketplace_submission_gate",
+        "public_listing_approval_required"
+      ]
+    },
+    {
+      "candidate_id": "algora_opik_bounty_route",
+      "display_name": "Algora/Opik bounty route",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_money_route",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\paid-code-bounties\\algora-live-candidate-refresh-20260616.json"
+      ],
+      "why_test": "Paid-code route can be hardened with duplicate and claim-readiness checks before any public claim.",
+      "first_local_proof": "Refresh only the local claim-readiness and duplicate-check packet from saved evidence.",
+      "disposition": "watch_reference",
+      "priority": 88,
+      "overlap_review": "Coordinate with paid_code_bounties manager.",
+      "required_gates": [
+        "public_claim_pr_approval_required",
+        "account_login_gate",
+        "payment_tax_payout_gate",
+        "no_live_bounty_claim"
+      ]
+    },
+    {
+      "candidate_id": "arc_prize_2026_baseline_harness",
+      "display_name": "ARC Prize 2026 baseline harness",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_competition_route",
+      "source_url": "https://arcprize.org/competitions/2026",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\tools\\arc_toy_harness.py"
+      ],
+      "why_test": "Prize upside exists; local toy harness can test reproducibility discipline without official data or submission.",
+      "first_local_proof": "Create ARC micro-environment replay baseline using local fixtures only.",
+      "disposition": "queue_local_eval",
+      "priority": 82,
+      "overlap_review": "Coordinate with ai_ml_competitions manager.",
+      "required_gates": [
+        "kaggle_account_gate",
+        "official_data_download_gate",
+        "submission_public_action_gate",
+        "paid_compute_model_api_gate"
+      ]
+    },
+    {
+      "candidate_id": "kalshi_public_data_worksheet",
+      "display_name": "Kalshi public-data worksheet",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "paper_research_route",
+      "source_url": "https://docs.kalshi.com/getting_started/quick_start_market_data",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\worker-runtime\\prediction_market_research-typed-worker-proposal.json"
+      ],
+      "why_test": "Supports paper-only market research from saved/public data shapes while blocking trades and accounts.",
+      "first_local_proof": "Create a saved-row parser/checker that emits paper-only signal rows and kill reasons.",
+      "disposition": "queue_local_eval",
+      "priority": 76,
+      "overlap_review": "Coordinate with prediction_market_research manager.",
+      "required_gates": [
+        "no_live_api_call",
+        "account_login_gate",
+        "real_money_trade_approval_required",
+        "payment_deposit_withdrawal_gate"
+      ]
+    },
+    {
+      "candidate_id": "gumroad_lemon_squeezy_product_route",
+      "display_name": "Gumroad/Lemon Squeezy product route",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_marketplace_route",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\data\\money-path-lane-scout-packet-v1-20260618.json"
+      ],
+      "why_test": "Turns existing agent-company assets into local product packaging and approval packets.",
+      "first_local_proof": "Draft no-publish route decision packet with license, refund, support, checksum, payout, and tax gates.",
+      "disposition": "watch_reference",
+      "priority": 80,
+      "overlap_review": "Coordinate with digital_products_templates_plugins manager.",
+      "required_gates": [
+        "seller_account_gate",
+        "tax_payment_gate",
+        "public_listing_approval_required",
+        "customer_data_gate"
+      ]
+    },
+    {
+      "candidate_id": "opire_paid_oss_parser_route",
+      "display_name": "Opire paid OSS parser route",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_paid_code_parser",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json"
+      ],
+      "why_test": "Can normalize paid OSS cards into local queue rows with hard rejection for captcha/abuse rows.",
+      "first_local_proof": "Create deterministic parser against saved/public card snapshots only.",
+      "disposition": "watch_reference",
+      "priority": 74,
+      "overlap_review": "Coordinate with paid_code_bounties manager and source-spec registry.",
+      "required_gates": [
+        "account_login_gate",
+        "public_claim_pr_approval_required",
+        "no_live_submission",
+        "no_external_api_call"
+      ]
+    },
+    {
+      "candidate_id": "security_bounty_public_rules_triage",
+      "display_name": "HackerOne/Bugcrowd public rules triage",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_security_rules_parser",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\data\\security-program-rules-scope-ranker-v1-20260618.json"
+      ],
+      "why_test": "Public rules parsing can prepare static/source-review candidates while blocking target testing and reports.",
+      "first_local_proof": "Create no-login public-program fixture with scope, safe harbor, reward, known-issue, and kill-reason fields.",
+      "disposition": "blocked_until_gate",
+      "priority": 68,
+      "overlap_review": "Coordinate with security_bounty_private_reports manager.",
+      "required_gates": [
+        "security_testing_authorization_gate",
+        "account_login_gate",
+        "report_submission_gate",
+        "payment_tax_payout_gate"
+      ]
+    },
+    {
+      "candidate_id": "dorahacks_gitcoin_grant_fit_route",
+      "display_name": "DoraHacks/Gitcoin grant fit route",
+      "normalized_category": "money_making_tool_or_route",
+      "candidate_type": "local_grant_fit_route",
+      "source_evidence_paths": [
+        "E:\\agent-company-lab\\data\\money-path-graduation-action-queue-v1-20260618.json",
+        "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\gitcoin-no-submit-grant-fit-memo-v1-20260618.json"
+      ],
+      "why_test": "Can test whether agent-company public-good tooling has a grant route without submission or wallet actions.",
+      "first_local_proof": "Write a no-submit grant-fit memo with rules, wallet, KYC, project evidence, duplicate, and budget gates.",
+      "disposition": "blocked_until_gate",
+      "priority": 61,
+      "overlap_review": "Coordinate with web3_airdrops_grants_hackathons manager.",
+      "required_gates": [
+        "wallet_gate",
+        "kyc_passport_gate",
+        "grant_submission_gate",
+        "public_campaign_gate"
+      ]
+    }
+  ],
+  "local_evaluation_queue_path": "E:\\agent-company-lab\\reports\\ai-resources-candidate-evaluation-queue-v1-20260621.json",
+  "recommended_next_action": "Hand the 12 queued candidates to local-evaluation-harness-builder-20260621 as report-only evaluation packets. Start with ceo_state_packet_v1, human_action_feed_v1, ai_resources_owner_acknowledgement_loop, pydantic_ai_testmodel_adapter, and worker_capability_class_registry_v1 because they strengthen local control without external dependencies.",
+  "zero_side_effect_boundary": {
+    "dependency_installs": 0,
+    "runtime_starts": 0,
+    "worker_starts": 0,
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "wallets_or_payments_touched": 0,
+    "trades_or_orders_placed": 0,
+    "submissions_or_public_actions": 0,
+    "model_api_calls": false,
+    "mcp_tool_calls": false,
+    "external_api_calls": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

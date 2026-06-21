@@ -1,8 +1,8 @@
 # Agent Company Trace Events
 
-Generated UTC: 2026-06-20T22:49:40Z
+Generated UTC: 2026-06-21T11:33:50Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 12
+Rows shown: 13
 
 ## Boundary
 
@@ -24,19 +24,21 @@ Rows shown: 12
 | `ceo_state_packet_refreshed` | 1 |
 | `ceo_state_packets_installed` | 1 |
 | `ceo_worker_constellation_bootstrapped` | 1 |
+| `continuity_watchdog_snapshot_written` | 1 |
 | `goal_evolver_review_written` | 1 |
 
 ## Counts By Lane
 
 | Lane | Count |
 | --- | ---: |
-| `ai_resources_lab` | 12 |
+| `ai_resources_lab` | 13 |
 
 ## Events
 
 | Time | Type | Trace | Lane | Task | Agent | Event | Source | Artifact | Metadata |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-21T01:45:00Z | ceo_state_packet_refreshed | `trace-ceo-state-packet-v1-20260621` | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | lane-manager-ai_resources_lab-20260620 | `trace-event-ceo-state-packet-v1-20260621` - Refreshed CEO state packet with 16 dispatch candidates and 13 optional human gate decisions. | ceo_state_packet_v1 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | {"active_blockers_and_gates": {"blocked_task_count": 0, "optional_gate_queue_count": 13, "required_human_action_count": 0, "service_requests_needing_review": 13, "stale_owner_acknowledgement_count": 6}, "company_counts": |
+| 2026-06-21T11:33:50Z | ceo_state_packet_refreshed | `trace-ceo-state-packet-v1-20260621` | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | lane-manager-ai_resources_lab-20260620 | `trace-event-ceo-state-packet-v1-20260621` - Refreshed CEO state packet with 20 dispatch candidates and 13 optional human gate decisions. | ceo_state_packet_v1 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | {"active_blockers_and_gates": {"blocked_task_count": 0, "optional_gate_queue_count": 13, "required_human_action_count": 0, "service_requests_needing_review": 13, "stale_owner_acknowledgement_count": 6}, "company_counts": |
+| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_written | `trace-continuity-watchdog-snapshot-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | continuity-watchdog-worker-20260621 | `trace-event-continuity-watchdog-snapshot-v1-20260621` - Wrote continuity snapshot with 15 restore actions. | continuity_watchdog_snapshot_v1 | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | {"counts": {"agents_missing_threads": 0, "duplicate_active_keys": 0, "expired_leases": 0, "lanes_without_open_tasks": 8, "missing_owner_agent_lanes": 0, "ownerless_active_lanes": 1, "stale_open_tasks": 23, "stale_owner_a |
 | 2026-06-21T01:40:00Z | goal_evolver_review_written | `trace-goal-evolver-review-v1-20260621` | `ai_resources_lab` | `task-goal-evolver-review-v1-20260621` | goal-evolver-agent-20260620 | `trace-event-goal-evolver-review-v1-20260621` - Goal Evolver proposed 3 operating-goal diffs from current company evidence. | goal_evolver_review_v1 | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.md | {"company_signals": {"blocked_task_count": 0, "open_task_count": 23, "realized_usd": 0.0, "recent_outcomes": [{"created_at": "2026-06-21T01:15:00Z", "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260 |
 | 2026-06-21T01:25:00Z | ceo_worker_constellation_bootstrapped | `trace-ceo-worker-bootstrap-v1-20260621` | `ai_resources_lab` | `task-ceo-worker-bootstrap-v1-20260621` | lane-manager-ai_resources_lab-20260620 | `trace-event-ceo-worker-bootstrap-v1-20260621` - Bootstrapped 8 CEO/AR workers with active goals. | ceo_worker_bootstrap_v1 | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | {"agent_ids": ["lane-manager-ai_resources_lab-20260620", "capability-overlap-mapper-20260621", "candidate-registry-curator-20260621", "local-evaluation-harness-builder-20260621", "adoption-retirement-reviewer-20260621", |
 | 2026-06-21T00:50:00Z | ai_resources_owner_acknowledgement_dispatch_written | `trace-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002` | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002` | lane-manager-ai_resources_lab-20260620 | `trace-event-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002` - Wrote 6 existing-owner dispatch items for stale acknowledgements. | ai_resources_owner_acknowledgement_dispatch_v1 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | {"counts": {"dispatch_items": 6, "fresh_open_acknowledgements": 0, "terminal_acknowledgements": 0, "total_owner_acknowledgements": 6}, "dispatch_item_ids": ["ai-resources-owner-acknowledgement-dispatch-v1-customer-input- |
