@@ -1,0 +1,21 @@
+{
+    "external_side_effects":  false,
+    "browser_sessions_started":  0,
+    "accounts_created_or_modified":  0,
+    "public_actions_taken":  0,
+    "service_requests_approved_assigned_or_started":  0,
+    "model_api_mcp_calls":  0,
+    "worker_runtime_queue_starts":  0,
+    "duplicate_workers_created":  0,
+    "lane_ownership_mutations":  0,
+    "wallet_payment_trading_actions":  0,
+    "source_task_id":  "task-continuity-lane-next-task-20260621-premium_customer_intake-004",
+    "continuation_artifact":  "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-004.md",
+    "selected_continuation_count":  1,
+    "selected_continuation":  "park_until_new_non_placeholder_dropbox_file",
+    "expected_next_artifact":  "E:\\agent-company-lab\\intake\\customer\\routes\\\u003cnew-customer-input-id\u003e.md",
+    "expected_next_artifact_json":  "E:\\agent-company-lab\\intake\\customer\\routes\\\u003cnew-customer-input-id\u003e.json",
+    "raw_material_copied_into_ceo_context":  false,
+    "evidence_watch_status":  "no_new_input_watch_current",
+    "new_preserved_raw_material_found":  false
+}

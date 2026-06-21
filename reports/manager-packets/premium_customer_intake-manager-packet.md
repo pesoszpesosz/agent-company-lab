@@ -1,6 +1,6 @@
 # Manager Packet - premium_customer_intake
 
-Generated UTC: 2026-06-21T13:40:01Z
+Generated UTC: 2026-06-21T13:56:16Z
 Department: Customer/Operator Success
 Lane status: active
 Current owner: `premium-customer-intake-agent-20260620`
@@ -100,7 +100,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 72 | new | `task-continuity-lane-next-task-20260621-premium_customer_intake-003` - Continue proof-derived local next step for premium_customer_intake | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-watch-v1-20260621.trace-metadata.json | Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next |
+| 72 | new | `task-continuity-lane-next-task-20260621-premium_customer_intake-005` - Continue proof-derived local next step for premium_customer_intake | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-004.md | Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next |
 | 119 | complete | `task-premium-customer-intake-router-v1-20260620` - Install premium customer intake router and knowledge application loop | premium-customer-intake-agent-20260620 |  | Premium customer intake role/lane/agent, router contract, intake workspace, routing ledger, route packet, knowledge application loop, customer update feed, CEO state packet v2, tra | Use premium_customer_intake for future customer requests and lane materials; create youtube_no_post_content_batch_v1 next. |
 | 92 | complete | `task-premium-customer-followup-escalation-command-v1-20260620` - Executable premium customer follow-up escalation v1 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | Next let AI Resources triage the escalation packet into a non-overlap local plan or CEO decision-batch item. |
 | 92 | complete | `task-premium-customer-intake-router-command-v1-20260620` - Executable premium customer intake router v1 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\tools\agent_company_core\premium_customer_intake_router.py | Use route-premium-customer-input for new customer requests/materials; next add lane-specific follow-up task synthesis. |
@@ -123,14 +123,14 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| parked_until_new_dropbox_material | proof_derived_continuation | `outcome-premium-customer-intake-proof-derived-continuation-v1-004-20260621` | 0.0 | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-004.md | Reopen only when a new non-placeholder file appears under intake/customer/dropbox; then create compact route packet without copying raw material into CEO context. |
+| parked_until_revisit_trigger | proof_derived_continuation | `outcome-premium-customer-intake-proof-derived-continuation-v1-003-20260621` | 0.0 | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-003.md | Reopen intake watch only when new raw material, route ledger change, update-feed gap, downstream follow-up drift, or required human gate appears. |
 | no_new_input_watch_current | premium_customer_routing_queue_watch | `outcome-premium-customer-routing-queue-watch-v1-20260621` | 0.0 | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-watch-v1-20260621.md | Run next local watch when new raw material, route ledger change, update-feed gap, follow-up drift, or required human gate appears. |
 | routing_queue_checked | premium_customer_routing_queue_proof | `outcome-premium-customer-routing-queue-proof-v1-20260621` | 0.0 | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-proof-v1-20260621.md | Monitor incoming premium customer material; preserve raw context, route compact capsules, and update customer-facing queue. |
 | router_refresh_current | customer_intake_router_refresh | `outcome-premium-customer-intake-router-refresh-v1-20260621` | 0.0 | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.md | Await next premium-customer request/material; preserve raw context, route compact capsule to lane owner, and update customer queue. |
 | current_lane_goal_submitted | continuity_current_lane_goal | `outcome-premium-customer-intake-current-lane-goal-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-lane-goals-v1-20260621\premium-customer-intake-current-lane-goal-v1-20260621.md | Run a local-only fixture or next real customer material through the YouTube/source v2 intake procedure; preserve raw context and route compact capsules. |
 | local_procedure_ready | customer_intake_procedure | `outcome-youtube-source-material-intake-routing-procedure-v2-20260621` | 0.0 | E:\agent-company-lab\reports\youtube-source-material-intake-routing-procedure-v2-20260621.md | Use the procedure for the next incoming YouTube/source material: preserve raw context, route compact capsule to youtube_content_channels, and update the customer. |
 | validated | customer_followup_escalation_capability | `outcome-premium-customer-followup-escalation-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | Use the escalation packet to drive AI Resources triage, then surface only CEO-grade decisions or customer updates. |
-| escalation_needed | customer_followup_escalation | `outcome-premium-customer-followup-escalation-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
-| validated | customer_followup_monitor_capability | `outcome-premium-customer-followup-monitor-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_monitor.py | Create an escalation packet for stale unacknowledged follow-ups without starting lane work. |
 
 ## Startup Commands
 

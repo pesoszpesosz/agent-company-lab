@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2682,
+    "artifacts": 2716,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 472,
+    "outcomes": 478,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 675,
-    "trace_events": 614
+    "tasks": 689,
+    "trace_events": 639
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T13:40:01Z",
+  "generated_utc": "2026-06-21T13:56:16Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T13:40:01Z",
+    "generated_utc": "2026-06-21T13:56:16Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 281,
-    "outcomes_delta": 54,
-    "tasks_delta": 96,
-    "trace_events_delta": 105
+    "artifacts_delta": 315,
+    "outcomes_delta": 60,
+    "tasks_delta": 110,
+    "trace_events_delta": 130
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -372,6 +372,66 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T13:55:47Z",
+      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-004.md",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "next_action": "Next expected artifact: E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\gitcoin-readonly-refresh-request-draft-v1-20260621.md. Draft/intake only; no agents, ownership mutation, workers, service approval/start, browser, wallet, signature, publish, submit, trade, spend, APIs, or contact.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-004",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "continuation_packet_complete_local_only"
+    },
+    {
+      "created_at": "2026-06-21T13:54:51Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-004.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Reopen only when a new non-placeholder file appears under intake/customer/dropbox; then create compact route packet without copying raw material into CEO context.",
+      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-004-20260621",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "parked_until_new_dropbox_material"
+    },
+    {
+      "created_at": "2026-06-21T13:54:32Z",
+      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-004.md",
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Write the selected-dataset readiness-count artifact locally only; keep replay, agent/worker creation, ownership mutation, service approvals, browser, public action, APIs, spend, trade, brokers, paid data, and contact gates closed.",
+      "outcome_id": "outcome-local-trading-proof-derived-continuation-v1-20260621-004",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "complete"
+    },
+    {
+      "created_at": "2026-06-21T13:45:43Z",
+      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-003.md",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "next_action": "Next expected artifact: E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\gitcoin-readonly-refresh-request-draft-v1-20260621.md. Draft only; no agents, workers, ownership mutation, service approval/start, browser, wallet, signature, form submission, APIs, gas, spend, public action, or contact.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-003",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "continuation_packet_complete_local_only"
+    },
+    {
+      "created_at": "2026-06-21T13:45:37Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-003.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Reopen intake watch only when new raw material, route ledger change, update-feed gap, downstream follow-up drift, or required human gate appears.",
+      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-003-20260621",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "parked_until_revisit_trigger"
+    },
+    {
+      "created_at": "2026-06-21T13:45:09Z",
+      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-003.md",
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Write the selected-dataset readiness-count artifact locally only; keep replay, agents/workers, ownership mutation, service approvals, browser, public action, APIs, spend, trade, brokers, paid data, and contact gates closed.",
+      "outcome_id": "outcome-local-trading-proof-derived-continuation-v1-20260621-003",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "complete"
+    },
+    {
       "created_at": "2026-06-21T13:38:36Z",
       "evidence": "E:\\agent-company-lab\\reports\\local-trading\\local-trading-no-key-replay-prep-v1-20260621.md",
       "lane_id": "local_trading_strategy_research",
@@ -390,66 +450,6 @@
       "outcome_type": "premium_customer_routing_queue_watch",
       "realized_usd": 0.0,
       "status": "no_new_input_watch_current"
-    },
-    {
-      "created_at": "2026-06-21T13:38:01Z",
-      "evidence": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\gitcoin-local-application-readiness-checklist-v1-20260621.md",
-      "lane_id": "web3_airdrops_grants_hackathons",
-      "next_action": "Recommendation: request a future scoped browser_read_only_session only after human approval to verify current Gitcoin round/domain/deadline/rules; do not approve/start account, legal, wallet, public-action, submission, API, or route-gate execution.",
-      "outcome_id": "outcome-gitcoin-local-application-readiness-checklist-v1-20260621",
-      "outcome_type": "gitcoin_readiness_checklist",
-      "realized_usd": 0.0,
-      "status": "gitcoin_readiness_checklist_complete_local_only"
-    },
-    {
-      "created_at": "2026-06-21T13:27:58Z",
-      "evidence": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\web3-local-opportunity-proof-v1-20260621.md",
-      "lane_id": "web3_airdrops_grants_hackathons",
-      "next_action": "Create gitcoin-local-application-readiness-checklist-v1-20260621.md locally; do not open browsers, create accounts, connect wallets, sign messages, submit forms, spend gas, call APIs, approve/start service requests, or mutate ownership.",
-      "outcome_id": "outcome-web3-local-opportunity-proof-v1-20260621",
-      "outcome_type": "local_opportunity_proof",
-      "realized_usd": 0.0,
-      "status": "web3_local_opportunity_packet_complete"
-    },
-    {
-      "created_at": "2026-06-21T13:27:01Z",
-      "evidence": "E:\\agent-company-lab\\reports\\local-trading\\local-trading-paper-research-proof-v1-20260621.md",
-      "lane_id": "local_trading_strategy_research",
-      "next_action": "Create local replay data readiness packet using non-sensitive local metadata only; keep broker/API/paid-data/order/trade gates closed.",
-      "outcome_id": "outcome-local-trading-paper-research-proof-v1-20260621",
-      "outcome_type": "local_paper_research_proof",
-      "realized_usd": 0.0,
-      "status": "complete"
-    },
-    {
-      "created_at": "2026-06-21T13:26:19Z",
-      "evidence": "E:\\agent-company-lab\\reports\\premium-customer-intake\\premium-customer-routing-queue-proof-v1-20260621.md",
-      "lane_id": "premium_customer_intake",
-      "next_action": "Monitor incoming premium customer material; preserve raw context, route compact capsules, and update customer-facing queue.",
-      "outcome_id": "outcome-premium-customer-routing-queue-proof-v1-20260621",
-      "outcome_type": "premium_customer_routing_queue_proof",
-      "realized_usd": 0.0,
-      "status": "routing_queue_checked"
-    },
-    {
-      "created_at": "2026-06-21T13:26:15Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-lane-next-monitor-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Create or continue lane-next evidence watch through existing owners; do not recreate acknowledgement dispatches or create duplicate workers without overlap proof.",
-      "outcome_id": "outcome-ai-resources-lane-next-monitor-v1-20260621",
-      "outcome_type": "ai_resources_lane_next_monitor",
-      "realized_usd": 0.0,
-      "status": "lane_next_monitor_recorded"
-    },
-    {
-      "created_at": "2026-06-21T13:19:38Z",
-      "evidence": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-seed-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Regenerate continuity watchdog, manager packets, CEO state, and lane thread manifest.",
-      "outcome_id": "outcome-continuity-lane-next-task-seed-20260621",
-      "outcome_type": "continuity_lane_next_task_seed",
-      "realized_usd": 0.0,
-      "status": "seeded"
     }
   ],
   "schema_version": "ceo_state_packet.v1",
