@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2752,
+    "artifacts": 2754,
     "departments": 24,
     "lanes": 15,
     "outcomes": 487,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 703,
-    "trace_events": 665
+    "tasks": 704,
+    "trace_events": 666
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T14:30:21Z",
+  "generated_utc": "2026-06-21T14:37:35Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T14:30:21Z",
+    "generated_utc": "2026-06-21T14:37:35Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,13 +209,19 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 351,
+    "artifacts_delta": 353,
     "outcomes_delta": 69,
-    "tasks_delta": 124,
-    "trace_events_delta": 156
+    "tasks_delta": 125,
+    "trace_events_delta": 157
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Attempt scoped Codex thread-layer recovery or handoff for the seven systemError owner threads before retrying the 007 dispatch; do not create replacement lane managers or mutate ownership without an AR decision packet.",
+      "task_id": "task-continuity-thread-system-error-007-restore-20260621"
+    },
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
@@ -269,15 +275,18 @@
       "lane_id": "youtube_content_channels",
       "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels"
-    },
-    {
-      "kind": "open_task",
-      "lane_id": "paid_code_bounties",
-      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties"
     }
   ],
   "open_tasks": [
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Attempt scoped Codex thread-layer recovery or handoff for the seven systemError owner threads before retrying the 007 dispatch; do not create replacement lane managers or mutate ownership without an AR decision packet.",
+      "owner_agent_id": "continuity-watchdog-worker-20260621",
+      "priority": 96,
+      "status": "new",
+      "task_id": "task-continuity-thread-system-error-007-restore-20260621",
+      "title": "Restore lane manager threads after 007 systemError dispatch"
+    },
     {
       "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
@@ -358,15 +367,6 @@
       "status": "new",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
       "title": "Follow up customer input for youtube_content_channels"
-    },
-    {
-      "lane_id": "paid_code_bounties",
-      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
-      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
-      "priority": 76,
-      "status": "new",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
-      "title": "Follow up customer input for paid_code_bounties"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",

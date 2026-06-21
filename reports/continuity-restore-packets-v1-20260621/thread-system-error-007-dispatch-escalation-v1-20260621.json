@@ -1,0 +1,85 @@
+{
+  "schema_version": "agent_company.thread_system_error_escalation.v1",
+  "generated_utc": "2026-06-21T14:36:16Z",
+  "status": "restore_required",
+  "trigger": "continuity_lane_next_task_007_dispatch",
+  "summary": "The seven existing lane-manager Codex threads accepted the 007 dispatch user message but moved to systemError without running agent work. No 007 artifacts were written and all 007 tasks remain open.",
+  "open_task_count": 7,
+  "closed_task_count": 0,
+  "owner_thread_status": "systemError",
+  "duplicate_worker_policy": "do_not_create_replacement_workers_until_this_restore_packet_is_reviewed_or_thread_layer_recovers",
+  "tasks": [
+    {
+      "lane_id": "content_and_social_growth",
+      "task_id": "task-continuity-lane-next-task-20260621-content_and_social_growth-007",
+      "owner_thread_id": "codex-thread:019eea2c-0b2d-7120-abaa-376a795b45e5",
+      "evidence_path": "E:\\agent-company-lab\\reports\\content_and_social_growth\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\content_and_social_growth\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    },
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "task_id": "task-continuity-lane-next-task-20260621-digital_products_templates_plugins-007",
+      "owner_thread_id": "codex-thread:019eea2c-3bae-77e2-9a34-12740a1ee9be",
+      "evidence_path": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    },
+    {
+      "lane_id": "lead_generation_and_sales",
+      "task_id": "task-continuity-lane-next-task-20260621-lead_generation_and_sales-007",
+      "owner_thread_id": "codex-thread:019eea2c-6097-7662-b936-edb72eb9e278",
+      "evidence_path": "E:\\agent-company-lab\\reports\\lead_generation_and_sales\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\lead_generation_and_sales\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    },
+    {
+      "lane_id": "local_trading_strategy_research",
+      "task_id": "task-continuity-lane-next-task-20260621-local_trading_strategy_research-007",
+      "owner_thread_id": "codex-thread:019eea2c-9588-7f53-8dee-b0ae87784079",
+      "evidence_path": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    },
+    {
+      "lane_id": "premium_customer_intake",
+      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-007",
+      "owner_thread_id": "codex-thread:019ee738-8be7-7962-a6df-2294ce084671",
+      "evidence_path": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    },
+    {
+      "lane_id": "security_bounty_private_reports",
+      "task_id": "task-continuity-lane-next-task-20260621-security_bounty_private_reports-007",
+      "owner_thread_id": "codex-thread:019eea2d-ac99-7b92-9d28-b3d3f80dfcd4",
+      "evidence_path": "E:\\agent-company-lab\\reports\\security_bounty_private_reports\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\security_bounty_private_reports\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    },
+    {
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "task_id": "task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-007",
+      "owner_thread_id": "codex-thread:019eea2d-ea57-79c3-96e1-bee5c9bf04a8",
+      "evidence_path": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-006.md",
+      "expected_artifact": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-007.md",
+      "thread_status": "systemError"
+    }
+  ],
+  "restore_actions": [
+    "Do not mark 007 tasks complete without their expected artifacts.",
+    "Do not create replacement lane managers while the existing owner rows remain assigned.",
+    "Attempt a scoped Codex thread-layer recovery or handoff for the seven named threads before retrying dispatch.",
+    "If recovery fails repeatedly, prepare an AR decision packet for owner replacement without changing lane ownership automatically."
+  ],
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "wallet_payment_trading_actions": 0,
+    "model_api_mcp_calls": 0,
+    "worker_runtime_queue_starts": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "external_side_effects": false
+  }
+}

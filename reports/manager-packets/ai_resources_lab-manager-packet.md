@@ -1,6 +1,6 @@
 # Manager Packet - ai_resources_lab
 
-Generated UTC: 2026-06-21T14:30:21Z
+Generated UTC: 2026-06-21T14:37:35Z
 Department: Artificial Resources
 Lane status: active
 Current owner: `lane-manager-ai_resources_lab-20260620`
@@ -99,6 +99,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 96 | new | `task-continuity-thread-system-error-007-restore-20260621` - Restore lane manager threads after 007 systemError dispatch | continuity-watchdog-worker-20260621 |  | E:\agent-company-lab\reports\continuity-restore-packets-v1-20260621\thread-system-error-007-dispatch-escalation-v1-20260621.md | Attempt scoped Codex thread-layer recovery or handoff for the seven systemError owner threads before retrying the 007 dispatch; do not create replacement lane managers or mutate ownership without an AR decision packet. |
 | 96 | in_progress | `task-lane-manager-ai_resources_lab-20260620-active-goal-20260621` - Active goal for lane-manager-ai_resources_lab-20260620 | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence. |
 | 90 | in_progress | `task-capability-overlap-mapper-20260621-active-goal-20260621` - Active goal for capability-overlap-mapper-20260621 | capability-overlap-mapper-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need. |
 | 90 | in_progress | `task-candidate-registry-curator-20260621-active-goal-20260621` - Active goal for candidate-registry-curator-20260621 | candidate-registry-curator-20260621 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence. |
@@ -110,7 +111,6 @@ These require a scoped service request and approval before any execution:
 | 120 | complete | `task-ceo-operating-goal-v1-20260620` - Install CEO operating goal and AI Resources bootstrap | lane-manager-ai_resources_lab-20260620 |  | CEO operating goal Markdown/JSON, goal-evolver charter, registry/taxonomy updates, install report, trace event | Create ai_resources_candidate_registry_v1, human_action_feed_v1, ceo_state_packet_v1, and youtube_lane_scout_packet as local report-only packets. |
 | 118 | complete | `task-ceo-first-state-packets-v1-20260620` - Install first CEO state packets and YouTube lane scout | lane-manager-ai_resources_lab-20260620 |  | AI Resources candidate registry, human-action feed, CEO state packet, YouTube lane scout, YouTube registry/taxonomy updates, trace event | Create youtube_no_post_content_batch_v1 and control_plane_capacity_benchmark_packet_v1 as local report-only proofs. |
 | 99 | complete | `task-ceo-worker-bootstrap-v1-20260621` - Bootstrap CEO worker constellation | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch. |
-| 98 | complete | `task-submitted-bounty-payouts-external-owned-parking-decision-v1-20260621` - Park submitted payout lane as external-owned read-only | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\submitted-bounty-payouts-external-owned-parking-decision-v1-20260621.md | Reopen only if the user explicitly reassigns payout monitoring into this lab, supplies the live parallel worker thread id, or asks AR to replace the external payout worker. |
 
 ## Service Requests
 

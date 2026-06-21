@@ -1,6 +1,6 @@
 # Agent Company Manager Packets
 
-Generated UTC: 2026-06-21T14:30:21Z
+Generated UTC: 2026-06-21T14:37:35Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
 
 ## Boundary
@@ -14,7 +14,7 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 | Lane | Department | Owner | Evidence | Open Tasks | Open Service Requests | Packet | Recommendation |
 | --- | --- | --- | ---: | ---: | ---: | --- | --- |
 | `ai_ml_competitions` | Competition Lab | lane-manager-ai_ml_competitions-019ec69a | 9 | 1 | 1 | `E:\agent-company-lab\reports\manager-packets\ai_ml_competitions-manager-packet.md` | Resolve service requests before assigning more workers. |
-| `ai_resources_lab` | Artificial Resources | lane-manager-ai_resources_lab-20260620 | 0 | 8 | 0 | `E:\agent-company-lab\reports\manager-packets\ai_resources_lab-manager-packet.md` | Create one narrow manager task with evidence requirements before launching seekers. |
+| `ai_resources_lab` | Artificial Resources | lane-manager-ai_resources_lab-20260620 | 0 | 9 | 0 | `E:\agent-company-lab\reports\manager-packets\ai_resources_lab-manager-packet.md` | Create one narrow manager task with evidence requirements before launching seekers. |
 | `content_and_social_growth` | Audience/Distribution | lane-manager-content_and_social_growth-019ec613 | 2 | 1 | 1 | `E:\agent-company-lab\reports\manager-packets\content_and_social_growth-manager-packet.md` | Use X/Grok/Radar as read-only discovery until a human-reviewed public-action workflow is assigned. |
 | `digital_products_templates_plugins` | Product Studio | lane-manager-digital_products_templates_plugins-019ec69a | 22 | 1 | 4 | `E:\agent-company-lab\reports\manager-packets\digital_products_templates_plugins-manager-packet.md` | Resolve service requests before assigning more workers. |
 | `lead_generation_and_sales` | Growth/Sales | lane-manager-lead_generation_and_sales-019ec613 | 5 | 1 | 0 | `E:\agent-company-lab\reports\manager-packets\lead_generation_and_sales-manager-packet.md` | Design non-spam offer and CRM rules before any email, DM, marketplace, or account action. |
