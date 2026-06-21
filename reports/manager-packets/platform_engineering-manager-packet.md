@@ -1,6 +1,6 @@
 # Manager Packet - platform_engineering
 
-Generated UTC: 2026-06-21T12:22:12Z
+Generated UTC: 2026-06-21T12:45:55Z
 Department: Platform Engineering
 Lane status: active
 Current owner: `recovered-profitable-edge-infra`
@@ -135,6 +135,7 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| local_status_smoke_complete | platform_live_thread_status | `outcome-platform-engineering-live-thread-status-20260621` | 0.0 | E:\agent-company-lab\reports\platform-engineering\platform-engineering-status-20260621.md | Run 500000-row synthetic capacity benchmark before claiming high-volume readiness; CEO/AR decision still required for submitted_bounty_payouts ownership. |
 | validated | control_plane_capacity_capability | `outcome-control-plane-capacity-benchmark-runner-v1-20260620` | 0.0 | E:\agent-company-lab\reports\control-plane-capacity-benchmark-runner-v1-20260620.md | Run 500000 and 1000000 row scenarios before high-volume worker orchestration. |
 | complete | control_plane_capacity_benchmark | `outcome-control-plane-capacity-benchmark-v1-20260620` | 0.0 | E:\agent-company-lab\reports\control-plane-capacity-benchmark-v1-20260620.md | Create control_plane_capacity_benchmark_runner_v1 as a reusable local script or CLI command. |
 | milestone_runway_browser_verified | browser_verification | `outcome-agent-company-atlas-milestone-runway-browser-verification-20260618` | 0.0 | E:\agent-company-lab\reports\agent-company-atlas-milestone-runway-browser-verification-20260618.json | Continue closing Atlas platform tasks, starting with Milestone Runway lens controls. |
@@ -142,7 +143,6 @@ These require a scoped service request and approval before any execution:
 | motion_forge_browser_verified | browser_verification | `outcome-agent-company-atlas-motion-forge-browser-verification-20260618` | 0.0 | E:\agent-company-lab\reports\agent-company-atlas-motion-forge-browser-verification-20260618.json | Continue closing Atlas platform tasks, starting with Crew Bridge squad-readiness verification. |
 | arcade_stingers_browser_verified | browser_verification | `outcome-agent-company-atlas-arcade-stingers-browser-verification-20260618` | 0.0 | E:\agent-company-lab\reports\agent-company-atlas-arcade-stingers-browser-verification-20260618.json | Continue closing Atlas platform tasks, starting with Motion Forge animation-audit verification. |
 | arcade_deck_browser_verified | browser_verification | `outcome-agent-company-atlas-arcade-deck-browser-verification-20260618` | 0.0 | E:\agent-company-lab\reports\agent-company-atlas-arcade-deck-browser-verification-20260618.json | Continue closing Atlas platform tasks, starting with Arcade Deck animated stingers and Motion Forge verification. |
-| lane_genesis_foundry_browser_verified | browser_verification | `outcome-agent-company-atlas-lane-genesis-foundry-browser-verification-20260618` | 0.0 | E:\agent-company-lab\reports\agent-company-atlas-lane-genesis-foundry-browser-verification-20260618.json | Continue closing Atlas platform tasks or return to the next ranked money-path promotion item when one appears. |
 
 ## Startup Commands
 

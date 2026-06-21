@@ -1,0 +1,526 @@
+{
+  "counts": {
+    "acknowledgement_response_required": 6,
+    "lane_goal_response_required": 6,
+    "open_dispatch_tasks": 13,
+    "owner_packets": 11,
+    "owner_selection_or_park_required": 1,
+    "send_to_live_codex_thread": 11
+  },
+  "generated_utc": "2026-06-21T12:43:47Z",
+  "json_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-handoff-packets-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-handoff-packets-v1-20260621.md",
+  "next_action": "Send the owner packets to existing Codex owner threads where dispatch_mode allows; route placeholder or missing-thread cases through AI Resources/premium router without creating duplicate workers.",
+  "owner_packets": [
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "owner_department_id": "competition_lab",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2b-dd71-7483-ae49-22ed784dd4d2",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-ai_ml_competitions-019ec69a.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions` and lane `ai_ml_competitions`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Acknowledge the customer objective in a compact owner response artifact."
+          ],
+          "duplicate_key": "continuity-owner-response-task:acknowledgement_response_required:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-002-continuity-restore-response-v1-002-continuity-restore-v1-002-dispatch_stale_owner_acknowledgement-task-custome.md",
+          "lane_id": "ai_ml_competitions",
+          "next_action": "Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created.",
+          "priority": 92,
+          "response_type": "acknowledgement_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+          "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "owner_department_id": "ai_resources",
+      "owner_role_id": "ai_resources_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019ee738-60d5-7723-95f8-fb6e70ee7f4f",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-ai_resources_lab-20260620.md",
+      "task_count": 3,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts` and lane `ai_resources_lab`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Choose existing owner, park with revisit condition, or retire with rationale.",
+            "Do not mutate lane ownership from the handoff packet."
+          ],
+          "duplicate_key": "continuity-owner-response-task:owner_selection_or_park_required:submitted_bounty_payouts",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-001-continuity-restore-response-v1-001-continuity-restore-v1-001-repair_ownerless_lane-submitted_bounty_payouts.md",
+          "lane_id": "ai_resources_lab",
+          "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
+          "priority": 96,
+          "response_type": "owner_selection_or_park_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "submitted_bounty_payouts",
+          "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts"
+        },
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab` and lane `ai_resources_lab`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Acknowledge the customer objective in a compact owner response artifact."
+          ],
+          "duplicate_key": "continuity-owner-response-task:acknowledgement_response_required:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-003-continuity-restore-response-v1-003-continuity-restore-v1-003-dispatch_stale_owner_acknowledgement-task-custome.md",
+          "lane_id": "ai_resources_lab",
+          "next_action": "Existing owner `lane-manager-ai_resources_lab-20260620` should handle the acknowledgement for `ai_resources_lab` locally and report evidence; no duplicate owner or worker should be created.",
+          "priority": 92,
+          "response_type": "acknowledgement_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
+          "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
+        },
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-lane_goal_response_required-submitted_bounty_payouts` and lane `submitted_bounty_payouts`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Submit the current lane goal, nearest money proof, and next local evidence step."
+          ],
+          "duplicate_key": "continuity-owner-response-task:lane_goal_response_required:submitted_bounty_payouts",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-014-continuity-restore-response-v1-014-continuity-restore-v1-014-request_lane_goal-submitted_bounty_payouts.md",
+          "lane_id": "submitted_bounty_payouts",
+          "next_action": "Owner `lane-manager-ai_resources_lab-20260620` should submit the lane goal artifact for `submitted_bounty_payouts`.",
+          "priority": 86,
+          "response_type": "lane_goal_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "submitted_bounty_payouts",
+          "task_id": "task-continuity-owner-response-task-lane_goal_response_required-submitted_bounty_payouts"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "owner_department_id": "audience_distribution",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2c-0b2d-7120-abaa-376a795b45e5",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-content_and_social_growth-019ec613.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-lane_goal_response_required-content_and_social_growth` and lane `content_and_social_growth`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Submit the current lane goal, nearest money proof, and next local evidence step."
+          ],
+          "duplicate_key": "continuity-owner-response-task:lane_goal_response_required:content_and_social_growth",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-008-continuity-restore-response-v1-008-continuity-restore-v1-008-request_lane_goal-content_and_social_growth.md",
+          "lane_id": "content_and_social_growth",
+          "next_action": "Owner `lane-manager-content_and_social_growth-019ec613` should submit the lane goal artifact for `content_and_social_growth`.",
+          "priority": 86,
+          "response_type": "lane_goal_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "content_and_social_growth",
+          "task_id": "task-continuity-owner-response-task-lane_goal_response_required-content_and_social_growth"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "owner_department_id": "product_studio",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2c-3bae-77e2-9a34-12740a1ee9be",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-digital_products_templates_plugins-019ec69a.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-lane_goal_response_required-digital_products_templates_plugins` and lane `digital_products_templates_plugins`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Submit the current lane goal, nearest money proof, and next local evidence step."
+          ],
+          "duplicate_key": "continuity-owner-response-task:lane_goal_response_required:digital_products_templates_plugins",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-009-continuity-restore-response-v1-009-continuity-restore-v1-009-request_lane_goal-digital_products_templates_plug.md",
+          "lane_id": "digital_products_templates_plugins",
+          "next_action": "Owner `lane-manager-digital_products_templates_plugins-019ec69a` should submit the lane goal artifact for `digital_products_templates_plugins`.",
+          "priority": 86,
+          "response_type": "lane_goal_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "digital_products_templates_plugins",
+          "task_id": "task-continuity-owner-response-task-lane_goal_response_required-digital_products_templates_plugins"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "owner_department_id": "growth_sales",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2c-6097-7662-b936-edb72eb9e278",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-lead_generation_and_sales-019ec613.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-lane_goal_response_required-lead_generation_and_sales` and lane `lead_generation_and_sales`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Submit the current lane goal, nearest money proof, and next local evidence step."
+          ],
+          "duplicate_key": "continuity-owner-response-task:lane_goal_response_required:lead_generation_and_sales",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-010-continuity-restore-response-v1-010-continuity-restore-v1-010-request_lane_goal-lead_generation_and_sales.md",
+          "lane_id": "lead_generation_and_sales",
+          "next_action": "Owner `lane-manager-lead_generation_and_sales-019ec613` should submit the lane goal artifact for `lead_generation_and_sales`.",
+          "priority": 86,
+          "response_type": "lane_goal_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "lead_generation_and_sales",
+          "task_id": "task-continuity-owner-response-task-lane_goal_response_required-lead_generation_and_sales"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "owner_department_id": "quant_research",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2c-9588-7f53-8dee-b0ae87784079",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-local_trading_strategy_research-019ec613.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-lane_goal_response_required-local_trading_strategy_research` and lane `local_trading_strategy_research`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Submit the current lane goal, nearest money proof, and next local evidence step."
+          ],
+          "duplicate_key": "continuity-owner-response-task:lane_goal_response_required:local_trading_strategy_research",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-011-continuity-restore-response-v1-011-continuity-restore-v1-011-request_lane_goal-local_trading_strategy_research.md",
+          "lane_id": "local_trading_strategy_research",
+          "next_action": "Owner `lane-manager-local_trading_strategy_research-019ec613` should submit the lane goal artifact for `local_trading_strategy_research`.",
+          "priority": 86,
+          "response_type": "lane_goal_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "local_trading_strategy_research",
+          "task_id": "task-continuity-owner-response-task-lane_goal_response_required-local_trading_strategy_research"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "owner_department_id": "strategic_research",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2c-c5c6-7fd3-bad1-783aa3a105a4",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-money_source_discovery-019ec699.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discover` and lane `money_source_discovery`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Acknowledge the customer objective in a compact owner response artifact."
+          ],
+          "duplicate_key": "continuity-owner-response-task:acknowledgement_response_required:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-004-continuity-restore-response-v1-004-continuity-restore-v1-004-dispatch_stale_owner_acknowledgement-task-custome.md",
+          "lane_id": "money_source_discovery",
+          "next_action": "Existing owner `lane-manager-money_source_discovery-019ec699` should handle the acknowledgement for `money_source_discovery` locally and report evidence; no duplicate owner or worker should be created.",
+          "priority": 92,
+          "response_type": "acknowledgement_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery",
+          "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discover"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "owner_department_id": "cashflow_engineering",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2d-01eb-7d13-8b58-c1860ce1fa63",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-paid_code_bounties-019ec612.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties` and lane `paid_code_bounties`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Acknowledge the customer objective in a compact owner response artifact."
+          ],
+          "duplicate_key": "continuity-owner-response-task:acknowledgement_response_required:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-005-continuity-restore-response-v1-005-continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-custome.md",
+          "lane_id": "paid_code_bounties",
+          "next_action": "Existing owner `lane-manager-paid_code_bounties-019ec612` should handle the acknowledgement for `paid_code_bounties` locally and report evidence; no duplicate owner or worker should be created.",
+          "priority": 92,
+          "response_type": "acknowledgement_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+          "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "owner_department_id": "markets_research",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2d-56be-7251-859d-20b48631a048",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-prediction_market_research-relaunch-20260614.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_res` and lane `prediction_market_research`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Acknowledge the customer objective in a compact owner response artifact."
+          ],
+          "duplicate_key": "continuity-owner-response-task:acknowledgement_response_required:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-006-continuity-restore-response-v1-006-continuity-restore-v1-006-dispatch_stale_owner_acknowledgement-task-custome.md",
+          "lane_id": "prediction_market_research",
+          "next_action": "Existing owner `lane-manager-prediction_market_research-relaunch-20260614` should handle the acknowledgement for `prediction_market_research` locally and report evidence; no duplicate owner or worker should be created.",
+          "priority": 92,
+          "response_type": "acknowledgement_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
+          "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_res"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "owner_department_id": "security_research",
+      "owner_role_id": "department_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea2d-ac99-7b92-9d28-b3d3f80dfcd4",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-security_bounty_private_reports-019ec612.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-lane_goal_response_required-security_bounty_private_reports` and lane `security_bounty_private_reports`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Submit the current lane goal, nearest money proof, and next local evidence step."
+          ],
+          "duplicate_key": "continuity-owner-response-task:lane_goal_response_required:security_bounty_private_reports",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-013-continuity-restore-response-v1-013-continuity-restore-v1-013-request_lane_goal-security_bounty_private_reports.md",
+          "lane_id": "security_bounty_private_reports",
+          "next_action": "Owner `lane-manager-security_bounty_private_reports-019ec612` should submit the lane goal artifact for `security_bounty_private_reports`.",
+          "priority": 86,
+          "response_type": "lane_goal_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "security_bounty_private_reports",
+          "task_id": "task-continuity-owner-response-task-lane_goal_response_required-security_bounty_private_reports"
+        }
+      ]
+    },
+    {
+      "dispatch_mode": "send_to_live_codex_thread",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "owner_department_id": "audience_distribution",
+      "owner_role_id": "youtube_channel_manager",
+      "owner_status": "active",
+      "owner_thread_id": "codex-thread:019eea29-dc20-7400-a930-82844056e89d",
+      "packet_path": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621\\continuity-owner-handoff-lane-manager-youtube_content_channels-20260620.md",
+      "task_count": 1,
+      "tasks": [
+        {
+          "acceptance_criteria": [
+            "Name source task `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_chann` and lane `youtube_content_channels`.",
+            "Cite the provided evidence path or state why it is stale or missing.",
+            "Write one local report/artifact and register it in the control plane.",
+            "Do not create a duplicate worker; evolve, park, merge, or escalate with evidence.",
+            "Acknowledge the customer objective in a compact owner response artifact."
+          ],
+          "duplicate_key": "continuity-owner-response-task:acknowledgement_response_required:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
+          "evidence_required": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-007-continuity-restore-response-v1-007-continuity-restore-v1-007-dispatch_stale_owner_acknowledgement-task-custome.md",
+          "lane_id": "youtube_content_channels",
+          "next_action": "Existing owner `lane-manager-youtube_content_channels-20260620` should handle the acknowledgement for `youtube_content_channels` locally and report evidence; no duplicate owner or worker should be created.",
+          "priority": 92,
+          "response_type": "acknowledgement_response_required",
+          "status": "new",
+          "stop_gates": [
+            "no external side effects",
+            "no browser/session/account action",
+            "no public action/submission/message",
+            "no payment/wallet/trade/order",
+            "no model/API/MCP/tool spend",
+            "no service request approval/start",
+            "no lane ownership mutation",
+            "no duplicate worker creation"
+          ],
+          "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
+          "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_chann"
+        }
+      ]
+    }
+  ],
+  "packet_dir": "E:\\agent-company-lab\\reports\\continuity-owner-handoffs-v1-20260621",
+  "schema_version": "continuity_watchdog_owner_handoff_packets.v1",
+  "status": "owner_handoff_packets_ready",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

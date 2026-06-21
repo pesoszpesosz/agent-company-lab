@@ -1,6 +1,6 @@
 # CEO State Packet V1
 
-Generated UTC: 2026-06-21T12:22:12Z
+Generated UTC: 2026-06-21T12:45:55Z
 Status: `current_local_state_packet`
 Packet id: `ceo-state-packet-v1-20260621`
 JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
@@ -13,10 +13,10 @@ JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
 | departments | 24 |
 | roles | 25 |
 | agents | 23 |
-| tasks | 644 |
-| artifacts | 2578 |
-| outcomes | 452 |
-| trace_events | 544 |
+| tasks | 645 |
+| artifacts | 2612 |
+| outcomes | 455 |
+| trace_events | 559 |
 | service_requests | 16 |
 
 ## Active Blockers And Gates
@@ -43,8 +43,8 @@ JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
 | owner_acknowledgement | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties` | `paid_code_bounties` | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | owner_acknowledgement | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research` | `prediction_market_research` | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | owner_acknowledgement | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels` | `youtube_content_channels` | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
-| open_task | `task-lane-manager-ai_resources_lab-20260620-active-goal-20260621` | `ai_resources_lab` | Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence. |
 | open_task | `task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts` | `ai_resources_lab` | Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact. |
+| open_task | `task-lane-manager-ai_resources_lab-20260620-active-goal-20260621` | `ai_resources_lab` | Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence. |
 | open_task | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab` | `ai_resources_lab` | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
 | open_task | `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions` | `ai_ml_competitions` | Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created. |
 

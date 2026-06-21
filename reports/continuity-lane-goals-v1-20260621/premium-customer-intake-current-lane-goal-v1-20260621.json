@@ -1,0 +1,63 @@
+{
+  "schema_version": "continuity_current_lane_goal.v1",
+  "generated_utc": "2026-06-21T12:34:09Z",
+  "lane_id": "premium_customer_intake",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "source_task_id": "task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake",
+  "status": "current_lane_goal_submitted",
+  "handoff_evidence_path": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-012-continuity-restore-response-v1-012-continuity-restore-v1-012-request_lane_goal-premium_customer_intake.md",
+  "handoff_evidence_status": "present_current_enough",
+  "selected_response_option": "submit_current_goal_artifact",
+  "current_lane_goal": "Operate the single premium customer intake surface for Agent Company: receive the customer's newest requests and materials, preserve raw context outside the CEO window, route compact capsules to the right lane, synthesize or monitor local follow-up work, update the customer, and park ambiguous but useful material with a revisit condition instead of turning intake into a rejection engine.",
+  "scope": {
+    "owns": [
+      "customer_input_capture",
+      "raw_context_preservation",
+      "compact_route_capsules",
+      "customer_updates",
+      "local_followup_synthesis_or_monitoring",
+      "local_proof_artifacts"
+    ],
+    "does_not_own": [
+      "downstream_lane_execution",
+      "browser_account_operations",
+      "public_actions",
+      "service_approvals",
+      "payments_or_trades",
+      "model_api_execution",
+      "lane_ownership_changes"
+    ]
+  },
+  "nearest_money_proof": {
+    "type": "indirect_local_routing_readiness",
+    "realized_usd": 0.0,
+    "evidence": "E:\\agent-company-lab\\reports\\youtube-source-material-intake-routing-procedure-v2-20260621.md",
+    "rationale": "The lane turns customer-provided monetizable source material into compact, traceable lane inputs for revenue lanes without poisoning CEO context."
+  },
+  "next_local_evidence_step": {
+    "action": "Create a local-only fixture intake packet for a hypothetical customer-supplied YouTube/source material item and prove the v2 procedure yields a preserved raw placeholder, compact source capsule, youtube_content_channels target artifact choice, customer update entry, and revisit condition when rights are unclear.",
+    "fast_fail_condition": "If the lane cannot name the raw context boundary, target lane, target artifact, owner, use boundary, and revisit condition, park the material with needs_source_review rather than asking broad questions or rejecting it."
+  },
+  "ceo_visible_status": "premium_customer_intake is active, owned, and sufficient for the current continuity need. No duplicate worker or lane ownership mutation is requested.",
+  "stop_gates": [
+    "no_duplicate_worker_creation",
+    "no_lane_ownership_mutation",
+    "no_service_request_approval_assignment_or_start",
+    "no_browser_session_account_action_upload_post_comment_submission_or_public_message",
+    "no_payment_wallet_trade_order_deposit_withdrawal_or_real_money_action",
+    "no_model_api_mcp_tool_spend",
+    "no_external_side_effects"
+  ],
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "accounts_created_or_modified": 0,
+    "public_actions_taken": 0,
+    "wallet_payment_trading_actions": 0,
+    "model_api_mcp_calls": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "worker_runtime_queue_starts": 0,
+    "lane_ownership_mutations": 0,
+    "duplicate_workers_created": 0,
+    "external_side_effects": false
+  }
+}

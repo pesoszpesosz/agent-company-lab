@@ -1,6 +1,6 @@
 # Agent Company Manager Packets
 
-Generated UTC: 2026-06-21T12:22:12Z
+Generated UTC: 2026-06-21T12:45:55Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
 
 ## Boundary
@@ -23,8 +23,8 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 | `paid_code_bounties` | Cashflow Engineering | lane-manager-paid_code_bounties-019ec612 | 22 | 3 | 2 | `E:\agent-company-lab\reports\manager-packets\paid_code_bounties-manager-packet.md` | Use imported rows as negative samples. Launch a fresh-source scout, not a PR worker, until a clean unclaimed bounty is found. |
 | `platform_engineering` | Platform Engineering | recovered-profitable-edge-infra | 95 | 2 | 4 | `E:\agent-company-lab\reports\manager-packets\platform_engineering-manager-packet.md` | Finish active platform task, then promote separate lane-manager launches from manager packets. |
 | `prediction_market_research` | Markets Research | lane-manager-prediction_market_research-relaunch-20260614 | 9 | 3 | 0 | `E:\agent-company-lab\reports\manager-packets\prediction_market_research-manager-packet.md` | Launch a data/replay manager only. Keep Polymarket data-only and all real-money trading behind eligibility and treasury gates. |
-| `premium_customer_intake` | Customer/Operator Success | premium-customer-intake-agent-20260620 | 0 | 1 | 0 | `E:\agent-company-lab\reports\manager-packets\premium_customer_intake-manager-packet.md` | Create one narrow manager task with evidence requirements before launching seekers. |
+| `premium_customer_intake` | Customer/Operator Success | premium-customer-intake-agent-20260620 | 0 | 0 | 0 | `E:\agent-company-lab\reports\manager-packets\premium_customer_intake-manager-packet.md` | Create one narrow manager task with evidence requirements before launching seekers. |
 | `security_bounty_private_reports` | Security Research | lane-manager-security_bounty_private_reports-019ec612 | 20 | 1 | 2 | `E:\agent-company-lab\reports\manager-packets\security_bounty_private_reports-manager-packet.md` | Launch a security manager to rank private-report drafts, rules gates, and proof gaps. No submissions without approval. |
 | `submitted_bounty_payouts` | Revenue Collection | other Find profitable edge worker, not this recovered infrastructure thread | 21 | 1 | 0 | `E:\agent-company-lab\reports\manager-packets\submitted_bounty_payouts-manager-packet.md` | Read-only visibility only. Parallel payout worker owns monitoring and GitHub follow-up. |
-| `web3_airdrops_grants_hackathons` | Venture/Hackathon Desk | lane-manager-web3_airdrops_grants_hackathons-019ec613 | 5 | 1 | 0 | `E:\agent-company-lab\reports\manager-packets\web3_airdrops_grants_hackathons-manager-packet.md` | Keep as gated venture lane. Launch terms/deadline scouting only; no wallet, deployment, or registration without approval. |
+| `web3_airdrops_grants_hackathons` | Venture/Hackathon Desk | lane-manager-web3_airdrops_grants_hackathons-019ec613 | 5 | 0 | 0 | `E:\agent-company-lab\reports\manager-packets\web3_airdrops_grants_hackathons-manager-packet.md` | Keep as gated venture lane. Launch terms/deadline scouting only; no wallet, deployment, or registration without approval. |
 | `youtube_content_channels` | Audience/Distribution | lane-manager-youtube_content_channels-20260620 | 0 | 3 | 0 | `E:\agent-company-lab\reports\manager-packets\youtube_content_channels-manager-packet.md` | Create one narrow manager task with evidence requirements before launching seekers. |

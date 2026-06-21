@@ -1,0 +1,15 @@
+{
+  "external_side_effects": false,
+  "duplicate_workers_created": 0,
+  "lane_ownership_mutations": 0,
+  "service_requests_approved_assigned_or_started": 0,
+  "browser_sessions_started": 0,
+  "accounts_created_or_modified": 0,
+  "public_actions_taken": 0,
+  "wallet_payment_trading_actions": 0,
+  "model_api_mcp_calls": 0,
+  "worker_runtime_queue_starts": 0,
+  "source_task_id": "task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake",
+  "lane_goal_artifact": "E:\\agent-company-lab\\reports\\continuity-lane-goals-v1-20260621\\premium-customer-intake-current-lane-goal-v1-20260621.md",
+  "lane_goal_json": "E:\\agent-company-lab\\reports\\continuity-lane-goals-v1-20260621\\premium-customer-intake-current-lane-goal-v1-20260621.json"
+}

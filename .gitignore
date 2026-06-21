@@ -19,3 +19,5 @@ web/styles.css.zero-byte-*.bak
 work/capacity-benchmark/*.sqlite
 work/capacity-benchmark/*.sqlite-*
 work/capacity-benchmark/*.raw.json
+work/platform-engineering-status-smoke/*.sqlite
+work/platform-engineering-status-smoke/*.sqlite-*

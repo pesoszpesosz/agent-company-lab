@@ -1,0 +1,12 @@
+{
+  "integrity_check": "ok",
+  "foreign_key_check_rows": 0,
+  "focused_tests": "5 passed",
+  "capacity_smoke_row_count": 1000,
+  "ownerless_active_lanes": [
+    "submitted_bounty_payouts"
+  ],
+  "external_side_effects": false,
+  "status_artifact_path": "E:\\agent-company-lab\\reports\\platform-engineering\\platform-engineering-status-20260621.md",
+  "status_artifact_sha256": "3812a0f158937e94fd402bb05569387ca3156630aadb7288cb51a671d358b696"
+}
