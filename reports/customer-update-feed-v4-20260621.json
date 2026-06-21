@@ -1,0 +1,114 @@
+{
+  "generated_utc": "2026-06-21T12:20:00Z",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "schema_version": "customer_update_feed.v4",
+  "status": "active_local_update_feed",
+  "updates": [
+    {
+      "update_id": "customer-update-youtube-source-material-intake-routing-procedure-v2-20260621",
+      "generated_utc": "2026-06-21T12:20:00Z",
+      "summary": "YouTube/source material intake procedure v2 written.",
+      "route_packet_path": "E:\\agent-company-lab\\reports\\youtube-source-material-intake-routing-procedure-v2-20260621.md",
+      "human_action_needed": false,
+      "applied": [
+        "raw_context_boundary_restated",
+        "compact_source_capsule_shape_defined",
+        "youtube_source_material_routing_outcomes_defined",
+        "non_rejection_revisit_conditions_defined",
+        "zero_side_effect_boundary_preserved"
+      ],
+      "next": "When the customer supplies YouTube videos, channels, transcripts, screenshots, thumbnails, comments, trend links, or adjacent source material, preserve the raw material outside CEO context, send only a compact capsule to youtube_content_channels, and require either a small applied artifact or a named revisit condition."
+    },
+    {
+      "update_id": "customer-update-followup-escalation-customer-input-ceo-operating-goal-objective-20260620-002",
+      "generated_utc": "2026-06-20T20:57:36Z",
+      "summary": "Follow-up escalation packet written for 6 stale customer lane tasks.",
+      "route_packet_path": "E:\\agent-company-lab\\reports\\customer-followup-escalation-v1-20260620.md",
+      "human_action_needed": false,
+      "applied": [
+        "followup_escalation_packet_written",
+        "ai_resources_or_ceo_triage_task_created",
+        "routing_ledger_escalation_status_updated"
+      ],
+      "next": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item."
+    },
+    {
+      "update_id": "customer-update-followup-monitor-customer-input-ceo-operating-goal-objective-20260620-002",
+      "generated_utc": "2026-06-20T20:52:06Z",
+      "summary": "Follow-up monitor checked 6 lane tasks; 6 need intake attention.",
+      "route_packet_path": "E:\\agent-company-lab\\reports\\customer-followup-monitor-v1-20260620.md",
+      "human_action_needed": false,
+      "applied": [
+        "followup_monitor_report_written",
+        "routing_ledger_monitor_status_updated"
+      ],
+      "next": "Escalate ownerless, blocked, or stale follow-ups to AI Resources or the CEO decision batch."
+    },
+    {
+      "update_id": "customer-update-customer-input-ceo-operating-goal-objective-20260620-002-followups",
+      "generated_utc": "2026-06-20T18:13:05Z",
+      "summary": "Lane follow-up tasks synthesized for `customer-input-ceo-operating-goal-objective-20260620-002`.",
+      "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\processed\\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md",
+      "human_action_needed": false,
+      "applied": [
+        "lane_followup_packet_written",
+        "lane_owned_tasks_created_or_refreshed",
+        "routing_ledger_marked_synthesized"
+      ],
+      "next": "Lane managers can claim or work the generated local tasks; no external action is authorized."
+    },
+    {
+      "update_id": "customer-update-customer-input-ceo-operating-goal-objective-20260620-002",
+      "generated_utc": "2026-06-20T18:06:19Z",
+      "summary": "Customer input `customer-input-ceo-operating-goal-objective-20260620-002` routed to `ai_resources_lab`.",
+      "route_packet_path": "E:\\agent-company-lab\\intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.md",
+      "human_action_needed": true,
+      "applied": [
+        "raw_input_preserved",
+        "compact_route_packet_written",
+        "routing_ledger_updated",
+        "customer_update_feed_updated"
+      ],
+      "next": "ai_resources_lab_followup_packet_or_task"
+    },
+    {
+      "update_id": "customer-update-youtube-no-post-batch-created-20260620-002",
+      "generated_utc": "2026-06-20T17:18:00Z",
+      "summary": "YouTube lane now has its first no-post proof.",
+      "route_packet_path": "",
+      "human_action_needed": false,
+      "applied": [
+        "10_structured_script_briefs",
+        "30_title_variants",
+        "10_thumbnail_briefs",
+        "production_manifest",
+        "reputation_copyright_checklist",
+        "youtube_material_route_template"
+      ],
+      "next": "Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1."
+    },
+    {
+      "update_id": "customer-update-premium-intake-installed-20260620-001",
+      "generated_utc": "2026-06-20T17:04:00Z",
+      "summary": "Premium customer intake was installed and claimed.",
+      "route_packet_path": "",
+      "human_action_needed": false,
+      "applied": [
+        "premium_customer_intake_agent_added",
+        "premium_customer_intake_lane_added_and_claimed",
+        "premium_customer_intake_router_v1_added"
+      ],
+      "next": "Future customer requests and materials route through intake so raw material does not pollute CEO context."
+    }
+  ],
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "videos_opened_or_downloaded": 0,
+    "transcripts_scraped": 0,
+    "accounts_or_channels_created": 0,
+    "public_actions_taken": 0,
+    "model_api_mcp_calls": 0,
+    "worker_runtime_queue_starts": 0,
+    "external_side_effects": false
+  }
+}

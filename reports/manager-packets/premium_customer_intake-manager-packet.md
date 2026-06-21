@@ -1,6 +1,6 @@
 # Manager Packet - premium_customer_intake
 
-Generated UTC: 2026-06-21T12:10:01Z
+Generated UTC: 2026-06-21T12:22:12Z
 Department: Customer/Operator Success
 Lane status: active
 Current owner: `premium-customer-intake-agent-20260620`
@@ -105,6 +105,7 @@ These require a scoped service request and approval before any execution:
 | 92 | complete | `task-premium-customer-followup-escalation-command-v1-20260620` - Executable premium customer follow-up escalation v1 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | Next let AI Resources triage the escalation packet into a non-overlap local plan or CEO decision-batch item. |
 | 92 | complete | `task-premium-customer-intake-router-command-v1-20260620` - Executable premium customer intake router v1 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\tools\agent_company_core\premium_customer_intake_router.py | Use route-premium-customer-input for new customer requests/materials; next add lane-specific follow-up task synthesis. |
 | 91 | complete | `task-premium-customer-followup-synthesizer-command-v1-20260620` - Executable premium customer lane follow-up synthesizer v1 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_synthesizer.py | Next add stale follow-up monitor and lane-manager acknowledgement reports. |
+| 90 | complete | `task-youtube-source-material-intake-routing-procedure-v2-20260621` - Write YouTube/source material intake routing procedure v2 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\youtube-source-material-intake-routing-procedure-v2-20260621.md; E:\agent-company-lab\reports\customer-update-feed-v4-20260621.md | Await next premium customer YouTube/source material; route via v2 procedure without external side effects. |
 | 90 | complete | `task-premium-customer-followup-monitor-command-v1-20260620` - Executable premium customer follow-up monitor v1 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_monitor.py | Next escalate stale unacknowledged follow-ups into AI Resources or CEO decision batch without starting workers. |
 | 89 | complete | `task-customer-input-ceo-operating-goal-objective-20260620-002-lane-followup-synthesis` - Synthesize lane follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\intake\customer\processed\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md | Lane managers own generated local tasks; intake monitors for stale unclaimed follow-ups. |
 | 88 | complete | `task-premium-customer-followup-escalation-v1-customer-input-ceo-operating-goal-objective-20260620-002` - Escalate stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
@@ -121,6 +122,7 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| local_procedure_ready | customer_intake_procedure | `outcome-youtube-source-material-intake-routing-procedure-v2-20260621` | 0.0 | E:\agent-company-lab\reports\youtube-source-material-intake-routing-procedure-v2-20260621.md | Use the procedure for the next incoming YouTube/source material: preserve raw context, route compact capsule to youtube_content_channels, and update the customer. |
 | validated | customer_followup_escalation_capability | `outcome-premium-customer-followup-escalation-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | Use the escalation packet to drive AI Resources triage, then surface only CEO-grade decisions or customer updates. |
 | escalation_needed | customer_followup_escalation | `outcome-premium-customer-followup-escalation-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
 | validated | customer_followup_monitor_capability | `outcome-premium-customer-followup-monitor-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_monitor.py | Create an escalation packet for stale unacknowledged follow-ups without starting lane work. |
@@ -128,7 +130,6 @@ These require a scoped service request and approval before any execution:
 | validated | customer_followup_synthesis_capability | `outcome-premium-customer-followup-synthesizer-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_synthesizer.py | Add stale follow-up monitor and lane-manager acknowledgement reports. |
 | synthesized | customer_lane_followup_synthesis | `outcome-customer-input-ceo-operating-goal-objective-20260620-002-lane-followups` | 0.0 | E:\agent-company-lab\intake\customer\processed\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md | Monitor generated lane tasks; escalate stale or ownerless lanes to AI Resources. |
 | validated | customer_intake_capability | `outcome-premium-customer-intake-router-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_intake_router.py | Add lane-specific follow-up task synthesis from route packets so routed inputs automatically create actionable lane work. |
-| routed | customer_input_routing | `outcome-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.md | ai_resources_lab_followup_packet_or_task |
 
 ## Startup Commands
 

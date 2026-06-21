@@ -1,6 +1,6 @@
 # CEO Worker Roster V1
 
-Generated UTC: 2026-06-21T01:25:00Z
+Generated UTC: 2026-06-21T12:16:08Z
 Status: `ceo_workers_bootstrapped`
 Lane: `ai_resources_lab`
 JSON mirror: `E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.json`
@@ -18,13 +18,13 @@ JSON mirror: `E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.json`
 | Agent | Role | Department | Thread | Active Goal |
 | --- | --- | --- | --- | --- |
 | `lane-manager-ai_resources_lab-20260620` | `ai_resources_manager` | `ai_resources` | codex-thread:019ee738-60d5-7723-95f8-fb6e70ee7f4f | Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence. |
-| `capability-overlap-mapper-20260621` | `capability_overlap_mapper` | `ai_resources` | multi-agent:019ee737-6bef-7e02-947e-53bc42aa11b3 | Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need. |
+| `capability-overlap-mapper-20260621` | `capability_overlap_mapper` | `ai_resources` | codex-thread:019eea1a-3822-7651-9a45-8ef403994337 | Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need. |
 | `candidate-registry-curator-20260621` | `candidate_registry_curator` | `ai_resources` | codex-thread:019ee738-aa1d-72c0-8de1-99900e8649c1 | Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence. |
-| `local-evaluation-harness-builder-20260621` | `local_evaluation_harness_builder` | `ai_resources` | multi-agent:019ee737-83b0-7ea3-97b1-738eb32598fd | Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption. |
-| `adoption-retirement-reviewer-20260621` | `adoption_retirement_reviewer` | `ai_resources` | multi-agent:019ee737-87bc-7b10-bbb1-d2fc08e15988 | Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents. |
+| `local-evaluation-harness-builder-20260621` | `local_evaluation_harness_builder` | `ai_resources` | codex-thread:019eea1a-594b-7580-8072-1f56245c5069 | Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption. |
+| `adoption-retirement-reviewer-20260621` | `adoption_retirement_reviewer` | `ai_resources` | codex-thread:019eea1a-7d11-7eb2-be7e-edca7219e26b | Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents. |
 | `continuity-watchdog-worker-20260621` | `continuity_watchdog_worker` | `ai_resources` | codex-thread:019ee738-6cf8-7803-884e-3be1ea2d419b | Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets. |
 | `premium-customer-context-router-20260621` | `premium_customer_context_router` | `premium_customer_intake` | codex-thread:019ee738-8be7-7962-a6df-2294ce084671 | Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer. |
-| `browser-account-ops-worker-20260621` | `browser_account_ops_worker` | `ceo_control_room` | multi-agent:019ee737-8b96-7eb0-abd1-93e46819ee6a | Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects. |
+| `browser-account-ops-worker-20260621` | `browser_account_ops_worker` | `ceo_control_room` | codex-thread:019eea1a-a1f2-73e0-a019-2deae2cde547 | Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects. |
 
 ## Goals
 

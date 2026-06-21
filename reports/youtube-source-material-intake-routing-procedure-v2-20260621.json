@@ -1,0 +1,135 @@
+{
+  "schema_version": "youtube_source_material_intake_routing_procedure.v2",
+  "generated_utc": "2026-06-21T12:16:04Z",
+  "owner_lane_id": "premium_customer_intake",
+  "target_lane_id": "youtube_content_channels",
+  "owner_agent_id": "premium-customer-intake-agent-20260620",
+  "target_owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+  "status": "local_procedure_ready",
+  "purpose": "Route user-supplied YouTube and adjacent source materials into the YouTube lane without putting raw source context in the CEO window and without copying source material too closely.",
+  "raw_context_rule": "Preserve raw material in intake/customer/dropbox or a referenced artifact; CEO receives only compact capsules.",
+  "required_fields": [
+    "input_id",
+    "received_utc",
+    "raw_material_path_or_reference",
+    "source_type",
+    "provided_by",
+    "why_it_might_help",
+    "allowed_use",
+    "raw_context_boundary",
+    "compact_source_capsule",
+    "extractable_patterns",
+    "do_not_copy_notes",
+    "target_artifact",
+    "human_action_needed",
+    "revisit_condition"
+  ],
+  "source_types": [
+    "youtube_video",
+    "youtube_channel",
+    "transcript",
+    "screenshot",
+    "thumbnail",
+    "title_bank",
+    "comment_thread",
+    "trend_reference",
+    "notes",
+    "mixed_sources",
+    "other"
+  ],
+  "allowed_use_values": [
+    "pattern_extraction",
+    "inspiration_only",
+    "fact_reference",
+    "needs_source_review",
+    "do_not_use_until_reviewed"
+  ],
+  "target_artifacts": [
+    "script_brief",
+    "title_bank",
+    "thumbnail_brief",
+    "source_plan",
+    "content_gap_note",
+    "risk_review",
+    "production_manifest_update"
+  ],
+  "procedure": [
+    "preserve_raw_material_before_interpretation",
+    "classify_source_and_allowed_use",
+    "produce_compact_source_capsule",
+    "route_to_smallest_youtube_lane_artifact",
+    "apply_no_copy_transform",
+    "synthesize_lane_followup",
+    "emit_customer_update"
+  ],
+  "compact_capsule_fields": [
+    "input_id",
+    "intent",
+    "source_type",
+    "raw_material_location",
+    "target_lane_id",
+    "target_owner_agent_id",
+    "target_artifact",
+    "summary",
+    "allowed_use",
+    "do_not_copy",
+    "status",
+    "next_action",
+    "human_action_needed"
+  ],
+  "routing_outcomes": [
+    {
+      "condition": "clear_youtube_content_pattern",
+      "route": "youtube_content_channels",
+      "target_artifacts": ["script_brief", "title_bank", "thumbnail_brief"]
+    },
+    {
+      "condition": "useful_but_rights_unclear",
+      "route": "youtube_content_channels",
+      "allowed_use": "needs_source_review",
+      "revisit_condition": "source_review_complete"
+    },
+    {
+      "condition": "requires_account_upload_comment_channel_paid_tool_or_browser_action",
+      "route": "service_gated_packet_only",
+      "execution_allowed": false
+    },
+    {
+      "condition": "broad_business_research_not_youtube_specific",
+      "route": "narrowest_matching_lane",
+      "youtube_secondary_only_if_relevant": true
+    },
+    {
+      "condition": "duplicate_source_with_new_angle",
+      "route": "route_new_angle_and_link_prior_material",
+      "reject": false
+    },
+    {
+      "condition": "unsafe_illegal_spammy_impossible_or_out_of_scope",
+      "route": "stop_with_recorded_reason",
+      "reject": true
+    }
+  ],
+  "non_rejection_rule": "Inputs should be routed, synthesized, applied, or parked with a revisit condition unless unsafe, illegal, impossible, spammy, duplicate without new information, or out of scope.",
+  "customer_update_template_fields": [
+    "raw_context_preserved",
+    "target_lane",
+    "next_artifact",
+    "allowed_use",
+    "do_not_copy_boundary",
+    "human_action_needed",
+    "revisit_condition"
+  ],
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "videos_opened_or_downloaded": 0,
+    "transcripts_scraped": 0,
+    "accounts_or_channels_created": 0,
+    "uploads_comments_posts_or_public_actions": 0,
+    "model_api_mcp_calls": 0,
+    "payments_trades_or_paid_tools": 0,
+    "worker_runtime_queue_starts": 0,
+    "external_side_effects": false
+  },
+  "next_local_action": "When the next user-supplied YouTube/source material arrives, create the preserved raw packet in intake/customer/dropbox, run the premium customer router, synthesize the YouTube follow-up, and monitor acknowledgement. If the source cannot be used immediately, park it with a named revisit condition instead of rejecting it."
+}

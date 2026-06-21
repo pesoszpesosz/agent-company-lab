@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2563,
+    "artifacts": 2578,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 446,
+    "outcomes": 452,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 643,
-    "trace_events": 538
+    "tasks": 644,
+    "trace_events": 544
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T12:09:48Z",
+  "generated_utc": "2026-06-21T12:22:12Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T12:09:48Z",
+    "generated_utc": "2026-06-21T12:22:12Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 162,
-    "outcomes_delta": 28,
-    "tasks_delta": 64,
-    "trace_events_delta": 29
+    "artifacts_delta": 177,
+    "outcomes_delta": 34,
+    "tasks_delta": 65,
+    "trace_events_delta": 35
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -255,14 +255,14 @@
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
-      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
-      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts"
+      "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
+      "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621"
     },
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
-      "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
-      "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621"
+      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
+      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts"
     },
     {
       "kind": "open_task",
@@ -280,21 +280,21 @@
   "open_tasks": [
     {
       "lane_id": "ai_resources_lab",
-      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
-      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
-      "priority": 96,
-      "status": "new",
-      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts",
-      "title": "Decide continuity owner response for submitted_bounty_payouts"
-    },
-    {
-      "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
       "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
       "priority": 96,
       "status": "in_progress",
       "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621",
       "title": "Active goal for lane-manager-ai_resources_lab-20260620"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 96,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts",
+      "title": "Decide continuity owner response for submitted_bounty_payouts"
     },
     {
       "lane_id": "ai_resources_lab",
@@ -372,6 +372,66 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T12:22:08Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-candidate-registry-gap-list-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use the gap list to prioritize local eval packets for 12 queued candidates.",
+      "outcome_id": "outcome-candidate-registry-gap-list-worker-thread-goal-20260621",
+      "outcome_type": "codex_worker_goal_deliverable",
+      "realized_usd": 0.0,
+      "status": "completed_local_gap_list"
+    },
+    {
+      "created_at": "2026-06-21T12:19:48Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-deliverables\\continuity-owner-response-dispatch-overlap-review-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use overlap review before creating any new worker for continuity dispatch remediation.",
+      "outcome_id": "outcome-capability-overlap-worker-thread-goal-20260621",
+      "outcome_type": "codex_worker_goal_deliverable",
+      "realized_usd": 0.0,
+      "status": "completed_local_report_only"
+    },
+    {
+      "created_at": "2026-06-21T12:19:48Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-deliverables\\agent-company-adoption-retirement-recommendation-packet-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use recommendation packet to merge-or-park submitted_bounty_payouts and reject duplicate-worker proposals.",
+      "outcome_id": "outcome-adoption-retirement-worker-thread-goal-20260621",
+      "outcome_type": "codex_worker_goal_deliverable",
+      "realized_usd": 0.0,
+      "status": "completed_local_report_only"
+    },
+    {
+      "created_at": "2026-06-21T12:19:48Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-deliverables\\local-evaluation-harness-index-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Promote first local proof packets for CEO state, human action feed, owner acknowledgement loop, capability map, and continuity crosswalk.",
+      "outcome_id": "outcome-local-evaluation-harness-worker-thread-goal-20260621",
+      "outcome_type": "codex_worker_goal_deliverable",
+      "realized_usd": 0.0,
+      "status": "completed_local_eval_packets"
+    },
+    {
+      "created_at": "2026-06-21T12:19:48Z",
+      "evidence": "E:\\agent-company-lab\\reports\\browser-account-service-readiness-packet-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Attach readiness packet to future browser/account service requests before human-gate escalation.",
+      "outcome_id": "outcome-browser-account-ops-worker-thread-goal-20260621",
+      "outcome_type": "codex_worker_goal_deliverable",
+      "realized_usd": 0.0,
+      "status": "completed_local_report_only"
+    },
+    {
+      "created_at": "2026-06-21T12:19:17Z",
+      "evidence": "E:\\agent-company-lab\\reports\\youtube-source-material-intake-routing-procedure-v2-20260621.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Use the procedure for the next incoming YouTube/source material: preserve raw context, route compact capsule to youtube_content_channels, and update the customer.",
+      "outcome_id": "outcome-youtube-source-material-intake-routing-procedure-v2-20260621",
+      "outcome_type": "customer_intake_procedure",
+      "realized_usd": 0.0,
+      "status": "local_procedure_ready"
+    },
+    {
       "created_at": "2026-06-21T12:08:33Z",
       "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md",
       "lane_id": "ai_resources_lab",
@@ -390,66 +450,6 @@
       "outcome_type": "continuity_watchdog_owner_response_artifacts",
       "realized_usd": 0.0,
       "status": "owner_response_artifacts_ready"
-    },
-    {
-      "created_at": "2026-06-21T11:49:26Z",
-      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-response-bundle-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Route response contracts to AI Resources or existing lane owners; source restore packets and source tasks remain unchanged.",
-      "outcome_id": "outcome-continuity-watchdog-restore-response-bundle-v1-20260621",
-      "outcome_type": "continuity_watchdog_restore_response_bundle",
-      "realized_usd": 0.0,
-      "status": "responses_ready"
-    },
-    {
-      "created_at": "2026-06-21T11:41:31Z",
-      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-plan-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Route restore packets to AI Resources or existing lane owners; keep all source state unchanged until packet evidence exists.",
-      "outcome_id": "outcome-continuity-watchdog-restore-plan-v1-20260621",
-      "outcome_type": "continuity_watchdog_restore_plan",
-      "realized_usd": 0.0,
-      "status": "restore_plan_ready"
-    },
-    {
-      "created_at": "2026-06-21T11:33:42Z",
-      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
-      "outcome_id": "outcome-continuity-watchdog-snapshot-v1-20260621",
-      "outcome_type": "continuity_watchdog_snapshot",
-      "realized_usd": 0.0,
-      "status": "restore_ready"
-    },
-    {
-      "created_at": "2026-06-21T01:15:00Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch.",
-      "outcome_id": "outcome-ceo-worker-bootstrap-v1-20260621",
-      "outcome_type": "ceo_worker_bootstrap",
-      "realized_usd": 0.0,
-      "status": "active"
-    },
-    {
-      "created_at": "2026-06-21T00:50:00Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
-      "outcome_id": "outcome-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002",
-      "outcome_type": "ai_resources_owner_acknowledgement_dispatch",
-      "realized_usd": 0.0,
-      "status": "dispatch_ready"
-    },
-    {
-      "created_at": "2026-06-21T00:30:00Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
-      "outcome_id": "outcome-ceo-state-packet-v1-20260621",
-      "outcome_type": "ceo_state_packet",
-      "realized_usd": 0.0,
-      "status": "current"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

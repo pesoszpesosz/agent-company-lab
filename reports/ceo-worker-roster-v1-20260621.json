@@ -28,7 +28,7 @@
       "role_id": "capability_overlap_mapper",
       "status": "active",
       "thread_arg": "overlap_thread_id",
-      "thread_id": "multi-agent:019ee737-6bef-7e02-947e-53bc42aa11b3"
+      "thread_id": "codex-thread:019eea1a-3822-7651-9a45-8ef403994337"
     },
     {
       "agent_id": "candidate-registry-curator-20260621",
@@ -58,7 +58,7 @@
       "role_id": "local_evaluation_harness_builder",
       "status": "active",
       "thread_arg": "evaluation_thread_id",
-      "thread_id": "multi-agent:019ee737-83b0-7ea3-97b1-738eb32598fd"
+      "thread_id": "codex-thread:019eea1a-594b-7580-8072-1f56245c5069"
     },
     {
       "agent_id": "adoption-retirement-reviewer-20260621",
@@ -73,7 +73,7 @@
       "role_id": "adoption_retirement_reviewer",
       "status": "active",
       "thread_arg": "retirement_thread_id",
-      "thread_id": "multi-agent:019ee737-87bc-7b10-bbb1-d2fc08e15988"
+      "thread_id": "codex-thread:019eea1a-7d11-7eb2-be7e-edca7219e26b"
     },
     {
       "agent_id": "continuity-watchdog-worker-20260621",
@@ -118,7 +118,7 @@
       "role_id": "browser_account_ops_worker",
       "status": "active",
       "thread_arg": "browser_ops_thread_id",
-      "thread_id": "multi-agent:019ee737-8b96-7eb0-abd1-93e46819ee6a"
+      "thread_id": "codex-thread:019eea1a-a1f2-73e0-a019-2deae2cde547"
     }
   ],
   "counts": {
@@ -144,119 +144,119 @@
       "name": "CEO Control Room"
     }
   ],
-  "generated_utc": "2026-06-21T01:25:00Z",
+  "generated_utc": "2026-06-21T12:16:08Z",
   "goals": [
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:lane-manager-ai_resources_lab-20260620:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
       "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
       "priority": 96,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621",
       "title": "Active goal for lane-manager-ai_resources_lab-20260620",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:capability-overlap-mapper-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
       "owner_agent_id": "capability-overlap-mapper-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-capability-overlap-mapper-20260621-active-goal-20260621",
       "title": "Active goal for capability-overlap-mapper-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:candidate-registry-curator-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
       "owner_agent_id": "candidate-registry-curator-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-candidate-registry-curator-20260621-active-goal-20260621",
       "title": "Active goal for candidate-registry-curator-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:local-evaluation-harness-builder-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
       "owner_agent_id": "local-evaluation-harness-builder-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-local-evaluation-harness-builder-20260621-active-goal-20260621",
       "title": "Active goal for local-evaluation-harness-builder-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:adoption-retirement-reviewer-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
       "owner_agent_id": "adoption-retirement-reviewer-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-adoption-retirement-reviewer-20260621-active-goal-20260621",
       "title": "Active goal for adoption-retirement-reviewer-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:continuity-watchdog-worker-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
       "owner_agent_id": "continuity-watchdog-worker-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-continuity-watchdog-worker-20260621-active-goal-20260621",
       "title": "Active goal for continuity-watchdog-worker-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:premium-customer-context-router-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
       "owner_agent_id": "premium-customer-context-router-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-premium-customer-context-router-20260621-active-goal-20260621",
       "title": "Active goal for premium-customer-context-router-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     },
     {
-      "created_at": "2026-06-21T01:25:00Z",
+      "created_at": "2026-06-21T12:16:08Z",
       "duplicate_key": "ceo-worker-bootstrap:browser-account-ops-worker-20260621:active-goal",
       "evidence_required": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.md",
       "lane_id": "ai_resources_lab",
       "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
       "owner_agent_id": "browser-account-ops-worker-20260621",
       "priority": 90,
-      "started_at": "2026-06-21T01:25:00Z",
+      "started_at": "2026-06-21T12:16:08Z",
       "status": "in_progress",
       "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621",
       "title": "Active goal for browser-account-ops-worker-20260621",
-      "updated_at": "2026-06-21T01:25:00Z"
+      "updated_at": "2026-06-21T12:16:08Z"
     }
   ],
   "json_path": "E:\\agent-company-lab\\reports\\ceo-worker-roster-v1-20260621.json",

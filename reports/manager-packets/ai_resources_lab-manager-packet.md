@@ -1,6 +1,6 @@
 # Manager Packet - ai_resources_lab
 
-Generated UTC: 2026-06-21T12:10:01Z
+Generated UTC: 2026-06-21T12:22:12Z
 Department: Artificial Resources
 Lane status: active
 Current owner: `lane-manager-ai_resources_lab-20260620`
@@ -122,14 +122,14 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| completed_local_gap_list | codex_worker_goal_deliverable | `outcome-candidate-registry-gap-list-worker-thread-goal-20260621` | 0.0 | E:\agent-company-lab\reports\ai-resources-candidate-registry-gap-list-v1-20260621.md | Use the gap list to prioritize local eval packets for 12 queued candidates. |
+| completed_local_report_only | codex_worker_goal_deliverable | `outcome-browser-account-ops-worker-thread-goal-20260621` | 0.0 | E:\agent-company-lab\reports\browser-account-service-readiness-packet-v1-20260621.md | Attach readiness packet to future browser/account service requests before human-gate escalation. |
+| completed_local_eval_packets | codex_worker_goal_deliverable | `outcome-local-evaluation-harness-worker-thread-goal-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-deliverables\local-evaluation-harness-index-v1-20260621.md | Promote first local proof packets for CEO state, human action feed, owner acknowledgement loop, capability map, and continuity crosswalk. |
+| completed_local_report_only | codex_worker_goal_deliverable | `outcome-adoption-retirement-worker-thread-goal-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-deliverables\agent-company-adoption-retirement-recommendation-packet-20260621.md | Use recommendation packet to merge-or-park submitted_bounty_payouts and reject duplicate-worker proposals. |
+| completed_local_report_only | codex_worker_goal_deliverable | `outcome-capability-overlap-worker-thread-goal-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-deliverables\continuity-owner-response-dispatch-overlap-review-20260621.md | Use overlap review before creating any new worker for continuity dispatch remediation. |
 | dispatch_tasks_ready | continuity_watchdog_owner_response_task_dispatch | `outcome-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md | Work the created local dispatch tasks through existing owners and CEO/AI Resources review; source tasks and lanes remain unchanged. |
 | owner_response_artifacts_ready | continuity_watchdog_owner_response_artifacts | `outcome-continuity-watchdog-owner-response-artifacts-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.md | Use these local owner response artifacts in the next CEO/AI Resources state packet; source tasks and lanes remain unchanged. |
 | responses_ready | continuity_watchdog_restore_response_bundle | `outcome-continuity-watchdog-restore-response-bundle-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.md | Route response contracts to AI Resources or existing lane owners; source restore packets and source tasks remain unchanged. |
-| restore_plan_ready | continuity_watchdog_restore_plan | `outcome-continuity-watchdog-restore-plan-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.md | Route restore packets to AI Resources or existing lane owners; keep all source state unchanged until packet evidence exists. |
-| restore_ready | continuity_watchdog_snapshot | `outcome-continuity-watchdog-snapshot-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically. |
-| active | ceo_worker_bootstrap | `outcome-ceo-worker-bootstrap-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch. |
-| dispatch_ready | ai_resources_owner_acknowledgement_dispatch | `outcome-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch. |
-| current | ceo_state_packet | `outcome-ceo-state-packet-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed. |
 
 ## Startup Commands
 

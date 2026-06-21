@@ -1,0 +1,14 @@
+{
+  "external_side_effects": false,
+  "browser_sessions_started": 0,
+  "videos_opened_or_downloaded": 0,
+  "transcripts_scraped": 0,
+  "accounts_or_channels_created": 0,
+  "public_actions_taken": 0,
+  "model_api_mcp_calls": 0,
+  "worker_runtime_queue_starts": 0,
+  "target_lane_id": "youtube_content_channels",
+  "procedure_markdown": "E:\\agent-company-lab\\reports\\youtube-source-material-intake-routing-procedure-v2-20260621.md",
+  "procedure_json": "E:\\agent-company-lab\\reports\\youtube-source-material-intake-routing-procedure-v2-20260621.json",
+  "customer_update_feed": "E:\\agent-company-lab\\reports\\customer-update-feed-v4-20260621.md"
+}

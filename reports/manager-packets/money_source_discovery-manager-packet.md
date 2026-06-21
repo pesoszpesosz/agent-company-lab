@@ -1,6 +1,6 @@
 # Manager Packet - money_source_discovery
 
-Generated UTC: 2026-06-21T12:10:01Z
+Generated UTC: 2026-06-21T12:22:12Z
 Department: Strategic Research
 Lane status: active
 Current owner: `lane-manager-money_source_discovery-019ec699`
