@@ -41,6 +41,7 @@ from agent_company_core.goal_evolver_review import write_goal_evolver_review
 from agent_company_core.ceo_state_packet import write_ceo_state_packet
 from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
 from agent_company_core.continuity_watchdog_snapshot import write_continuity_watchdog_snapshot
+from agent_company_core.continuity_watchdog_restore_plan import write_continuity_watchdog_restore_plan
 from agent_company_core.control_plane_capacity_benchmark_runner import write_control_plane_capacity_benchmark_runner
 from agent_company_core.premium_customer_followup_escalation import write_premium_customer_followup_escalation
 from agent_company_core.premium_customer_followup_monitor import write_premium_customer_followup_monitor
@@ -242,6 +243,13 @@ def build_parser() -> argparse.ArgumentParser:
     continuity_watchdog_snapshot.add_argument("--path")
     continuity_watchdog_snapshot.add_argument("--json-path")
     continuity_watchdog_snapshot.add_argument("--no-db-record", action="store_true")
+    continuity_watchdog_restore_plan = sub.add_parser("write-continuity-watchdog-restore-plan")
+    continuity_watchdog_restore_plan.add_argument("--snapshot-report")
+    continuity_watchdog_restore_plan.add_argument("--now-utc")
+    continuity_watchdog_restore_plan.add_argument("--path")
+    continuity_watchdog_restore_plan.add_argument("--json-path")
+    continuity_watchdog_restore_plan.add_argument("--packet-dir")
+    continuity_watchdog_restore_plan.add_argument("--no-db-record", action="store_true")
     add_money_path_commands(sub)
     add_paid_code_commands(sub)
     add_digital_products_commands(sub)
@@ -426,6 +434,9 @@ def main() -> None:
         elif args.cmd == "write-continuity-watchdog-snapshot":
             init_db(conn)
             write_continuity_watchdog_snapshot(conn, args)
+        elif args.cmd == "write-continuity-watchdog-restore-plan":
+            init_db(conn)
+            write_continuity_watchdog_restore_plan(conn, args)
         elif handle_money_path_command(conn, args):
             pass
         elif handle_paid_code_command(conn, args):

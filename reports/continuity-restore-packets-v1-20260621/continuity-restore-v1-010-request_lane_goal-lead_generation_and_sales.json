@@ -1,0 +1,26 @@
+{
+  "assigned_surface": "existing_lane_owner",
+  "kind": "request_lane_goal",
+  "lane_id": "lead_generation_and_sales",
+  "next_action": "Ask the lane owner for one current goal artifact; if no owner exists, route to AI Resources for owner repair before goal assignment.",
+  "packet_json_path": "E:\\agent-company-lab\\reports\\continuity-restore-packets-v1-20260621\\continuity-restore-v1-010-request_lane_goal-lead_generation_and_sales.json",
+  "packet_md_path": "E:\\agent-company-lab\\reports\\continuity-restore-packets-v1-20260621\\continuity-restore-v1-010-request_lane_goal-lead_generation_and_sales.md",
+  "priority": 86,
+  "prohibited_actions": [
+    "mutate_source_snapshot",
+    "create_duplicate_agent_without_overlap_review",
+    "start_worker_or_thread_without_explicit_ceo_scope",
+    "publish_submit_trade_spend_or_call_external_api"
+  ],
+  "recommended_owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+  "required_evidence": "One current lane goal artifact, or an explicit park/kill request with rationale.",
+  "restore_packet_id": "continuity-restore-v1-010-request_lane_goal-lead_generation_and_sales",
+  "schema_version": "continuity_restore_packet.v1",
+  "source_action_kind": "request_lane_goal",
+  "source_next_action": "Ask lane owner for one current goal artifact or explicit park/kill state.",
+  "source_snapshot_generated_utc": "2026-06-21T11:42:48Z",
+  "source_snapshot_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.json",
+  "source_task_id": null,
+  "target_id": "lead_generation_and_sales",
+  "target_type": "lane"
+}

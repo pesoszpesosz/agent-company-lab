@@ -219,6 +219,14 @@ Write the local continuity snapshot:
 python tools\agent_company.py write-continuity-watchdog-snapshot
 ```
 
+Convert snapshot findings into local restore packets:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-restore-plan
+```
+
+The restore plan is report-only. It writes aggregate reports and per-action local packets, but it does not mutate tasks, assign owners, start workers, send thread messages, or perform external actions.
+
 ## Immediate Backlog
 
 1. Keep `bootstrap-ceo-workers` current with live worker thread handles and active goals.
@@ -228,7 +236,7 @@ python tools\agent_company.py write-continuity-watchdog-snapshot
 5. Create a YouTube lane scout packet covering channel types, asset workflow, account/public gates, and first no-post content batch.
 6. Create a control-plane capacity benchmark packet for 1,000/10,000/100,000 row scenarios.
 7. Create a browser/account service-worker roadmap packet that separates read-only browsing, registration preparation, non-KYC account actions, and human-only KYC actions.
-8. Convert the next blocker triage into a dispatch batch for managers and workers.
+8. Route continuity restore packets to AI Resources or existing lane owners, then refresh the CEO state packet.
 
 ## Zero Side-Effect Boundary For This Goal
 

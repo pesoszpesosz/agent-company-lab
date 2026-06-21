@@ -1,8 +1,8 @@
 # Agent Company Artifacts
 
-Generated UTC: 2026-06-21T11:33:50Z
+Generated UTC: 2026-06-21T11:42:56Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 56
+Rows shown: 58
 
 ## Counts By Kind
 
@@ -32,6 +32,8 @@ Rows shown: 56
 | `ceo_worker_roster_json` | 1 |
 | `ceo_worker_roster_markdown` | 1 |
 | `cli` | 1 |
+| `continuity_watchdog_restore_plan_json` | 1 |
+| `continuity_watchdog_restore_plan_markdown` | 1 |
 | `continuity_watchdog_snapshot_json` | 1 |
 | `continuity_watchdog_snapshot_markdown` | 1 |
 | `goal_evolver_review` | 1 |
@@ -57,22 +59,24 @@ Rows shown: 56
 
 | Lane | Count |
 | --- | ---: |
-| `ai_resources_lab` | 56 |
+| `ai_resources_lab` | 58 |
 
 ## Artifacts
 
 | Created | Kind | Lane | Task | Artifact | Path/URL | SHA256 | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_markdown | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | `artifact-continuity-watchdog-snapshot-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | a4ee5302353b90208daf9fff69644fecd68983b0587049d8bad6cdd0212b07c5 | Human-readable continuity watchdog snapshot. |
-| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_json | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | `artifact-continuity-watchdog-snapshot-v1-json-20260621` | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json | 7b176309865b56275f2257ef8ab94ef27fc4e3f89a5ada804714cbd66174bdc5 | Machine-readable continuity watchdog snapshot. |
+| 2026-06-21T11:41:31Z | continuity_watchdog_restore_plan_markdown | `ai_resources_lab` | `task-continuity-watchdog-restore-plan-v1-20260621` | `artifact-continuity-watchdog-restore-plan-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.md | 7c5ce57291a3ab6456ee27a648f1e7ece7a3b37b6a3f96243a9abe24c26ea59a | Human-readable continuity watchdog restore plan. |
+| 2026-06-21T11:41:31Z | continuity_watchdog_restore_plan_json | `ai_resources_lab` | `task-continuity-watchdog-restore-plan-v1-20260621` | `artifact-continuity-watchdog-restore-plan-v1-json-20260621` | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.json | 8514a36a8503d5f14bedda82e5e024ebd71e3c078cc0056ba9be9a954cdd99eb | Machine-readable continuity watchdog restore plan. |
+| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_markdown | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | `artifact-continuity-watchdog-snapshot-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | 88680c6bdc2e041c377023cad2fbe2b7852815399bd86b1a1bb6c0a193d0b690 | Human-readable continuity watchdog snapshot. |
+| 2026-06-21T11:33:42Z | continuity_watchdog_snapshot_json | `ai_resources_lab` | `task-continuity-watchdog-snapshot-v1-20260621` | `artifact-continuity-watchdog-snapshot-v1-json-20260621` | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json | dd24cb44a866f1a68e046581e9d3120be1288f2309f746189d82318dcc296a4b | Machine-readable continuity watchdog snapshot. |
 | 2026-06-21T01:15:00Z | ceo_worker_roster_markdown | `ai_resources_lab` | `task-ceo-worker-bootstrap-v1-20260621` | `artifact-ceo-worker-roster-v1-md-20260621` | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | 7c4c0c4f052f140848a499ce826b6e878da61fea9f9e0357a016a95c9b9e27bf | Human-readable CEO worker roster. |
 | 2026-06-21T01:15:00Z | ceo_worker_roster_json | `ai_resources_lab` | `task-ceo-worker-bootstrap-v1-20260621` | `artifact-ceo-worker-roster-v1-json-20260621` | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.json | c008105bff02e78c1cd20f98157c10ff323356a4f07e73fb72c864ffbca95bae | Machine-readable CEO worker roster. |
 | 2026-06-21T00:50:00Z | ai_resources_owner_acknowledgement_dispatch | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002` | `artifact-ai-resources-owner-acknowledgement-dispatch-md-customer-input-ceo-operating-goal-objective-20260620-002` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | f6062eb032636878323f7d38af4fa1b8114905298fa148069da79f9193585edc | Human-readable owner acknowledgement dispatch packet. |
 | 2026-06-21T00:50:00Z | ai_resources_owner_acknowledgement_dispatch_json | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002` | `artifact-ai-resources-owner-acknowledgement-dispatch-json-customer-input-ceo-operating-goal-objective-20260620-002` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.json | b7f0f3d3b3d9ada02ed58660c64db7411eb9741794d0b23395563d50a152ed8e | Machine-readable owner acknowledgement dispatch packet. |
-| 2026-06-21T00:30:00Z | human_action_feed_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-md-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.md | e6b9b21f4e428c77e4e335a4b79279108da9a4379ef09a090fb8ba6b12d9960b | Human-readable human-action feed. |
-| 2026-06-21T00:30:00Z | human_action_feed_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-json-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.json | 11256fc7c8e99081f690b837802b09490f696ec4084cba900bb7e79125416a39 | Machine-readable human-action feed. |
-| 2026-06-21T00:30:00Z | ceo_state_packet_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-md-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | b17bfff35da7055684ee7b61f0a4aae23df305381c99ad677e8aff9da4ba4b5d | Human-readable CEO state packet. |
-| 2026-06-21T00:30:00Z | ceo_state_packet_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-json-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json | 89133426473a9aefd6c5a79c470dfce338e526908ed0dbd7ceb0ec16ff6be942 | Machine-readable CEO state packet. |
+| 2026-06-21T00:30:00Z | human_action_feed_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-md-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.md | 4eebceab575c30a61dd75617bb548f45d38edff50179fc76c54014fbdfebfee9 | Human-readable human-action feed. |
+| 2026-06-21T00:30:00Z | human_action_feed_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-json-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.json | 8b4475f14cda20eed122ea903018341adf47cc0d00805fe9076237a945b0ab88 | Machine-readable human-action feed. |
+| 2026-06-21T00:30:00Z | ceo_state_packet_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-md-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | e6c1d774ee6741c9c6d7cb5c8933c63584b92f67123bb23bc9ac617f4be4fe80 | Human-readable CEO state packet. |
+| 2026-06-21T00:30:00Z | ceo_state_packet_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-json-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json | fb593006e57de6ef4007e7f96e7ccd3aceb6664b8feae4622ab6688e57e36445 | Machine-readable CEO state packet. |
 | 2026-06-20T21:43:24Z | goal_evolver_review | `ai_resources_lab` | `task-goal-evolver-review-v1-20260621` | `artifact-goal-evolver-review-v1-md-20260621` | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.md | fa71ace9030ec6b7718954d384f1b4ce9cd868eb9b644750e95cc69b1a9293fb | Human-readable Goal Evolver review packet. |
 | 2026-06-20T21:43:24Z | goal_evolver_review_json | `ai_resources_lab` | `task-goal-evolver-review-v1-20260621` | `artifact-goal-evolver-review-v1-json-20260621` | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.json | 6cf1fc53894a9c521c1f33aacf74f11eb9f87e2dea8822e8e7eea23522fd3603 | Machine-readable Goal Evolver review packet. |
 | 2026-06-20T21:37:51Z | report_md | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-monitor-command-v1-20260621` | `artifact-ai-resources-owner-acknowledgement-monitor-command-v1-20260621-report_md` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | 4ffa8aa1d919d0429db08a38561f2c99b09bb69d900add0b51816386bb721c61 | Live monitor markdown report for the CEO operating-goal input. |

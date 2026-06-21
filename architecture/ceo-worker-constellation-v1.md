@@ -48,6 +48,14 @@ python tools\agent_company.py write-continuity-watchdog-snapshot
 
 It reports ownerless lanes, missing owner-agent rows, agents missing thread handles, stale open tasks, expired leases, duplicate active keys, lanes with no open tasks, and stale owner acknowledgements. It only writes local reports and audit rows.
 
+Convert the snapshot into per-action local restore packets with:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-restore-plan
+```
+
+The restore plan assigns each detected action to AI Resources, an existing lane owner, or a CEO decision batch while preserving the zero-side-effect boundary.
+
 ## Boundary
 
 The constellation is local-control-plane only by default. It does not open browsers, create accounts, approve service requests, start external runtimes, publish, submit, trade, spend, call APIs, or contact anyone without a scoped gate.

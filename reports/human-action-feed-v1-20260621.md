@@ -1,6 +1,6 @@
 # Human Action Feed V1
 
-Generated UTC: 2026-06-21T11:33:50Z
+Generated UTC: 2026-06-21T11:42:56Z
 Owner: `human-action-desk-worker-20260620`
 Status: `optional_gate_review_available`
 JSON mirror: `E:\agent-company-lab\reports\human-action-feed-v1-20260621.json`
@@ -23,9 +23,6 @@ No immediate human action is required for local-only company work.
 | 8 | `req-wave4-ai-ml-competitions-browser-readonly-20260614` | catalog_required_approval_no_external_action | Approve, reject, or keep parked: Read public AI/ML competition listings and capture rules/prize/dataset gates; no browser side effects. | Keep the work local, parked, or fixture-only until a scoped approval exists. |
 | 9 | `req-wave4-digital-products-browser-readonly-20260614` | catalog_required_approval_no_external_action | Approve, reject, or keep parked: Read public digital-product marketplace pages and capture product opportunity signals; no browser side effects. | Keep the work local, parked, or fixture-only until a scoped approval exists. |
 | 10 | `req-wave4-money-source-discovery-browser-readonly-20260614` | catalog_required_approval_no_external_action | Approve, reject, or keep parked: Read public opportunity-source directories and capture monetizable source candidates; no browser side effects. | Keep the work local, parked, or fixture-only until a scoped approval exists. |
-| 11 | `req-test-browser-readonly-complete-20260614` | catalog_required_approval_no_external_action | Approve, reject, or keep parked: Generate complete read-only browser service packet acceptance test; no browser opened. | Keep the work local, parked, or fixture-only until a scoped approval exists. |
-| 12 | `req-pydantic-ai-model-backed-adapter-20260614` | model_api_call_requires_provider_model_cost_lane_and_artifact_scope | Approve, reject, or keep parked: Run a real model-backed Pydantic AI adapter only after provider, model, max cost, allowed lanes, output artifact path, and credential route are explicitly approved. | Keep the work local, parked, or fixture-only until a scoped approval exists. |
-| 13 | `req-grok-research-worker-20260614` | browser_grok_or_x_requires_signed_in_browser_and_no_public_actions | Approve, reject, or keep parked: Later run Grok/X research prompts for current agent-company infrastructure trends; save prompt/output/verification artifacts; do not post, like, follow, or reply. | Keep the work local, parked, or fixture-only until a scoped approval exists. |
 
 ## Boundary
 

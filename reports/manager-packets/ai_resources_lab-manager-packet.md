@@ -1,6 +1,6 @@
 # Manager Packet - ai_resources_lab
 
-Generated UTC: 2026-06-21T11:33:55Z
+Generated UTC: 2026-06-21T11:42:59Z
 Department: Artificial Resources
 Lane status: active
 Current owner: `lane-manager-ai_resources_lab-20260620`
@@ -122,6 +122,7 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| restore_plan_ready | continuity_watchdog_restore_plan | `outcome-continuity-watchdog-restore-plan-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.md | Route restore packets to AI Resources or existing lane owners; keep all source state unchanged until packet evidence exists. |
 | restore_ready | continuity_watchdog_snapshot | `outcome-continuity-watchdog-snapshot-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically. |
 | active | ceo_worker_bootstrap | `outcome-ceo-worker-bootstrap-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch. |
 | dispatch_ready | ai_resources_owner_acknowledgement_dispatch | `outcome-ai-resources-owner-acknowledgement-dispatch-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch. |
@@ -129,7 +130,6 @@ These require a scoped service request and approval before any execution:
 | apply_after_review | goal_evolver_review | `outcome-goal-evolver-review-v1-20260621` | 0.0 | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.md | CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path. |
 | complete | ai_resources_owner_acknowledgement_monitor_capability | `outcome-ai-resources-owner-acknowledgement-monitor-capability-20260621` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision. |
 | attention_needed | ai_resources_owner_acknowledgement_monitor | `outcome-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair. |
-| validated | ai_resources_owner_acknowledgement_requests_capability | `outcome-ai-resources-owner-acknowledgement-requests-command-v1-20260621` | 0.0 | E:\agent-company-lab\tools\agent_company_core\ai_resources_owner_acknowledgement_requests.py | Monitor acknowledgement tasks; stale acknowledgements should escalate to CEO decision batch or explicit lane parking. |
 
 ## Startup Commands
 

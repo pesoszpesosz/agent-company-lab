@@ -1,0 +1,28 @@
+{
+  "assigned_surface": "ai_resources_lab",
+  "department": "Revenue Collection",
+  "kind": "repair_ownerless_lane",
+  "lane_id": "submitted_bounty_payouts",
+  "next_action": "AI Resources selects an existing non-overlapping owner or writes an explicit park/retire decision; new agents require capability-overlap review first.",
+  "owner_thread_id": "other Find profitable edge worker, not this recovered infrastructure thread",
+  "packet_json_path": "E:\\agent-company-lab\\reports\\continuity-restore-packets-v1-20260621\\continuity-restore-v1-001-repair_ownerless_lane-submitted_bounty_payouts.json",
+  "packet_md_path": "E:\\agent-company-lab\\reports\\continuity-restore-packets-v1-20260621\\continuity-restore-v1-001-repair_ownerless_lane-submitted_bounty_payouts.md",
+  "priority": 96,
+  "prohibited_actions": [
+    "mutate_source_snapshot",
+    "create_duplicate_agent_without_overlap_review",
+    "start_worker_or_thread_without_explicit_ceo_scope",
+    "publish_submit_trade_spend_or_call_external_api"
+  ],
+  "recommended_owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+  "required_evidence": "AI Resources owner-selection, park, or retire packet with overlap review evidence.",
+  "restore_packet_id": "continuity-restore-v1-001-repair_ownerless_lane-submitted_bounty_payouts",
+  "schema_version": "continuity_restore_packet.v1",
+  "source_action_kind": "repair_ownerless_lane",
+  "source_next_action": "Route to AI Resources for owner selection or explicit park/retire decision.",
+  "source_snapshot_generated_utc": "2026-06-21T11:42:48Z",
+  "source_snapshot_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.json",
+  "source_task_id": null,
+  "target_id": "submitted_bounty_payouts",
+  "target_type": "lane"
+}
