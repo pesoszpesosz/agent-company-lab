@@ -44,6 +44,7 @@ from agent_company_core.goal_evolver_review import write_goal_evolver_review
 from agent_company_core.ceo_state_packet import write_ceo_state_packet
 from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
 from agent_company_core.account_capacity_dispatch_plan import write_account_capacity_dispatch_plan_cli
+from agent_company_core.account_capacity_continuity_cycle import run_account_capacity_continuity_cycle_cli
 from agent_company_core.account_capacity_lease_reconcile import reconcile_account_capacity_leases_cli
 from agent_company_core.account_capacity_refresh_signal import apply_account_capacity_refresh_signal_cli
 from agent_company_core.codex_thread_goal_inventory import write_codex_thread_goal_inventory_cli
@@ -294,6 +295,23 @@ def build_parser() -> argparse.ArgumentParser:
     account_capacity_refresh.add_argument("--path")
     account_capacity_refresh.add_argument("--json-path")
     account_capacity_refresh.add_argument("--no-db-record", action="store_true")
+    account_capacity_continuity_cycle = sub.add_parser("run-account-capacity-continuity-cycle")
+    account_capacity_continuity_cycle.add_argument("--policy-snapshot", required=True)
+    account_capacity_continuity_cycle.add_argument("--refresh-signal")
+    account_capacity_continuity_cycle.add_argument("--now-utc")
+    account_capacity_continuity_cycle.add_argument("--max-lanes", type=int, default=100)
+    account_capacity_continuity_cycle.add_argument("--max-dispatches", type=int, default=1)
+    account_capacity_continuity_cycle.add_argument("--lease-minutes", type=int, default=120)
+    account_capacity_continuity_cycle.add_argument("--executor-agent-id", default="account-capacity-continuity-cycle")
+    account_capacity_continuity_cycle.add_argument("--stale-after-minutes", type=int, default=60)
+    account_capacity_continuity_cycle.add_argument("--cadence-minutes", type=int, default=15)
+    account_capacity_continuity_cycle.add_argument("--open-task-limit", type=int, default=10)
+    account_capacity_continuity_cycle.add_argument("--dispatch-limit", type=int, default=10)
+    account_capacity_continuity_cycle.add_argument("--drain", action="store_true")
+    account_capacity_continuity_cycle.add_argument("--work-dir")
+    account_capacity_continuity_cycle.add_argument("--path")
+    account_capacity_continuity_cycle.add_argument("--json-path")
+    account_capacity_continuity_cycle.add_argument("--no-db-record", action="store_true")
     lane_runtime_activation = sub.add_parser("write-lane-runtime-activation-plan")
     lane_runtime_activation.add_argument("--policy-snapshot", required=True)
     lane_runtime_activation.add_argument("--now-utc")
@@ -582,6 +600,9 @@ def main() -> None:
         elif args.cmd == "apply-account-capacity-refresh-signal":
             init_db(conn)
             apply_account_capacity_refresh_signal_cli(conn, args)
+        elif args.cmd == "run-account-capacity-continuity-cycle":
+            init_db(conn)
+            run_account_capacity_continuity_cycle_cli(conn, args)
         elif args.cmd == "write-lane-runtime-activation-plan":
             init_db(conn)
             write_lane_runtime_activation_plan_cli(conn, args)
