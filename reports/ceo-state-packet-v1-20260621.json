@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2561,
+    "artifacts": 2563,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 445,
+    "outcomes": 446,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 627,
-    "trace_events": 537
+    "tasks": 643,
+    "trace_events": 538
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T12:01:10Z",
+  "generated_utc": "2026-06-21T12:09:48Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T12:01:10Z",
+    "generated_utc": "2026-06-21T12:09:48Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 160,
-    "outcomes_delta": 27,
-    "tasks_delta": 48,
-    "trace_events_delta": 28
+    "artifacts_delta": 162,
+    "outcomes_delta": 28,
+    "tasks_delta": 64,
+    "trace_events_delta": 29
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -255,6 +255,12 @@
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
+      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
+      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
       "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621"
     },
@@ -266,18 +272,21 @@
     },
     {
       "kind": "open_task",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab"
-    },
-    {
-      "kind": "open_task",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
-      "task_id": "task-capability-overlap-mapper-20260621-active-goal-20260621"
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created.",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
     }
   ],
   "open_tasks": [
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 96,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts",
+      "title": "Decide continuity owner response for submitted_bounty_payouts"
+    },
     {
       "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
@@ -297,6 +306,60 @@
       "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002"
     },
     {
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "priority": 92,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+      "title": "Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Existing owner `lane-manager-ai_resources_lab-20260620` should handle the acknowledgement for `ai_resources_lab` locally and report evidence; no duplicate owner or worker should be created.",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "priority": 92,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
+      "title": "Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
+    },
+    {
+      "lane_id": "money_source_discovery",
+      "next_action": "Existing owner `lane-manager-money_source_discovery-019ec699` should handle the acknowledgement for `money_source_discovery` locally and report evidence; no duplicate owner or worker should be created.",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "priority": 92,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discover",
+      "title": "Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery"
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "next_action": "Existing owner `lane-manager-paid_code_bounties-019ec612` should handle the acknowledgement for `paid_code_bounties` locally and report evidence; no duplicate owner or worker should be created.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 92,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+      "title": "Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "next_action": "Existing owner `lane-manager-prediction_market_research-relaunch-20260614` should handle the acknowledgement for `prediction_market_research` locally and report evidence; no duplicate owner or worker should be created.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "priority": 92,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_res",
+      "title": "Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research"
+    },
+    {
+      "lane_id": "youtube_content_channels",
+      "next_action": "Existing owner `lane-manager-youtube_content_channels-20260620` should handle the acknowledgement for `youtube_content_channels` locally and report evidence; no duplicate owner or worker should be created.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "priority": 92,
+      "status": "new",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_chann",
+      "title": "Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels"
+    },
+    {
       "lane_id": "ai_resources_lab",
       "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
       "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
@@ -304,73 +367,20 @@
       "status": "new",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
       "title": "Follow up customer input for ai_resources_lab"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
-      "owner_agent_id": "capability-overlap-mapper-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-capability-overlap-mapper-20260621-active-goal-20260621",
-      "title": "Active goal for capability-overlap-mapper-20260621"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
-      "owner_agent_id": "candidate-registry-curator-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-candidate-registry-curator-20260621-active-goal-20260621",
-      "title": "Active goal for candidate-registry-curator-20260621"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
-      "owner_agent_id": "local-evaluation-harness-builder-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-local-evaluation-harness-builder-20260621-active-goal-20260621",
-      "title": "Active goal for local-evaluation-harness-builder-20260621"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
-      "owner_agent_id": "adoption-retirement-reviewer-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-adoption-retirement-reviewer-20260621-active-goal-20260621",
-      "title": "Active goal for adoption-retirement-reviewer-20260621"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
-      "owner_agent_id": "continuity-watchdog-worker-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-continuity-watchdog-worker-20260621-active-goal-20260621",
-      "title": "Active goal for continuity-watchdog-worker-20260621"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
-      "owner_agent_id": "premium-customer-context-router-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-premium-customer-context-router-20260621-active-goal-20260621",
-      "title": "Active goal for premium-customer-context-router-20260621"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
-      "owner_agent_id": "browser-account-ops-worker-20260621",
-      "priority": 90,
-      "status": "in_progress",
-      "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621",
-      "title": "Active goal for browser-account-ops-worker-20260621"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
+    {
+      "created_at": "2026-06-21T12:08:33Z",
+      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Work the created local dispatch tasks through existing owners and CEO/AI Resources review; source tasks and lanes remain unchanged.",
+      "outcome_id": "outcome-continuity-watchdog-owner-response-task-dispatch-v1-20260621",
+      "outcome_type": "continuity_watchdog_owner_response_task_dispatch",
+      "realized_usd": 0.0,
+      "status": "dispatch_tasks_ready"
+    },
     {
       "created_at": "2026-06-21T11:59:56Z",
       "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-response-artifacts-v1-20260621.md",
@@ -440,16 +450,6 @@
       "outcome_type": "ceo_state_packet",
       "realized_usd": 0.0,
       "status": "current"
-    },
-    {
-      "created_at": "2026-06-20T21:43:24Z",
-      "evidence": "E:\\agent-company-lab\\reports\\goal-evolver-review-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path.",
-      "outcome_id": "outcome-goal-evolver-review-v1-20260621",
-      "outcome_type": "goal_evolver_review",
-      "realized_usd": 0.0,
-      "status": "apply_after_review"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

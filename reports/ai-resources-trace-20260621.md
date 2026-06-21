@@ -1,8 +1,8 @@
 # Agent Company Trace Events
 
-Generated UTC: 2026-06-21T12:01:16Z
+Generated UTC: 2026-06-21T12:09:55Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 16
+Rows shown: 17
 
 ## Boundary
 
@@ -25,6 +25,7 @@ Rows shown: 16
 | `ceo_state_packets_installed` | 1 |
 | `ceo_worker_constellation_bootstrapped` | 1 |
 | `continuity_watchdog_owner_response_artifacts_written` | 1 |
+| `continuity_watchdog_owner_response_task_dispatch_written` | 1 |
 | `continuity_watchdog_restore_plan_written` | 1 |
 | `continuity_watchdog_restore_response_bundle_written` | 1 |
 | `continuity_watchdog_snapshot_written` | 1 |
@@ -34,13 +35,14 @@ Rows shown: 16
 
 | Lane | Count |
 | --- | ---: |
-| `ai_resources_lab` | 16 |
+| `ai_resources_lab` | 17 |
 
 ## Events
 
 | Time | Type | Trace | Lane | Task | Agent | Event | Source | Artifact | Metadata |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-21T12:01:10Z | ceo_state_packet_refreshed | `trace-ceo-state-packet-v1-20260621` | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | lane-manager-ai_resources_lab-20260620 | `trace-event-ceo-state-packet-v1-20260621` - Refreshed CEO state packet with 10 dispatch candidates and 10 optional human gate decisions. | ceo_state_packet_v1 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | {"active_blockers_and_gates": {"blocked_task_count": 0, "optional_gate_queue_count": 10, "required_human_action_count": 0, "service_requests_needing_review": 13, "stale_owner_acknowledgement_count": 6}, "company_counts": |
+| 2026-06-21T12:09:48Z | ceo_state_packet_refreshed | `trace-ceo-state-packet-v1-20260621` | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | lane-manager-ai_resources_lab-20260620 | `trace-event-ceo-state-packet-v1-20260621` - Refreshed CEO state packet with 10 dispatch candidates and 10 optional human gate decisions. | ceo_state_packet_v1 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | {"active_blockers_and_gates": {"blocked_task_count": 0, "optional_gate_queue_count": 10, "required_human_action_count": 0, "service_requests_needing_review": 13, "stale_owner_acknowledgement_count": 6}, "company_counts": |
+| 2026-06-21T12:09:45Z | continuity_watchdog_owner_response_task_dispatch_written | `trace-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | continuity-watchdog-worker-20260621 | `trace-event-continuity-watchdog-owner-response-task-dispatch-v1-20260621` - Wrote 15 continuity owner response dispatch tasks. | continuity_watchdog_owner_response_task_dispatch_v1 | E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md | {"counts": {"acknowledgement_response_required": 6, "dispatch_tasks": 15, "lane_goal_response_required": 8, "manual_review_required": 0, "owner_selection_or_park_required": 1}, "dispatch_task_ids": ["task-continuity-owne |
 | 2026-06-21T12:01:07Z | continuity_watchdog_owner_response_artifacts_written | `trace-continuity-watchdog-owner-response-artifacts-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-owner-response-artifacts-v1-20260621` | continuity-watchdog-worker-20260621 | `trace-event-continuity-watchdog-owner-response-artifacts-v1-20260621` - Wrote 15 continuity owner response artifacts. | continuity_watchdog_owner_response_artifacts_v1 | E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.md | {"counts": {"acknowledgement_response_required": 6, "lane_goal_response_required": 8, "manual_review_required": 0, "owner_response_artifacts": 15, "owner_selection_or_park_required": 1}, "owner_response_artifact_ids": [" |
 | 2026-06-21T12:01:05Z | continuity_watchdog_restore_response_bundle_written | `trace-continuity-watchdog-restore-response-bundle-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-restore-response-bundle-v1-20260621` | continuity-watchdog-worker-20260621 | `trace-event-continuity-watchdog-restore-response-bundle-v1-20260621` - Wrote 15 continuity restore response contracts. | continuity_watchdog_restore_response_bundle_v1 | E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.md | {"counts": {"acknowledgement_response_required": 6, "lane_goal_response_required": 8, "manual_review_required": 0, "owner_selection_or_park_required": 1, "response_items": 15}, "response_item_ids": ["continuity-restore-r |
 | 2026-06-21T12:01:02Z | continuity_watchdog_restore_plan_written | `trace-continuity-watchdog-restore-plan-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-restore-plan-v1-20260621` | continuity-watchdog-worker-20260621 | `trace-event-continuity-watchdog-restore-plan-v1-20260621` - Wrote 15 continuity restore packets. | continuity_watchdog_restore_plan_v1 | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.md | {"counts": {"dispatch_stale_owner_acknowledgement": 6, "manual_restore_review": 0, "repair_ownerless_lane": 1, "request_lane_goal": 8, "restore_packets": 15}, "restore_packet_ids": ["continuity-restore-v1-001-repair_owne |

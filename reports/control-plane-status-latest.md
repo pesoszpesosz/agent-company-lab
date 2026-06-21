@@ -1,6 +1,6 @@
 # Agent Company Control Plane Status
 
-Generated UTC: 2026-06-21T12:01:18Z
+Generated UTC: 2026-06-21T12:09:58Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
 
 ## Lane Ownership
@@ -72,11 +72,11 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 | 98 | complete | `platform_engineering` | `task-agent-company-atlas-compact-path-chrome-v1-20260618` - Compact Path Chrome | recovered-profitable-edge-infra |  until  | Keep reducing scroll cost and upgrade the first-screen motion language from utility panels into richer game-stage feedback. |
 | 98 | complete | `platform_engineering` | `task-agent-company-atlas-path-split-stage-v1-20260618` - Split Path Mission Stage | recovered-profitable-edge-infra |  until  | Continue improving first-screen visual quality, motion polish, and low-scroll game-stage comprehension. |
 | 98 | complete | `platform_engineering` | `task-temporal-inngest-adapter-runtime-readiness-20260615` - Decide Temporal/Inngest runtime readiness from durable integration preflight | recovered-profitable-edge-infra |  until  | Implement the local-only durable adapter runtime interface contract and validation, with explicit negative checks that no Temporal/Inngest imports, starts, events, activities, or service-request mutations occur. |
+| 97 | complete | `ai_resources_lab` | `task-continuity-watchdog-owner-response-task-dispatch-v1-20260621` - Write continuity watchdog owner response task dispatch v1 | continuity-watchdog-worker-20260621 |  until  | Work the created local dispatch tasks through existing owners and CEO/AI Resources review; source tasks and lanes remain unchanged. |
 | 97 | complete | `platform_engineering` | `task-agent-company-atlas-path-viewport-stage-v1-20260618` - Compact Path Viewport Stage | recovered-profitable-edge-infra |  until  | Continue reducing scroll, improving motion quality, and making lane paths read as premium game stages. |
 | 97 | complete | `platform_engineering` | `task-agent-company-atlas-path-core-deck-v1-20260618` - Add Path Core Deck | recovered-profitable-edge-infra |  until  | Continue reducing scroll and improving premium game-state clarity across path screens. |
 | 97 | complete | `platform_engineering` | `task-agent-company-atlas-path-mission-glance-v1-20260618` - Add Path Mission Glance | recovered-profitable-edge-infra |  until  | Continue reducing scroll and improving premium game-state clarity across path screens. |
 | 97 | complete | `platform_engineering` | `task-agent-company-atlas-path-utility-motion-v1-20260618` - Add Path Utility Motion Director | recovered-profitable-edge-infra |  until  | Continue improving visual quality and reducing scroll depth with richer, stateful path surfaces. |
-| 97 | complete | `platform_engineering` | `task-agent-company-atlas-path-utility-dock-v1-20260618` - Add compact Path Utility Dock to Path Map | recovered-profitable-edge-infra |  until  | Continue improving Atlas animation quality and reduce unnecessary Path Map scrolling |
 
 ## Service Requests
 
@@ -121,6 +121,8 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 
 | Kind | Lane | Artifact | Path/URL |
 | --- | --- | --- | --- |
+| continuity_watchdog_owner_response_task_dispatch_json | `ai_resources_lab` | `artifact-continuity-watchdog-owner-response-task-dispatch-v1-json-20260621` | `E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.json` |
+| continuity_watchdog_owner_response_task_dispatch_markdown | `ai_resources_lab` | `artifact-continuity-watchdog-owner-response-task-dispatch-v1-md-20260621` | `E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md` |
 | continuity_watchdog_owner_response_artifacts_json | `ai_resources_lab` | `artifact-continuity-watchdog-owner-response-artifacts-v1-json-20260621` | `E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.json` |
 | continuity_watchdog_owner_response_artifacts_markdown | `ai_resources_lab` | `artifact-continuity-watchdog-owner-response-artifacts-v1-md-20260621` | `E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.md` |
 | continuity_watchdog_restore_response_bundle_json | `ai_resources_lab` | `artifact-continuity-watchdog-restore-response-bundle-v1-json-20260621` | `E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.json` |
@@ -169,13 +171,12 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 | premium_customer_followup_escalation_test | `premium_customer_intake` | `artifact-premium-customer-followup-escalation-test-20260620` | `E:\agent-company-lab\tests\test_premium_customer_followup_escalation.py` |
 | premium_customer_intake_readme | `premium_customer_intake` | `artifact-premium-customer-followup-escalation-readme-20260620` | `E:\agent-company-lab\intake\customer\README.md` |
 | customer_followup_escalation_json | `premium_customer_intake` | `artifact-premium-customer-followup-escalation-report-json-20260620` | `E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.json` |
-| customer_followup_escalation | `premium_customer_intake` | `artifact-premium-customer-followup-escalation-report-md-20260620` | `E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md` |
-| customer_routing_ledger | `premium_customer_intake` | `artifact-premium-customer-followup-escalation-ledger-json-20260620` | `E:\agent-company-lab\reports\customer-request-routing-ledger-v1-20260620.json` |
 
 ## Recent Outcomes
 
 | Status | Type | Lane | Outcome | Next Action |
 | --- | --- | --- | --- | --- |
+| dispatch_tasks_ready | continuity_watchdog_owner_response_task_dispatch | `ai_resources_lab` | `outcome-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | Work the created local dispatch tasks through existing owners and CEO/AI Resources review; source tasks and lanes remain unchanged. |
 | owner_response_artifacts_ready | continuity_watchdog_owner_response_artifacts | `ai_resources_lab` | `outcome-continuity-watchdog-owner-response-artifacts-v1-20260621` | Use these local owner response artifacts in the next CEO/AI Resources state packet; source tasks and lanes remain unchanged. |
 | responses_ready | continuity_watchdog_restore_response_bundle | `ai_resources_lab` | `outcome-continuity-watchdog-restore-response-bundle-v1-20260621` | Route response contracts to AI Resources or existing lane owners; source restore packets and source tasks remain unchanged. |
 | restore_plan_ready | continuity_watchdog_restore_plan | `ai_resources_lab` | `outcome-continuity-watchdog-restore-plan-v1-20260621` | Route restore packets to AI Resources or existing lane owners; keep all source state unchanged until packet evidence exists. |
@@ -225,7 +226,6 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 | kalshi_public_data_paper_signal_checker_complete_local_only | paper_signal_checker | `prediction_market_research` | `outcome-kalshi-public-data-paper-signal-checker-v1-20260618` | Add a historical-settled replay fixture with verified settlement values and keep the checker pessimistic until fees, depth, eligibility, official source, and max-loss fields are proven. Keep account, API keys, signed requests, orderbook depth, trades, deposits, withdrawals, payments, worker/runtime, and real-money gates blocked. |
 | arc_agi_3_prereq_planner_baseline_complete_local_only | local_competition_baseline | `ai_ml_competitions` | `outcome-arc-agi-3-prereq-planner-baseline-v1-20260618` | Add hidden-prerequisite environments where the planner must infer edges from blocked actions and failed attempts, then compare learned-edge planning against the visible-edge planner. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked. |
 | gumroad_no_publish_approval_packet_ready_local_only | approval_packet | `digital_products_templates_plugins` | `outcome-gumroad-no-publish-approval-request-packet-20260618` | If the operator approves this packet, create an exact-scope service request for Gumroad account/listing copy and package-manifest review. Do not log in, create/edit a seller profile, accept terms, create/upload/edit a product, publish a listing or price, configure payout/tax/payment, or perform any public action from this packet alone. |
-| arc_agi_3_micro_env_replay_baseline_complete_local_only | local_competition_baseline | `ai_ml_competitions` | `outcome-arc-agi-3-micro-env-replay-baseline-v1-20260618` | Extend the synthetic micro-environment suite with distractors and a tiny planner that infers prerequisite graphs from replay history. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submissions, paper/public action, paid compute/API, worker/runtime, and external side effects blocked. |
 
 ## Recent Lane Evidence
 
@@ -304,7 +304,8 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 
 | Time | Type | Trace | Lane | Task | Event | Artifact |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-21T12:01:10Z | ceo_state_packet_refreshed | `trace-ceo-state-packet-v1-20260621` | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `trace-event-ceo-state-packet-v1-20260621` - Refreshed CEO state packet with 10 dispatch candidates and 10 optional human gate decisions. | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md |
+| 2026-06-21T12:09:48Z | ceo_state_packet_refreshed | `trace-ceo-state-packet-v1-20260621` | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `trace-event-ceo-state-packet-v1-20260621` - Refreshed CEO state packet with 10 dispatch candidates and 10 optional human gate decisions. | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md |
+| 2026-06-21T12:09:45Z | continuity_watchdog_owner_response_task_dispatch_written | `trace-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | `trace-event-continuity-watchdog-owner-response-task-dispatch-v1-20260621` - Wrote 15 continuity owner response dispatch tasks. | E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md |
 | 2026-06-21T12:01:07Z | continuity_watchdog_owner_response_artifacts_written | `trace-continuity-watchdog-owner-response-artifacts-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-owner-response-artifacts-v1-20260621` | `trace-event-continuity-watchdog-owner-response-artifacts-v1-20260621` - Wrote 15 continuity owner response artifacts. | E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.md |
 | 2026-06-21T12:01:05Z | continuity_watchdog_restore_response_bundle_written | `trace-continuity-watchdog-restore-response-bundle-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-restore-response-bundle-v1-20260621` | `trace-event-continuity-watchdog-restore-response-bundle-v1-20260621` - Wrote 15 continuity restore response contracts. | E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.md |
 | 2026-06-21T12:01:02Z | continuity_watchdog_restore_plan_written | `trace-continuity-watchdog-restore-plan-v1-20260621` | `ai_resources_lab` | `task-continuity-watchdog-restore-plan-v1-20260621` | `trace-event-continuity-watchdog-restore-plan-v1-20260621` - Wrote 15 continuity restore packets. | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.md |
@@ -353,4 +354,3 @@ Database: `E:\agent-company-lab\state\agent_company.sqlite`
 | 2026-06-18T18:31:57Z | implementation | `trace-agent-company-atlas-compact-mission-stage-v1-20260618` | `platform_engineering` | `task-agent-company-atlas-compact-mission-stage-v1-20260618` | `trace-atlas_compact_mission_stage_added-20260618` - Converted direct Command/Path entry into a bounded compact mission stage with tighter header, mission modules, and animated signal layer. | reports/agent-company-atlas-compact-mission-stage-trace-metadata-20260618.json |
 | 2026-06-18T18:25:05Z | implementation | `trace-agent-company-atlas-command-workspace-first-v1-20260618` | `platform_engineering` | `task-agent-company-atlas-command-workspace-first-v1-20260618` | `trace-atlas_command_workspace_first_added-20260618` - Moved active lane workspace ahead of global command boards and made detail panel lead in responsive command layouts. | reports/agent-company-atlas-command-workspace-first-trace-metadata-20260618.json |
 | 2026-06-18T18:16:21Z | implementation | `trace-agent-company-atlas-path-core-motion-v1-20260618` | `platform_engineering` | `task-agent-company-atlas-path-core-motion-v1-20260618` | `trace-atlas_path_core_motion_added-20260618` - Added a data-driven SCAN/COMMAND/ROUTE motion rail to the Path Core Deck with active beacons, runner progress, and reduced-motion support. | reports/agent-company-atlas-path-core-motion-trace-metadata-20260618.json |
-| 2026-06-18T18:07:06Z | implementation | `trace-agent-company-atlas-path-core-deck-v1-20260618` | `platform_engineering` | `task-agent-company-atlas-path-core-deck-v1-20260618` | `trace-atlas_path_core_deck_added-20260618` - Compacted the immediate Path Map stack into a SCAN/COMMAND/ROUTE Core Deck with one selected panel mounted at a time. | reports/agent-company-atlas-path-core-deck-trace-metadata-20260618.json |

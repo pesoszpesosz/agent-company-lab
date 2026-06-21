@@ -1,6 +1,6 @@
 # Manager Packet - ai_ml_competitions
 
-Generated UTC: 2026-06-21T12:01:23Z
+Generated UTC: 2026-06-21T12:10:01Z
 Department: Competition Lab
 Lane status: active
 Current owner: `lane-manager-ai_ml_competitions-019ec69a`
@@ -105,6 +105,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 92 | new | `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions` - Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions | lane-manager-ai_ml_competitions-019ec69a |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-002-continuity-restore-response-v1-002-continuity-restore-v1-002-dispatch_stale_own | Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created. |
 | 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions` - Acknowledge customer follow-up triage for ai_ml_competitions | lane-manager-ai_ml_competitions-019ec69a |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 76 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions` - Follow up customer input for ai_ml_competitions | lane-manager-ai_ml_competitions-019ec69a |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Create a competition feasibility packet with account/dataset/compute gates and local proof path. |
 | 89 | complete | `task-arc-agi-3-micro-env-replay-baseline-v1-20260618` - Create ARC-AGI-3 micro-environment replay baseline | lane-manager-ai_ml_competitions-019ec69a |  | E:\agent-company-lab\reports\ai-ml-competitions\arc-agi-3-micro-env-replay-baseline-v1-validation-20260618.json | Extend the synthetic micro-environment suite with distractors and a tiny planner that infers prerequisite graphs from replay history. Keep Kaggle account/rules, official data, ARC toolkit/API keys, scorecards, submission |
@@ -116,7 +117,6 @@ These require a scoped service request and approval before any execution:
 | 72 | complete | `task-lane-scout-kaggle_money_competitions-20260618` - Lane scout local proof: kaggle money competitions | lane-manager-ai_ml_competitions-019ec69a |  | E:\agent-company-lab\reports\money-path-lane-scout-packets\kaggle-money-competition-scout-worksheet-local-proof-validation.json | Create a no-login Kaggle competition row fixture from manually saved public listing/rules snippets, then run the worksheet scorer and prove all rows either have a next local baseline action or a kill reason. Keep Kaggle |
 | 70 | complete | `task-devpost-prize-calendar-20260616` - Create Devpost weekly prize calendar | lane-manager-ai_ml_competitions-019ec69a |  | E:\agent-company-lab\reports\ai-ml-competitions\devpost-prize-calendar-20260616.md | Create devpost-rules-packet-build-with-gemini-xprize-20260616.md after read-only rules refresh confirms eligibility and terms. |
 | 70 | complete | `task-arc-prize-feasibility-memo-20260616` - Create ARC Prize 2026 feasibility memo | lane-manager-ai_ml_competitions-019ec69a |  | E:\agent-company-lab\reports\ai-ml-competitions\arc-prize-feasibility-memo-20260616.md | Create arc-local-toy-harness-plan-20260616.md. |
-| 70 | complete | `task-ai_ml_competitions-startup-20260614` - Lane startup: read packet, choose first proof task, write local plan | lane-manager-ai_ml_competitions-019ec69a |  | Local startup memo, source list, gates, and one next proof artifact | Await approval for req-wave4-ai-ml-competitions-browser-readonly-20260614; then run approved read-only Kaggle-first shortlist capture using E:\agent-company-lab\reports\ai-ml-competitions\competition-scout-rubric-2026061 |
 
 ## Service Requests
 

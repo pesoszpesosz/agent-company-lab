@@ -72,6 +72,14 @@ python tools\agent_company.py write-continuity-watchdog-owner-response-artifacts
 
 The owner response artifact step chooses the safe local response for each contract, writes per-response JSON/Markdown evidence, and keeps source tasks, lanes, owner assignments, workers, and external systems unchanged.
 
+Convert selected owner response artifacts into concrete local dispatch tasks with:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-owner-response-task-dispatch
+```
+
+The task dispatch step creates or updates stable local task rows with duplicate keys for AI Resources, existing lane owners, and CEO decision surfaces. It does not complete source acknowledgement tasks, change lane ownership, start workers, or perform external actions.
+
 ## Boundary
 
 The constellation is local-control-plane only by default. It does not open browsers, create accounts, approve service requests, start external runtimes, publish, submit, trade, spend, call APIs, or contact anyone without a scoped gate.

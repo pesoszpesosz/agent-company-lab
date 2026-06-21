@@ -243,6 +243,14 @@ python tools\agent_company.py write-continuity-watchdog-owner-response-artifacts
 
 The owner response artifact step is local-only. It selects safe response options for AI Resources, existing lane owners, and CEO decision batches, writes per-response evidence files, and still does not mutate source tasks, source lanes, owner assignments, worker queues, or external systems.
 
+Convert selected owner response artifacts into concrete local dispatch tasks:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-owner-response-task-dispatch
+```
+
+The task dispatch step creates stable local task rows with duplicate keys for AI Resources, existing lane owners, and CEO decision surfaces. It does not complete source acknowledgement tasks, change lane ownership, start workers, or contact external systems.
+
 ## Immediate Backlog
 
 1. Keep `bootstrap-ceo-workers` current with live worker thread handles and active goals.
@@ -252,7 +260,7 @@ The owner response artifact step is local-only. It selects safe response options
 5. Create a YouTube lane scout packet covering channel types, asset workflow, account/public gates, and first no-post content batch.
 6. Create a control-plane capacity benchmark packet for 1,000/10,000/100,000 row scenarios.
 7. Create a browser/account service-worker roadmap packet that separates read-only browsing, registration preparation, non-KYC account actions, and human-only KYC actions.
-8. Route continuity owner response artifacts to AI Resources, existing lane owners, or CEO decision batch, then refresh the CEO state packet.
+8. Work continuity owner response dispatch tasks through AI Resources, existing lane owners, or CEO decision batch, then refresh the CEO state packet.
 
 ## Zero Side-Effect Boundary For This Goal
 

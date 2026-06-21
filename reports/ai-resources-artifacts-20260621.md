@@ -1,8 +1,8 @@
 # Agent Company Artifacts
 
-Generated UTC: 2026-06-21T12:01:13Z
+Generated UTC: 2026-06-21T12:09:51Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 62
+Rows shown: 64
 
 ## Counts By Kind
 
@@ -34,6 +34,8 @@ Rows shown: 62
 | `cli` | 1 |
 | `continuity_watchdog_owner_response_artifacts_json` | 1 |
 | `continuity_watchdog_owner_response_artifacts_markdown` | 1 |
+| `continuity_watchdog_owner_response_task_dispatch_json` | 1 |
+| `continuity_watchdog_owner_response_task_dispatch_markdown` | 1 |
 | `continuity_watchdog_restore_plan_json` | 1 |
 | `continuity_watchdog_restore_plan_markdown` | 1 |
 | `continuity_watchdog_restore_response_bundle_json` | 1 |
@@ -63,12 +65,14 @@ Rows shown: 62
 
 | Lane | Count |
 | --- | ---: |
-| `ai_resources_lab` | 62 |
+| `ai_resources_lab` | 64 |
 
 ## Artifacts
 
 | Created | Kind | Lane | Task | Artifact | Path/URL | SHA256 | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T12:08:33Z | continuity_watchdog_owner_response_task_dispatch_markdown | `ai_resources_lab` | `task-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | `artifact-continuity-watchdog-owner-response-task-dispatch-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.md | c29c6ce9e03d1d98169c458772df4d8dcf832d18a60ad5254c7bda6e5d88fd99 | Human-readable continuity owner response task dispatch. |
+| 2026-06-21T12:08:33Z | continuity_watchdog_owner_response_task_dispatch_json | `ai_resources_lab` | `task-continuity-watchdog-owner-response-task-dispatch-v1-20260621` | `artifact-continuity-watchdog-owner-response-task-dispatch-v1-json-20260621` | E:\agent-company-lab\reports\continuity-watchdog-owner-response-task-dispatch-v1-20260621.json | 990251fecbeb69783920d354081c14d1910dc1798e9f78b9d5da73fa5c9cbb25 | Machine-readable continuity owner response task dispatch. |
 | 2026-06-21T11:59:56Z | continuity_watchdog_owner_response_artifacts_markdown | `ai_resources_lab` | `task-continuity-watchdog-owner-response-artifacts-v1-20260621` | `artifact-continuity-watchdog-owner-response-artifacts-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.md | 0f8932749c7c06228c7dbda431186ff0747cd0fe06a2c5b25742c9a3d743cf18 | Human-readable continuity watchdog owner response artifacts. |
 | 2026-06-21T11:59:56Z | continuity_watchdog_owner_response_artifacts_json | `ai_resources_lab` | `task-continuity-watchdog-owner-response-artifacts-v1-20260621` | `artifact-continuity-watchdog-owner-response-artifacts-v1-json-20260621` | E:\agent-company-lab\reports\continuity-watchdog-owner-response-artifacts-v1-20260621.json | 8878d6064c0cf90de8c70a81acb20c7a63621569f42f86665ab1c9c5d5c92a30 | Machine-readable continuity watchdog owner response artifacts. |
 | 2026-06-21T11:49:26Z | continuity_watchdog_restore_response_bundle_markdown | `ai_resources_lab` | `task-continuity-watchdog-restore-response-bundle-v1-20260621` | `artifact-continuity-watchdog-restore-response-bundle-v1-md-20260621` | E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.md | baacb6cbe56836478ffcbc6279b2bbb8c8286cd4755789b3707dbd276c34fefd | Human-readable continuity watchdog restore response bundle. |
@@ -81,10 +85,10 @@ Rows shown: 62
 | 2026-06-21T01:15:00Z | ceo_worker_roster_json | `ai_resources_lab` | `task-ceo-worker-bootstrap-v1-20260621` | `artifact-ceo-worker-roster-v1-json-20260621` | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.json | c008105bff02e78c1cd20f98157c10ff323356a4f07e73fb72c864ffbca95bae | Machine-readable CEO worker roster. |
 | 2026-06-21T00:50:00Z | ai_resources_owner_acknowledgement_dispatch | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002` | `artifact-ai-resources-owner-acknowledgement-dispatch-md-customer-input-ceo-operating-goal-objective-20260620-002` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md | f6062eb032636878323f7d38af4fa1b8114905298fa148069da79f9193585edc | Human-readable owner acknowledgement dispatch packet. |
 | 2026-06-21T00:50:00Z | ai_resources_owner_acknowledgement_dispatch_json | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002` | `artifact-ai-resources-owner-acknowledgement-dispatch-json-customer-input-ceo-operating-goal-objective-20260620-002` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-dispatch-v1-20260621.json | b7f0f3d3b3d9ada02ed58660c64db7411eb9741794d0b23395563d50a152ed8e | Machine-readable owner acknowledgement dispatch packet. |
-| 2026-06-21T00:30:00Z | human_action_feed_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-md-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.md | e7eec25834d7b2de08a5f747dc7dec4efa883ecd15033dff222addf3d962a343 | Human-readable human-action feed. |
-| 2026-06-21T00:30:00Z | human_action_feed_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-json-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.json | c701e709e48df48b54afefb9c4eb7f61feba751ad254fcf971cb6be3f9d1cdb8 | Machine-readable human-action feed. |
-| 2026-06-21T00:30:00Z | ceo_state_packet_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-md-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | 466eaf2cbeca1188f92f71f3c54a3d144dbb18531b939339bd3de1d31b6d85ca | Human-readable CEO state packet. |
-| 2026-06-21T00:30:00Z | ceo_state_packet_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-json-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json | fb14021bb8dc9b0cac62b7cb29cf0c2ffccc528814a781cac927ea04ff96c283 | Machine-readable CEO state packet. |
+| 2026-06-21T00:30:00Z | human_action_feed_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-md-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.md | a53de49386730c16ae96c2584162130ee8a6f848b14c2ef7a307db0a4a449b89 | Human-readable human-action feed. |
+| 2026-06-21T00:30:00Z | human_action_feed_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-human-action-feed-v1-json-20260621` | E:\agent-company-lab\reports\human-action-feed-v1-20260621.json | 62f262ae287a239e01966910b813c4bd9bd05997296d9b9cec0166f6f35ec050 | Machine-readable human-action feed. |
+| 2026-06-21T00:30:00Z | ceo_state_packet_markdown | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-md-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | 64b66a5ae18c5d94d740ae235b4dad7ce82b94d68151040e84600a46003dfa67 | Human-readable CEO state packet. |
+| 2026-06-21T00:30:00Z | ceo_state_packet_json | `ai_resources_lab` | `task-ceo-state-packet-v1-20260621` | `artifact-ceo-state-packet-v1-json-20260621` | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json | a7dec4c60a0a793f0c2a2c9f757254c9522e285cbb24dd9d50c131f5bcbe3015 | Machine-readable CEO state packet. |
 | 2026-06-20T21:43:24Z | goal_evolver_review | `ai_resources_lab` | `task-goal-evolver-review-v1-20260621` | `artifact-goal-evolver-review-v1-md-20260621` | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.md | fa71ace9030ec6b7718954d384f1b4ce9cd868eb9b644750e95cc69b1a9293fb | Human-readable Goal Evolver review packet. |
 | 2026-06-20T21:43:24Z | goal_evolver_review_json | `ai_resources_lab` | `task-goal-evolver-review-v1-20260621` | `artifact-goal-evolver-review-v1-json-20260621` | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.json | 6cf1fc53894a9c521c1f33aacf74f11eb9f87e2dea8822e8e7eea23522fd3603 | Machine-readable Goal Evolver review packet. |
 | 2026-06-20T21:37:51Z | report_md | `ai_resources_lab` | `task-ai-resources-owner-acknowledgement-monitor-command-v1-20260621` | `artifact-ai-resources-owner-acknowledgement-monitor-command-v1-20260621-report_md` | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | 4ffa8aa1d919d0429db08a38561f2c99b09bb69d900add0b51816386bb721c61 | Live monitor markdown report for the CEO operating-goal input. |
