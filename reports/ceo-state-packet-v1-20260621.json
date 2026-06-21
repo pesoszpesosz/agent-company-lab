@@ -20,7 +20,7 @@
     "roles": 25,
     "service_requests": 16,
     "tasks": 719,
-    "trace_events": 690
+    "trace_events": 692
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T16:41:34Z",
+  "generated_utc": "2026-06-21T16:05:30Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T16:41:34Z",
+    "generated_utc": "2026-06-21T16:05:30Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -212,7 +212,7 @@
     "artifacts_delta": 388,
     "outcomes_delta": 79,
     "tasks_delta": 140,
-    "trace_events_delta": 181
+    "trace_events_delta": 183
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [

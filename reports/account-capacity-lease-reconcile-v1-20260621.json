@@ -1,27 +1,27 @@
 {
   "counts": {
     "capacity_claimed": 0,
-    "capacity_released": 1,
-    "sessions_changed": 1,
+    "capacity_released": 0,
+    "sessions_changed": 0,
     "sessions_reconciled": 1
   },
-  "generated_utc": "2026-06-21T16:40:00Z",
+  "generated_utc": "2026-06-21T16:02:20Z",
   "json_path": "E:\\agent-company-lab\\reports\\account-capacity-lease-reconcile-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\account-capacity-lease-reconcile-v1-20260621.md",
-  "next_action": "Rerun lane runtime activation planning; newly freed capacity may drain the next queued lane.",
+  "next_action": "Capacity counters already match active runtime deliveries.",
   "schema_version": "account_capacity_lease_reconcile.v1",
   "sessions": [
     {
-      "active_lease_count_after": 0,
+      "active_lease_count_after": 1,
       "active_lease_count_before": 1,
       "capacity_claimed": 0,
-      "capacity_released": 1,
+      "capacity_released": 0,
       "concurrency_limit": 1,
       "session_id": "codex-recovery-executor-low-concurrency",
       "status": "available"
     }
   ],
-  "status": "capacity_released",
+  "status": "already_consistent",
   "zero_side_effect_boundary": {
     "browser_sessions_started": 0,
     "external_api_calls": 0,

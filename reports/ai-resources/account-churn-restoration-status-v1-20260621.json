@@ -1,0 +1,118 @@
+{
+  "answer": "The queue/capacity restructuring is working better: exhausted capacity now becomes pending_capacity, and one bounded dispatch was delivered without blasting all lane threads. It is not complete because refresh detection still does not automatically flip the cooling-down pool back to available.",
+  "evidence": {
+    "activation_counts": {
+      "always_on_lanes": 2,
+      "available_capacity": 0,
+      "dispatch_recommendations": 0,
+      "eligible_task_candidates": 12,
+      "lanes_monitoring": 0,
+      "lanes_parked": 1,
+      "lanes_pending_capacity": 12,
+      "on_demand_lanes": 7,
+      "parked_lanes": 1,
+      "policies_seen": 15,
+      "scheduled_lanes": 5
+    },
+    "activation_status": "pending_capacity",
+    "capacity_sessions": [
+      {
+        "account_label": "projectless lane-manager threads",
+        "active_lease_count": 0,
+        "concurrency_limit": 7,
+        "last_error": "Parallel 007 dispatch hit systemError / shared-account pressure; do not blast all lane threads until refreshed.",
+        "last_refresh_utc": null,
+        "notes": "When refresh is detected, mark available and rerun dispatch plan; otherwise keep parked.",
+        "resume_after_utc": "2026-06-21T16:00:00Z",
+        "session_id": "codex-projectless-lane-manager-parallel-pool",
+        "status": "cooling_down",
+        "surface": "codex",
+        "updated_at": "2026-06-21T15:36:30Z"
+      },
+      {
+        "account_label": "bounded absolute-path recovery executor",
+        "active_lease_count": 1,
+        "concurrency_limit": 1,
+        "last_error": null,
+        "last_refresh_utc": "2026-06-21T15:36:00Z",
+        "notes": "Use for one queued local task at a time when parallel lane-owner threads are under shared-account pressure.",
+        "resume_after_utc": null,
+        "session_id": "codex-recovery-executor-low-concurrency",
+        "status": "available",
+        "surface": "codex",
+        "updated_at": "2026-06-21T16:02:00Z"
+      }
+    ],
+    "delivery_receipt": [
+      {
+        "delivered_at": "2026-06-21T16:02:10Z",
+        "delivery_attempts": 1,
+        "delivery_id": "delivery-lane-runtime-task-continuity-lane-next-task-20260621-premium_customer_intake-009",
+        "lane_id": "premium_customer_intake",
+        "last_error": null,
+        "session_id": "codex-recovery-executor-low-concurrency",
+        "status": "delivered",
+        "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-009",
+        "updated_at": "2026-06-21T16:02:10Z"
+      }
+    ],
+    "dispatched_task": [
+      {
+        "completed_at": null,
+        "lane_id": "premium_customer_intake",
+        "lease_expires_at": "2026-06-21T18:02:00Z",
+        "lease_owner_agent_id": "premium-customer-intake-agent-20260620",
+        "owner_agent_id": "premium-customer-intake-agent-20260620",
+        "priority": 72,
+        "status": "in_progress",
+        "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-009",
+        "updated_at": "2026-06-21T16:02:00Z"
+      }
+    ],
+    "watchdog_counts": {
+      "agents_missing_threads": 0,
+      "duplicate_active_keys": 0,
+      "expired_leases": 0,
+      "lanes_without_open_tasks": 0,
+      "missing_owner_agent_lanes": 0,
+      "ownerless_active_lanes": 0,
+      "stale_open_tasks": 15,
+      "stale_owner_acknowledgements": 0
+    },
+    "watchdog_status": "clear"
+  },
+  "generated_utc": "2026-06-21T16:05:00Z",
+  "next_evolution": [
+    "Add a refresh-signal intake that can mark sessions available only when a new usable account/session/refresh token is actually detected.",
+    "Add a single continuity-cycle command that drains one or N tasks according to capacity and writes an auditable summary.",
+    "Add stale in_progress lease escalation so a delivered task that does not complete becomes needs_restore instead of silently holding capacity."
+  ],
+  "operational_readout": [
+    "The low-concurrency executor accepted exactly one dispatch and is now occupied by premium_customer_intake-009.",
+    "The owner-thread delivery ledger shows the 009 prompt delivered once, so it will not resend by accident.",
+    "The activation planner now reports pending_capacity rather than restore/broken for the remaining queued lanes.",
+    "The watchdog remains clear: no ownerless lanes, missing owner threads, expired leases, duplicate active keys, or lanes without open tasks."
+  ],
+  "paths": {
+    "activation": "reports/lane-runtime-activation-plan-v1-20260621.json",
+    "delivery_outbox": "reports/lane-runtime-thread-delivery-outbox-v1-20260621.json",
+    "json": "reports/ai-resources/account-churn-restoration-status-v1-20260621.json",
+    "md": "reports/ai-resources/account-churn-restoration-status-v1-20260621.md",
+    "watchdog": "reports/continuity-watchdog-snapshot-v1-20260621.json"
+  },
+  "remaining_gaps": [
+    "The projectless parallel pool is still cooling_down even though its resume_after_utc has passed; the system needs a real refresh detector, not just a time hint.",
+    "There is no single command yet that runs reconcile -> seed -> plan -> drain -> outbox -> delivery receipt -> reconcile as one durable cycle.",
+    "Capacity release still depends on task completion being observed and reconciled after the owner thread finishes."
+  ],
+  "schema_version": "account_churn_restoration_status.v1",
+  "status": "better_but_needs_refresh_detector",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0
+  }
+}

@@ -1,7 +1,7 @@
 # Account Capacity Lease Reconcile v1
 
-Generated UTC: `2026-06-21T16:40:00Z`
-Status: `capacity_released`
+Generated UTC: `2026-06-21T16:02:20Z`
+Status: `already_consistent`
 JSON mirror: `E:\agent-company-lab\reports\account-capacity-lease-reconcile-v1-20260621.json`
 
 ## Counts
@@ -9,19 +9,19 @@ JSON mirror: `E:\agent-company-lab\reports\account-capacity-lease-reconcile-v1-2
 | Count | Value |
 | --- | ---: |
 | `sessions_reconciled` | 1 |
-| `sessions_changed` | 1 |
-| `capacity_released` | 1 |
+| `sessions_changed` | 0 |
+| `capacity_released` | 0 |
 | `capacity_claimed` | 0 |
 
 ## Sessions
 
 | Session | Status | Before | After | Released | Claimed |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `codex-recovery-executor-low-concurrency` | available | 1 | 0 | 1 | 0 |
+| `codex-recovery-executor-low-concurrency` | available | 1 | 1 | 0 | 0 |
 
 ## Next Action
 
-Rerun lane runtime activation planning; newly freed capacity may drain the next queued lane.
+Capacity counters already match active runtime deliveries.
 
 ## Boundary
 

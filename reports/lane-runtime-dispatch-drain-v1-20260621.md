@@ -1,6 +1,6 @@
 # Lane Runtime Dispatch Drain v1
 
-Generated UTC: `2026-06-21T16:10:30Z`
+Generated UTC: `2026-06-21T16:02:00Z`
 Status: `dispatch_packets_ready`
 Dry run: `False`
 Activation plan: `reports\lane-runtime-activation-plan-v1-20260621.json`
@@ -21,7 +21,7 @@ Packet dir: `E:\agent-company-lab\reports\lane-runtime-dispatch-packets-v1-20260
 
 | Session | Task | Lane | Lease Owner | Expires | Packet |
 | --- | --- | --- | --- | --- | --- |
-| `codex-recovery-executor-low-concurrency` | `task-continuity-lane-next-task-20260621-premium_customer_intake-008` | `premium_customer_intake` | `premium-customer-intake-agent-20260620` | `2026-06-21T18:10:30Z` | E:\agent-company-lab\reports\lane-runtime-dispatch-packets-v1-20260621\lane-runtime-dispatch-task-continuity-lane-next-t |
+| `codex-recovery-executor-low-concurrency` | `task-continuity-lane-next-task-20260621-premium_customer_intake-009` | `premium_customer_intake` | `premium-customer-intake-agent-20260620` | `2026-06-21T18:02:00Z` | E:\agent-company-lab\reports\lane-runtime-dispatch-packets-v1-20260621\lane-runtime-dispatch-task-continuity-lane-next-t |
 
 ## Skipped Dispatches
 
