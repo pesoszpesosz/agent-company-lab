@@ -12,15 +12,15 @@
     "goal_evolver_review_v1"
   ],
   "company_counts": {
-    "agents": 23,
-    "artifacts": 2754,
+    "agents": 25,
+    "artifacts": 2775,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 487,
+    "outcomes": 496,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 704,
-    "trace_events": 666
+    "tasks": 713,
+    "trace_events": 683
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T14:37:35Z",
+  "generated_utc": "2026-06-21T15:18:30Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T14:37:35Z",
+    "generated_utc": "2026-06-21T15:18:30Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,19 +209,13 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 353,
-    "outcomes_delta": 69,
-    "tasks_delta": 125,
-    "trace_events_delta": 157
+    "artifacts_delta": 374,
+    "outcomes_delta": 78,
+    "tasks_delta": 134,
+    "trace_events_delta": 174
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
-    {
-      "kind": "open_task",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Attempt scoped Codex thread-layer recovery or handoff for the seven systemError owner threads before retrying the 007 dispatch; do not create replacement lane managers or mutate ownership without an AR decision packet.",
-      "task_id": "task-continuity-thread-system-error-007-restore-20260621"
-    },
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
@@ -275,18 +269,15 @@
       "lane_id": "youtube_content_channels",
       "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties"
     }
   ],
   "open_tasks": [
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Attempt scoped Codex thread-layer recovery or handoff for the seven systemError owner threads before retrying the 007 dispatch; do not create replacement lane managers or mutate ownership without an AR decision packet.",
-      "owner_agent_id": "continuity-watchdog-worker-20260621",
-      "priority": 96,
-      "status": "new",
-      "task_id": "task-continuity-thread-system-error-007-restore-20260621",
-      "title": "Restore lane manager threads after 007 systemError dispatch"
-    },
     {
       "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
@@ -367,89 +358,98 @@
       "status": "new",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
       "title": "Follow up customer input for youtube_content_channels"
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "title": "Follow up customer input for paid_code_bounties"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
-      "created_at": "2026-06-21T14:28:25Z",
-      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-006.md",
-      "lane_id": "premium_customer_intake",
-      "next_action": "Write premium-customer-routing-queue-watch-v2-20260621.md from the local-only dropbox recheck result; keep raw customer material out of CEO context and take no external actions.",
-      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-006-20260621",
-      "outcome_type": "proof_derived_continuation",
+      "created_at": "2026-06-21T15:11:18Z",
+      "evidence": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-closure-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Prefer repo-backed Codex threads for durable owners; when unavailable, use a bounded absolute-path recovery executor with low concurrency instead of blasting many projectless threads.",
+      "outcome_id": "outcome-continuity-repo-recovery-executor-007-20260621",
+      "outcome_type": "thread_recovery_probe",
       "realized_usd": 0.0,
-      "status": "ready_to_write_watch_v2_status"
+      "status": "succeeded"
     },
     {
-      "created_at": "2026-06-21T14:28:16Z",
-      "evidence": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-006.md",
-      "lane_id": "digital_products_templates_plugins",
-      "next_action": "Assign or explicitly request E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\gumroad-direct-download-human-decision-intake-v1-20260621.md; keep proof-derived continuation loop parked until then.",
-      "outcome_id": "outcome-digital-products-proof-derived-continuation-v1-20260621-006",
-      "outcome_type": "proof_derived_continuation",
+      "created_at": "2026-06-21T15:10:59Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources\\account-capacity-and-goal-discovery-policy-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Implement a capacity ledger/dispatcher that parks cooling-down sessions and drains queued work immediately when a refresh event marks capacity available.",
+      "outcome_id": "outcome-account-capacity-goal-discovery-policy-v1-20260621",
+      "outcome_type": "ar_policy_adopted",
       "realized_usd": 0.0,
-      "status": "parked_loop_next_artifact_known_local_only"
+      "status": "adopted"
     },
     {
-      "created_at": "2026-06-21T14:28:06Z",
-      "evidence": "E:\\agent-company-lab\\reports\\security_bounty_private_reports\\proof-derived-continuation-v1-20260621-006.md",
+      "created_at": "2026-06-21T14:54:53Z",
+      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "next_action": "Next local step is the Gitcoin read-only refresh draft header only; no service mutation, browsing, wallet, submission, spend, or contact.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-web3_airdrops_grants_hackathons",
+      "outcome_type": "continuity_lane_next_task_recovery",
+      "realized_usd": 0.0,
+      "status": "local_proof_complete"
+    },
+    {
+      "created_at": "2026-06-21T14:54:52Z",
+      "evidence": "E:\\agent-company-lab\\reports\\security_bounty_private_reports\\proof-derived-continuation-v1-20260621-007.md",
       "lane_id": "security_bounty_private_reports",
-      "next_action": "Next local-only step: add the aar-path-001 absolute_path row to the future proof-plan artifact; stop before agents, ownership mutation, workers, service approvals, browser, live target access, scanning, exploit, publish, submit, trade, spend, APIs, report submission, or contact.",
-      "outcome_id": "outcome-proof-derived-continuation-security-006-v1-20260621",
-      "outcome_type": "proof_derived_continuation",
+      "next_action": "Next local step is the abstract absolute_path row in the AAR traversal proof plan; no live targets, scanning, execution, submission, or contact.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-security_bounty_private_reports",
+      "outcome_type": "continuity_lane_next_task_recovery",
       "realized_usd": 0.0,
-      "status": "complete_local_only_no_external_side_effects"
+      "status": "local_proof_complete"
     },
     {
-      "created_at": "2026-06-21T14:28:01Z",
-      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-006.md",
-      "lane_id": "local_trading_strategy_research",
-      "next_action": "Write the selected-dataset readiness-count artifact locally only; keep replay, agent/worker creation, ownership mutation, service approvals, browser, public action, APIs, spend, trade, brokers, paid data, contact, and external side-effect gates closed.",
-      "outcome_id": "outcome-local-trading-proof-derived-continuation-v1-20260621-006",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "complete"
-    },
-    {
-      "created_at": "2026-06-21T14:28:00Z",
-      "evidence": "E:\\agent-company-lab\\reports\\lead_generation_and_sales\\proof-derived-continuation-v1-20260621-006.md",
-      "lane_id": "lead_generation_and_sales",
-      "next_action": "Remain parked until the operator explicitly requests a separate exact-scope outreach_delivery_gate service request packet; no agents, ownership mutation, workers, service approvals, browsers, public action, APIs, spend, trade, or contact.",
-      "outcome_id": "outcome-lead-generation-proof-derived-continuation-v1-20260621-006",
-      "outcome_type": "proof_derived_continuation_packet",
-      "realized_usd": 0.0,
-      "status": "parked_until_operator_exact_scope_request"
-    },
-    {
-      "created_at": "2026-06-21T14:27:33Z",
-      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-006.md",
-      "lane_id": "web3_airdrops_grants_hackathons",
-      "next_action": "Next expected artifact: E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\gitcoin-readonly-refresh-request-draft-v1-20260621.md, starting with the local source/evidence header and no-approval/no-start boundary. No agents, ownership mutation, workers, service request mutation, browser, wallet, signature, publish, submit, trade, spend, APIs, or contact.",
-      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-006",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "continuation_packet_complete_local_only"
-    },
-    {
-      "created_at": "2026-06-21T14:11:27Z",
-      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-005.md",
-      "lane_id": "web3_airdrops_grants_hackathons",
-      "next_action": "Next expected artifact: E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\gitcoin-readonly-refresh-request-draft-v1-20260621.md, beginning with a local evidence header and allowed read-only questions table. No agents, ownership mutation, workers, service approval/start/mutation, browser, wallet, signature, publish, submit, trade, spend, APIs, or contact.",
-      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-005",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "continuation_packet_complete_local_only"
-    },
-    {
-      "created_at": "2026-06-21T14:10:51Z",
-      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-005.md",
+      "created_at": "2026-06-21T14:54:51Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-007.md",
       "lane_id": "premium_customer_intake",
-      "next_action": "Perform a local-only recheck for a new non-placeholder file under intake/customer/dropbox and write premium-customer-routing-queue-watch-v2-20260621.md; keep raw material out of CEO context.",
-      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-005-20260621",
-      "outcome_type": "proof_derived_continuation",
+      "next_action": "Next local step is the watch-v2 compact intake status artifact; keep raw customer material out of CEO context and keep gates closed.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-premium_customer_intake",
+      "outcome_type": "continuity_lane_next_task_recovery",
       "realized_usd": 0.0,
-      "status": "ready_for_local_dropbox_recheck"
+      "status": "local_proof_complete"
+    },
+    {
+      "created_at": "2026-06-21T14:54:49Z",
+      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Next local step is the selected-dataset readiness-count artifact only; no broker, API, paid data, spend, or trading action.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-local_trading_strategy_research",
+      "outcome_type": "continuity_lane_next_task_recovery",
+      "realized_usd": 0.0,
+      "status": "local_proof_complete"
+    },
+    {
+      "created_at": "2026-06-21T14:54:48Z",
+      "evidence": "E:\\agent-company-lab\\reports\\lead_generation_and_sales\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "lead_generation_and_sales",
+      "next_action": "Parked until the operator explicitly requests an exact-scope outreach_delivery_gate service request packet; keep all external gates closed.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-lead_generation_and_sales",
+      "outcome_type": "continuity_lane_next_task_recovery",
+      "realized_usd": 0.0,
+      "status": "local_proof_complete"
+    },
+    {
+      "created_at": "2026-06-21T14:54:47Z",
+      "evidence": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "digital_products_templates_plugins",
+      "next_action": "Parked until the Gumroad human-decision intake packet is directly assigned or explicitly requested; keep all external gates closed.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-digital_products_templates_plugins",
+      "outcome_type": "continuity_lane_next_task_recovery",
+      "realized_usd": 0.0,
+      "status": "local_proof_complete"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

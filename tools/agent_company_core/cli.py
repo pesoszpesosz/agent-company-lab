@@ -43,6 +43,7 @@ from agent_company_core.ai_resources_owner_acknowledgement_closure import (
 from agent_company_core.goal_evolver_review import write_goal_evolver_review
 from agent_company_core.ceo_state_packet import write_ceo_state_packet
 from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
+from agent_company_core.codex_thread_goal_inventory import write_codex_thread_goal_inventory_cli
 from agent_company_core.continuity_watchdog_snapshot import write_continuity_watchdog_snapshot
 from agent_company_core.continuity_watchdog_restore_plan import write_continuity_watchdog_restore_plan
 from agent_company_core.continuity_watchdog_restore_response_bundle import (
@@ -266,6 +267,12 @@ def build_parser() -> argparse.ArgumentParser:
     ceo_worker_bootstrap.add_argument("--premium-router-thread-id")
     ceo_worker_bootstrap.add_argument("--browser-ops-thread-id")
     ceo_worker_bootstrap.add_argument("--no-db-record", action="store_true")
+    codex_thread_goal_inventory = sub.add_parser("write-codex-thread-goal-inventory")
+    codex_thread_goal_inventory.add_argument("--thread-snapshot", required=True)
+    codex_thread_goal_inventory.add_argument("--now-utc")
+    codex_thread_goal_inventory.add_argument("--path")
+    codex_thread_goal_inventory.add_argument("--json-path")
+    codex_thread_goal_inventory.add_argument("--no-db-record", action="store_true")
     continuity_watchdog_snapshot = sub.add_parser("write-continuity-watchdog-snapshot")
     continuity_watchdog_snapshot.add_argument("--now-utc")
     continuity_watchdog_snapshot.add_argument("--stale-after-minutes", type=int, default=60)
@@ -509,6 +516,9 @@ def main() -> None:
         elif args.cmd == "bootstrap-ceo-workers":
             init_db(conn)
             write_ceo_worker_bootstrap(conn, args)
+        elif args.cmd == "write-codex-thread-goal-inventory":
+            init_db(conn)
+            write_codex_thread_goal_inventory_cli(conn, args)
         elif args.cmd == "write-continuity-watchdog-snapshot":
             init_db(conn)
             write_continuity_watchdog_snapshot(conn, args)

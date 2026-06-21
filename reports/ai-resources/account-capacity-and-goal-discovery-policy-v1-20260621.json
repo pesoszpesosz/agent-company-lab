@@ -1,0 +1,51 @@
+{
+  "schema_version": "agent_company.account_capacity_and_goal_discovery_policy.v1",
+  "generated_utc": "2026-06-21T15:08:00Z",
+  "status": "adopt",
+  "decision": "Separate account/session capacity state from worker/thread health, and add dynamic Codex goal-thread discovery to every continuity pass.",
+  "capacity_states": [
+    "available",
+    "cooling_down",
+    "needs_restore",
+    "retired_or_parked"
+  ],
+  "refresh_behavior": {
+    "store_secrets": false,
+    "event": "session_refresh_detected",
+    "action": "mark capacity available and lease queued tasks in priority order up to the concurrency cap",
+    "cooldown_behavior": "report once, then park work until resume_after_utc, refresh detection, or state change"
+  },
+  "dynamic_goal_discovery": {
+    "source": "Codex thread snapshot",
+    "goal_markers": [
+      "/goal",
+      "Active goal",
+      "Current goal",
+      "Goal:"
+    ],
+    "registered_sources": [
+      "agents.thread_id",
+      "lanes.owner_thread_id"
+    ],
+    "actions": [
+      "register_goal_thread",
+      "recover_system_error_thread",
+      "migrate_or_recreate_as_repo_backed_thread"
+    ]
+  },
+  "immediate_application": {
+    "inventory_command": "python tools\\agent_company.py write-codex-thread-goal-inventory --thread-snapshot <snapshot.json>",
+    "recovery_executor_thread_id": "019eeaaa-ccf5-7d51-9274-e000a7b96ccd",
+    "recovery_executor_result": "completed seven stuck 007 continuity lane-next tasks sequentially without lane ownership mutation"
+  },
+  "zero_side_effect_boundary": {
+    "credentials_stored": 0,
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_apis_called": 0,
+    "service_requests_approved_or_started": 0,
+    "public_actions": 0,
+    "wallet_payment_trading_actions": 0,
+    "external_side_effects": false
+  }
+}

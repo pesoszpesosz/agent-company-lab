@@ -1,0 +1,249 @@
+{
+  "counts": {
+    "goal_threads": 19,
+    "monitored_goal_threads": 19,
+    "non_repo_goal_threads": 15,
+    "system_error_goal_threads": 0,
+    "threads_seen": 20,
+    "unmonitored_goal_threads": 0
+  },
+  "generated_utc": "2026-06-21T15:13:00Z",
+  "json_path": "E:\\agent-company-lab\\reports\\codex-thread-goal-inventory-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\codex-thread-goal-inventory-v1-20260621.md",
+  "next_action": "Migrate or recreate non-repo-backed goal threads as repo-backed threads, or route them through a bounded absolute-path recovery executor.",
+  "schema_version": "codex_thread_goal_inventory.v1",
+  "status": "repo_backing_recommended",
+  "thread_snapshot": "reports\\codex-thread-snapshots\\codex-thread-snapshot-v1-20260621.json",
+  "threads": [
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-digital-products",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2c-3bae-77e2-9a34-12740a1ee9be",
+      "title": "Agent Company - Digital Products"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-ai-ml-competitions",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2b-dd71-7483-ae49-22ed784dd4d2",
+      "title": "Agent Company - AI ML Competitions"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-paid-code-bounties",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2d-01eb-7d13-8b58-c1860ce1fa63",
+      "title": "Agent Company - Paid Code Bounties"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-continuity-watchdog",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [],
+      "repo_backed": true,
+      "status": "notLoaded",
+      "thread_id": "019ee738-6cf8-7803-884e-3be1ea2d419b",
+      "title": "Agent Company - Continuity Watchdog"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-platform-engineering",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea34-10b1-7590-a5c8-07e00ec157de",
+      "title": "Agent Company - Platform Engineering"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-ar-director",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [],
+      "repo_backed": true,
+      "status": "notLoaded",
+      "thread_id": "019ee738-60d5-7723-95f8-fb6e70ee7f4f",
+      "title": "Agent Company - AI Resources Director"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-lead-generation-sales",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2c-6097-7662-b936-edb72eb9e278",
+      "title": "Agent Company - Lead Generation Sales"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-content-social-growth",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2c-0b2d-7120-abaa-376a795b45e5",
+      "title": "Agent Company - Content Social Growth"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-web3-airdrops-grants",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2d-ea57-79c3-96e1-bee5c9bf04a8",
+      "title": "Agent Company - Web3 Grants Hackathons"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-local-trading-strategy",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2c-9588-7f53-8dee-b0ae87784079",
+      "title": "Agent Company - Local Trading Research"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-money-source-discovery",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2c-c5c6-7fd3-bad1-783aa3a105a4",
+      "title": "Agent Company - Money Source Discovery"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-premium-router",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [],
+      "repo_backed": true,
+      "status": "notLoaded",
+      "thread_id": "019ee738-8be7-7962-a6df-2294ce084671",
+      "title": "Agent Company - Premium Customer Router"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-youtube-content-channels",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea29-dc20-7400-a930-82844056e89d",
+      "title": "Agent Company - YouTube Content Channels"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-prediction-market-research",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2d-56be-7251-859d-20b48631a048",
+      "title": "Agent Company - Prediction Market Research"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-candidate-registry",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019ee738-aa1d-72c0-8de1-99900e8649c1",
+      "title": "Agent Company - Candidate Registry Curator"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-evaluation-harness",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea1a-594b-7580-8072-1f56245c5069",
+      "title": "Agent Company - Evaluation Harness Builder"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-security-bounty-private",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eea2d-ac99-7b92-9d28-b3d3f80dfcd4",
+      "title": "Agent Company - Security Bounty Private Reports"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-20\\e-agent-company-lab",
+      "has_goal_signal": false,
+      "monitor_status": "not_goal_thread",
+      "recommended_actions": [],
+      "repo_backed": true,
+      "status": "active",
+      "thread_id": "019ee5d5-2b10-73c2-ab57-01e2db961de9",
+      "title": "Study project"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-16\\goal-e-agent-company-lab-so",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [],
+      "repo_backed": true,
+      "status": "idle",
+      "thread_id": "019ed1eb-b158-73a0-ac2d-3719a0a6e69f",
+      "title": "Build gamified task dashboard"
+    },
+    {
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-repo-recovery-executor",
+      "has_goal_signal": true,
+      "monitor_status": "monitored",
+      "recommended_actions": [
+        "migrate_or_recreate_as_repo_backed_thread"
+      ],
+      "repo_backed": false,
+      "status": "notLoaded",
+      "thread_id": "019eeaaa-ccf5-7d51-9274-e000a7b96ccd",
+      "title": "Recover continuity progress"
+    }
+  ]
+}

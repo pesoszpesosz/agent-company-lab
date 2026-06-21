@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "captured_utc": "2026-06-21T15:05:42Z",
+  "source": "codex_app.list_threads query=Agent Company limit=50",
+  "boundary": "Local Codex thread inventory only. No thread creation, handoff, browser action, account action, public action, API call, spend, trade, submission, or contact.",
+  "threads": [
+    {
+      "id": "019eea2c-3bae-77e2-9a34-12740a1ee9be",
+      "title": "Agent Company - Digital Products",
+      "preview": "/goal You are the Agent Company Digital Products, Templates, and Plugins lane manager for E:\\agent-company-lab. Own digital_products_templates_plugins and continue local evidence-backed work.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-digital-products"
+    },
+    {
+      "id": "019eea2b-dd71-7483-ae49-22ed784dd4d2",
+      "title": "Agent Company - AI ML Competitions",
+      "preview": "/goal You are the Agent Company AI/ML Competitions lane manager for E:\\agent-company-lab. Own ai_ml_competitions and continue local evidence-backed work.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-ai-ml-competitions"
+    },
+    {
+      "id": "019eea2d-01eb-7d13-8b58-c1860ce1fa63",
+      "title": "Agent Company - Paid Code Bounties",
+      "preview": "/goal You are the Agent Company Paid Code Bounties lane manager for E:\\agent-company-lab. Own paid_code_bounties and keep bounty work local/evidence-backed until explicit gates.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-paid-code-bounties"
+    },
+    {
+      "id": "019ee738-6cf8-7803-884e-3be1ea2d419b",
+      "title": "Agent Company - Continuity Watchdog",
+      "preview": "Active goal: keep E:\\agent-company-lab lane managers and workers coherent by checking stale, offline, ownerless, overlapping, or goal-less work.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-continuity-watchdog"
+    },
+    {
+      "id": "019eea34-10b1-7590-a5c8-07e00ec157de",
+      "title": "Agent Company - Platform Engineering",
+      "preview": "/goal You are the Platform Engineering owner for Agent Company. Work from E:\\agent-company-lab and maintain the control-plane substrate.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-platform-engineering"
+    },
+    {
+      "id": "019ee738-60d5-7723-95f8-fb6e70ee7f4f",
+      "title": "Agent Company - AI Resources Director",
+      "preview": "Active goal: own the AR queue for E:\\agent-company-lab, hire/evolve/park/retire AI workers only after capability-overlap review and local evidence.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-ar-director"
+    },
+    {
+      "id": "019eea2c-6097-7662-b936-edb72eb9e278",
+      "title": "Agent Company - Lead Generation Sales",
+      "preview": "/goal You are the Agent Company Lead Generation and Sales lane manager for E:\\agent-company-lab. Own lead_generation_and_sales and continue local evidence-backed work.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-lead-generation-sales"
+    },
+    {
+      "id": "019eea2c-0b2d-7120-abaa-376a795b45e5",
+      "title": "Agent Company - Content Social Growth",
+      "preview": "/goal You are the Agent Company Content and Social Growth lane manager for E:\\agent-company-lab. Own content_and_social_growth and continue local evidence-backed work.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-content-social-growth"
+    },
+    {
+      "id": "019eea2d-ea57-79c3-96e1-bee5c9bf04a8",
+      "title": "Agent Company - Web3 Grants Hackathons",
+      "preview": "/goal You are the Agent Company Web3 Airdrops, Grants, and Hackathons lane manager for E:\\agent-company-lab. Own web3_airdrops_grants_hackathons and continue local evidence-backed work.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-web3-airdrops-grants"
+    },
+    {
+      "id": "019eea2c-9588-7f53-8dee-b0ae87784079",
+      "title": "Agent Company - Local Trading Research",
+      "preview": "/goal You are the Agent Company Local Trading Strategy Research lane manager for E:\\agent-company-lab. Own local_trading_strategy_research and keep work paper-only/local.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-local-trading-strategy"
+    },
+    {
+      "id": "019eea2c-c5c6-7fd3-bad1-783aa3a105a4",
+      "title": "Agent Company - Money Source Discovery",
+      "preview": "/goal You are the Agent Company Money Source Discovery lane manager for E:\\agent-company-lab. Own money_source_discovery and continue local evidence-backed opportunity discovery.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-money-source-discovery"
+    },
+    {
+      "id": "019ee738-8be7-7962-a6df-2294ce084671",
+      "title": "Agent Company - Premium Customer Router",
+      "preview": "Active goal: receive the premium customer's requests/materials, preserve raw context outside the CEO window, route compact capsules to the right lane, and update the customer.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-premium-router"
+    },
+    {
+      "id": "019eea29-dc20-7400-a930-82844056e89d",
+      "title": "Agent Company - YouTube Content Channels",
+      "preview": "/goal You are the Agent Company YouTube Content Channels lane manager for E:\\agent-company-lab. Turn supplied and local YouTube/source materials into context-light channel strategy and production packets.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-youtube-content-channels"
+    },
+    {
+      "id": "019eea2d-56be-7251-859d-20b48631a048",
+      "title": "Agent Company - Prediction Market Research",
+      "preview": "/goal You are the Agent Company Prediction Market Research lane manager for E:\\agent-company-lab. Own prediction_market_research and keep market work local/paper-only.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-prediction-market-research"
+    },
+    {
+      "id": "019ee738-aa1d-72c0-8de1-99900e8649c1",
+      "title": "Agent Company - Candidate Registry Curator",
+      "preview": "Active goal: find and normalize candidate AI workers, agent-company repos, research infrastructure, and money-making tools into a local registry for E:\\agent-company-lab.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-candidate-registry"
+    },
+    {
+      "id": "019eea1a-594b-7580-8072-1f56245c5069",
+      "title": "Agent Company - Evaluation Harness Builder",
+      "preview": "/goal You are the Agent Company Local Evaluation Harness Builder bot for E:\\agent-company-lab. Build reproducible local-only evaluation packets.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-evaluation-harness"
+    },
+    {
+      "id": "019eea2d-ac99-7b92-9d28-b3d3f80dfcd4",
+      "title": "Agent Company - Security Bounty Private Reports",
+      "preview": "/goal You are the Agent Company Security Bounty Private Reports lane manager for E:\\agent-company-lab. Own security_bounty_private_reports and keep security work local/evidence-backed until explicit gates.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-security-bounty-private"
+    },
+    {
+      "id": "019ee5d5-2b10-73c2-ab57-01e2db961de9",
+      "title": "Study project",
+      "preview": "E:\\agent-company-lab Study this project. Go in depth because i have a very hard task for you involving this, and it will become your whole personality",
+      "status": "active",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-20\\e-agent-company-lab"
+    },
+    {
+      "id": "019ed1eb-b158-73a0-ac2d-3719a0a6e69f",
+      "title": "Build gamified task dashboard",
+      "preview": "/goal E:\\agent-company-lab Build and keep improving a standalone gamified visual dashboard for the agent company: lanes, levels, milestones, blockers, bots, avatars, images, animations, and expandable paths.",
+      "status": "idle",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-16\\goal-e-agent-company-lab-so"
+    },
+    {
+      "id": "019eeaaa-ccf5-7d51-9274-e000a7b96ccd",
+      "title": "Recover continuity progress",
+      "preview": "Active goal: recover continuity progress without duplicating lane managers or mutating lane ownership. Process the seven open continuity lane-next 007 tasks sequentially in E:\\agent-company-lab.",
+      "status": "notLoaded",
+      "cwd": "C:\\Users\\matth\\Documents\\Codex\\2026-06-21\\agent-company-repo-recovery-executor"
+    }
+  ]
+}
