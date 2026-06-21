@@ -235,6 +235,14 @@ python tools\agent_company.py write-continuity-watchdog-restore-response-bundle
 
 The response bundle is also report-only. It writes local response artifacts for AI Resources, existing lane owners, and CEO decision batches without changing the source restore packets or source work.
 
+Convert owner-facing response contracts into selected local response artifacts:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-owner-response-artifacts
+```
+
+The owner response artifact step is local-only. It selects safe response options for AI Resources, existing lane owners, and CEO decision batches, writes per-response evidence files, and still does not mutate source tasks, source lanes, owner assignments, worker queues, or external systems.
+
 ## Immediate Backlog
 
 1. Keep `bootstrap-ceo-workers` current with live worker thread handles and active goals.
@@ -244,7 +252,7 @@ The response bundle is also report-only. It writes local response artifacts for 
 5. Create a YouTube lane scout packet covering channel types, asset workflow, account/public gates, and first no-post content batch.
 6. Create a control-plane capacity benchmark packet for 1,000/10,000/100,000 row scenarios.
 7. Create a browser/account service-worker roadmap packet that separates read-only browsing, registration preparation, non-KYC account actions, and human-only KYC actions.
-8. Route continuity restore response contracts to AI Resources or existing lane owners, then refresh the CEO state packet.
+8. Route continuity owner response artifacts to AI Resources, existing lane owners, or CEO decision batch, then refresh the CEO state packet.
 
 ## Zero Side-Effect Boundary For This Goal
 

@@ -36,7 +36,7 @@
   "schema_version": "continuity_restore_response.v1",
   "source_action_kind": "repair_ownerless_lane",
   "source_packet_next_action": "AI Resources selects an existing non-overlapping owner or writes an explicit park/retire decision; new agents require capability-overlap review first.",
-  "source_restore_plan_generated_utc": "2026-06-21T11:50:22Z",
+  "source_restore_plan_generated_utc": "2026-06-21T12:01:02Z",
   "source_restore_plan_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-plan-v1-20260621.json",
   "source_task_id": null,
   "target_id": "submitted_bounty_payouts",

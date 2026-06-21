@@ -35,7 +35,7 @@
   "schema_version": "continuity_restore_response.v1",
   "source_action_kind": "dispatch_stale_owner_acknowledgement",
   "source_packet_next_action": "Use the owner-acknowledgement dispatch contract with the existing lane owner; do not create a duplicate agent.",
-  "source_restore_plan_generated_utc": "2026-06-21T11:50:22Z",
+  "source_restore_plan_generated_utc": "2026-06-21T12:01:02Z",
   "source_restore_plan_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-plan-v1-20260621.json",
   "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
   "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",

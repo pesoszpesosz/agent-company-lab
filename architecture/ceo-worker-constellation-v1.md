@@ -64,6 +64,14 @@ python tools\agent_company.py write-continuity-watchdog-restore-response-bundle
 
 The response bundle tells each owner or CEO decision surface exactly which response options and evidence fields are required. It does not mutate source restore packets, tasks, lanes, owner assignments, or external systems.
 
+Convert owner-facing response contracts into selected local response artifacts with:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-owner-response-artifacts
+```
+
+The owner response artifact step chooses the safe local response for each contract, writes per-response JSON/Markdown evidence, and keeps source tasks, lanes, owner assignments, workers, and external systems unchanged.
+
 ## Boundary
 
 The constellation is local-control-plane only by default. It does not open browsers, create accounts, approve service requests, start external runtimes, publish, submit, trade, spend, call APIs, or contact anyone without a scoped gate.

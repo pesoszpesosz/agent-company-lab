@@ -45,6 +45,9 @@ from agent_company_core.continuity_watchdog_restore_plan import write_continuity
 from agent_company_core.continuity_watchdog_restore_response_bundle import (
     write_continuity_watchdog_restore_response_bundle_cli,
 )
+from agent_company_core.continuity_watchdog_owner_response_artifacts import (
+    write_continuity_watchdog_owner_response_artifacts_cli,
+)
 from agent_company_core.control_plane_capacity_benchmark_runner import write_control_plane_capacity_benchmark_runner
 from agent_company_core.premium_customer_followup_escalation import write_premium_customer_followup_escalation
 from agent_company_core.premium_customer_followup_monitor import write_premium_customer_followup_monitor
@@ -260,6 +263,13 @@ def build_parser() -> argparse.ArgumentParser:
     continuity_watchdog_restore_response_bundle.add_argument("--json-path")
     continuity_watchdog_restore_response_bundle.add_argument("--response-dir")
     continuity_watchdog_restore_response_bundle.add_argument("--no-db-record", action="store_true")
+    continuity_watchdog_owner_response_artifacts = sub.add_parser("write-continuity-watchdog-owner-response-artifacts")
+    continuity_watchdog_owner_response_artifacts.add_argument("--response-bundle")
+    continuity_watchdog_owner_response_artifacts.add_argument("--now-utc")
+    continuity_watchdog_owner_response_artifacts.add_argument("--path")
+    continuity_watchdog_owner_response_artifacts.add_argument("--json-path")
+    continuity_watchdog_owner_response_artifacts.add_argument("--artifact-dir")
+    continuity_watchdog_owner_response_artifacts.add_argument("--no-db-record", action="store_true")
     add_money_path_commands(sub)
     add_paid_code_commands(sub)
     add_digital_products_commands(sub)
@@ -450,6 +460,9 @@ def main() -> None:
         elif args.cmd == "write-continuity-watchdog-restore-response-bundle":
             init_db(conn)
             write_continuity_watchdog_restore_response_bundle_cli(conn, args)
+        elif args.cmd == "write-continuity-watchdog-owner-response-artifacts":
+            init_db(conn)
+            write_continuity_watchdog_owner_response_artifacts_cli(conn, args)
         elif handle_money_path_command(conn, args):
             pass
         elif handle_paid_code_command(conn, args):

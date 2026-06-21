@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2559,
+    "artifacts": 2561,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 444,
+    "outcomes": 445,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 626,
-    "trace_events": 536
+    "tasks": 627,
+    "trace_events": 537
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T11:50:34Z",
+  "generated_utc": "2026-06-21T12:01:10Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T11:50:34Z",
+    "generated_utc": "2026-06-21T12:01:10Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 158,
-    "outcomes_delta": 26,
-    "tasks_delta": 47,
-    "trace_events_delta": 27
+    "artifacts_delta": 160,
+    "outcomes_delta": 27,
+    "tasks_delta": 48,
+    "trace_events_delta": 28
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -372,6 +372,16 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T11:59:56Z",
+      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-response-artifacts-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use these local owner response artifacts in the next CEO/AI Resources state packet; source tasks and lanes remain unchanged.",
+      "outcome_id": "outcome-continuity-watchdog-owner-response-artifacts-v1-20260621",
+      "outcome_type": "continuity_watchdog_owner_response_artifacts",
+      "realized_usd": 0.0,
+      "status": "owner_response_artifacts_ready"
+    },
+    {
       "created_at": "2026-06-21T11:49:26Z",
       "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-response-bundle-v1-20260621.md",
       "lane_id": "ai_resources_lab",
@@ -440,16 +450,6 @@
       "outcome_type": "goal_evolver_review",
       "realized_usd": 0.0,
       "status": "apply_after_review"
-    },
-    {
-      "created_at": "2026-06-20T21:37:51Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision.",
-      "outcome_id": "outcome-ai-resources-owner-acknowledgement-monitor-capability-20260621",
-      "outcome_type": "ai_resources_owner_acknowledgement_monitor_capability",
-      "realized_usd": 0.0,
-      "status": "complete"
     }
   ],
   "schema_version": "ceo_state_packet.v1",
