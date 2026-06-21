@@ -5,7 +5,7 @@ from argparse import Namespace
 from pathlib import Path
 
 
-ROOT = Path(r"E:\agent-company-lab")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
 from agent_company_core.cli import build_parser  # noqa: E402
@@ -147,6 +147,13 @@ def _args(tmp_path: Path, no_db_record: bool = False) -> Namespace:
 
 def test_restore_response_bundle_writes_response_contracts_without_mutating_source_tasks(tmp_path: Path) -> None:
     conn = _conn()
+    response_dir = tmp_path / "responses"
+    response_dir.mkdir()
+    stale_response = response_dir / "continuity-restore-response-v1-999-stale.md"
+    stale_response.write_text("stale", encoding="utf-8")
+    unrelated = response_dir / "operator-note.txt"
+    unrelated.write_text("keep", encoding="utf-8")
+
     payload = write_continuity_watchdog_restore_response_bundle(conn, _args(tmp_path))
 
     assert payload["schema_version"] == "continuity_watchdog_restore_response_bundle.v1"
@@ -186,6 +193,9 @@ def test_restore_response_bundle_writes_response_contracts_without_mutating_sour
         assert Path(item["response_json_path"]).exists()
         assert Path(item["response_md_path"]).exists()
         assert "mutate_source_restore_packet" in item["response_contract"]["prohibited_actions"]
+    assert not stale_response.exists()
+    assert unrelated.exists()
+    assert len(list(response_dir.glob("continuity-restore-response-v1-*.md"))) == 3
 
     source = conn.execute("select status from tasks where task_id='task-owner-ack-youtube'").fetchone()
     assert source["status"] == "new"

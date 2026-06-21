@@ -1,6 +1,6 @@
 # Continuity Owner Handoff - lane-manager-ai_ml_competitions-019ec69a
 
-Generated UTC: 2026-06-21T12:43:47Z
+Generated UTC: 2026-06-21T12:52:04Z
 Owner: `lane-manager-ai_ml_competitions-019ec69a`
 Role: `department_manager`
 Department: `competition_lab`
@@ -17,7 +17,7 @@ Dispatch mode: `send_to_live_codex_thread`
 - Target: `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions`
 - Priority: `92`
 - Status: `new`
-- Evidence: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-002-continuity-restore-response-v1-002-continuity-restore-v1-002-dispatch_stale_owner_acknowledgement-task-custome.md`
+- Evidence: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-001-continuity-restore-response-v1-001-continuity-restore-v1-001-dispatch_stale_owner_acknowledgement-task-custome.md`
 - Next action: Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created.
 
 Acceptance criteria:

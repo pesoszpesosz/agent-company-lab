@@ -34,6 +34,17 @@ def build_manager_packet_lines(
     side_effects = decode_json_list(lane["side_effects_json"])
     global_gates = decode_json_list(lane["global_gates_json"])
 
+    manager_directive = (
+        f"Read-only visibility lane for `{lane_id}`. Do not claim ownership, assign work, start monitoring, or create payout/public-action tasks from this workspace. Use this packet only to inspect imported evidence and preserve the external-owner boundary."
+        if read_only_note
+        else f"Own only the `{lane_id}` lane. Claim the lane before assigning work unless an owner is already listed. Create or acquire exactly one active task at a time and record artifacts/outcomes in the control plane."
+    )
+    suggested_prompt = (
+        f"You are reviewing the read-only `{lane_id}` packet in `E:\\agent-company-lab`. Do not claim the lane or start payout/public-action work. Inspect local evidence only, preserve the external-owner boundary, and escalate only if the user explicitly reassigns ownership."
+        if read_only_note
+        else f"You are the department manager for `{lane_id}` in `E:\\agent-company-lab`. Read this manager packet, run the startup commands, claim the lane only if it is unowned, create or acquire one scoped task, produce local artifacts, and record outcomes. Stop at every service-request gate."
+    )
+
     lines = [
         f"# Manager Packet - {lane_id}",
         "",
@@ -44,7 +55,7 @@ def build_manager_packet_lines(
         "",
         "## Manager Directive",
         "",
-        f"Own only the `{lane_id}` lane. Claim the lane before assigning work unless an owner is already listed. Create or acquire exactly one active task at a time and record artifacts/outcomes in the control plane.",
+        manager_directive,
     ]
     if read_only_note:
         lines.extend(["", f"**Read-only boundary:** {read_only_note}"])
@@ -221,7 +232,7 @@ def build_manager_packet_lines(
             "## Suggested Manager Prompt",
             "",
             "```text",
-            f"You are the department manager for `{lane_id}` in `E:\\agent-company-lab`. Read this manager packet, run the startup commands, claim the lane only if it is unowned, create or acquire one scoped task, produce local artifacts, and record outcomes. Stop at every service-request gate.",
+            suggested_prompt,
             "```",
             "",
         ]

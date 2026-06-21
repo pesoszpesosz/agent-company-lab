@@ -1,6 +1,6 @@
 # Lane Manager Thread Launch Manifest
 
-Generated UTC: 2026-06-21T12:45:28Z
+Generated UTC: 2026-06-21T12:52:05Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
 JSON: `E:\agent-company-lab\reports\lane-manager-thread-launch-manifest-latest.json`
 
@@ -35,7 +35,7 @@ Create separate Codex lane-manager chats from the existing agent-company control
 | Lane | Department | Owner | Reason | Hard Stop |
 | --- | --- | --- | --- | --- |
 | `platform_engineering` | Platform Engineering | recovered-profitable-edge-infra | This recovered thread is the platform coordinator and should keep ownership here. | Coordinator lane only. Do not duplicate lane manager work or run real model/API mode without an approved provider, model, max cost, lane scope, and artifact path. |
-| `submitted_bounty_payouts` | Revenue Collection | other Find profitable edge worker, not this recovered infrastructure thread | Read-only in this lab. The parallel payout worker owns GitHub/RustChain/Charles payout monitoring. | Read-only visibility only. Do not monitor, comment, claim, submit, or chase RustChain/Charles/GitHub payouts from this lab. |
+| `submitted_bounty_payouts` | Revenue Collection | external:parallel-payout-worker | Read-only in this lab. The parallel payout worker owns GitHub/RustChain/Charles payout monitoring. | Read-only visibility only. Do not monitor, comment, claim, submit, or chase RustChain/Charles/GitHub payouts from this lab. |
 | `ai_resources_lab` | Artificial Resources | lane-manager-ai_resources_lab-20260620 | Lane is not in the approved launch order yet. | Research, draft, and write local artifacts only. Any account, public, payment, security, browser, or real-money side effect needs an approved service request. |
 | `premium_customer_intake` | Customer/Operator Success | premium-customer-intake-agent-20260620 | Lane is not in the approved launch order yet. | Research, draft, and write local artifacts only. Any account, public, payment, security, browser, or real-money side effect needs an approved service request. |
 | `youtube_content_channels` | Audience/Distribution | lane-manager-youtube_content_channels-20260620 | Lane is not in the approved launch order yet. | Research, draft, and write local artifacts only. Any account, public, payment, security, browser, or real-money side effect needs an approved service request. |

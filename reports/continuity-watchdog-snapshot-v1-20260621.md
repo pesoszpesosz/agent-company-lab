@@ -1,6 +1,6 @@
 # Continuity Watchdog Snapshot V1
 
-Generated UTC: 2026-06-21T12:42:38Z
+Generated UTC: 2026-06-21T12:50:21Z
 Status: `restore_ready`
 Cadence minutes: `15`
 JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json`
@@ -9,7 +9,7 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260
 
 | Finding | Count |
 | --- | ---: |
-| `ownerless_active_lanes` | 1 |
+| `ownerless_active_lanes` | 0 |
 | `missing_owner_agent_lanes` | 0 |
 | `agents_missing_threads` | 0 |
 | `stale_open_tasks` | 15 |
@@ -22,7 +22,6 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260
 
 | Kind | Target | Next Action |
 | --- | --- | --- |
-| `repair_ownerless_lane` | submitted_bounty_payouts | Route to AI Resources for owner selection or explicit park/retire decision. |
 | `dispatch_stale_owner_acknowledgement` | task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions | Use the owner-acknowledgement dispatch packet; do not create duplicate agents. |
 | `dispatch_stale_owner_acknowledgement` | task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab | Use the owner-acknowledgement dispatch packet; do not create duplicate agents. |
 | `dispatch_stale_owner_acknowledgement` | task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery | Use the owner-acknowledgement dispatch packet; do not create duplicate agents. |

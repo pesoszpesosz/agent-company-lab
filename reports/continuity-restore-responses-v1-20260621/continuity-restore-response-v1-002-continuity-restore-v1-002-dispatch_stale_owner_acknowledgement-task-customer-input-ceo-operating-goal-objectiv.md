@@ -1,10 +1,10 @@
 # Continuity Restore Response: continuity-restore-response-v1-002-continuity-restore-v1-002-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objectiv
 
 Response type: `acknowledgement_response_required`
-Restore packet: `continuity-restore-v1-002-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_`
-Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions`
+Restore packet: `continuity-restore-v1-002-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_res`
+Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab`
 Assigned surface: `existing_lane_owner`
-Recommended owner: `lane-manager-ai_ml_competitions-019ec69a`
+Recommended owner: `lane-manager-ai_resources_lab-20260620`
 
 ## Next Action
 

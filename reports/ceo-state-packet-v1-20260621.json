@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2612,
+    "artifacts": 2614,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 455,
+    "outcomes": 456,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 645,
-    "trace_events": 559
+    "tasks": 646,
+    "trace_events": 560
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T12:45:55Z",
+  "generated_utc": "2026-06-21T12:53:22Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T12:45:55Z",
+    "generated_utc": "2026-06-21T12:53:22Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 211,
-    "outcomes_delta": 37,
-    "tasks_delta": 66,
-    "trace_events_delta": 50
+    "artifacts_delta": 213,
+    "outcomes_delta": 38,
+    "tasks_delta": 67,
+    "trace_events_delta": 51
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -255,12 +255,6 @@
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
-      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
-      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts"
-    },
-    {
-      "kind": "open_task",
-      "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
       "task_id": "task-lane-manager-ai_resources_lab-20260620-active-goal-20260621"
     },
@@ -275,18 +269,15 @@
       "lane_id": "ai_ml_competitions",
       "next_action": "Existing owner `lane-manager-ai_ml_competitions-019ec69a` should handle the acknowledgement for `ai_ml_competitions` locally and report evidence; no duplicate owner or worker should be created.",
       "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Existing owner `lane-manager-ai_resources_lab-20260620` should handle the acknowledgement for `ai_resources_lab` locally and report evidence; no duplicate owner or worker should be created.",
+      "task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
     }
   ],
   "open_tasks": [
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Queue `submitted_bounty_payouts` for CEO decision batch: select an existing non-overlapping owner, park it with a revisit condition, or retire it with rationale. Do not mutate lane ownership from this artifact.",
-      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
-      "priority": 96,
-      "status": "new",
-      "task_id": "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts",
-      "title": "Decide continuity owner response for submitted_bounty_payouts"
-    },
     {
       "lane_id": "ai_resources_lab",
       "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
@@ -367,10 +358,29 @@
       "status": "new",
       "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
       "title": "Follow up customer input for ai_resources_lab"
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
+      "owner_agent_id": "capability-overlap-mapper-20260621",
+      "priority": 90,
+      "status": "in_progress",
+      "task_id": "task-capability-overlap-mapper-20260621-active-goal-20260621",
+      "title": "Active goal for capability-overlap-mapper-20260621"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
+    {
+      "created_at": "2026-06-21T12:50:11Z",
+      "evidence": "E:\\agent-company-lab\\reports\\submitted-bounty-payouts-external-owned-parking-decision-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Reopen only if the user explicitly reassigns payout monitoring into this lab, supplies the live parallel worker thread id, or asks AR to replace the external payout worker.",
+      "outcome_id": "outcome-submitted-bounty-payouts-external-owned-parking-decision-v1-20260621",
+      "outcome_type": "lane_parking_decision",
+      "realized_usd": 0.0,
+      "status": "external_owned_readonly"
+    },
     {
       "created_at": "2026-06-21T12:44:42Z",
       "evidence": "E:\\agent-company-lab\\reports\\platform-engineering\\platform-engineering-status-20260621.md",
@@ -440,16 +450,6 @@
       "outcome_type": "codex_worker_goal_deliverable",
       "realized_usd": 0.0,
       "status": "completed_local_eval_packets"
-    },
-    {
-      "created_at": "2026-06-21T12:19:48Z",
-      "evidence": "E:\\agent-company-lab\\reports\\browser-account-service-readiness-packet-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Attach readiness packet to future browser/account service requests before human-gate escalation.",
-      "outcome_id": "outcome-browser-account-ops-worker-thread-goal-20260621",
-      "outcome_type": "codex_worker_goal_deliverable",
-      "realized_usd": 0.0,
-      "status": "completed_local_report_only"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

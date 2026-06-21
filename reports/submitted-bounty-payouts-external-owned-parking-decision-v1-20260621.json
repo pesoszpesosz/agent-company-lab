@@ -1,0 +1,49 @@
+{
+  "completed_continuity_tasks": [
+    "task-continuity-owner-response-task-lane_goal_response_required-submitted_bounty_payouts",
+    "task-continuity-owner-response-task-owner_selection_or_park_required-submitted_bounty_payouts"
+  ],
+  "decision": "park_as_external_owned_readonly",
+  "generated_utc": "2026-06-21T12:50:11Z",
+  "json_path": "E:\\agent-company-lab\\reports\\submitted-bounty-payouts-external-owned-parking-decision-v1-20260621.json",
+  "lane_id": "submitted_bounty_payouts",
+  "md_path": "E:\\agent-company-lab\\reports\\submitted-bounty-payouts-external-owned-parking-decision-v1-20260621.md",
+  "new_lane_state": {
+    "notes": "External-owned/read-only in this lab. Parallel Find profitable edge worker owns GitHub/RustChain/Charles payout monitoring; do not duplicate monitoring or public follow-up here.",
+    "owner_agent_id": null,
+    "owner_thread_id": "external:parallel-payout-worker",
+    "status": "external_owned_readonly"
+  },
+  "next_action": "Reopen only if the user explicitly reassigns payout monitoring into this lab, supplies the live parallel worker thread id, or asks AR to replace the external payout worker.",
+  "previous_lane_state": {
+    "notes": "other Find profitable edge worker, not this recovered infrastructure thread",
+    "owner_agent_id": null,
+    "owner_thread_id": "other Find profitable edge worker, not this recovered infrastructure thread",
+    "status": "active"
+  },
+  "rationale": [
+    "README and manager packets repeatedly state that submitted_bounty_payouts is imported for visibility only.",
+    "No live Codex thread was found for a local submitted-payout worker in this lab.",
+    "Creating a new payout owner would duplicate the external payout worker and violate the overlap boundary.",
+    "Parking removes a false ownerless-active-lane alarm while preserving local evidence visibility."
+  ],
+  "revisit_condition": "Reopen only if the user explicitly reassigns payout monitoring into this lab, supplies the live parallel worker thread id, or asks AR to replace the external payout worker.",
+  "schema_version": "submitted_payout_lane_parking_decision.v1",
+  "source_state_mutation": {
+    "continuity_tasks_completed": 2,
+    "duplicate_worker_created": false,
+    "lane_owner_assigned": false,
+    "lane_status_updated": true
+  },
+  "status": "parking_decision_ready",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

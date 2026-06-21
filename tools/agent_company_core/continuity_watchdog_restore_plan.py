@@ -265,6 +265,15 @@ def _write_md(path: Path, payload: dict[str, Any]) -> None:
 
 
 def _write_packet_files(packets: list[dict[str, Any]]) -> None:
+    packet_dirs = {Path(packet["packet_json_path"]).parent for packet in packets}
+    if not packet_dirs:
+        packet_dirs = {DEFAULT_PACKET_DIR}
+    for packet_dir in packet_dirs:
+        if not packet_dir.exists():
+            continue
+        for path in packet_dir.glob("continuity-restore-v1-*"):
+            if path.is_file() and path.suffix in {".json", ".md"}:
+                path.unlink()
     for packet in packets:
         json_path = Path(packet["packet_json_path"])
         md_path = Path(packet["packet_md_path"])

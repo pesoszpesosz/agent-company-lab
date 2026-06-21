@@ -1,6 +1,6 @@
 # Manager Packet - money_source_discovery
 
-Generated UTC: 2026-06-21T12:45:55Z
+Generated UTC: 2026-06-21T12:53:22Z
 Department: Strategic Research
 Lane status: active
 Current owner: `lane-manager-money_source_discovery-019ec699`
@@ -100,7 +100,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 92 | new | `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discover` - Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery | lane-manager-money_source_discovery-019ec699 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-004-continuity-restore-response-v1-004-continuity-restore-v1-004-dispatch_stale_own | Existing owner `lane-manager-money_source_discovery-019ec699` should handle the acknowledgement for `money_source_discovery` locally and report evidence; no duplicate owner or worker should be created. |
+| 92 | new | `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discover` - Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery | lane-manager-money_source_discovery-019ec699 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-003-continuity-restore-response-v1-003-continuity-restore-v1-003-dispatch_stale_own | Existing owner `lane-manager-money_source_discovery-019ec699` should handle the acknowledgement for `money_source_discovery` locally and report evidence; no duplicate owner or worker should be created. |
 | 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery` - Acknowledge customer follow-up triage for money_source_discovery | lane-manager-money_source_discovery-019ec699 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 76 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery` - Follow up customer input for money_source_discovery | lane-manager-money_source_discovery-019ec699 |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger. |
 | 92 | complete | `task-money-path-graduation-action-queue-v1-20260618` - Money path graduation action queue v1 | recovered-profitable-edge-infra |  | E:\agent-company-lab\reports\money-path-graduation-action-queue-v1-validation-20260618.json | Have lane managers claim the top ranked queue item and create only the named local artifact/parser/checker/draft. If the next action needs account, wallet, payment, trade, submission, public action, worker/runtime, model |

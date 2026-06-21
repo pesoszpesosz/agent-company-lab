@@ -21,3 +21,5 @@ work/capacity-benchmark/*.sqlite-*
 work/capacity-benchmark/*.raw.json
 work/platform-engineering-status-smoke/*.sqlite
 work/platform-engineering-status-smoke/*.sqlite-*
+state/*.sqlite-wal
+state/*.sqlite-shm

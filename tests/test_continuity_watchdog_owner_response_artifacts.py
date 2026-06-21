@@ -5,7 +5,7 @@ from argparse import Namespace
 from pathlib import Path
 
 
-ROOT = Path(r"E:\agent-company-lab")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
 from agent_company_core.cli import build_parser  # noqa: E402
@@ -169,6 +169,13 @@ def test_owner_response_artifacts_write_selected_local_responses_without_mutatin
     tmp_path: Path,
 ) -> None:
     conn = _conn()
+    artifact_dir = tmp_path / "owner-responses"
+    artifact_dir.mkdir()
+    stale_artifact = artifact_dir / "continuity-owner-response-v1-999-stale.md"
+    stale_artifact.write_text("stale", encoding="utf-8")
+    unrelated = artifact_dir / "operator-note.txt"
+    unrelated.write_text("keep", encoding="utf-8")
+
     payload = write_continuity_watchdog_owner_response_artifacts(conn, _args(tmp_path))
 
     assert payload["schema_version"] == "continuity_watchdog_owner_response_artifacts.v1"
@@ -196,6 +203,9 @@ def test_owner_response_artifacts_write_selected_local_responses_without_mutatin
         assert Path(item["artifact_json_path"]).exists()
         assert Path(item["artifact_md_path"]).exists()
         assert item["source_state_mutated"] is False
+    assert not stale_artifact.exists()
+    assert unrelated.exists()
+    assert len(list(artifact_dir.glob("continuity-owner-response-v1-*.md"))) == 3
 
     source = conn.execute("select status from tasks where task_id='task-owner-ack-youtube'").fetchone()
     assert source["status"] == "new"

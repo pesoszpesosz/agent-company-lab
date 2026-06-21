@@ -1,10 +1,10 @@
 # Continuity Restore Response: continuity-restore-response-v1-003-continuity-restore-v1-003-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objectiv
 
 Response type: `acknowledgement_response_required`
-Restore packet: `continuity-restore-v1-003-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_res`
-Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab`
+Restore packet: `continuity-restore-v1-003-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_`
+Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery`
 Assigned surface: `existing_lane_owner`
-Recommended owner: `lane-manager-ai_resources_lab-20260620`
+Recommended owner: `lane-manager-money_source_discovery-019ec699`
 
 ## Next Action
 

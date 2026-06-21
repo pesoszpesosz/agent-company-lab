@@ -2,7 +2,7 @@
 from pathlib import Path
 
 
-ROOT = Path(r"E:\agent-company-lab")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
 
@@ -119,3 +119,37 @@ def test_manager_packets_imports_content_helpers() -> None:
 
     assert manager_packets.build_manager_packet_lines is build_manager_packet_lines
     assert manager_packets.manager_packet_read_only_note is manager_packet_read_only_note
+
+
+def test_submitted_payout_manager_packet_is_read_only_not_claim_instruction() -> None:
+    from agent_company_core.manager_packets_content import build_manager_packet_lines, manager_packet_read_only_note
+
+    lane = {
+        "lane_id": "submitted_bounty_payouts",
+        "department": "Revenue Collection",
+        "status": "external_owned_readonly",
+        "agent_types_json": '["payout_monitor"]',
+        "examples_json": '["RustChain"]',
+        "promotion_gates_json": '["owner selection"]',
+        "service_workers_required_json": '["wallet_public_address_worker"]',
+        "side_effects_json": '["wallet address comment"]',
+        "global_gates_json": '["no public action without approval"]',
+    }
+    lines = build_manager_packet_lines(
+        lane=lane,
+        specs=[],
+        evidence=[],
+        tasks=[],
+        requests=[],
+        outcomes=[],
+        service_catalog=[],
+        owner="external:parallel-payout-worker",
+        recommendation="Read-only visibility only.",
+        generated_utc="2026-06-21T00:00:00Z",
+        read_only_note=manager_packet_read_only_note("submitted_bounty_payouts"),
+    )
+    packet = "\n".join(lines)
+
+    assert "Read-only visibility lane for `submitted_bounty_payouts`" in packet
+    assert "Do not claim ownership" in packet
+    assert "claim the lane only if it is unowned" not in packet

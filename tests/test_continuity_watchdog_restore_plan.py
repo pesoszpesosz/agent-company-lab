@@ -144,6 +144,13 @@ def _args(tmp_path: Path, no_db_record: bool = False) -> Namespace:
 
 def test_continuity_watchdog_restore_plan_writes_local_packets_without_mutating_sources(tmp_path: Path) -> None:
     conn = _conn()
+    packet_dir = tmp_path / "packets"
+    packet_dir.mkdir()
+    stale_packet = packet_dir / "continuity-restore-v1-999-stale.md"
+    stale_packet.write_text("stale", encoding="utf-8")
+    unrelated = packet_dir / "operator-note.txt"
+    unrelated.write_text("keep", encoding="utf-8")
+
     payload = write_continuity_watchdog_restore_plan_bundle(conn, _args(tmp_path))
 
     assert payload["schema_version"] == "continuity_watchdog_restore_plan.v1"
@@ -177,6 +184,9 @@ def test_continuity_watchdog_restore_plan_writes_local_packets_without_mutating_
     for packet in packets.values():
         assert Path(packet["packet_json_path"]).exists()
         assert Path(packet["packet_md_path"]).exists()
+    assert not stale_packet.exists()
+    assert unrelated.exists()
+    assert len(list(packet_dir.glob("continuity-restore-v1-*.md"))) == 3
 
     source = conn.execute("select status from tasks where task_id='task-owner-ack-youtube'").fetchone()
     assert source["status"] == "new"

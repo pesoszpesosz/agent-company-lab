@@ -2,19 +2,19 @@
 
 Response type: `acknowledgement_response_required`
 Selected response: `acknowledge_and_start_local_work`
-Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties`
-Lane: `paid_code_bounties`
-Owner/decision surface: `lane-manager-paid_code_bounties-019ec612`
+Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research`
+Lane: `prediction_market_research`
+Owner/decision surface: `lane-manager-prediction_market_research-relaunch-20260614`
 
 ## Next Action
 
-Existing owner `lane-manager-paid_code_bounties-019ec612` should handle the acknowledgement for `paid_code_bounties` locally and report evidence; no duplicate owner or worker should be created.
+Existing owner `lane-manager-prediction_market_research-relaunch-20260614` should handle the acknowledgement for `prediction_market_research` locally and report evidence; no duplicate owner or worker should be created.
 
 ## Evidence
 
 Evidence artifact path: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-005-continuity-restore-response-v1-005-continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-custome.md`
 Source response item: `continuity-restore-response-v1-005-continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objectiv`
-Restore packet: `continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_c`
+Restore packet: `continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-predic`
 
 ## Boundary
 

@@ -1,13 +1,13 @@
 # Manager Packet - submitted_bounty_payouts
 
-Generated UTC: 2026-06-21T12:45:55Z
+Generated UTC: 2026-06-21T12:53:22Z
 Department: Revenue Collection
-Lane status: active
-Current owner: `other Find profitable edge worker, not this recovered infrastructure thread`
+Lane status: external_owned_readonly
+Current owner: `external:parallel-payout-worker`
 
 ## Manager Directive
 
-Own only the `submitted_bounty_payouts` lane. Claim the lane before assigning work unless an owner is already listed. Create or acquire exactly one active task at a time and record artifacts/outcomes in the control plane.
+Read-only visibility lane for `submitted_bounty_payouts`. Do not claim ownership, assign work, start monitoring, or create payout/public-action tasks from this workspace. Use this packet only to inspect imported evidence and preserve the external-owner boundary.
 
 **Read-only boundary:** This lane is read-only in this workspace. Do not monitor, comment, submit, claim, or chase payouts from this thread.
 
@@ -102,7 +102,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 86 | new | `task-continuity-owner-response-task-lane_goal_response_required-submitted_bounty_payouts` - Submit continuity lane goal response for submitted_bounty_payouts | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-014-continuity-restore-response-v1-014-continuity-restore-v1-014-request_lane_goal- | Owner `lane-manager-ai_resources_lab-20260620` should submit the lane goal artifact for `submitted_bounty_payouts`. |
+| 86 | complete | `task-continuity-owner-response-task-lane_goal_response_required-submitted_bounty_payouts` - Submit continuity lane goal response for submitted_bounty_payouts | lane-manager-ai_resources_lab-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-014-continuity-restore-response-v1-014-continuity-restore-v1-014-request_lane_goal- | Owner `lane-manager-ai_resources_lab-20260620` should submit the lane goal artifact for `submitted_bounty_payouts`. |
 | 83 | complete | `task-agent-company-atlas-payout-vault-v1-20260617` - Add custom Payout Vault Atlas minigame | recovered-profitable-edge-infra |  | Generated texture, custom renderer, responsive styling, trace metadata, and browser verification. | Regenerate the Atlas snapshot and browser-verify the Payout Vault game view. |
 
 ## Service Requests
@@ -128,6 +128,6 @@ python E:\agent-company-lab\tools\agent_company.py list-evidence --lane-id submi
 ## Suggested Manager Prompt
 
 ```text
-You are the department manager for `submitted_bounty_payouts` in `E:\agent-company-lab`. Read this manager packet, run the startup commands, claim the lane only if it is unowned, create or acquire one scoped task, produce local artifacts, and record outcomes. Stop at every service-request gate.
+You are reviewing the read-only `submitted_bounty_payouts` packet in `E:\agent-company-lab`. Do not claim the lane or start payout/public-action work. Inspect local evidence only, preserve the external-owner boundary, and escalate only if the user explicitly reassigns ownership.
 ```
 

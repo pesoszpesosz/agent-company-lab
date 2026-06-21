@@ -266,6 +266,15 @@ def _write_md(path: Path, payload: dict[str, Any]) -> None:
 
 
 def _write_artifact_files(items: list[dict[str, Any]]) -> None:
+    artifact_dirs = {Path(item["artifact_json_path"]).parent for item in items}
+    if not artifact_dirs:
+        artifact_dirs = {DEFAULT_ARTIFACT_DIR}
+    for artifact_dir in artifact_dirs:
+        if not artifact_dir.exists():
+            continue
+        for path in artifact_dir.glob("continuity-owner-response-v1-*"):
+            if path.is_file() and path.suffix in {".json", ".md"}:
+                path.unlink()
     for item in items:
         _write_json(Path(item["artifact_json_path"]), item)
         _write_artifact_md(Path(item["artifact_md_path"]), item)

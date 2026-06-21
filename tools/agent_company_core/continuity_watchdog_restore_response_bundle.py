@@ -257,6 +257,15 @@ def _write_md(path: Path, payload: dict[str, Any]) -> None:
 
 
 def _write_response_files(items: list[dict[str, Any]]) -> None:
+    response_dirs = {Path(item["response_json_path"]).parent for item in items}
+    if not response_dirs:
+        response_dirs = {DEFAULT_RESPONSE_DIR}
+    for response_dir in response_dirs:
+        if not response_dir.exists():
+            continue
+        for path in response_dir.glob("continuity-restore-response-v1-*"):
+            if path.is_file() and path.suffix in {".json", ".md"}:
+                path.unlink()
     for item in items:
         _write_json(Path(item["response_json_path"]), item)
         _write_response_md(Path(item["response_md_path"]), item)

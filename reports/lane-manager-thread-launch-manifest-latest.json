@@ -6,7 +6,7 @@
     "submitted_bounty_payouts remains read-only and assigned to the parallel payout worker."
   ],
   "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
-  "generated_utc": "2026-06-21T12:45:28Z",
+  "generated_utc": "2026-06-21T12:52:05Z",
   "held_lanes": [
     {
       "department": "Platform Engineering",
@@ -22,7 +22,7 @@
       "hard_stop": "Read-only visibility only. Do not monitor, comment, claim, submit, or chase RustChain/Charles/GitHub payouts from this lab.",
       "lane_id": "submitted_bounty_payouts",
       "mode": "do_not_launch_from_this_manifest",
-      "owner": "other Find profitable edge worker, not this recovered infrastructure thread",
+      "owner": "external:parallel-payout-worker",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\submitted_bounty_payouts-manager-packet.md",
       "reason": "Read-only in this lab. The parallel payout worker owns GitHub/RustChain/Charles payout monitoring."
     },

@@ -1,6 +1,6 @@
 # Continuity Owner Handoff - lane-manager-money_source_discovery-019ec699
 
-Generated UTC: 2026-06-21T12:43:47Z
+Generated UTC: 2026-06-21T12:52:04Z
 Owner: `lane-manager-money_source_discovery-019ec699`
 Role: `department_manager`
 Department: `strategic_research`
@@ -17,7 +17,7 @@ Dispatch mode: `send_to_live_codex_thread`
 - Target: `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery`
 - Priority: `92`
 - Status: `new`
-- Evidence: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-004-continuity-restore-response-v1-004-continuity-restore-v1-004-dispatch_stale_owner_acknowledgement-task-custome.md`
+- Evidence: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-003-continuity-restore-response-v1-003-continuity-restore-v1-003-dispatch_stale_owner_acknowledgement-task-custome.md`
 - Next action: Existing owner `lane-manager-money_source_discovery-019ec699` should handle the acknowledgement for `money_source_discovery` locally and report evidence; no duplicate owner or worker should be created.
 
 Acceptance criteria:

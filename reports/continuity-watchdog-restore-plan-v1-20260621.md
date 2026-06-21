@@ -1,6 +1,6 @@
 # Continuity Watchdog Restore Plan V1
 
-Generated UTC: 2026-06-21T12:42:39Z
+Generated UTC: 2026-06-21T12:52:03Z
 Status: `restore_plan_ready`
 Source snapshot: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json`
 Packet dir: `E:\agent-company-lab\reports\continuity-restore-packets-v1-20260621`
@@ -10,8 +10,8 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-2
 
 | Count | Value |
 | --- | ---: |
-| `restore_packets` | 9 |
-| `repair_ownerless_lane` | 1 |
+| `restore_packets` | 8 |
+| `repair_ownerless_lane` | 0 |
 | `dispatch_stale_owner_acknowledgement` | 6 |
 | `request_lane_goal` | 2 |
 | `manual_restore_review` | 0 |
@@ -20,7 +20,6 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-2
 
 | Kind | Target | Assigned Surface | Recommended Owner | Priority | Next Action |
 | --- | --- | --- | --- | ---: | --- |
-| `repair_ownerless_lane` | lane:submitted_bounty_payouts | `ai_resources_lab` | lane-manager-ai_resources_lab-20260620 | 96 | AI Resources selects an existing non-overlapping owner or writes an explicit park/retire decision; new agents require capability-overlap review first. |
 | `dispatch_stale_owner_acknowledgement` | task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions | `existing_lane_owner` | lane-manager-ai_ml_competitions-019ec69a | 92 | Use the owner-acknowledgement dispatch contract with the existing lane owner; do not create a duplicate agent. |
 | `dispatch_stale_owner_acknowledgement` | task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab | `existing_lane_owner` | lane-manager-ai_resources_lab-20260620 | 92 | Use the owner-acknowledgement dispatch contract with the existing lane owner; do not create a duplicate agent. |
 | `dispatch_stale_owner_acknowledgement` | task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery | `existing_lane_owner` | lane-manager-money_source_discovery-019ec699 | 92 | Use the owner-acknowledgement dispatch contract with the existing lane owner; do not create a duplicate agent. |

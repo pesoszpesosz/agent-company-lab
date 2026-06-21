@@ -54,6 +54,9 @@ from agent_company_core.continuity_watchdog_owner_response_task_dispatch import 
 from agent_company_core.continuity_watchdog_owner_handoff_packets import (
     write_continuity_watchdog_owner_handoff_packets_cli,
 )
+from agent_company_core.submitted_payout_lane_parking_decision import (
+    write_submitted_payout_lane_parking_decision_cli,
+)
 from agent_company_core.control_plane_capacity_benchmark_runner import write_control_plane_capacity_benchmark_runner
 from agent_company_core.premium_customer_followup_escalation import write_premium_customer_followup_escalation
 from agent_company_core.premium_customer_followup_monitor import write_premium_customer_followup_monitor
@@ -290,6 +293,11 @@ def build_parser() -> argparse.ArgumentParser:
     continuity_watchdog_owner_handoff_packets.add_argument("--json-path")
     continuity_watchdog_owner_handoff_packets.add_argument("--packet-dir")
     continuity_watchdog_owner_handoff_packets.add_argument("--no-db-record", action="store_true")
+    submitted_payout_parking = sub.add_parser("write-submitted-payout-lane-parking-decision")
+    submitted_payout_parking.add_argument("--now-utc")
+    submitted_payout_parking.add_argument("--path")
+    submitted_payout_parking.add_argument("--json-path")
+    submitted_payout_parking.add_argument("--no-db-record", action="store_true")
     add_money_path_commands(sub)
     add_paid_code_commands(sub)
     add_digital_products_commands(sub)
@@ -489,6 +497,9 @@ def main() -> None:
         elif args.cmd == "write-continuity-watchdog-owner-handoff-packets":
             init_db(conn)
             write_continuity_watchdog_owner_handoff_packets_cli(conn, args)
+        elif args.cmd == "write-submitted-payout-lane-parking-decision":
+            init_db(conn)
+            write_submitted_payout_lane_parking_decision_cli(conn, args)
         elif handle_money_path_command(conn, args):
             pass
         elif handle_paid_code_command(conn, args):

@@ -1,6 +1,6 @@
 # Continuity Owner Handoff - lane-manager-youtube_content_channels-20260620
 
-Generated UTC: 2026-06-21T12:43:47Z
+Generated UTC: 2026-06-21T12:52:04Z
 Owner: `lane-manager-youtube_content_channels-20260620`
 Role: `youtube_channel_manager`
 Department: `audience_distribution`
@@ -17,7 +17,7 @@ Dispatch mode: `send_to_live_codex_thread`
 - Target: `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels`
 - Priority: `92`
 - Status: `new`
-- Evidence: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-007-continuity-restore-response-v1-007-continuity-restore-v1-007-dispatch_stale_owner_acknowledgement-task-custome.md`
+- Evidence: `E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-006-continuity-restore-response-v1-006-continuity-restore-v1-006-dispatch_stale_owner_acknowledgement-task-custome.md`
 - Next action: Existing owner `lane-manager-youtube_content_channels-20260620` should handle the acknowledgement for `youtube_content_channels` locally and report evidence; no duplicate owner or worker should be created.
 
 Acceptance criteria:

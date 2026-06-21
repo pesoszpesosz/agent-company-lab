@@ -1,10 +1,10 @@
 # Continuity Restore Response: continuity-restore-response-v1-006-continuity-restore-v1-006-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objectiv
 
 Response type: `acknowledgement_response_required`
-Restore packet: `continuity-restore-v1-006-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-predic`
-Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research`
+Restore packet: `continuity-restore-v1-006-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtub`
+Target: `task:task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels`
 Assigned surface: `existing_lane_owner`
-Recommended owner: `lane-manager-prediction_market_research-relaunch-20260614`
+Recommended owner: `lane-manager-youtube_content_channels-20260620`
 
 ## Next Action
 
