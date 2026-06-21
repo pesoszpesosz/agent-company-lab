@@ -1,0 +1,174 @@
+{
+  "schema_version": "lane_runtime_policy_snapshot.v1",
+  "generated_utc": "2026-06-21T15:45:00Z",
+  "policies": [
+    {
+      "lane_id": "premium_customer_intake",
+      "runtime_mode": "always_on",
+      "cadence_minutes": 15,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "continuity_tick",
+        "customer_update_feed"
+      ],
+      "notes": "Primary customer-input router. Keep warm so new requests and supplied materials reach the right lane without loading CEO context."
+    },
+    {
+      "lane_id": "ai_resources_lab",
+      "runtime_mode": "always_on",
+      "cadence_minutes": 15,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "continuity_tick",
+        "worker_roster_drift",
+        "capacity_refresh"
+      ],
+      "notes": "Artificial Resources owns worker hiring, restoration, parking, and capacity-aware routing."
+    },
+    {
+      "lane_id": "platform_engineering",
+      "runtime_mode": "scheduled",
+      "cadence_minutes": 60,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "platform_health_tick",
+        "failing_check",
+        "schema_gap"
+      ],
+      "notes": "Runs infrastructure substrate checks without stealing scarce always-on capacity unless queued."
+    },
+    {
+      "lane_id": "money_source_discovery",
+      "runtime_mode": "scheduled",
+      "cadence_minutes": 90,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "profit_scan_tick",
+        "new_source_packet"
+      ]
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "runtime_mode": "scheduled",
+      "cadence_minutes": 120,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "bounty_scan_tick",
+        "approved_submission_candidate"
+      ]
+    },
+    {
+      "lane_id": "prediction_market_research",
+      "runtime_mode": "scheduled",
+      "cadence_minutes": 120,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "market_scan_tick",
+        "approved_research_candidate"
+      ]
+    },
+    {
+      "lane_id": "ai_ml_competitions",
+      "runtime_mode": "scheduled",
+      "cadence_minutes": 180,
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "competition_scan_tick",
+        "dataset_or_deadline_packet"
+      ]
+    },
+    {
+      "lane_id": "youtube_content_channels",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "customer_youtube_material",
+        "source_video_packet",
+        "script_or_topic_request"
+      ],
+      "notes": "Accept customer-supplied YouTube materials without loading raw material into CEO context."
+    },
+    {
+      "lane_id": "content_and_social_growth",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "approved_content_packet",
+        "reply_target_batch",
+        "campaign_request"
+      ]
+    },
+    {
+      "lane_id": "digital_products_templates_plugins",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "product_candidate_packet",
+        "customer_material",
+        "validated_market_signal"
+      ]
+    },
+    {
+      "lane_id": "lead_generation_and_sales",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "lead_source_packet",
+        "outreach_asset_request",
+        "approved_campaign"
+      ]
+    },
+    {
+      "lane_id": "local_trading_strategy_research",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "approved_research_question",
+        "dataset_packet"
+      ]
+    },
+    {
+      "lane_id": "security_bounty_private_reports",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "approved_security_target",
+        "private_report_packet"
+      ]
+    },
+    {
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "runtime_mode": "on_demand",
+      "max_parallel_tasks": 1,
+      "capacity_class": "codex",
+      "activation_triggers": [
+        "grant_or_hackathon_packet",
+        "airdrop_research_request"
+      ]
+    },
+    {
+      "lane_id": "submitted_bounty_payouts",
+      "runtime_mode": "parked",
+      "max_parallel_tasks": 0,
+      "capacity_class": "none",
+      "park_conditions": [
+        "external_owned_readonly",
+        "no_local_dispatch_without_external_owner_handoff"
+      ],
+      "notes": "External-owned revenue collection lane. Monitor by artifact, do not dispatch local Codex workers."
+    }
+  ]
+}

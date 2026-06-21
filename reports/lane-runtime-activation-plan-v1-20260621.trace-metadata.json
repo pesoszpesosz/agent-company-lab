@@ -1,0 +1,8 @@
+{
+  "policies_seen": 15,
+  "available_capacity": 1,
+  "dispatch_recommendations": 1,
+  "lanes_pending_capacity": 12,
+  "parked_lanes": 1,
+  "external_side_effects": false
+}

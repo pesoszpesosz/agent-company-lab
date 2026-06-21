@@ -1,6 +1,6 @@
 {
   "feed_status": "optional_gate_review_available",
-  "generated_utc": "2026-06-21T15:22:31Z",
+  "generated_utc": "2026-06-21T15:46:03Z",
   "human_ask_required_fields": [
     "exact_action_requested",
     "why_ai_cannot_safely_do_it",

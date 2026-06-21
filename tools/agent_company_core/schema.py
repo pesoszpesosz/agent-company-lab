@@ -357,6 +357,23 @@ CREATE TABLE IF NOT EXISTS account_capacity_sessions (
 
 CREATE INDEX IF NOT EXISTS idx_account_capacity_sessions_status
 ON account_capacity_sessions(status, resume_after_utc);
+
+CREATE TABLE IF NOT EXISTS lane_runtime_policies (
+    lane_id TEXT PRIMARY KEY,
+    runtime_mode TEXT NOT NULL,
+    cadence_minutes INTEGER,
+    max_parallel_tasks INTEGER NOT NULL DEFAULT 1,
+    capacity_class TEXT,
+    activation_triggers_json TEXT NOT NULL DEFAULT '[]',
+    park_conditions_json TEXT NOT NULL DEFAULT '[]',
+    notes TEXT,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    FOREIGN KEY(lane_id) REFERENCES lanes(lane_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_lane_runtime_policies_mode
+ON lane_runtime_policies(runtime_mode, cadence_minutes);
 """
 
 

@@ -19,7 +19,7 @@
     "ownerless_active_lanes": [],
     "stale_open_tasks": [
       {
-        "age_minutes": 5327,
+        "age_minutes": 5351,
         "duplicate_key": "atlas-runway-lenses-v1",
         "lane_id": "platform_engineering",
         "next_action": "Add lane-specific lens skins or a future-slot texture generator for realm-specific path previews.",
@@ -30,7 +30,7 @@
         "updated_at": "2026-06-17T22:34:38Z"
       },
       {
-        "age_minutes": 5320,
+        "age_minutes": 5343,
         "duplicate_key": "atlas-agent-party-v1",
         "lane_id": "platform_engineering",
         "next_action": "Add lane-party animation skins or expanded generated portraits for future lane agents.",
@@ -41,7 +41,7 @@
         "updated_at": "2026-06-17T22:42:01Z"
       },
       {
-        "age_minutes": 1269,
+        "age_minutes": 1292,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:ai_ml_competitions",
         "lane_id": "ai_ml_competitions",
         "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
@@ -52,7 +52,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1269,
+        "age_minutes": 1292,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:money_source_discovery",
         "lane_id": "money_source_discovery",
         "next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
@@ -63,7 +63,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1269,
+        "age_minutes": 1292,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:paid_code_bounties",
         "lane_id": "paid_code_bounties",
         "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
@@ -74,7 +74,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1269,
+        "age_minutes": 1292,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:prediction_market_research",
         "lane_id": "prediction_market_research",
         "next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
@@ -85,7 +85,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1269,
+        "age_minutes": 1292,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:youtube_content_channels",
         "lane_id": "youtube_content_channels",
         "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
@@ -96,7 +96,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:lane-manager-ai_resources_lab-20260620:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
@@ -107,7 +107,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:adoption-retirement-reviewer-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
@@ -118,7 +118,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:browser-account-ops-worker-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
@@ -129,7 +129,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:candidate-registry-curator-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
@@ -140,7 +140,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:capability-overlap-mapper-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
@@ -151,7 +151,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:continuity-watchdog-worker-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
@@ -162,7 +162,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:local-evaluation-harness-builder-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
@@ -173,7 +173,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 186,
+        "age_minutes": 209,
         "duplicate_key": "ceo-worker-bootstrap:premium-customer-context-router-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
@@ -186,7 +186,7 @@
     ],
     "stale_owner_acknowledgements": []
   },
-  "generated_utc": "2026-06-21T15:22:30Z",
+  "generated_utc": "2026-06-21T15:46:00Z",
   "json_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.md",
   "next_action": "No continuity restore action required; continue heartbeat cadence.",

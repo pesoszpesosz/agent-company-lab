@@ -1,0 +1,311 @@
+{
+  "capacity_sessions": [
+    {
+      "account_label": "projectless lane-manager threads",
+      "active_lease_count": 0,
+      "available_slots": 0,
+      "concurrency_limit": 7,
+      "last_error": "Parallel 007 dispatch hit systemError / shared-account pressure; do not blast all lane threads until refreshed.",
+      "last_refresh_utc": null,
+      "notes": "When refresh is detected, mark available and rerun dispatch plan; otherwise keep parked.",
+      "resume_after_utc": "2026-06-21T16:00:00Z",
+      "session_id": "codex-projectless-lane-manager-parallel-pool",
+      "status": "cooling_down",
+      "surface": "codex"
+    },
+    {
+      "account_label": "bounded absolute-path recovery executor",
+      "active_lease_count": 0,
+      "available_slots": 1,
+      "concurrency_limit": 1,
+      "last_error": null,
+      "last_refresh_utc": "2026-06-21T15:36:00Z",
+      "notes": "Use for one queued local task at a time when parallel lane-owner threads are under shared-account pressure.",
+      "resume_after_utc": null,
+      "session_id": "codex-recovery-executor-low-concurrency",
+      "status": "available",
+      "surface": "codex"
+    }
+  ],
+  "counts": {
+    "always_on_lanes": 2,
+    "available_capacity": 1,
+    "dispatch_recommendations": 1,
+    "eligible_task_candidates": 13,
+    "lanes_monitoring": 0,
+    "lanes_parked": 1,
+    "lanes_pending_capacity": 12,
+    "on_demand_lanes": 7,
+    "parked_lanes": 1,
+    "policies_seen": 15,
+    "scheduled_lanes": 5
+  },
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "dispatch_recommendations": [
+    {
+      "evidence_required": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+      "owner_agent_id": "premium-customer-intake-agent-20260620",
+      "owner_thread_id": "codex-thread:019ee738-8be7-7962-a6df-2294ce084671",
+      "priority": 72,
+      "recommended_action": "lease_then_dispatch_with_runtime_and_capacity_guard",
+      "runtime_mode": "always_on",
+      "session_id": "codex-recovery-executor-low-concurrency",
+      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-008"
+    }
+  ],
+  "generated_utc": "2026-06-21T15:45:00Z",
+  "json_path": "E:\\agent-company-lab\\reports\\lane-runtime-activation-plan-v1-20260621.json",
+  "lane_activation_states": [
+    {
+      "activation_triggers": [
+        "continuity_tick",
+        "customer_update_feed"
+      ],
+      "cadence_minutes": 15,
+      "capacity_class": "codex",
+      "lane_id": "premium_customer_intake",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "dispatch_recommended",
+      "runtime_mode": "always_on",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "continuity_tick",
+        "worker_roster_drift",
+        "capacity_refresh"
+      ],
+      "cadence_minutes": 15,
+      "capacity_class": "codex",
+      "lane_id": "ai_resources_lab",
+      "max_parallel_tasks": 1,
+      "open_task_count": 0,
+      "park_conditions": [],
+      "recommended_action": "ensure_seed_or_monitor",
+      "runtime_mode": "always_on",
+      "selected_task_count": 0
+    },
+    {
+      "activation_triggers": [
+        "platform_health_tick",
+        "failing_check",
+        "schema_gap"
+      ],
+      "cadence_minutes": 60,
+      "capacity_class": "codex",
+      "lane_id": "platform_engineering",
+      "max_parallel_tasks": 1,
+      "open_task_count": 2,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "scheduled",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "profit_scan_tick",
+        "new_source_packet"
+      ],
+      "cadence_minutes": 90,
+      "capacity_class": "codex",
+      "lane_id": "money_source_discovery",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "scheduled",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "bounty_scan_tick",
+        "approved_submission_candidate"
+      ],
+      "cadence_minutes": 120,
+      "capacity_class": "codex",
+      "lane_id": "paid_code_bounties",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "scheduled",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "market_scan_tick",
+        "approved_research_candidate"
+      ],
+      "cadence_minutes": 120,
+      "capacity_class": "codex",
+      "lane_id": "prediction_market_research",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "scheduled",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "competition_scan_tick",
+        "dataset_or_deadline_packet"
+      ],
+      "cadence_minutes": 180,
+      "capacity_class": "codex",
+      "lane_id": "ai_ml_competitions",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "scheduled",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "customer_youtube_material",
+        "source_video_packet",
+        "script_or_topic_request"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "youtube_content_channels",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "approved_content_packet",
+        "reply_target_batch",
+        "campaign_request"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "content_and_social_growth",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "product_candidate_packet",
+        "customer_material",
+        "validated_market_signal"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "digital_products_templates_plugins",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "lead_source_packet",
+        "outreach_asset_request",
+        "approved_campaign"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "lead_generation_and_sales",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "approved_research_question",
+        "dataset_packet"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "local_trading_strategy_research",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "approved_security_target",
+        "private_report_packet"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "security_bounty_private_reports",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [
+        "grant_or_hackathon_packet",
+        "airdrop_research_request"
+      ],
+      "cadence_minutes": null,
+      "capacity_class": "codex",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "max_parallel_tasks": 1,
+      "open_task_count": 1,
+      "park_conditions": [],
+      "recommended_action": "pending_capacity",
+      "runtime_mode": "on_demand",
+      "selected_task_count": 1
+    },
+    {
+      "activation_triggers": [],
+      "cadence_minutes": null,
+      "capacity_class": "none",
+      "lane_id": "submitted_bounty_payouts",
+      "max_parallel_tasks": 1,
+      "open_task_count": 0,
+      "park_conditions": [
+        "external_owned_readonly",
+        "no_local_dispatch_without_external_owner_handoff"
+      ],
+      "recommended_action": "parked_no_dispatch",
+      "runtime_mode": "parked",
+      "selected_task_count": 0
+    }
+  ],
+  "max_lanes": 20,
+  "md_path": "E:\\agent-company-lab\\reports\\lane-runtime-activation-plan-v1-20260621.md",
+  "next_action": "Lease recommended tasks through a scoped local command, then dispatch only within account capacity.",
+  "next_wakeup_utc": "2026-06-21T16:00:00Z",
+  "policy_snapshot": "reports\\ai-resources\\lane-runtime-policy-snapshot-v1-20260621.json",
+  "schema_version": "lane_runtime_activation_plan.v1",
+  "status": "dispatch_recommended",
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "external_api_calls": 0,
+    "external_side_effects": false,
+    "public_actions": 0,
+    "service_requests_approved_or_started": 0,
+    "task_leases_mutated": 0,
+    "thread_messages_sent": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_starts": 0
+  }
+}
