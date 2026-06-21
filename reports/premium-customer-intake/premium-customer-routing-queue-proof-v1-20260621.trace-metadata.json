@@ -1,0 +1,20 @@
+{
+    "external_side_effects":  false,
+    "browser_sessions_started":  0,
+    "accounts_created_or_modified":  0,
+    "public_actions_taken":  0,
+    "service_requests_approved_assigned_or_started":  0,
+    "model_api_mcp_calls":  0,
+    "worker_runtime_queue_starts":  0,
+    "duplicate_workers_created":  0,
+    "lane_ownership_mutations":  0,
+    "wallet_payment_trading_actions":  0,
+    "source_task_id":  "task-continuity-lane-next-task-20260621-premium_customer_intake-001",
+    "proof_artifact":  "E:\\agent-company-lab\\reports\\premium-customer-intake\\premium-customer-routing-queue-proof-v1-20260621.md",
+    "raw_input_copied_into_ceo_context":  false,
+    "preserved_raw_input_count":  1,
+    "route_ledger_entries":  2,
+    "owner_acknowledgements_complete":  6,
+    "downstream_followups_open":  5,
+    "downstream_followups_complete":  1
+}

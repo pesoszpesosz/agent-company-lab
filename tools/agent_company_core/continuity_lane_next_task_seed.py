@@ -92,6 +92,85 @@ LANE_PROFILES: dict[str, dict[str, Any]] = {
     },
 }
 
+LANE_FOLLOWUP_PROFILES: dict[str, dict[str, Any]] = {
+    "content_and_social_growth": {
+        "priority": 76,
+        "title": "Continue local content reply-target shortlist",
+        "expected_artifact": "reports/content-and-social-growth/ai-builder-reply-target-shortlist-v1-{day}.md",
+        "next_action": (
+            "Create a local-only AI-builder reply-target shortlist shell from the proof packet: 3 to 5 candidate rows "
+            "from local artifacts and non-account public sources only, with source family, gate status, topic, "
+            "evidence strength, reply-gap signal, content use, risk flags, next allowed action, approval required, "
+            "and X/Grok/Radar placeholders marked awaiting service approval. Do not browse, post, reply, message, "
+            "follow, call APIs, or take public action."
+        ),
+    },
+    "digital_products_templates_plugins": {
+        "priority": 76,
+        "title": "Continue local digital product release-review checklist",
+        "expected_artifact": "reports/digital-products/agent-skill-starter-kit-release-review-checklist-v1-{day}.md",
+        "next_action": (
+            "Prepare a local release-review checklist for Agent Skill Starter Kit v0 using existing artifacts only; "
+            "compare Lemon Squeezy and Gumroad from local evidence, select one provisional no-publish route, and list "
+            "exact human decisions needed before any service request is approved or started. Do not browse, create "
+            "accounts, zip, upload, publish, list, sell, call APIs, spend, or mutate ownership."
+        ),
+    },
+    "lead_generation_and_sales": {
+        "priority": 76,
+        "title": "Continue local lead-generation no-send approval draft",
+        "expected_artifact": "reports/lead-generation-and-sales/lead-generation-outreach-approval-request-draft-v1-{day}.md",
+        "next_action": (
+            "Write a no-send approval request packet for exactly one lead-generation route, or a blocked-route memo if "
+            "the route cannot satisfy gates without browsing, enrichment, account action, or real prospect data. Do "
+            "not email, DM, scrape, enrich, import CRM data, contact anyone, open browsers, or approve service work."
+        ),
+    },
+    "local_trading_strategy_research": {
+        "priority": 74,
+        "title": "Continue local trading no-key replay prep",
+        "expected_artifact": "reports/local-trading/local-trading-no-key-replay-prep-v1-{day}.md",
+        "next_action": (
+            "Create a no-key local replay prep artifact: inventory non-sensitive local trading/backtest files, select "
+            "one candidate dataset readable without credentials or external calls, define frozen replay columns, and "
+            "state paper-only stop conditions. Do not inspect accounts, connect brokers, call APIs, use paid data, "
+            "place orders, spend, or trade."
+        ),
+    },
+    "premium_customer_intake": {
+        "priority": 80,
+        "title": "Continue premium customer intake watch",
+        "expected_artifact": "reports/premium-customer-intake/premium-customer-routing-queue-watch-v1-{day}.md",
+        "next_action": (
+            "Maintain a local premium-customer intake watch: check for new preserved raw material, route ledger changes, "
+            "update-feed gaps, and lane follow-up drift; if no new material exists, write a compact no-new-input watch "
+            "status and next check condition. Keep raw material out of CEO context and do not start workers, approve "
+            "service requests, open browsers, call APIs, or take external actions."
+        ),
+    },
+    "security_bounty_private_reports": {
+        "priority": 76,
+        "title": "Continue local security evidence source ranking",
+        "expected_artifact": "reports/security-bounty-private-reports/security-source-ranking-packet-v1-{day}.md",
+        "next_action": (
+            "Create a source-ranking packet for the imported security evidence set, then promote exactly one candidate "
+            "to local_proof_needed or scope_unverified_blocked. Use local evidence only; do not touch live targets, "
+            "scan, exploit, submit reports, contact programs, open browsers, call APIs, or approve route gates."
+        ),
+    },
+    "web3_airdrops_grants_hackathons": {
+        "priority": 74,
+        "title": "Continue local Gitcoin application readiness checklist",
+        "expected_artifact": "reports/web3-airdrops-grants-hackathons/gitcoin-local-application-readiness-checklist-v1-{day}.md",
+        "next_action": (
+            "Create a local-only Gitcoin application readiness checklist: map each draft field to sanitized public-safe "
+            "text, cite exact local evidence, mark fields blocked by browser/account/legal/wallet/public-action gates, "
+            "score expected value versus paid code bounties, and recommend read-only refresh, gate packets, or parking. "
+            "Do not browse, connect wallets, sign, submit forms, spend gas, call APIs, or take public action."
+        ),
+    },
+}
+
 
 def _report_paths(generated_utc: str, args: argparse.Namespace) -> tuple[Path, Path]:
     day = generated_utc[:10].replace("-", "")
@@ -130,6 +209,41 @@ def _active_owned_lanes_without_open_tasks(conn: sqlite3.Connection) -> list[sql
     ).fetchall()
 
 
+def _latest_completed_lane_next_proof(conn: sqlite3.Connection, lane_id: str) -> dict[str, Any] | None:
+    terminal = tuple(TERMINAL_STATUSES)
+    placeholders = ",".join("?" for _ in terminal)
+    rows = conn.execute(
+        f"""
+        SELECT
+          artifact.artifact_id,
+          artifact.kind,
+          artifact.path_or_url,
+          artifact.task_id,
+          artifact.created_at,
+          artifact.sha256,
+          task.completed_at,
+          task.updated_at AS task_updated_at
+        FROM artifacts artifact
+        JOIN tasks task ON task.task_id = artifact.task_id
+        WHERE task.lane_id = ?
+          AND task.duplicate_key LIKE 'continuity:lane-next-task:%'
+          AND task.status IN ({placeholders})
+          AND artifact.kind NOT LIKE '%seed%'
+          AND artifact.kind NOT LIKE '%input%'
+        ORDER BY COALESCE(task.completed_at, task.updated_at, artifact.created_at) DESC, artifact.created_at DESC
+        LIMIT 20
+        """,
+        (lane_id, *terminal),
+    ).fetchall()
+    for row in rows:
+        item = dict(row)
+        if Path(item["path_or_url"]).exists():
+            item["source"] = "completed_lane_next_proof_artifact"
+            item["path_exists"] = True
+            return item
+    return None
+
+
 def _manager_packet_evidence(lane_id: str, manager_packet_dir: Path) -> dict[str, Any]:
     manager_packet = manager_packet_dir / f"{lane_id}-manager-packet.md"
     return {
@@ -145,6 +259,9 @@ def _manager_packet_evidence(lane_id: str, manager_packet_dir: Path) -> dict[str
 
 
 def _latest_lane_evidence(conn: sqlite3.Connection, lane_id: str, manager_packet_dir: Path) -> dict[str, Any]:
+    lane_next_proof = _latest_completed_lane_next_proof(conn, lane_id)
+    if lane_next_proof:
+        return lane_next_proof
     rows = conn.execute(
         """
         SELECT artifact_id, kind, path_or_url, task_id, created_at, sha256
@@ -184,14 +301,21 @@ def _latest_lane_evidence(conn: sqlite3.Connection, lane_id: str, manager_packet
     return manager_packet
 
 
-def _profile_for_lane(lane_id: str) -> dict[str, Any]:
+def _profile_for_lane(lane_id: str, evidence: dict[str, Any] | None = None) -> dict[str, Any]:
+    if evidence and evidence.get("source") == "completed_lane_next_proof_artifact" and lane_id in LANE_FOLLOWUP_PROFILES:
+        profile = dict(LANE_FOLLOWUP_PROFILES[lane_id])
+        profile["profile_stage"] = "proof_followup"
+        return profile
     profile = LANE_PROFILES.get(lane_id)
     if profile:
+        profile = dict(profile)
+        profile["profile_stage"] = "initial_lane_next"
         return profile
     return {
         "priority": 72,
         "title": f"Continue local lane proof for {lane_id}",
         "expected_artifact": f"reports/{safe_id_fragment(lane_id, 80)}/local-lane-proof-packet-v1-{{day}}.md",
+        "profile_stage": "generic_lane_next",
         "next_action": (
             "Produce one bounded local proof packet from the current lane goal or manager packet: state the next "
             "artifact, evidence requirement, owner, gate, and revisit condition. Do not create agents, mutate lane "
@@ -233,7 +357,7 @@ def _seed_lane_task(
 ) -> dict[str, Any]:
     lane_id = lane["lane_id"]
     day = generated_utc[:10].replace("-", "")
-    profile = _profile_for_lane(lane_id)
+    profile = _profile_for_lane(lane_id, evidence)
     expected_artifact = profile["expected_artifact"].format(day=day)
     open_seed = _open_seed_task(conn, lane_id, day)
     item: dict[str, Any] = {
@@ -248,6 +372,7 @@ def _seed_lane_task(
         "evidence_path": evidence["path_or_url"],
         "evidence_path_exists": evidence["path_exists"],
         "expected_artifact": expected_artifact,
+        "profile_stage": profile["profile_stage"],
         "priority": profile["priority"],
         "title": profile["title"],
         "next_action": profile["next_action"],

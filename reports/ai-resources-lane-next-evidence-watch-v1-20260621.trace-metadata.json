@@ -1,0 +1,10 @@
+{
+  "initial_open_lane_next_tasks": 7,
+  "current_open_lane_next_tasks": 5,
+  "completed_during_refresh": ["premium_customer_intake", "content_and_social_growth"],
+  "duplicate_acknowledgement_dispatch_created": false,
+  "new_worker_created": false,
+  "lane_ownership_mutated": false,
+  "external_side_effects": false,
+  "artifact_path": "E:\\agent-company-lab\\reports\\ai-resources-lane-next-evidence-watch-v1-20260621.md"
+}

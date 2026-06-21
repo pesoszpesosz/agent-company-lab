@@ -172,6 +172,54 @@ def test_continuity_lane_next_task_seed_repairs_open_seed_missing_evidence(tmp_p
     assert row["evidence_required"].endswith("content_and_social_growth-manager-packet.md")
 
 
+def test_continuity_lane_next_task_seed_uses_completed_proof_for_followup(tmp_path: Path) -> None:
+    conn = _conn(tmp_path)
+    proof = tmp_path / "content-proof.md"
+    proof.write_text("# proof\n", encoding="utf-8")
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-content_and_social_growth-001',
+               'content_and_social_growth', 'old proof task', 'complete', 78,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:001',
+               'seed evidence', 'proof done', ?, ?, ?)
+        """,
+        ("2026-06-21T10:00:00Z", "2026-06-21T10:00:00Z", "2026-06-21T10:00:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-content-proof', 'content_and_social_growth',
+               'task-continuity-lane-next-task-20260621-content_and_social_growth-001',
+               'local_proof_packet', ?, 'sha', 'proof', ?)
+        """,
+        (str(proof), "2026-06-21T10:00:00Z"),
+    )
+    conn.commit()
+
+    payload = seed_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    item = next(item for item in payload["seed_items"] if item["lane_id"] == "content_and_social_growth")
+    assert item["profile_stage"] == "proof_followup"
+    assert item["task_id"].endswith("-002")
+    assert item["evidence_path"] == str(proof)
+    task = conn.execute(
+        """
+        SELECT title, evidence_required, next_action
+        FROM tasks
+        WHERE task_id=?
+        """,
+        (item["task_id"],),
+    ).fetchone()
+    assert task["title"] == "Continue local content reply-target shortlist"
+    assert task["evidence_required"] == str(proof)
+    assert "reply-target shortlist" in task["next_action"]
+
+
 def test_continuity_lane_next_task_seed_cli_parser_supports_command() -> None:
     parser = build_parser()
     args = parser.parse_args(

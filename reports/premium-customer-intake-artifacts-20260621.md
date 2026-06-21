@@ -1,8 +1,8 @@
 # Agent Company Artifacts
 
-Generated UTC: 2026-06-21T13:06:49Z
+Generated UTC: 2026-06-21T13:26:19Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 87
+Rows shown: 90
 
 ## Counts By Kind
 
@@ -14,6 +14,7 @@ Rows shown: 87
 | `ceo_state_packet_markdown` | 1 |
 | `continuity_current_lane_goal` | 1 |
 | `continuity_current_lane_goal_json` | 1 |
+| `continuity_lane_next_task_seed_evidence` | 1 |
 | `customer_followup_escalation` | 2 |
 | `customer_followup_escalation_json` | 2 |
 | `customer_followup_monitor` | 2 |
@@ -55,9 +56,10 @@ Rows shown: 87
 | `premium_customer_intake_router_refresh` | 1 |
 | `premium_customer_intake_router_refresh_json` | 1 |
 | `premium_customer_intake_router_test` | 1 |
+| `premium_customer_routing_queue_proof` | 1 |
 | `registry_update` | 1 |
 | `taxonomy_update` | 1 |
-| `trace_metadata` | 4 |
+| `trace_metadata` | 5 |
 | `youtube_source_material_intake_procedure` | 1 |
 | `youtube_source_material_intake_procedure_json` | 1 |
 
@@ -65,12 +67,15 @@ Rows shown: 87
 
 | Lane | Count |
 | --- | ---: |
-| `premium_customer_intake` | 87 |
+| `premium_customer_intake` | 90 |
 
 ## Artifacts
 
 | Created | Kind | Lane | Task | Artifact | Path/URL | SHA256 | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T13:26:18Z | trace_metadata | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-001` | `artifact-premium-customer-routing-queue-proof-v1-trace-metadata-20260621` | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-proof-v1-20260621.trace-metadata.json | B419354E28D0B86C37B2454C5BC76E675E2D5ECD5FC85881593FA96170A0244E | Trace metadata for premium customer routing queue proof. |
+| 2026-06-21T13:26:18Z | premium_customer_routing_queue_proof | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-001` | `artifact-premium-customer-routing-queue-proof-v1-md-20260621` | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-proof-v1-20260621.md | 687A85B5E0CFF36121DDA5CFB52AE87EF79CE670359D21DD4DB3FDAD228C8A89 | Premium customer intake queue proof checking preserved raw input, route ledger, update feed, and pending follow-ups without copying raw material into CEO context. |
+| 2026-06-21T13:19:38Z | continuity_lane_next_task_seed_evidence | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-001` | `artifact-continuity-lane-next-task-seed-evidence-premium_customer_intake-001` | E:\agent-company-lab\reports\premium-customer-intake-current-lane-goal-v1-trace-metadata-20260621.json | 7b8f2da034ba7af49d0a851b16491e1dde47dc54e43f5cb877b0e351b1157027 | Seed evidence for the next bounded local lane task. |
 | 2026-06-21T13:06:48Z | trace_metadata | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-premium-customer-intake-router-refresh-v1-trace-metadata-20260621` | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-trace-metadata-20260621.json | 7795992E4B5225C92F5BC6BB69A7FD2A3F06D4121EC27749240706F9FFF56D8E | Trace metadata for CEO intake-router refresh. |
 | 2026-06-21T13:06:48Z | customer_update_feed_json | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-customer-update-feed-v5-json-20260621` | E:\agent-company-lab\reports\customer-update-feed-v5-20260621.json | C24BF59049126C062F0AD3544BA41CA16CB4964C4ACA47C40FDA76D8650AD8E7 | Machine-readable customer-facing update feed v5. |
 | 2026-06-21T13:06:48Z | customer_update_feed_md | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-customer-update-feed-v5-md-20260621` | E:\agent-company-lab\reports\customer-update-feed-v5-20260621.md | F548BB0C965D7607C4F14DB44EFCB4EA3040411D4E51A7AF7D40E640E4D23350 | Customer-facing update feed v5 after CEO intake-router refresh. |

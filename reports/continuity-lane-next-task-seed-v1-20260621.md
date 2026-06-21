@@ -1,19 +1,19 @@
 # Continuity Lane Next Task Seed V1
 
-Generated UTC: 2026-06-21T13:21:09Z
-Status: `repaired_existing_seed_evidence`
+Generated UTC: 2026-06-21T13:33:08Z
+Status: `seeded`
 JSON mirror: `E:\agent-company-lab\reports\continuity-lane-next-task-seed-v1-20260621.json`
 
 ## Counts
 
 | Count | Value |
 | --- | ---: |
-| `lanes_without_open_tasks` | 0 |
-| `seed_tasks_created` | 0 |
+| `lanes_without_open_tasks` | 7 |
+| `seed_tasks_created` | 7 |
 | `seed_tasks_planned` | 0 |
 | `open_seed_tasks_reused` | 0 |
 | `missing_evidence_paths` | 0 |
-| `open_seed_evidence_repaired` | 3 |
+| `open_seed_evidence_repaired` | 0 |
 | `open_seed_evidence_repair_planned` | 0 |
 | `open_seed_missing_evidence_unrepaired` | 0 |
 
@@ -21,15 +21,19 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-lane-next-task-seed-v1-202
 
 | Lane | Owner | Status | Task | Evidence | Expected Artifact |
 | --- | --- | --- | --- | --- | --- |
-| none |  |  |  |  |  |
+| `content_and_social_growth` | `lane-manager-content_and_social_growth-019ec613` | `created` | `task-continuity-lane-next-task-20260621-content_and_social_growth-002` | E:\agent-company-lab\reports\content-and-social-growth\content-and-social-growth-local-proof-packet-v1-20260621.md | reports/content-and-social-growth/ai-builder-reply-target-shortlist-v1-20260621.md |
+| `digital_products_templates_plugins` | `lane-manager-digital_products_templates_plugins-019ec69a` | `created` | `task-continuity-lane-next-task-20260621-digital_products_templates_plugins-002` | E:\agent-company-lab\reports\digital-products\digital-products-local-readiness-packet-v1-20260621.md | reports/digital-products/agent-skill-starter-kit-release-review-checklist-v1-20260621.md |
+| `lead_generation_and_sales` | `lane-manager-lead_generation_and_sales-019ec613` | `created` | `task-continuity-lane-next-task-20260621-lead_generation_and_sales-002` | E:\agent-company-lab\reports\lead-generation-and-sales\lead-generation-local-offer-proof-v1-20260621.md | reports/lead-generation-and-sales/lead-generation-outreach-approval-request-draft-v1-20260621.md |
+| `local_trading_strategy_research` | `lane-manager-local_trading_strategy_research-019ec613` | `created` | `task-continuity-lane-next-task-20260621-local_trading_strategy_research-002` | E:\agent-company-lab\reports\local-trading\local-trading-paper-research-proof-v1-20260621.md | reports/local-trading/local-trading-no-key-replay-prep-v1-20260621.md |
+| `premium_customer_intake` | `premium-customer-intake-agent-20260620` | `created` | `task-continuity-lane-next-task-20260621-premium_customer_intake-002` | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-proof-v1-20260621.md | reports/premium-customer-intake/premium-customer-routing-queue-watch-v1-20260621.md |
+| `security_bounty_private_reports` | `lane-manager-security_bounty_private_reports-019ec612` | `created` | `task-continuity-lane-next-task-20260621-security_bounty_private_reports-002` | E:\agent-company-lab\reports\security-bounty-private-reports\security-bounty-local-readiness-proof-v1-20260621.md | reports/security-bounty-private-reports/security-source-ranking-packet-v1-20260621.md |
+| `web3_airdrops_grants_hackathons` | `lane-manager-web3_airdrops_grants_hackathons-019ec613` | `created` | `task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-002` | E:\agent-company-lab\reports\web3-airdrops-grants-hackathons\web3-local-opportunity-proof-v1-20260621.md | reports/web3-airdrops-grants-hackathons/gitcoin-local-application-readiness-checklist-v1-20260621.md |
 
 ## Evidence Repairs
 
 | Lane | Task | Status | Old Evidence | New Evidence |
 | --- | --- | --- | --- | --- |
-| `local_trading_strategy_research` | `task-continuity-lane-next-task-20260621-local_trading_strategy_research-001` | `repaired` | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-011-continuity-restore-response-v1-011-continuity-res | E:\agent-company-lab\reports\manager-packets\local_trading_strategy_research-manager-packet.md |
-| `security_bounty_private_reports` | `task-continuity-lane-next-task-20260621-security_bounty_private_reports-001` | `repaired` | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-013-continuity-restore-response-v1-013-continuity-res | E:\agent-company-lab\reports\manager-packets\security_bounty_private_reports-manager-packet.md |
-| `web3_airdrops_grants_hackathons` | `task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-001` | `repaired` | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-015-continuity-restore-response-v1-015-continuity-res | E:\agent-company-lab\reports\manager-packets\web3_airdrops_grants_hackathons-manager-packet.md |
+| none |  |  |  |  |
 
 ## Next Action
 

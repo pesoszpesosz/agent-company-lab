@@ -1,0 +1,12 @@
+{
+  "watchdog_status": "clear",
+  "restore_actions": 0,
+  "lanes_without_open_tasks": 0,
+  "open_owner_source_acknowledgement_tasks": 0,
+  "open_continuity_lane_next_tasks": 7,
+  "duplicate_acknowledgement_dispatch_created": false,
+  "new_worker_created": false,
+  "lane_ownership_mutated": false,
+  "external_side_effects": false,
+  "artifact_path": "E:\\agent-company-lab\\reports\\ai-resources-lane-next-monitor-v1-20260621.md"
+}
