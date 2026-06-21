@@ -51,3 +51,16 @@ The watchdog can report three distinct states:
 - account/session capacity state
 
 That gives the CEO layer an abstract control surface: activate lanes by policy, queue work by task priority and lane class, and resume fast when a refreshed session appears.
+
+## Drain Execution
+
+The drain executor consumes `lane_runtime_activation_plan.v1` recommendations after the planner has selected capacity-eligible tasks. It re-checks the task row and account/session row before leasing so stale recommendations cannot consume a full session or overwrite an active task lease.
+
+The executor is still local-only:
+
+- it sets local task leases and `in_progress` status
+- it increments `account_capacity_sessions.active_lease_count`
+- it writes dispatch packets for the owner thread adapter
+- it does not send messages, start workers, open browsers, call APIs, approve service requests, publish, submit, spend, trade, or contact anyone
+
+After a successful drain, rerunning the activation planner should normally move remaining eligible lanes to `pending_capacity` until a session refresh makes slots available again.

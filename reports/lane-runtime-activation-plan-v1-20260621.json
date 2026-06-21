@@ -15,8 +15,8 @@
     },
     {
       "account_label": "bounded absolute-path recovery executor",
-      "active_lease_count": 0,
-      "available_slots": 1,
+      "active_lease_count": 1,
+      "available_slots": 0,
       "concurrency_limit": 1,
       "last_error": null,
       "last_refresh_utc": "2026-06-21T15:36:00Z",
@@ -29,9 +29,9 @@
   ],
   "counts": {
     "always_on_lanes": 2,
-    "available_capacity": 1,
-    "dispatch_recommendations": 1,
-    "eligible_task_candidates": 13,
+    "available_capacity": 0,
+    "dispatch_recommendations": 0,
+    "eligible_task_candidates": 12,
     "lanes_monitoring": 0,
     "lanes_parked": 1,
     "lanes_pending_capacity": 12,
@@ -41,21 +41,8 @@
     "scheduled_lanes": 5
   },
   "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
-  "dispatch_recommendations": [
-    {
-      "evidence_required": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-007.md",
-      "lane_id": "premium_customer_intake",
-      "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
-      "owner_agent_id": "premium-customer-intake-agent-20260620",
-      "owner_thread_id": "codex-thread:019ee738-8be7-7962-a6df-2294ce084671",
-      "priority": 72,
-      "recommended_action": "lease_then_dispatch_with_runtime_and_capacity_guard",
-      "runtime_mode": "always_on",
-      "session_id": "codex-recovery-executor-low-concurrency",
-      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-008"
-    }
-  ],
-  "generated_utc": "2026-06-21T15:45:00Z",
+  "dispatch_recommendations": [],
+  "generated_utc": "2026-06-21T16:11:00Z",
   "json_path": "E:\\agent-company-lab\\reports\\lane-runtime-activation-plan-v1-20260621.json",
   "lane_activation_states": [
     {
@@ -67,11 +54,11 @@
       "capacity_class": "codex",
       "lane_id": "premium_customer_intake",
       "max_parallel_tasks": 1,
-      "open_task_count": 1,
+      "open_task_count": 0,
       "park_conditions": [],
-      "recommended_action": "dispatch_recommended",
+      "recommended_action": "ensure_seed_or_monitor",
       "runtime_mode": "always_on",
-      "selected_task_count": 1
+      "selected_task_count": 0
     },
     {
       "activation_triggers": [
@@ -292,11 +279,11 @@
   ],
   "max_lanes": 20,
   "md_path": "E:\\agent-company-lab\\reports\\lane-runtime-activation-plan-v1-20260621.md",
-  "next_action": "Lease recommended tasks through a scoped local command, then dispatch only within account capacity.",
+  "next_action": "Wait for account/session capacity at 2026-06-21T16:00:00Z; keep lanes marked pending instead of restoring them as broken.",
   "next_wakeup_utc": "2026-06-21T16:00:00Z",
   "policy_snapshot": "reports\\ai-resources\\lane-runtime-policy-snapshot-v1-20260621.json",
   "schema_version": "lane_runtime_activation_plan.v1",
-  "status": "dispatch_recommended",
+  "status": "pending_capacity",
   "zero_side_effect_boundary": {
     "browser_sessions_started": 0,
     "external_api_calls": 0,

@@ -46,6 +46,7 @@ from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
 from agent_company_core.account_capacity_dispatch_plan import write_account_capacity_dispatch_plan_cli
 from agent_company_core.codex_thread_goal_inventory import write_codex_thread_goal_inventory_cli
 from agent_company_core.lane_runtime_activation_plan import write_lane_runtime_activation_plan_cli
+from agent_company_core.lane_runtime_dispatch_drain import write_lane_runtime_dispatch_drain_cli
 from agent_company_core.continuity_watchdog_snapshot import write_continuity_watchdog_snapshot
 from agent_company_core.continuity_watchdog_restore_plan import write_continuity_watchdog_restore_plan
 from agent_company_core.continuity_watchdog_restore_response_bundle import (
@@ -283,6 +284,17 @@ def build_parser() -> argparse.ArgumentParser:
     lane_runtime_activation.add_argument("--path")
     lane_runtime_activation.add_argument("--json-path")
     lane_runtime_activation.add_argument("--no-db-record", action="store_true")
+    lane_runtime_dispatch_drain = sub.add_parser("drain-lane-runtime-dispatch")
+    lane_runtime_dispatch_drain.add_argument("--activation-plan", required=True)
+    lane_runtime_dispatch_drain.add_argument("--now-utc")
+    lane_runtime_dispatch_drain.add_argument("--lease-minutes", type=int, default=120)
+    lane_runtime_dispatch_drain.add_argument("--executor-agent-id", default="lane-runtime-dispatch-drain-executor")
+    lane_runtime_dispatch_drain.add_argument("--max-dispatches", type=int, default=10)
+    lane_runtime_dispatch_drain.add_argument("--packet-dir")
+    lane_runtime_dispatch_drain.add_argument("--path")
+    lane_runtime_dispatch_drain.add_argument("--json-path")
+    lane_runtime_dispatch_drain.add_argument("--dry-run", action="store_true")
+    lane_runtime_dispatch_drain.add_argument("--no-db-record", action="store_true")
     codex_thread_goal_inventory = sub.add_parser("write-codex-thread-goal-inventory")
     codex_thread_goal_inventory.add_argument("--thread-snapshot", required=True)
     codex_thread_goal_inventory.add_argument("--now-utc")
@@ -538,6 +550,9 @@ def main() -> None:
         elif args.cmd == "write-lane-runtime-activation-plan":
             init_db(conn)
             write_lane_runtime_activation_plan_cli(conn, args)
+        elif args.cmd == "drain-lane-runtime-dispatch":
+            init_db(conn)
+            write_lane_runtime_dispatch_drain_cli(conn, args)
         elif args.cmd == "write-codex-thread-goal-inventory":
             init_db(conn)
             write_codex_thread_goal_inventory_cli(conn, args)
