@@ -1,6 +1,6 @@
 # Manager Packet - premium_customer_intake
 
-Generated UTC: 2026-06-21T13:02:27Z
+Generated UTC: 2026-06-21T13:06:50Z
 Department: Customer/Operator Success
 Lane status: active
 Current owner: `premium-customer-intake-agent-20260620`
@@ -110,7 +110,8 @@ These require a scoped service request and approval before any execution:
 | 88 | complete | `task-premium-customer-followup-escalation-v1-customer-input-ceo-operating-goal-objective-20260620-002` - Escalate stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
 | 88 | complete | `task-customer-input-ceo-operating-goal-objective-20260620-002` - Route premium customer input customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.md | ai_resources_lab_followup_packet_or_task |
 | 87 | complete | `task-premium-customer-followup-monitor-v1-customer-input-ceo-operating-goal-objective-20260620-002` - Monitor premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\customer-followup-monitor-v1-20260620.md | Escalate ownerless, blocked, or stale follow-ups to AI Resources or the CEO decision batch. |
-| 86 | complete | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` - Submit continuity lane goal response for premium_customer_intake | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-011-continuity-restore-response-v1-011-continuity-restore-v1-011-request_lane_goal- | Owner `premium-customer-intake-agent-20260620` should submit the lane goal artifact for `premium_customer_intake`. |
+| 86 | complete | `task-premium-customer-intake-router-refresh-v1-20260621` - Refresh CEO intake router customer queue | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.md; E:\agent-company-lab\reports\customer-update-feed-v5-20260621.md | Await next premium customer request or supplied material; use compact routing and no external side effects. |
+| 86 | complete | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` - Submit continuity lane goal response for premium_customer_intake | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-010-continuity-restore-response-v1-010-continuity-restore-v1-010-request_lane_goal- | Owner `premium-customer-intake-agent-20260620` should submit the lane goal artifact for `premium_customer_intake`. |
 
 ## Service Requests
 
@@ -122,6 +123,7 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| router_refresh_current | customer_intake_router_refresh | `outcome-premium-customer-intake-router-refresh-v1-20260621` | 0.0 | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.md | Await next premium-customer request/material; preserve raw context, route compact capsule to lane owner, and update customer queue. |
 | current_lane_goal_submitted | continuity_current_lane_goal | `outcome-premium-customer-intake-current-lane-goal-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-lane-goals-v1-20260621\premium-customer-intake-current-lane-goal-v1-20260621.md | Run a local-only fixture or next real customer material through the YouTube/source v2 intake procedure; preserve raw context and route compact capsules. |
 | local_procedure_ready | customer_intake_procedure | `outcome-youtube-source-material-intake-routing-procedure-v2-20260621` | 0.0 | E:\agent-company-lab\reports\youtube-source-material-intake-routing-procedure-v2-20260621.md | Use the procedure for the next incoming YouTube/source material: preserve raw context, route compact capsule to youtube_content_channels, and update the customer. |
 | validated | customer_followup_escalation_capability | `outcome-premium-customer-followup-escalation-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | Use the escalation packet to drive AI Resources triage, then surface only CEO-grade decisions or customer updates. |
@@ -129,7 +131,6 @@ These require a scoped service request and approval before any execution:
 | validated | customer_followup_monitor_capability | `outcome-premium-customer-followup-monitor-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_monitor.py | Create an escalation packet for stale unacknowledged follow-ups without starting lane work. |
 | attention_needed | customer_followup_monitor | `outcome-premium-customer-followup-monitor-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\customer-followup-monitor-v1-20260620.md | Escalate ownerless, blocked, or stale follow-ups to AI Resources or the CEO decision batch. |
 | validated | customer_followup_synthesis_capability | `outcome-premium-customer-followup-synthesizer-command-v1-20260620` | 0.0 | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_synthesizer.py | Add stale follow-up monitor and lane-manager acknowledgement reports. |
-| synthesized | customer_lane_followup_synthesis | `outcome-customer-input-ceo-operating-goal-objective-20260620-002-lane-followups` | 0.0 | E:\agent-company-lab\intake\customer\processed\customer-input-ceo-operating-goal-objective-20260620-002-lane-followups.md | Monitor generated lane tasks; escalate stale or ownerless lanes to AI Resources. |
 
 ## Startup Commands
 

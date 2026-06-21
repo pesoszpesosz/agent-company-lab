@@ -1,0 +1,60 @@
+{
+    "schema_version":  "premium_customer_intake_router_refresh.v1",
+    "generated_utc":  "2026-06-21T13:05:48Z",
+    "lane_id":  "premium_customer_intake",
+    "owner_agent_id":  "premium-customer-intake-agent-20260620",
+    "status":  "router_refresh_current",
+    "read_sources":  [
+                         "E:\\agent-company-lab\\intake\\customer\\README.md",
+                         "E:\\agent-company-lab\\architecture\\ceo-worker-constellation-v1.md",
+                         "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
+                         "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.md"
+                     ],
+    "compact_ceo_capsule":  {
+                                "intent":  "Keep premium customer intake context-safe and current.",
+                                "target_lane":  "premium_customer_intake",
+                                "summary":  "Router is active; raw customer context remains outside CEO window; customer-facing queue refreshed; no immediate human action required for local-only work.",
+                                "application_path":  "raw_preservation_compact_capsule_lane_followup_customer_update_queue",
+                                "status":  "current",
+                                "next_artifact":  "next_customer_input_route_packet_or_youtube_source_material_fixture",
+                                "human_action_needed":  false
+                            },
+    "customer_queue_status":  {
+                                  "new_unprocessed_customer_material_found":  false,
+                                  "existing_raw_objective_preserved":  true,
+                                  "customer_update_feed":  "E:\\agent-company-lab\\reports\\customer-update-feed-v5-20260621.md",
+                                  "human_action_required_now":  false,
+                                  "optional_human_gates_source":  "E:\\agent-company-lab\\reports\\human-action-feed-v1-20260621.md"
+                              },
+    "routing_status":  [
+                           {
+                               "lane_id":  "premium_customer_intake",
+                               "status":  "current",
+                               "note":  "continuity lane-goal response complete"
+                           },
+                           {
+                               "lane_id":  "youtube_content_channels",
+                               "status":  "procedure_ready",
+                               "note":  "future YouTube/source material routes via v2 procedure"
+                           },
+                           {
+                               "lane_id":  "ai_resources_lab_and_other_followup_lanes",
+                               "status":  "existing_owner_path",
+                               "note":  "not claimed or started by intake refresh"
+                           }
+                       ],
+    "non_rejection_rule":  "Route, synthesize, apply, or park with a named revisit condition unless unsafe, illegal, impossible, spammy, duplicate without new information, or out of scope.",
+    "next_local_action":  "When the next premium-customer request or source material arrives, preserve raw context, run router, synthesize follow-ups, monitor acknowledgement, and update customer-facing queue.",
+    "zero_side_effect_boundary":  {
+                                      "browser_sessions_started":  0,
+                                      "accounts_created_or_modified":  0,
+                                      "public_actions_taken":  0,
+                                      "wallet_payment_trading_actions":  0,
+                                      "model_api_mcp_calls":  0,
+                                      "service_requests_approved_assigned_or_started":  0,
+                                      "worker_runtime_queue_starts":  0,
+                                      "duplicate_workers_created":  0,
+                                      "lane_ownership_mutations":  0,
+                                      "external_side_effects":  false
+                                  }
+}

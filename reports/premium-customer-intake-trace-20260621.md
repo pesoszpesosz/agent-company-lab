@@ -1,8 +1,8 @@
 # Agent Company Trace Events
 
-Generated UTC: 2026-06-21T12:35:30Z
+Generated UTC: 2026-06-21T13:06:49Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 11
+Rows shown: 12
 
 ## Boundary
 
@@ -22,6 +22,7 @@ Rows shown: 11
 | `premium_customer_input_routed` | 1 |
 | `premium_customer_intake_installed` | 1 |
 | `premium_customer_intake_router_command_ready` | 1 |
+| `premium_customer_intake_router_refreshed` | 1 |
 | `premium_customer_lane_followups_synthesized` | 1 |
 | `youtube_source_material_intake_procedure_ready` | 1 |
 
@@ -29,12 +30,13 @@ Rows shown: 11
 
 | Lane | Count |
 | --- | ---: |
-| `premium_customer_intake` | 11 |
+| `premium_customer_intake` | 12 |
 
 ## Events
 
 | Time | Type | Trace | Lane | Task | Agent | Event | Source | Artifact | Metadata |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T13:06:49Z | premium_customer_intake_router_refreshed | `trace-premium-customer-intake-router-refresh-v1-20260621` | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-router-refresh-v1-20260621` - Refreshed CEO intake router and customer-facing queue locally; raw context remains outside CEO window. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "customer_update_feed": "E:\\agent-company-lab\\reports\\customer-update-feed-v5-20260621.md", "duplicate_workers_created": 0, "external_side_effects": f |
 | 2026-06-21T12:35:29Z | continuity_current_lane_goal_submitted | `trace-premium-customer-intake-current-lane-goal-v1-20260621` | `premium_customer_intake` | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-current-lane-goal-v1-20260621` - Submitted current lane goal artifact for premium_customer_intake continuity owner handoff. | codex_premium_customer_context_router | E:\agent-company-lab\reports\continuity-lane-goals-v1-20260621\premium-customer-intake-current-lane-goal-v1-20260621.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "duplicate_workers_created": 0, "external_side_effects": false, "lane_goal_artifact": "E:\\agent-company-lab\\reports\\continuity-lane-goals-v1-20260621\ |
 | 2026-06-21T12:19:37Z | youtube_source_material_intake_procedure_ready | `trace-premium-customer-intake-20260621` | `premium_customer_intake` | `task-youtube-source-material-intake-routing-procedure-v2-20260621` | premium-customer-intake-agent-20260620 | `trace-event-youtube-source-material-intake-routing-procedure-v2-20260621` - Wrote v2 compact intake-routing procedure for user-supplied YouTube/source materials and updated customer feed locally. | codex_premium_customer_context_router | E:\agent-company-lab\reports\youtube-source-material-intake-routing-procedure-v2-20260621.md | {"accounts_or_channels_created": 0, "browser_sessions_started": 0, "customer_update_feed": "E:\\agent-company-lab\\reports\\customer-update-feed-v4-20260621.md", "external_side_effects": false, "model_api_mcp_calls": 0, |
 | 2026-06-20T21:00:44Z | premium_customer_followup_escalation_command_ready | `trace-premium-customer-intake-20260620` | `premium_customer_intake` | `task-premium-customer-followup-escalation-command-v1-20260620` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-followup-escalation-command-v1-20260620` - Created an executable follow-up escalation command that converts stale customer-generated lane tasks into one AI Resources triage packet without starting lane work. | codex | E:\agent-company-lab\tools\agent_company_core\premium_customer_followup_escalation.py | {"command": "escalate-premium-customer-followups", "external_side_effects": false, "target_surface": "ai_resources_lab"} |

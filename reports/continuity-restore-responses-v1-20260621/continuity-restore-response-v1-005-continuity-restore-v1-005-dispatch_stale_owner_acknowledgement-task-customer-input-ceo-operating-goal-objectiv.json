@@ -1,9 +1,9 @@
 {
   "assigned_surface": "existing_lane_owner",
   "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
-  "lane_id": "prediction_market_research",
+  "lane_id": "youtube_content_channels",
   "next_action": "Existing lane owner must submit exactly one acknowledgement response artifact using the response contract.",
-  "recommended_owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+  "recommended_owner_agent_id": "lane-manager-youtube_content_channels-20260620",
   "required_evidence": "Existing lane owner acknowledgement artifact path and selected response option.",
   "response_contract": {
     "allowed_responses": [
@@ -31,13 +31,13 @@
   "response_json_path": "E:\\agent-company-lab\\reports\\continuity-restore-responses-v1-20260621\\continuity-restore-response-v1-005-continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objectiv.json",
   "response_md_path": "E:\\agent-company-lab\\reports\\continuity-restore-responses-v1-20260621\\continuity-restore-response-v1-005-continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objectiv.md",
   "response_type": "acknowledgement_response_required",
-  "restore_packet_id": "continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-predic",
+  "restore_packet_id": "continuity-restore-v1-005-dispatch_stale_owner_acknowledgement-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtub",
   "schema_version": "continuity_restore_response.v1",
   "source_action_kind": "dispatch_stale_owner_acknowledgement",
   "source_packet_next_action": "Use the owner-acknowledgement dispatch contract with the existing lane owner; do not create a duplicate agent.",
-  "source_restore_plan_generated_utc": "2026-06-21T13:01:20Z",
+  "source_restore_plan_generated_utc": "2026-06-21T13:05:54Z",
   "source_restore_plan_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-plan-v1-20260621.json",
-  "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
-  "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
+  "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
+  "target_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
   "target_type": "task"
 }
