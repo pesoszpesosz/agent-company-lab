@@ -339,6 +339,24 @@ ON human_reviews(lane_id, created_at);
 
 CREATE INDEX IF NOT EXISTS idx_human_reviews_prompt_time
 ON human_reviews(prompt_version_id, created_at);
+
+CREATE TABLE IF NOT EXISTS account_capacity_sessions (
+    session_id TEXT PRIMARY KEY,
+    surface TEXT NOT NULL,
+    account_label TEXT,
+    status TEXT NOT NULL,
+    concurrency_limit INTEGER NOT NULL DEFAULT 1,
+    active_lease_count INTEGER NOT NULL DEFAULT 0,
+    resume_after_utc TEXT,
+    last_refresh_utc TEXT,
+    last_error TEXT,
+    notes TEXT,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_account_capacity_sessions_status
+ON account_capacity_sessions(status, resume_after_utc);
 """
 
 

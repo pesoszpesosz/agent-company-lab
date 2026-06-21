@@ -43,6 +43,7 @@ from agent_company_core.ai_resources_owner_acknowledgement_closure import (
 from agent_company_core.goal_evolver_review import write_goal_evolver_review
 from agent_company_core.ceo_state_packet import write_ceo_state_packet
 from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
+from agent_company_core.account_capacity_dispatch_plan import write_account_capacity_dispatch_plan_cli
 from agent_company_core.codex_thread_goal_inventory import write_codex_thread_goal_inventory_cli
 from agent_company_core.continuity_watchdog_snapshot import write_continuity_watchdog_snapshot
 from agent_company_core.continuity_watchdog_restore_plan import write_continuity_watchdog_restore_plan
@@ -267,6 +268,13 @@ def build_parser() -> argparse.ArgumentParser:
     ceo_worker_bootstrap.add_argument("--premium-router-thread-id")
     ceo_worker_bootstrap.add_argument("--browser-ops-thread-id")
     ceo_worker_bootstrap.add_argument("--no-db-record", action="store_true")
+    account_capacity_dispatch = sub.add_parser("write-account-capacity-dispatch-plan")
+    account_capacity_dispatch.add_argument("--capacity-snapshot", required=True)
+    account_capacity_dispatch.add_argument("--now-utc")
+    account_capacity_dispatch.add_argument("--max-tasks", type=int, default=10)
+    account_capacity_dispatch.add_argument("--path")
+    account_capacity_dispatch.add_argument("--json-path")
+    account_capacity_dispatch.add_argument("--no-db-record", action="store_true")
     codex_thread_goal_inventory = sub.add_parser("write-codex-thread-goal-inventory")
     codex_thread_goal_inventory.add_argument("--thread-snapshot", required=True)
     codex_thread_goal_inventory.add_argument("--now-utc")
@@ -516,6 +524,9 @@ def main() -> None:
         elif args.cmd == "bootstrap-ceo-workers":
             init_db(conn)
             write_ceo_worker_bootstrap(conn, args)
+        elif args.cmd == "write-account-capacity-dispatch-plan":
+            init_db(conn)
+            write_account_capacity_dispatch_plan_cli(conn, args)
         elif args.cmd == "write-codex-thread-goal-inventory":
             init_db(conn)
             write_codex_thread_goal_inventory_cli(conn, args)

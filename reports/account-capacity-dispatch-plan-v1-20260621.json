@@ -1,0 +1,161 @@
+{
+  "capacity_snapshot": "reports\\ai-resources\\account-capacity-snapshot-v1-20260621.json",
+  "counts": {
+    "available_capacity": 1,
+    "available_sessions": 1,
+    "cooling_down_sessions": 1,
+    "dispatch_recommendations": 1,
+    "needs_restore_sessions": 0,
+    "queued_task_candidates": 7,
+    "retired_or_parked_sessions": 0,
+    "sessions_seen": 2
+  },
+  "db": "E:\\agent-company-lab\\state\\agent_company.sqlite",
+  "dispatch_recommendations": [
+    {
+      "evidence_required": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "owner_thread_id": "codex-thread:019eea2b-dd71-7483-ae49-22ed784dd4d2",
+      "priority": 76,
+      "recommended_action": "lease_then_dispatch_with_capacity_guard",
+      "session_id": "codex-recovery-executor-low-concurrency",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions"
+    }
+  ],
+  "generated_utc": "2026-06-21T15:36:30Z",
+  "json_path": "E:\\agent-company-lab\\reports\\account-capacity-dispatch-plan-v1-20260621.json",
+  "max_tasks": 7,
+  "md_path": "E:\\agent-company-lab\\reports\\account-capacity-dispatch-plan-v1-20260621.md",
+  "next_action": "Lease recommended tasks through a scoped local command, then dispatch only up to available session capacity.",
+  "next_wakeup_utc": "2026-06-21T16:00:00Z",
+  "queued_task_candidates": [
+    {
+      "created_at": "2026-06-20T18:13:05Z",
+      "evidence_required": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+      "lane_id": "ai_ml_competitions",
+      "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "owner_thread_id": "codex-thread:019eea2b-dd71-7483-ae49-22ed784dd4d2",
+      "priority": 76,
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_ml_competitions",
+      "title": "Follow up customer input for ai_ml_competitions",
+      "updated_at": "2026-06-20T18:13:05Z"
+    },
+    {
+      "created_at": "2026-06-20T18:13:05Z",
+      "evidence_required": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+      "lane_id": "money_source_discovery",
+      "next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "owner_thread_id": "codex-thread:019eea2c-c5c6-7fd3-bad1-783aa3a105a4",
+      "priority": 76,
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-money_source_discovery",
+      "title": "Follow up customer input for money_source_discovery",
+      "updated_at": "2026-06-20T18:13:05Z"
+    },
+    {
+      "created_at": "2026-06-20T18:13:05Z",
+      "evidence_required": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "owner_thread_id": "codex-thread:019eea2d-01eb-7d13-8b58-c1860ce1fa63",
+      "priority": 76,
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "title": "Follow up customer input for paid_code_bounties",
+      "updated_at": "2026-06-20T18:13:05Z"
+    },
+    {
+      "created_at": "2026-06-20T18:13:05Z",
+      "evidence_required": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+      "lane_id": "prediction_market_research",
+      "next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "owner_thread_id": "codex-thread:019eea2d-56be-7251-859d-20b48631a048",
+      "priority": 76,
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-prediction_market_research",
+      "title": "Follow up customer input for prediction_market_research",
+      "updated_at": "2026-06-20T18:13:05Z"
+    },
+    {
+      "created_at": "2026-06-20T18:13:05Z",
+      "evidence_required": "intake\\customer\\routes\\customer-input-ceo-operating-goal-objective-20260620-002.json",
+      "lane_id": "youtube_content_channels",
+      "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "owner_thread_id": "codex-thread:019eea29-dc20-7400-a930-82844056e89d",
+      "priority": 76,
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "title": "Follow up customer input for youtube_content_channels",
+      "updated_at": "2026-06-20T18:13:05Z"
+    },
+    {
+      "created_at": "2026-06-21T15:17:00Z",
+      "evidence_required": "E:\\agent-company-lab\\reports\\content_and_social_growth\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "content_and_social_growth",
+      "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "owner_thread_id": "codex-thread:019eea2c-0b2d-7120-abaa-376a795b45e5",
+      "priority": 72,
+      "task_id": "task-continuity-lane-next-task-20260621-content_and_social_growth-008",
+      "title": "Continue proof-derived local next step for content_and_social_growth",
+      "updated_at": "2026-06-21T15:17:00Z"
+    },
+    {
+      "created_at": "2026-06-21T15:17:00Z",
+      "evidence_required": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-007.md",
+      "lane_id": "digital_products_templates_plugins",
+      "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "owner_thread_id": "codex-thread:019eea2c-3bae-77e2-9a34-12740a1ee9be",
+      "priority": 72,
+      "task_id": "task-continuity-lane-next-task-20260621-digital_products_templates_plugins-008",
+      "title": "Continue proof-derived local next step for digital_products_templates_plugins",
+      "updated_at": "2026-06-21T15:17:00Z"
+    }
+  ],
+  "schema_version": "account_capacity_dispatch_plan.v1",
+  "sessions": [
+    {
+      "account_label": "bounded absolute-path recovery executor",
+      "active_lease_count": 0,
+      "available_slots": 1,
+      "concurrency_limit": 1,
+      "last_error": null,
+      "last_refresh_utc": "2026-06-21T15:36:00Z",
+      "notes": "Use for one queued local task at a time when parallel lane-owner threads are under shared-account pressure.",
+      "resume_after_utc": null,
+      "session_id": "codex-recovery-executor-low-concurrency",
+      "status": "available",
+      "surface": "codex"
+    },
+    {
+      "account_label": "projectless lane-manager threads",
+      "active_lease_count": 0,
+      "available_slots": 0,
+      "concurrency_limit": 7,
+      "last_error": "Parallel 007 dispatch hit systemError / shared-account pressure; do not blast all lane threads until refreshed.",
+      "last_refresh_utc": null,
+      "notes": "When refresh is detected, mark available and rerun dispatch plan; otherwise keep parked.",
+      "resume_after_utc": "2026-06-21T16:00:00Z",
+      "session_id": "codex-projectless-lane-manager-parallel-pool",
+      "status": "cooling_down",
+      "surface": "codex"
+    }
+  ],
+  "status": "ready_to_dispatch",
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "credentials_or_tokens_stored": 0,
+    "external_api_calls": 0,
+    "external_side_effects": false,
+    "public_actions": 0,
+    "service_requests_approved_or_started": 0,
+    "task_leases_mutated": 0,
+    "thread_messages_sent": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_starts": 0
+  }
+}

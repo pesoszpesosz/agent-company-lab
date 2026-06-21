@@ -1,0 +1,30 @@
+{
+  "schema_version": "agent_company.account_capacity_snapshot.v1",
+  "captured_utc": "2026-06-21T15:36:00Z",
+  "source": "ceo_continuity_loop_local_capacity_observation",
+  "secrets_included": false,
+  "sessions": [
+    {
+      "session_id": "codex-recovery-executor-low-concurrency",
+      "surface": "codex",
+      "account_label": "bounded absolute-path recovery executor",
+      "status": "available",
+      "concurrency_limit": 1,
+      "active_lease_count": 0,
+      "last_refresh_utc": "2026-06-21T15:36:00Z",
+      "notes": "Use for one queued local task at a time when parallel lane-owner threads are under shared-account pressure."
+    },
+    {
+      "session_id": "codex-projectless-lane-manager-parallel-pool",
+      "surface": "codex",
+      "account_label": "projectless lane-manager threads",
+      "status": "cooling_down",
+      "concurrency_limit": 7,
+      "active_lease_count": 0,
+      "resume_after_utc": "2026-06-21T16:00:00Z",
+      "last_error": "Parallel 007 dispatch hit systemError / shared-account pressure; do not blast all lane threads until refreshed.",
+      "notes": "When refresh is detected, mark available and rerun dispatch plan; otherwise keep parked."
+    }
+  ],
+  "boundary": "Non-secret local capacity state only. No refresh tokens, credentials, browser sessions, account actions, service approvals, worker starts, public actions, spend, trade, APIs, or contact."
+}
