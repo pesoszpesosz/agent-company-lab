@@ -1,6 +1,6 @@
 # CEO State Packet V1
 
-Generated UTC: 2026-06-21T13:56:16Z
+Generated UTC: 2026-06-21T14:07:11Z
 Status: `current_local_state_packet`
 Packet id: `ceo-state-packet-v1-20260621`
 JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
@@ -14,7 +14,7 @@ JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
 | roles | 25 |
 | agents | 23 |
 | tasks | 689 |
-| artifacts | 2716 |
+| artifacts | 2723 |
 | outcomes | 478 |
 | trace_events | 639 |
 | service_requests | 16 |

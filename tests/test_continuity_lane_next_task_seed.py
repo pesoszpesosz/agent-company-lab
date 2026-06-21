@@ -172,6 +172,69 @@ def test_continuity_lane_next_task_seed_repairs_open_seed_missing_evidence(tmp_p
     assert row["evidence_required"].endswith("content_and_social_growth-manager-packet.md")
 
 
+def test_continuity_lane_next_task_seed_repairs_open_seed_stale_evidence(tmp_path: Path) -> None:
+    conn = _conn(tmp_path)
+    conn.execute("UPDATE lanes SET status='parked' WHERE lane_id='premium_customer_intake'")
+    stale = tmp_path / "stale-proof.md"
+    stale.write_text("# stale proof\n", encoding="utf-8")
+    latest = tmp_path / "proof-derived-continuation-v1-20260621-004.md"
+    latest.write_text("# latest proof\n", encoding="utf-8")
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-content_and_social_growth-004',
+               'content_and_social_growth', 'latest proof task', 'complete', 72,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:004',
+               'seed evidence', 'proof done', ?, ?, ?)
+        """,
+        ("2026-06-21T10:04:00Z", "2026-06-21T10:04:00Z", "2026-06-21T10:04:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-latest-proof', 'content_and_social_growth',
+               'task-continuity-lane-next-task-20260621-content_and_social_growth-004',
+               'proof_derived_continuation_packet', ?, 'sha', 'latest proof', ?)
+        """,
+        (str(latest), "2026-06-21T10:04:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-content_and_social_growth-005',
+               'content_and_social_growth', 'stale open seed', 'new', 72,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:005',
+               ?, 'continue', ?, ?)
+        """,
+        (str(stale), "2026-06-21T10:05:00Z", "2026-06-21T10:05:00Z"),
+    )
+    conn.commit()
+
+    payload = seed_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    assert payload["status"] == "repaired_existing_seed_evidence"
+    assert payload["counts"]["open_seed_evidence_repaired"] == 1
+    repair = payload["repair_items"][0]
+    assert repair["repair_reason"] == "stale"
+    assert repair["new_evidence_path"] == str(latest)
+    row = conn.execute(
+        """
+        SELECT evidence_required
+        FROM tasks
+        WHERE task_id='task-continuity-lane-next-task-20260621-content_and_social_growth-005'
+        """
+    ).fetchone()
+    assert row["evidence_required"] == str(latest)
+
+
 def test_continuity_lane_next_task_seed_uses_completed_proof_for_followup(tmp_path: Path) -> None:
     conn = _conn(tmp_path)
     proof = tmp_path / "content-proof.md"
@@ -267,6 +330,66 @@ def test_continuity_lane_next_task_seed_uses_generic_continuation_after_followup
     ).fetchone()
     assert task["evidence_required"] == str(proof)
     assert "extract exactly one concrete next local step" in task["next_action"]
+
+
+def test_continuity_lane_next_task_seed_prefers_latest_sequence_continuation_over_closure_proof(
+    tmp_path: Path,
+) -> None:
+    conn = _conn(tmp_path)
+    prior = tmp_path / "reply-target-shortlist.md"
+    prior.write_text("# prior followup proof\n", encoding="utf-8")
+    latest = tmp_path / "proof-derived-continuation-v1-20260621-004.md"
+    latest.write_text("# latest continuation\n", encoding="utf-8")
+    for sequence in ["001", "002", "003", "004"]:
+        conn.execute(
+            """
+            INSERT INTO tasks(
+              task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+              evidence_required, next_action, created_at, updated_at, completed_at
+            )
+            VALUES(?, 'content_and_social_growth', ?, 'complete', 72,
+                   'lane-manager-content_and_social_growth-20260621',
+                   ?, 'seed evidence', 'proof done', ?, ?, ?)
+            """,
+            (
+                f"task-continuity-lane-next-task-20260621-content_and_social_growth-{sequence}",
+                f"proof task {sequence}",
+                f"continuity:lane-next-task:content_and_social_growth:20260621:{sequence}",
+                "2026-06-21T10:00:00Z",
+                f"2026-06-21T10:{sequence}:00Z",
+                f"2026-06-21T10:{sequence}:00Z",
+            ),
+        )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-latest-continuation', 'content_and_social_growth',
+               'task-continuity-lane-next-task-20260621-content_and_social_growth-004',
+               'proof_derived_continuation_packet', ?, 'sha', 'latest continuation', ?)
+        """,
+        (str(latest), "2026-06-21T10:04:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-closure-proof-pointer', 'content_and_social_growth',
+               'task-continuity-lane-next-task-20260621-content_and_social_growth-004',
+               'continuity_lane_next_task_proof', ?, 'sha', 'closure pointer to older followup artifact', ?)
+        """,
+        (str(prior), "2026-06-21T10:05:00Z"),
+    )
+    conn.commit()
+
+    payload = seed_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    item = next(item for item in payload["seed_items"] if item["lane_id"] == "content_and_social_growth")
+    assert item["task_id"].endswith("-005")
+    assert item["evidence_path"] == str(latest)
+    task = conn.execute(
+        "SELECT evidence_required FROM tasks WHERE task_id=?",
+        (item["task_id"],),
+    ).fetchone()
+    assert task["evidence_required"] == str(latest)
 
 
 def test_continuity_lane_next_task_seed_cli_parser_supports_command() -> None:

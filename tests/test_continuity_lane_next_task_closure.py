@@ -234,6 +234,157 @@ def test_lane_next_task_closure_uses_followup_expected_artifact_for_second_seque
     assert "reply-target shortlist" in row["next_action"]
 
 
+def test_lane_next_task_closure_uses_proof_derived_expected_artifact_after_second_sequence(tmp_path: Path) -> None:
+    conn = sqlite3.connect(":memory:")
+    conn.row_factory = sqlite3.Row
+    init_db(conn)
+    _insert_lane(conn, "content_and_social_growth")
+    followup_artifact = _expected(
+        tmp_path,
+        "reports/content-and-social-growth/ai-builder-reply-target-shortlist-v1-20260621.md",
+    )
+    proof_derived_artifact = _expected(
+        tmp_path,
+        "reports/content_and_social_growth/proof-derived-continuation-v1-20260621-003.md",
+    )
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-content_and_social_growth-003',
+               'content_and_social_growth', 'proof-derived continuation', 'complete', 72,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:003',
+               ?, 'proof done', ?, ?, ?)
+        """,
+        (str(followup_artifact), OLD, "2026-06-21T10:03:00Z", "2026-06-21T10:03:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-seed-evidence', 'content_and_social_growth',
+               'task-continuity-lane-next-task-20260621-content_and_social_growth-003',
+               'continuity_lane_next_task_seed_evidence', ?, 'sha', 'seed evidence', ?)
+        """,
+        (str(followup_artifact), OLD),
+    )
+    conn.commit()
+
+    payload = close_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    item = next(item for item in payload["closure_items"] if item["lane_id"] == "content_and_social_growth")
+    assert item["closure_status"] == "already_closed"
+    assert item["proof_path"] == str(proof_derived_artifact)
+    proof = conn.execute(
+        """
+        SELECT kind, path_or_url
+        FROM artifacts
+        WHERE task_id='task-continuity-lane-next-task-20260621-content_and_social_growth-003'
+          AND kind='continuity_lane_next_task_proof'
+        """
+    ).fetchone()
+    assert proof["path_or_url"] == str(proof_derived_artifact)
+
+
+def test_lane_next_task_closure_repairs_stale_closure_proof_pointer(tmp_path: Path) -> None:
+    conn = sqlite3.connect(":memory:")
+    conn.row_factory = sqlite3.Row
+    init_db(conn)
+    _insert_lane(conn, "content_and_social_growth")
+    followup_artifact = _expected(
+        tmp_path,
+        "reports/content-and-social-growth/ai-builder-reply-target-shortlist-v1-20260621.md",
+    )
+    proof_derived_artifact = _expected(
+        tmp_path,
+        "reports/content_and_social_growth/proof-derived-continuation-v1-20260621-004.md",
+    )
+    task_id = "task-continuity-lane-next-task-20260621-content_and_social_growth-004"
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES(?, 'content_and_social_growth', 'proof-derived continuation', 'complete', 72,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:004',
+               ?, 'proof done', ?, ?, ?)
+        """,
+        (task_id, str(followup_artifact), OLD, "2026-06-21T10:04:00Z", "2026-06-21T10:04:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-worker-proof', 'content_and_social_growth', ?,
+               'proof_derived_continuation_packet', ?, 'sha', 'worker proof', ?)
+        """,
+        (task_id, str(proof_derived_artifact), "2026-06-21T10:04:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-continuity-lane-next-task-proof-content_and_social_growth',
+               'content_and_social_growth', ?, 'continuity_lane_next_task_proof', ?, 'sha',
+               'stale closure pointer', ?)
+        """,
+        (task_id, str(followup_artifact), "2026-06-21T10:05:00Z"),
+    )
+    conn.commit()
+
+    close_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    proof = conn.execute(
+        """
+        SELECT path_or_url
+        FROM artifacts
+        WHERE artifact_id='artifact-continuity-lane-next-task-proof-content_and_social_growth'
+        """
+    ).fetchone()
+    assert proof["path_or_url"] == str(proof_derived_artifact)
+
+
+def test_lane_next_task_closure_treats_open_tasks_without_proof_as_waiting(tmp_path: Path) -> None:
+    conn = sqlite3.connect(":memory:")
+    conn.row_factory = sqlite3.Row
+    init_db(conn)
+    _insert_lane(conn, "content_and_social_growth")
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-content_and_social_growth-005',
+               'content_and_social_growth', 'open continuation', 'new', 72,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:005',
+               'seed evidence', 'continue', ?, ?)
+        """,
+        (OLD, OLD),
+    )
+    conn.commit()
+
+    payload = close_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    item = next(item for item in payload["closure_items"] if item["lane_id"] == "content_and_social_growth")
+    assert item["closure_status"] == "waiting_for_proof_artifact"
+    assert payload["status"] == "waiting_for_lane_next_tasks"
+    assert payload["counts"]["missing_proof_artifact"] == 0
+    assert payload["counts"]["waiting_for_proof_artifact"] == 1
+    task = conn.execute(
+        """
+        SELECT status, completed_at
+        FROM tasks
+        WHERE task_id='task-continuity-lane-next-task-20260621-content_and_social_growth-005'
+        """
+    ).fetchone()
+    assert task["status"] == "new"
+    assert task["completed_at"] is None
+
+
 def test_lane_next_task_closure_cli_parser_supports_command() -> None:
     parser = build_parser()
     args = parser.parse_args(

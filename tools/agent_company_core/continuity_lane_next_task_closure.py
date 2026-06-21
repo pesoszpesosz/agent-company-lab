@@ -59,8 +59,18 @@ def _task_sequence(task: sqlite3.Row) -> str:
 def _profile_for_task(task: sqlite3.Row) -> dict[str, Any] | None:
     lane_id = task["lane_id"]
     sequence = _task_sequence(task)
-    if sequence != "001" and lane_id in LANE_FOLLOWUP_PROFILES:
+    if sequence == "002" and lane_id in LANE_FOLLOWUP_PROFILES:
         return LANE_FOLLOWUP_PROFILES[lane_id]
+    if sequence != "001":
+        lane_fragment = safe_id_fragment(lane_id, 80)
+        return {
+            "expected_artifact": f"reports/{lane_fragment}/proof-derived-continuation-v1-{{day}}-{{sequence}}.md",
+            "next_action": (
+                "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit "
+                "park/revisit condition from it, and write a compact continuation packet with evidence, gate status, "
+                "owner, expected next artifact, and stop conditions."
+            ),
+        }
     return LANE_PROFILES.get(lane_id)
 
 
@@ -69,7 +79,7 @@ def _expected_proof_path(task: sqlite3.Row, generated_utc: str, proof_root: Path
     if not profile:
         return None
     day = generated_utc[:10].replace("-", "")
-    raw = Path(profile["expected_artifact"].format(day=day))
+    raw = Path(profile["expected_artifact"].format(day=day, sequence=_task_sequence(task)))
     return raw if raw.is_absolute() else proof_root / raw
 
 
@@ -85,6 +95,51 @@ def _artifact_for_path(conn: sqlite3.Connection, task_id: str, path: Path) -> di
         (task_id, str(path)),
     ).fetchone()
     return dict(row) if row else None
+
+
+def _upsert_closure_proof_artifact(
+    conn: sqlite3.Connection,
+    task: sqlite3.Row,
+    path: Path,
+    generated_utc: str,
+) -> dict[str, Any]:
+    lane_fragment = safe_id_fragment(task["lane_id"], 70)
+    artifact_id = f"artifact-continuity-lane-next-task-proof-{lane_fragment}"
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES(?, ?, ?, 'continuity_lane_next_task_proof', ?, ?, ?, ?)
+        ON CONFLICT(artifact_id) DO UPDATE SET
+          lane_id=excluded.lane_id,
+          task_id=excluded.task_id,
+          kind=excluded.kind,
+          path_or_url=excluded.path_or_url,
+          sha256=excluded.sha256,
+          notes=excluded.notes,
+          created_at=excluded.created_at
+        """,
+        (
+            artifact_id,
+            task["lane_id"],
+            task["task_id"],
+            str(path),
+            sha256_file(path),
+            "Registered expected proof artifact for lane-next task closure.",
+            generated_utc,
+        ),
+    )
+    return {
+        "artifact_id": artifact_id,
+        "lane_id": task["lane_id"],
+        "task_id": task["task_id"],
+        "kind": "continuity_lane_next_task_proof",
+        "path_or_url": str(path),
+        "sha256": sha256_file(path),
+        "notes": "Registered expected proof artifact for lane-next task closure.",
+        "created_at": generated_utc,
+        "path_exists": True,
+        "source": "expected_artifact_registered_by_closure",
+    }
 
 
 def _latest_non_seed_artifact(conn: sqlite3.Connection, task_id: str) -> dict[str, Any] | None:
@@ -117,6 +172,8 @@ def _proof_artifact(
     expected = _expected_proof_path(task, generated_utc, proof_root)
     if expected and expected.exists():
         existing = _artifact_for_path(conn, task["task_id"], expected)
+        if not no_db_record:
+            return _upsert_closure_proof_artifact(conn, task, expected, generated_utc)
         if existing:
             existing["path_exists"] = True
             existing["source"] = "expected_artifact_registered"
@@ -134,43 +191,6 @@ def _proof_artifact(
                 "path_exists": True,
                 "source": "expected_artifact_unregistered",
             }
-        lane_fragment = safe_id_fragment(task["lane_id"], 70)
-        artifact_id = f"artifact-continuity-lane-next-task-proof-{lane_fragment}"
-        conn.execute(
-            """
-            INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
-            VALUES(?, ?, ?, 'continuity_lane_next_task_proof', ?, ?, ?, ?)
-            ON CONFLICT(artifact_id) DO UPDATE SET
-              lane_id=excluded.lane_id,
-              task_id=excluded.task_id,
-              kind=excluded.kind,
-              path_or_url=excluded.path_or_url,
-              sha256=excluded.sha256,
-              notes=excluded.notes,
-              created_at=excluded.created_at
-            """,
-            (
-                artifact_id,
-                task["lane_id"],
-                task["task_id"],
-                str(expected),
-                sha256_file(expected),
-                "Registered existing expected proof artifact for lane-next task closure.",
-                generated_utc,
-            ),
-        )
-        return {
-            "artifact_id": artifact_id,
-            "lane_id": task["lane_id"],
-            "task_id": task["task_id"],
-            "kind": "continuity_lane_next_task_proof",
-            "path_or_url": str(expected),
-            "sha256": sha256_file(expected),
-            "notes": "Registered existing expected proof artifact for lane-next task closure.",
-            "created_at": generated_utc,
-            "path_exists": True,
-            "source": "expected_artifact_registered_by_closure",
-        }
     artifact = _latest_non_seed_artifact(conn, task["task_id"])
     if artifact:
         artifact["path_exists"] = Path(artifact["path_or_url"]).exists()
@@ -256,7 +276,7 @@ def _close_task_if_ready(
                 ),
             )
         return item
-    item["closure_status"] = "missing_proof_artifact"
+    item["closure_status"] = "missing_proof_artifact" if terminal else "waiting_for_proof_artifact"
     return item
 
 
@@ -283,6 +303,9 @@ def _counts(items: list[dict[str, Any]], open_after: int) -> dict[str, int]:
         "completed_at_repaired": sum(1 for item in items if item["closure_status"] == "completed_at_repaired"),
         "already_closed": sum(1 for item in items if item["closure_status"] == "already_closed"),
         "missing_proof_artifact": sum(1 for item in items if item["closure_status"] == "missing_proof_artifact"),
+        "waiting_for_proof_artifact": sum(
+            1 for item in items if item["closure_status"] == "waiting_for_proof_artifact"
+        ),
         "reopened_missing_proof_artifact": sum(
             1 for item in items if item["closure_status"] == "reopened_missing_proof_artifact"
         ),
@@ -295,6 +318,8 @@ def _status_from_counts(counts: dict[str, int], ar_watch_closed: bool) -> str:
         return "proof_missing"
     if counts["closed"] or counts["completed_at_repaired"] or counts["reopened_missing_proof_artifact"] or ar_watch_closed:
         return "closure_applied"
+    if counts["waiting_for_proof_artifact"]:
+        return "waiting_for_lane_next_tasks"
     return "already_closed"
 
 

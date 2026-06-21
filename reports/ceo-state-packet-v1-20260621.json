@@ -13,7 +13,7 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2716,
+    "artifacts": 2723,
     "departments": 24,
     "lanes": 15,
     "outcomes": 478,
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T13:56:16Z",
+  "generated_utc": "2026-06-21T14:07:11Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T13:56:16Z",
+    "generated_utc": "2026-06-21T14:07:11Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,7 +209,7 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 315,
+    "artifacts_delta": 322,
     "outcomes_delta": 60,
     "tasks_delta": 110,
     "trace_events_delta": 130

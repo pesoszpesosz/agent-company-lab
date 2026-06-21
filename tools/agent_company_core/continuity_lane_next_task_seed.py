@@ -18,6 +18,8 @@ SCHEMA_VERSION = "continuity_lane_next_task_seed.v1"
 AI_RESOURCES_LANE = "ai_resources_lab"
 AI_RESOURCES_OWNER = "lane-manager-ai_resources_lab-20260620"
 TERMINAL_STATUSES = {"done", "complete", "completed", "cancelled", "closed"}
+CONTINUATION_PROOF_KINDS = {"proof_derived_continuation", "proof_derived_continuation_packet"}
+CLOSURE_PROOF_KIND = "continuity_lane_next_task_proof"
 
 LANE_PROFILES: dict[str, dict[str, Any]] = {
     "content_and_social_growth": {
@@ -236,13 +238,50 @@ def _latest_completed_lane_next_proof(conn: sqlite3.Connection, lane_id: str) ->
         """,
         (lane_id, *terminal),
     ).fetchall()
-    for row in rows:
-        item = dict(row)
+    candidates = sorted((dict(row) for row in rows), key=_proof_candidate_sort_key, reverse=True)
+    for item in candidates:
+        if _is_stale_closure_proof_pointer(item):
+            continue
         if Path(item["path_or_url"]).exists():
             item["source"] = "completed_lane_next_proof_artifact"
             item["path_exists"] = True
             return item
     return None
+
+
+def _proof_sequence_from_duplicate_key(duplicate_key: str | None) -> int:
+    if not duplicate_key or ":" not in duplicate_key:
+        return 0
+    raw = duplicate_key.rsplit(":", 1)[-1]
+    return int(raw) if raw.isdigit() else 0
+
+
+def _proof_candidate_sort_key(item: dict[str, Any]) -> tuple[int, str, int, str]:
+    kind = str(item.get("kind") or "")
+    path = str(item.get("path_or_url") or "")
+    continuation_priority = 2 if kind in CONTINUATION_PROOF_KINDS or "proof-derived-continuation" in path else 0
+    closure_priority = -1 if kind == CLOSURE_PROOF_KIND else 0
+    return (
+        _proof_sequence_from_duplicate_key(item.get("proof_task_duplicate_key")),
+        str(item.get("completed_at") or item.get("task_updated_at") or item.get("created_at") or ""),
+        continuation_priority + closure_priority,
+        str(item.get("created_at") or ""),
+    )
+
+
+def _is_stale_closure_proof_pointer(item: dict[str, Any]) -> bool:
+    if item.get("kind") != CLOSURE_PROOF_KIND:
+        return False
+    duplicate_key = str(item.get("proof_task_duplicate_key") or "")
+    sequence = _proof_sequence_from_duplicate_key(duplicate_key)
+    if sequence < 3:
+        return False
+    parts = duplicate_key.split(":")
+    if len(parts) < 5:
+        return False
+    day = parts[-2]
+    expected_name = f"proof-derived-continuation-v1-{day}-{sequence:03d}.md"
+    return expected_name not in str(item.get("path_or_url") or "")
 
 
 def _manager_packet_evidence(lane_id: str, manager_packet_dir: Path) -> dict[str, Any]:
@@ -546,9 +585,17 @@ def _repair_open_seed_evidence(
     repairs: list[dict[str, Any]] = []
     for task in _open_seed_tasks(conn):
         current_path = task["evidence_required"] or ""
-        if current_path and Path(current_path).exists():
+        current_exists = bool(current_path and Path(current_path).exists())
+        latest = _latest_lane_evidence(conn, task["lane_id"], manager_packet_dir) if current_exists else None
+        latest_path = str(latest.get("path_or_url")) if latest else ""
+        if current_exists and (
+            not latest
+            or latest.get("source") != "completed_lane_next_proof_artifact"
+            or Path(latest_path) == Path(current_path)
+        ):
             continue
-        fallback = _manager_packet_evidence(task["lane_id"], manager_packet_dir)
+        fallback = latest if latest and current_exists else _manager_packet_evidence(task["lane_id"], manager_packet_dir)
+        repair_reason = "stale" if current_exists else "missing"
         item = {
             "lane_id": task["lane_id"],
             "task_id": task["task_id"],
@@ -557,6 +604,7 @@ def _repair_open_seed_evidence(
             "old_evidence_path": current_path,
             "new_evidence_path": fallback["path_or_url"],
             "new_evidence_path_exists": fallback["path_exists"],
+            "repair_reason": repair_reason,
             "repair_status": "planned" if no_db_record else "repaired" if fallback["path_exists"] else "missing_fallback",
         }
         repairs.append(item)
@@ -592,7 +640,7 @@ def _repair_open_seed_evidence(
                 task["task_id"],
                 str(fallback_path),
                 sha256_file(fallback_path),
-                "Repaired stale seed evidence path by linking the current manager packet.",
+                f"Repaired {repair_reason} seed evidence path.",
                 generated_utc,
             ),
         )

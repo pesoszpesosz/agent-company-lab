@@ -1,6 +1,6 @@
 # Manager Packet - lead_generation_and_sales
 
-Generated UTC: 2026-06-21T13:56:16Z
+Generated UTC: 2026-06-21T14:07:11Z
 Department: Growth/Sales
 Lane status: active
 Current owner: `lane-manager-lead_generation_and_sales-019ec613`
@@ -97,7 +97,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 72 | new | `task-continuity-lane-next-task-20260621-lead_generation_and_sales-005` - Continue proof-derived local next step for lead_generation_and_sales | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\lead-generation-outreach-approval-request-draft-v1-20260621.md | Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next |
+| 72 | new | `task-continuity-lane-next-task-20260621-lead_generation_and_sales-005` - Continue proof-derived local next step for lead_generation_and_sales | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead_generation_and_sales\proof-derived-continuation-v1-20260621-004.md | Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next |
 | 93 | complete | `task-upwork-no-send-approval-request-packet-20260618` - Create no-send Upwork approval request packet | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\upwork-no-send-approval-request-packet-validation-20260618.json | If the operator approves this packet, create an exact-scope service request for one Upwork account/profile/proposal review. Do not log in, create or edit a profile, select a live job, send a proposal, message a client, a |
 | 91 | complete | `task-lane-scout-upwork_ai_freelance_work-20260618` - Lane scout local proof: upwork ai freelance work | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\money-path-lane-scout-packets\upwork-ai-offer-matrix-local-proof-validation.json | Create a no-send Upwork approval request packet for the recommended first offer only after human review; keep account, proposal, payment, client data, credentials, public action, worker/runtime, model/MCP, and external s |
 | 90 | complete | `task-upwork-ai-skills-no-send-approval-request-packet-20260618` - Create Upwork AI-skills-demand no-send approval request packet | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\upwork-ai-skills-no-send-approval-request-packet-validation-20260618.json | If the operator approves this packet, create an exact-scope service request for one Upwork AI Integration Workflow Audit account/profile/proposal review. Do not log in, create/edit a profile or portfolio, choose a live j |
