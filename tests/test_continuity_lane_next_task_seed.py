@@ -235,6 +235,59 @@ def test_continuity_lane_next_task_seed_repairs_open_seed_stale_evidence(tmp_pat
     assert row["evidence_required"] == str(latest)
 
 
+def test_continuity_lane_next_task_seed_prefers_markdown_proof_over_newer_trace_metadata(
+    tmp_path: Path,
+) -> None:
+    conn = _conn(tmp_path)
+    proof = tmp_path / "proof-derived-continuation-v1-20260621-005.md"
+    proof.write_text("# premium continuation\n", encoding="utf-8")
+    trace_metadata = tmp_path / "proof-derived-continuation-v1-20260621-005.trace-metadata.json"
+    trace_metadata.write_text('{"trace": true}\n', encoding="utf-8")
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-premium_customer_intake-005',
+               'premium_customer_intake', 'premium proof task', 'complete', 72,
+               'lane-manager-premium_customer_intake-20260621',
+               'continuity:lane-next-task:premium_customer_intake:20260621:005',
+               'seed evidence', 'proof done', ?, ?, ?)
+        """,
+        ("2026-06-21T14:10:00Z", "2026-06-21T14:10:00Z", "2026-06-21T14:10:00Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-premium-proof-md', 'premium_customer_intake',
+               'task-continuity-lane-next-task-20260621-premium_customer_intake-005',
+               'proof_derived_continuation_packet', ?, 'sha', 'markdown continuation', ?)
+        """,
+        (str(proof), "2026-06-21T14:10:48Z"),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-premium-proof-trace', 'premium_customer_intake',
+               'task-continuity-lane-next-task-20260621-premium_customer_intake-005',
+               'trace_metadata', ?, 'sha', 'trace metadata for markdown proof', ?)
+        """,
+        (str(trace_metadata), "2026-06-21T14:11:13Z"),
+    )
+    conn.commit()
+
+    payload = seed_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    item = next(item for item in payload["seed_items"] if item["lane_id"] == "premium_customer_intake")
+    assert item["evidence_path"] == str(proof)
+    task = conn.execute(
+        "SELECT evidence_required FROM tasks WHERE task_id=?",
+        (item["task_id"],),
+    ).fetchone()
+    assert task["evidence_required"] == str(proof)
+
+
 def test_continuity_lane_next_task_seed_uses_completed_proof_for_followup(tmp_path: Path) -> None:
     conn = _conn(tmp_path)
     proof = tmp_path / "content-proof.md"

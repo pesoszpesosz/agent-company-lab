@@ -20,6 +20,7 @@ AI_RESOURCES_OWNER = "lane-manager-ai_resources_lab-20260620"
 TERMINAL_STATUSES = {"done", "complete", "completed", "cancelled", "closed"}
 CONTINUATION_PROOF_KINDS = {"proof_derived_continuation", "proof_derived_continuation_packet"}
 CLOSURE_PROOF_KIND = "continuity_lane_next_task_proof"
+TRACE_METADATA_KINDS = {"trace_metadata"}
 
 LANE_PROFILES: dict[str, dict[str, Any]] = {
     "content_and_social_growth": {
@@ -240,6 +241,8 @@ def _latest_completed_lane_next_proof(conn: sqlite3.Connection, lane_id: str) ->
     ).fetchall()
     candidates = sorted((dict(row) for row in rows), key=_proof_candidate_sort_key, reverse=True)
     for item in candidates:
+        if _is_trace_metadata_artifact(item):
+            continue
         if _is_stale_closure_proof_pointer(item):
             continue
         if Path(item["path_or_url"]).exists():
@@ -267,6 +270,12 @@ def _proof_candidate_sort_key(item: dict[str, Any]) -> tuple[int, str, int, str]
         continuation_priority + closure_priority,
         str(item.get("created_at") or ""),
     )
+
+
+def _is_trace_metadata_artifact(item: dict[str, Any]) -> bool:
+    kind = str(item.get("kind") or "")
+    path_name = Path(str(item.get("path_or_url") or "")).name.lower()
+    return kind in TRACE_METADATA_KINDS or "trace-metadata" in path_name
 
 
 def _is_stale_closure_proof_pointer(item: dict[str, Any]) -> bool:
