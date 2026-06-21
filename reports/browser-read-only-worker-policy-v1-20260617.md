@@ -1,6 +1,6 @@
 # Browser Read-Only Worker Policy v1 Validation
 
-Generated UTC: 2026-06-21T15:44:06Z
+Generated UTC: 2026-06-21T15:49:33Z
 Validation JSON: `E:\agent-company-lab\reports\browser-read-only-worker-policy-v1-validation-20260617.json`
 Report JSON: `E:\agent-company-lab\reports\browser-read-only-worker-policy-v1-20260617.json`
 Schema: `E:\agent-company-lab\architecture\browser-read-only-worker-policy-v1.schema.json`

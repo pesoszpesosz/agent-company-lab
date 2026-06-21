@@ -20,7 +20,7 @@
   "gateway_registrations": 0,
   "gateway_start_allowed": false,
   "gateway_starts": 0,
-  "generated_utc": "2026-06-21T15:44:18Z",
+  "generated_utc": "2026-06-21T15:49:44Z",
   "guard_report_path": "E:\\agent-company-lab\\reports\\runtime-process-egress-signed-decision-guard-v1-20260618.json",
   "live_egress_allowed": false,
   "live_egress_events": 0,

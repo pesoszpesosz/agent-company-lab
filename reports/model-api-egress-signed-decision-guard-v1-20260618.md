@@ -1,6 +1,6 @@
 # Model API Egress Signed Decision Guard v1
 
-Generated UTC: 2026-06-21T15:44:15Z
+Generated UTC: 2026-06-21T15:49:42Z
 Target route: `model_api_gateway`
 Source intake contract: `E:\agent-company-lab\reports\egress-route-signed-decision-intake-contract-v1-20260618.json`
 Egress ledger validation: `E:\agent-company-lab\reports\agent-egress-event-ledger-v1-validation-20260617.json`

@@ -316,7 +316,7 @@
   "external_side_effects": false,
   "failure_count": 0,
   "failures": [],
-  "generated_utc": "2026-06-21T15:44:19Z",
+  "generated_utc": "2026-06-21T15:49:45Z",
   "model_api_calls": false,
   "next_action": "Human/CRO can review ranked packet markdown files and either manually reject stale/low-value requests or provide exact signed approval artifacts. This docket grants no approval and starts nothing.",
   "payment_actions": false,

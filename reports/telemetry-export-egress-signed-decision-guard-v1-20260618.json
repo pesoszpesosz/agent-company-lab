@@ -32,7 +32,7 @@
   "gateway_registrations": 0,
   "gateway_start_allowed": false,
   "gateway_starts": 0,
-  "generated_utc": "2026-06-21T15:44:21Z",
+  "generated_utc": "2026-06-21T15:49:47Z",
   "live_egress_allowed": false,
   "live_egress_events": 0,
   "mcp_tool_calls": false,
@@ -117,7 +117,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "3b9e2abe37937e239a2412541b6f251c0455c18b132594bbdd4bc03747729b2d"
+      "sha256": "fae7287cf966c15eda95d3b5dd0edaa8e5ff10bd236dd91192711553d2f561de"
     },
     {
       "expected": "accepted",
@@ -189,7 +189,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "2031982df156326a27f476807a46f633997b427bdf938fe125e667cdcef5b080"
+      "sha256": "b20324f6954103f9435dd398b31a32daabaf3b9d923a3ffdd68e90213637a6cf"
     },
     {
       "expected": "rejected",
@@ -263,7 +263,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "5d13c46fa091a2acd6c8ff5998b8e7007c5194c8d05e8f14d93d9ff3a1687e1d"
+      "sha256": "e446c0a5a50f999adebe6da9c419568c9814d6074b80da12b73c05a4b18dbb36"
     },
     {
       "expected": "rejected",
@@ -337,7 +337,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "d5dd9a785593779509ae4af4ed9a129d3e41ff12644967c84936d2d068775a40"
+      "sha256": "b674a9fa441100cc41e3e5227621a6ac4b1b8b24b32cd9087788583a8e47b629"
     },
     {
       "expected": "rejected",
@@ -412,7 +412,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "cbb20267ce43d85c0f5c515d70fa38d6060bc1e0232274a6f0a4ae9cb1b6e035"
+      "sha256": "d4e571169fb5f6c8b06992ac04a5a1f174fab2682eae42baefa85870993db44b"
     },
     {
       "expected": "rejected",
@@ -486,7 +486,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "ce45b99a0b19bbed3f45e03428900eba86b9ab258b31ce76198d86a0e2db0645"
+      "sha256": "8e3b676bdee2529d6affb36f5b4e817e4ea36e8595d57e014448c8e8a7af69c5"
     },
     {
       "expected": "rejected",
@@ -560,7 +560,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "0090e14d6ed7f0098787af80ae3fe4dda352b615a6906882a63d4142e7545ef4"
+      "sha256": "a71c7bf1360704f2586724f1785562bc8166fb4d3fac341ff1b57ca44039d8f5"
     },
     {
       "expected": "rejected",
@@ -634,7 +634,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "535a411aaf91b841801c8e413f38217e3a3759090abe1c337a28aea69e103288"
+      "sha256": "595cff961bc5072a7b8b555356722c86e2c2689b855cf3c960cc5c68816042c6"
     },
     {
       "expected": "rejected",
@@ -782,7 +782,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "5416594b746efe5c3745e0b4b82e9eca25fb583ca6179dea4801d91f63f8409a"
+      "sha256": "4fa790aef25924a347c1912b881ef546a4456d7edcc39f3cf3ba54fdcb3d311d"
     },
     {
       "expected": "rejected",
@@ -858,7 +858,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "eaa2ce8f8cb5836a3fa2668edb89d73514db0516f6e74e84f9166a67e78cc5e3"
+      "sha256": "df6192d370f631e3b29e509d5f86295e464057d688936705e49b1a496169e190"
     },
     {
       "expected": "rejected",
@@ -932,7 +932,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "34a30fb7addf466a1afebe1efe496e0b57f7b37130d526c59b79fa406784b407"
+      "sha256": "c0f8b50290626714ac48ccf4afbc3e4f8e91fdc1ae7e3971afd2f4d0d14df159"
     },
     {
       "expected": "rejected",
@@ -1006,7 +1006,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "4fadadd39f5df24b3cbaca49f19f6ce31af030ed92c2718462394ffa71f415a8"
+      "sha256": "95a875e8b36518f251947133c67965a567964e5800baf5bf23580e6f56aa3b54"
     },
     {
       "expected": "rejected",
@@ -1080,7 +1080,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "b2c630f110903c74c8712ca63738e9839d2394d4de50674a7dc72b0a36405ec1"
+      "sha256": "6325267982929e25479ca633d1e8970a89cd2e6fb64954c4e6464a8b8d12e774"
     },
     {
       "expected": "rejected",
@@ -1154,7 +1154,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "a000f73b291301d6355c6d0959ee77de00302649912cb802d8676521820c1869"
+      "sha256": "10c0e858dad0c8eb27705c4b293d92ae3ff2ad9cf7c0a768d1d260a100e502b7"
     },
     {
       "expected": "rejected",
@@ -1228,7 +1228,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "1bf6a60ebb7254c9a0b361acb7966da46b9db8476d302505d9a6b2a6400c21ef"
+      "sha256": "36a18f30eaed52809a1c6559bcf96ecce9e9b6ed5754b7e038d5266645a693d1"
     },
     {
       "expected": "rejected",
@@ -1302,7 +1302,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "438c0063fa0477b1bb10f6005f4d7292726326e9434a7d95e6797eab08f66787"
+      "sha256": "ba771109ad2e400b717a1e6daec6e027d3445ab00282c23219ed056c6dfb87ce"
     },
     {
       "expected": "rejected",
@@ -1376,7 +1376,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "582df1e53c67f6aebe021df8bc22e254b5fb9c366b521d2578e613e85da81654"
+      "sha256": "6d7d85778b54ab746767eb1925612b7a850c52f68553d6a60ac00c9fd03b434c"
     },
     {
       "expected": "rejected",
@@ -1450,7 +1450,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "6fd2943502e7fee469580432deb8198f33258a2beba5d5685e715214791808f9"
+      "sha256": "9684571c41d77bb8dcc0b64e869477ab3b9d3c8c130dce40c519650d9c0e2a5f"
     },
     {
       "expected": "rejected",
@@ -1524,7 +1524,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "7d137f343333b63ac37957857253351aa8f01674c94d87a5c2f22a9e85c6f715"
+      "sha256": "96dee89e49babbee9c4aa15762c12043f7d8661adb37dba6d4cac26a0244316e"
     },
     {
       "expected": "rejected",
@@ -1598,7 +1598,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "c32025945adc36fc92f766633b3c6f82443898f0d35e0148f9eea365af061f82"
+      "sha256": "3e6b5f0a570c09ecff38ec208f5c245449442f94025a454b8d3b70233dcc0f36"
     },
     {
       "expected": "rejected",
@@ -1672,7 +1672,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "8af60697511f497221257dc57f8d95c5f05459391ddd835987dc7df8a954b322"
+      "sha256": "97729b80e029c23c0685f3640f5bf913c73cb7924240a825d0f9265a0158f7d2"
     },
     {
       "expected": "rejected",
@@ -1746,7 +1746,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "0e91b0d1804dfd27675641b550f4ca2468820107ec94ec57a486a54abd2bc994"
+      "sha256": "92b50b3dd0655e528150ab1db1daa285e0fd2abed9cb068b0678b3d7a55484f6"
     },
     {
       "expected": "rejected",
@@ -1820,7 +1820,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "05a0fe9446b66207aceac12fb8482b383c0d70608b3237eaa7fd3c25993e1d50"
+      "sha256": "8b7aac41f5c8692da58466ba2a2e61b469bd0267e50c801d27e458e9f7989f09"
     },
     {
       "expected": "rejected",
@@ -1894,7 +1894,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "1fbf342687066939a872ab26d239c630868d6745ec68e51c9f0354c179fbafcc"
+      "sha256": "b76952b72ca033f7e7d1ca336a2c6eddabfb7884d557b8d496068d1e5bf5ddbd"
     },
     {
       "expected": "rejected",
@@ -1968,7 +1968,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "9eb4ec736b0f06bc6c5be2498294b6965e97f6c2c02faf32c928ee82766741ed"
+      "sha256": "93019a0d75d84b85202a391f668e4cecfdfdeafbe2d5e6f0143e924a8dfa3e27"
     },
     {
       "expected": "rejected",
@@ -2042,7 +2042,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "471587b2e2e0c30ead840e2ba2dd0378be4afc8b9207cd0281d00bb76f361688"
+      "sha256": "6797ffcec2bc87461b3727cb055dab952038b8d7587829d49d265411f322c74b"
     },
     {
       "expected": "rejected",
@@ -2116,7 +2116,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "44d3b84204414bbad0ff15e91d8bfcb609369027328a5fccec15c4666dda5722"
+      "sha256": "767a1dd46d42536b383bef6a351d3148b612db64682fe3703530b01138f0ee1d"
     },
     {
       "expected": "rejected",
@@ -2190,7 +2190,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "204cac1b6a75f84940e11f17e6ce909aed6f0470d72346cb99331f2fe32a4837"
+      "sha256": "711cfde1519ba658dbee71625c9b78b431e82f4048a908e44a5bc71a4ee03d8d"
     },
     {
       "expected": "rejected",
@@ -2264,7 +2264,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "f7c3b32c0a3a34bd9bb2482cf3f5992f6667e43a93e95d186d661b6ea80783b3"
+      "sha256": "d65430812418d4138883477aedc058b296b3718f806d164e6c9090d02ed31a17"
     },
     {
       "expected": "rejected",
@@ -2338,7 +2338,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "fdd34465c0568ba9293449d6b7e1589f13d14e8873cb4bcd25a0607071bc076a"
+      "sha256": "d5e99b358f794509bf8cfeeebdc6b806246bb1c04ac470f185a10999f0f5dfc6"
     },
     {
       "expected": "rejected",
@@ -2412,7 +2412,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "b08b3b91e4cdada773a36b7a57df0b3f5d7f8ac5d825ef4b7a8cca68cd7c9dd1"
+      "sha256": "aa8b5c755759216aa067f6817ca945265d22e37b5a5fe6df6d303964ea492472"
     },
     {
       "expected": "rejected",
@@ -2486,7 +2486,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "8d674c62b13434992c4d64edeca4544d0f61c754ff1eb0fa8d242c4c513cc949"
+      "sha256": "780e6e6d603f37a212a5a4c3da2c7f21c936c189b2e3df4b804097a5d3667e94"
     },
     {
       "expected": "rejected",
@@ -2560,7 +2560,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "9211299b00b61b28c920a9c0c777f54ebfd79420a06aa88a08318a86432ea77d"
+      "sha256": "5b8fa3f40ed87299a158618b17ef2c50e063be202184537a7fdc39a25b8e29a8"
     },
     {
       "expected": "rejected",
@@ -2634,7 +2634,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "bb3e3c844a8c0a0968416d3b21b7736824f348a11bb3d6c95938c6a6bba1b080"
+      "sha256": "7c5c05a3aa604bdc7f3e5f261306fd56fe95f05e1ab7555152eafd4b718d0c81"
     },
     {
       "expected": "rejected",
@@ -2708,7 +2708,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "d98b38a1d1742bdbbb47a33c434c023cf7accbd850262ac936764645c86ae136"
+      "sha256": "df9cc0ece5f49a09ff5368e5004327b04f913e567da87b585b874c024b89a5ff"
     },
     {
       "expected": "rejected",
@@ -2782,7 +2782,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "c139847e041e8545341b700d6240b88291baca9934cc75fdde5d1b556ceab099"
+      "sha256": "a90973e2b7eaa01a32297cfd435fd82835b00c2932f972074254212bafceec72"
     },
     {
       "expected": "rejected",
@@ -2857,7 +2857,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "4175de072cb4bba162e0be497640e4661843c5cd32dfd7d37cd1439cf94ecaff"
+      "sha256": "75aad283162fae068da608d5519aff9e5a30b913bea9d3893c5c7409daa117a0"
     },
     {
       "expected": "rejected",
@@ -2931,7 +2931,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "712b5fdbfb1b6ced2d41ce7362392d30486bbe095d918f02020ea618e8a9ba46"
+      "sha256": "f1c7495876dd9a0a3e6c499bacb55ef0d01e1b04a44c55c1fc76b84f50911a9f"
     },
     {
       "expected": "rejected",
@@ -3005,7 +3005,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "7c6f5d9680a934ea4e09ef0de86a4ab80e82474c8e0a8f51b74237962725912b"
+      "sha256": "f601362b659f63cba23b7e88f0799d7d6e10328e149193f49a8978ca8b0f1173"
     },
     {
       "expected": "rejected",
@@ -3079,7 +3079,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "59afe9c5c9869ee87823b5afcfad3ea2b32e8e268584a6a6a0c0a63bff377a8d"
+      "sha256": "3e17e6d32e4b13e5e9484f4d611d9c36c1deb2695175d3f999b88a5432a267bc"
     },
     {
       "expected": "rejected",
@@ -3153,7 +3153,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "04ea1d1a2dba75e22673f53ed5f7ab0c9217ef349613fdf05341b1ba7e0d4c36"
+      "sha256": "8465ebde4e3c16be3dbbc5766c78f837ee23b598b6bab210ac63f8c560942847"
     },
     {
       "expected": "rejected",
@@ -3227,7 +3227,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "415e8c7321314dd9fc9009faa150c256629b6d810c5420bced10319642c24953"
+      "sha256": "6422089cef84743e7e6fde0ea80008224adad3f88797e1f6b739b0e5266b202d"
     },
     {
       "expected": "rejected",
@@ -3301,7 +3301,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "39a59ba879cb02820c0b3f98653d9a83364e90a547aebbb3d212ef404b7c04fd"
+      "sha256": "13c1f93cde2883102b3a240fdb6e4f0035f47e53f5f0c4560dab95b212ac8121"
     },
     {
       "expected": "rejected",
@@ -3375,7 +3375,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "5bf9d7273c1222f5d39b44b09a916d3081842acedadda5699710d601379ad560"
+      "sha256": "7ddb55b69ca359fede78990c379bcf8a455401813e3b0ad9a2d739f84ce36b03"
     },
     {
       "expected": "rejected",
@@ -3449,7 +3449,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "da7f040c461e954f223e5b26d549f9fa02f76fe4d070b55eaaa695d1046fe6dc"
+      "sha256": "9e4718b293b447e9d258cdf77a4886e9837ac301d21b3bca510e6d01a92eefd0"
     },
     {
       "expected": "rejected",
@@ -3523,7 +3523,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "ec4e9c685b359ec9a3ec8fcd97eb6836b6367fca3df2c94c9e86b54cab2fb9a1"
+      "sha256": "7fef8d91feaf2dc4897aee02cbb9a9cba7f7985d00e46e1f6f071fef1af39ceb"
     },
     {
       "expected": "rejected",
@@ -3597,7 +3597,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "d4132770affc993eacf5c8f70aba6ea410d63efb9f4fe07abc2a7fcdc23be6e1"
+      "sha256": "086dba5b48f2ce36000812f491a7cc6619638719d5f7fa92cc0951fc49121b91"
     },
     {
       "expected": "rejected",
@@ -3671,7 +3671,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "0e7a6742c23cce910a9131ca39bf2881f34c7cc65ac97e77453c9118be7cadd0"
+      "sha256": "aebd435f5299324a68fc7ed4bc6ff8b820bacc3fd62418a07de52ffcf47e86d2"
     },
     {
       "expected": "rejected",
@@ -3745,7 +3745,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "662a6af63f7918f84cc272531e8b7b53fba7babe151c40a4d3476511c57a7e6c"
+      "sha256": "f67689e188c40a98ad5f499f7e23f1998cdd3bf710a48fa2339381c8d4aa9508"
     },
     {
       "expected": "rejected",
@@ -3819,7 +3819,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "f038a3ed8c268b9fafada157f5368d481bf0affe0e21441eef6ebf039af30215"
+      "sha256": "1f89262e1ff128f300c50355eabdd0d5afd962748ea84afdb8899a04c2c5d7da"
     },
     {
       "expected": "rejected",
@@ -3893,7 +3893,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "0cfa102971ff1072f20a0f2a1bf8dba814d9e3f54a6cc60d8306b739d0fd6b27"
+      "sha256": "a6f052a1848509000fe632a6cf756a2eae83732c39dedf2eaf35441bac858230"
     },
     {
       "expected": "rejected",
@@ -3967,7 +3967,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "ea8a705cca33ad5749d81f356a6fb2c2fc9b8f97648cf9a7654f730577478931"
+      "sha256": "86d3a14986c0101356a465391c2314bb8eb277294d444ab8b6fe76f1f124a6a0"
     },
     {
       "expected": "rejected",
@@ -4041,7 +4041,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "ef7e45d991816aa30994e142fa24960a448ec150d76afb0b255f53f9a10aeed4"
+      "sha256": "4825ae9b4d3bcdae7d0f8ac923795233bfd117e01516a2842c16c72824624065"
     },
     {
       "expected": "rejected",
@@ -4115,7 +4115,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "d3de8d0623249cd6904843c5391114b8483fe097a437e19e41450e8c9b6c4b09"
+      "sha256": "711adf8977f5b95c028c667a7e2d8eb1b67c0c29d62bee6d1cb85d9e30fa4f09"
     },
     {
       "expected": "rejected",
@@ -4189,7 +4189,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "f6e7896b7e9af6be9b3759505969e862a220bede157e268cc7f241d74d24027a"
+      "sha256": "e2698cfaebae5d37f7eaf62dbeb515c3e796dbd370630e8341854c44463cee09"
     },
     {
       "expected": "rejected",
@@ -4263,7 +4263,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "b600d2fcc950a9318afad3b6fd680bf28600a0c88d1396ba1a018c814c8eff67"
+      "sha256": "3c3445d8edbe5a2ba05951aa4475ff84f6f3259b46e0ebe222e19ef3aa18d2d6"
     },
     {
       "expected": "rejected",
@@ -4337,7 +4337,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "e5b8fb0c46ff0ec9d6fdc009927af93178de2dce471a7c74bd221a85f12165fc"
+      "sha256": "48954c95936a292082c9f60236ff006bbad59be51cee193ec5dfc9e5426c4bc3"
     },
     {
       "expected": "rejected",
@@ -4411,7 +4411,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "bd84bdb6e29a572e2765d12384e72c81b4e1b47042476cba2b3225b6940c0356"
+      "sha256": "0430c0df64f97dded6683a277507ec8f01c1d38fe02a3aeefff954bc634a4d9c"
     },
     {
       "expected": "rejected",
@@ -4485,7 +4485,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "515e891372340228aea26dd6d572042cc5fd57cac6eda7e47d87bcd61bb1735a"
+      "sha256": "728d5f4c8dc10f3f3ed5b838334064a2c867f9b5622065098c48977f18c81536"
     },
     {
       "expected": "rejected",
@@ -4559,7 +4559,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "e87f4c087f742b2c3256858e6bde19a8abb70d0e71843e23f3539216f0c94dca"
+      "sha256": "ede0cccff311125d571e799d04cf4286bcb5bbf60013146798b739ecdd5882a8"
     },
     {
       "expected": "rejected",
@@ -4633,7 +4633,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "5c854828338e53065b0731eaa194ec2fccfafe8ab1c85de23f3f9ccfe6cd32c9"
+      "sha256": "07d103899e36aec0bc2532bdab6dc1dedb9722f7dbb38cb1069bb3ba4dbb41fb"
     },
     {
       "expected": "rejected",
@@ -4707,7 +4707,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "823389e031d30f947de6dd5891fe30cf3a8673a67f16af495637abd5c1cd2418"
+      "sha256": "d0926370e76ac0c217275afcb1b0f0c6d20602320076fdb868b048048dd33960"
     },
     {
       "expected": "rejected",
@@ -4781,7 +4781,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "564a3a6856d7db3f7167abb7d8694678a057cd736a8163d5d454b9f620f215f5"
+      "sha256": "73b35339f911512a89755cd0f99c526b0e9566dbf335c7273f1dda792705803a"
     },
     {
       "expected": "rejected",
@@ -4855,7 +4855,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "21668436de3c0e3e29c58f1871c10907544f12eb9a0ae4ae19c2773217fa560c"
+      "sha256": "c1c8cce911fd000e7b5f09ed7d40f68fd2ec4ae5fb7af0ab34061f64c77dfbeb"
     },
     {
       "expected": "rejected",
@@ -4929,7 +4929,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "ae2cf0538e2b5d15a2d16b9422df5096b45373b30f85cdb0a9913ecccc237b30"
+      "sha256": "39427d71c88ad0753d6acf3d64cf3383e534c985c5239326e7f88e3417083e99"
     },
     {
       "expected": "rejected",
@@ -5003,7 +5003,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "678839797f4200f270151b05080516f709a9188f53f5fd460c75c6f7b8eddeb3"
+      "sha256": "d8595f13dd76c7db8dc2ea52a193f3bae730f67e0021131c54c2f33d4f09beed"
     },
     {
       "expected": "rejected",
@@ -5077,7 +5077,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "5f030b89b5eb1d3d5f28a180883c4665951942218efd0f35cb50fbb5662669d9"
+      "sha256": "ae3de6441a398e586ce740b23347d0842b3b0de3aa183f6442556df7edd0cc7f"
     },
     {
       "expected": "rejected",
@@ -5151,7 +5151,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "bbf200a965d7efdb279051e7b7fd09411f1019d9368f66237cb7fa6ce415d06f"
+      "sha256": "740b8f8b5055618157df1e192626aaae46ec2557fe8a8beefbd0aa9f6fb4e91c"
     },
     {
       "expected": "rejected",
@@ -5225,7 +5225,7 @@
         "unredacted_log_sync_allowed": false,
         "worker_start_allowed": false
       },
-      "sha256": "84c1423ff3746eb63241eb3ca30958a27b9d6db162483f5c48a0afb7ca13916f"
+      "sha256": "af17786014c8438b59df1672a0748d0f6fa45d7b54e671796849b8d97beeb1a3"
     }
   ],
   "retention_policy_approved": false,
@@ -5238,7 +5238,7 @@
   "service_requests_updated": 0,
   "source_agent_egress_event_ledger_validation_path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
   "source_gateway_docket_path": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
-  "source_gateway_docket_sha256": "02dca8f8fbeedfc14e31c1d2167ced5db2ee0e1ee91b15003b2f078130544d77",
+  "source_gateway_docket_sha256": "49fb5fa8ca17899a9eff5496a73a163cb9e7384ff9ad51948535ed8287d05028",
   "source_identity_validation_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
   "source_intake_contract_path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-20260618.json",
   "source_intake_contract_validation_path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",

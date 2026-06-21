@@ -14,7 +14,7 @@
   "failures": [],
   "fixture_count": 16,
   "fixture_dir": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-fixtures",
-  "generated_utc": "2026-06-21T15:44:18Z",
+  "generated_utc": "2026-06-21T15:49:45Z",
   "next_action": "Require a signed operator decision route before converting this dry-run preview into any executable runtime start.",
   "positive_fixture": {
     "expected_result": "pass_dry_run_preview_only_start_blocked",

@@ -1,6 +1,6 @@
 # Service Worker Approval Authority Coverage v1
 
-Generated UTC: 2026-06-21T15:44:19Z
+Generated UTC: 2026-06-21T15:49:45Z
 Report JSON: `E:\agent-company-lab\reports\service-worker-approval-authority-coverage-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\service-worker-approval-authority-coverage-v1-validation-20260617.json`
 

@@ -1,6 +1,6 @@
 # Worker Capability Class Registry v1
 
-Generated UTC: 2026-06-21T15:44:21Z
+Generated UTC: 2026-06-21T15:49:47Z
 Source docket: `E:\agent-company-lab\reports\agent-company-runtime-adoption-docket-v1-20260618.json`
 Report JSON: `E:\agent-company-lab\reports\worker-capability-class-registry-v1-20260618.json`
 Validation JSON: `E:\agent-company-lab\reports\worker-capability-class-registry-v1-validation-20260618.json`

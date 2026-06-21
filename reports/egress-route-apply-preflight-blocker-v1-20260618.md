@@ -1,6 +1,6 @@
 # Egress Route Apply Preflight Blocker v1
 
-Generated UTC: 2026-06-21T15:44:09Z
+Generated UTC: 2026-06-21T15:49:36Z
 Target route: `browser_read_only_gateway`
 Guard validation: `E:\agent-company-lab\reports\egress-route-signed-decision-guard-v1-validation-20260618.json`
 Report JSON: `E:\agent-company-lab\reports\egress-route-apply-preflight-blocker-v1-20260618.json`

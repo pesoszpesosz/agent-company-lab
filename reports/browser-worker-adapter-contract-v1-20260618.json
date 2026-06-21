@@ -7,7 +7,7 @@
   "failures": [],
   "fixture_count": 26,
   "fixture_dir": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-fixtures",
-  "generated_utc": "2026-06-21T15:44:06Z",
+  "generated_utc": "2026-06-21T15:49:34Z",
   "next_action": "Wire this contract into browser read-only assignment preflight before any approved Playwright, Stagehand, Browser Use, MCP, or browser CLI runtime can start.",
   "positive_fixture": {
     "adapter_kind": "playwright_deterministic",

@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 25,
-    "artifacts": 2784,
+    "artifacts": 2789,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 496,
+    "outcomes": 497,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 717,
-    "trace_events": 687
+    "tasks": 719,
+    "trace_events": 690
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T16:26:32Z",
+  "generated_utc": "2026-06-21T16:41:34Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T16:26:32Z",
+    "generated_utc": "2026-06-21T16:41:34Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 383,
-    "outcomes_delta": 78,
-    "tasks_delta": 138,
-    "trace_events_delta": 178
+    "artifacts_delta": 388,
+    "outcomes_delta": 79,
+    "tasks_delta": 140,
+    "trace_events_delta": 181
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -372,6 +372,16 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T15:44:17Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-008.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Park until premium-customer-routing-queue-watch-v2-20260621.md exists and is registered; then resume from compact status only without raw CEO-context copying or external actions.",
+      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-008-20260621",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "parked_until_watch_v2_status_artifact"
+    },
+    {
       "created_at": "2026-06-21T15:11:18Z",
       "evidence": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-closure-v1-20260621.md",
       "lane_id": "ai_resources_lab",
@@ -437,16 +447,6 @@
       "lane_id": "lead_generation_and_sales",
       "next_action": "Parked until the operator explicitly requests an exact-scope outreach_delivery_gate service request packet; keep all external gates closed.",
       "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-lead_generation_and_sales",
-      "outcome_type": "continuity_lane_next_task_recovery",
-      "realized_usd": 0.0,
-      "status": "local_proof_complete"
-    },
-    {
-      "created_at": "2026-06-21T14:54:47Z",
-      "evidence": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-007.md",
-      "lane_id": "digital_products_templates_plugins",
-      "next_action": "Parked until the Gumroad human-decision intake packet is directly assigned or explicitly requested; keep all external gates closed.",
-      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-007-digital_products_templates_plugins",
       "outcome_type": "continuity_lane_next_task_recovery",
       "realized_usd": 0.0,
       "status": "local_proof_complete"

@@ -1,6 +1,6 @@
 # Model API Egress Apply Command Contract v1
 
-Generated UTC: 2026-06-21T15:44:15Z
+Generated UTC: 2026-06-21T15:49:41Z
 Target route: `model_api_gateway`
 Apply preflight validation: `E:\agent-company-lab\reports\model-api-egress-apply-preflight-blocker-v1-validation-20260618.json`
 Report JSON: `E:\agent-company-lab\reports\model-api-egress-apply-command-contract-v1-20260618.json`

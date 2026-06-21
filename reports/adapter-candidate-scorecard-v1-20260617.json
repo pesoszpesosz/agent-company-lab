@@ -191,7 +191,7 @@
   "external_side_effects": false,
   "failure_count": 0,
   "failures": [],
-  "generated_utc": "2026-06-21T15:44:02Z",
+  "generated_utc": "2026-06-21T15:49:30Z",
   "mcp_tool_calls": false,
   "model_api_calls": false,
   "next_action": "Build the top-ranked local adapter fixture only as report-only scaffolding; do not install dependencies or start runtimes.",

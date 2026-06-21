@@ -305,7 +305,7 @@
     }
   ],
   "gateway_start_allowed": false,
-  "generated_utc": "2026-06-21T15:44:21Z",
+  "generated_utc": "2026-06-21T15:49:47Z",
   "live_egress_allowed": false,
   "mcp_tool_calls": false,
   "model_api_calls": false,
@@ -321,7 +321,7 @@
   "service_requests_updated": 0,
   "source_capability_class_count": 10,
   "source_capability_registry_path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-20260618.json",
-  "source_capability_registry_sha256": "6996be2e82856e45e97d4a18835a2616e78d06fb2e95737384e1141614072bea",
+  "source_capability_registry_sha256": "32eb7087becd1bb0fb123fb42c9ed6337a001b592e15be3eff7cc2b933b00c21",
   "source_capability_validation_path": "E:\\agent-company-lab\\reports\\worker-capability-class-registry-v1-validation-20260618.json",
   "telemetry_exports": 0,
   "wallet_actions": false,

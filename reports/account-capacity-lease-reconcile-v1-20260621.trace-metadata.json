@@ -1,0 +1,9 @@
+{
+  "sessions_reconciled": 1,
+  "sessions_changed": 1,
+  "capacity_released": 1,
+  "capacity_claimed": 0,
+  "followup_activation_status": "dispatch_recommended",
+  "followup_available_capacity": 1,
+  "external_side_effects": false
+}

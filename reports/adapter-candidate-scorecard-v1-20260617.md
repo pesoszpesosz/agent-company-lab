@@ -1,6 +1,6 @@
 # Adapter Candidate Scorecard v1
 
-Generated UTC: 2026-06-21T15:44:02Z
+Generated UTC: 2026-06-21T15:49:30Z
 Scorecard JSON: `E:\agent-company-lab\reports\adapter-candidate-scorecard-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\adapter-candidate-scorecard-v1-validation-20260617.json`
 Source dataset: `E:\agent-company-lab\data\agent-company-current-source-radar-wave15-20260617.json`

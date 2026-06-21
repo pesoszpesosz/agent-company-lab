@@ -85,7 +85,7 @@
   "service_requests_updated": 0,
   "signed_utc": "2026-06-18T05:55:00Z",
   "source_gateway_docket_path": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
-  "source_gateway_docket_sha256": "02dca8f8fbeedfc14e31c1d2167ced5db2ee0e1ee91b15003b2f078130544d77",
+  "source_gateway_docket_sha256": "49fb5fa8ca17899a9eff5496a73a163cb9e7384ff9ad51948535ed8287d05028",
   "telemetry_export_allowed": false,
   "unredacted_log_sync_allowed": false,
   "wallet_actions": false,

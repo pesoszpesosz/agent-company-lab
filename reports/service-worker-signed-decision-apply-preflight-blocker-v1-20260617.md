@@ -1,6 +1,6 @@
 # Service Worker Signed Decision Apply Preflight Blocker v1
 
-Generated UTC: 2026-06-21T15:44:19Z
+Generated UTC: 2026-06-21T15:49:45Z
 Guard validation: `E:\agent-company-lab\reports\service-worker-signed-decision-guard-v1-validation-20260617.json`
 Intake validation: `E:\agent-company-lab\reports\service-worker-signed-decision-intake-contract-v1-validation-20260617.json`
 Authority validation: `E:\agent-company-lab\reports\service-worker-approval-authority-coverage-v1-validation-20260617.json`

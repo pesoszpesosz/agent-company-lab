@@ -1,6 +1,6 @@
 # Unified Agent Egress Gateway Docket v1
 
-Generated UTC: 2026-06-21T15:44:21Z
+Generated UTC: 2026-06-21T15:49:47Z
 Source capability registry: `E:\agent-company-lab\reports\worker-capability-class-registry-v1-20260618.json`
 Report JSON: `E:\agent-company-lab\reports\unified-agent-egress-gateway-docket-v1-20260618.json`
 Validation JSON: `E:\agent-company-lab\reports\unified-agent-egress-gateway-docket-v1-validation-20260618.json`

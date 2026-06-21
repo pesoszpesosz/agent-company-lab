@@ -6,7 +6,7 @@
   "failures": [],
   "fixture_count": 29,
   "fixture_dir": "E:\\agent-company-lab\\reports\\browser-read-only-worker-policy-v1-fixtures",
-  "generated_utc": "2026-06-21T15:44:06Z",
+  "generated_utc": "2026-06-21T15:49:33Z",
   "next_action": "After operator approval exists, wire this policy into browser_read_only_session assignment preflight before any in-app browser or Browser Use worker starts.",
   "policy_verdict": "public_read_only_plan_valid_start_blocked",
   "positive_fixture": {

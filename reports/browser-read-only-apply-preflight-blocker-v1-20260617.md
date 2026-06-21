@@ -1,6 +1,6 @@
 # Browser Read-Only Apply Preflight Blocker v1
 
-Generated UTC: 2026-06-21T15:44:05Z
+Generated UTC: 2026-06-21T15:49:33Z
 Guard validation: `E:\agent-company-lab\reports\browser-read-only-signed-approval-guard-v1-validation-20260617.json`
 Assignment preflight validation: `E:\agent-company-lab\reports\browser-read-only-assignment-preflight-v1-validation-20260617.json`
 Report JSON: `E:\agent-company-lab\reports\browser-read-only-apply-preflight-blocker-v1-20260617.json`

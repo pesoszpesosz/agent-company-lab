@@ -16,7 +16,7 @@
   "failures": [],
   "fixture_count": 27,
   "fixture_dir": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-guard-v1-fixtures",
-  "generated_utc": "2026-06-21T15:44:19Z",
+  "generated_utc": "2026-06-21T15:49:45Z",
   "guard_status": "report_only_signed_decision_guard_ready",
   "next_action": "Build a service-worker signed decision apply preflight blocker before any accepted guard decision can mutate queue state.",
   "positive_authority": {
@@ -927,7 +927,7 @@
   "service_requests_updated": 0,
   "service_template_count": 13,
   "source_intake_contract_path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-intake-contract-v1-20260617.json",
-  "source_intake_contract_sha256": "5d315c3e76a5e870a9d39f3350e8de8a28c5fe66d4e58bbc0eccfc80f6a72f07",
+  "source_intake_contract_sha256": "5edcc7e5844044442ce5e0a58094c680ac22386884414ec7b45b6157ba29f331",
   "source_intake_validation_path": "E:\\agent-company-lab\\reports\\service-worker-signed-decision-intake-contract-v1-validation-20260617.json",
   "worker_starts": 0
 }

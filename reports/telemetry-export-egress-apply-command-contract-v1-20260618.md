@@ -1,6 +1,6 @@
 # Telemetry Export Egress Apply Command Contract v1
 
-Generated UTC: 2026-06-21T15:44:20Z
+Generated UTC: 2026-06-21T15:49:46Z
 Target route: `telemetry_export_gateway`
 Report JSON: `E:\agent-company-lab\reports\telemetry-export-egress-apply-command-contract-v1-20260618.json`
 Validation JSON: `E:\agent-company-lab\reports\telemetry-export-egress-apply-command-contract-v1-validation-20260618.json`

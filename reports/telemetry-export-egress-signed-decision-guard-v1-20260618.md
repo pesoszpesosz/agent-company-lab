@@ -1,6 +1,6 @@
 # Telemetry Export Egress Signed Decision Guard v1
 
-Generated UTC: 2026-06-21T15:44:21Z
+Generated UTC: 2026-06-21T15:49:47Z
 Target route: `telemetry_export_gateway`
 Guard report JSON: `E:\agent-company-lab\reports\telemetry-export-egress-signed-decision-guard-v1-20260618.json`
 Validation JSON: `E:\agent-company-lab\reports\telemetry-export-egress-signed-decision-guard-v1-validation-20260618.json`

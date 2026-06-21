@@ -20,7 +20,7 @@
   "gateway_registrations": 0,
   "gateway_start_allowed": false,
   "gateway_starts": 0,
-  "generated_utc": "2026-06-21T15:44:15Z",
+  "generated_utc": "2026-06-21T15:49:42Z",
   "live_egress_allowed": false,
   "live_egress_events": 0,
   "max_cost_usd": 0,
@@ -112,7 +112,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "5abbbd984749c0c6b03ffb0f805dfdb4512461b4cf9c41b92c5e6ba0115e86f5"
+      "sha256": "d6500b85729f8e3a65ee420f2e633e134c03d6db06708f2f8fa9f0cfcc8960b0"
     },
     {
       "expected": "accepted",
@@ -177,7 +177,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "1b786b09b605a61c5afe0f4de8890fa192540a8ad00717fce1876f8802b7074e"
+      "sha256": "e049a1bed1ea25b0bb20e381c629a6ca58d50520b2d7638a331d61c0b8e7d641"
     },
     {
       "expected": "rejected",
@@ -244,7 +244,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "b5abf3ece76111af13a3f1e2a4949e19bae091c8a7bd0ac1f774cd59a16efa31"
+      "sha256": "f6e14552f756900945d2b4c21834c1aa4dc165ec794f1551358e31a634b912e7"
     },
     {
       "expected": "rejected",
@@ -312,7 +312,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "f542b338449bcb3ed1d638316ffffb0d138468faabce7e9a5da70fea80a89d3b"
+      "sha256": "05367829e9c675f5a51ada8e994b410b7ad56fa5ddd41b2bab45ed1646471819"
     },
     {
       "expected": "rejected",
@@ -379,7 +379,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "7bbb543829a5338c03ccd156da0b1551a51a9912b8b6c8c853c000b4218c21e1"
+      "sha256": "9aab3539b5e8146927d728a085f370d836ec5c232d43b1335c753cd2869ad812"
     },
     {
       "expected": "rejected",
@@ -447,7 +447,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "1e3ee3d7710bd833a667c49e26a8b6f3d871ae6d59be01feb3d51c5d79ce3f19"
+      "sha256": "a9258aa139fcf59654fb6b238b0b9389007ee97c7441cccfe1662a2adcc7a532"
     },
     {
       "expected": "rejected",
@@ -514,7 +514,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "52c386bf46ee318c22d42587e25391a411fdf34e5564b02dbcb146566ad9678c"
+      "sha256": "541026e969414187b4eb7f2b264c6f1903493f87ff3f88d0aa0f3129a7441120"
     },
     {
       "expected": "rejected",
@@ -581,7 +581,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "d39879959e65f19c21bc9ace52ebdd2efcd5a0de8c699a48fd554d378e4b8b6a"
+      "sha256": "ba28f25063df64d8618b8177ccdad76a48a0f1fbcd6ef3c6048c9c787f6b7c6a"
     },
     {
       "expected": "rejected",
@@ -648,7 +648,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "fc2cedad6082f05bf2c66c8d041ca68fa794e641fd904b7587d61943dca3c40d"
+      "sha256": "4a3c80e60b69ee860a7140f9f28a2e87842832e5d8adc9b11f257c436067889c"
     },
     {
       "expected": "rejected",
@@ -716,7 +716,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "7656e099ed1df952e8717b91765d285ab96d7991a4d2722fa4d2a13aac9aa235"
+      "sha256": "e75236af352eb75ff6f302e590316d0df11c210f0cea50bb7cb4158823e8f445"
     },
     {
       "expected": "rejected",
@@ -850,7 +850,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "6720aa410691d7e7a01080a4fe5ccd43aabea5716504414d0516a28becfdaba9"
+      "sha256": "6ef695f447bad1a7ccf7da56b1c1fe45f7f3ae913c10b01fa78eaac7f07c2493"
     },
     {
       "expected": "rejected",
@@ -920,7 +920,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "c878c0750aa15ee378b72a4dcc35026816a805b35b65037e6c8aeb25645edb9b"
+      "sha256": "efed55a694794389d326f283bf3ef1cec7e50a087c8629db4964c8cc71a6bc1d"
     },
     {
       "expected": "rejected",
@@ -987,7 +987,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "e734ca11733bc3861e8aab659ad162f61ab40787f9943cdb2e82aaae85c84d5a"
+      "sha256": "6cd0d710c9ab21b3a8ef30de85da074b3987eb052030c5bcee121c3645c9510a"
     },
     {
       "expected": "rejected",
@@ -1054,7 +1054,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "2ce5d241a65aa7860af5ef06f2fea6044e8458650041a3d17d65d5a31af47887"
+      "sha256": "60ef826c53f2fe648daedfd9ab326561ce2c38cf6734e379a6a077542099d1fc"
     },
     {
       "expected": "rejected",
@@ -1121,7 +1121,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "00a4358f7ba13efe7f72912eb7c8288e35fa061bd7db9edc2cb7b398d22c1666"
+      "sha256": "a5cb41e90f653d8bb45197153fcb36bc862fd151e2431e4a1851037bb770e86b"
     },
     {
       "expected": "rejected",
@@ -1188,7 +1188,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "2901d5476d70f170c38a65a00d8686b97e4e22d1b41318e832e07a8b9ca33f61"
+      "sha256": "7256e8adba23de86a2813a91ea85d14d94c38082a0977fb0027e26d283f5083e"
     },
     {
       "expected": "rejected",
@@ -1255,7 +1255,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "2bd69a5262cf884a2fc29058909d99db6aab69831e788539899105c3a7bad9c0"
+      "sha256": "68ac00d71df6f285430bbc0dd4653f5a342d2c57ece645ec9155692ebc12ac39"
     },
     {
       "expected": "rejected",
@@ -1322,7 +1322,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "116a74187d9240a86696837a436ef0fbedac62b0edca5201c2e6e310c990e8e1"
+      "sha256": "53f2a021c630a6ac970b16e79cc6f2757aa8781f58b2149fcf7c5d2802191fa0"
     },
     {
       "expected": "rejected",
@@ -1389,7 +1389,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "39c1da11ed61e45e2c049ed958cc8c37a85fa6bb93abb4388d58708247ec7803"
+      "sha256": "bc12929efdde7b6fbdda64a35f9a27c8634e8950c3b5d2b460d7aed2caa67f78"
     },
     {
       "expected": "rejected",
@@ -1456,7 +1456,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "9d0ec4b29f9b6c2807b1899ca60f859d7ffceb25d04aabe381cf34d78fca34e1"
+      "sha256": "0a374872c4ebb162ec625e7316108666e54054a99fb27e6656282f5ca9bb1800"
     },
     {
       "expected": "rejected",
@@ -1523,7 +1523,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "fcb8c0562c23743d30052311e16c1ca806a7fe9a1a58540171e3552989901c3f"
+      "sha256": "ec2cdba9f20a80730ed38e187aac7b3c6f02d36b513d6174f11247db1d317a69"
     },
     {
       "expected": "rejected",
@@ -1590,7 +1590,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "9e3ea7446c2794234f16cfdf01f8e5aeda4d128b178fca65e22a17877ee13310"
+      "sha256": "63b4b33bb8732879331c7fa14884d0641bb30ebb920f598f6050a992977001f3"
     },
     {
       "expected": "rejected",
@@ -1657,7 +1657,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "1369d15acacbb490cc0b3c9064681d6542525996cda316cc501ebf17ff75885c"
+      "sha256": "ed4133bec9189a8e43b7843ac0348adce6646b473cda3a7f423cfb9426c3f31e"
     },
     {
       "expected": "rejected",
@@ -1724,7 +1724,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "5ad4b3c782d8bdee4bd76c82f05d5e09069212ea4c56612bac3c3645f4d00179"
+      "sha256": "0cc2783bf73064876ee873cde621f9e638ff77ba54a8ad6ac5e814b524aa0334"
     },
     {
       "expected": "rejected",
@@ -1791,7 +1791,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "6764333801785fbf509138ed8cbf1d4d1daa01a8f1865bcad65374ebe2a5fcc8"
+      "sha256": "41870a6a16c877e1365ba860ef3569fc18f4b39f553a78a56307c6451e461270"
     },
     {
       "expected": "rejected",
@@ -1858,7 +1858,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "6b34ac49f356f53166c6cad5b4b7fc712761748b0e082be77ab1b4c1ff7bcd2d"
+      "sha256": "f1a2a890e2e0ae660fdbe4a471777c468a16b1142ff791187b03a779cf3a281f"
     },
     {
       "expected": "rejected",
@@ -1925,7 +1925,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "8639d5f5136119fa7405fba61b59fa4e1f1fd8a0596af283ede44af36b473b86"
+      "sha256": "d08a55dc51687942b61e72f1b3212244fc8f28d522fb9ddcb3a58e16a36c61e8"
     },
     {
       "expected": "rejected",
@@ -1992,7 +1992,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "c12aa064f6d712e907b21117157e43fb3c694ea930e3e4017610cbb27829a954"
+      "sha256": "d4bd4ec211a7526c95b6ebf4205b79cebaa17e7ad520ae483f4eb83b7624d682"
     },
     {
       "expected": "rejected",
@@ -2059,7 +2059,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "2518557a20d86642be01a43c697259e7aa5e62905dc8b3a268ba3f3fd993a8b7"
+      "sha256": "35943768a53e83ee4192ab7022947310b25b85283863b243c526204046ff3327"
     },
     {
       "expected": "rejected",
@@ -2126,7 +2126,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "f96d6a0dbffa0a48284db1d8d09bc489d2d08a1f000cd191c76ae79a19fee1f8"
+      "sha256": "90fafdef9c0a829f232eb68e54ee127ab47a8ce4bd40a3c3d63360e8b92a5740"
     },
     {
       "expected": "rejected",
@@ -2193,7 +2193,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "75671da8eba6ca3b29433f5a331549b7ca6dd881e31f9b9685646fbc69b54439"
+      "sha256": "5e4c5e042385232807e684cfda21f6ce88b09c1bbcbc9cd12f2b7bf0a272eafa"
     },
     {
       "expected": "rejected",
@@ -2260,7 +2260,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "320bb90c03649f545d5e0e9269f3c80b8d8d0ee4a0de41f4315fc123e982ec9a"
+      "sha256": "f6f9d5d03a233074dd873fff39ff7c4e721bc5d954efb3dc0ac94496ba47694b"
     },
     {
       "expected": "rejected",
@@ -2327,7 +2327,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "0d8518fa98ea5fabbf5f88cc681361d146e586bf7a6e2dba66720fb73cbfd6e8"
+      "sha256": "491480ff260ee4a302e81fd22e551a2d5af15930713b7201c55bae0f1f09dd66"
     },
     {
       "expected": "rejected",
@@ -2394,7 +2394,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "8b69c46473d5401b7b0a792306124b1a8a387e5df5c618ccba9ef852c87c85e1"
+      "sha256": "7599784cdd4153c7e8af81876b999d7803367de19a99599ce48bb2e9946b5184"
     },
     {
       "expected": "rejected",
@@ -2461,7 +2461,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "d8b8d7952e600ecf8d36270eed1db9f53694da325bec8665d5a87a19a18b00e7"
+      "sha256": "bb18beda2e532069c24d1d6d0b2c08f88769a66580bc943343682da229e1a497"
     },
     {
       "expected": "rejected",
@@ -2528,7 +2528,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "1eb7c3ba4d1abbd3b1fc63eb2822d512982e2e39af0232b4f3751ada27178380"
+      "sha256": "15c85174b1ba515a54fedfb627d2b1fb6e4366ed406bf8b0dde0386f65731c5e"
     },
     {
       "expected": "rejected",
@@ -2595,7 +2595,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "fc8d53f0748f7a3ef8f56a606d844ee0ff110694cee9d8db3ee504cf24abb920"
+      "sha256": "6b934ca2bab5e5413239b048ea4ec077506bc403a0fbaf39934cb2c165f8a1fe"
     },
     {
       "expected": "rejected",
@@ -2662,7 +2662,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "0349cdc5f887dbc1dcf9175cdb4ece601b026e507edbe00a0425493ca46a5df4"
+      "sha256": "da49b73e553d92a6b9b779f109ece7dfce06e47fe272c9d4ef0a66287dc04be4"
     },
     {
       "expected": "rejected",
@@ -2729,7 +2729,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "ec8d6c6e23d7ec293d40596492c300d2337c7155f41bd0f2f34e216beca51a45"
+      "sha256": "545c9ad0056cf4b13979a11697c0fd59e3f13392c7c4ca3fe3ff709b3749aabe"
     },
     {
       "expected": "rejected",
@@ -2796,7 +2796,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "756822dc8d785e68f390d8f8b716f16efc4f3815d030f0b0eba414355bae8575"
+      "sha256": "6accdd9d5662da568d73388bad18f01953be9c606644fe187dcbaf64aca13794"
     },
     {
       "expected": "rejected",
@@ -2863,7 +2863,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "67e05f4212f700aaf89834f38473c1fdd2ad7a72607fe853e63b6d15720fae88"
+      "sha256": "62cd578c5d5f21d495e0c8467095a8f48d14d444bc2f842758b428fe3711bd31"
     },
     {
       "expected": "rejected",
@@ -2930,7 +2930,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "b16a8f28b826000b1f6ed5d3d977ffda409d4d0a833557c9c54d90ae451961bb"
+      "sha256": "85e8a836600f21ff7eb52ab4d6910704657cd0f425807180c76a15d7c7f7defb"
     },
     {
       "expected": "rejected",
@@ -2997,7 +2997,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "3b9abcf514b14641f43b24845646cfe7e97844ce6f9a3874bca8a2c2e358cc31"
+      "sha256": "a669f6cfa5f66c21814b952054840203a687db7a99c949aa5f7cabce2abab317"
     },
     {
       "expected": "rejected",
@@ -3064,7 +3064,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "1861386a3e5878f56fdfa809f7b060e129338ccb1cf92a177e466049084864fe"
+      "sha256": "ff9ae3c7b5134f3ed88d8c2d1e4b05c3bf8c21343ae1e1ba87e14b9176bd8c32"
     },
     {
       "expected": "rejected",
@@ -3131,7 +3131,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "20b08c7601ad8589fe9e265dd6bab07c1b5b3de0e1284b27fbbd3e83521a2dc9"
+      "sha256": "a687acbcbbdf0f1722e398e473ac4ced6042b828e08a6049d01a5e49c4612cc1"
     },
     {
       "expected": "rejected",
@@ -3198,7 +3198,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "60faa175467520c38177752ff698202e9d191bb4bf3963a2c0a38af64e8aa0d9"
+      "sha256": "565a68544457179d38310834f6ad0e19699048be1f1558c091def43c734f5e9b"
     },
     {
       "expected": "rejected",
@@ -3265,7 +3265,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "2d0c6bbfccd14820f6588cb5415797a5b21d78961e9094a3c51628e6459cd6f6"
+      "sha256": "7303fba1c210cabb89d5c21353e51cea27f3cdf3f74ace0f228c8ed5f76f689e"
     },
     {
       "expected": "rejected",
@@ -3332,7 +3332,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "6fc21fee31c910a399f015e863da715bc0ada6e3fb40ed84ea004c244eb0b8b8"
+      "sha256": "d5c3b328f696685d1dee78c9ee60fa6e3bae45abac4a33f07fc9dd541b62a6d4"
     },
     {
       "expected": "rejected",
@@ -3399,7 +3399,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "75da94e1e88bd811b43884b7de60bf270a29c2239c69cc191b5c37d4ab959e6c"
+      "sha256": "7a16a942814200752e64b2a18a916085ef5a6ce2401633ec29150a028f0baaa4"
     },
     {
       "expected": "rejected",
@@ -3466,7 +3466,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "afe86a15376b77ac023ac81b27704a4b341ab6d3c5ed9913f26325de8fd81eed"
+      "sha256": "d698a315080fb0f8056ebb67a775e423bee9ce6bcde9da3a390249d77ac44077"
     },
     {
       "expected": "rejected",
@@ -3533,7 +3533,7 @@
         "training_data_uploaded": false,
         "worker_start_allowed": false
       },
-      "sha256": "29a770e29d090dbaa0416e25bbe9da5567e135ed86cdee8012a1be590faafe3c"
+      "sha256": "36db51f9d956d1c9c3baf199668c1e863280c0acb7a8de6ec55bbc4cb4e80ac1"
     }
   ],
   "runtime_starts": 0,
@@ -3544,7 +3544,7 @@
   "service_requests_updated": 0,
   "source_agent_egress_event_ledger_validation_path": "E:\\agent-company-lab\\reports\\agent-egress-event-ledger-v1-validation-20260617.json",
   "source_gateway_docket_path": "E:\\agent-company-lab\\reports\\unified-agent-egress-gateway-docket-v1-20260618.json",
-  "source_gateway_docket_sha256": "02dca8f8fbeedfc14e31c1d2167ced5db2ee0e1ee91b15003b2f078130544d77",
+  "source_gateway_docket_sha256": "49fb5fa8ca17899a9eff5496a73a163cb9e7384ff9ad51948535ed8287d05028",
   "source_identity_envelope_validation_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
   "source_intake_contract_path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-20260618.json",
   "source_intake_contract_validation_path": "E:\\agent-company-lab\\reports\\egress-route-signed-decision-intake-contract-v1-validation-20260618.json",

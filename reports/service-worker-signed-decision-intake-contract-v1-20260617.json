@@ -13,7 +13,7 @@
   "external_side_effects": false,
   "failure_count": 0,
   "failures": [],
-  "generated_utc": "2026-06-21T15:44:20Z",
+  "generated_utc": "2026-06-21T15:49:46Z",
   "missing_required_field_count": 0,
   "next_action": "Use these templates to validate service-specific signed decisions before any apply preflight or queue mutation.",
   "rejection_granted_by_contract": false,
@@ -117,7 +117,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-account_registration_intake",
       "worker_starts": 0
     },
@@ -224,7 +224,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-browser_read_only_session",
       "worker_starts": 0
     },
@@ -320,7 +320,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-data_purchase_api_access_gate",
       "worker_starts": 0
     },
@@ -418,7 +418,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-github_public_action_gate",
       "worker_starts": 0
     },
@@ -515,7 +515,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-legal_kyc_tax_payment_gate",
       "worker_starts": 0
     },
@@ -615,7 +615,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-model_api_execution_gate",
       "worker_starts": 0
     },
@@ -713,7 +713,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-outreach_delivery_gate",
       "worker_starts": 0
     },
@@ -811,7 +811,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-public_action_execution",
       "worker_starts": 0
     },
@@ -909,7 +909,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-real_money_trade_gate",
       "worker_starts": 0
     },
@@ -1005,7 +1005,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-secrets_credentials_handling_gate",
       "worker_starts": 0
     },
@@ -1103,7 +1103,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-security_report_submission_gate",
       "worker_starts": 0
     },
@@ -1200,7 +1200,7 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-wallet_public_address_response",
       "worker_starts": 0
     },
@@ -1296,13 +1296,13 @@
       "service_requests_assigned": 0,
       "service_requests_updated": 0,
       "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-      "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+      "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
       "template_id": "service-worker-decision-template-wallet_setup_packet",
       "worker_starts": 0
     }
   ],
   "source_authority_coverage_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-20260617.json",
-  "source_authority_coverage_sha256": "e6e7bc30fbca40a64aecd5769f1bab71647fb0d3228d10553765958fdf33ccfc",
+  "source_authority_coverage_sha256": "6b557ebda83c7a75735cbd7a4dce705115d4bc4ed1757bb7440750c38ad0e958",
   "source_authority_validation_path": "E:\\agent-company-lab\\reports\\service-worker-approval-authority-coverage-v1-validation-20260617.json",
   "template_errors": [],
   "templates_with_attestation_required_count": 13,

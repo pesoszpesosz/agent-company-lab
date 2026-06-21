@@ -1,6 +1,6 @@
 # Service Worker Signed Decision Intake Contract v1
 
-Generated UTC: 2026-06-21T15:44:20Z
+Generated UTC: 2026-06-21T15:49:46Z
 Report JSON: `E:\agent-company-lab\reports\service-worker-signed-decision-intake-contract-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\service-worker-signed-decision-intake-contract-v1-validation-20260617.json`
 

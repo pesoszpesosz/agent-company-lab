@@ -1,6 +1,6 @@
 # Public Action Egress Signed Decision Guard v1
 
-Generated UTC: 2026-06-21T15:44:17Z
+Generated UTC: 2026-06-21T15:49:43Z
 Target route: `public_action_gateway`
 Guard report JSON: `E:\agent-company-lab\reports\public-action-egress-signed-decision-guard-v1-20260618.json`
 Validation JSON: `E:\agent-company-lab\reports\public-action-egress-signed-decision-guard-v1-validation-20260618.json`
