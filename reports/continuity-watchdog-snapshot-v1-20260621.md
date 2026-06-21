@@ -1,7 +1,7 @@
 # Continuity Watchdog Snapshot V1
 
-Generated UTC: 2026-06-21T13:10:30Z
-Status: `restore_ready`
+Generated UTC: 2026-06-21T13:21:23Z
+Status: `clear`
 Cadence minutes: `15`
 JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json`
 
@@ -12,23 +12,17 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260
 | `ownerless_active_lanes` | 0 |
 | `missing_owner_agent_lanes` | 0 |
 | `agents_missing_threads` | 0 |
-| `stale_open_tasks` | 9 |
+| `stale_open_tasks` | 15 |
 | `expired_leases` | 0 |
 | `duplicate_active_keys` | 0 |
-| `lanes_without_open_tasks` | 7 |
+| `lanes_without_open_tasks` | 0 |
 | `stale_owner_acknowledgements` | 0 |
 
 ## Restore Actions
 
 | Kind | Target | Next Action |
 | --- | --- | --- |
-| `request_lane_goal` | content_and_social_growth | Ask lane owner for one current goal artifact or explicit park/kill state. |
-| `request_lane_goal` | digital_products_templates_plugins | Ask lane owner for one current goal artifact or explicit park/kill state. |
-| `request_lane_goal` | lead_generation_and_sales | Ask lane owner for one current goal artifact or explicit park/kill state. |
-| `request_lane_goal` | local_trading_strategy_research | Ask lane owner for one current goal artifact or explicit park/kill state. |
-| `request_lane_goal` | premium_customer_intake | Ask lane owner for one current goal artifact or explicit park/kill state. |
-| `request_lane_goal` | security_bounty_private_reports | Ask lane owner for one current goal artifact or explicit park/kill state. |
-| `request_lane_goal` | web3_airdrops_grants_hackathons | Ask lane owner for one current goal artifact or explicit park/kill state. |
+| none |  |  |
 
 ## Boundary
 

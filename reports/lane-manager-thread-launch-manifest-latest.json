@@ -6,7 +6,7 @@
     "submitted_bounty_payouts remains read-only and assigned to the parallel payout worker."
   ],
   "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
-  "generated_utc": "2026-06-21T13:10:32Z",
+  "generated_utc": "2026-06-21T13:21:27Z",
   "held_lanes": [
     {
       "department": "Platform Engineering",
@@ -95,7 +95,7 @@
       "launch_rank": 3,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 4,
-      "open_task_count": 0,
+      "open_task_count": 1,
       "owner": "lane-manager-digital_products_templates_plugins-019ec69a",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\digital_products_templates_plugins-manager-packet.md",
       "recommended_task": "Use the starter browser-read-only service request to shortlist sellable template/plugin/product ideas with buyer problem, build artifact, marketplace fees, and payment/listing gates."
@@ -110,7 +110,7 @@
       "launch_rank": 4,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 2,
-      "open_task_count": 0,
+      "open_task_count": 1,
       "owner": "lane-manager-security_bounty_private_reports-019ec612",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\security_bounty_private_reports-manager-packet.md",
       "recommended_task": "Rank imported private-report and static-review sources by program scope, evidence quality, payout path, and disclosure route."
@@ -155,7 +155,7 @@
       "launch_rank": 7,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 1,
-      "open_task_count": 0,
+      "open_task_count": 1,
       "owner": "lane-manager-content_and_social_growth-019ec613",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\content_and_social_growth-manager-packet.md",
       "recommended_task": "Prepare a read-only Grok/X research packet through the existing service request; no posts, replies, likes, follows, or settings changes."
@@ -170,7 +170,7 @@
       "launch_rank": 8,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 0,
-      "open_task_count": 0,
+      "open_task_count": 1,
       "owner": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\web3_airdrops_grants_hackathons-manager-packet.md",
       "recommended_task": "Scout terms, deadlines, eligibility, and required account/wallet actions; stop before registration, wallet, deployment, or transaction work."
@@ -185,7 +185,7 @@
       "launch_rank": 9,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 0,
-      "open_task_count": 0,
+      "open_task_count": 1,
       "owner": "lane-manager-lead_generation_and_sales-019ec613",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\lead_generation_and_sales-manager-packet.md",
       "recommended_task": "Draft non-spam offer rules, target filters, proof artifacts, and review gates before any outreach account or message action."
@@ -200,7 +200,7 @@
       "launch_rank": 10,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 0,
-      "open_task_count": 0,
+      "open_task_count": 1,
       "owner": "lane-manager-local_trading_strategy_research-019ec613",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\local_trading_strategy_research-manager-packet.md",
       "recommended_task": "Inventory local backtest artifacts and define a paper-only evidence standard; no broker/API/trade action."

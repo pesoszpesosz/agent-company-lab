@@ -1,7 +1,7 @@
 # Continuity Watchdog Restore Response Bundle V1
 
-Generated UTC: 2026-06-21T13:10:30Z
-Status: `responses_ready`
+Generated UTC: 2026-06-21T13:21:24Z
+Status: `no_responses_needed`
 Restore plan: `E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.json`
 Response dir: `E:\agent-company-lab\reports\continuity-restore-responses-v1-20260621`
 JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.json`
@@ -10,23 +10,17 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-restore-response-
 
 | Count | Value |
 | --- | ---: |
-| `response_items` | 7 |
+| `response_items` | 0 |
 | `owner_selection_or_park_required` | 0 |
 | `acknowledgement_response_required` | 0 |
-| `lane_goal_response_required` | 7 |
+| `lane_goal_response_required` | 0 |
 | `manual_review_required` | 0 |
 
 ## Response Items
 
 | Response Type | Target | Assigned Surface | Recommended Owner | Next Action |
 | --- | --- | --- | --- | --- |
-| `lane_goal_response_required` | lane:content_and_social_growth | `existing_lane_owner` | lane-manager-content_and_social_growth-019ec613 | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
-| `lane_goal_response_required` | lane:digital_products_templates_plugins | `existing_lane_owner` | lane-manager-digital_products_templates_plugins-019ec69a | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
-| `lane_goal_response_required` | lane:lead_generation_and_sales | `existing_lane_owner` | lane-manager-lead_generation_and_sales-019ec613 | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
-| `lane_goal_response_required` | lane:local_trading_strategy_research | `existing_lane_owner` | lane-manager-local_trading_strategy_research-019ec613 | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
-| `lane_goal_response_required` | lane:premium_customer_intake | `existing_lane_owner` | premium-customer-intake-agent-20260620 | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
-| `lane_goal_response_required` | lane:security_bounty_private_reports | `existing_lane_owner` | lane-manager-security_bounty_private_reports-019ec612 | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
-| `lane_goal_response_required` | lane:web3_airdrops_grants_hackathons | `existing_lane_owner` | lane-manager-web3_airdrops_grants_hackathons-019ec613 | Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request. |
+| none |  |  |  |  |
 
 ## Boundary
 

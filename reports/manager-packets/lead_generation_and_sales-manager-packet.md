@@ -1,6 +1,6 @@
 # Manager Packet - lead_generation_and_sales
 
-Generated UTC: 2026-06-21T13:10:31Z
+Generated UTC: 2026-06-21T13:21:26Z
 Department: Growth/Sales
 Lane status: active
 Current owner: `lane-manager-lead_generation_and_sales-019ec613`
@@ -97,6 +97,7 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
+| 77 | new | `task-continuity-lane-next-task-20260621-lead_generation_and_sales-001` - Continue local lead generation offer proof | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\lead-generation-and-sales-current-lane-goal-v1-20260621.md | Produce one local lead-generation proof packet from the current lane goal: define a non-spam offer, qualification rules, a small local lead worksheet shape, and the outreach approval gate. Do not email, DM, scrape, enric |
 | 93 | complete | `task-upwork-no-send-approval-request-packet-20260618` - Create no-send Upwork approval request packet | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\upwork-no-send-approval-request-packet-validation-20260618.json | If the operator approves this packet, create an exact-scope service request for one Upwork account/profile/proposal review. Do not log in, create or edit a profile, select a live job, send a proposal, message a client, a |
 | 91 | complete | `task-lane-scout-upwork_ai_freelance_work-20260618` - Lane scout local proof: upwork ai freelance work | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\money-path-lane-scout-packets\upwork-ai-offer-matrix-local-proof-validation.json | Create a no-send Upwork approval request packet for the recommended first offer only after human review; keep account, proposal, payment, client data, credentials, public action, worker/runtime, model/MCP, and external s |
 | 90 | complete | `task-upwork-ai-skills-no-send-approval-request-packet-20260618` - Create Upwork AI-skills-demand no-send approval request packet | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\upwork-ai-skills-no-send-approval-request-packet-validation-20260618.json | If the operator approves this packet, create an exact-scope service request for one Upwork AI Integration Workflow Audit account/profile/proposal review. Do not log in, create/edit a profile or portfolio, choose a live j |
@@ -108,7 +109,6 @@ These require a scoped service request and approval before any execution:
 | 68 | complete | `task-ai-workflow-audit-proof-asset-agency-reporting-20260616` - Create AI workflow audit proof asset for agency reporting | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\ai-workflow-audit-proof-asset-agency-reporting-20260616.md | Create upwork-profile-and-proposal-draft-20260616.md only as a local draft. |
 | 66 | complete | `task-upwork-profile-and-proposal-draft-20260616` - Create Upwork profile and proposal local draft | lane-manager-lead_generation_and_sales-019ec613 |  | E:\agent-company-lab\reports\lead-generation-and-sales\upwork-profile-and-proposal-draft-20260616.md | Create marketplace approval request packet before any Upwork account/profile/proposal action. |
 | 64 | complete | `task-leadgen-fictional-audit-rubric-packet-20260614` - Local proof: fictional lead-audit rubric packet | lane-manager-lead_generation_and_sales-019ec613 |  | Local-only audit rubric and fictional sample proof packet with pass/fail criteria, exclusions, review gates, and no real prospect data. | If the lane continues, create a separate source-category policy review task only; do not identify real leads without an approved service request. |
-| 61 | complete | `task-leadgen-source-category-policy-review-20260614` - Next local proof: source-category policy review | lane-manager-lead_generation_and_sales-019ec613 |  | Local policy review of allowed/prohibited source categories for future lead discovery, with data handling gates and no real leads. | If the lane continues, draft a service-request template for a future tiny manual source-category review; keep real prospect data blocked unless explicitly approved. |
 
 ## Service Requests
 

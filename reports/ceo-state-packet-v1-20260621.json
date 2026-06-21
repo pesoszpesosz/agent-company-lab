@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2636,
+    "artifacts": 2648,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 462,
+    "outcomes": 465,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 650,
-    "trace_events": 575
+    "tasks": 659,
+    "trace_events": 585
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T13:10:31Z",
+  "generated_utc": "2026-06-21T13:21:26Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T13:10:31Z",
+    "generated_utc": "2026-06-21T13:21:26Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 235,
-    "outcomes_delta": 44,
-    "tasks_delta": 71,
-    "trace_events_delta": 66
+    "artifacts_delta": 247,
+    "outcomes_delta": 47,
+    "tasks_delta": 80,
+    "trace_events_delta": 76
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -225,14 +225,8 @@
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
-      "next_action": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab"
-    },
-    {
-      "kind": "open_task",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab"
+      "next_action": "Track remaining AR queue after acknowledgement closure: source acknowledgements stay closed, no duplicate acknowledgement dispatches, lane follow-ups route to existing owners, and service requests remain gated.",
+      "task_id": "task-ai-resources-post-acknowledgement-ar-queue-coordination-20260621"
     },
     {
       "kind": "open_task",
@@ -275,6 +269,12 @@
       "lane_id": "ai_resources_lab",
       "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
       "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Produce one premium-customer intake queue packet: check preserved raw input, route ledger, update feed, and pending follow-ups; summarize newest customer-facing state without copying raw material into CEO context. Do not start workers, approve service requests, open browsers, or take external actions.",
+      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-001"
     }
   ],
   "open_tasks": [
@@ -289,21 +289,12 @@
     },
     {
       "lane_id": "ai_resources_lab",
-      "next_action": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
+      "next_action": "Track remaining AR queue after acknowledgement closure: source acknowledgements stay closed, no duplicate acknowledgement dispatches, lane follow-ups route to existing owners, and service requests remain gated.",
       "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
-      "priority": 93,
+      "priority": 94,
       "status": "new",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-escalation-ai_resources_lab",
-      "title": "Triage stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002"
-    },
-    {
-      "lane_id": "ai_resources_lab",
-      "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
-      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
-      "priority": 91,
-      "status": "new",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-ai_resources_lab",
-      "title": "Follow up customer input for ai_resources_lab"
+      "task_id": "task-ai-resources-post-acknowledgement-ar-queue-coordination-20260621",
+      "title": "Coordinate post-acknowledgement AR queue without duplicate dispatches"
     },
     {
       "lane_id": "ai_resources_lab",
@@ -367,10 +358,49 @@
       "status": "in_progress",
       "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621",
       "title": "Active goal for browser-account-ops-worker-20260621"
+    },
+    {
+      "lane_id": "premium_customer_intake",
+      "next_action": "Produce one premium-customer intake queue packet: check preserved raw input, route ledger, update feed, and pending follow-ups; summarize newest customer-facing state without copying raw material into CEO context. Do not start workers, approve service requests, open browsers, or take external actions.",
+      "owner_agent_id": "premium-customer-intake-agent-20260620",
+      "priority": 82,
+      "status": "new",
+      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-001",
+      "title": "Continue premium customer routing queue proof"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
+    {
+      "created_at": "2026-06-21T13:19:38Z",
+      "evidence": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-seed-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Regenerate continuity watchdog, manager packets, CEO state, and lane thread manifest.",
+      "outcome_id": "outcome-continuity-lane-next-task-seed-20260621",
+      "outcome_type": "continuity_lane_next_task_seed",
+      "realized_usd": 0.0,
+      "status": "repaired_existing_seed_evidence"
+    },
+    {
+      "created_at": "2026-06-21T13:14:12Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-routing-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Use post-acknowledgement AR queue coordination task to track remaining local AR work and service gates.",
+      "outcome_id": "outcome-ai-resources-direct-followup-routing-v1-20260621",
+      "outcome_type": "ai_resources_direct_followup_routing",
+      "realized_usd": 0.0,
+      "status": "completed_local_followup_routing"
+    },
+    {
+      "created_at": "2026-06-21T13:14:07Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-routing-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Continue remaining AR queue through existing AR workers; no acknowledgement redispatch needed.",
+      "outcome_id": "outcome-ai-resources-customer-followup-routing-v1-20260621",
+      "outcome_type": "ai_resources_customer_followup_routing",
+      "realized_usd": 0.0,
+      "status": "completed_local_followup_routing"
+    },
     {
       "created_at": "2026-06-21T13:10:29Z",
       "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
@@ -420,36 +450,6 @@
       "outcome_type": "owner_acknowledgement_evidence",
       "realized_usd": 0.0,
       "status": "completed_local_acknowledgement_evidence"
-    },
-    {
-      "created_at": "2026-06-21T13:00:41Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-continuity-owner-acknowledgement-evidence-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Continue AR queue through existing owners, capability-overlap review, and stop gates; no duplicate workers or external side effects.",
-      "outcome_id": "outcome-ai-resources-continuity-owner-acknowledgement-evidence-v1-20260621",
-      "outcome_type": "continuity_owner_acknowledgement_evidence",
-      "realized_usd": 0.0,
-      "status": "completed_local_acknowledgement_evidence"
-    },
-    {
-      "created_at": "2026-06-21T12:50:11Z",
-      "evidence": "E:\\agent-company-lab\\reports\\submitted-bounty-payouts-external-owned-parking-decision-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Reopen only if the user explicitly reassigns payout monitoring into this lab, supplies the live parallel worker thread id, or asks AR to replace the external payout worker.",
-      "outcome_id": "outcome-submitted-bounty-payouts-external-owned-parking-decision-v1-20260621",
-      "outcome_type": "lane_parking_decision",
-      "realized_usd": 0.0,
-      "status": "external_owned_readonly"
-    },
-    {
-      "created_at": "2026-06-21T12:44:42Z",
-      "evidence": "E:\\agent-company-lab\\reports\\platform-engineering\\platform-engineering-status-20260621.md",
-      "lane_id": "platform_engineering",
-      "next_action": "Run 500000-row synthetic capacity benchmark before claiming high-volume readiness; CEO/AR decision still required for submitted_bounty_payouts ownership.",
-      "outcome_id": "outcome-platform-engineering-live-thread-status-20260621",
-      "outcome_type": "platform_live_thread_status",
-      "realized_usd": 0.0,
-      "status": "local_status_smoke_complete"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

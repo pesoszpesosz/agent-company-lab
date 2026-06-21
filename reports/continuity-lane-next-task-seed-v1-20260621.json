@@ -1,0 +1,61 @@
+{
+  "counts": {
+    "lanes_without_open_tasks": 0,
+    "missing_evidence_paths": 0,
+    "open_seed_evidence_repair_planned": 0,
+    "open_seed_evidence_repaired": 3,
+    "open_seed_missing_evidence_unrepaired": 0,
+    "open_seed_tasks_reused": 0,
+    "seed_tasks_created": 0,
+    "seed_tasks_planned": 0
+  },
+  "generated_utc": "2026-06-21T13:21:09Z",
+  "json_path": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-seed-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-seed-v1-20260621.md",
+  "next_action": "Regenerate continuity watchdog, manager packets, CEO state, and lane thread manifest.",
+  "repair_items": [
+    {
+      "duplicate_key": "continuity:lane-next-task:local_trading_strategy_research:20260621:001",
+      "lane_id": "local_trading_strategy_research",
+      "new_evidence_path": "E:\\agent-company-lab\\reports\\manager-packets\\local_trading_strategy_research-manager-packet.md",
+      "new_evidence_path_exists": true,
+      "old_evidence_path": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-011-continuity-restore-response-v1-011-continuity-restore-v1-011-request_lane_goal-local_trading_strategy_research.md",
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "repair_status": "repaired",
+      "task_id": "task-continuity-lane-next-task-20260621-local_trading_strategy_research-001"
+    },
+    {
+      "duplicate_key": "continuity:lane-next-task:security_bounty_private_reports:20260621:001",
+      "lane_id": "security_bounty_private_reports",
+      "new_evidence_path": "E:\\agent-company-lab\\reports\\manager-packets\\security_bounty_private_reports-manager-packet.md",
+      "new_evidence_path_exists": true,
+      "old_evidence_path": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-013-continuity-restore-response-v1-013-continuity-restore-v1-013-request_lane_goal-security_bounty_private_reports.md",
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "repair_status": "repaired",
+      "task_id": "task-continuity-lane-next-task-20260621-security_bounty_private_reports-001"
+    },
+    {
+      "duplicate_key": "continuity:lane-next-task:web3_airdrops_grants_hackathons:20260621:001",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "new_evidence_path": "E:\\agent-company-lab\\reports\\manager-packets\\web3_airdrops_grants_hackathons-manager-packet.md",
+      "new_evidence_path_exists": true,
+      "old_evidence_path": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\continuity-owner-response-v1-015-continuity-restore-response-v1-015-continuity-restore-v1-015-request_lane_goal-web3_airdrops_grants_hackathons.json",
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "repair_status": "repaired",
+      "task_id": "task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-001"
+    }
+  ],
+  "schema_version": "continuity_lane_next_task_seed.v1",
+  "seed_items": [],
+  "status": "repaired_existing_seed_evidence",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}
