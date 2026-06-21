@@ -1,6 +1,6 @@
 # Lemon Squeezy No-Publish Launch Approval Packet
 
-- Generated: `2026-06-18T09:06:37Z`
+- Generated: `2026-06-21T14:09:56Z`
 - Task: `task-lemon-squeezy-no-publish-launch-approval-packet-v1-20260618`
 - Status: `lemon_squeezy_no_publish_launch_approval_packet_ready_local_only`
 - Decision: `approval_packet_only_no_account_no_terms_no_upload_no_checkout_no_public_listing`

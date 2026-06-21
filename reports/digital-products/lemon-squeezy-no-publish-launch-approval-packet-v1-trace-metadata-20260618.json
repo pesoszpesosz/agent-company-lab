@@ -18,7 +18,7 @@
     "zip_created_or_uploaded": false
   },
   "event_type": "lemon_squeezy_no_publish_launch_approval_packet_created",
-  "generated_at": "2026-06-18T09:06:37Z",
+  "generated_at": "2026-06-21T14:09:56Z",
   "lane_id": "digital_products_templates_plugins",
   "schema_version": "digital_products.lemon_squeezy_no_publish_launch_approval_packet.trace.v1",
   "selected_product_route": {

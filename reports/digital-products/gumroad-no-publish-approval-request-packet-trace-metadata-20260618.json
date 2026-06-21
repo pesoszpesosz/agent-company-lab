@@ -17,7 +17,7 @@
     "zip_created_or_uploaded": false
   },
   "event_type": "approval_packet_created",
-  "generated_at": "2026-06-18T08:29:48Z",
+  "generated_at": "2026-06-21T14:09:56Z",
   "lane_id": "digital_products_templates_plugins",
   "schema_version": "digital_products.gumroad_no_publish_approval_request_packet.trace.v1",
   "selected_candidate": {

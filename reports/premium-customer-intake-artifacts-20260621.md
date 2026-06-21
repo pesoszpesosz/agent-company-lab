@@ -1,8 +1,8 @@
 # Agent Company Artifacts
 
-Generated UTC: 2026-06-21T13:54:52Z
+Generated UTC: 2026-06-21T14:11:17Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 100
+Rows shown: 103
 
 ## Counts By Kind
 
@@ -15,7 +15,7 @@ Rows shown: 100
 | `continuity_current_lane_goal` | 1 |
 | `continuity_current_lane_goal_json` | 1 |
 | `continuity_lane_next_task_proof` | 1 |
-| `continuity_lane_next_task_seed_evidence` | 4 |
+| `continuity_lane_next_task_seed_evidence` | 5 |
 | `customer_followup_escalation` | 2 |
 | `customer_followup_escalation_json` | 2 |
 | `customer_followup_monitor` | 2 |
@@ -59,10 +59,10 @@ Rows shown: 100
 | `premium_customer_intake_router_test` | 1 |
 | `premium_customer_routing_queue_proof` | 1 |
 | `premium_customer_routing_queue_watch` | 1 |
-| `proof_derived_continuation` | 2 |
+| `proof_derived_continuation` | 3 |
 | `registry_update` | 1 |
 | `taxonomy_update` | 1 |
-| `trace_metadata` | 8 |
+| `trace_metadata` | 9 |
 | `youtube_source_material_intake_procedure` | 1 |
 | `youtube_source_material_intake_procedure_json` | 1 |
 
@@ -70,16 +70,19 @@ Rows shown: 100
 
 | Lane | Count |
 | --- | ---: |
-| `premium_customer_intake` | 100 |
+| `premium_customer_intake` | 103 |
 
 ## Artifacts
 
 | Created | Kind | Lane | Task | Artifact | Path/URL | SHA256 | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T14:10:50Z | trace_metadata | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-005` | `artifact-premium-customer-intake-proof-derived-continuation-v1-005-trace-metadata-20260621` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-005.trace-metadata.json | C98DB1C7980414104AAB7C450FCF2C61644CFEA2DBBE3F215D4FD24CBB33031F | Trace metadata for premium_customer_intake proof-derived continuation v1-005. |
+| 2026-06-21T14:10:49Z | proof_derived_continuation | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-005` | `artifact-premium-customer-intake-proof-derived-continuation-v1-005-md-20260621` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-005.md | 9A6877F5B5553CC533E2D2B111F41769DD6330FFA2C03ABEAAEC2EDA45B04293 | Compact proof-derived continuation packet selecting one local dropbox recheck step for premium_customer_intake. |
+| 2026-06-21T14:06:59Z | continuity_lane_next_task_proof | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-004` | `artifact-continuity-lane-next-task-proof-premium_customer_intake` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-004.md | 67582f8d8e6d8a827f163275dc09f6daf01c02233d20264a587743f7e33510ed | Registered expected proof artifact for lane-next task closure. |
+| 2026-06-21T13:56:05Z | continuity_lane_next_task_seed_evidence | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-005` | `artifact-continuity-lane-next-task-seed-evidence-premium_customer_intake-005` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-004.md | 67582f8d8e6d8a827f163275dc09f6daf01c02233d20264a587743f7e33510ed | Seed evidence for the next bounded local lane task. |
 | 2026-06-21T13:54:51Z | trace_metadata | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-004` | `artifact-premium-customer-intake-proof-derived-continuation-v1-004-trace-metadata-20260621` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-004.trace-metadata.json | 00DC0344352AF18A7F75A1079468F84F8893BE82881CA3F81AA3CF7752B0CED1 | Trace metadata for premium_customer_intake proof-derived continuation v1-004. |
 | 2026-06-21T13:54:51Z | proof_derived_continuation | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-004` | `artifact-premium-customer-intake-proof-derived-continuation-v1-004-md-20260621` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-004.md | 67582F8D8E6D8A827F163275DC09F6DAF01C02233D20264A587743F7E33510ED | Compact proof-derived continuation packet selecting one new-dropbox-material revisit condition for premium_customer_intake. |
 | 2026-06-21T13:50:51Z | continuity_lane_next_task_seed_evidence | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-004` | `artifact-continuity-lane-next-task-seed-evidence-premium_customer_intake-004` | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-watch-v1-20260621.md | 5f28b8deae02c281acc0c67fd1bcb4ec8a485d026b101b34449181a319525514 | Seed evidence for the next bounded local lane task. |
-| 2026-06-21T13:50:48Z | continuity_lane_next_task_proof | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-003` | `artifact-continuity-lane-next-task-proof-premium_customer_intake` | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-watch-v1-20260621.md | 5f28b8deae02c281acc0c67fd1bcb4ec8a485d026b101b34449181a319525514 | Registered existing expected proof artifact for lane-next task closure. |
 | 2026-06-21T13:45:37Z | trace_metadata | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-003` | `artifact-premium-customer-intake-proof-derived-continuation-v1-003-trace-metadata-20260621` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-003.trace-metadata.json | 0E6ED65C50A476FD89928AFA95CEC4576B075495D19C6B75BD122C1FB178E88B | Trace metadata for premium_customer_intake proof-derived continuation v1-003. |
 | 2026-06-21T13:45:37Z | proof_derived_continuation | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-003` | `artifact-premium-customer-intake-proof-derived-continuation-v1-003-md-20260621` | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-003.md | 7A2652B27CE538A6EA0C048033838A6934A5542D0C01963A9392E3E9912EBC8F | Compact proof-derived continuation packet selecting exactly one park/revisit condition for premium_customer_intake. |
 | 2026-06-21T13:39:54Z | continuity_lane_next_task_seed_evidence | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-003` | `artifact-continuity-lane-next-task-seed-evidence-premium_customer_intake-003` | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-watch-v1-20260621.trace-metadata.json | dd7487f37211552eb9a82a52f05acd6a99285dad1250d8db3f298bb837c0e54b | Seed evidence for the next bounded local lane task. |
