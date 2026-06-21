@@ -1,8 +1,8 @@
 # Agent Company Trace Events
 
-Generated UTC: 2026-06-21T13:26:20Z
+Generated UTC: 2026-06-21T13:38:09Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 14
+Rows shown: 16
 
 ## Boundary
 
@@ -14,7 +14,7 @@ Rows shown: 14
 | Event Type | Count |
 | --- | ---: |
 | `continuity_current_lane_goal_submitted` | 1 |
-| `continuity_lane_next_task_seeded` | 1 |
+| `continuity_lane_next_task_seeded` | 2 |
 | `premium_customer_followup_escalation_command_ready` | 1 |
 | `premium_customer_followup_escalation_written` | 1 |
 | `premium_customer_followup_monitor_checked` | 1 |
@@ -26,18 +26,21 @@ Rows shown: 14
 | `premium_customer_intake_router_refreshed` | 1 |
 | `premium_customer_lane_followups_synthesized` | 1 |
 | `premium_customer_routing_queue_proof_written` | 1 |
+| `premium_customer_routing_queue_watch_written` | 1 |
 | `youtube_source_material_intake_procedure_ready` | 1 |
 
 ## Counts By Lane
 
 | Lane | Count |
 | --- | ---: |
-| `premium_customer_intake` | 14 |
+| `premium_customer_intake` | 16 |
 
 ## Events
 
 | Time | Type | Trace | Lane | Task | Agent | Event | Source | Artifact | Metadata |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T13:38:08Z | premium_customer_routing_queue_watch_written | `trace-premium-customer-routing-queue-watch-v1-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-002` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-routing-queue-watch-v1-20260621` - Wrote premium customer routing queue watch: no new input, no update-feed gap requiring action, and downstream follow-up drift remains with existing owners. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-watch-v1-20260621.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "customer_update_feed_schema": "customer_update_feed.v5", "downstream_followups_complete": 1, "downstream_followups_open": 5, "duplicate_workers_created" |
+| 2026-06-21T13:33:08Z | continuity_lane_next_task_seeded | `trace-continuity-lane-next-task-seed-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-002` | premium-customer-intake-agent-20260620 | `trace-event-continuity-lane-next-task-seed-premium_customer_intake-002` - Seeded next bounded local task for zero-open active lane `premium_customer_intake`. | continuity_lane_next_task_seed_v1 | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-proof-v1-20260621.md | {"duplicate_key": "continuity:lane-next-task:premium_customer_intake:20260621:002", "evidence_path": "E:\\agent-company-lab\\reports\\premium-customer-intake\\premium-customer-routing-queue-proof-v1-20260621.md", "expect |
 | 2026-06-21T13:26:18Z | premium_customer_routing_queue_proof_written | `trace-premium-customer-routing-queue-proof-v1-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-001` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-routing-queue-proof-v1-20260621` - Wrote premium customer routing queue proof; raw customer material stayed outside CEO context. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium-customer-intake\premium-customer-routing-queue-proof-v1-20260621.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "downstream_followups_complete": 1, "downstream_followups_open": 5, "duplicate_workers_created": 0, "external_side_effects": false, "lane_ownership_mutat |
 | 2026-06-21T13:19:38Z | continuity_lane_next_task_seeded | `trace-continuity-lane-next-task-seed-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-001` | premium-customer-intake-agent-20260620 | `trace-event-continuity-lane-next-task-seed-premium_customer_intake-001` - Seeded next bounded local task for zero-open active lane `premium_customer_intake`. | continuity_lane_next_task_seed_v1 | E:\agent-company-lab\reports\premium-customer-intake-current-lane-goal-v1-trace-metadata-20260621.json | {"duplicate_key": "continuity:lane-next-task:premium_customer_intake:20260621:001", "evidence_path": "E:\\agent-company-lab\\reports\\premium-customer-intake-current-lane-goal-v1-trace-metadata-20260621.json", "expected_ |
 | 2026-06-21T13:06:49Z | premium_customer_intake_router_refreshed | `trace-premium-customer-intake-router-refresh-v1-20260621` | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-router-refresh-v1-20260621` - Refreshed CEO intake router and customer-facing queue locally; raw context remains outside CEO window. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "customer_update_feed": "E:\\agent-company-lab\\reports\\customer-update-feed-v5-20260621.md", "duplicate_workers_created": 0, "external_side_effects": f |

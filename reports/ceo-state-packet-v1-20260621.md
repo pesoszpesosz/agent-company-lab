@@ -1,6 +1,6 @@
 # CEO State Packet V1
 
-Generated UTC: 2026-06-21T13:33:15Z
+Generated UTC: 2026-06-21T13:40:01Z
 Status: `current_local_state_packet`
 Packet id: `ceo-state-packet-v1-20260621`
 JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
@@ -13,10 +13,10 @@ JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
 | departments | 24 |
 | roles | 25 |
 | agents | 23 |
-| tasks | 668 |
-| artifacts | 2667 |
-| outcomes | 469 |
-| trace_events | 600 |
+| tasks | 675 |
+| artifacts | 2682 |
+| outcomes | 472 |
+| trace_events | 614 |
 | service_requests | 16 |
 
 ## Active Blockers And Gates
@@ -45,8 +45,8 @@ JSON mirror: `E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.json`
 | open_task | `task-continuity-watchdog-worker-20260621-active-goal-20260621` | `ai_resources_lab` | Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets. |
 | open_task | `task-premium-customer-context-router-20260621-active-goal-20260621` | `ai_resources_lab` | Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer. |
 | open_task | `task-browser-account-ops-worker-20260621-active-goal-20260621` | `ai_resources_lab` | Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects. |
-| open_task | `task-continuity-lane-next-task-20260621-premium_customer_intake-002` | `premium_customer_intake` | Maintain a local premium-customer intake watch: check for new preserved raw material, route ledger changes, update-feed gaps, and lane follow-up drift; if no new material exists, write a compact no-new-input watch status |
-| open_task | `task-continuity-lane-next-task-20260621-content_and_social_growth-002` | `content_and_social_growth` | Create a local-only AI-builder reply-target shortlist shell from the proof packet: 3 to 5 candidate rows from local artifacts and non-account public sources only, with source family, gate status, topic, evidence strength |
+| open_task | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels` | `youtube_content_channels` | Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task. |
+| open_task | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties` | `paid_code_bounties` | Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it. |
 
 ## Boundary
 

@@ -222,7 +222,8 @@ def _latest_completed_lane_next_proof(conn: sqlite3.Connection, lane_id: str) ->
           artifact.created_at,
           artifact.sha256,
           task.completed_at,
-          task.updated_at AS task_updated_at
+          task.updated_at AS task_updated_at,
+          task.duplicate_key AS proof_task_duplicate_key
         FROM artifacts artifact
         JOIN tasks task ON task.task_id = artifact.task_id
         WHERE task.lane_id = ?
@@ -301,8 +302,30 @@ def _latest_lane_evidence(conn: sqlite3.Connection, lane_id: str, manager_packet
     return manager_packet
 
 
+def _continuation_profile(lane_id: str) -> dict[str, Any]:
+    lane_fragment = safe_id_fragment(lane_id, 80)
+    return {
+        "priority": 72,
+        "title": f"Continue proof-derived local next step for {lane_id}",
+        "expected_artifact": f"reports/{lane_fragment}/proof-derived-continuation-v1-{{day}}-{{sequence}}.md",
+        "profile_stage": "proof_derived_continuation",
+        "next_action": (
+            "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/"
+            "revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, "
+            "expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, "
+            "mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, "
+            "call APIs, or contact anyone."
+        ),
+    }
+
+
 def _profile_for_lane(lane_id: str, evidence: dict[str, Any] | None = None) -> dict[str, Any]:
-    if evidence and evidence.get("source") == "completed_lane_next_proof_artifact" and lane_id in LANE_FOLLOWUP_PROFILES:
+    if evidence and evidence.get("source") == "completed_lane_next_proof_artifact":
+        proof_sequence = str(evidence.get("proof_task_duplicate_key") or "").rsplit(":", 1)[-1]
+        if proof_sequence != "001":
+            return _continuation_profile(lane_id)
+        if lane_id not in LANE_FOLLOWUP_PROFILES:
+            return _continuation_profile(lane_id)
         profile = dict(LANE_FOLLOWUP_PROFILES[lane_id])
         profile["profile_stage"] = "proof_followup"
         return profile
@@ -358,7 +381,6 @@ def _seed_lane_task(
     lane_id = lane["lane_id"]
     day = generated_utc[:10].replace("-", "")
     profile = _profile_for_lane(lane_id, evidence)
-    expected_artifact = profile["expected_artifact"].format(day=day)
     open_seed = _open_seed_task(conn, lane_id, day)
     item: dict[str, Any] = {
         "lane_id": lane_id,
@@ -371,7 +393,6 @@ def _seed_lane_task(
         "evidence_artifact_id": evidence.get("artifact_id"),
         "evidence_path": evidence["path_or_url"],
         "evidence_path_exists": evidence["path_exists"],
-        "expected_artifact": expected_artifact,
         "profile_stage": profile["profile_stage"],
         "priority": profile["priority"],
         "title": profile["title"],
@@ -383,14 +404,23 @@ def _seed_lane_task(
                 "seed_status": "skipped_open_seed_exists",
                 "task_id": open_seed["task_id"],
                 "duplicate_key": open_seed["duplicate_key"],
+                "expected_artifact": open_seed["evidence_required"],
             }
         )
         return item
     sequence = _next_sequence(conn, lane_id, day)
+    expected_artifact = profile["expected_artifact"].format(day=day, sequence=sequence)
     lane_fragment = safe_id_fragment(lane_id, 70)
     task_id = f"task-continuity-lane-next-task-{day}-{lane_fragment}-{sequence}"
     duplicate_key = f"continuity:lane-next-task:{lane_id}:{day}:{sequence}"
-    item.update({"seed_status": "planned" if no_db_record else "created", "task_id": task_id, "duplicate_key": duplicate_key})
+    item.update(
+        {
+            "seed_status": "planned" if no_db_record else "created",
+            "task_id": task_id,
+            "duplicate_key": duplicate_key,
+            "expected_artifact": expected_artifact,
+        }
+    )
     if no_db_record:
         return item
 

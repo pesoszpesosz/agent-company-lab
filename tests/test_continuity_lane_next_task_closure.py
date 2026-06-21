@@ -183,6 +183,57 @@ def test_lane_next_task_closure_report_only_does_not_mutate_db(tmp_path: Path) -
     assert content["completed_at"] is None
 
 
+def test_lane_next_task_closure_uses_followup_expected_artifact_for_second_sequence(tmp_path: Path) -> None:
+    conn = sqlite3.connect(":memory:")
+    conn.row_factory = sqlite3.Row
+    init_db(conn)
+    _insert_lane(conn, "content_and_social_growth")
+    prior_proof = _expected(
+        tmp_path,
+        "reports/content-and-social-growth/content-and-social-growth-local-proof-packet-v1-20260621.md",
+    )
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES('task-continuity-lane-next-task-20260621-content_and_social_growth-002',
+               'content_and_social_growth', 'followup task', 'complete', 76,
+               'lane-manager-content_and_social_growth-20260621',
+               'continuity:lane-next-task:content_and_social_growth:20260621:002',
+               ?, 'wrongly closed', ?, ?, ?)
+        """,
+        (str(prior_proof), OLD, OLD, OLD),
+    )
+    conn.execute(
+        """
+        INSERT INTO artifacts(artifact_id, lane_id, task_id, kind, path_or_url, sha256, notes, created_at)
+        VALUES('artifact-seed-evidence', 'content_and_social_growth',
+               'task-continuity-lane-next-task-20260621-content_and_social_growth-002',
+               'continuity_lane_next_task_seed_evidence', ?, 'sha', 'seed evidence', ?)
+        """,
+        (str(prior_proof), OLD),
+    )
+    conn.commit()
+
+    payload = close_continuity_lane_next_tasks(conn, _args(tmp_path))
+
+    assert payload["status"] == "closure_applied"
+    assert payload["counts"]["reopened_missing_proof_artifact"] == 1
+    assert payload["counts"]["missing_proof_artifact"] == 0
+    row = conn.execute(
+        """
+        SELECT status, completed_at, next_action
+        FROM tasks
+        WHERE task_id='task-continuity-lane-next-task-20260621-content_and_social_growth-002'
+        """
+    ).fetchone()
+    assert row["status"] == "new"
+    assert row["completed_at"] is None
+    assert "reply-target shortlist" in row["next_action"]
+
+
 def test_lane_next_task_closure_cli_parser_supports_command() -> None:
     parser = build_parser()
     args = parser.parse_args(

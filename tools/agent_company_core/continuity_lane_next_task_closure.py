@@ -8,7 +8,13 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from .continuity_lane_next_task_seed import AI_RESOURCES_LANE, AI_RESOURCES_OWNER, LANE_PROFILES, TERMINAL_STATUSES
+from .continuity_lane_next_task_seed import (
+    AI_RESOURCES_LANE,
+    AI_RESOURCES_OWNER,
+    LANE_FOLLOWUP_PROFILES,
+    LANE_PROFILES,
+    TERMINAL_STATUSES,
+)
 from .io import now_utc
 from .paths import REPORTS_DIR, ROOT
 from .premium_customer_intake_router import ZERO_SIDE_EFFECT_BOUNDARY
@@ -45,8 +51,21 @@ def _lane_next_tasks(conn: sqlite3.Connection) -> list[sqlite3.Row]:
     ).fetchall()
 
 
-def _expected_proof_path(lane_id: str, generated_utc: str, proof_root: Path) -> Path | None:
-    profile = LANE_PROFILES.get(lane_id)
+def _task_sequence(task: sqlite3.Row) -> str:
+    duplicate_key = task["duplicate_key"] or ""
+    return duplicate_key.rsplit(":", 1)[-1] if ":" in duplicate_key else "001"
+
+
+def _profile_for_task(task: sqlite3.Row) -> dict[str, Any] | None:
+    lane_id = task["lane_id"]
+    sequence = _task_sequence(task)
+    if sequence != "001" and lane_id in LANE_FOLLOWUP_PROFILES:
+        return LANE_FOLLOWUP_PROFILES[lane_id]
+    return LANE_PROFILES.get(lane_id)
+
+
+def _expected_proof_path(task: sqlite3.Row, generated_utc: str, proof_root: Path) -> Path | None:
+    profile = _profile_for_task(task)
     if not profile:
         return None
     day = generated_utc[:10].replace("-", "")
@@ -95,7 +114,7 @@ def _proof_artifact(
     proof_root: Path,
     no_db_record: bool,
 ) -> dict[str, Any] | None:
-    expected = _expected_proof_path(task["lane_id"], generated_utc, proof_root)
+    expected = _expected_proof_path(task, generated_utc, proof_root)
     if expected and expected.exists():
         existing = _artifact_for_path(conn, task["task_id"], expected)
         if existing:
@@ -181,6 +200,29 @@ def _close_task_if_ready(
         "proof_path_exists": proof_exists,
     }
     if terminal and task["completed_at"]:
+        if not proof_exists:
+            profile = _profile_for_task(task) or {}
+            item["closure_status"] = "reopened_missing_proof_artifact"
+            if not no_db_record:
+                conn.execute(
+                    """
+                    UPDATE tasks
+                    SET status = 'new',
+                        completed_at = NULL,
+                        updated_at = ?,
+                        next_action = ?
+                    WHERE task_id = ?
+                    """,
+                    (
+                        generated_utc,
+                        profile.get(
+                            "next_action",
+                            "Expected proof artifact is missing; continue the bounded local task and keep gates closed.",
+                        ),
+                        task["task_id"],
+                    ),
+                )
+            return item
         item["closure_status"] = "already_closed"
         return item
     if terminal and proof_exists:
@@ -241,6 +283,9 @@ def _counts(items: list[dict[str, Any]], open_after: int) -> dict[str, int]:
         "completed_at_repaired": sum(1 for item in items if item["closure_status"] == "completed_at_repaired"),
         "already_closed": sum(1 for item in items if item["closure_status"] == "already_closed"),
         "missing_proof_artifact": sum(1 for item in items if item["closure_status"] == "missing_proof_artifact"),
+        "reopened_missing_proof_artifact": sum(
+            1 for item in items if item["closure_status"] == "reopened_missing_proof_artifact"
+        ),
         "open_lane_next_tasks_after": open_after,
     }
 
@@ -248,7 +293,7 @@ def _counts(items: list[dict[str, Any]], open_after: int) -> dict[str, int]:
 def _status_from_counts(counts: dict[str, int], ar_watch_closed: bool) -> str:
     if counts["missing_proof_artifact"]:
         return "proof_missing"
-    if counts["closed"] or counts["completed_at_repaired"] or ar_watch_closed:
+    if counts["closed"] or counts["completed_at_repaired"] or counts["reopened_missing_proof_artifact"] or ar_watch_closed:
         return "closure_applied"
     return "already_closed"
 

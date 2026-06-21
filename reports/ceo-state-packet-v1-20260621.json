@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2667,
+    "artifacts": 2682,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 469,
+    "outcomes": 472,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 668,
-    "trace_events": 600
+    "tasks": 675,
+    "trace_events": 614
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T13:33:15Z",
+  "generated_utc": "2026-06-21T13:40:01Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T13:33:15Z",
+    "generated_utc": "2026-06-21T13:40:01Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 266,
-    "outcomes_delta": 51,
-    "tasks_delta": 89,
-    "trace_events_delta": 91
+    "artifacts_delta": 281,
+    "outcomes_delta": 54,
+    "tasks_delta": 96,
+    "trace_events_delta": 105
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -266,15 +266,15 @@
     },
     {
       "kind": "open_task",
-      "lane_id": "premium_customer_intake",
-      "next_action": "Maintain a local premium-customer intake watch: check for new preserved raw material, route ledger changes, update-feed gaps, and lane follow-up drift; if no new material exists, write a compact no-new-input watch status and next check condition. Keep raw material out of CEO context and do not start workers, approve service requests, open browsers, call APIs, or take external actions.",
-      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-002"
+      "lane_id": "youtube_content_channels",
+      "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels"
     },
     {
       "kind": "open_task",
-      "lane_id": "content_and_social_growth",
-      "next_action": "Create a local-only AI-builder reply-target shortlist shell from the proof packet: 3 to 5 candidate rows from local artifacts and non-account public sources only, with source family, gate status, topic, evidence strength, reply-gap signal, content use, risk flags, next allowed action, approval required, and X/Grok/Radar placeholders marked awaiting service approval. Do not browse, post, reply, message, follow, call APIs, or take public action.",
-      "task_id": "task-continuity-lane-next-task-20260621-content_and_social_growth-002"
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties"
     }
   ],
   "open_tasks": [
@@ -351,26 +351,56 @@
       "title": "Active goal for browser-account-ops-worker-20260621"
     },
     {
-      "lane_id": "premium_customer_intake",
-      "next_action": "Maintain a local premium-customer intake watch: check for new preserved raw material, route ledger changes, update-feed gaps, and lane follow-up drift; if no new material exists, write a compact no-new-input watch status and next check condition. Keep raw material out of CEO context and do not start workers, approve service requests, open browsers, call APIs, or take external actions.",
-      "owner_agent_id": "premium-customer-intake-agent-20260620",
-      "priority": 80,
-      "status": "new",
-      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-002",
-      "title": "Continue premium customer intake watch"
-    },
-    {
-      "lane_id": "content_and_social_growth",
-      "next_action": "Create a local-only AI-builder reply-target shortlist shell from the proof packet: 3 to 5 candidate rows from local artifacts and non-account public sources only, with source family, gate status, topic, evidence strength, reply-gap signal, content use, risk flags, next allowed action, approval required, and X/Grok/Radar placeholders marked awaiting service approval. Do not browse, post, reply, message, follow, call APIs, or take public action.",
-      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "lane_id": "youtube_content_channels",
+      "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
       "priority": 76,
       "status": "new",
-      "task_id": "task-continuity-lane-next-task-20260621-content_and_social_growth-002",
-      "title": "Continue local content reply-target shortlist"
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels",
+      "title": "Follow up customer input for youtube_content_channels"
+    },
+    {
+      "lane_id": "paid_code_bounties",
+      "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "priority": 76,
+      "status": "new",
+      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-followup-paid_code_bounties",
+      "title": "Follow up customer input for paid_code_bounties"
     }
   ],
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
+    {
+      "created_at": "2026-06-21T13:38:36Z",
+      "evidence": "E:\\agent-company-lab\\reports\\local-trading\\local-trading-no-key-replay-prep-v1-20260621.md",
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Validate selected local JSON for readiness counts only; keep account, broker, API, paid-data, order, spend, and trading gates closed.",
+      "outcome_id": "outcome-local-trading-no-key-replay-prep-v1-20260621",
+      "outcome_type": "no_key_local_replay_prep",
+      "realized_usd": 0.0,
+      "status": "complete"
+    },
+    {
+      "created_at": "2026-06-21T13:38:08Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium-customer-intake\\premium-customer-routing-queue-watch-v1-20260621.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Run next local watch when new raw material, route ledger change, update-feed gap, follow-up drift, or required human gate appears.",
+      "outcome_id": "outcome-premium-customer-routing-queue-watch-v1-20260621",
+      "outcome_type": "premium_customer_routing_queue_watch",
+      "realized_usd": 0.0,
+      "status": "no_new_input_watch_current"
+    },
+    {
+      "created_at": "2026-06-21T13:38:01Z",
+      "evidence": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\gitcoin-local-application-readiness-checklist-v1-20260621.md",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "next_action": "Recommendation: request a future scoped browser_read_only_session only after human approval to verify current Gitcoin round/domain/deadline/rules; do not approve/start account, legal, wallet, public-action, submission, API, or route-gate execution.",
+      "outcome_id": "outcome-gitcoin-local-application-readiness-checklist-v1-20260621",
+      "outcome_type": "gitcoin_readiness_checklist",
+      "realized_usd": 0.0,
+      "status": "gitcoin_readiness_checklist_complete_local_only"
+    },
     {
       "created_at": "2026-06-21T13:27:58Z",
       "evidence": "E:\\agent-company-lab\\reports\\web3-airdrops-grants-hackathons\\web3-local-opportunity-proof-v1-20260621.md",
@@ -420,36 +450,6 @@
       "outcome_type": "continuity_lane_next_task_seed",
       "realized_usd": 0.0,
       "status": "seeded"
-    },
-    {
-      "created_at": "2026-06-21T13:14:12Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-routing-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Use post-acknowledgement AR queue coordination task to track remaining local AR work and service gates.",
-      "outcome_id": "outcome-ai-resources-direct-followup-routing-v1-20260621",
-      "outcome_type": "ai_resources_direct_followup_routing",
-      "realized_usd": 0.0,
-      "status": "completed_local_followup_routing"
-    },
-    {
-      "created_at": "2026-06-21T13:14:07Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-customer-followup-routing-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Continue remaining AR queue through existing AR workers; no acknowledgement redispatch needed.",
-      "outcome_id": "outcome-ai-resources-customer-followup-routing-v1-20260621",
-      "outcome_type": "ai_resources_customer_followup_routing",
-      "realized_usd": 0.0,
-      "status": "completed_local_followup_routing"
-    },
-    {
-      "created_at": "2026-06-21T13:10:29Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "No acknowledgement escalation required; continue monitoring owner responses.",
-      "outcome_id": "outcome-ai-resources-owner-acknowledgement-monitor-all",
-      "outcome_type": "ai_resources_owner_acknowledgement_monitor",
-      "realized_usd": 0.0,
-      "status": "clear"
     }
   ],
   "schema_version": "ceo_state_packet.v1",

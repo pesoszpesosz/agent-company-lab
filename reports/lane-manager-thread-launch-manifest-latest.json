@@ -6,7 +6,7 @@
     "submitted_bounty_payouts remains read-only and assigned to the parallel payout worker."
   ],
   "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
-  "generated_utc": "2026-06-21T13:33:16Z",
+  "generated_utc": "2026-06-21T13:40:02Z",
   "held_lanes": [
     {
       "department": "Platform Engineering",

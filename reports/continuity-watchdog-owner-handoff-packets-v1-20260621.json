@@ -3,7 +3,7 @@
     "open_dispatch_tasks": 0,
     "owner_packets": 0
   },
-  "generated_utc": "2026-06-21T13:33:15Z",
+  "generated_utc": "2026-06-21T13:40:01Z",
   "json_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-handoff-packets-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-handoff-packets-v1-20260621.md",
   "next_action": "No open continuity owner handoffs remain; continue watchdog cadence.",
