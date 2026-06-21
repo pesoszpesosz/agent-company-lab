@@ -1,0 +1,105 @@
+{
+  "closure_items": [
+    {
+      "can_close": true,
+      "closure_artifact_id": "artifact-ai-resources-owner-acknowledgement-closure-evidence-ai_ml_competitions-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-ac",
+      "closure_status": "closed",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_ml_competitions",
+      "evidence_artifact_id": "artifact-ai-ml-competitions-continuity-acknowledgement-next-action-v1-20260621",
+      "evidence_artifact_path": "E:\\agent-company-lab\\reports\\ai-ml-competitions-continuity-acknowledgement-next-action-v1-20260621.md",
+      "lane_id": "ai_ml_competitions",
+      "owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "response_task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
+      "source_status": "new",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+    },
+    {
+      "can_close": false,
+      "closure_status": "already_terminal",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_resources_lab",
+      "evidence_artifact_id": "artifact-ai-resources-owner-acknowledgement-customer-objective-20260621",
+      "evidence_artifact_path": "E:\\agent-company-lab\\reports\\ai-resources-continuity-owner-acknowledgement-evidence-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "response_task_id": null,
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
+    },
+    {
+      "can_close": true,
+      "closure_artifact_id": "artifact-ai-resources-owner-acknowledgement-closure-evidence-money_source_discovery-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-ac",
+      "closure_status": "closed",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:money_source_discovery",
+      "evidence_artifact_id": "artifact-money-source-discovery-continuity-live-handoff-acknowledgement-v1-20260621",
+      "evidence_artifact_path": "E:\\agent-company-lab\\reports\\money-source-discovery-continuity-live-handoff-acknowledgement-v1-20260621.md",
+      "lane_id": "money_source_discovery",
+      "owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "response_task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discover",
+      "source_status": "new",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery"
+    },
+    {
+      "can_close": true,
+      "closure_artifact_id": "artifact-ai-resources-owner-acknowledgement-closure-evidence-paid_code_bounties-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-ac",
+      "closure_status": "closed",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
+      "evidence_artifact_id": "artifact-paid-code-bounties-continuity-restore-completion-v1-20260621",
+      "evidence_artifact_path": "E:\\agent-company-lab\\reports\\paid-code-bounties-continuity-restore-completion-v1-20260621.md",
+      "lane_id": "paid_code_bounties",
+      "owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "response_task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
+      "source_status": "new",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
+    },
+    {
+      "can_close": true,
+      "closure_artifact_id": "artifact-ai-resources-owner-acknowledgement-closure-evidence-prediction_market_research-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-ac",
+      "closure_status": "closed",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:prediction_market_research",
+      "evidence_artifact_id": "artifact-prediction-market-research-owner-acknowledgement-response-20260621",
+      "evidence_artifact_path": "E:\\agent-company-lab\\reports\\continuity-owner-responses-v1-20260621\\prediction_market_research-owner-acknowledgement-response-20260621.md",
+      "lane_id": "prediction_market_research",
+      "owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "response_task_id": null,
+      "source_status": "new",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research"
+    },
+    {
+      "can_close": true,
+      "closure_artifact_id": "artifact-ai-resources-owner-acknowledgement-closure-evidence-youtube_content_channels-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-ac",
+      "closure_status": "closed",
+      "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:youtube_content_channels",
+      "evidence_artifact_id": "artifact-youtube-content-channels-continuity-acknowledgement-next-action-v1-20260621",
+      "evidence_artifact_path": "E:\\agent-company-lab\\reports\\youtube-content-channels-continuity-acknowledgement-next-action-v1-20260621.md",
+      "lane_id": "youtube_content_channels",
+      "owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "response_task_id": "task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_chann",
+      "source_status": "new",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels"
+    }
+  ],
+  "counts": {
+    "already_terminal": 1,
+    "closure_applied": 5,
+    "closure_candidates": 5,
+    "missing_completed_response_evidence": 0,
+    "source_acknowledgements": 6
+  },
+  "generated_utc": "2026-06-21T13:10:17Z",
+  "input_id": null,
+  "json_path": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-closure-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-closure-v1-20260621.md",
+  "next_action": "Regenerate owner acknowledgement monitor, CEO state, and continuity watchdog reports.",
+  "schema_version": "ai_resources_owner_acknowledgement_closure.v1",
+  "status": "closure_applied",
+  "zero_side_effect_boundary": {
+    "accounts_created_or_modified": 0,
+    "browser_sessions_started": 0,
+    "external_side_effects": false,
+    "model_api_mcp_calls": 0,
+    "public_actions_taken": 0,
+    "service_requests_approved_assigned_or_started": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_runtime_queue_starts": 0
+  }
+}

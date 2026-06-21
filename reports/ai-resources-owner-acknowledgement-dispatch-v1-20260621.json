@@ -1,257 +1,71 @@
 {
   "counts": {
-    "dispatch_items": 6,
+    "dispatch_items": 0,
     "fresh_open_acknowledgements": 0,
-    "terminal_acknowledgements": 0,
+    "terminal_acknowledgements": 6,
     "total_owner_acknowledgements": 6
   },
-  "dispatch_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002",
-  "dispatch_items": [
-    {
-      "age_minutes": 197,
-      "dispatch_item_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002-ai_ml_competitions",
-      "existing_owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
-      "lane_id": "ai_ml_competitions",
-      "next_action": "Send this response contract to the existing lane owner; do not create a duplicate agent.",
-      "priority": 90,
-      "response_contract": {
-        "allowed_responses": [
-          "acknowledge_and_start_local_work",
-          "park_with_revisit_condition",
-          "request_ceo_decision_batch_item"
-        ],
-        "prohibited_actions": [
-          "create_duplicate_agent",
-          "start_unrequested_worker",
-          "mutate_source_acknowledgement_task",
-          "publish_submit_trade_spend_or_call_external_api"
-        ],
-        "required_fields": [
-          "selected_response_option",
-          "lane_id",
-          "source_task_id",
-          "owner_agent_id",
-          "evidence_artifact_path",
-          "next_revisit_condition_or_ceo_decision_needed"
-        ]
-      },
-      "response_options": [
-        "acknowledge_and_start_local_work",
-        "park_with_revisit_condition",
-        "request_ceo_decision_batch_item"
-      ],
-      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_ml_competitions",
-      "source_status": "new",
-      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions",
-      "source_title": "Acknowledge customer follow-up triage for ai_ml_competitions",
-      "stale_after_minutes": 0
-    },
-    {
-      "age_minutes": 197,
-      "dispatch_item_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002-ai_resources_lab",
-      "existing_owner_agent_id": "lane-manager-ai_resources_lab-20260620",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Send this response contract to the existing lane owner; do not create a duplicate agent.",
-      "priority": 90,
-      "response_contract": {
-        "allowed_responses": [
-          "acknowledge_and_start_local_work",
-          "park_with_revisit_condition",
-          "request_ceo_decision_batch_item"
-        ],
-        "prohibited_actions": [
-          "create_duplicate_agent",
-          "start_unrequested_worker",
-          "mutate_source_acknowledgement_task",
-          "publish_submit_trade_spend_or_call_external_api"
-        ],
-        "required_fields": [
-          "selected_response_option",
-          "lane_id",
-          "source_task_id",
-          "owner_agent_id",
-          "evidence_artifact_path",
-          "next_revisit_condition_or_ceo_decision_needed"
-        ]
-      },
-      "response_options": [
-        "acknowledge_and_start_local_work",
-        "park_with_revisit_condition",
-        "request_ceo_decision_batch_item"
-      ],
-      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_resources_lab",
-      "source_status": "new",
-      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab",
-      "source_title": "Acknowledge customer follow-up triage for ai_resources_lab",
-      "stale_after_minutes": 0
-    },
-    {
-      "age_minutes": 197,
-      "dispatch_item_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002-money_source_discovery",
-      "existing_owner_agent_id": "lane-manager-money_source_discovery-019ec699",
-      "lane_id": "money_source_discovery",
-      "next_action": "Send this response contract to the existing lane owner; do not create a duplicate agent.",
-      "priority": 90,
-      "response_contract": {
-        "allowed_responses": [
-          "acknowledge_and_start_local_work",
-          "park_with_revisit_condition",
-          "request_ceo_decision_batch_item"
-        ],
-        "prohibited_actions": [
-          "create_duplicate_agent",
-          "start_unrequested_worker",
-          "mutate_source_acknowledgement_task",
-          "publish_submit_trade_spend_or_call_external_api"
-        ],
-        "required_fields": [
-          "selected_response_option",
-          "lane_id",
-          "source_task_id",
-          "owner_agent_id",
-          "evidence_artifact_path",
-          "next_revisit_condition_or_ceo_decision_needed"
-        ]
-      },
-      "response_options": [
-        "acknowledge_and_start_local_work",
-        "park_with_revisit_condition",
-        "request_ceo_decision_batch_item"
-      ],
-      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:money_source_discovery",
-      "source_status": "new",
-      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery",
-      "source_title": "Acknowledge customer follow-up triage for money_source_discovery",
-      "stale_after_minutes": 0
-    },
-    {
-      "age_minutes": 197,
-      "dispatch_item_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002-paid_code_bounties",
-      "existing_owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
-      "lane_id": "paid_code_bounties",
-      "next_action": "Send this response contract to the existing lane owner; do not create a duplicate agent.",
-      "priority": 90,
-      "response_contract": {
-        "allowed_responses": [
-          "acknowledge_and_start_local_work",
-          "park_with_revisit_condition",
-          "request_ceo_decision_batch_item"
-        ],
-        "prohibited_actions": [
-          "create_duplicate_agent",
-          "start_unrequested_worker",
-          "mutate_source_acknowledgement_task",
-          "publish_submit_trade_spend_or_call_external_api"
-        ],
-        "required_fields": [
-          "selected_response_option",
-          "lane_id",
-          "source_task_id",
-          "owner_agent_id",
-          "evidence_artifact_path",
-          "next_revisit_condition_or_ceo_decision_needed"
-        ]
-      },
-      "response_options": [
-        "acknowledge_and_start_local_work",
-        "park_with_revisit_condition",
-        "request_ceo_decision_batch_item"
-      ],
-      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
-      "source_status": "new",
-      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",
-      "source_title": "Acknowledge customer follow-up triage for paid_code_bounties",
-      "stale_after_minutes": 0
-    },
-    {
-      "age_minutes": 197,
-      "dispatch_item_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002-prediction_market_research",
-      "existing_owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
-      "lane_id": "prediction_market_research",
-      "next_action": "Send this response contract to the existing lane owner; do not create a duplicate agent.",
-      "priority": 90,
-      "response_contract": {
-        "allowed_responses": [
-          "acknowledge_and_start_local_work",
-          "park_with_revisit_condition",
-          "request_ceo_decision_batch_item"
-        ],
-        "prohibited_actions": [
-          "create_duplicate_agent",
-          "start_unrequested_worker",
-          "mutate_source_acknowledgement_task",
-          "publish_submit_trade_spend_or_call_external_api"
-        ],
-        "required_fields": [
-          "selected_response_option",
-          "lane_id",
-          "source_task_id",
-          "owner_agent_id",
-          "evidence_artifact_path",
-          "next_revisit_condition_or_ceo_decision_needed"
-        ]
-      },
-      "response_options": [
-        "acknowledge_and_start_local_work",
-        "park_with_revisit_condition",
-        "request_ceo_decision_batch_item"
-      ],
-      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:prediction_market_research",
-      "source_status": "new",
-      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research",
-      "source_title": "Acknowledge customer follow-up triage for prediction_market_research",
-      "stale_after_minutes": 0
-    },
-    {
-      "age_minutes": 197,
-      "dispatch_item_id": "ai-resources-owner-acknowledgement-dispatch-v1-customer-input-ceo-operating-goal-objective-20260620-002-youtube_content_channels",
-      "existing_owner_agent_id": "lane-manager-youtube_content_channels-20260620",
-      "lane_id": "youtube_content_channels",
-      "next_action": "Send this response contract to the existing lane owner; do not create a duplicate agent.",
-      "priority": 90,
-      "response_contract": {
-        "allowed_responses": [
-          "acknowledge_and_start_local_work",
-          "park_with_revisit_condition",
-          "request_ceo_decision_batch_item"
-        ],
-        "prohibited_actions": [
-          "create_duplicate_agent",
-          "start_unrequested_worker",
-          "mutate_source_acknowledgement_task",
-          "publish_submit_trade_spend_or_call_external_api"
-        ],
-        "required_fields": [
-          "selected_response_option",
-          "lane_id",
-          "source_task_id",
-          "owner_agent_id",
-          "evidence_artifact_path",
-          "next_revisit_condition_or_ceo_decision_needed"
-        ]
-      },
-      "response_options": [
-        "acknowledge_and_start_local_work",
-        "park_with_revisit_condition",
-        "request_ceo_decision_batch_item"
-      ],
-      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:youtube_content_channels",
-      "source_status": "new",
-      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels",
-      "source_title": "Acknowledge customer follow-up triage for youtube_content_channels",
-      "stale_after_minutes": 0
-    }
-  ],
+  "dispatch_id": "ai-resources-owner-acknowledgement-dispatch-v1-all",
+  "dispatch_items": [],
   "fresh_open_acknowledgements": [],
-  "generated_utc": "2026-06-21T00:50:00Z",
-  "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
+  "generated_utc": "2026-06-21T13:10:29Z",
+  "input_id": null,
   "json_path": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
-  "next_action": "Route each dispatch item to the existing lane owner with the response contract; consolidate unresolved items into the next CEO decision batch.",
+  "next_action": "No stale owner acknowledgements require dispatch; continue monitoring.",
   "schema_version": "ai_resources_owner_acknowledgement_dispatch.v1",
-  "stale_after_minutes": 0,
-  "status": "dispatch_ready",
-  "terminal_acknowledgements": [],
+  "stale_after_minutes": 60,
+  "status": "no_dispatch_needed",
+  "terminal_acknowledgements": [
+    {
+      "age_minutes": 8,
+      "existing_owner_agent_id": "lane-manager-ai_resources_lab-20260620",
+      "lane_id": "ai_resources_lab",
+      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_resources_lab",
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_resources_lab"
+    },
+    {
+      "age_minutes": 0,
+      "existing_owner_agent_id": "lane-manager-ai_ml_competitions-019ec69a",
+      "lane_id": "ai_ml_competitions",
+      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_ml_competitions",
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
+    },
+    {
+      "age_minutes": 0,
+      "existing_owner_agent_id": "lane-manager-money_source_discovery-019ec699",
+      "lane_id": "money_source_discovery",
+      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:money_source_discovery",
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery"
+    },
+    {
+      "age_minutes": 0,
+      "existing_owner_agent_id": "lane-manager-paid_code_bounties-019ec612",
+      "lane_id": "paid_code_bounties",
+      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
+    },
+    {
+      "age_minutes": 0,
+      "existing_owner_agent_id": "lane-manager-prediction_market_research-relaunch-20260614",
+      "lane_id": "prediction_market_research",
+      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:prediction_market_research",
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research"
+    },
+    {
+      "age_minutes": 0,
+      "existing_owner_agent_id": "lane-manager-youtube_content_channels-20260620",
+      "lane_id": "youtube_content_channels",
+      "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:youtube_content_channels",
+      "source_status": "complete",
+      "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels"
+    }
+  ],
   "zero_side_effect_boundary": {
     "accounts_created_or_modified": 0,
     "browser_sessions_started": 0,

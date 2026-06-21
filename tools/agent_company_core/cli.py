@@ -37,6 +37,9 @@ from agent_company_core.ai_resources_owner_acknowledgement_monitor import (
 from agent_company_core.ai_resources_owner_acknowledgement_dispatch import (
     write_ai_resources_owner_acknowledgement_dispatch,
 )
+from agent_company_core.ai_resources_owner_acknowledgement_closure import (
+    write_ai_resources_owner_acknowledgement_closure,
+)
 from agent_company_core.goal_evolver_review import write_goal_evolver_review
 from agent_company_core.ceo_state_packet import write_ceo_state_packet
 from agent_company_core.ceo_worker_bootstrap import write_ceo_worker_bootstrap
@@ -220,6 +223,12 @@ def build_parser() -> argparse.ArgumentParser:
     ai_resources_ack_dispatch.add_argument("--path")
     ai_resources_ack_dispatch.add_argument("--json-path")
     ai_resources_ack_dispatch.add_argument("--no-db-record", action="store_true")
+    ai_resources_ack_closure = sub.add_parser("write-ai-resources-owner-acknowledgement-closure")
+    ai_resources_ack_closure.add_argument("--input-id")
+    ai_resources_ack_closure.add_argument("--now-utc")
+    ai_resources_ack_closure.add_argument("--path")
+    ai_resources_ack_closure.add_argument("--json-path")
+    ai_resources_ack_closure.add_argument("--no-db-record", action="store_true")
     goal_evolver_review = sub.add_parser("write-goal-evolver-review")
     goal_evolver_review.add_argument("--now-utc")
     goal_evolver_review.add_argument("--path")
@@ -470,6 +479,9 @@ def main() -> None:
         elif args.cmd == "write-ai-resources-owner-acknowledgement-dispatch":
             init_db(conn)
             write_ai_resources_owner_acknowledgement_dispatch(conn, args)
+        elif args.cmd == "write-ai-resources-owner-acknowledgement-closure":
+            init_db(conn)
+            write_ai_resources_owner_acknowledgement_closure(conn, args)
         elif args.cmd == "write-goal-evolver-review":
             init_db(conn)
             write_goal_evolver_review(conn, args)

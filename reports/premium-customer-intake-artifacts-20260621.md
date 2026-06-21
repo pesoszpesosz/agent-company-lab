@@ -1,8 +1,8 @@
 # Agent Company Artifacts
 
-Generated UTC: 2026-06-21T12:35:29Z
+Generated UTC: 2026-06-21T13:06:49Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 82
+Rows shown: 87
 
 ## Counts By Kind
 
@@ -29,8 +29,8 @@ Rows shown: 82
 | `customer_routing_ledger_json` | 1 |
 | `customer_routing_ledger_md` | 4 |
 | `customer_update_feed` | 6 |
-| `customer_update_feed_json` | 2 |
-| `customer_update_feed_md` | 5 |
+| `customer_update_feed_json` | 3 |
+| `customer_update_feed_md` | 6 |
 | `install_report` | 1 |
 | `install_report_json` | 1 |
 | `intake_artifacts_report` | 1 |
@@ -52,10 +52,12 @@ Rows shown: 82
 | `premium_customer_intake_readme` | 4 |
 | `premium_customer_intake_router_cli` | 1 |
 | `premium_customer_intake_router_module` | 1 |
+| `premium_customer_intake_router_refresh` | 1 |
+| `premium_customer_intake_router_refresh_json` | 1 |
 | `premium_customer_intake_router_test` | 1 |
 | `registry_update` | 1 |
 | `taxonomy_update` | 1 |
-| `trace_metadata` | 3 |
+| `trace_metadata` | 4 |
 | `youtube_source_material_intake_procedure` | 1 |
 | `youtube_source_material_intake_procedure_json` | 1 |
 
@@ -63,12 +65,17 @@ Rows shown: 82
 
 | Lane | Count |
 | --- | ---: |
-| `premium_customer_intake` | 82 |
+| `premium_customer_intake` | 87 |
 
 ## Artifacts
 
 | Created | Kind | Lane | Task | Artifact | Path/URL | SHA256 | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T13:06:48Z | trace_metadata | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-premium-customer-intake-router-refresh-v1-trace-metadata-20260621` | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-trace-metadata-20260621.json | 7795992E4B5225C92F5BC6BB69A7FD2A3F06D4121EC27749240706F9FFF56D8E | Trace metadata for CEO intake-router refresh. |
+| 2026-06-21T13:06:48Z | customer_update_feed_json | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-customer-update-feed-v5-json-20260621` | E:\agent-company-lab\reports\customer-update-feed-v5-20260621.json | C24BF59049126C062F0AD3544BA41CA16CB4964C4ACA47C40FDA76D8650AD8E7 | Machine-readable customer-facing update feed v5. |
+| 2026-06-21T13:06:48Z | customer_update_feed_md | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-customer-update-feed-v5-md-20260621` | E:\agent-company-lab\reports\customer-update-feed-v5-20260621.md | F548BB0C965D7607C4F14DB44EFCB4EA3040411D4E51A7AF7D40E640E4D23350 | Customer-facing update feed v5 after CEO intake-router refresh. |
+| 2026-06-21T13:06:48Z | premium_customer_intake_router_refresh_json | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-premium-customer-intake-router-refresh-v1-json-20260621` | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.json | 047217D86B12C7B1C192D99414215D758D54A9700FF50AF4561AD9456DFB1594 | Machine-readable CEO intake-router refresh packet. |
+| 2026-06-21T13:06:47Z | premium_customer_intake_router_refresh | `premium_customer_intake` | `task-premium-customer-intake-router-refresh-v1-20260621` | `artifact-premium-customer-intake-router-refresh-v1-md-20260621` | E:\agent-company-lab\reports\premium-customer-intake-router-refresh-v1-20260621.md | 70EBC7B26A833ECFEBEAD22D171FF61AD1FF557E32821765EF6A53FC7B9B2851 | Compact CEO intake-router refresh packet for premium customer context routing. |
 | 2026-06-21T12:35:04Z | trace_metadata | `premium_customer_intake` | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` | `artifact-premium-customer-intake-current-lane-goal-v1-trace-metadata-20260621` | E:\agent-company-lab\reports\premium-customer-intake-current-lane-goal-v1-trace-metadata-20260621.json | 7B8F2DA034BA7AF49D0A851B16491E1DDE47DC54E43F5CB877B0E351B1157027 | Trace metadata for premium_customer_intake current lane goal continuity response. |
 | 2026-06-21T12:35:03Z | continuity_current_lane_goal_json | `premium_customer_intake` | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` | `artifact-premium-customer-intake-current-lane-goal-v1-json-20260621` | E:\agent-company-lab\reports\continuity-lane-goals-v1-20260621\premium-customer-intake-current-lane-goal-v1-20260621.json | A50F45862EE8953FDA1DC7E30CE0258F2067FF6A62B1F1E575FEC7DD916368DE | Machine-readable current lane goal artifact for premium_customer_intake continuity owner handoff. |
 | 2026-06-21T12:35:03Z | continuity_current_lane_goal | `premium_customer_intake` | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` | `artifact-premium-customer-intake-current-lane-goal-v1-md-20260621` | E:\agent-company-lab\reports\continuity-lane-goals-v1-20260621\premium-customer-intake-current-lane-goal-v1-20260621.md | 581D1C6E0A497F1956396C6CBD5533465485E8CFB0D626C7F481B8523341F3B8 | Current lane goal artifact submitted for premium_customer_intake continuity owner handoff. |

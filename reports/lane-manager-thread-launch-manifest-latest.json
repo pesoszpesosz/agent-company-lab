@@ -6,7 +6,7 @@
     "submitted_bounty_payouts remains read-only and assigned to the parallel payout worker."
   ],
   "database": "E:\\agent-company-lab\\state\\agent_company.sqlite",
-  "generated_utc": "2026-06-21T13:01:22Z",
+  "generated_utc": "2026-06-21T13:10:32Z",
   "held_lanes": [
     {
       "department": "Platform Engineering",
@@ -65,7 +65,7 @@
       "launch_rank": 1,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 1,
-      "open_task_count": 2,
+      "open_task_count": 1,
       "owner": "lane-manager-money_source_discovery-019ec699",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\money_source_discovery-manager-packet.md",
       "recommended_task": "Use the starter browser-read-only service request to build a source registry of monetizable venues, payout routes, account gates, and first proof tasks."
@@ -80,7 +80,7 @@
       "launch_rank": 2,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 1,
-      "open_task_count": 2,
+      "open_task_count": 1,
       "owner": "lane-manager-ai_ml_competitions-019ec69a",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\ai_ml_competitions-manager-packet.md",
       "recommended_task": "Use the starter browser-read-only service request to shortlist AI/ML competitions with prize route, deadline, dataset gate, baseline feasibility, and submission/account blockers."
@@ -125,7 +125,7 @@
       "launch_rank": 5,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 0,
-      "open_task_count": 2,
+      "open_task_count": 1,
       "owner": "lane-manager-prediction_market_research-relaunch-20260614",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\prediction_market_research-manager-packet.md",
       "recommended_task": "Create a paper-only replay task for one imported market edge and define the data source of truth, fees, settlement timing, and no-trade gate."
@@ -140,7 +140,7 @@
       "launch_rank": 6,
       "mode": "launch_separate_codex_manager_thread",
       "open_service_request_count": 2,
-      "open_task_count": 2,
+      "open_task_count": 1,
       "owner": "lane-manager-paid_code_bounties-019ec612",
       "packet_path": "E:\\agent-company-lab\\reports\\manager-packets\\paid_code_bounties-manager-packet.md",
       "recommended_task": "Use imported rejected/parked rows as negative samples, then scout fresh explicit-payout issues with duplicate checks before any PR work."

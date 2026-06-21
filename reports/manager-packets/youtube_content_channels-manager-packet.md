@@ -1,6 +1,6 @@
 # Manager Packet - youtube_content_channels
 
-Generated UTC: 2026-06-21T13:02:27Z
+Generated UTC: 2026-06-21T13:10:31Z
 Department: Audience/Distribution
 Lane status: active
 Current owner: `lane-manager-youtube_content_channels-20260620`
@@ -101,10 +101,10 @@ These require a scoped service request and approval before any execution:
 
 | Priority | Status | Task | Owner | Lease | Evidence Required | Next Action |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 90 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels` - Acknowledge customer follow-up triage for youtube_content_channels | lane-manager-youtube_content_channels-20260620 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Write one local acknowledgement artifact before starting workers or creating overlapping agents. |
 | 76 | new | `task-customer-input-ceo-operating-goal-objective-20260620-002-followup-youtube_content_channels` - Follow up customer input for youtube_content_channels | lane-manager-youtube_content_channels-20260620 |  | intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.json | Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task. |
 | 117 | complete | `task-youtube-no-post-content-batch-v1-20260620` - Create first YouTube no-post content batch | lane-manager-youtube_content_channels-20260620 |  | No-post batch, production manifest, reputation/copyright checklist, material route template, customer update feed, trace event | Expand one brief into a full local script/storyboard or create control_plane_capacity_benchmark_packet_v1. |
-| 92 | complete | `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_chann` - Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channel | lane-manager-youtube_content_channels-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-006-continuity-restore-response-v1-006-continuity-restore-v1-006-dispatch_stale_own | Existing owner `lane-manager-youtube_content_channels-20260620` should handle the acknowledgement for `youtube_content_channels` locally and report evidence; no duplicate owner or worker should be created. |
+| 92 | complete | `task-continuity-owner-response-task-acknowledgement_response_required-task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_chann` - Handle continuity owner acknowledgement response for task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channel | lane-manager-youtube_content_channels-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-005-continuity-restore-response-v1-005-continuity-restore-v1-005-dispatch_stale_own | Existing owner `lane-manager-youtube_content_channels-20260620` should handle the acknowledgement for `youtube_content_channels` locally and report evidence; no duplicate owner or worker should be created. |
+| 90 | complete | `task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels` - Acknowledge customer follow-up triage for youtube_content_channels | lane-manager-youtube_content_channels-20260620 |  | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-requests-v1-20260621.md | Owner acknowledgement evidence linked at E:\agent-company-lab\reports\youtube-content-channels-continuity-acknowledgement-next-action-v1-20260621.md; continue the lane follow-up locally with existing owner and no duplica |
 
 ## Service Requests
 

@@ -4,7 +4,7 @@
     "optional_gate_queue_count": 10,
     "required_human_action_count": 0,
     "service_requests_needing_review": 13,
-    "stale_owner_acknowledgement_count": 5
+    "stale_owner_acknowledgement_count": 0
   },
   "ai_resources_candidate_shortlist": [
     "ceo_state_packet_v1",
@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2620,
+    "artifacts": 2636,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 458,
+    "outcomes": 462,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 646,
-    "trace_events": 571
+    "tasks": 650,
+    "trace_events": 575
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T13:02:27Z",
+  "generated_utc": "2026-06-21T13:10:31Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T13:02:27Z",
+    "generated_utc": "2026-06-21T13:10:31Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,43 +209,13 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 219,
-    "outcomes_delta": 40,
-    "tasks_delta": 67,
-    "trace_events_delta": 62
+    "artifacts_delta": 235,
+    "outcomes_delta": 44,
+    "tasks_delta": 71,
+    "trace_events_delta": 66
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
-    {
-      "kind": "owner_acknowledgement",
-      "lane_id": "ai_ml_competitions",
-      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-ai_ml_competitions"
-    },
-    {
-      "kind": "owner_acknowledgement",
-      "lane_id": "money_source_discovery",
-      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-money_source_discovery"
-    },
-    {
-      "kind": "owner_acknowledgement",
-      "lane_id": "paid_code_bounties",
-      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties"
-    },
-    {
-      "kind": "owner_acknowledgement",
-      "lane_id": "prediction_market_research",
-      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research"
-    },
-    {
-      "kind": "owner_acknowledgement",
-      "lane_id": "youtube_content_channels",
-      "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
-      "task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels"
-    },
     {
       "kind": "open_task",
       "lane_id": "ai_resources_lab",
@@ -275,6 +245,36 @@
       "lane_id": "ai_resources_lab",
       "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
       "task_id": "task-candidate-registry-curator-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
+      "task_id": "task-local-evaluation-harness-builder-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
+      "task_id": "task-adoption-retirement-reviewer-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
+      "task_id": "task-continuity-watchdog-worker-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
+      "task_id": "task-premium-customer-context-router-20260621-active-goal-20260621"
+    },
+    {
+      "kind": "open_task",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
+      "task_id": "task-browser-account-ops-worker-20260621-active-goal-20260621"
     }
   ],
   "open_tasks": [
@@ -372,6 +372,46 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T13:10:29Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "No acknowledgement escalation required; continue monitoring owner responses.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-monitor-all",
+      "outcome_type": "ai_resources_owner_acknowledgement_monitor",
+      "realized_usd": 0.0,
+      "status": "clear"
+    },
+    {
+      "created_at": "2026-06-21T13:10:29Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-dispatch-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "No stale owner acknowledgements require dispatch; continue monitoring.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-dispatch-all",
+      "outcome_type": "ai_resources_owner_acknowledgement_dispatch",
+      "realized_usd": 0.0,
+      "status": "no_dispatch_needed"
+    },
+    {
+      "created_at": "2026-06-21T13:10:17Z",
+      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-closure-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Regenerate owner acknowledgement monitor, CEO state, and continuity watchdog reports.",
+      "outcome_id": "outcome-ai-resources-owner-acknowledgement-closure-all",
+      "outcome_type": "ai_resources_owner_acknowledgement_closure",
+      "realized_usd": 0.0,
+      "status": "closure_applied"
+    },
+    {
+      "created_at": "2026-06-21T13:06:49Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium-customer-intake-router-refresh-v1-20260621.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Await next premium-customer request/material; preserve raw context, route compact capsule to lane owner, and update customer queue.",
+      "outcome_id": "outcome-premium-customer-intake-router-refresh-v1-20260621",
+      "outcome_type": "customer_intake_router_refresh",
+      "realized_usd": 0.0,
+      "status": "router_refresh_current"
+    },
+    {
       "created_at": "2026-06-21T13:02:04Z",
       "evidence": "E:\\agent-company-lab\\reports\\ai-resources-continuity-owner-acknowledgement-evidence-v1-20260621.md",
       "lane_id": "ai_resources_lab",
@@ -410,46 +450,6 @@
       "outcome_type": "platform_live_thread_status",
       "realized_usd": 0.0,
       "status": "local_status_smoke_complete"
-    },
-    {
-      "created_at": "2026-06-21T12:35:04Z",
-      "evidence": "E:\\agent-company-lab\\reports\\continuity-lane-goals-v1-20260621\\premium-customer-intake-current-lane-goal-v1-20260621.md",
-      "lane_id": "premium_customer_intake",
-      "next_action": "Run a local-only fixture or next real customer material through the YouTube/source v2 intake procedure; preserve raw context and route compact capsules.",
-      "outcome_id": "outcome-premium-customer-intake-current-lane-goal-v1-20260621",
-      "outcome_type": "continuity_current_lane_goal",
-      "realized_usd": 0.0,
-      "status": "current_lane_goal_submitted"
-    },
-    {
-      "created_at": "2026-06-21T12:30:14Z",
-      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-owner-handoff-packets-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "No open continuity owner handoffs remain; continue watchdog cadence.",
-      "outcome_id": "outcome-continuity-watchdog-owner-handoff-packets-v1-20260621",
-      "outcome_type": "continuity_owner_handoff_packets",
-      "realized_usd": 0.0,
-      "status": "no_open_owner_handoffs"
-    },
-    {
-      "created_at": "2026-06-21T12:22:08Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-candidate-registry-gap-list-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Use the gap list to prioritize local eval packets for 12 queued candidates.",
-      "outcome_id": "outcome-candidate-registry-gap-list-worker-thread-goal-20260621",
-      "outcome_type": "codex_worker_goal_deliverable",
-      "realized_usd": 0.0,
-      "status": "completed_local_gap_list"
-    },
-    {
-      "created_at": "2026-06-21T12:19:48Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ceo-worker-deliverables\\continuity-owner-response-dispatch-overlap-review-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Use overlap review before creating any new worker for continuity dispatch remediation.",
-      "outcome_id": "outcome-capability-overlap-worker-thread-goal-20260621",
-      "outcome_type": "codex_worker_goal_deliverable",
-      "realized_usd": 0.0,
-      "status": "completed_local_report_only"
     }
   ],
   "schema_version": "ceo_state_packet.v1",
