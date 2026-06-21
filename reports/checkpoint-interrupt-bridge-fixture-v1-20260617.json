@@ -10,7 +10,7 @@
   "failures": [],
   "fixture_count": 20,
   "fixture_dir": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-bridge-fixture-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:30Z",
+  "generated_utc": "2026-06-21T15:44:07Z",
   "recommended_next_action": "Use this bridge as report-only scaffolding for future checkpoint/resume UI or lane-manager handoff fixtures; do not install LangGraph.",
   "rejected_count": 19,
   "results": [

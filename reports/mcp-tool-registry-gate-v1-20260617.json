@@ -8,7 +8,7 @@
   "failures": [],
   "fixture_count": 22,
   "fixture_dir": "E:\\agent-company-lab\\reports\\mcp-tool-registry-gate-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:34Z",
+  "generated_utc": "2026-06-21T15:44:14Z",
   "identity_validation_path": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-validation-20260617.json",
   "mcp_server_enable_allowed": false,
   "mcp_tool_call_allowed": false,

@@ -11,7 +11,7 @@
   "failures": [],
   "fixture_count": 29,
   "fixture_dir": "E:\\agent-company-lab\\reports\\browser-read-only-apply-command-contract-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:29Z",
+  "generated_utc": "2026-06-21T15:44:05Z",
   "next_action": "Keep browser apply command implementation blocked until a real signed operator decision artifact exists and a separate apply preflight validates exact request IDs and zero side effects.",
   "positive_authority": {
     "accepted_scope": "report_only_apply_command_contract",

@@ -57,7 +57,7 @@
     "checkpoint_bridge_validation_path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-bridge-fixture-v1-validation-20260617.json",
     "checkpoint_contract_validation_path": "E:\\agent-company-lab\\reports\\checkpoint-interrupt-contract-v1-validation-20260617.json",
     "checkpoint_interrupt_required": true,
-    "department": "AI Resources",
+    "department": "Artificial Resources",
     "handoff_allowed": false,
     "handoff_id": "handoff-ai-resources-lab-checkpoint-pause",
     "handoff_mode": "checkpoint_pause_only",

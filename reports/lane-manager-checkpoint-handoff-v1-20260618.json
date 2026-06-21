@@ -27,7 +27,7 @@
   "failures": [],
   "fixture_count": 13,
   "fixture_dir": "E:\\agent-company-lab\\reports\\lane-manager-checkpoint-handoff-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:32Z",
+  "generated_utc": "2026-06-21T15:44:10Z",
   "handoff_allowed": false,
   "next_action": "Use handoff rows to generate checkpoint/resume UI packets; do not create tasks, assign service requests, or start workers.",
   "rejected_count": 12,
@@ -43,7 +43,7 @@
         "rejected": false
       },
       "row_count": 14,
-      "sha256": "a0038d2d7f2e6907cf6af19d2f07daf1c7de1166183de64b484fa6a135a03606"
+      "sha256": "fc96b549cca54cf2e953bc4b61da32018c20ed6385e0fc695f92439e16366dfc"
     },
     {
       "expected": "rejected",
@@ -58,7 +58,7 @@
         "rejected": true
       },
       "row_count": 13,
-      "sha256": "f0c9b64042c5da02acde71ec32983ee90a9a7a348835109c854a13f0c8cd09b3"
+      "sha256": "2293f482dd9b63ccf6ba6080a879011251cbbc684ac429a9f8e54c40c9ecaf17"
     },
     {
       "expected": "rejected",
@@ -75,7 +75,7 @@
         "rejected": true
       },
       "row_count": 15,
-      "sha256": "1d70de8b30cfc6d4822e3f226fee9c63fa6cf87ae820db568a8aac2d8be1a987"
+      "sha256": "6ff37d3726c8d45585bd1c776f7767bad6cb653233791946afaff06f2ed7d6b1"
     },
     {
       "expected": "rejected",
@@ -91,7 +91,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "bc38ce8fe155d4080609e440538ca9d39b975407bf0c01859785b8c22e60781d"
+      "sha256": "f58371b30b1d494fbca81472a6dd3688fcd571ceaf9dc5cd3e90f3221d9abd5a"
     },
     {
       "expected": "rejected",
@@ -106,7 +106,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "565df4369923f7389dee5dc22264a9fa79c2fd6483b70dac255698ad636c6969"
+      "sha256": "469a6e3ea3dc97619e327159c3bcc06f01e7838f6f04d63c78c79b83d9236416"
     },
     {
       "expected": "rejected",
@@ -121,7 +121,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "bae170b61b7ab4788a294e9eba12fbc9482d6664ce0e8fc5d985ed8d84dc0cd6"
+      "sha256": "36d012361849de2643b9ff555f42dda05a85744ac8847258f988fb282551d372"
     },
     {
       "expected": "rejected",
@@ -136,7 +136,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "914fccedb957663d9063691c18bd45b8c03d08d23e8e0c4715b7c7411d95202b"
+      "sha256": "3fcadd8bf694a6d765c6c431919794e60735623ecac1edb73e881d2b6602da41"
     },
     {
       "expected": "rejected",
@@ -151,7 +151,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "14861736af971bacea590f26dac28b655eb535c1d52c8c987dd5b9270fc084ab"
+      "sha256": "33a30b68140d72c44a84a963372b367020e176259194b4971753ee5e206d02bd"
     },
     {
       "expected": "rejected",
@@ -167,7 +167,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "3308559e936488d19fa914d797d79365ed9c0d87ef183ce35622f851cc76d6a1"
+      "sha256": "2738a80d4b64e2054bf2f8588dcd22884dd5c72144572ee22d16244eaeb7f506"
     },
     {
       "expected": "rejected",
@@ -182,7 +182,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "283234d4ce34aa5e255f88e5820ba49c3e01cb43f50f5a6989b3cd4b6fac7954"
+      "sha256": "c00fff4586076f623c82fff019b78b7c9abf20afa25614aeb4ffb6e8584c07dd"
     },
     {
       "expected": "rejected",
@@ -197,7 +197,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "bd45483c60a53dca6f1243d53b05ba577efbedbd495d7b5a7dc673c5dad83a03"
+      "sha256": "0c8080d35eef370f74ee859907ef8de37f03982d16a3a6b5466dc22ed5070351"
     },
     {
       "expected": "rejected",
@@ -212,7 +212,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "a647796771b8f66dee41724a053c4be9ab8233f1e9f269043b1de136d040d2e5"
+      "sha256": "b28c60220c9b936af367f09a55a21f80a58e3b0fa374cd6b01020505f3fb915d"
     },
     {
       "expected": "rejected",
@@ -227,7 +227,7 @@
         "rejected": true
       },
       "row_count": 14,
-      "sha256": "aaa9189b5811c345e2f82bb6f951d1c7516ff3ac9bb132481c90f1c82a26b863"
+      "sha256": "83929d28a8b9cf722a51e15537027e724cfba8e80d72af3db6db8e38de5f9d38"
     }
   ],
   "runtime_boundary": {

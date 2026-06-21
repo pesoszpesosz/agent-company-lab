@@ -6,7 +6,7 @@
   "contract_verdict": "adapter_contract_valid_start_blocked",
   "external_side_effects": false,
   "fixture_count": 26,
-  "generated_utc": "2026-06-20T21:07:30Z",
+  "generated_utc": "2026-06-21T15:44:06Z",
   "lane_id": "platform_engineering",
   "rejected_count": 25,
   "runtime": "codex_local_report_only",

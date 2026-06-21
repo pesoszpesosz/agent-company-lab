@@ -12,7 +12,7 @@
     "schema_version": "agent_company.browser_worker_adapter_contract_validation.v1",
     "service_requests_assigned": 0,
     "service_requests_mutated": 0,
-    "sha256": "0a114d48eb4ea53d077fc1b7d0bcdabb928e0283efadef3e5096045516f71ffa",
+    "sha256": "14ba92988978e7535193ff7d01d705eb63ef6fdb68f1eb81da33bf5c472ce7e7",
     "worker_start_allowed": false,
     "workers_started": 0
   },
@@ -123,7 +123,7 @@
   ],
   "failure_count": 0,
   "failures": [],
-  "generated_utc": "2026-06-20T21:07:29Z",
+  "generated_utc": "2026-06-21T15:44:05Z",
   "next_action": "Require a real signed operator approval packet before any browser_read_only_session request can be assigned or started.",
   "operator_signed_approval_present": false,
   "policy_validation": {
@@ -138,7 +138,7 @@
     "schema_version": "agent_company.browser_read_only_worker_policy_validation.v1",
     "service_requests_assigned": 0,
     "service_requests_mutated": 0,
-    "sha256": "f4442e39edf8d02558fbb93b171be72af1fdc4ac5c3a132a6b87fdb0a62135d0"
+    "sha256": "529d4e8181a5ce5984073f9483e3badd9a988364997108f475292d07928dcdc8"
   },
   "preflight_id": "browser-read-only-assignment-preflight-current-queue",
   "preflight_verdict": "candidates_valid_assignment_blocked_no_signed_approval",

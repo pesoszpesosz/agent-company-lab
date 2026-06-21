@@ -549,7 +549,7 @@
     "agentgateway/agentgateway",
     "modelcontextprotocol/python-sdk"
   ],
-  "generated_utc": "2026-06-20T21:07:28Z",
+  "generated_utc": "2026-06-21T15:44:04Z",
   "mcp_tool_calls": false,
   "model_api_calls": false,
   "next_action": "Build worker_capability_class_registry_v1 before any dependency install or runtime adoption.",

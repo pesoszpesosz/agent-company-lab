@@ -1,6 +1,6 @@
 # Service Worker Signed Decision Guard v1
 
-Generated UTC: 2026-06-20T21:07:38Z
+Generated UTC: 2026-06-21T15:44:19Z
 Guard report JSON: `E:\agent-company-lab\reports\service-worker-signed-decision-guard-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\service-worker-signed-decision-guard-v1-validation-20260617.json`
 Source intake contract: `E:\agent-company-lab\reports\service-worker-signed-decision-intake-contract-v1-20260617.json`

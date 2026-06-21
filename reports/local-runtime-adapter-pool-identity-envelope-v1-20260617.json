@@ -10,7 +10,7 @@
   "failures": [],
   "fixture_count": 26,
   "fixture_dir": "E:\\agent-company-lab\\reports\\local-runtime-adapter-pool-identity-envelope-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:33Z",
+  "generated_utc": "2026-06-21T15:44:13Z",
   "next_action": "Promote this validator into the activation preflight chain, then build the egress-ledger validator; do not register pools, assign requests, start workers, or perform external actions.",
   "positive_fixture": {
     "expected_result": "pass_identity_candidate_not_registration_approval",

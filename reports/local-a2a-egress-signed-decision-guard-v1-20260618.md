@@ -1,6 +1,6 @@
 # Local A2A Egress Signed Decision Guard v1
 
-Generated UTC: 2026-06-20T21:07:33Z
+Generated UTC: 2026-06-21T15:44:12Z
 Target route: `local_agent_to_agent_report_only`
 Source intake contract: `E:\agent-company-lab\reports\egress-route-signed-decision-intake-contract-v1-20260618.json`
 Egress ledger validation: `E:\agent-company-lab\reports\agent-egress-event-ledger-v1-validation-20260617.json`

@@ -1,6 +1,6 @@
 # Egress Route Signed Decision Guard v1
 
-Generated UTC: 2026-06-20T21:07:31Z
+Generated UTC: 2026-06-21T15:44:09Z
 Target route: `browser_read_only_gateway`
 Source intake contract: `E:\agent-company-lab\reports\egress-route-signed-decision-intake-contract-v1-20260618.json`
 Guard report JSON: `E:\agent-company-lab\reports\egress-route-signed-decision-guard-v1-20260618.json`

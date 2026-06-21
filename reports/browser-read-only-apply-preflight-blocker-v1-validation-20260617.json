@@ -18,7 +18,7 @@
   "failures": [],
   "file_transfer_actions": false,
   "form_submit_actions": false,
-  "generated_utc": "2026-06-20T21:07:29Z",
+  "generated_utc": "2026-06-21T15:44:05Z",
   "guard_adapter_contract_gate": "present_valid_start_blocked",
   "guard_adapter_contract_validation_path": "E:\\agent-company-lab\\reports\\browser-worker-adapter-contract-v1-validation-20260618.json",
   "login_actions": false,

@@ -1,6 +1,6 @@
 # Runtime Start Apply Preflight Blocker v1
 
-Generated UTC: 2026-06-20T21:07:37Z
+Generated UTC: 2026-06-21T15:44:18Z
 Guard validation: `E:\agent-company-lab\reports\runtime-start-signed-decision-guard-v1-validation-20260617.json`
 Report JSON: `E:\agent-company-lab\reports\runtime-start-apply-preflight-blocker-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\runtime-start-apply-preflight-blocker-v1-validation-20260617.json`

@@ -1,6 +1,6 @@
 # Runtime Process Egress Signed Decision Guard v1
 
-Generated UTC: 2026-06-20T21:07:37Z
+Generated UTC: 2026-06-21T15:44:18Z
 Target route: `runtime_process_gateway`
 Guard report JSON: `E:\agent-company-lab\reports\runtime-process-egress-signed-decision-guard-v1-20260618.json`
 Validation JSON: `E:\agent-company-lab\reports\runtime-process-egress-signed-decision-guard-v1-validation-20260618.json`

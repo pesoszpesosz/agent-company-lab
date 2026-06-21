@@ -11,7 +11,7 @@
   "failures": [],
   "fixture_count": 28,
   "fixture_dir": "E:\\agent-company-lab\\reports\\browser-read-only-signed-approval-guard-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:29Z",
+  "generated_utc": "2026-06-21T15:44:05Z",
   "next_action": "Build a separate apply preflight before any accepted browser-read-only approval can assign a request or open a browser.",
   "positive_authority": {
     "accepted_scope": "browser_read_only_assignment_preflight_only",
@@ -1195,7 +1195,7 @@
   "schema_path": "E:\\agent-company-lab\\architecture\\browser-read-only-signed-approval-guard-v1.schema.json",
   "schema_version": "agent_company.browser_read_only_signed_approval_guard_report.v1",
   "source_assignment_preflight_path": "E:\\agent-company-lab\\reports\\browser-read-only-assignment-preflight-v1-validation-20260617.json",
-  "source_assignment_preflight_sha256": "cbdf4cceacb99574270efcf4de530b67ecc2187f9925af29c9db1067866d0bb3",
+  "source_assignment_preflight_sha256": "6cbc111504d9e7e04a86e9401dddb2b0ff8eb10bf61b19d6c4fd5830b8604b92",
   "source_preflight": {
     "adapter_contract_gate": "present_valid_start_blocked",
     "adapter_contract_validation": {
@@ -1211,7 +1211,7 @@
       "schema_version": "agent_company.browser_worker_adapter_contract_validation.v1",
       "service_requests_assigned": 0,
       "service_requests_mutated": 0,
-      "sha256": "0a114d48eb4ea53d077fc1b7d0bcdabb928e0283efadef3e5096045516f71ffa",
+      "sha256": "14ba92988978e7535193ff7d01d705eb63ef6fdb68f1eb81da33bf5c472ce7e7",
       "worker_start_allowed": false,
       "workers_started": 0
     },

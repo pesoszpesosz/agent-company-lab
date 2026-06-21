@@ -1,6 +1,6 @@
 # Runtime Start Signed Decision Guard v1
 
-Generated UTC: 2026-06-20T21:07:38Z
+Generated UTC: 2026-06-21T15:44:19Z
 Source runtime-start preflight: `E:\agent-company-lab\reports\runtime-start-preflight-v1-validation-20260617.json`
 Guard report JSON: `E:\agent-company-lab\reports\runtime-start-signed-decision-guard-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\runtime-start-signed-decision-guard-v1-validation-20260617.json`

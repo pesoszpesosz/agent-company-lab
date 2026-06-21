@@ -1,6 +1,6 @@
 # Egress Route Apply Command Contract v1
 
-Generated UTC: 2026-06-20T21:07:31Z
+Generated UTC: 2026-06-21T15:44:09Z
 Target route: `browser_read_only_gateway`
 Apply preflight validation: `E:\agent-company-lab\reports\egress-route-apply-preflight-blocker-v1-validation-20260618.json`
 Report JSON: `E:\agent-company-lab\reports\egress-route-apply-command-contract-v1-20260618.json`

@@ -1,8 +1,8 @@
 # Agent Company Trace Events
 
-Generated UTC: 2026-06-21T14:28:26Z
+Generated UTC: 2026-06-21T15:44:18Z
 Database: `E:\agent-company-lab\state\agent_company.sqlite`
-Rows shown: 24
+Rows shown: 28
 
 ## Boundary
 
@@ -14,7 +14,8 @@ Rows shown: 24
 | Event Type | Count |
 | --- | ---: |
 | `continuity_current_lane_goal_submitted` | 1 |
-| `continuity_lane_next_task_seeded` | 6 |
+| `continuity_lane_next_task_recovered` | 1 |
+| `continuity_lane_next_task_seeded` | 8 |
 | `premium_customer_followup_escalation_command_ready` | 1 |
 | `premium_customer_followup_escalation_written` | 1 |
 | `premium_customer_followup_monitor_checked` | 1 |
@@ -27,19 +28,23 @@ Rows shown: 24
 | `premium_customer_lane_followups_synthesized` | 1 |
 | `premium_customer_routing_queue_proof_written` | 1 |
 | `premium_customer_routing_queue_watch_written` | 1 |
-| `proof_derived_continuation_packet_written` | 4 |
+| `proof_derived_continuation_packet_written` | 5 |
 | `youtube_source_material_intake_procedure_ready` | 1 |
 
 ## Counts By Lane
 
 | Lane | Count |
 | --- | ---: |
-| `premium_customer_intake` | 24 |
+| `premium_customer_intake` | 28 |
 
 ## Events
 
 | Time | Type | Trace | Lane | Task | Agent | Event | Source | Artifact | Metadata |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-21T15:44:17Z | proof_derived_continuation_packet_written | `trace-premium-customer-intake-proof-derived-continuation-v1-008-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-008` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-proof-derived-continuation-v1-008-20260621` - Wrote compact proof-derived continuation packet for premium_customer_intake selecting one watch-v2 artifact revisit condition and no external action. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-008.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "continuation_artifact": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-008.md", "differs_from_previous |
+| 2026-06-21T15:17:00Z | continuity_lane_next_task_seeded | `trace-continuity-lane-next-task-seed-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-008` | premium-customer-intake-agent-20260620 | `trace-event-continuity-lane-next-task-seed-premium_customer_intake-008` - Seeded next bounded local task for zero-open active lane `premium_customer_intake`. | continuity_lane_next_task_seed_v1 | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-007.md | {"duplicate_key": "continuity:lane-next-task:premium_customer_intake:20260621:008", "evidence_path": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-007.md", "expected_art |
+| 2026-06-21T14:55:11Z | continuity_lane_next_task_recovered | `trace-continuity-lane-next-task-20260621-007` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-007` | premium-customer-intake-agent-20260620 | `trace-event-proof-derived-continuation-v1-20260621-007-premium_customer_intake` - Recovered 007 continuity lane-next task for premium_customer_intake with local proof artifact only. | projectless_recovery_executor | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-007.md | {"external_side_effects": false, "lane_ownership_mutated": false, "service_requests_approved": 0, "workers_started": 0} |
+| 2026-06-21T14:30:20Z | continuity_lane_next_task_seeded | `trace-continuity-lane-next-task-seed-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-007` | premium-customer-intake-agent-20260620 | `trace-event-continuity-lane-next-task-seed-premium_customer_intake-007` - Seeded next bounded local task for zero-open active lane `premium_customer_intake`. | continuity_lane_next_task_seed_v1 | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-006.md | {"duplicate_key": "continuity:lane-next-task:premium_customer_intake:20260621:007", "evidence_path": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-006.md", "expected_art |
 | 2026-06-21T14:28:25Z | proof_derived_continuation_packet_written | `trace-premium-customer-intake-proof-derived-continuation-v1-006-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-006` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-proof-derived-continuation-v1-006-20260621` - Wrote compact proof-derived continuation packet for premium_customer_intake selecting one watch-v2 local status artifact step and no external action. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-006.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "continuation_artifact": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-006.md", "differs_from_previous |
 | 2026-06-21T14:12:09Z | continuity_lane_next_task_seeded | `trace-continuity-lane-next-task-seed-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-006` | premium-customer-intake-agent-20260620 | `trace-event-continuity-lane-next-task-seed-premium_customer_intake-006` - Seeded next bounded local task for zero-open active lane `premium_customer_intake`. | continuity_lane_next_task_seed_v1 | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-005.trace-metadata.json | {"duplicate_key": "continuity:lane-next-task:premium_customer_intake:20260621:006", "evidence_path": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-005.trace-metadata.jso |
 | 2026-06-21T14:11:15Z | proof_derived_continuation_packet_written | `trace-premium-customer-intake-proof-derived-continuation-v1-005-20260621` | `premium_customer_intake` | `task-continuity-lane-next-task-20260621-premium_customer_intake-005` | premium-customer-intake-agent-20260620 | `trace-event-premium-customer-intake-proof-derived-continuation-v1-005-20260621` - Wrote compact proof-derived continuation packet for premium_customer_intake selecting one local dropbox recheck step and no external action. | codex_premium_customer_context_router | E:\agent-company-lab\reports\premium_customer_intake\proof-derived-continuation-v1-20260621-005.md | {"accounts_created_or_modified": 0, "browser_sessions_started": 0, "continuation_artifact": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-005.md", "differs_from_previous |

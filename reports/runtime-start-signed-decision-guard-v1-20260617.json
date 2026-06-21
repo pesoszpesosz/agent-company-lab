@@ -7,7 +7,7 @@
   "failures": [],
   "fixture_count": 19,
   "fixture_dir": "E:\\agent-company-lab\\reports\\runtime-start-signed-decision-guard-v1-fixtures",
-  "generated_utc": "2026-06-20T21:07:38Z",
+  "generated_utc": "2026-06-21T15:44:19Z",
   "next_action": "Use this guard before any future apply command; a separate apply preflight must still prove exact process, command, output, trace, and zero side effects.",
   "positive_authority": {
     "accepted_scope": "runtime_start_preflight_only",
@@ -829,7 +829,7 @@
     "worker_start_allowed": false
   },
   "source_runtime_start_preflight_path": "E:\\agent-company-lab\\reports\\runtime-start-preflight-v1-validation-20260617.json",
-  "source_runtime_start_preflight_sha256": "381097f443a608f04195432bf2b2c6db10f4dd0814bc23dba25ca67cd7587535",
+  "source_runtime_start_preflight_sha256": "deb6f2c70a2b49a752b125019ebf3ba0e2a1c64277523ed6f1c5f98b3a355691",
   "worker_pool_id": "service-worker-local-runtime-adapter-pool",
   "worker_start_allowed": false
 }

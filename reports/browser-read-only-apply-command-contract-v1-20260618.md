@@ -1,6 +1,6 @@
 # Browser Read-Only Apply Command Contract v1
 
-Generated UTC: 2026-06-20T21:07:29Z
+Generated UTC: 2026-06-21T15:44:05Z
 Apply preflight validation: `E:\agent-company-lab\reports\browser-read-only-apply-preflight-blocker-v1-validation-20260617.json`
 Guard validation: `E:\agent-company-lab\reports\browser-read-only-signed-approval-guard-v1-validation-20260617.json`
 Adapter contract validation: `E:\agent-company-lab\reports\browser-worker-adapter-contract-v1-validation-20260618.json`

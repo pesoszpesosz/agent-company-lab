@@ -1,6 +1,6 @@
 # Local A2A Egress Apply Command Guard v1
 
-Generated UTC: 2026-06-20T21:07:32Z
+Generated UTC: 2026-06-21T15:44:12Z
 Target route: `local_agent_to_agent_report_only`
 Apply command contract validation: `E:\agent-company-lab\reports\local-a2a-egress-apply-command-contract-v1-validation-20260618.json`
 Report JSON: `E:\agent-company-lab\reports\local-a2a-egress-apply-command-guard-v1-20260618.json`

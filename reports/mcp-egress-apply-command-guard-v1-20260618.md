@@ -1,6 +1,6 @@
 # MCP Egress Apply Command Guard v1
 
-Generated UTC: 2026-06-20T21:07:34Z
+Generated UTC: 2026-06-21T15:44:13Z
 Target route: `mcp_tool_gateway`
 Apply preflight validation: `E:\agent-company-lab\reports\mcp-egress-apply-preflight-blocker-v1-validation-20260618.json`
 MCP registry validation: `E:\agent-company-lab\reports\mcp-tool-registry-gate-v1-validation-20260617.json`

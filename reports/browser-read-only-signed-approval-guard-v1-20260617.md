@@ -1,6 +1,6 @@
 # Browser Read-Only Signed Approval Guard v1
 
-Generated UTC: 2026-06-20T21:07:29Z
+Generated UTC: 2026-06-21T15:44:05Z
 Source assignment preflight: `E:\agent-company-lab\reports\browser-read-only-assignment-preflight-v1-validation-20260617.json`
 Guard report JSON: `E:\agent-company-lab\reports\browser-read-only-signed-approval-guard-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\browser-read-only-signed-approval-guard-v1-validation-20260617.json`

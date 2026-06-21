@@ -1,6 +1,6 @@
 # Checkpoint Interrupt Bridge Fixture v1
 
-Generated UTC: 2026-06-20T21:07:30Z
+Generated UTC: 2026-06-21T15:44:07Z
 Report JSON: `E:\agent-company-lab\reports\checkpoint-interrupt-bridge-fixture-v1-20260617.json`
 Validation JSON: `E:\agent-company-lab\reports\checkpoint-interrupt-bridge-fixture-v1-validation-20260617.json`
 Source scorecard: `E:\agent-company-lab\reports\adapter-candidate-scorecard-v1-20260617.json`
