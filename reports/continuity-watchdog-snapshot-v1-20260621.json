@@ -7,7 +7,7 @@
     "lanes_without_open_tasks": 0,
     "missing_owner_agent_lanes": 0,
     "ownerless_active_lanes": 0,
-    "stale_open_tasks": 15,
+    "stale_open_tasks": 21,
     "stale_owner_acknowledgements": 0
   },
   "findings": {
@@ -19,7 +19,7 @@
     "ownerless_active_lanes": [],
     "stale_open_tasks": [
       {
-        "age_minutes": 5376,
+        "age_minutes": 5391,
         "duplicate_key": "atlas-runway-lenses-v1",
         "lane_id": "platform_engineering",
         "next_action": "Add lane-specific lens skins or a future-slot texture generator for realm-specific path previews.",
@@ -30,7 +30,7 @@
         "updated_at": "2026-06-17T22:34:38Z"
       },
       {
-        "age_minutes": 5369,
+        "age_minutes": 5384,
         "duplicate_key": "atlas-agent-party-v1",
         "lane_id": "platform_engineering",
         "next_action": "Add lane-party animation skins or expanded generated portraits for future lane agents.",
@@ -41,7 +41,7 @@
         "updated_at": "2026-06-17T22:42:01Z"
       },
       {
-        "age_minutes": 1317,
+        "age_minutes": 1332,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:ai_ml_competitions",
         "lane_id": "ai_ml_competitions",
         "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
@@ -52,7 +52,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1317,
+        "age_minutes": 1332,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:money_source_discovery",
         "lane_id": "money_source_discovery",
         "next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
@@ -63,7 +63,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1317,
+        "age_minutes": 1332,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:paid_code_bounties",
         "lane_id": "paid_code_bounties",
         "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
@@ -74,7 +74,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1317,
+        "age_minutes": 1332,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:prediction_market_research",
         "lane_id": "prediction_market_research",
         "next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
@@ -85,7 +85,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1317,
+        "age_minutes": 1332,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:youtube_content_channels",
         "lane_id": "youtube_content_channels",
         "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
@@ -96,7 +96,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:lane-manager-ai_resources_lab-20260620:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Lead the AI Resources operating cell: hire, evolve, park, or retire agents only after capability-overlap review and local evidence.",
@@ -107,7 +107,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:adoption-retirement-reviewer-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Recommend evolve, watch, reject, merge, or retire decisions for stale, overlapping, or under-specified agents.",
@@ -118,7 +118,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:browser-account-ops-worker-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Prepare browser/account operation packets and surface exact human KYC, tax, billing, terms, or legal gates without taking side effects.",
@@ -129,7 +129,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:candidate-registry-curator-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Curate external AI worker frameworks and money-making agent candidates into a local candidate registry with source evidence.",
@@ -140,7 +140,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:capability-overlap-mapper-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Maintain the capability overlap map so new AI hires happen only when existing owners cannot evolve to cover the need.",
@@ -151,7 +151,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:continuity-watchdog-worker-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Run the continuity loop: check active lanes for stale, offline, ownerless, overlapping, or goal-less work and write restore packets.",
@@ -162,7 +162,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:local-evaluation-harness-builder-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Build local-only eval packets that prove whether candidate agents or tools improve the company before adoption.",
@@ -173,7 +173,7 @@
         "updated_at": "2026-06-21T12:16:08Z"
       },
       {
-        "age_minutes": 234,
+        "age_minutes": 249,
         "duplicate_key": "ceo-worker-bootstrap:premium-customer-context-router-20260621:active-goal",
         "lane_id": "ai_resources_lab",
         "next_action": "Accept premium customer input, preserve raw material outside CEO context, route compact capsules to lanes, and update the customer.",
@@ -182,11 +182,77 @@
         "status": "in_progress",
         "task_id": "task-premium-customer-context-router-20260621-active-goal-20260621",
         "updated_at": "2026-06-21T12:16:08Z"
+      },
+      {
+        "age_minutes": 69,
+        "duplicate_key": "continuity:lane-next-task:content_and_social_growth:20260621:008",
+        "lane_id": "content_and_social_growth",
+        "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+        "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+        "priority": 72,
+        "status": "new",
+        "task_id": "task-continuity-lane-next-task-20260621-content_and_social_growth-008",
+        "updated_at": "2026-06-21T15:17:00Z"
+      },
+      {
+        "age_minutes": 69,
+        "duplicate_key": "continuity:lane-next-task:digital_products_templates_plugins:20260621:008",
+        "lane_id": "digital_products_templates_plugins",
+        "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+        "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+        "priority": 72,
+        "status": "new",
+        "task_id": "task-continuity-lane-next-task-20260621-digital_products_templates_plugins-008",
+        "updated_at": "2026-06-21T15:17:00Z"
+      },
+      {
+        "age_minutes": 69,
+        "duplicate_key": "continuity:lane-next-task:lead_generation_and_sales:20260621:008",
+        "lane_id": "lead_generation_and_sales",
+        "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+        "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+        "priority": 72,
+        "status": "new",
+        "task_id": "task-continuity-lane-next-task-20260621-lead_generation_and_sales-008",
+        "updated_at": "2026-06-21T15:17:00Z"
+      },
+      {
+        "age_minutes": 69,
+        "duplicate_key": "continuity:lane-next-task:local_trading_strategy_research:20260621:008",
+        "lane_id": "local_trading_strategy_research",
+        "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+        "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+        "priority": 72,
+        "status": "new",
+        "task_id": "task-continuity-lane-next-task-20260621-local_trading_strategy_research-008",
+        "updated_at": "2026-06-21T15:17:00Z"
+      },
+      {
+        "age_minutes": 69,
+        "duplicate_key": "continuity:lane-next-task:security_bounty_private_reports:20260621:008",
+        "lane_id": "security_bounty_private_reports",
+        "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+        "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+        "priority": 72,
+        "status": "new",
+        "task_id": "task-continuity-lane-next-task-20260621-security_bounty_private_reports-008",
+        "updated_at": "2026-06-21T15:17:00Z"
+      },
+      {
+        "age_minutes": 69,
+        "duplicate_key": "continuity:lane-next-task:web3_airdrops_grants_hackathons:20260621:008",
+        "lane_id": "web3_airdrops_grants_hackathons",
+        "next_action": "Read the evidence artifact for this task, extract exactly one concrete next local step or explicit park/revisit condition from it, and write a compact continuation packet with evidence, gate status, owner, expected next artifact, and stop conditions. Do not repeat the same proof packet. Do not create agents, mutate ownership, start workers, approve service requests, open browsers, publish, submit, trade, spend, call APIs, or contact anyone.",
+        "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+        "priority": 72,
+        "status": "new",
+        "task_id": "task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-008",
+        "updated_at": "2026-06-21T15:17:00Z"
       }
     ],
     "stale_owner_acknowledgements": []
   },
-  "generated_utc": "2026-06-21T16:11:01Z",
+  "generated_utc": "2026-06-21T16:26:01Z",
   "json_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.md",
   "next_action": "No continuity restore action required; continue heartbeat cadence.",

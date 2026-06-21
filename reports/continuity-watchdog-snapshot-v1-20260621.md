@@ -1,6 +1,6 @@
 # Continuity Watchdog Snapshot V1
 
-Generated UTC: 2026-06-21T16:11:01Z
+Generated UTC: 2026-06-21T16:26:01Z
 Status: `clear`
 Cadence minutes: `15`
 JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json`
@@ -12,7 +12,7 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260
 | `ownerless_active_lanes` | 0 |
 | `missing_owner_agent_lanes` | 0 |
 | `agents_missing_threads` | 0 |
-| `stale_open_tasks` | 15 |
+| `stale_open_tasks` | 21 |
 | `expired_leases` | 0 |
 | `duplicate_active_keys` | 0 |
 | `lanes_without_open_tasks` | 0 |

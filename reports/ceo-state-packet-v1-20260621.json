@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 25,
-    "artifacts": 2782,
+    "artifacts": 2784,
     "departments": 24,
     "lanes": 15,
     "outcomes": 496,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 716,
-    "trace_events": 686
+    "tasks": 717,
+    "trace_events": 687
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T16:11:04Z",
+  "generated_utc": "2026-06-21T16:26:32Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T16:11:04Z",
+    "generated_utc": "2026-06-21T16:26:32Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 381,
+    "artifacts_delta": 383,
     "outcomes_delta": 78,
-    "tasks_delta": 137,
-    "trace_events_delta": 177
+    "tasks_delta": 138,
+    "trace_events_delta": 178
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [

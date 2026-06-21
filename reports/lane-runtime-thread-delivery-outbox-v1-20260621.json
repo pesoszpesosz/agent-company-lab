@@ -1,0 +1,41 @@
+{
+  "counts": {
+    "already_delivered": 1,
+    "blocked_no_owner_thread": 0,
+    "deliveries_seen": 1,
+    "ready_to_send": 0
+  },
+  "deliveries": [
+    {
+      "delivered_at": "2026-06-21T16:26:00Z",
+      "delivery_id": "delivery-lane-runtime-task-continuity-lane-next-task-20260621-premium_customer_intake-008",
+      "lane_id": "premium_customer_intake",
+      "owner_agent_id": "premium-customer-intake-agent-20260620",
+      "owner_thread_id": "codex-thread:019ee738-8be7-7962-a6df-2294ce084671",
+      "packet_path": "E:\\agent-company-lab\\reports\\lane-runtime-dispatch-packets-v1-20260621\\lane-runtime-dispatch-task-continuity-lane-next-task-20260621-premium_customer_intake-008.md",
+      "prompt_path": "E:\\agent-company-lab\\reports\\lane-runtime-thread-delivery-outbox-v1-20260621\\lane-runtime-thread-delivery-task-continuity-lane-next-task-20260621-premium_customer_intake-008.md",
+      "session_id": "codex-recovery-executor-low-concurrency",
+      "status": "already_delivered",
+      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-008",
+      "thread_id_for_tool": "019ee738-8be7-7962-a6df-2294ce084671"
+    }
+  ],
+  "drain_report": "reports\\lane-runtime-dispatch-drain-v1-20260621.json",
+  "generated_utc": "2026-06-21T16:26:30Z",
+  "json_path": "E:\\agent-company-lab\\reports\\lane-runtime-thread-delivery-outbox-v1-20260621.json",
+  "md_path": "E:\\agent-company-lab\\reports\\lane-runtime-thread-delivery-outbox-v1-20260621.md",
+  "next_action": "No thread delivery is pending.",
+  "outbox_dir": "E:\\agent-company-lab\\reports\\lane-runtime-thread-delivery-outbox-v1-20260621",
+  "schema_version": "lane_runtime_thread_delivery_outbox.v1",
+  "status": "no_delivery_needed",
+  "zero_side_effect_boundary": {
+    "browser_sessions_started": 0,
+    "external_api_calls": 0,
+    "external_side_effects": false,
+    "public_actions": 0,
+    "service_requests_approved_or_started": 0,
+    "thread_messages_sent": 0,
+    "wallet_payment_trading_actions": 0,
+    "worker_starts": 0
+  }
+}

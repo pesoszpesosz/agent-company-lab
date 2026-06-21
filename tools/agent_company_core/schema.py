@@ -374,6 +374,32 @@ CREATE TABLE IF NOT EXISTS lane_runtime_policies (
 
 CREATE INDEX IF NOT EXISTS idx_lane_runtime_policies_mode
 ON lane_runtime_policies(runtime_mode, cadence_minutes);
+
+CREATE TABLE IF NOT EXISTS lane_runtime_thread_deliveries (
+    delivery_id TEXT PRIMARY KEY,
+    task_id TEXT NOT NULL,
+    lane_id TEXT NOT NULL,
+    session_id TEXT,
+    owner_agent_id TEXT,
+    owner_thread_id TEXT,
+    packet_path TEXT NOT NULL,
+    prompt_path TEXT,
+    status TEXT NOT NULL,
+    delivery_attempts INTEGER NOT NULL DEFAULT 0,
+    delivered_at TEXT,
+    last_error TEXT,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    FOREIGN KEY(task_id) REFERENCES tasks(task_id),
+    FOREIGN KEY(lane_id) REFERENCES lanes(lane_id),
+    FOREIGN KEY(owner_agent_id) REFERENCES agents(agent_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_lane_runtime_thread_deliveries_status
+ON lane_runtime_thread_deliveries(status, updated_at);
+
+CREATE INDEX IF NOT EXISTS idx_lane_runtime_thread_deliveries_task
+ON lane_runtime_thread_deliveries(task_id, status);
 """
 
 

@@ -47,6 +47,10 @@ from agent_company_core.account_capacity_dispatch_plan import write_account_capa
 from agent_company_core.codex_thread_goal_inventory import write_codex_thread_goal_inventory_cli
 from agent_company_core.lane_runtime_activation_plan import write_lane_runtime_activation_plan_cli
 from agent_company_core.lane_runtime_dispatch_drain import write_lane_runtime_dispatch_drain_cli
+from agent_company_core.lane_runtime_thread_delivery import (
+    record_lane_runtime_thread_delivery_cli,
+    write_lane_runtime_thread_delivery_outbox_cli,
+)
 from agent_company_core.continuity_watchdog_snapshot import write_continuity_watchdog_snapshot
 from agent_company_core.continuity_watchdog_restore_plan import write_continuity_watchdog_restore_plan
 from agent_company_core.continuity_watchdog_restore_response_bundle import (
@@ -295,6 +299,18 @@ def build_parser() -> argparse.ArgumentParser:
     lane_runtime_dispatch_drain.add_argument("--json-path")
     lane_runtime_dispatch_drain.add_argument("--dry-run", action="store_true")
     lane_runtime_dispatch_drain.add_argument("--no-db-record", action="store_true")
+    lane_runtime_thread_delivery = sub.add_parser("write-lane-runtime-thread-delivery-outbox")
+    lane_runtime_thread_delivery.add_argument("--drain-report", required=True)
+    lane_runtime_thread_delivery.add_argument("--now-utc")
+    lane_runtime_thread_delivery.add_argument("--outbox-dir")
+    lane_runtime_thread_delivery.add_argument("--path")
+    lane_runtime_thread_delivery.add_argument("--json-path")
+    lane_runtime_thread_delivery.add_argument("--no-db-record", action="store_true")
+    lane_runtime_thread_delivery_receipt = sub.add_parser("record-lane-runtime-thread-delivery")
+    lane_runtime_thread_delivery_receipt.add_argument("--delivery-id", required=True)
+    lane_runtime_thread_delivery_receipt.add_argument("--status", choices=["delivered", "send_failed"], required=True)
+    lane_runtime_thread_delivery_receipt.add_argument("--now-utc")
+    lane_runtime_thread_delivery_receipt.add_argument("--error")
     codex_thread_goal_inventory = sub.add_parser("write-codex-thread-goal-inventory")
     codex_thread_goal_inventory.add_argument("--thread-snapshot", required=True)
     codex_thread_goal_inventory.add_argument("--now-utc")
@@ -553,6 +569,12 @@ def main() -> None:
         elif args.cmd == "drain-lane-runtime-dispatch":
             init_db(conn)
             write_lane_runtime_dispatch_drain_cli(conn, args)
+        elif args.cmd == "write-lane-runtime-thread-delivery-outbox":
+            init_db(conn)
+            write_lane_runtime_thread_delivery_outbox_cli(conn, args)
+        elif args.cmd == "record-lane-runtime-thread-delivery":
+            init_db(conn)
+            record_lane_runtime_thread_delivery_cli(conn, args)
         elif args.cmd == "write-codex-thread-goal-inventory":
             init_db(conn)
             write_codex_thread_goal_inventory_cli(conn, args)

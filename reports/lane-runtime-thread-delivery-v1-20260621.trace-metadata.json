@@ -1,0 +1,11 @@
+{
+  "delivery_id": "delivery-lane-runtime-task-continuity-lane-next-task-20260621-premium_customer_intake-008",
+  "delivered_at": "2026-06-21T16:26:00Z",
+  "owner_thread_id": "codex-thread:019ee738-8be7-7962-a6df-2294ce084671",
+  "ready_to_send": 0,
+  "already_delivered": 1,
+  "thread_messages_sent": 1,
+  "worker_starts": 0,
+  "browser_sessions_started": 0,
+  "external_side_effects": false
+}
