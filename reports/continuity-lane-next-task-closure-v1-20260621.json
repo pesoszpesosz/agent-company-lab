@@ -63,6 +63,18 @@
     },
     {
       "closure_status": "already_closed",
+      "lane_id": "content_and_social_growth",
+      "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-content_and_social_growth",
+      "proof_path": "E:\\agent-company-lab\\reports\\content_and_social_growth\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": "2026-06-21T14:27:38Z",
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-content_and_social_growth-006"
+    },
+    {
+      "closure_status": "already_closed",
       "lane_id": "digital_products_templates_plugins",
       "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
       "proof_artifact_id": "artifact-continuity-lane-next-task-proof-digital_products_templates_plugins",
@@ -110,17 +122,29 @@
       "task_id": "task-continuity-lane-next-task-20260621-digital_products_templates_plugins-004"
     },
     {
-      "closure_status": "completed_at_repaired",
-      "completed_at": "2026-06-21T14:10:15Z",
+      "closure_status": "already_closed",
       "lane_id": "digital_products_templates_plugins",
       "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
       "proof_artifact_id": "artifact-continuity-lane-next-task-proof-digital_products_templates_plugins",
       "proof_path": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-005.md",
       "proof_path_exists": true,
       "proof_source": "expected_artifact_registered_by_closure",
-      "source_completed_at": null,
+      "source_completed_at": "2026-06-21T14:10:15Z",
       "source_status": "complete",
       "task_id": "task-continuity-lane-next-task-20260621-digital_products_templates_plugins-005"
+    },
+    {
+      "closure_status": "completed_at_repaired",
+      "completed_at": "2026-06-21T14:27:58Z",
+      "lane_id": "digital_products_templates_plugins",
+      "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-digital_products_templates_plugins",
+      "proof_path": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": null,
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-digital_products_templates_plugins-006"
     },
     {
       "closure_status": "already_closed",
@@ -184,6 +208,18 @@
     },
     {
       "closure_status": "already_closed",
+      "lane_id": "lead_generation_and_sales",
+      "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-lead_generation_and_sales",
+      "proof_path": "E:\\agent-company-lab\\reports\\lead_generation_and_sales\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": "2026-06-21T14:28:16Z",
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-lead_generation_and_sales-006"
+    },
+    {
+      "closure_status": "already_closed",
       "lane_id": "local_trading_strategy_research",
       "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
       "proof_artifact_id": "artifact-continuity-lane-next-task-proof-local_trading_strategy_research",
@@ -241,6 +277,18 @@
       "source_completed_at": "2026-06-21T14:10:04Z",
       "source_status": "complete",
       "task_id": "task-continuity-lane-next-task-20260621-local_trading_strategy_research-005"
+    },
+    {
+      "closure_status": "already_closed",
+      "lane_id": "local_trading_strategy_research",
+      "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-local_trading_strategy_research",
+      "proof_path": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": "2026-06-21T14:27:55Z",
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-local_trading_strategy_research-006"
     },
     {
       "closure_status": "already_closed",
@@ -304,6 +352,18 @@
     },
     {
       "closure_status": "already_closed",
+      "lane_id": "premium_customer_intake",
+      "owner_agent_id": "premium-customer-intake-agent-20260620",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-premium_customer_intake",
+      "proof_path": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": "2026-06-21T14:28:25Z",
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-premium_customer_intake-006"
+    },
+    {
+      "closure_status": "already_closed",
       "lane_id": "security_bounty_private_reports",
       "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
       "proof_artifact_id": "artifact-continuity-lane-next-task-proof-security_bounty_private_reports",
@@ -364,6 +424,18 @@
     },
     {
       "closure_status": "already_closed",
+      "lane_id": "security_bounty_private_reports",
+      "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-security_bounty_private_reports",
+      "proof_path": "E:\\agent-company-lab\\reports\\security_bounty_private_reports\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": "2026-06-21T14:28:24Z",
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-security_bounty_private_reports-006"
+    },
+    {
+      "closure_status": "already_closed",
       "lane_id": "web3_airdrops_grants_hackathons",
       "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
       "proof_artifact_id": "artifact-continuity-lane-next-task-proof-web3_airdrops_grants_hackathons",
@@ -421,19 +493,31 @@
       "source_completed_at": "2026-06-21T14:11:27Z",
       "source_status": "complete",
       "task_id": "task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-005"
+    },
+    {
+      "closure_status": "already_closed",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "owner_agent_id": "lane-manager-web3_airdrops_grants_hackathons-019ec613",
+      "proof_artifact_id": "artifact-continuity-lane-next-task-proof-web3_airdrops_grants_hackathons",
+      "proof_path": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-006.md",
+      "proof_path_exists": true,
+      "proof_source": "expected_artifact_registered_by_closure",
+      "source_completed_at": "2026-06-21T14:29:02Z",
+      "source_status": "complete",
+      "task_id": "task-continuity-lane-next-task-20260621-web3_airdrops_grants_hackathons-006"
     }
   ],
   "counts": {
-    "already_closed": 34,
+    "already_closed": 41,
     "closed": 0,
     "completed_at_repaired": 1,
-    "lane_next_tasks": 35,
+    "lane_next_tasks": 42,
     "missing_proof_artifact": 0,
     "open_lane_next_tasks_after": 0,
     "reopened_missing_proof_artifact": 0,
     "waiting_for_proof_artifact": 0
   },
-  "generated_utc": "2026-06-21T14:12:08Z",
+  "generated_utc": "2026-06-21T14:30:19Z",
   "json_path": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-closure-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\continuity-lane-next-task-closure-v1-20260621.md",
   "next_action": "Regenerate CEO state, manager packets, dashboard, and continuity watchdog reports.",

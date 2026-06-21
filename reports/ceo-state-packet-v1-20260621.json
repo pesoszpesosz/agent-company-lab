@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2738,
+    "artifacts": 2752,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 481,
+    "outcomes": 487,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 696,
-    "trace_events": 652
+    "tasks": 703,
+    "trace_events": 665
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T14:24:31Z",
+  "generated_utc": "2026-06-21T14:30:21Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T14:24:31Z",
+    "generated_utc": "2026-06-21T14:30:21Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 337,
-    "outcomes_delta": 63,
-    "tasks_delta": 117,
-    "trace_events_delta": 143
+    "artifacts_delta": 351,
+    "outcomes_delta": 69,
+    "tasks_delta": 124,
+    "trace_events_delta": 156
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -372,6 +372,66 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T14:28:25Z",
+      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-006.md",
+      "lane_id": "premium_customer_intake",
+      "next_action": "Write premium-customer-routing-queue-watch-v2-20260621.md from the local-only dropbox recheck result; keep raw customer material out of CEO context and take no external actions.",
+      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-006-20260621",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "ready_to_write_watch_v2_status"
+    },
+    {
+      "created_at": "2026-06-21T14:28:16Z",
+      "evidence": "E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\proof-derived-continuation-v1-20260621-006.md",
+      "lane_id": "digital_products_templates_plugins",
+      "next_action": "Assign or explicitly request E:\\agent-company-lab\\reports\\digital_products_templates_plugins\\gumroad-direct-download-human-decision-intake-v1-20260621.md; keep proof-derived continuation loop parked until then.",
+      "outcome_id": "outcome-digital-products-proof-derived-continuation-v1-20260621-006",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "parked_loop_next_artifact_known_local_only"
+    },
+    {
+      "created_at": "2026-06-21T14:28:06Z",
+      "evidence": "E:\\agent-company-lab\\reports\\security_bounty_private_reports\\proof-derived-continuation-v1-20260621-006.md",
+      "lane_id": "security_bounty_private_reports",
+      "next_action": "Next local-only step: add the aar-path-001 absolute_path row to the future proof-plan artifact; stop before agents, ownership mutation, workers, service approvals, browser, live target access, scanning, exploit, publish, submit, trade, spend, APIs, report submission, or contact.",
+      "outcome_id": "outcome-proof-derived-continuation-security-006-v1-20260621",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "complete_local_only_no_external_side_effects"
+    },
+    {
+      "created_at": "2026-06-21T14:28:01Z",
+      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-006.md",
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Write the selected-dataset readiness-count artifact locally only; keep replay, agent/worker creation, ownership mutation, service approvals, browser, public action, APIs, spend, trade, brokers, paid data, contact, and external side-effect gates closed.",
+      "outcome_id": "outcome-local-trading-proof-derived-continuation-v1-20260621-006",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "complete"
+    },
+    {
+      "created_at": "2026-06-21T14:28:00Z",
+      "evidence": "E:\\agent-company-lab\\reports\\lead_generation_and_sales\\proof-derived-continuation-v1-20260621-006.md",
+      "lane_id": "lead_generation_and_sales",
+      "next_action": "Remain parked until the operator explicitly requests a separate exact-scope outreach_delivery_gate service request packet; no agents, ownership mutation, workers, service approvals, browsers, public action, APIs, spend, trade, or contact.",
+      "outcome_id": "outcome-lead-generation-proof-derived-continuation-v1-20260621-006",
+      "outcome_type": "proof_derived_continuation_packet",
+      "realized_usd": 0.0,
+      "status": "parked_until_operator_exact_scope_request"
+    },
+    {
+      "created_at": "2026-06-21T14:27:33Z",
+      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-006.md",
+      "lane_id": "web3_airdrops_grants_hackathons",
+      "next_action": "Next expected artifact: E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\gitcoin-readonly-refresh-request-draft-v1-20260621.md, starting with the local source/evidence header and no-approval/no-start boundary. No agents, ownership mutation, workers, service request mutation, browser, wallet, signature, publish, submit, trade, spend, APIs, or contact.",
+      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-006",
+      "outcome_type": "proof_derived_continuation",
+      "realized_usd": 0.0,
+      "status": "continuation_packet_complete_local_only"
+    },
+    {
       "created_at": "2026-06-21T14:11:27Z",
       "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-005.md",
       "lane_id": "web3_airdrops_grants_hackathons",
@@ -390,66 +450,6 @@
       "outcome_type": "proof_derived_continuation",
       "realized_usd": 0.0,
       "status": "ready_for_local_dropbox_recheck"
-    },
-    {
-      "created_at": "2026-06-21T14:10:09Z",
-      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-005.md",
-      "lane_id": "local_trading_strategy_research",
-      "next_action": "Write the selected-dataset readiness-count artifact locally only; keep replay, agent/worker creation, ownership mutation, service approvals, browser, public action, APIs, spend, trade, brokers, paid data, and contact gates closed.",
-      "outcome_id": "outcome-local-trading-proof-derived-continuation-v1-20260621-005",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "complete"
-    },
-    {
-      "created_at": "2026-06-21T14:09:56Z",
-      "evidence": "E:\\agent-company-lab\\reports\\digital-products\\gumroad-no-publish-approval-request-packet-validation-20260618.json",
-      "lane_id": "digital_products_templates_plugins",
-      "next_action": "If the operator approves this packet, create an exact-scope service request for Gumroad account/listing copy and package-manifest review. Do not log in, create/edit a seller profile, accept terms, create/upload/edit a product, publish a listing or price, configure payout/tax/payment, or perform any public action from this packet alone.",
-      "outcome_id": "outcome-gumroad-no-publish-approval-request-packet-20260618",
-      "outcome_type": "approval_packet",
-      "realized_usd": 0.0,
-      "status": "gumroad_no_publish_approval_packet_ready_local_only"
-    },
-    {
-      "created_at": "2026-06-21T14:09:56Z",
-      "evidence": "E:\\agent-company-lab\\reports\\digital-products\\lemon-squeezy-no-publish-launch-approval-packet-v1-validation-20260618.json",
-      "lane_id": "digital_products_templates_plugins",
-      "next_action": "If the operator approves, create exact local listing copy, refund/support text, screenshot checklist, and deterministic zip manifest files. Do not log in, accept terms, create a storefront/product, upload files, create checkouts/payment links/API keys, process customer data, capture email, publish, promote, start workers/runtimes, or call model/MCP/external APIs from this packet alone.",
-      "outcome_id": "outcome-lemon-squeezy-no-publish-launch-approval-packet-v1-20260618",
-      "outcome_type": "launch_approval_packet",
-      "realized_usd": 0.0,
-      "status": "lemon_squeezy_no_publish_launch_approval_packet_ready_local_only"
-    },
-    {
-      "created_at": "2026-06-21T13:55:47Z",
-      "evidence": "E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\proof-derived-continuation-v1-20260621-004.md",
-      "lane_id": "web3_airdrops_grants_hackathons",
-      "next_action": "Next expected artifact: E:\\agent-company-lab\\reports\\web3_airdrops_grants_hackathons\\gitcoin-readonly-refresh-request-draft-v1-20260621.md. Draft/intake only; no agents, ownership mutation, workers, service approval/start, browser, wallet, signature, publish, submit, trade, spend, APIs, or contact.",
-      "outcome_id": "outcome-proof-derived-continuation-v1-20260621-004",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "continuation_packet_complete_local_only"
-    },
-    {
-      "created_at": "2026-06-21T13:54:51Z",
-      "evidence": "E:\\agent-company-lab\\reports\\premium_customer_intake\\proof-derived-continuation-v1-20260621-004.md",
-      "lane_id": "premium_customer_intake",
-      "next_action": "Reopen only when a new non-placeholder file appears under intake/customer/dropbox; then create compact route packet without copying raw material into CEO context.",
-      "outcome_id": "outcome-premium-customer-intake-proof-derived-continuation-v1-004-20260621",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "parked_until_new_dropbox_material"
-    },
-    {
-      "created_at": "2026-06-21T13:54:32Z",
-      "evidence": "E:\\agent-company-lab\\reports\\local_trading_strategy_research\\proof-derived-continuation-v1-20260621-004.md",
-      "lane_id": "local_trading_strategy_research",
-      "next_action": "Write the selected-dataset readiness-count artifact locally only; keep replay, agent/worker creation, ownership mutation, service approvals, browser, public action, APIs, spend, trade, brokers, paid data, and contact gates closed.",
-      "outcome_id": "outcome-local-trading-proof-derived-continuation-v1-20260621-004",
-      "outcome_type": "proof_derived_continuation",
-      "realized_usd": 0.0,
-      "status": "complete"
     }
   ],
   "schema_version": "ceo_state_packet.v1",
