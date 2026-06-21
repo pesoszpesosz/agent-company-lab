@@ -56,6 +56,14 @@ python tools\agent_company.py write-continuity-watchdog-restore-plan
 
 The restore plan assigns each detected action to AI Resources, an existing lane owner, or a CEO decision batch while preserving the zero-side-effect boundary.
 
+Convert restore packets into owner-facing response contracts with:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-restore-response-bundle
+```
+
+The response bundle tells each owner or CEO decision surface exactly which response options and evidence fields are required. It does not mutate source restore packets, tasks, lanes, owner assignments, or external systems.
+
 ## Boundary
 
 The constellation is local-control-plane only by default. It does not open browsers, create accounts, approve service requests, start external runtimes, publish, submit, trade, spend, call APIs, or contact anyone without a scoped gate.

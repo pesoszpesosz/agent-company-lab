@@ -1,5 +1,5 @@
 {
-  "age_minutes": 850,
+  "age_minutes": 857,
   "assigned_surface": "existing_lane_owner",
   "input_id": "customer-input-ceo-operating-goal-objective-20260620-002",
   "kind": "dispatch_stale_owner_acknowledgement",
@@ -21,7 +21,7 @@
   "source_action_kind": "dispatch_stale_owner_acknowledgement",
   "source_duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
   "source_next_action": "Use the owner-acknowledgement dispatch packet; do not create duplicate agents.",
-  "source_snapshot_generated_utc": "2026-06-21T11:42:48Z",
+  "source_snapshot_generated_utc": "2026-06-21T11:50:19Z",
   "source_snapshot_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.json",
   "source_status": "new",
   "source_task_id": "task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties",

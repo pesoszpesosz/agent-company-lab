@@ -1,6 +1,6 @@
 # Manager Packet - ai_resources_lab
 
-Generated UTC: 2026-06-21T11:42:59Z
+Generated UTC: 2026-06-21T11:50:37Z
 Department: Artificial Resources
 Lane status: active
 Current owner: `lane-manager-ai_resources_lab-20260620`
@@ -122,6 +122,7 @@ These require a scoped service request and approval before any execution:
 
 | Status | Type | Outcome | Realized USD | Evidence | Next Action |
 | --- | --- | --- | ---: | --- | --- |
+| responses_ready | continuity_watchdog_restore_response_bundle | `outcome-continuity-watchdog-restore-response-bundle-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-restore-response-bundle-v1-20260621.md | Route response contracts to AI Resources or existing lane owners; source restore packets and source tasks remain unchanged. |
 | restore_plan_ready | continuity_watchdog_restore_plan | `outcome-continuity-watchdog-restore-plan-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-restore-plan-v1-20260621.md | Route restore packets to AI Resources or existing lane owners; keep all source state unchanged until packet evidence exists. |
 | restore_ready | continuity_watchdog_snapshot | `outcome-continuity-watchdog-snapshot-v1-20260621` | 0.0 | E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.md | Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically. |
 | active | ceo_worker_bootstrap | `outcome-ceo-worker-bootstrap-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-worker-roster-v1-20260621.md | Run continuity watchdog snapshots on cadence, then route restore packets to AI Resources or CEO decision batch. |
@@ -129,7 +130,6 @@ These require a scoped service request and approval before any execution:
 | current | ceo_state_packet | `outcome-ceo-state-packet-v1-20260621` | 0.0 | E:\agent-company-lab\reports\ceo-state-packet-v1-20260621.md | Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed. |
 | apply_after_review | goal_evolver_review | `outcome-goal-evolver-review-v1-20260621` | 0.0 | E:\agent-company-lab\reports\goal-evolver-review-v1-20260621.md | CEO reviews this packet; approved diffs can update the goal artifact through a separate explicit edit path. |
 | complete | ai_resources_owner_acknowledgement_monitor_capability | `outcome-ai-resources-owner-acknowledgement-monitor-capability-20260621` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | Use the command after acknowledgement requests; owner acknowledgement tasks remain owned by existing lane managers until they acknowledge, park, or request CEO decision. |
-| attention_needed | ai_resources_owner_acknowledgement_monitor | `outcome-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002` | 0.0 | E:\agent-company-lab\reports\ai-resources-owner-acknowledgement-monitor-v1-20260621.md | Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair. |
 
 ## Startup Commands
 

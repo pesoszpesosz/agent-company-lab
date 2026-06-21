@@ -227,6 +227,14 @@ python tools\agent_company.py write-continuity-watchdog-restore-plan
 
 The restore plan is report-only. It writes aggregate reports and per-action local packets, but it does not mutate tasks, assign owners, start workers, send thread messages, or perform external actions.
 
+Convert restore packets into owner-facing response contracts:
+
+```powershell
+python tools\agent_company.py write-continuity-watchdog-restore-response-bundle
+```
+
+The response bundle is also report-only. It writes local response artifacts for AI Resources, existing lane owners, and CEO decision batches without changing the source restore packets or source work.
+
 ## Immediate Backlog
 
 1. Keep `bootstrap-ceo-workers` current with live worker thread handles and active goals.
@@ -236,7 +244,7 @@ The restore plan is report-only. It writes aggregate reports and per-action loca
 5. Create a YouTube lane scout packet covering channel types, asset workflow, account/public gates, and first no-post content batch.
 6. Create a control-plane capacity benchmark packet for 1,000/10,000/100,000 row scenarios.
 7. Create a browser/account service-worker roadmap packet that separates read-only browsing, registration preparation, non-KYC account actions, and human-only KYC actions.
-8. Route continuity restore packets to AI Resources or existing lane owners, then refresh the CEO state packet.
+8. Route continuity restore response contracts to AI Resources or existing lane owners, then refresh the CEO state packet.
 
 ## Zero Side-Effect Boundary For This Goal
 

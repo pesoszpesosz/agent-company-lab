@@ -13,14 +13,14 @@
   ],
   "company_counts": {
     "agents": 23,
-    "artifacts": 2557,
+    "artifacts": 2559,
     "departments": 24,
     "lanes": 15,
-    "outcomes": 443,
+    "outcomes": 444,
     "roles": 25,
     "service_requests": 16,
-    "tasks": 625,
-    "trace_events": 535
+    "tasks": 626,
+    "trace_events": 536
   },
   "current_decision_batch": [
     "owner_acknowledgement_pressure",
@@ -29,10 +29,10 @@
     "human_action_feed",
     "manager_dispatch_queue"
   ],
-  "generated_utc": "2026-06-21T11:42:56Z",
+  "generated_utc": "2026-06-21T11:50:34Z",
   "human_action_feed": {
     "feed_status": "optional_gate_review_available",
-    "generated_utc": "2026-06-21T11:42:56Z",
+    "generated_utc": "2026-06-21T11:50:34Z",
     "human_ask_required_fields": [
       "exact_action_requested",
       "why_ai_cannot_safely_do_it",
@@ -209,10 +209,10 @@
   "killed_lanes_and_reasons": [],
   "md_path": "E:\\agent-company-lab\\reports\\ceo-state-packet-v1-20260621.md",
   "metrics_since_last_packet": {
-    "artifacts_delta": 156,
-    "outcomes_delta": 25,
-    "tasks_delta": 46,
-    "trace_events_delta": 26
+    "artifacts_delta": 158,
+    "outcomes_delta": 26,
+    "tasks_delta": 47,
+    "trace_events_delta": 27
   },
   "next_action": "Use this compact packet as the CEO context capsule; dispatch only the listed local next actions or route exact human gates through the human-action feed.",
   "next_dispatch_queue": [
@@ -372,6 +372,16 @@
   "packet_id": "ceo-state-packet-v1-20260621",
   "recent_outcomes": [
     {
+      "created_at": "2026-06-21T11:49:26Z",
+      "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-response-bundle-v1-20260621.md",
+      "lane_id": "ai_resources_lab",
+      "next_action": "Route response contracts to AI Resources or existing lane owners; source restore packets and source tasks remain unchanged.",
+      "outcome_id": "outcome-continuity-watchdog-restore-response-bundle-v1-20260621",
+      "outcome_type": "continuity_watchdog_restore_response_bundle",
+      "realized_usd": 0.0,
+      "status": "responses_ready"
+    },
+    {
       "created_at": "2026-06-21T11:41:31Z",
       "evidence": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-plan-v1-20260621.md",
       "lane_id": "ai_resources_lab",
@@ -440,16 +450,6 @@
       "outcome_type": "ai_resources_owner_acknowledgement_monitor_capability",
       "realized_usd": 0.0,
       "status": "complete"
-    },
-    {
-      "created_at": "2026-06-20T21:37:27Z",
-      "evidence": "E:\\agent-company-lab\\reports\\ai-resources-owner-acknowledgement-monitor-v1-20260621.md",
-      "lane_id": "ai_resources_lab",
-      "next_action": "Escalate stale or blocked owner acknowledgements to CEO decision batch, explicit lane parking, or a lane-owner response repair.",
-      "outcome_id": "outcome-ai-resources-owner-acknowledgement-monitor-customer-input-ceo-operating-goal-objective-20260620-002",
-      "outcome_type": "ai_resources_owner_acknowledgement_monitor",
-      "realized_usd": 0.0,
-      "status": "attention_needed"
     }
   ],
   "schema_version": "ceo_state_packet.v1",
