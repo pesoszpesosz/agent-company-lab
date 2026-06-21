@@ -1,6 +1,6 @@
 # Continuity Watchdog Snapshot V1
 
-Generated UTC: 2026-06-21T12:50:21Z
+Generated UTC: 2026-06-21T13:01:20Z
 Status: `restore_ready`
 Cadence minutes: `15`
 JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260621.json`
@@ -15,7 +15,7 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260
 | `stale_open_tasks` | 15 |
 | `expired_leases` | 0 |
 | `duplicate_active_keys` | 0 |
-| `lanes_without_open_tasks` | 2 |
+| `lanes_without_open_tasks` | 7 |
 | `stale_owner_acknowledgements` | 6 |
 
 ## Restore Actions
@@ -28,7 +28,12 @@ JSON mirror: `E:\agent-company-lab\reports\continuity-watchdog-snapshot-v1-20260
 | `dispatch_stale_owner_acknowledgement` | task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-paid_code_bounties | Use the owner-acknowledgement dispatch packet; do not create duplicate agents. |
 | `dispatch_stale_owner_acknowledgement` | task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-prediction_market_research | Use the owner-acknowledgement dispatch packet; do not create duplicate agents. |
 | `dispatch_stale_owner_acknowledgement` | task-customer-input-ceo-operating-goal-objective-20260620-002-owner-acknowledgement-youtube_content_channels | Use the owner-acknowledgement dispatch packet; do not create duplicate agents. |
+| `request_lane_goal` | content_and_social_growth | Ask lane owner for one current goal artifact or explicit park/kill state. |
+| `request_lane_goal` | digital_products_templates_plugins | Ask lane owner for one current goal artifact or explicit park/kill state. |
+| `request_lane_goal` | lead_generation_and_sales | Ask lane owner for one current goal artifact or explicit park/kill state. |
+| `request_lane_goal` | local_trading_strategy_research | Ask lane owner for one current goal artifact or explicit park/kill state. |
 | `request_lane_goal` | premium_customer_intake | Ask lane owner for one current goal artifact or explicit park/kill state. |
+| `request_lane_goal` | security_bounty_private_reports | Ask lane owner for one current goal artifact or explicit park/kill state. |
 | `request_lane_goal` | web3_airdrops_grants_hackathons | Ask lane owner for one current goal artifact or explicit park/kill state. |
 
 ## Boundary

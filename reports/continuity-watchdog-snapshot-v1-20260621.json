@@ -4,7 +4,7 @@
     "agents_missing_threads": 0,
     "duplicate_active_keys": 0,
     "expired_leases": 0,
-    "lanes_without_open_tasks": 2,
+    "lanes_without_open_tasks": 7,
     "missing_owner_agent_lanes": 0,
     "ownerless_active_lanes": 0,
     "stale_open_tasks": 15,
@@ -16,8 +16,33 @@
     "expired_leases": [],
     "lanes_without_open_tasks": [
       {
+        "lane_id": "content_and_social_growth",
+        "owner_agent_id": "lane-manager-content_and_social_growth-019ec613",
+        "status": "active"
+      },
+      {
+        "lane_id": "digital_products_templates_plugins",
+        "owner_agent_id": "lane-manager-digital_products_templates_plugins-019ec69a",
+        "status": "active"
+      },
+      {
+        "lane_id": "lead_generation_and_sales",
+        "owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+        "status": "active"
+      },
+      {
+        "lane_id": "local_trading_strategy_research",
+        "owner_agent_id": "lane-manager-local_trading_strategy_research-019ec613",
+        "status": "active"
+      },
+      {
         "lane_id": "premium_customer_intake",
         "owner_agent_id": "premium-customer-intake-agent-20260620",
+        "status": "active"
+      },
+      {
+        "lane_id": "security_bounty_private_reports",
+        "owner_agent_id": "lane-manager-security_bounty_private_reports-019ec612",
         "status": "active"
       },
       {
@@ -30,7 +55,7 @@
     "ownerless_active_lanes": [],
     "stale_open_tasks": [
       {
-        "age_minutes": 5175,
+        "age_minutes": 5186,
         "duplicate_key": "atlas-runway-lenses-v1",
         "lane_id": "platform_engineering",
         "next_action": "Add lane-specific lens skins or a future-slot texture generator for realm-specific path previews.",
@@ -41,7 +66,7 @@
         "updated_at": "2026-06-17T22:34:38Z"
       },
       {
-        "age_minutes": 5168,
+        "age_minutes": 5179,
         "duplicate_key": "atlas-agent-party-v1",
         "lane_id": "platform_engineering",
         "next_action": "Add lane-party animation skins or expanded generated portraits for future lane agents.",
@@ -52,7 +77,7 @@
         "updated_at": "2026-06-17T22:42:01Z"
       },
       {
-        "age_minutes": 1117,
+        "age_minutes": 1128,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:ai_resources_lab",
         "lane_id": "ai_resources_lab",
         "next_action": "Evaluate required worker/resource capability and propose one non-overlapping upgrade or reuse path.",
@@ -63,7 +88,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1117,
+        "age_minutes": 1128,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:ai_ml_competitions",
         "lane_id": "ai_ml_competitions",
         "next_action": "Create a competition feasibility packet with account/dataset/compute gates and local proof path.",
@@ -74,7 +99,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1117,
+        "age_minutes": 1128,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:money_source_discovery",
         "lane_id": "money_source_discovery",
         "next_action": "Decide whether this implies a new money path, an existing lane update, or a watch-list revisit trigger.",
@@ -85,7 +110,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1117,
+        "age_minutes": 1128,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:paid_code_bounties",
         "lane_id": "paid_code_bounties",
         "next_action": "Create a local no-egress bounty scout packet or decide the existing paid-code lane already covers it.",
@@ -96,7 +121,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1117,
+        "age_minutes": 1128,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:prediction_market_research",
         "lane_id": "prediction_market_research",
         "next_action": "Create a local market-angle packet with data needs, venue gates, and no-trade boundary.",
@@ -107,7 +132,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 1117,
+        "age_minutes": 1128,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:lane-followup:youtube_content_channels",
         "lane_id": "youtube_content_channels",
         "next_action": "Create a YouTube lane work packet that turns the capsule into one script/storyboard or material-analysis task.",
@@ -118,7 +143,7 @@
         "updated_at": "2026-06-20T18:13:05Z"
       },
       {
-        "age_minutes": 952,
+        "age_minutes": 963,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:followup-escalation:ai_resources_lab",
         "lane_id": "ai_resources_lab",
         "next_action": "AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item.",
@@ -129,7 +154,7 @@
         "updated_at": "2026-06-20T20:57:36Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_ml_competitions",
         "lane_id": "ai_ml_competitions",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -140,7 +165,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_resources_lab",
         "lane_id": "ai_resources_lab",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -151,7 +176,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:money_source_discovery",
         "lane_id": "money_source_discovery",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -162,7 +187,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
         "lane_id": "paid_code_bounties",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -173,7 +198,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:prediction_market_research",
         "lane_id": "prediction_market_research",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -184,7 +209,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:youtube_content_channels",
         "lane_id": "youtube_content_channels",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -197,7 +222,7 @@
     ],
     "stale_owner_acknowledgements": [
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_ml_competitions",
         "lane_id": "ai_ml_competitions",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -208,7 +233,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:ai_resources_lab",
         "lane_id": "ai_resources_lab",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -219,7 +244,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:money_source_discovery",
         "lane_id": "money_source_discovery",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -230,7 +255,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:paid_code_bounties",
         "lane_id": "paid_code_bounties",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -241,7 +266,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:prediction_market_research",
         "lane_id": "prediction_market_research",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -252,7 +277,7 @@
         "updated_at": "2026-06-20T21:32:32Z"
       },
       {
-        "age_minutes": 917,
+        "age_minutes": 928,
         "duplicate_key": "customer-input-ceo-operating-goal-objective-20260620-002:owner-acknowledgement:youtube_content_channels",
         "lane_id": "youtube_content_channels",
         "next_action": "Write one local acknowledgement artifact before starting workers or creating overlapping agents.",
@@ -264,7 +289,7 @@
       }
     ]
   },
-  "generated_utc": "2026-06-21T12:50:21Z",
+  "generated_utc": "2026-06-21T13:01:20Z",
   "json_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.json",
   "md_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-snapshot-v1-20260621.md",
   "next_action": "Route restore actions to AI Resources, existing lane owners, or CEO decision batch; do not mutate tasks automatically.",
@@ -307,7 +332,32 @@
     },
     {
       "kind": "request_lane_goal",
+      "lane_id": "content_and_social_growth",
+      "next_action": "Ask lane owner for one current goal artifact or explicit park/kill state."
+    },
+    {
+      "kind": "request_lane_goal",
+      "lane_id": "digital_products_templates_plugins",
+      "next_action": "Ask lane owner for one current goal artifact or explicit park/kill state."
+    },
+    {
+      "kind": "request_lane_goal",
+      "lane_id": "lead_generation_and_sales",
+      "next_action": "Ask lane owner for one current goal artifact or explicit park/kill state."
+    },
+    {
+      "kind": "request_lane_goal",
+      "lane_id": "local_trading_strategy_research",
+      "next_action": "Ask lane owner for one current goal artifact or explicit park/kill state."
+    },
+    {
+      "kind": "request_lane_goal",
       "lane_id": "premium_customer_intake",
+      "next_action": "Ask lane owner for one current goal artifact or explicit park/kill state."
+    },
+    {
+      "kind": "request_lane_goal",
+      "lane_id": "security_bounty_private_reports",
       "next_action": "Ask lane owner for one current goal artifact or explicit park/kill state."
     },
     {

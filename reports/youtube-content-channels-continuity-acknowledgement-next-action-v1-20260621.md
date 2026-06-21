@@ -16,7 +16,13 @@ Target task: `task-customer-input-ceo-operating-goal-objective-20260620-002-owne
 
 Provided evidence path exists and was read:
 
-`E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-007-continuity-restore-response-v1-007-continuity-restore-v1-007-dispatch_stale_owner_acknowledgement-task-custome.md`
+`E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-006-continuity-restore-response-v1-006-continuity-restore-v1-006-dispatch_stale_owner_acknowledgement-task-custome.md`
+
+Current handoff packet read:
+
+`E:\agent-company-lab\reports\continuity-owner-handoffs-v1-20260621\continuity-owner-handoff-lane-manager-youtube_content_channels-20260620.md`
+
+Prior acknowledgement context also existed for the later `v1-007` response artifact, but the current handoff packet names `v1-006`; this artifact now cites `v1-006` as the authoritative handoff evidence.
 
 Supporting local context read:
 

@@ -1,0 +1,42 @@
+{
+  "assigned_surface": "existing_lane_owner",
+  "input_id": null,
+  "lane_id": "lead_generation_and_sales",
+  "next_action": "Lane owner must submit one current goal artifact, a park/revisit condition, or an owner-repair request.",
+  "recommended_owner_agent_id": "lane-manager-lead_generation_and_sales-019ec613",
+  "required_evidence": "One current lane goal artifact, or an explicit park/kill request with rationale.",
+  "response_contract": {
+    "allowed_responses": [
+      "submit_current_goal_artifact",
+      "park_lane_with_revisit_condition",
+      "request_owner_repair"
+    ],
+    "prohibited_actions": [
+      "mutate_source_restore_packet",
+      "mutate_source_task_or_lane",
+      "create_duplicate_agent_without_overlap_review",
+      "start_worker_or_thread_without_explicit_ceo_scope",
+      "publish_submit_trade_spend_or_call_external_api"
+    ],
+    "required_fields": [
+      "selected_response_option",
+      "lane_id",
+      "restore_packet_id",
+      "owner_agent_id",
+      "goal_artifact_path_or_revisit_condition"
+    ]
+  },
+  "response_item_id": "continuity-restore-response-v1-009-continuity-restore-v1-009-request_lane_goal-lead_generation_and_sales",
+  "response_json_path": "E:\\agent-company-lab\\reports\\continuity-restore-responses-v1-20260621\\continuity-restore-response-v1-009-continuity-restore-v1-009-request_lane_goal-lead_generation_and_sales.json",
+  "response_md_path": "E:\\agent-company-lab\\reports\\continuity-restore-responses-v1-20260621\\continuity-restore-response-v1-009-continuity-restore-v1-009-request_lane_goal-lead_generation_and_sales.md",
+  "response_type": "lane_goal_response_required",
+  "restore_packet_id": "continuity-restore-v1-009-request_lane_goal-lead_generation_and_sales",
+  "schema_version": "continuity_restore_response.v1",
+  "source_action_kind": "request_lane_goal",
+  "source_packet_next_action": "Ask the lane owner for one current goal artifact; if no owner exists, route to AI Resources for owner repair before goal assignment.",
+  "source_restore_plan_generated_utc": "2026-06-21T13:01:20Z",
+  "source_restore_plan_path": "E:\\agent-company-lab\\reports\\continuity-watchdog-restore-plan-v1-20260621.json",
+  "source_task_id": null,
+  "target_id": "lead_generation_and_sales",
+  "target_type": "lane"
+}

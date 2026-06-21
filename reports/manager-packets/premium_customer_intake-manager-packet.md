@@ -1,6 +1,6 @@
 # Manager Packet - premium_customer_intake
 
-Generated UTC: 2026-06-21T12:53:22Z
+Generated UTC: 2026-06-21T13:02:27Z
 Department: Customer/Operator Success
 Lane status: active
 Current owner: `premium-customer-intake-agent-20260620`
@@ -110,7 +110,7 @@ These require a scoped service request and approval before any execution:
 | 88 | complete | `task-premium-customer-followup-escalation-v1-customer-input-ceo-operating-goal-objective-20260620-002` - Escalate stale premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\customer-followup-escalation-v1-20260620.md | AI Resources should triage stale customer follow-ups and either evolve/reuse one existing worker, park with revisit condition, or draft a CEO decision-batch item. |
 | 88 | complete | `task-customer-input-ceo-operating-goal-objective-20260620-002` - Route premium customer input customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\intake\customer\routes\customer-input-ceo-operating-goal-objective-20260620-002.md | ai_resources_lab_followup_packet_or_task |
 | 87 | complete | `task-premium-customer-followup-monitor-v1-customer-input-ceo-operating-goal-objective-20260620-002` - Monitor premium customer follow-ups for customer-input-ceo-operating-goal-objective-20260620-002 | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\customer-followup-monitor-v1-20260620.md | Escalate ownerless, blocked, or stale follow-ups to AI Resources or the CEO decision batch. |
-| 86 | complete | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` - Submit continuity lane goal response for premium_customer_intake | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-007-continuity-restore-response-v1-007-continuity-restore-v1-007-request_lane_goal- | Owner `premium-customer-intake-agent-20260620` should submit the lane goal artifact for `premium_customer_intake`. |
+| 86 | complete | `task-continuity-owner-response-task-lane_goal_response_required-premium_customer_intake` - Submit continuity lane goal response for premium_customer_intake | premium-customer-intake-agent-20260620 |  | E:\agent-company-lab\reports\continuity-owner-responses-v1-20260621\continuity-owner-response-v1-011-continuity-restore-response-v1-011-continuity-restore-v1-011-request_lane_goal- | Owner `premium-customer-intake-agent-20260620` should submit the lane goal artifact for `premium_customer_intake`. |
 
 ## Service Requests
 
