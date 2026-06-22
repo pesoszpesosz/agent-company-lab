@@ -105,7 +105,8 @@ def test_superseded_delivery_reconcile_parks_older_delivered_task(tmp_path: Path
     assert payload["counts"] == {
         "superseded_deliveries_seen": 1,
         "deliveries_parked": 1,
-        "tasks_requeued": 1,
+        "tasks_requeued": 0,
+        "tasks_closed_as_superseded": 1,
         "task_leases_released": 1,
     }
     older_delivery = conn.execute(
@@ -115,15 +116,101 @@ def test_superseded_delivery_reconcile_parks_older_delivered_task(tmp_path: Path
         "SELECT status FROM lane_runtime_thread_deliveries WHERE delivery_id='delivery-newer'"
     ).fetchone()
     older_task = conn.execute(
-        "SELECT status, lease_owner_agent_id, lease_expires_at FROM tasks WHERE task_id='task-older'"
+        "SELECT status, lease_owner_agent_id, lease_expires_at, completed_at FROM tasks WHERE task_id='task-older'"
     ).fetchone()
 
     assert older_delivery["status"] == SUPERSEDED_DELIVERY_STATUS
     assert "superseded by newer delivered thread delivery delivery-newer" in older_delivery["last_error"]
     assert newer_delivery["status"] == "delivered"
-    assert dict(older_task) == {"status": "new", "lease_owner_agent_id": None, "lease_expires_at": None}
+    assert dict(older_task) == {
+        "status": "cancelled",
+        "lease_owner_agent_id": None,
+        "lease_expires_at": None,
+        "completed_at": "2026-06-22T08:30:00Z",
+    }
     assert Path(payload["json_path"]).exists()
     assert Path(payload["md_path"]).exists()
+
+
+def test_superseded_delivery_reconcile_repairs_ready_delivery_with_delivered_at(tmp_path: Path) -> None:
+    conn = _conn()
+    conn.execute(
+        """
+        UPDATE lane_runtime_thread_deliveries
+        SET status='ready_to_send',
+            last_error='malformed row from outbox conflict',
+            updated_at='2026-06-22T08:20:00Z'
+        WHERE delivery_id='delivery-older'
+        """
+    )
+    conn.commit()
+
+    payload = reconcile_superseded_lane_runtime_deliveries(conn, _args(tmp_path, no_db_record=False))
+
+    assert payload["status"] == "superseded_deliveries_parked"
+    older_delivery = conn.execute(
+        "SELECT status, delivered_at, last_error FROM lane_runtime_thread_deliveries WHERE delivery_id='delivery-older'"
+    ).fetchone()
+    assert older_delivery["status"] == SUPERSEDED_DELIVERY_STATUS
+    assert older_delivery["delivered_at"] == "2026-06-22T08:05:00Z"
+    assert "superseded by newer delivered thread delivery delivery-newer" in older_delivery["last_error"]
+
+
+def test_superseded_delivery_reconcile_closes_legacy_parked_task(tmp_path: Path) -> None:
+    conn = _conn()
+    conn.execute(
+        """
+        UPDATE lane_runtime_thread_deliveries
+        SET status='superseded_parked',
+            last_error='superseded by newer delivered thread delivery delivery-newer',
+            updated_at='2026-06-22T08:20:00Z'
+        WHERE delivery_id='delivery-older'
+        """
+    )
+    conn.commit()
+
+    payload = reconcile_superseded_lane_runtime_deliveries(conn, _args(tmp_path, no_db_record=False))
+
+    assert payload["counts"]["tasks_closed_as_superseded"] == 1
+    older_task = conn.execute("SELECT status, completed_at FROM tasks WHERE task_id='task-older'").fetchone()
+    assert dict(older_task) == {"status": "cancelled", "completed_at": "2026-06-22T08:30:00Z"}
+
+
+def test_superseded_delivery_reconcile_closes_unleased_legacy_parked_task(tmp_path: Path) -> None:
+    conn = _conn()
+    conn.execute(
+        """
+        UPDATE tasks
+        SET status='new',
+            lease_owner_agent_id=NULL,
+            lease_expires_at=NULL
+        WHERE task_id='task-older'
+        """
+    )
+    conn.execute(
+        """
+        UPDATE lane_runtime_thread_deliveries
+        SET status='superseded_parked',
+            last_error='superseded by newer delivered thread delivery delivery-newer',
+            updated_at='2026-06-22T08:20:00Z'
+        WHERE delivery_id='delivery-older'
+        """
+    )
+    conn.commit()
+
+    payload = reconcile_superseded_lane_runtime_deliveries(conn, _args(tmp_path, no_db_record=False))
+
+    assert payload["counts"]["tasks_closed_as_superseded"] == 1
+    assert payload["counts"]["task_leases_released"] == 0
+    older_task = conn.execute(
+        "SELECT status, lease_owner_agent_id, lease_expires_at, completed_at FROM tasks WHERE task_id='task-older'"
+    ).fetchone()
+    assert dict(older_task) == {
+        "status": "cancelled",
+        "lease_owner_agent_id": None,
+        "lease_expires_at": None,
+        "completed_at": "2026-06-22T08:30:00Z",
+    }
 
 
 def test_superseded_delivery_reconcile_report_only_does_not_mutate(tmp_path: Path) -> None:

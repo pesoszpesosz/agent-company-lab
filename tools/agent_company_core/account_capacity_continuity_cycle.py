@@ -778,6 +778,9 @@ def _counts(
             superseded_delivery_counts.get("task_leases_released", 0)
         ),
         "superseded_delivery_tasks_requeued": int(superseded_delivery_counts.get("tasks_requeued", 0)),
+        "superseded_delivery_tasks_closed_as_superseded": int(
+            superseded_delivery_counts.get("tasks_closed_as_superseded", 0)
+        ),
         "governance_keepalives_created": int(governance_keepalive_counts.get("keepalives_created", 0)),
         "governance_keepalive_due_lanes": int(governance_keepalive_counts.get("due_lanes", 0)),
         "leased_dispatches": int(drain_counts.get("leased_dispatches", 0)),

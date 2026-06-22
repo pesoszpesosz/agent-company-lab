@@ -170,6 +170,41 @@ def test_lane_runtime_thread_delivery_outbox_writes_ready_prompt_and_table_row(t
     assert dict(audit) == {"status": "complete", "evidence_required": str(tmp_path / "outbox.md")}
 
 
+def test_lane_runtime_thread_delivery_outbox_does_not_resurrect_parked_delivery(tmp_path: Path) -> None:
+    conn = _conn()
+    drain_report = _drain_report(tmp_path, [_leased_dispatch()])
+    first_payload = write_lane_runtime_thread_delivery_outbox(conn, _outbox_args(tmp_path, drain_report))
+    delivery_id = first_payload["deliveries"][0]["delivery_id"]
+    conn.execute(
+        """
+        UPDATE lane_runtime_thread_deliveries
+        SET status='superseded_parked',
+            delivered_at='2026-06-21T16:30:00Z',
+            last_error='superseded by newer delivered thread delivery delivery-newer',
+            updated_at='2026-06-21T16:31:00Z'
+        WHERE delivery_id=?
+        """,
+        (delivery_id,),
+    )
+    conn.commit()
+
+    second_payload = write_lane_runtime_thread_delivery_outbox(conn, _outbox_args(tmp_path, drain_report))
+
+    assert second_payload["status"] == "no_delivery_needed"
+    assert second_payload["counts"]["ready_to_send"] == 0
+    assert second_payload["counts"]["already_delivered"] == 1
+    assert second_payload["deliveries"][0]["existing_status"] == "superseded_parked"
+    row = conn.execute(
+        "SELECT status, delivered_at, last_error FROM lane_runtime_thread_deliveries WHERE delivery_id=?",
+        (delivery_id,),
+    ).fetchone()
+    assert dict(row) == {
+        "status": "superseded_parked",
+        "delivered_at": "2026-06-21T16:30:00Z",
+        "last_error": "superseded by newer delivered thread delivery delivery-newer",
+    }
+
+
 def test_lane_runtime_thread_delivery_outbox_blocks_missing_owner_thread(tmp_path: Path) -> None:
     conn = _conn()
     drain_report = _drain_report(tmp_path, [_leased_dispatch(owner_thread_id=None)])
@@ -586,6 +621,44 @@ def test_lane_runtime_thread_delivery_send_preflight_auto_wakes_safe_ready_deliv
     assert packet["auto_wake_authorized"] is True
     assert packet["safety_assessment"]["safe"] is True
     assert "Work locally only" in packet["prompt_text"]
+
+
+def test_lane_runtime_thread_delivery_send_preflight_ignores_ready_row_with_delivered_at(
+    tmp_path: Path,
+) -> None:
+    conn = _conn()
+    drain_report = _drain_report(tmp_path, [_leased_dispatch()])
+    payload = write_lane_runtime_thread_delivery_outbox(conn, _outbox_args(tmp_path, drain_report))
+    delivery_id = payload["deliveries"][0]["delivery_id"]
+    conn.execute(
+        """
+        UPDATE lane_runtime_thread_deliveries
+        SET delivered_at='2026-06-21T16:30:00Z',
+            last_error='superseded but malformed status survived',
+            updated_at='2026-06-21T16:31:00Z'
+        WHERE delivery_id=?
+        """,
+        (delivery_id,),
+    )
+    conn.commit()
+
+    preflight = write_lane_runtime_thread_delivery_send_preflight(
+        conn,
+        Namespace(
+            now_utc="2026-06-21T16:32:00Z",
+            max_deliveries=10,
+            include_safe_ready_deliveries=True,
+            auto_authorize_approved_deliveries=False,
+            path=str(tmp_path / "safe-auto-wake.md"),
+            json_path=str(tmp_path / "safe-auto-wake.json"),
+            no_db_record=True,
+        ),
+    )
+
+    assert preflight["status"] == "no_approved_sends"
+    assert preflight["counts"]["safe_ready_deliveries_seen"] == 0
+    assert preflight["counts"]["auto_wake_packets_ready"] == 0
+    assert preflight["send_packets"] == []
 
 
 def test_lane_runtime_thread_delivery_send_preflight_auto_wakes_active_delivered_after_capacity_refresh(

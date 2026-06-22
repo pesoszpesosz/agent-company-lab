@@ -67,10 +67,16 @@ def _superseded_delivered_rows(conn: sqlite3.Connection) -> list[sqlite3.Row]:
          AND newer.task_id != d.task_id
          AND newer.status = 'delivered'
          AND {newer_time} > {current_time}
-        WHERE d.status = 'delivered'
+        WHERE (
+            d.status = 'delivered'
+            OR (d.delivered_at IS NOT NULL AND d.status IN ('ready_to_send', 'send_failed', 'superseded_parked'))
+          )
           AND d.owner_thread_id IS NOT NULL
           AND d.owner_thread_id != ''
-          AND t.lease_owner_agent_id IS NOT NULL
+          AND (
+            t.lease_owner_agent_id IS NOT NULL
+            OR (d.delivered_at IS NOT NULL AND d.status IN ('ready_to_send', 'send_failed', 'superseded_parked'))
+          )
           AND t.status NOT IN ('complete', 'cancelled')
         GROUP BY d.delivery_id
         ORDER BY delivered_sort_at ASC, d.delivery_id
@@ -91,14 +97,15 @@ def _reconcile_item(row: sqlite3.Row, generated_utc: str) -> dict[str, Any]:
         "previous_delivery_status": row["delivery_status"],
         "new_delivery_status": SUPERSEDED_DELIVERY_STATUS,
         "previous_task_status": row["task_status"],
-        "new_task_status": "new" if row["task_status"] == "in_progress" else row["task_status"],
+        "new_task_status": "cancelled",
         "lease_owner_agent_id": row["lease_owner_agent_id"],
         "lease_expires_at": row["lease_expires_at"],
         "superseding_delivery_id": row["superseding_delivery_id"],
         "superseding_task_id": row["superseding_task_id"],
         "superseding_lane_id": row["superseding_lane_id"],
-        "superseded": row["task_status"] == "in_progress",
-        "next_action": "Delivered task was superseded by a newer dispatch to the same owner thread; delivery parked and task released for normal replanning.",
+        "task_lease_released": bool(row["lease_owner_agent_id"]),
+        "closed_as_superseded": True,
+        "next_action": "Delivered task was superseded by a newer dispatch to the same owner thread; delivery parked and old task closed to prevent duplicate wake loops.",
         "reconciled_utc": generated_utc,
     }
 
@@ -125,14 +132,20 @@ def _apply_item(conn: sqlite3.Connection, item: dict[str, Any], generated_utc: s
         SET status = ?,
             lease_owner_agent_id = NULL,
             lease_expires_at = NULL,
+            completed_at = CASE
+              WHEN ? = 'cancelled' THEN ?
+              ELSE completed_at
+            END,
             updated_at = ?,
             next_action = ?
         WHERE task_id = ?
         """,
         (
             item["new_task_status"],
+            item["new_task_status"],
             generated_utc,
-            "Previous delivered thread-dispatch lease was superseded by a newer dispatch to the same owner; task is released for normal capacity planning.",
+            generated_utc,
+            "Previous delivered thread-dispatch lease was superseded by a newer dispatch to the same owner; old task is closed so restore will not duplicate-wake it.",
             item["task_id"],
         ),
     )
@@ -142,8 +155,9 @@ def _counts(items: list[dict[str, Any]]) -> dict[str, int]:
     return {
         "superseded_deliveries_seen": len(items),
         "deliveries_parked": len(items),
-        "tasks_requeued": sum(1 for item in items if item["superseded"]),
-        "task_leases_released": len(items),
+        "tasks_requeued": 0,
+        "tasks_closed_as_superseded": sum(1 for item in items if item["closed_as_superseded"]),
+        "task_leases_released": sum(1 for item in items if item["task_lease_released"]),
     }
 
 

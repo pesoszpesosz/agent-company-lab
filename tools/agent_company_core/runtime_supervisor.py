@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sqlite3
 from pathlib import Path
 from typing import Any
@@ -150,6 +151,12 @@ STATUS_PRIORITY = [
     "external_owned_or_parked",
 ]
 
+LOCAL_REPO_RELATIVE_PREFIXES = ("reports", "state", "docs", "tools", "tests", "web")
+LOCAL_REPO_RELATIVE_PATH_RE = re.compile(
+    r"(?:^|[\s`'\"(])((?:reports|state|docs|tools|tests|web)/[^\s`'\"()<>]+)",
+    re.IGNORECASE,
+)
+
 
 def _date_fragment(generated_utc: str) -> str:
     return generated_utc[:10].replace("-", "")
@@ -176,7 +183,7 @@ def _as_int(value: Any, default: int = 0) -> int:
 
 
 def _load_thread_snapshot(path: Path) -> list[dict[str, Any]]:
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload = json.loads(path.read_text(encoding="utf-8-sig"))
     if isinstance(payload, list):
         return [dict(item) for item in payload]
     return [dict(item) for item in payload.get("threads", [])]
@@ -214,12 +221,24 @@ def _text_mentions_canonical_root(text: str) -> bool:
     return normalized_root in normalized_text
 
 
+def _text_mentions_repo_relative_local_path(text: str) -> bool:
+    normalized = text.replace("\\", "/")
+    for match in LOCAL_REPO_RELATIVE_PATH_RE.finditer(normalized):
+        path = match.group(1).strip().strip(".,;:")
+        if "://" in path or path.startswith("../"):
+            continue
+        first = path.split("/", 1)[0].lower()
+        if first in LOCAL_REPO_RELATIVE_PREFIXES:
+            return True
+    return False
+
+
 def _task_is_canonical_local(task: dict[str, Any]) -> bool:
     text = " ".join(
         str(task.get(key) or "")
         for key in ["task_id", "lane_id", "title", "evidence_required", "next_action", "duplicate_key"]
     )
-    return _text_mentions_canonical_root(text)
+    return _text_mentions_canonical_root(text) or _text_mentions_repo_relative_local_path(text)
 
 
 def _tasks_are_canonical_local(tasks: list[dict[str, Any]]) -> bool:

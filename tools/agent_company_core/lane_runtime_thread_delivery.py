@@ -25,6 +25,11 @@ AI_RESOURCES_LANE = "ai_resources_lab"
 AI_RESOURCES_OWNER = "lane-manager-ai_resources_lab-20260620"
 VALID_RECEIPT_STATUSES = {"delivered", "send_failed"}
 VALID_APPROVAL_DECISIONS = {"send_approved", "keep_parked"}
+PROTECTED_EXISTING_DELIVERY_STATUSES = {
+    "delivered",
+    "send_approval_parked",
+    "superseded_parked",
+}
 APPROVAL_DECISION_FILE_SUFFIXES = {
     "send_approved": "send-approved",
     "keep_parked": "keep-parked",
@@ -142,6 +147,10 @@ def _existing_delivery(conn: sqlite3.Connection, delivery_id: str) -> sqlite3.Ro
     ).fetchone()
 
 
+def _existing_delivery_is_protected(row: sqlite3.Row) -> bool:
+    return bool(row["delivered_at"]) or str(row["status"] or "") in PROTECTED_EXISTING_DELIVERY_STATUSES
+
+
 def _prompt_text(item: dict[str, Any]) -> str:
     return "\n".join(
         [
@@ -179,7 +188,7 @@ def _delivery_from_dispatch(
     owner_thread_id = str(dispatch.get("owner_thread_id") or "")
     delivery_id = _delivery_id(task_id)
     existing = _existing_delivery(conn, delivery_id)
-    if existing and existing["status"] == "delivered":
+    if existing and _existing_delivery_is_protected(existing):
         return {
             "delivery_id": delivery_id,
             "task_id": task_id,
@@ -192,6 +201,7 @@ def _delivery_from_dispatch(
             "prompt_path": existing["prompt_path"],
             "lease_expires_at": dispatch.get("lease_expires_at"),
             "status": "already_delivered",
+            "existing_status": existing["status"],
             "delivered_at": existing["delivered_at"],
         }
     if not owner_thread_id:
@@ -219,8 +229,18 @@ def _delivery_from_dispatch(
           packet_path=excluded.packet_path,
           prompt_path=excluded.prompt_path,
           status=CASE
-            WHEN lane_runtime_thread_deliveries.status = 'delivered' THEN lane_runtime_thread_deliveries.status
+            WHEN lane_runtime_thread_deliveries.delivered_at IS NOT NULL THEN lane_runtime_thread_deliveries.status
+            WHEN lane_runtime_thread_deliveries.status IN (
+              'delivered', 'send_approval_parked', 'superseded_parked'
+            ) THEN lane_runtime_thread_deliveries.status
             ELSE excluded.status
+          END,
+          last_error=CASE
+            WHEN lane_runtime_thread_deliveries.delivered_at IS NOT NULL THEN lane_runtime_thread_deliveries.last_error
+            WHEN lane_runtime_thread_deliveries.status IN (
+              'delivered', 'send_approval_parked', 'superseded_parked'
+            ) THEN lane_runtime_thread_deliveries.last_error
+            ELSE excluded.last_error
           END,
           updated_at=excluded.updated_at
         """,
@@ -1060,6 +1080,7 @@ def _ready_delivery_rows(conn: sqlite3.Connection, max_deliveries: int) -> list[
                created_at, updated_at
         FROM lane_runtime_thread_deliveries
         WHERE status = 'ready_to_send'
+          AND delivered_at IS NULL
         ORDER BY updated_at ASC, delivery_id
         LIMIT ?
         """,

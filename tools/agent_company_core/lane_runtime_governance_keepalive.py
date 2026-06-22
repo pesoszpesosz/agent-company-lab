@@ -362,8 +362,18 @@ def _upsert_keepalive(
               packet_path=excluded.packet_path,
               prompt_path=excluded.prompt_path,
               status=CASE
-                WHEN lane_runtime_thread_deliveries.status = 'delivered' THEN lane_runtime_thread_deliveries.status
+                WHEN lane_runtime_thread_deliveries.delivered_at IS NOT NULL THEN lane_runtime_thread_deliveries.status
+                WHEN lane_runtime_thread_deliveries.status IN (
+                  'delivered', 'send_approval_parked', 'superseded_parked'
+                ) THEN lane_runtime_thread_deliveries.status
                 ELSE excluded.status
+              END,
+              last_error=CASE
+                WHEN lane_runtime_thread_deliveries.delivered_at IS NOT NULL THEN lane_runtime_thread_deliveries.last_error
+                WHEN lane_runtime_thread_deliveries.status IN (
+                  'delivered', 'send_approval_parked', 'superseded_parked'
+                ) THEN lane_runtime_thread_deliveries.last_error
+                ELSE excluded.last_error
               END,
               updated_at=excluded.updated_at
             """,
