@@ -94,6 +94,9 @@ from agent_company_core.lane_runtime_dispatch_drain import write_lane_runtime_di
 from agent_company_core.lane_runtime_expired_delivery_reconcile import (
     reconcile_expired_lane_runtime_deliveries_cli,
 )
+from agent_company_core.lane_runtime_superseded_delivery_reconcile import (
+    reconcile_superseded_lane_runtime_deliveries_cli,
+)
 from agent_company_core.lane_runtime_governance_keepalive import write_lane_runtime_governance_keepalive_cli
 from agent_company_core.lane_runtime_thread_delivery import (
     apply_lane_runtime_thread_delivery_approval_cli,
@@ -352,7 +355,7 @@ def build_parser() -> argparse.ArgumentParser:
     ceo_restore_cycle.add_argument("--auto-wake-local-only-thread-deliveries", action="store_true")
     ceo_restore_cycle.add_argument("--now-utc")
     ceo_restore_cycle.add_argument("--max-lanes", type=int, default=100)
-    ceo_restore_cycle.add_argument("--max-dispatches", type=int, default=1)
+    ceo_restore_cycle.add_argument("--max-dispatches", type=int, default=5)
     ceo_restore_cycle.add_argument("--lease-minutes", type=int, default=120)
     ceo_restore_cycle.add_argument("--executor-agent-id", default="ceo-restore-cycle")
     ceo_restore_cycle.add_argument("--stale-after-minutes", type=int, default=60)
@@ -602,6 +605,11 @@ def build_parser() -> argparse.ArgumentParser:
     expired_delivery_reconcile.add_argument("--path")
     expired_delivery_reconcile.add_argument("--json-path")
     expired_delivery_reconcile.add_argument("--no-db-record", action="store_true")
+    superseded_delivery_reconcile = sub.add_parser("reconcile-superseded-lane-runtime-deliveries")
+    superseded_delivery_reconcile.add_argument("--now-utc")
+    superseded_delivery_reconcile.add_argument("--path")
+    superseded_delivery_reconcile.add_argument("--json-path")
+    superseded_delivery_reconcile.add_argument("--no-db-record", action="store_true")
     account_capacity_refresh = sub.add_parser("apply-account-capacity-refresh-signal")
     account_capacity_refresh.add_argument("--signal-path", required=True)
     account_capacity_refresh.add_argument("--now-utc")
@@ -645,7 +653,7 @@ def build_parser() -> argparse.ArgumentParser:
     account_capacity_continuity_cycle.add_argument("--auto-wake-local-only-thread-deliveries", action="store_true")
     account_capacity_continuity_cycle.add_argument("--now-utc")
     account_capacity_continuity_cycle.add_argument("--max-lanes", type=int, default=100)
-    account_capacity_continuity_cycle.add_argument("--max-dispatches", type=int, default=1)
+    account_capacity_continuity_cycle.add_argument("--max-dispatches", type=int, default=5)
     account_capacity_continuity_cycle.add_argument("--lease-minutes", type=int, default=120)
     account_capacity_continuity_cycle.add_argument("--executor-agent-id", default="account-capacity-continuity-cycle")
     account_capacity_continuity_cycle.add_argument("--stale-after-minutes", type=int, default=60)
@@ -1074,6 +1082,9 @@ def main() -> None:
         elif args.cmd == "reconcile-expired-lane-runtime-deliveries":
             init_db(conn)
             reconcile_expired_lane_runtime_deliveries_cli(conn, args)
+        elif args.cmd == "reconcile-superseded-lane-runtime-deliveries":
+            init_db(conn)
+            reconcile_superseded_lane_runtime_deliveries_cli(conn, args)
         elif args.cmd == "apply-account-capacity-refresh-signal":
             init_db(conn)
             apply_account_capacity_refresh_signal_cli(conn, args)

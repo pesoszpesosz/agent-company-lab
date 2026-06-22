@@ -17,6 +17,7 @@ from .io import now_utc, parse_utc
 from .lane_runtime_activation_plan import build_lane_runtime_activation_plan
 from .lane_runtime_dispatch_drain import drain_lane_runtime_dispatch_plan
 from .lane_runtime_expired_delivery_reconcile import reconcile_expired_lane_runtime_deliveries
+from .lane_runtime_superseded_delivery_reconcile import reconcile_superseded_lane_runtime_deliveries
 from .lane_runtime_governance_keepalive import write_lane_runtime_governance_keepalive
 from .lane_runtime_thread_delivery import (
     apply_lane_runtime_thread_delivery_approval_signal,
@@ -296,6 +297,24 @@ def _run_expired_delivery_reconcile(
     )
 
 
+def _run_superseded_delivery_reconcile(
+    conn: sqlite3.Connection,
+    args: argparse.Namespace,
+    generated_utc: str,
+    work_dir: Path,
+) -> dict[str, Any]:
+    md_path, json_path = _step_paths(work_dir, "lane-runtime-superseded-delivery-reconcile")
+    return reconcile_superseded_lane_runtime_deliveries(
+        conn,
+        _ns(
+            now_utc=generated_utc,
+            path=md_path,
+            json_path=json_path,
+            no_db_record=getattr(args, "no_db_record", False),
+        ),
+    )
+
+
 def _run_activation_plan(
     conn: sqlite3.Connection,
     args: argparse.Namespace,
@@ -336,7 +355,7 @@ def _run_dispatch_drain(
             now_utc=generated_utc,
             lease_minutes=getattr(args, "lease_minutes", 120),
             executor_agent_id=getattr(args, "executor_agent_id", "account-capacity-continuity-cycle"),
-            max_dispatches=getattr(args, "max_dispatches", 1),
+            max_dispatches=getattr(args, "max_dispatches", 5),
             packet_dir=str(work_dir / "dispatch-packets"),
             path=md_path,
             json_path=json_path,
@@ -382,7 +401,7 @@ def _run_governance_keepalive(
         conn,
         _ns(
             now_utc=generated_utc,
-            max_keepalives=max(2, int(getattr(args, "max_dispatches", 1))),
+            max_keepalives=max(2, int(getattr(args, "max_dispatches", 5))),
             lease_minutes=min(max(1, int(getattr(args, "lease_minutes", 120))), 30),
             packet_dir=str(work_dir / "governance-keepalive"),
             path=md_path,
@@ -417,7 +436,7 @@ def _run_thread_delivery_send_preflight(
         conn,
         _ns(
             now_utc=generated_utc,
-            max_deliveries=max(int(getattr(args, "max_dispatches", 1)), ready_or_approved, active_resume_count),
+            max_deliveries=max(int(getattr(args, "max_dispatches", 5)), ready_or_approved, active_resume_count),
             include_safe_ready_deliveries=True,
             include_active_resume_deliveries=True,
             auto_authorize_approved_deliveries=True,
@@ -708,6 +727,7 @@ def _counts(
     refresh_payload: dict[str, Any] | None,
     thread_delivery_approval_payload: dict[str, Any] | None,
     expired_delivery_reconcile_payload: dict[str, Any] | None,
+    superseded_delivery_reconcile_payload: dict[str, Any] | None,
     governance_keepalive_payload: dict[str, Any] | None,
     activation_payload: dict[str, Any],
     drain_payload: dict[str, Any] | None,
@@ -727,6 +747,9 @@ def _counts(
     activation_counts = activation_payload.get("counts", {})
     expired_delivery_counts = (
         expired_delivery_reconcile_payload.get("counts", {}) if expired_delivery_reconcile_payload else {}
+    )
+    superseded_delivery_counts = (
+        superseded_delivery_reconcile_payload.get("counts", {}) if superseded_delivery_reconcile_payload else {}
     )
     governance_keepalive_counts = governance_keepalive_payload.get("counts", {}) if governance_keepalive_payload else {}
     drain_counts = drain_payload.get("counts", {}) if drain_payload else {}
@@ -750,6 +773,11 @@ def _counts(
         "expired_ready_deliveries_parked": int(expired_delivery_counts.get("deliveries_parked", 0)),
         "expired_delivery_task_leases_released": int(expired_delivery_counts.get("task_leases_released", 0)),
         "expired_delivery_tasks_requeued": int(expired_delivery_counts.get("tasks_requeued", 0)),
+        "superseded_deliveries_parked": int(superseded_delivery_counts.get("deliveries_parked", 0)),
+        "superseded_delivery_task_leases_released": int(
+            superseded_delivery_counts.get("task_leases_released", 0)
+        ),
+        "superseded_delivery_tasks_requeued": int(superseded_delivery_counts.get("tasks_requeued", 0)),
         "governance_keepalives_created": int(governance_keepalive_counts.get("keepalives_created", 0)),
         "governance_keepalive_due_lanes": int(governance_keepalive_counts.get("due_lanes", 0)),
         "leased_dispatches": int(drain_counts.get("leased_dispatches", 0)),
@@ -987,6 +1015,14 @@ def run_account_capacity_continuity_cycle(conn: sqlite3.Connection, args: argpar
     refresh_payload = _run_refresh_signal(conn, args, generated, work_dir, effective_refresh_signal)
     pre_reconcile_payload = _run_lease_reconcile(conn, args, generated, work_dir, "account-capacity-lease-reconcile-pre")
     expired_delivery_reconcile_payload = _run_expired_delivery_reconcile(conn, args, generated, work_dir)
+    superseded_delivery_reconcile_payload = _run_superseded_delivery_reconcile(conn, args, generated, work_dir)
+    delivery_cleanup_reconcile_payload = _run_lease_reconcile(
+        conn,
+        args,
+        generated,
+        work_dir,
+        "account-capacity-lease-reconcile-after-delivery-cleanup",
+    )
     activation_payload = _run_activation_plan(conn, args, generated, work_dir)
     drain_payload = _run_dispatch_drain(conn, args, generated, work_dir, activation_payload)
     delivery_payload = _run_thread_delivery_outbox(conn, args, generated, work_dir, drain_payload)
@@ -1027,6 +1063,7 @@ def run_account_capacity_continuity_cycle(conn: sqlite3.Connection, args: argpar
         refresh_payload,
         thread_delivery_approval_payload,
         expired_delivery_reconcile_payload,
+        superseded_delivery_reconcile_payload,
         governance_keepalive_payload,
         activation_payload,
         drain_payload,
@@ -1122,7 +1159,7 @@ def run_account_capacity_continuity_cycle(conn: sqlite3.Connection, args: argpar
         ),
         "drain_enabled": bool(getattr(args, "drain", False)),
         "max_lanes": int(getattr(args, "max_lanes", 100)),
-        "max_dispatches": int(getattr(args, "max_dispatches", 1)),
+        "max_dispatches": int(getattr(args, "max_dispatches", 5)),
         "substeps": {
             "refresh_signal": _substep(refresh_payload, reason="no_refresh_signal_provided"),
             "thread_delivery_approval": _substep(
@@ -1131,6 +1168,8 @@ def run_account_capacity_continuity_cycle(conn: sqlite3.Connection, args: argpar
             ),
             "lease_reconcile_pre": _substep(pre_reconcile_payload),
             "expired_delivery_reconcile": _substep(expired_delivery_reconcile_payload),
+            "superseded_delivery_reconcile": _substep(superseded_delivery_reconcile_payload),
+            "lease_reconcile_after_delivery_cleanup": _substep(delivery_cleanup_reconcile_payload),
             "governance_keepalive": _substep(
                 governance_keepalive_payload,
                 reason="auto_wake_local_only_thread_deliveries_not_enabled",
@@ -1167,6 +1206,7 @@ def run_account_capacity_continuity_cycle(conn: sqlite3.Connection, args: argpar
             refresh_payload,
             thread_delivery_approval_payload,
             expired_delivery_reconcile_payload,
+            superseded_delivery_reconcile_payload,
             governance_keepalive_payload,
             activation_payload,
             drain_payload,
