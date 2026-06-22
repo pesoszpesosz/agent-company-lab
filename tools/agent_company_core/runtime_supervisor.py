@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from .io import now_utc
-from .paths import REPORTS_DIR
+from .paths import REPORTS_DIR, ROOT
 from .premium_customer_intake_router import ZERO_SIDE_EFFECT_BOUNDARY
 from .utils import compact_text, md_cell, sha256_file
 
@@ -206,6 +206,24 @@ def _repo_backed(cwd: str | None) -> bool:
     if not path.exists():
         return False
     return any((candidate / ".git").exists() for candidate in [path, *path.parents])
+
+
+def _text_mentions_canonical_root(text: str) -> bool:
+    normalized_text = text.replace("\\", "/").lower()
+    normalized_root = str(ROOT).replace("\\", "/").lower()
+    return normalized_root in normalized_text
+
+
+def _task_is_canonical_local(task: dict[str, Any]) -> bool:
+    text = " ".join(
+        str(task.get(key) or "")
+        for key in ["task_id", "lane_id", "title", "evidence_required", "next_action", "duplicate_key"]
+    )
+    return _text_mentions_canonical_root(text)
+
+
+def _tasks_are_canonical_local(tasks: list[dict[str, Any]]) -> bool:
+    return bool(tasks) and all(_task_is_canonical_local(task) for task in tasks)
 
 
 def _surface_from_text(text: str) -> str:
@@ -463,7 +481,7 @@ def _classification(
     capacity_class = lane.get("capacity_class") or "codex"
     if tasks and capacity_class == "codex" and int(capacity_summary["available_slots"]) <= 0:
         return "parked_by_capacity"
-    if thread and not _repo_backed(thread.get("cwd")) and tasks:
+    if thread and not _repo_backed(thread.get("cwd")) and tasks and not _tasks_are_canonical_local(tasks):
         return "repo_backing_needed"
     if thread_status == "notLoaded":
         return "not_loaded"

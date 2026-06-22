@@ -335,6 +335,49 @@ def test_runtime_supervisor_keeps_local_prep_gate_mentions_dispatchable(
     assert optional_gate["surface"] == "PromptBase"
 
 
+def test_runtime_supervisor_allows_canonical_local_tasks_in_non_repo_threads(
+    tmp_path: Path,
+) -> None:
+    conn = _conn()
+    now = "2026-06-21T17:04:00Z"
+    conn.execute("DELETE FROM service_requests WHERE lane_id='ai_ml_competitions'")
+    conn.execute(
+        """
+        UPDATE account_capacity_sessions
+        SET status='available', active_lease_count=0, resume_after_utc=NULL
+        """
+    )
+    conn.execute(
+        """
+        UPDATE tasks
+        SET priority=92,
+            evidence_required=?,
+            next_action=?,
+            updated_at=?
+        WHERE task_id='task-competition-local-readiness'
+        """,
+        (
+            r"E:\agent-company-lab\reports\ai-ml-competitions\local-readiness.md",
+            "Write one compact local continuation packet under E:\\agent-company-lab; "
+            "keep all work local and surface account gates before external action.",
+            now,
+        ),
+    )
+    conn.commit()
+
+    payload = write_runtime_supervisor_status_bundle(conn, _args(tmp_path, no_db_record=True))
+    by_lane = {item["lane_id"]: item for item in payload["lane_runtime_statuses"]}
+
+    assert by_lane["ai_ml_competitions"]["repo_backed"] is False
+    assert by_lane["ai_ml_competitions"]["runtime_status"] == "idle_ready"
+    assert by_lane["ai_ml_competitions"]["open_task_count"] == 1
+    assert all(
+        item["lane_id"] != "ai_ml_competitions"
+        for item in payload["lane_runtime_statuses"]
+        if item["runtime_status"] == "repo_backing_needed"
+    )
+
+
 def test_runtime_supervisor_cli_parser_supports_command() -> None:
     parser = build_parser()
     args = parser.parse_args(
