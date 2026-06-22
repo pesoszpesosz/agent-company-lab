@@ -131,6 +131,46 @@ def test_account_capacity_lease_reconcile_releases_capacity_for_completed_delive
     assert dict(audit) == {"status": "complete", "evidence_required": str(tmp_path / "reconcile.md")}
 
 
+def test_account_capacity_lease_reconcile_clears_terminal_task_lease_fields(tmp_path: Path) -> None:
+    conn = _conn(
+        task_status="complete",
+        lease_owner="owner-agent",
+        lease_expires_at="2026-06-21T18:50:00Z",
+    )
+
+    payload = reconcile_account_capacity_leases(conn, _args(tmp_path, no_db_record=False))
+
+    assert payload["status"] == "capacity_released"
+    assert payload["counts"]["terminal_task_leases_cleared"] == 1
+    assert payload["terminal_task_leases_cleared"][0]["task_id"] == "task-premium"
+    task = conn.execute(
+        "SELECT lease_owner_agent_id, lease_expires_at FROM tasks WHERE task_id='task-premium'"
+    ).fetchone()
+    assert dict(task) == {"lease_owner_agent_id": None, "lease_expires_at": None}
+
+
+def test_account_capacity_lease_reconcile_report_only_keeps_terminal_task_lease_fields(
+    tmp_path: Path,
+) -> None:
+    conn = _conn(
+        task_status="complete",
+        lease_owner="owner-agent",
+        lease_expires_at="2026-06-21T18:50:00Z",
+    )
+
+    payload = reconcile_account_capacity_leases(conn, _args(tmp_path, no_db_record=True))
+
+    assert payload["counts"]["terminal_task_leases_cleared"] == 1
+    assert payload["zero_side_effect_boundary"]["task_lease_fields_cleared"] == 0
+    task = conn.execute(
+        "SELECT lease_owner_agent_id, lease_expires_at FROM tasks WHERE task_id='task-premium'"
+    ).fetchone()
+    assert dict(task) == {
+        "lease_owner_agent_id": "owner-agent",
+        "lease_expires_at": "2026-06-21T18:50:00Z",
+    }
+
+
 def test_account_capacity_lease_reconcile_keeps_active_unexpired_lease(tmp_path: Path) -> None:
     conn = _conn(
         task_status="in_progress",

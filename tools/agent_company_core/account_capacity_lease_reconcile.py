@@ -16,6 +16,7 @@ from .utils import md_cell, sha256_file
 SCHEMA_VERSION = "account_capacity_lease_reconcile.v1"
 AI_RESOURCES_LANE = "ai_resources_lab"
 AI_RESOURCES_OWNER = "lane-manager-ai_resources_lab-20260620"
+TERMINAL_TASK_STATUSES = {"cancelled", "closed", "complete", "completed", "done", "killed"}
 
 
 def _report_paths(generated_utc: str, args: argparse.Namespace) -> tuple[Path, Path]:
@@ -117,12 +118,45 @@ def _reconcile_rows(
     return reconciled
 
 
-def _counts(items: list[dict[str, Any]]) -> dict[str, int]:
+def _clear_terminal_task_leases(
+    conn: sqlite3.Connection,
+    generated_utc: str,
+    no_db_record: bool,
+) -> list[dict[str, Any]]:
+    placeholders = ",".join("?" for _ in TERMINAL_TASK_STATUSES)
+    rows = conn.execute(
+        f"""
+        SELECT task_id, lane_id, status, lease_owner_agent_id, lease_expires_at
+        FROM tasks
+        WHERE status IN ({placeholders})
+          AND (lease_owner_agent_id IS NOT NULL OR lease_expires_at IS NOT NULL)
+        ORDER BY task_id
+        """,
+        tuple(sorted(TERMINAL_TASK_STATUSES)),
+    ).fetchall()
+    cleared = [dict(row) for row in rows]
+    if not no_db_record and cleared:
+        conn.executemany(
+            """
+            UPDATE tasks
+            SET lease_owner_agent_id = NULL,
+                lease_expires_at = NULL,
+                updated_at = ?
+            WHERE task_id = ?
+            """,
+            [(generated_utc, item["task_id"]) for item in cleared],
+        )
+        conn.commit()
+    return cleared
+
+
+def _counts(items: list[dict[str, Any]], terminal_task_leases: list[dict[str, Any]]) -> dict[str, int]:
     return {
         "sessions_reconciled": len(items),
         "sessions_changed": sum(1 for item in items if item["active_lease_count_before"] != item["active_lease_count_after"]),
         "capacity_released": sum(item["capacity_released"] for item in items),
         "capacity_claimed": sum(item["capacity_claimed"] for item in items),
+        "terminal_task_leases_cleared": len(terminal_task_leases),
     }
 
 
@@ -131,6 +165,8 @@ def _status(counts: dict[str, int]) -> str:
         return "capacity_released"
     if counts["capacity_claimed"]:
         return "capacity_claimed"
+    if counts["terminal_task_leases_cleared"]:
+        return "terminal_task_leases_cleared"
     return "already_consistent"
 
 
@@ -139,6 +175,8 @@ def _next_action(status: str) -> str:
         return "Rerun lane runtime activation planning; newly freed capacity may drain the next queued lane."
     if status == "capacity_claimed":
         return "Capacity counters were raised to match active runtime deliveries; avoid extra dispatch until planning is rerun."
+    if status == "terminal_task_leases_cleared":
+        return "Terminal task lease fields were cleared; continue normal restore monitoring."
     return "Capacity counters already match active runtime deliveries."
 
 
@@ -198,7 +236,7 @@ def _write_md(path: Path, payload: dict[str, Any]) -> None:
             "",
             "## Boundary",
             "",
-            "This reconciler updates local account capacity counters only for sessions represented in lane_runtime_thread_deliveries. It does not mutate task status, send thread messages, start workers, open browsers, approve service requests, call APIs, publish, submit, spend, trade, or contact anyone.",
+            "This reconciler updates local account capacity counters for sessions represented in lane_runtime_thread_deliveries and clears stale lease fields on terminal tasks. It does not mutate task status, send thread messages, start workers, open browsers, approve service requests, call APIs, publish, submit, spend, trade, or contact anyone.",
             "",
         ]
     )
@@ -275,17 +313,20 @@ def reconcile_account_capacity_leases(conn: sqlite3.Connection, args: argparse.N
     json_path, md_path = _report_paths(generated, args)
     no_db_record = bool(getattr(args, "no_db_record", False))
     sessions = _reconcile_rows(conn, generated, no_db_record)
-    counts = _counts(sessions)
+    terminal_task_leases = _clear_terminal_task_leases(conn, generated, no_db_record)
+    counts = _counts(sessions, terminal_task_leases)
     status = _status(counts)
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "generated_utc": generated,
         "status": status,
         "sessions": sessions,
+        "terminal_task_leases_cleared": terminal_task_leases,
         "counts": counts,
         "next_action": _next_action(status),
         "zero_side_effect_boundary": {
             "task_status_mutations": 0,
+            "task_lease_fields_cleared": len(terminal_task_leases) if not no_db_record else 0,
             "thread_messages_sent": 0,
             "worker_starts": 0,
             "browser_sessions_started": 0,
