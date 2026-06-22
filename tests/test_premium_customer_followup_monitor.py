@@ -99,6 +99,37 @@ def test_followup_monitor_classifies_stale_active_and_ownerless(tmp_path: Path) 
     assert payload["zero_side_effect_boundary"]["external_side_effects"] is False
 
 
+def test_followup_monitor_treats_completed_owner_acknowledgement_as_open_without_attention(
+    tmp_path: Path,
+) -> None:
+    conn = _conn()
+    conn.execute(
+        """
+        INSERT INTO tasks(
+          task_id, lane_id, title, status, priority, owner_agent_id, duplicate_key,
+          evidence_required, next_action, created_at, updated_at, completed_at
+        )
+        VALUES(
+          'task-owner-ack-ai-resources', 'ai_resources_lab', 'Owner ack', 'complete',
+          90, 'lane-manager-ai_resources_lab-20260620',
+          'customer-input-test:owner-acknowledgement:ai_resources_lab',
+          'ack evidence', 'continue with existing owner',
+          '2026-06-20T10:30:00Z', '2026-06-20T11:50:00Z', '2026-06-20T11:50:00Z'
+        )
+        """
+    )
+    conn.commit()
+
+    payload = monitor_premium_customer_followups(conn, _args(tmp_path, no_db_record=True))
+    item = next(item for item in payload["followup_tasks"] if item["task_id"] == "task-followup-new")
+
+    assert item["monitor_status"] == "owner_acknowledged_open"
+    assert item["requires_intake_attention"] is False
+    assert item["owner_acknowledgement_task_id"] == "task-owner-ack-ai-resources"
+    assert payload["counts"]["owner_acknowledged_open"] == 1
+    assert payload["counts"]["requires_intake_attention"] == 1
+
+
 def test_followup_monitor_records_audit_rows_without_claiming_followups(tmp_path: Path) -> None:
     conn = _conn()
     ledger = {

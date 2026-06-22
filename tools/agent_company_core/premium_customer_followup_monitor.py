@@ -74,6 +74,34 @@ def _lane_known(conn: sqlite3.Connection, lane_id: str) -> bool:
     return bool(conn.execute("SELECT 1 FROM lanes WHERE lane_id = ?", (lane_id,)).fetchone())
 
 
+def _followup_input_id(duplicate_key: str | None) -> str | None:
+    marker = ":lane-followup:"
+    text = str(duplicate_key or "")
+    if marker not in text:
+        return None
+    return text.split(marker, 1)[0] or None
+
+
+def _completed_owner_acknowledgement(conn: sqlite3.Connection, row: sqlite3.Row) -> sqlite3.Row | None:
+    lane_id = str(row["lane_id"] or "")
+    input_id = _followup_input_id(row["duplicate_key"])
+    duplicate_keys = [f"all:owner-acknowledgement:{lane_id}"]
+    if input_id:
+        duplicate_keys.insert(0, f"{input_id}:owner-acknowledgement:{lane_id}")
+    placeholders = ",".join("?" for _ in duplicate_keys)
+    return conn.execute(
+        f"""
+        SELECT task_id, duplicate_key, evidence_required, next_action, updated_at
+        FROM tasks
+        WHERE duplicate_key IN ({placeholders})
+          AND status IN ('complete', 'cancelled')
+        ORDER BY updated_at DESC, task_id
+        LIMIT 1
+        """,
+        tuple(duplicate_keys),
+    ).fetchone()
+
+
 def _classify(row: sqlite3.Row, lane_known: bool, age_minutes: int | None, stale_after_minutes: int) -> tuple[str, bool]:
     if not lane_known or not row["owner_agent_id"]:
         return "ownerless", True
@@ -87,7 +115,7 @@ def _classify(row: sqlite3.Row, lane_known: bool, age_minutes: int | None, stale
         return ("stale_unacknowledged" if is_stale else "unacknowledged"), is_stale
     if status == "in_progress":
         return ("stale_active" if is_stale else "active"), is_stale
-    return ("stale_other" if is_stale else "open_other"), is_stale
+        return ("stale_other" if is_stale else "open_other"), is_stale
 
 
 def _collect_followups(
@@ -103,6 +131,10 @@ def _collect_followups(
         age = _age_minutes(row, now_value)
         known = _lane_known(conn, row["lane_id"])
         monitor_status, attention = _classify(row, known, age, stale_after_minutes)
+        acknowledgement = _completed_owner_acknowledgement(conn, row) if monitor_status == "stale_unacknowledged" else None
+        if acknowledgement:
+            monitor_status = "owner_acknowledged_open"
+            attention = False
         items.append(
             {
                 "task_id": row["task_id"],
@@ -122,6 +154,8 @@ def _collect_followups(
                 "age_minutes": age,
                 "lease_owner_agent_id": row["lease_owner_agent_id"],
                 "lease_expires_at": row["lease_expires_at"],
+                "owner_acknowledgement_task_id": acknowledgement["task_id"] if acknowledgement else None,
+                "owner_acknowledgement_evidence": acknowledgement["evidence_required"] if acknowledgement else None,
             }
         )
     return items

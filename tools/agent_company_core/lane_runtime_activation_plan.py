@@ -8,7 +8,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from .io import load_json, now_utc
+from .io import load_json, now_utc, parse_utc
 from .paths import DB_PATH, REPORTS_DIR
 from .utils import md_cell, sha256_file
 
@@ -19,6 +19,16 @@ AI_RESOURCES_OWNER = "lane-manager-ai_resources_lab-20260620"
 VALID_RUNTIME_MODES = {"always_on", "on_demand", "scheduled", "parked"}
 DISPATCHABLE_MODES = {"always_on", "on_demand", "scheduled"}
 MODE_PRIORITY = {"always_on": 0, "on_demand": 1, "scheduled": 2}
+MIN_DISPATCH_PRIORITY = 50
+RUNTIME_BLOCKING_STATUSES = {
+    "blocked_by_human_gate",
+    "external_owned_or_parked",
+    "missing_thread",
+    "repo_backing_needed",
+    "running",
+    "system_error",
+    "usage_limited",
+}
 
 
 def _report_paths(generated_utc: str, args: argparse.Namespace) -> tuple[Path, Path]:
@@ -74,6 +84,46 @@ def _load_policies(path: Path, max_lanes: int) -> list[dict[str, Any]]:
     else:
         policies = payload.get("policies", [])
     return [_normalize_policy(dict(policy)) for policy in policies[:max_lanes]]
+
+
+def _load_runtime_statuses(path_value: str | None) -> dict[str, dict[str, Any]]:
+    if not path_value:
+        return {}
+    payload = load_json(Path(path_value))
+    rows = payload.get("lane_runtime_statuses", []) if isinstance(payload, dict) else []
+    statuses: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        lane_id = str(row.get("lane_id") or "").strip()
+        if lane_id:
+            statuses[lane_id] = dict(row)
+    gate_rows = []
+    if isinstance(payload, dict) and isinstance(payload.get("human_action_feed"), dict):
+        feed = payload["human_action_feed"]
+        for key in ["account_gate_queue", "required_actions", "required_now"]:
+            raw_rows = feed.get(key, [])
+            if isinstance(raw_rows, list):
+                gate_rows.extend(item for item in raw_rows if isinstance(item, dict))
+    for gate in gate_rows:
+        if gate.get("blocking") is False:
+            continue
+        lane_id = str(gate.get("lane_id") or "").strip()
+        if not lane_id:
+            continue
+        item = statuses.setdefault(lane_id, {"lane_id": lane_id})
+        item["has_human_gate_feed"] = True
+        task_id = str(gate.get("task_id") or "").strip()
+        if task_id:
+            ids = list(item.get("blocking_gate_task_ids") or [])
+            ids.append(task_id)
+            item["blocking_gate_task_ids"] = sorted(set(ids))
+        else:
+            item["lane_level_human_gate_count"] = int(item.get("lane_level_human_gate_count") or 0) + 1
+    for item in statuses.values():
+        if gate_rows:
+            item["has_human_gate_feed"] = True
+    return statuses
 
 
 def _upsert_policies(conn: sqlite3.Connection, policies: list[dict[str, Any]], generated_utc: str) -> None:
@@ -151,6 +201,20 @@ def _next_wakeup(sessions: list[dict[str, Any]]) -> str | None:
     return min(wakeups) if wakeups else None
 
 
+def _overdue_capacity_sessions(sessions: list[dict[str, Any]], generated_utc: str) -> int:
+    generated = parse_utc(generated_utc)
+    if not generated:
+        return 0
+    overdue = 0
+    for session in sessions:
+        if session.get("status") != "cooling_down":
+            continue
+        resume_after = parse_utc(str(session.get("resume_after_utc") or ""))
+        if resume_after and resume_after < generated:
+            overdue += 1
+    return overdue
+
+
 def _tasks_by_lane(conn: sqlite3.Connection, lane_ids: list[str]) -> dict[str, list[dict[str, Any]]]:
     if not lane_ids:
         return {}
@@ -165,10 +229,11 @@ def _tasks_by_lane(conn: sqlite3.Connection, lane_ids: list[str]) -> dict[str, l
         LEFT JOIN lanes l ON l.lane_id = t.lane_id
         WHERE t.status = 'new'
           AND t.lease_owner_agent_id IS NULL
+          AND t.priority >= ?
           AND t.lane_id IN ({placeholders})
         ORDER BY t.lane_id ASC, t.priority DESC, t.created_at ASC, t.task_id ASC
         """,
-        tuple(lane_ids),
+        (MIN_DISPATCH_PRIORITY, *lane_ids),
     ).fetchall()
     grouped: dict[str, list[dict[str, Any]]] = {lane_id: [] for lane_id in lane_ids}
     for row in rows:
@@ -197,10 +262,23 @@ def _idle_action(policy: dict[str, Any], exists: bool) -> str:
     return "monitor_for_trigger"
 
 
+def _runtime_blocks_entire_lane(runtime_status: str, runtime_item: dict[str, Any]) -> bool:
+    if runtime_status == "blocked_by_human_gate":
+        return not bool(runtime_item.get("has_human_gate_feed"))
+    return runtime_status in RUNTIME_BLOCKING_STATUSES
+
+
+def _runtime_task_blocked(task: dict[str, Any], runtime_item: dict[str, Any]) -> bool:
+    blocking_ids = {str(item) for item in runtime_item.get("blocking_gate_task_ids") or []}
+    return str(task.get("task_id") or "") in blocking_ids
+
+
 def _build_lane_states_and_candidates(
     conn: sqlite3.Connection,
     policies: list[dict[str, Any]],
+    runtime_statuses: dict[str, dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    runtime_statuses = runtime_statuses or {}
     lane_ids = [policy["lane_id"] for policy in policies]
     existing_lanes = _lane_exists(conn, lane_ids)
     grouped_tasks = _tasks_by_lane(conn, lane_ids)
@@ -210,8 +288,15 @@ def _build_lane_states_and_candidates(
         lane_id = policy["lane_id"]
         tasks = grouped_tasks.get(lane_id, [])
         exists = lane_id in existing_lanes
-        selected_tasks = tasks[: policy["max_parallel_tasks"]]
-        if exists and policy["runtime_mode"] in DISPATCHABLE_MODES and selected_tasks:
+        runtime_item = runtime_statuses.get(lane_id, {})
+        runtime_status = str(runtime_item.get("runtime_status") or "")
+        runtime_blocks_dispatch = _runtime_blocks_entire_lane(runtime_status, runtime_item)
+        dispatchable_tasks = [] if runtime_blocks_dispatch else [task for task in tasks if not _runtime_task_blocked(task, runtime_item)]
+        selected_tasks = dispatchable_tasks[: policy["max_parallel_tasks"]]
+        runtime_blocked_task_count = len(tasks) - len(dispatchable_tasks)
+        if runtime_blocks_dispatch:
+            action = f"runtime_{runtime_status}"
+        elif exists and policy["runtime_mode"] in DISPATCHABLE_MODES and selected_tasks:
             action = "eligible_for_dispatch"
             for task in selected_tasks:
                 candidates.append(
@@ -224,7 +309,10 @@ def _build_lane_states_and_candidates(
                     }
                 )
         else:
-            action = _idle_action(policy, exists)
+            if runtime_status == "blocked_by_human_gate" and tasks and not selected_tasks:
+                action = "runtime_blocked_by_human_gate"
+            else:
+                action = _idle_action(policy, exists)
         lane_states.append(
             {
                 "lane_id": lane_id,
@@ -236,6 +324,10 @@ def _build_lane_states_and_candidates(
                 "park_conditions": policy["park_conditions"],
                 "open_task_count": len(tasks),
                 "selected_task_count": len(selected_tasks),
+                "runtime_status": runtime_status or None,
+                "runtime_next_action": runtime_item.get("next_action"),
+                "runtime_blocked_task_count": runtime_blocked_task_count,
+                "lane_level_human_gate_count": int(runtime_item.get("lane_level_human_gate_count") or 0),
                 "recommended_action": action,
             }
         )
@@ -300,12 +392,22 @@ def _next_action(status: str, next_wakeup_utc: str | None) -> str:
     return "Continue monitoring always-on lanes for seed gaps and on-demand lanes for activation triggers."
 
 
+def _next_action_with_capacity(status: str, next_wakeup_utc: str | None, overdue_capacity_sessions: int) -> str:
+    if status == "pending_capacity" and overdue_capacity_sessions:
+        return (
+            "Capacity refresh signal is overdue; look for a scoped refresh signal or restore the session state "
+            "before draining queued lanes. Keep lanes queued instead of treating them as broken."
+        )
+    return _next_action(status, next_wakeup_utc)
+
+
 def _counts(
     policies: list[dict[str, Any]],
     sessions: list[dict[str, Any]],
     lane_states: list[dict[str, Any]],
     candidates: list[dict[str, Any]],
     recommendations: list[dict[str, Any]],
+    overdue_capacity_sessions: int = 0,
 ) -> dict[str, int]:
     return {
         "policies_seen": len(policies),
@@ -314,8 +416,14 @@ def _counts(
         "scheduled_lanes": sum(1 for policy in policies if policy["runtime_mode"] == "scheduled"),
         "parked_lanes": sum(1 for policy in policies if policy["runtime_mode"] == "parked"),
         "available_capacity": sum(session["available_slots"] for session in sessions),
+        "overdue_capacity_sessions": overdue_capacity_sessions,
         "eligible_task_candidates": len(candidates),
         "dispatch_recommendations": len(recommendations),
+        "runtime_blocked_lanes": sum(
+            1
+            for state in lane_states
+            if str(state["recommended_action"]).startswith("runtime_")
+        ),
         "lanes_pending_capacity": sum(1 for state in lane_states if state["recommended_action"] == "pending_capacity"),
         "lanes_monitoring": sum(1 for state in lane_states if state["recommended_action"].startswith("monitor")),
         "lanes_parked": sum(1 for state in lane_states if state["recommended_action"] == "parked_no_dispatch"),
@@ -479,28 +587,32 @@ def build_lane_runtime_activation_plan(conn: sqlite3.Connection, args: argparse.
     generated = getattr(args, "now_utc", None) or now_utc()
     json_path, md_path = _report_paths(generated, args)
     snapshot_path = Path(getattr(args, "policy_snapshot"))
+    runtime_supervisor_status = getattr(args, "runtime_supervisor_status", None)
     max_lanes = _as_int(getattr(args, "max_lanes", 100), 100) or 100
     policies = _load_policies(snapshot_path, max_lanes)
     _upsert_policies(conn, policies, generated)
     sessions = _capacity_sessions(conn)
     slots = _slot_sequence(sessions)
-    lane_states, candidates = _build_lane_states_and_candidates(conn, policies)
+    runtime_statuses = _load_runtime_statuses(runtime_supervisor_status)
+    lane_states, candidates = _build_lane_states_and_candidates(conn, policies, runtime_statuses)
     recommendations = _build_recommendations(lane_states, candidates, slots)
     next_wakeup_utc = _next_wakeup(sessions)
     status = _status(recommendations, candidates)
+    overdue_capacity_sessions = _overdue_capacity_sessions(sessions, generated)
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "generated_utc": generated,
         "db": str(DB_PATH),
         "status": status,
         "policy_snapshot": str(snapshot_path),
+        "runtime_supervisor_status": runtime_supervisor_status,
         "max_lanes": max_lanes,
         "capacity_sessions": sessions,
         "lane_activation_states": lane_states,
         "dispatch_recommendations": recommendations,
         "next_wakeup_utc": next_wakeup_utc,
-        "counts": _counts(policies, sessions, lane_states, candidates, recommendations),
-        "next_action": _next_action(status, next_wakeup_utc),
+        "counts": _counts(policies, sessions, lane_states, candidates, recommendations, overdue_capacity_sessions),
+        "next_action": _next_action_with_capacity(status, next_wakeup_utc, overdue_capacity_sessions),
         "zero_side_effect_boundary": {
             "task_leases_mutated": 0,
             "thread_messages_sent": 0,
